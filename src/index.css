@@ -171,6 +171,7 @@ a {
 
 .hero {
     text-align: center;
+    max-width: 100%;
     padding: 3.5rem 2rem 2rem;
 }
 
@@ -584,3 +585,129 @@ strong {
     .content-card { padding: 1.5rem; }
     h1 { font-size: 1.5rem; }
 }
+
+/* ===== LESSON LINK AS BUTTON ===== */
+button.lesson-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+    width: 100%;
+}
+
+/* ===== LESSON NAVIGATION ===== */
+.lesson-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.lesson-nav-btn {
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border);
+    padding: 0.65rem 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-light);
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    max-width: 45%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lesson-nav-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-light);
+}
+
+.lesson-nav-btn.prev {
+    margin-right: auto;
+}
+
+.lesson-nav-btn.next {
+    margin-left: auto;
+}
+
+.divider {
+    height: 1px;
+    background: var(--border-light);
+    margin: 2rem 0;
+    transition: background-color 0.3s ease;
+}
+
+code {
+    background-color: var(--bg-code-inline);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+    font-size: 0.88em;
+    transition: background-color 0.3s ease;
+}
+
+pre {
+    background-color: var(--bg-code);
+    color: var(--text-code);
+    padding: 1.15rem 1.25rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1.4rem;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    border: 1px solid var(--border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+li {
+    line-height: 1.7;
+    margin-bottom: 0.4rem;
+}
+
+.callout {
+    padding: 1rem 1.15rem;
+    border-radius: 8px;
+    margin-bottom: 1.4rem;
+    border-left: 3px solid transparent;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+.callout p { margin-bottom: 0; }
+
+.callout-blue { background-color: var(--bg-callout-blue); border-left-color: #5b8faa; }
+.callout-green { background-color: var(--bg-callout-green); border-left-color: var(--accent); }
+.callout-yellow { background-color: var(--bg-callout-yellow); border-left-color: #bfa054; }
+.callout-red { background-color: var(--bg-callout-red); border-left-color: #b06060; }
+
+.callout-label {
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+.callout-blue .callout-label { color: #5b8faa; }
+.callout-green .callout-label { color: var(--accent); }
+.callout-yellow .callout-label { color: #bfa054; }
+.callout-red .callout-label { color: #b06060; }

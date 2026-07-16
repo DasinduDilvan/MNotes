@@ -1,20 +1,22 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-
-const courseNames = {
-  ict2113: 'Data Structures and Algorithms',
-  ict2122: 'Object Oriented Programming',
-  ict2132: 'Object Oriented Programming Practicum',
-  ict2142: 'E-Business Systems',
-  ict2152: 'Object Oriented Analysis and Design',
-  ict2162: 'Management Information Systems',
-  tcs2112: 'Business Economics',
-}
+import courseContent from '../content'
 
 function Course() {
   const { courseId } = useParams()
-  const courseName = courseNames[courseId] || 'Unknown Course'
+  const course = courseContent[courseId]
 
+  const courseName = course?.courseName || 'Unknown Course'
+  const lessons = course?.lessons || []
+
+  const [activeLesson, setActiveLesson] = useState(0)
+
+  /* Reset to first lesson when course changes */
+  useEffect(() => {
+    setActiveLesson(0)
+  }, [courseId])
+
+  /* Theme */
   useEffect(() => {
     const saved = localStorage.getItem('sn-theme')
     if (saved) document.documentElement.setAttribute('data-theme', saved)
@@ -27,6 +29,46 @@ function Course() {
     localStorage.setItem('sn-theme', next)
   }
 
+  /* Scroll content to top when lesson changes */
+  useEffect(() => {
+    const contentEl = document.querySelector('.content-container')
+    if (contentEl) contentEl.scrollTop = 0
+  }, [activeLesson])
+
+  /* Current lesson content */
+  const currentLesson = lessons[activeLesson]
+
+  /* 404 handling */
+  if (!course) {
+    return (
+      <div className="course-page">
+        <nav className="navbar">
+          <div className="nav-left">
+            <Link to="/" className="logo">
+              <span className="logo-icon">SN</span>
+              Study Notes
+            </Link>
+          </div>
+        </nav>
+        <div className="app-container">
+          <main className="content-container">
+            <div className="content-body">
+              <div className="content-card">
+                <h1>Course Not Found</h1>
+                <p>The course <code>{courseId}</code> does not exist yet.</p>
+                <p>
+                  <Link to="/" style={{ color: 'var(--accent)', fontWeight: 600 }}>
+                    ← Back to all courses
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="course-page">
 
@@ -37,7 +79,7 @@ function Course() {
             <span className="logo-icon">SN</span>
             Study Notes
           </Link>
-          <div className="nav-separator"></div>
+          <div className="nav-separator" />
           <span className="current-course">{courseName}</span>
         </div>
         <div className="nav-right">
@@ -52,28 +94,26 @@ function Course() {
         </div>
       </nav>
 
-      {/* ===== PLACEHOLDER LAYOUT ===== */}
+      {/* ===== LAYOUT ===== */}
       <div className="app-container">
 
         {/* Sidebar */}
         <aside className="sidebar">
           <div className="sidebar-header">Lessons</div>
           <ul className="lesson-list">
-            <li className="lesson-item">
-              <a href="#" className="lesson-link active">
-                <span className="lesson-num">01</span> Introduction
-              </a>
-            </li>
-            <li className="lesson-item">
-              <a href="#" className="lesson-link">
-                <span className="lesson-num">02</span> Core Concepts
-              </a>
-            </li>
-            <li className="lesson-item">
-              <a href="#" className="lesson-link">
-                <span className="lesson-num">03</span> Advanced Topics
-              </a>
-            </li>
+            {lessons.map((lesson, index) => (
+              <li key={lesson.id} className="lesson-item">
+                <button
+                  className={`lesson-link${index === activeLesson ? ' active' : ''}`}
+                  onClick={() => setActiveLesson(index)}
+                >
+                  <span className="lesson-num">
+                    {String(lesson.id).padStart(2, '0')}
+                  </span>
+                  {lesson.title}
+                </button>
+              </li>
+            ))}
           </ul>
           <footer className="sidebar-footer">
             Study Notes &nbsp;•&nbsp; BY_#D1
@@ -84,21 +124,32 @@ function Course() {
         <main className="content-container">
           <div className="content-body">
             <div className="content-card">
-              <span className="lesson-badge">{courseId.toUpperCase()}</span>
-              <h1>{courseName}</h1>
-              <div className="meta-info">
-                Lesson 01 <span>•</span> Introduction <span>•</span> Beginner
+              {currentLesson ? (
+                <div dangerouslySetInnerHTML={{ __html: currentLesson.content }} />
+              ) : (
+                <p>Select a lesson from the sidebar.</p>
+              )}
+
+              {/* Lesson Navigation */}
+              <div className="divider" />
+              <div className="lesson-nav">
+                {activeLesson > 0 && (
+                  <button
+                    className="lesson-nav-btn prev"
+                    onClick={() => setActiveLesson(activeLesson - 1)}
+                  >
+                    ← {lessons[activeLesson - 1].title}
+                  </button>
+                )}
+                {activeLesson < lessons.length - 1 && (
+                  <button
+                    className="lesson-nav-btn next"
+                    onClick={() => setActiveLesson(activeLesson + 1)}
+                  >
+                    {lessons[activeLesson + 1].title} →
+                  </button>
+                )}
               </div>
-              <p>This is a placeholder for the <strong>{courseName}</strong> course content. Your lesson notes will appear here.</p>
-              <div className="callout callout-green">
-                <span className="callout-label">Tip</span>
-                <p>Navigate between lessons using the sidebar on the left.</p>
-              </div>
-              <p>
-                <Link to="/" style={{ color: 'var(--accent)', fontWeight: 600 }}>
-                  ← Back to all courses
-                </Link>
-              </p>
             </div>
           </div>
         </main>

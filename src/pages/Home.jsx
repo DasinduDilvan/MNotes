@@ -85,7 +85,7 @@ function Home() {
 
       {/* ===== HERO ===== */}
       <section className="hero">
-        <span className="hero-badge">Semester 2 — Year 2</span>
+        <span className="hero-badge">Semester 1 — Year 2</span>
         <p>Select a course below to start reviewing your notes. Keep it simple, stay focused.</p>
       </section>
 
@@ -94,7 +94,7 @@ function Home() {
         <div className="section-label">All Courses</div>
         <div className="courses-grid">
           {courses.map((course) => (
-            <Link to={`/course/${course.id}`} className="course-card" key={course.id}>
+            <Link to={`/${course.id}`} className="course-card" key={course.id}>
               <div className="card-top">
                 <span className="course-code">{course.code}</span>
                 <span className="card-arrow">
@@ -117,7 +117,7 @@ function Home() {
           Study Notes v2
         </div>
         <div className="footer-right">
-          Made with focus <span>•</span> BY_#D1 <span>•</span> 2025
+          Made with focus <span>•</span> BY_#D1 <span>•</span> 2026
         </div>
       </footer>
     </div>
