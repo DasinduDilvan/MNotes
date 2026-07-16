@@ -10,10 +10,12 @@ function Course() {
   const lessons = course?.lessons || []
 
   const [activeLesson, setActiveLesson] = useState(0)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   /* Reset to first lesson when course changes */
   useEffect(() => {
     setActiveLesson(0)
+    setSidebarOpen(false)
   }, [courseId])
 
   /* Theme */
@@ -34,6 +36,12 @@ function Course() {
     const contentEl = document.querySelector('.content-container')
     if (contentEl) contentEl.scrollTop = 0
   }, [activeLesson])
+
+  /* Close sidebar when a lesson is selected (mobile) */
+  const handleLessonClick = (index) => {
+    setActiveLesson(index)
+    setSidebarOpen(false)
+  }
 
   /* Current lesson content */
   const currentLesson = lessons[activeLesson]
@@ -75,6 +83,17 @@ function Course() {
       {/* ===== NAVBAR ===== */}
       <nav className="navbar">
         <div className="nav-left">
+          {/* Mobile menu button */}
+          <button
+            className="mobile-menu-btn"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg viewBox="0 0 24 24">
+              <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+            </svg>
+          </button>
+
           <Link to="/" className="logo">
             <span className="logo-icon">SN</span>
             Study Notes
@@ -94,18 +113,24 @@ function Course() {
         </div>
       </nav>
 
+      {/* ===== SIDEBAR OVERLAY (mobile) ===== */}
+      <div
+        className={`sidebar-overlay${sidebarOpen ? ' show' : ''}`}
+        onClick={() => setSidebarOpen(false)}
+      />
+
       {/* ===== LAYOUT ===== */}
       <div className="app-container">
 
         {/* Sidebar */}
-        <aside className="sidebar">
+        <aside className={`sidebar${sidebarOpen ? ' open' : ''}`}>
           <div className="sidebar-header">Lessons</div>
           <ul className="lesson-list">
             {lessons.map((lesson, index) => (
               <li key={lesson.id} className="lesson-item">
                 <button
                   className={`lesson-link${index === activeLesson ? ' active' : ''}`}
-                  onClick={() => setActiveLesson(index)}
+                  onClick={() => handleLessonClick(index)}
                 >
                   <span className="lesson-num">
                     {String(lesson.id).padStart(2, '0')}
