@@ -67,8 +67,8 @@ function Home() {
       <nav className="navbar">
         <div className="nav-left">
           <Link to="/" className="logo">
-            <span className="logo-icon">SN</span>
-            Study Notes
+            <img src="/image.png" alt="MN Logo" className="logo-icon" />
+           Mobile Notes
           </Link>
         </div>
         <div className="nav-right">
@@ -113,8 +113,9 @@ function Home() {
       {/* ===== FOOTER ===== */}
       <footer className="footer">
         <div className="footer-left">
-          <span className="footer-logo">SN</span>
-          Study Notes v2
+          {/* <span className="footer-logo">MN</span> */}
+          <img src="/image.png" alt="MN Logo" className="footer-logo"/>
+         Mobile Notes v2.0
         </div>
         <div className="footer-right">
           Made with focus <span>•</span> BY_#D1 <span>•</span> 2026

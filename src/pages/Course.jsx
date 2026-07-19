@@ -53,8 +53,9 @@ function Course() {
         <nav className="navbar">
           <div className="nav-left">
             <Link to="/" className="logo">
-              <span className="logo-icon">SN</span>
-              Study Notes
+              {/* <span className="logo-icon">MN</span> */}
+              <img src="/image.png" alt="MN Logo" className="logo-icon"/>
+              Mobile Notes
             </Link>
           </div>
         </nav>
@@ -95,8 +96,9 @@ function Course() {
           </button>
 
           <Link to="/" className="logo">
-            <span className="logo-icon">SN</span>
-            Study Notes
+            {/* <span className="logo-icon">MN</span> */}
+            <img src="/image.png" alt="MN Logo" className="logo-icon" />
+            Mobile Notes
           </Link>
           <div className="nav-separator" />
           <span className="current-course">{courseName}</span>
@@ -141,7 +143,7 @@ function Course() {
             ))}
           </ul>
           <footer className="sidebar-footer">
-            Study Notes &nbsp;•&nbsp; BY_#D1
+            Mobile Notes &nbsp;•&nbsp; BY_#D1
           </footer>
         </aside>
 
