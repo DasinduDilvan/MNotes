@@ -9,16 +9,15 @@ function Course() {
   const courseName = course?.courseName || 'Unknown Course'
   const lessons = course?.lessons || []
 
+  // activeLesson: -1 means "Summary" is selected
   const [activeLesson, setActiveLesson] = useState(0)
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
-  /* Reset to first lesson when course changes */
   useEffect(() => {
     setActiveLesson(0)
     setSidebarOpen(false)
   }, [courseId])
 
-  /* Theme */
   useEffect(() => {
     const saved = localStorage.getItem('sn-theme')
     if (saved) document.documentElement.setAttribute('data-theme', saved)
@@ -31,30 +30,123 @@ function Course() {
     localStorage.setItem('sn-theme', next)
   }
 
-  /* Scroll content to top when lesson changes */
   useEffect(() => {
     const contentEl = document.querySelector('.content-container')
     if (contentEl) contentEl.scrollTop = 0
   }, [activeLesson])
 
-  /* Close sidebar when a lesson is selected (mobile) */
   const handleLessonClick = (index) => {
     setActiveLesson(index)
     setSidebarOpen(false)
   }
 
-  /* Current lesson content */
-  const currentLesson = lessons[activeLesson]
+  const handleSummaryClick = () => {
+    setActiveLesson(-1)
+    setSidebarOpen(false)
+  }
 
-  /* 404 handling */
+  const currentLesson = activeLesson >= 0 ? lessons[activeLesson] : null
+  const isSummaryActive = activeLesson === -1
+
+  /* Build summary HTML from all lessons */
+  const buildSummaryHTML = () => {
+    if (!lessons || lessons.length === 0) return '<p>No lessons available yet.</p>'
+
+    let html = `
+      <span class="lesson-badge">SMART SUMMARY</span>
+      <h1>${courseName}</h1>
+      <div class="meta-info">${courseId.toUpperCase()} <span>•</span> ${lessons.length} Lessons <span>•</span> Complete Overview</div>
+
+      <p>A consolidated overview of every lesson covering <strong>topics</strong>, <strong>sub-topics</strong>, <strong>key definitions</strong>, and <strong>important concepts</strong>.</p>
+
+      <div class="divider"></div>
+
+      <h2>Table of Contents</h2>
+      <ol>
+    `
+
+    lessons.forEach((lesson) => {
+      html += `<li><a href="#summary-lesson-${lesson.id}" class="summary-toc-link">${lesson.title}</a></li>`
+    })
+
+    html += `</ol><div class="divider"></div>`
+
+    lessons.forEach((lesson) => {
+      html += `
+        <div class="summary-block" id="summary-lesson-${lesson.id}">
+          <div class="summary-block-header">
+            <span class="lesson-badge">LESSON ${String(lesson.id).padStart(2, '0')}</span>
+            <h2>${lesson.title}</h2>
+          </div>
+      `
+
+      if (lesson.summary) {
+        // Topic
+        if (lesson.summary.topic) {
+          html += `
+            <h3>Topic</h3>
+            <p>${lesson.summary.topic}</p>
+          `
+        }
+
+        // Sub-topics
+        if (lesson.summary.subTopics && lesson.summary.subTopics.length > 0) {
+          html += `<h3>Sub-Topics</h3><ul>`
+          lesson.summary.subTopics.forEach((st) => {
+            html += `<li>${st}</li>`
+          })
+          html += `</ul>`
+        }
+
+        // Definitions
+        if (lesson.summary.definitions && lesson.summary.definitions.length > 0) {
+          html += `
+            <div class="callout callout-blue">
+              <span class="callout-label">Key Definitions</span>
+          `
+          lesson.summary.definitions.forEach((def) => {
+            html += `<p><strong>${def.term}</strong> — ${def.meaning}</p>`
+          })
+          html += `</div>`
+        }
+
+        // Key Points
+        if (lesson.summary.keyPoints && lesson.summary.keyPoints.length > 0) {
+          html += `
+            <div class="callout callout-yellow">
+              <span class="callout-label">Important Points</span>
+              <ul>
+          `
+          lesson.summary.keyPoints.forEach((point) => {
+            html += `<li>${point}</li>`
+          })
+          html += `</ul></div>`
+        }
+      } else {
+        html += `
+          <div class="callout callout-red">
+            <span class="callout-label">Pending</span>
+            <p>Summary not yet available for this lesson.</p>
+          </div>
+        `
+      }
+
+      html += `</div>` // close summary-block
+
+      // Add divider between blocks (not after last)
+      html += `<div class="divider"></div>`
+    })
+
+    return html
+  }
+
   if (!course) {
     return (
       <div className="course-page">
         <nav className="navbar">
           <div className="nav-left">
             <Link to="/" className="logo">
-              {/* <span className="logo-icon">MN</span> */}
-              <img src="/image.png" alt="MN Logo" className="logo-icon"/>
+              <img src="/image.png" alt="MN Logo" className="logo-icon" />
               Mobile Notes
             </Link>
           </div>
@@ -81,10 +173,9 @@ function Course() {
   return (
     <div className="course-page">
 
-      {/* ===== NAVBAR ===== */}
+      {/* NAVBAR */}
       <nav className="navbar">
         <div className="nav-left">
-          {/* Mobile menu button */}
           <button
             className="mobile-menu-btn"
             onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -94,9 +185,7 @@ function Course() {
               <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
             </svg>
           </button>
-
           <Link to="/" className="logo">
-            {/* <span className="logo-icon">MN</span> */}
             <img src="/image.png" alt="MN Logo" className="logo-icon" />
             Mobile Notes
           </Link>
@@ -115,19 +204,33 @@ function Course() {
         </div>
       </nav>
 
-      {/* ===== SIDEBAR OVERLAY (mobile) ===== */}
+      {/* SIDEBAR OVERLAY */}
       <div
         className={`sidebar-overlay${sidebarOpen ? ' show' : ''}`}
         onClick={() => setSidebarOpen(false)}
       />
 
-      {/* ===== LAYOUT ===== */}
+      {/* LAYOUT */}
       <div className="app-container">
 
         {/* Sidebar */}
         <aside className={`sidebar${sidebarOpen ? ' open' : ''}`}>
           <div className="sidebar-header">Lessons</div>
           <ul className="lesson-list">
+
+            {/* SMART SUMMARY BUTTON */}
+            <li className="lesson-item">
+              <button
+                className={`lesson-link${isSummaryActive ? ' active' : ''}`}
+                onClick={handleSummaryClick}
+              >
+                <span className="lesson-num">☰</span>
+                Smart Summary
+              </button>
+            </li>
+
+            <li className="sidebar-divider-line" aria-hidden="true" />
+
             {lessons.map((lesson, index) => (
               <li key={lesson.id} className="lesson-item">
                 <button
@@ -151,32 +254,38 @@ function Course() {
         <main className="content-container">
           <div className="content-body">
             <div className="content-card">
-              {currentLesson ? (
+              {isSummaryActive ? (
+                <div dangerouslySetInnerHTML={{ __html: buildSummaryHTML() }} />
+              ) : currentLesson ? (
                 <div dangerouslySetInnerHTML={{ __html: currentLesson.content }} />
               ) : (
                 <p>Select a lesson from the sidebar.</p>
               )}
 
-              {/* Lesson Navigation */}
-              <div className="divider" />
-              <div className="lesson-nav">
-                {activeLesson > 0 && (
-                  <button
-                    className="lesson-nav-btn prev"
-                    onClick={() => setActiveLesson(activeLesson - 1)}
-                  >
-                    ← {lessons[activeLesson - 1].title}
-                  </button>
-                )}
-                {activeLesson < lessons.length - 1 && (
-                  <button
-                    className="lesson-nav-btn next"
-                    onClick={() => setActiveLesson(activeLesson + 1)}
-                  >
-                    {lessons[activeLesson + 1].title} →
-                  </button>
-                )}
-              </div>
+              {/* Lesson Navigation — only for lessons, not summary */}
+              {!isSummaryActive && (
+                <>
+                  <div className="divider" />
+                  <div className="lesson-nav">
+                    {activeLesson > 0 && (
+                      <button
+                        className="lesson-nav-btn prev"
+                        onClick={() => setActiveLesson(activeLesson - 1)}
+                      >
+                        ← {lessons[activeLesson - 1].title}
+                      </button>
+                    )}
+                    {activeLesson < lessons.length - 1 && (
+                      <button
+                        className="lesson-nav-btn next"
+                        onClick={() => setActiveLesson(activeLesson + 1)}
+                      >
+                        {lessons[activeLesson + 1].title} →
+                      </button>
+                    )}
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </main>

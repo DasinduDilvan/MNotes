@@ -1,3 +1,5 @@
+// content/ict2113.js
+
 export const courseName = 'Data Structures and Algorithms'
 
 export const lessons = [
@@ -7,119 +9,102 @@ export const lessons = [
   content: `
     <span class="lesson-badge">LESSON 01</span>
     <h1>Introduction to Data Structures and Algorithms</h1>
-    <div class="meta-info">ICT2113 <span>•</span> 9 min read <span>•</span> Beginner</div>
+    <div class="meta-info">ICT2113 <span>•</span> 8 min read <span></div>
 
-    <h2>What Is Data?</h2>
-    <p><strong>Data</strong> is a collection of facts from which a conclusion may be drawn. For example, the fact "Temperature 38°C" is a piece of data.</p>
+    <p>Welcome to <strong>Data Structures and Algorithms (DSA)</strong>. This lesson introduces the basic ideas of data, data structures, and algorithms, and explains why they matter so much in computer science.</p>
 
-    <div class="callout callout-blue">
-      <span class="callout-label">Note</span>
-      <p>Data can come in many forms. Understanding these types helps you decide how to store and process them.</p>
-    </div>
+    <div class="divider"></div>
 
+    <h2>What is Data?</h2>
+    <p><strong>Data</strong> is a collection of facts from which a conclusion may be drawn. For example, the data "Temperature 38°C" tells us a fact about temperature.</p>
+
+    <h3>Types of Data</h3>
     <ul>
-      <li><strong>Textual</strong> — words, such as your name (e.g. Amal)</li>
-      <li><strong>Numeric</strong> — numbers, such as your ID (e.g. TG/2025/0001)</li>
-      <li><strong>Audio</strong> — sound, such as your voice</li>
-      <li><strong>Video</strong> — moving pictures with sound, such as a recording of you speaking</li>
+      <li><strong>Textual</strong> — for example, your name (Amal)</li>
+      <li><strong>Numeric</strong> — for example, your ID (TG/2025/0001)</li>
+      <li><strong>Audio</strong> — for example, your voice</li>
+      <li><strong>Video</strong> — for example, your voice and picture together</li>
     </ul>
 
     <div class="divider"></div>
 
     <h2>Key Definitions</h2>
-    <p>Before going further, you need to clearly understand three core terms that are often confused with each other.</p>
-
-    <h3>Algorithm</h3>
-    <p>An <strong>algorithm</strong> is a step-by-step procedure that can be applied to data to achieve a specific goal.</p>
-
-    <h3>Program</h3>
-    <p>A <strong>program</strong> is what actually implements an algorithm — it turns the step-by-step idea into working code.</p>
-
-    <h3>Data Structure</h3>
-    <p>A <strong>data structure</strong> is the way data is represented (organized) inside a computer so that an algorithm can access and manipulate it easily. In other words, it is the <strong>organization of data</strong> needed to solve a problem.</p>
-
-    <div class="callout callout-yellow">
-      <span class="callout-label">Remember</span>
-      <p><strong>Algorithm</strong> = the plan/steps. <strong>Program</strong> = the actual code that carries out the plan. <strong>Data Structure</strong> = the way the data is organized so the plan can work efficiently.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Algorithm</strong> — a step-by-step procedure which can be applied to data to achieve some goal.</p>
     </div>
-
-    <div class="callout callout-red">
-      <span class="callout-label">Warning</span>
-      <p>A common exam mistake is treating "algorithm" and "program" as the same thing. The algorithm is the abstract idea; the program is its concrete implementation in a programming language.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Program</strong> — implements an algorithm.</p>
+    </div>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Data Structure</strong> — the manner in which data is represented in the computer to facilitate its access and manipulation by an algorithm. In other words, it is the organization of data needed to solve a problem.</p>
     </div>
 
     <div class="divider"></div>
 
-    <h2>What Is a Data Structure? (In More Detail)</h2>
-    <p>A data structure is a particular way of storing and organizing data in a computer so it can be used <strong>efficiently and effectively</strong>. It is the logical or mathematical model of a particular organization of data — essentially, a group of data elements grouped together under one name.</p>
-    <p>For example, an <strong>array of integers</strong> is a data structure: many integer values grouped together under a single name.</p>
+    <h2>What is a Data Structure?</h2>
+    <ul>
+      <li>A particular way of storing and organizing data in a computer so that it can be used <strong>efficiently</strong> and <strong>effectively</strong>.</li>
+      <li>A data structure is the <strong>logical or mathematical model</strong> of a particular organization of data.</li>
+      <li>It is a group of data elements grouped together under one name — for example, an <strong>array of integers</strong>.</li>
+    </ul>
 
     <div class="divider"></div>
 
     <h2>Types of Data Structures</h2>
-    <p>There are many data structures, but a few common ones are introduced here. You will learn each of these in detail later in the course.</p>
-
+    <p>There are many types of data structures. Some common ones we will study in detail are:</p>
     <ul>
-      <li><strong>Array</strong> — a fixed-size collection of elements stored next to each other</li>
-      <li><strong>Linked List</strong> — a chain of elements where each element points to the next one</li>
-      <li><strong>Stack</strong> — elements are added and removed from only one end</li>
-      <li><strong>Queue</strong> — elements are added at one end and removed from the other</li>
+      <li><strong>Array</strong></li>
+      <li><strong>Linked List</strong></li>
+      <li><strong>Stack</strong></li>
+      <li><strong>Queue</strong></li>
     </ul>
 
-    <p>A few more structural types, based on how elements are arranged and connected:</p>
-
-    <pre><code>(a) Matrix       → elements arranged in a grid of rows and columns, each linked to its neighbours
-(b) Linear list  → o──o──o──o   (elements linked one after another, in a straight line)
-(c) Tree         →        o
-                        /  |  \
-                       o   o   o
-                      / \        \
-                     o   o        o
-(d) Graph        → o──o
-                     |\/|
-                     o──o        (nodes connected by edges — connections can even form loops)</code></pre>
+    <p>Data can also be organized in these forms:</p>
+    <pre><code>(a) Matrix       - a grid of connected elements
+(b) Linear list  - elements connected one after another
+(c) Tree         - elements connected in a hierarchy (parent-child)
+(d) Graph        - elements connected by edges, forming networks</code></pre>
 
     <div class="divider"></div>
 
     <h2>Data Structures Hierarchy</h2>
-    <p>Data structures can be split into two big families: <strong>Primitive</strong> (built into the language) and <strong>Non-Primitive</strong> (defined by the user/programmer).</p>
-
-    <pre><code>Data Structures
-│
-├── Primitive Data Structures (Built-in)
-│      ├── Integer
-│      ├── Float
-│      ├── Character
-│      └── Pointer
-│
-└── Non-Primitive Data Structures (User Defined)
-       ├── Arrays
-       ├── Files
-       └── Lists
-              ├── Linear Lists
-              │      ├── Stacks
-              │      └── Queues
-              └── Non-Linear Lists
-                     ├── Trees
-                     └── Graphs</code></pre>
-
-    <div class="callout callout-blue">
-      <span class="callout-label">Note</span>
-      <p><strong>Primitive data structures</strong> (Integer, Float, Character, Pointer) come ready-made in the language. <strong>Non-primitive data structures</strong> (Arrays, Lists, Files) are built by the programmer using those primitives.</p>
-    </div>
+    <p>Data structures are divided into two main categories: <strong>Primitive</strong> and <strong>Non-Primitive</strong>.</p>
+    <pre><code>                        Data Structures
+                       /                \\
+             Primitive DS            Non-Primitive DS
+                  |                          |
+       Built-in Data Structures     User Defined Data Structures
+         - Integer                     - Arrays
+         - Float                       - Lists
+         - Character                   - Files
+         - Pointer                          |
+                                 -------------------------
+                                 |                       |
+                          Linear Lists          Non-Linear Lists
+                            - Stacks               - Trees
+                            - Queues                - Graphs</code></pre>
 
     <div class="divider"></div>
 
     <h2>Basic Characteristics of Data Structures</h2>
-    <p>Data structures can also be described using the following characteristics:</p>
-
-    <pre><code>Characteristic    Description                                              Example
-Linear            Data items arranged in a sequence                         Array
-Non-Linear        Data items not arranged in sequence                       Tree, Graph
-Homogeneous       All elements are of the same type                        Array
-Non-Homogeneous   Elements may or may not be of the same type               Structures
-Static            Size & memory locations fixed at compile time             Array
-Dynamic           Expands/shrinks at run time; memory locations can change  Linked List (using pointers)</code></pre>
+    <pre><code>Characteristic     | Description
+-------------------|-------------------------------------------------
+Linear             | Data items are arranged in a linear sequence.
+                    | Example: Array
+Non-Linear         | Data items are not in sequence.
+                    | Example: Tree, Graph
+Homogeneous        | All elements are of the same type.
+                    | Example: Array
+Non-Homogeneous    | Elements may or may not be of the same type.
+                    | Example: Structures
+Static             | Size and memory locations are fixed at compile
+                    | time. Example: Array
+Dynamic            | Expands or shrinks depending on program need;
+                    | memory locations change. Example: Linked List
+                    | (created using pointers)</code></pre>
 
     <div class="divider"></div>
 
@@ -127,125 +112,179 @@ Dynamic           Expands/shrinks at run time; memory locations can change  Link
     <ul>
       <li><strong>Goal</strong> — to organize data</li>
       <li><strong>Criteria</strong> — to facilitate efficient storage, retrieval, and manipulation of data</li>
-      <li><strong>Design Issue</strong> — selecting and designing the appropriate data type for the problem</li>
+      <li><strong>Design Issue</strong> — select and design appropriate data types</li>
     </ul>
 
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>Choosing the right data type/structure for a problem is the <strong>main motivation</strong> for learning and understanding data structures — this is a key exam point.</p>
+      <p>Selecting and designing appropriate data types is the main motivation to learn and understand data structures.</p>
     </div>
 
     <div class="divider"></div>
 
     <h2>Data Structure Operations</h2>
-    <p>These are the common operations you can perform on almost any data structure:</p>
-
     <ul>
-      <li><strong>Traversing</strong> — accessing each data element exactly once so certain items can be processed</li>
-      <li><strong>Searching</strong> — finding the location of a data element (the key) within the structure</li>
+      <li><strong>Traversing</strong> — accessing each data element exactly once so that certain items may be processed</li>
+      <li><strong>Searching</strong> — finding the location of a data element (key) in the structure</li>
       <li><strong>Insertion</strong> — adding a new data element to the structure</li>
       <li><strong>Deletion</strong> — removing a data element from the structure</li>
-      <li><strong>Sorting</strong> — arranging elements in a logical order (ascending or descending)</li>
-      <li><strong>Merging</strong> — combining elements from two or more data structures into one</li>
+      <li><strong>Sorting</strong> — arranging the data elements in a logical order (ascending/descending)</li>
+      <li><strong>Merging</strong> — combining data elements from two or more data structures into one</li>
     </ul>
 
     <div class="divider"></div>
 
-    <h2>What Are Data Structures and Algorithms Good For?</h2>
-
+    <h2>What are Data Structures and Algorithms Good For?</h2>
     <ul>
-      <li><strong>Real-world data storage</strong> — e.g. keeping the details of a set of people</li>
-      <li><strong>Programmer's tools</strong> — data structures meant for the program's own internal use, such as stacks and queues</li>
-      <li><strong>Real-world modelling</strong> — used to model real-world situations, such as graphs and queues</li>
+      <li><strong>Real-world data storage</strong> — to keep the details of a set of people</li>
+      <li><strong>Programmer's tools</strong> — data structures meant for the access of the program itself, such as stacks and queues</li>
+      <li><strong>Real-world modelling</strong> — to model real world situations, using structures such as graphs and queues</li>
     </ul>
 
     <div class="divider"></div>
 
-    <h2>Design Goals: The Overall Picture</h2>
-    <p>When designing data structures and algorithms, two sets of goals matter:</p>
-
-    <pre><code>Data Structure & Algorithm      Implementation
-Design Goals                    Goals
-─────────────────────────      ─────────────────────
-Correctness                     Robustness
-Efficiency                      Adaptability
-                                 Reusability</code></pre>
+    <h2>Overall Picture: Design vs Implementation Goals</h2>
+    <p><strong>Data Structure and Algorithm Design Goals:</strong></p>
+    <ul>
+      <li>Correctness</li>
+      <li>Efficiency</li>
+    </ul>
+    <p><strong>Implementation Goals:</strong></p>
+    <ul>
+      <li>Robustness</li>
+      <li>Adaptability</li>
+      <li>Reusability</li>
+    </ul>
 
     <div class="divider"></div>
 
     <h2>Advantages and Disadvantages of Common Data Structures</h2>
-
-    <pre><code>Data Structure   Advantages                                     Disadvantages
-Array            Quick insertion; fast access if index known    Slow search; slow deletion; fixed size
-Ordered Array    Quicker search than an unsorted array           Slow insertion/deletion; fixed size
-Stack            Fast Last-In-First-Out (LIFO) access             Slow access to other items
-Queue            Fast First-In-First-Out (FIFO) access            Slow access to other items
-Linked List      Quick insertion; quick deletion                  Slow search
-Binary Tree      Quick search, insertion, deletion (if balanced)  Deletion algorithm is complex</code></pre>
-
-    <div class="callout callout-red">
-      <span class="callout-label">Warning</span>
-      <p>Don't assume one data structure is "best" — every choice trades something off. Arrays are fast to access but have a fixed size; linked lists grow freely but are slow to search; balanced binary trees are fast but complex to maintain.</p>
-    </div>
+    <pre><code>Data Structure  | Advantages                          | Disadvantages
+----------------|--------------------------------------|-----------------------------
+Array           | Quick insertion, very fast access     | Slow search, slow deletion,
+                | if index known.                       | fixed size.
+Ordered array   | Quicker search than unsorted array.   | Slow insertion and deletion,
+                |                                        | fixed size.
+Stack           | Provides last-in, first-out access.   | Slow access to other items.
+Queue           | Provides first-in, first-out access.  | Slow access to other items.
+Linked List     | Quick insertion, quick deletion.      | Slow search.
+Binary Tree     | Quick search, insertion, deletion     | Deletion algorithm is complex.
+                | (if tree remains balanced).           |</code></pre>
 
     <div class="divider"></div>
 
-    <h2>What Is an Abstract Data Type (ADT)?</h2>
-
+    <h2>What is an Abstract Data Type (ADT)?</h2>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>An <strong>Abstract Data Type (ADT)</strong> is a collection of data and a set of operations on that data. It is a mathematical model of the data objects that make up a data type, along with the functions that operate on those objects.</p>
+      <p>An <strong>Abstract Data Type (ADT)</strong> is a collection of data and a set of operations on that data. It is defined as a mathematical model of the data objects that make up a data type, along with the functions that operate on those objects.</p>
     </div>
 
-    <p>An ADT defines the data and the allowed operations <strong>without regard to how they will be implemented</strong>. This means we are concerned only with <strong>what</strong> the data represents, not <strong>how</strong> it will eventually be built.</p>
+    <p>An ADT describes the data and the operations that are allowed <strong>without regard to how they will be implemented</strong>. This means we care only about what the data represents, not how it will eventually be built (implemented).</p>
 
-    <p>The diagram below shows how an ADT operates, as a set of layers:</p>
-
+    <h3>How an ADT Works</h3>
     <pre><code>        User
-         ↕
-     Interface        (the operations the user is allowed to call)
-         ↕
-  Implementation      (hidden — the actual data structure and code)</code></pre>
-
-    <p>The user interacts only with the <strong>interface</strong>, using the operations specified by the ADT. The <strong>implementation</strong> is hidden one level deeper, and the user does not need to worry about those details.</p>
+         |
+     Interface
+         |
+   Implementation
+         |
+    Operations</code></pre>
+    <ul>
+      <li>The <strong>user</strong> interacts with the <strong>interface</strong>, using the operations specified by the ADT.</li>
+      <li>The abstract data type is the <strong>shell</strong> that the user interacts with.</li>
+      <li>The <strong>implementation</strong> is hidden one level deeper — the user is not concerned with implementation details.</li>
+    </ul>
 
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>The implementation of an abstract data type is often referred to as a <strong>data structure</strong>. ADT is the "what"; data structure is the "how".</p>
+      <p>The implementation of an abstract data type is often referred to as a <strong>data structure</strong>.</p>
     </div>
 
     <div class="divider"></div>
 
     <h2>Data Structures vs. Algorithms</h2>
-
     <ul>
-      <li><strong>Data Structures</strong> — represent the objects of the Abstract Data Type</li>
+      <li><strong>Data Structures</strong> — represent objects of the abstract data type</li>
       <li><strong>Algorithms</strong> — manipulate the data structures to implement the operations of the ADT</li>
     </ul>
 
-    <p>Data structures and algorithms are, together, patterns for solving problems.</p>
-
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
-      <p>A simple way to remember this: data structures are like the <strong>nouns</strong> (the things being organized), and algorithms are like the <strong>verbs</strong> (the actions performed on them).</p>
+      <p>Data structures and algorithms are patterns for solving problems.</p>
     </div>
 
     <div class="divider"></div>
 
     <h2>Why Do We Need Data Structures?</h2>
-    <p>Using well-designed data structures helps us achieve an important object-oriented programming goal: <strong>component reuse</strong>. Once a data structure has been implemented, it can be used over and over again in different applications.</p>
-    <p>In short, a data structure is a particular way of storing and organizing information in a computer so it can be retrieved and used most productively.</p>
+    <ul>
+      <li>They help achieve an important object-oriented programming goal: <strong>component reuse</strong>.</li>
+      <li>Once a data structure has been implemented, it can be used over and over again in various applications.</li>
+      <li>A data structure is a particular way of storing and organizing information in a computer, so it can be retrieved and used most productively.</li>
+    </ul>
 
     <div class="divider"></div>
 
     <h2>Why Study Data Structures and Algorithms?</h2>
-    <p>Every program is made up of two things: <strong>data</strong> and <strong>algorithms</strong>. Adding good structure to our data makes algorithms much simpler, easier to maintain, and often faster.</p>
-
+    <p>Programs are made up of two things: <strong>data</strong> and <strong>algorithms</strong>.</p>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>Good data structures don't just organize data — they directly make your algorithms simpler and more efficient. This connection between data structures and algorithm quality is the core idea of this whole course.</p>
+      <p>Adding structure to our data can make algorithms much simpler, easier to maintain, and often faster.</p>
     </div>
   `,
+  summary: {
+    topic: 'Introduction to Data Structures and Algorithms',
+    subTopics: [
+      'What is Data?',
+      'Key Definitions',
+      'What is a Data Structure?',
+      'Types of Data Structures',
+      'Data Structures Hierarchy',
+      'Basic Characteristics of Data Structures',
+      'The Need for Data Structures',
+      'Data Structure Operations',
+      'What are Data Structures and Algorithms Good For?',
+      'Overall Picture: Design vs Implementation Goals',
+      'Advantages and Disadvantages of Common Data Structures',
+      'What is an Abstract Data Type (ADT)?',
+      'Data Structures vs. Algorithms',
+      'Why Do We Need Data Structures?',
+      'Why Study Data Structures and Algorithms?',
+    ],
+    definitions: [
+      { term: 'Data', meaning: 'A collection of facts from which a conclusion may be drawn.' },
+      { term: 'Algorithm', meaning: 'A step-by-step procedure which can be applied to data to achieve some goal.' },
+      { term: 'Program', meaning: 'Implements an algorithm.' },
+      { term: 'Data Structure', meaning: 'The manner in which data is represented in the computer to facilitate its access and manipulation by an algorithm; the organization of data needed to solve a problem.' },
+      { term: 'Linear Data Structure', meaning: 'A structure where data items are arranged in a sequence, e.g. Array.' },
+      { term: 'Non-Linear Data Structure', meaning: 'A structure where data items are not arranged in sequence, e.g. Tree, Graph.' },
+      { term: 'Homogeneous Data Structure', meaning: 'A structure where all elements are of the same type, e.g. Array.' },
+      { term: 'Non-Homogeneous Data Structure', meaning: 'A structure where elements may or may not be of the same type, e.g. Structures.' },
+      { term: 'Static Data Structure', meaning: 'A structure whose size and memory locations are fixed at compile time, e.g. Array.' },
+      { term: 'Dynamic Data Structure', meaning: 'A structure that expands or shrinks depending on program need, with changing memory locations, e.g. Linked List created with pointers.' },
+      { term: 'Traversing', meaning: 'Accessing each data element exactly once so it can be processed.' },
+      { term: 'Searching', meaning: 'Finding the location of a data element (key) in the structure.' },
+      { term: 'Insertion', meaning: 'Adding a new data element to the structure.' },
+      { term: 'Deletion', meaning: 'Removing a data element from the structure.' },
+      { term: 'Sorting', meaning: 'Arranging data elements in a logical order (ascending or descending).' },
+      { term: 'Merging', meaning: 'Combining data elements from two or more data structures into one.' },
+      { term: 'Abstract Data Type (ADT)', meaning: 'A collection of data and a set of operations on the data, defined without regard to how it is implemented.' },
+    ],
+    keyPoints: [
+      'Data is a collection of facts; common types are textual, numeric, audio, and video.',
+      'An algorithm is a step-by-step procedure, a program implements an algorithm, and a data structure organizes data for efficient access.',
+      'Data structures split into Primitive (built-in: integer, float, character, pointer) and Non-Primitive (user-defined: arrays, lists, files).',
+      'Non-primitive linear lists include stacks and queues; non-linear lists include trees and graphs.',
+      'Data structures can be classified as Linear/Non-Linear, Homogeneous/Non-Homogeneous, and Static/Dynamic.',
+      'The core goal of studying data structures is efficient storage, retrieval, and manipulation of data.',
+      'The six core data structure operations are traversing, searching, insertion, deletion, sorting, and merging.',
+      'Arrays give fast access but slow search/deletion and a fixed size; linked lists give quick insertion/deletion but slow search; balanced binary trees give quick search, insertion, and deletion.',
+      'Design goals for data structures and algorithms are correctness and efficiency; implementation goals are robustness, adaptability, and reusability.',
+      'An Abstract Data Type (ADT) defines data and operations without specifying implementation; its implementation is called a data structure.',
+      'Data structures represent ADT objects, and algorithms manipulate data structures to implement ADT operations.',
+      'Data structures enable component reuse, a key object-oriented programming goal.',
+      'Adding structure to data makes algorithms simpler, easier to maintain, and often faster.',
+    ],
+  },
 },
   {
     id: 2,

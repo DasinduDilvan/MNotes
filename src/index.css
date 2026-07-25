@@ -476,6 +476,7 @@ button.lesson-link {
     display: flex;
     justify-content: center;
     transition: background-color 0.3s ease;
+    scroll-behavior: smooth;
 }
 
 .content-container::-webkit-scrollbar { width: 6px; }
@@ -872,4 +873,95 @@ pre::-webkit-scrollbar-thumb {
 
     .footer-left  { font-size: 0.8rem; }
     .footer-right { font-size: 0.75rem; }
+}
+
+
+
+/* ===========================
+   SMART SUMMARY — Sidebar
+   =========================== */
+
+.summary-item {
+  margin-bottom: 2px;
+}
+
+.summary-link {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(168, 85, 247, 0.08)) !important;
+  border: 1px dashed var(--accent) !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+}
+
+.summary-link:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(168, 85, 247, 0.15)) !important;
+}
+
+.summary-link.active {
+  background: linear-gradient(135deg, var(--accent), #a855f7) !important;
+  color: #fff !important;
+  border: 1px solid transparent !important;
+}
+
+.summary-icon {
+  font-size: 1.1rem !important;
+  min-width: 28px !important;
+}
+
+.sidebar-divider {
+  list-style: none;
+  height: 1px;
+  background: var(--border);
+  margin: 8px 16px;
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   SMART SUMMARY — Sidebar Divider
+   =========================== */
+
+.sidebar-divider-line {
+  list-style: none;
+  height: 1px;
+  background: var(--border);
+  margin: 6px 16px;
+}
+
+/* ===========================
+   SMART SUMMARY — Content Styles
+   =========================== */
+
+.summary-toc-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.summary-toc-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.summary-block {
+  scroll-margin-top: 80px;
+}
+
+.summary-block-header {
+  margin-bottom: 12px;
+}
+
+.summary-block-header .lesson-badge {
+  margin-bottom: 6px;
+}
+
+.summary-block-header h2 {
+  margin-top: 8px;
 }
