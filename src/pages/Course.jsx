@@ -224,7 +224,7 @@ function Course() {
                 className={`lesson-link${isSummaryActive ? ' active' : ''}`}
                 onClick={handleSummaryClick}
               >
-                <span className="lesson-num">☰</span>
+                <span className="lesson-num">★</span>
                 Smart Summary
               </button>
             </li>
