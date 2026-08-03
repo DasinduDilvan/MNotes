@@ -9,7 +9,7 @@ export const lessons = [
   content: `
 <span class="lesson-badge">LESSON 01</span>
 <h1>Introduction to DSA</h1>
-<div class="meta-info">ICT2113 <span>&bull;</span> 15 min read <span>&bull;</span> Beginner</div>
+<div class="meta-info">ICT2113 <span>&bull;</span> 25 min read</div>
 
 <p>Before going further into <strong>Data Structures and Algorithms (DSA)</strong>, let's understand what "data" actually means and why organizing it well matters so much in computer science.</p>
 
