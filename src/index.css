@@ -915,15 +915,6 @@ pre::-webkit-scrollbar-thumb {
   opacity: 0.5;
 }
 
-
-
-
-
-
-
-
-
-
 /* ===========================
    SMART SUMMARY — Sidebar Divider
    =========================== */
@@ -964,4 +955,530 @@ pre::-webkit-scrollbar-thumb {
 
 .summary-block-header h2 {
   margin-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   MISSING CONTENT STYLES
+   ========================================================= */
+
+/* Better global reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   LESSON CONTENT
+   ========================================================= */
+
+.content-card > :first-child {
+  margin-top: 0;
+}
+
+.content-card h1,
+.content-card h2,
+.content-card h3 {
+  scroll-margin-top: 80px;
+}
+
+.content-card h1 {
+  max-width: 900px;
+}
+
+.content-card p:last-child,
+.content-card ul:last-child,
+.content-card ol:last-child,
+.content-card pre:last-child,
+.content-card table:last-child {
+  margin-bottom: 0;
+}
+
+/* Links inside lessons */
+.content-card a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.content-card a:hover {
+  opacity: 0.8;
+}
+
+/* Nested lists */
+.content-card ul ul,
+.content-card ul ol,
+.content-card ol ul,
+.content-card ol ol {
+  margin-top: 0.45rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-card li > p {
+  margin-bottom: 0.4rem;
+}
+
+/* Better emphasis */
+.content-card em {
+  color: var(--text-heading);
+}
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.25rem 0 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-wrapper table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  background: var(--bg-content);
+  font-size: 0.9rem;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border-light);
+  line-height: 1.55;
+}
+
+.table-wrapper th {
+  color: var(--text-heading);
+  background: var(--bg-sidebar);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.table-wrapper td {
+  color: var(--text);
+}
+
+.table-wrapper tr:last-child td {
+  border-bottom: none;
+}
+
+.table-wrapper tbody tr:nth-child(even) {
+  background: color-mix(
+    in srgb,
+    var(--bg-sidebar) 35%,
+    var(--bg-content)
+  );
+}
+
+.table-wrapper tbody tr:hover {
+  background: var(--accent-light);
+}
+
+.table-wrapper strong {
+  color: var(--text-heading);
+}
+
+/* =========================================================
+   ASCII DIAGRAMS AND CODE BLOCKS
+   ========================================================= */
+
+.content-card pre {
+  tab-size: 2;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
+  -webkit-overflow-scrolling: touch;
+}
+
+.content-card pre code {
+  color: inherit;
+  white-space: inherit;
+}
+
+/* Keep diagrams readable */
+.content-card pre:has(> code) {
+  min-height: 3rem;
+}
+
+/* Optional class if diagrams can be marked separately */
+.diagram {
+  background: var(--bg-code);
+  color: var(--text-code);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "SF Mono", "Fira Code", "Cascadia Code",
+    "Courier New", monospace;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  white-space: pre;
+}
+
+/* =========================================================
+   INLINE CODE
+   ========================================================= */
+
+.content-card p code,
+.content-card li code,
+.content-card td code {
+  color: var(--text-heading);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+/* =========================================================
+   CALLOUT IMPROVEMENTS
+   ========================================================= */
+
+.callout strong {
+  color: inherit;
+}
+
+.callout code {
+  background: rgba(0, 0, 0, 0.08);
+  border: none;
+}
+
+:root[data-theme="dark"] .callout code {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   LESSON SUMMARY
+   ========================================================= */
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.summary-block {
+  scroll-margin-top: 80px;
+}
+
+.summary-block-header {
+  margin-bottom: 0.75rem;
+}
+
+.summary-block-header h2 {
+  margin-top: 0.5rem;
+}
+
+.summary-section-title {
+  color: var(--text-heading);
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summary-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  margin-bottom: 0.65rem;
+}
+
+.summary-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.summary-definition-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.summary-definition {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background: var(--bg-sidebar);
+}
+
+.summary-definition dt {
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.summary-definition dd {
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.summary-key-point {
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  background: var(--accent-light);
+  line-height: 1.6;
+}
+
+/* Summary links */
+.summary-toc {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background: var(--bg-sidebar);
+}
+
+.summary-toc-link {
+  display: block;
+  padding: 0.35rem 0.5rem;
+  border-radius: 5px;
+}
+
+.summary-toc-link:hover {
+  background: var(--accent-light);
+  text-decoration: none;
+}
+
+/* =========================================================
+   SIDEBAR SUMMARY ITEMS
+   ========================================================= */
+
+.summary-item {
+  margin-bottom: 0.35rem;
+}
+
+.summary-link {
+  min-height: 42px;
+}
+
+.summary-link.active {
+  color: #fff !important;
+}
+
+.sidebar-divider,
+.sidebar-divider-line {
+  list-style: none;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid color-mix(
+    in srgb,
+    var(--accent) 65%,
+    transparent
+  );
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   CORRECT SELECTORS
+   ========================================================= */
+
+/*
+  Replace these malformed selectors from the existing CSS:
+
+  .[sidebar-overlay.show](http://sidebar-overlay.show)
+  .[lesson-nav-btn.next](http://lesson-nav-btn.next)
+  .[sidebar.open](http://sidebar.open)
+*/
+
+.sidebar-overlay.show {
+  display: block;
+}
+
+.lesson-nav-btn.next {
+  margin-left: auto;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* =========================================================
+   MOBILE TABLE AND CONTENT STYLES
+   ========================================================= */
+
+@media (max-width: 860px) {
+  .table-wrapper {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+  }
+
+  .table-wrapper table {
+    min-width: 560px;
+    font-size: 0.82rem;
+  }
+
+  .table-wrapper th,
+  .table-wrapper td {
+    padding: 0.65rem 0.7rem;
+  }
+
+  .content-card pre {
+    font-size: 0.72rem;
+    line-height: 1.45;
+    padding: 0.7rem;
+  }
+
+  .content-card pre code {
+    font-size: inherit;
+  }
+
+  .diagram {
+    font-size: 0.68rem;
+    line-height: 1.35;
+    padding: 0.75rem;
+  }
+
+  .summary-definition {
+    padding: 0.75rem;
+  }
+
+  .summary-key-point {
+    padding: 0.8rem 0.9rem;
+  }
+
+  .summary-toc {
+    padding: 0.75rem;
+  }
+}
+
+/* Extra-small screens */
+@media (max-width: 480px) {
+  .content-container {
+    padding: 0.5rem;
+  }
+
+  .content-card {
+    padding: 0.85rem;
+  }
+
+  .content-card h1 {
+    font-size: 1.25rem;
+  }
+
+  .content-card h2 {
+    font-size: 1.08rem;
+  }
+
+  .content-card h3 {
+    font-size: 0.92rem;
+  }
+
+  .table-wrapper table {
+    min-width: 520px;
+  }
+
+  .lesson-nav-btn {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* =========================================================
+   PRINT STYLES
+   ========================================================= */
+
+@media print {
+  .navbar,
+  .sidebar,
+  .sidebar-overlay,
+  .lesson-nav,
+  .theme-toggle,
+  .mobile-menu-btn {
+    display: none !important;
+  }
+
+  .course-page,
+  .app-container {
+    height: auto;
+    overflow: visible;
+  }
+
+  .content-container {
+    display: block;
+    padding: 0;
+    overflow: visible;
+    background: #fff;
+  }
+
+  .content-body {
+    max-width: none;
+  }
+
+  .content-card {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .content-card pre {
+    white-space: pre-wrap;
+    overflow: visible;
+    color: #000;
+    background: #f3f3f3;
+  }
+
+  .callout,
+  .table-wrapper,
+  pre {
+    break-inside: avoid;
+  }
 }
