@@ -3,509 +3,1086 @@ export const courseName = 'Object Oriented Analysis and Design'
 export const lessons = [
   {
   id: 1,
-  title: 'OO A & D: Basic Concepts',
+  title: 'OOAD : Basic Concepts',
   content: `
     <span class="lesson-badge">LESSON 01</span>
-    <h1>Object Oriented Analysis and Design: Basic Concepts</h1>
-    <div class="meta-info">ICT2142 <span>•</span> 35 min read</div>
+    <h1>Object-Oriented Analysis and Design: Basic Concepts</h1>
+    <div class="meta-info">OOAD <span>•</span> 50 min read <span></div>
 
-    <div class="callout callout-blue">
-      <span class="callout-label">Note</span>
-      <p>This lesson introduces the basic ideas behind <strong>Object Oriented Analysis and Design (OOAD)</strong>. You will learn what "object orientation" means, how classes and objects work together, how objects talk to each other through <strong>message passing</strong>, and the four main principles of OOP: <strong>Abstraction</strong>, <strong>Encapsulation</strong>, <strong>Inheritance</strong>, and <strong>Polymorphism</strong>.</p>
-    </div>
-
-    <h2>Lecture Objectives</h2>
-    <p>After completing this lecture, you should be able to:</p>
-    <ul>
-      <li>Identify what <strong>object orientation</strong> is</li>
-      <li>Describe the <strong>principles of object orientation</strong></li>
-      <li>Describe the concept of <strong>class</strong> in detail</li>
-      <li>Identify the concept of <strong>message passing</strong></li>
-      <li>Identify <strong>high cohesion</strong> and <strong>low coupling</strong></li>
-    </ul>
+    <h2>Learning Objectives</h2>
+    <p>After finishing this lesson, you should be able to:</p>
+    <ol>
+      <li>Explain <strong>Object Orientation</strong>.</li>
+      <li>Describe the main principles of Object Orientation.</li>
+      <li>Explain the concept of a <strong>class</strong>.</li>
+      <li>Explain the concept of an <strong>object</strong> and <strong>instance</strong>.</li>
+      <li>Explain <strong>message passing</strong> between objects.</li>
+      <li>Explain <strong>high cohesion</strong> and <strong>low coupling</strong>.</li>
+      <li>Identify these concepts in a real-world software system.</li>
+    </ol>
 
     <div class="divider"></div>
 
-    <h2>The Software Development Life Cycle (SDLC)</h2>
-    <p>Before diving into object orientation, it helps to remember the general stages every software project goes through:</p>
-    <pre><code>ANALYSIS → DESIGN → DEVELOPMENT → TESTING → DEPLOYMENT → MAINTENANCE</code></pre>
-    <p>Object Oriented Analysis and Design fits into the early <strong>Analysis</strong> and <strong>Design</strong> stages of this cycle, before actual coding (Development) begins.</p>
+    <h2>System Development Life Cycle</h2>
+    <p>Before we look at Object-Oriented Analysis and Design, we need to know where analysis and design fit inside the bigger software development process.</p>
+    <p>A typical software development process looks like this:</p>
+    <pre><code>Analysis → Design → Development → Testing → Deployment → Maintenance</code></pre>
+
+    <h3>Analysis</h3>
+    <p>The goal here is to understand:</p>
+    <ul>
+      <li>What problem are we solving?</li>
+      <li>Who are the users?</li>
+      <li>What does the user actually need?</li>
+      <li>What should the system do?</li>
+    </ul>
+
+    <h3>Design</h3>
+    <p>The system is planned before anyone writes code. During design, we decide:</p>
+    <ul>
+      <li>Overall system architecture</li>
+      <li>Database structure</li>
+      <li>User interface</li>
+      <li>System flow</li>
+      <li>Components / modules</li>
+      <li>Technologies to be used</li>
+    </ul>
+    <p>The design acts as a <strong>blueprint</strong> for development.</p>
+
+    <h3>Development</h3>
+    <p>The designed solution is built using a programming language and suitable technologies.</p>
+
+    <h3>Testing</h3>
+    <p>The developed system is checked to see whether it:</p>
+    <ul>
+      <li>Works correctly</li>
+      <li>Satisfies requirements</li>
+      <li>Handles errors properly</li>
+      <li>Meets quality expectations</li>
+    </ul>
+
+    <h3>Deployment</h3>
+    <p>The finished system is released to users. Modern deployment may involve:</p>
+    <ul>
+      <li>Cloud platforms</li>
+      <li>Containers</li>
+      <li>CI/CD pipelines</li>
+      <li>App stores</li>
+      <li>Web hosting</li>
+    </ul>
+
+    <h3>Maintenance</h3>
+    <p>After deployment, the system may still need:</p>
+    <ul>
+      <li>Bug fixes</li>
+      <li>Security updates</li>
+      <li>Performance improvements</li>
+      <li>New features</li>
+      <li>Compatibility updates</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Modern software development is usually <strong>iterative</strong>. Analysis, design, development, and testing often happen repeatedly, rather than only once in a strict straight line.</p>
+    </div>
 
     <div class="divider"></div>
 
     <h2>What is Object Orientation?</h2>
-    <p><strong>Object orientation</strong> is about viewing and modeling any system as a set of <strong>interacting and interrelated objects</strong>.</p>
+    <p><strong>Object Orientation (OO)</strong> is a way of thinking about and designing software as a collection of <strong>objects</strong> that interact with one another.</p>
+    <p>Instead of only asking:</p>
+    <p><em>"What functions should the program perform?"</em></p>
+    <p>we also ask:</p>
+    <p><em>"What objects exist in this system, what do they know, what can they do, and how do they interact?"</em></p>
+    <p>In an object-oriented system:</p>
+    <ul>
+      <li>Software is organized around <strong>objects</strong>.</li>
+      <li>Objects contain <strong>data</strong>.</li>
+      <li>Objects provide <strong>behavior</strong>.</li>
+      <li>Objects interact with other objects.</li>
+      <li>Objects may represent real-world entities, concepts, or software responsibilities.</li>
+    </ul>
+    <p>For example, in a Library Management System, we may identify these objects:</p>
+    <ul>
+      <li>Book</li>
+      <li>Member</li>
+      <li>Librarian</li>
+      <li>Loan</li>
+    </ul>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>In an object-oriented environment:</p>
-      <ul>
-        <li>Software is composed of <strong>discrete objects</strong></li>
-        <li>Each object <strong>encapsulates</strong> its own data and behaviour</li>
-        <li>Objects represent <strong>real-world entities</strong></li>
-      </ul>
+      <p><strong>Object Orientation</strong> is viewing a system as a set of interacting and interrelated objects, with each object encapsulating its own data and behavior.</p>
     </div>
-
-    <h3>Objects Are Self-Contained</h3>
-    <p><strong>Object-oriented (OO) systems development</strong> builds software using self-contained modules called <strong>objects</strong>. Each object:</p>
-    <ul>
-      <li>Has its own data</li>
-      <li>Has its own functionality</li>
-      <li>Works independently but interacts with other objects</li>
-    </ul>
-    <p>Because objects are self-contained, they can be easily:</p>
-    <ul>
-      <li><strong>Replaced</strong> — swap one object without affecting others</li>
-      <li><strong>Modified</strong> — update behavior without breaking the system</li>
-      <li><strong>Reused</strong> — use the same object in different applications</li>
-    </ul>
 
     <div class="divider"></div>
 
-    <h2>Object Oriented Development Overview</h2>
-    <p>Object oriented development happens in three connected stages:</p>
+    <h2>Objects as Self-Contained Components</h2>
+    <p>An object can be thought of as a fairly self-contained software component. An object:</p>
+    <p><strong>1. Has its own data</strong></p>
+    <pre><code>Book
+- title
+- author
+- ISBN
+- availability</code></pre>
+    <p><strong>2. Has its own functionality</strong></p>
+    <pre><code>checkAvailability()
+reserve()</code></pre>
+    <p><strong>3. Interacts with other objects</strong></p>
+    <pre><code>Member → borrows → Book</code></pre>
+    <p><strong>Advantages</strong> — because responsibilities are organized into objects, components can potentially be:</p>
+    <ul>
+      <li>Reused</li>
+      <li>Modified</li>
+      <li>Replaced</li>
+      <li>Tested independently</li>
+    </ul>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>In modern software engineering, we usually think of objects as <strong>software abstractions</strong> rather than literally "real-world things." For example, <code>PaymentService</code> can be an object even though it is not a physical object.</p>
+    </div>
 
-    <h3>OOA — Object Oriented Analysis</h3>
-    <p>Emphasizes <strong>finding and describing the objects</strong> (or concepts) in the problem domain, i.e. <strong>domain objects</strong>.</p>
+    <div class="divider"></div>
 
-    <h3>OOD — Object Oriented Design</h3>
-    <p>Emphasizes <strong>defining software objects</strong> and how they <strong>collaborate</strong> to fulfill the requirements.</p>
+    <h2>OOA, OOD and OOP</h2>
+    <p>These three terms are very important and are easy to mix up.</p>
 
-    <h3>OOP — Object Oriented Programming (Implementation)</h3>
-    <p>Designed objects are implemented in a programming language. Implementation is also known as <strong>Coding</strong> or <strong>Construction</strong>.</p>
+    <h3>OOA — Object-Oriented Analysis</h3>
+    <p><strong>Question:</strong> What exists in the problem domain?</p>
+    <p>OOA focuses on identifying:</p>
+    <ul>
+      <li>Objects</li>
+      <li>Concepts</li>
+      <li>Classes</li>
+      <li>Relationships</li>
+      <li>Requirements</li>
+    </ul>
+    <p>We look at the problem from the point of view of the problem domain. Example — in a Library System, we may identify: Book, Member, Librarian, Loan, Library.</p>
 
+    <h3>OOD — Object-Oriented Design</h3>
+    <p><strong>Question:</strong> How should the software objects work together?</p>
+    <p>OOD takes the concepts identified during analysis and designs software structures that satisfy the requirements. We determine:</p>
+    <ul>
+      <li>Software classes</li>
+      <li>Attributes</li>
+      <li>Methods</li>
+      <li>Relationships</li>
+      <li>Object interactions</li>
+      <li>Responsibilities</li>
+    </ul>
+    <pre><code>Book
+----------------
+title
+author
+ISBN
+----------------
+checkAvailability()
+reserve()</code></pre>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>OOD</strong> focuses on defining software objects and how those objects collaborate to fulfill requirements.</p>
+    </div>
+
+    <h3>OOP — Object-Oriented Programming</h3>
+    <p><strong>Question:</strong> How do we implement the design?</p>
+    <p>OOP is the implementation of object-oriented concepts using a programming language. Examples of OO languages include Java, C#, C++, Python, Kotlin, Swift, and TypeScript.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>OOP</strong> is the implementation / coding / construction stage of the objects that were designed earlier.</p>
+    </div>
+
+    <h3>Simple Relationship</h3>
+    <pre><code>OOA
+  ↓
+Identify the problem-domain objects
+
+OOD
+  ↓
+Design software objects and their interactions
+
+OOP
+  ↓
+Implement those objects using a programming language</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Traditional Development vs Object-Oriented Development</h2>
+    <p>In a <strong>traditional</strong> approach, we often think mainly about:</p>
+    <pre><code>Functions + Data</code></pre>
+    <p>In <strong>OO development</strong>, we try to keep the:</p>
+    <pre><code>Data + Behavior that operates on that data</code></pre>
+    <p>together, inside appropriate objects or classes. For example, instead of having code like this spread throughout the system:</p>
+    <pre><code>customerData
+calculateCustomerBill()
+updateCustomer()</code></pre>
+    <p>we may instead have a single, self-contained class:</p>
+    <pre><code>Customer
+----------------
+name
+address
+balance
+----------------
+calculateBill()
+updateDetails()</code></pre>
+    <p>This idea is closely related to <strong>encapsulation</strong>.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>OO development combines <strong>data / state</strong> and <strong>behavior / functions</strong> within objects, and groups similar objects into <strong>classes</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Why Object Orientation?</h2>
+    <p>Object-oriented development can offer several advantages:</p>
+    <ul>
+      <li><strong>Simplicity</strong> — complex systems can be divided into understandable objects.</li>
+      <li><strong>Reusability</strong> — existing classes and components can potentially be reused.</li>
+      <li><strong>Increased Quality</strong> — modular designs can make testing and maintenance easier.</li>
+      <li><strong>Faster Development</strong> — reusable components can reduce development effort.</li>
+      <li><strong>Maintainability</strong> — changes can often be localized to particular classes or components.</li>
+      <li><strong>Scalability</strong> — large systems can be divided into smaller components.</li>
+      <li><strong>Modularity</strong> — each class can have a clear responsibility.</li>
+      <li><strong>Modifiability</strong> — well-designed systems can accommodate changes more easily.</li>
+    </ul>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>Modern perspective:</strong> these benefits are strongest when OO design is combined with principles such as high cohesion, low coupling, Single Responsibility, composition, Dependency Injection, and interface-based design.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>What is an Object?</h2>
+    <p>The idea of objects in programming has historical roots in languages such as <strong>Simula</strong>. An object can be thought of as a software entity that:</p>
+    <ul>
+      <li><strong>Knows things</strong> — these are its attributes / state.</li>
+      <li><strong>Does things</strong> — these are its methods / behavior.</li>
+    </ul>
+    <p>Example — a <strong>Car</strong> object:</p>
+    <p><strong>Knows:</strong> color, manufacturer, model, cost, owner</p>
+    <p><strong>Can do:</strong> drive, stop, lock, carry passengers</p>
+
+    <div class="divider"></div>
+
+    <h2>Attributes</h2>
+    <p>An <strong>attribute</strong> represents a piece of data or a property of an object. Attributes describe the <strong>state</strong> of an object.</p>
+    <p>Example — Car:</p>
+    <pre><code>color
+manufacturer
+model
+cost
+owner</code></pre>
+    <p>Different objects of the same class can have different attribute values. For example:</p>
+    <pre><code>Car 1                Car 2
+color = Red           color = Blue
+model = Toyota        model = Honda</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Methods</h2>
+    <p>A <strong>method</strong> represents what an object can do. A method implements some behavior of the object.</p>
+    <p>Example — Car:</p>
+    <pre><code>drive()
+stop()
+lock()
+openDoor()</code></pre>
+    <p>Putting it together:</p>
+    <pre><code>Object        Attributes              Methods
+Car           color, model, cost      drive(), stop()
+Student       name, age, ID           study(), attendClass()
+BankAccount   accountNo, balance      deposit(), withdraw()</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>State and Behavior</h2>
+    <p>This is a very important distinction to remember.</p>
+    <p><strong>State</strong> — what the object is / knows at a particular time. Represented by attributes. Example:</p>
+    <pre><code>Car
+color = Red
+manufacturer = Toyota
+cost = 8,000,000</code></pre>
+    <p><strong>Behavior</strong> — what the object can do. Represented by methods. Example:</p>
+    <pre><code>drive()
+stop()
+openDoor()</code></pre>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>OO development offers a <strong>different model</strong> from the traditional software development approach. Functions (<strong>behaviour</strong>) and data (<strong>state</strong>) relating to a single object are self-contained, or <strong>encapsulated</strong>, in one place. Objects are grouped into <strong>classes</strong> — in object-oriented terms, we discover and describe classes involved in the problem domain.</p>
+      <p>Easy way to remember: <strong>Attributes → What does it know?</strong> and <strong>Methods → What can it do?</strong></p>
     </div>
 
-    <h3>OOA vs OOD — Library Example</h3>
-    <p><strong>OO Analysis</strong> examines requirements from the perspective of the classes and objects found in the vocabulary of the problem domain. The emphasis is on <strong>finding objects or concepts</strong> in the problem domain.</p>
-    <p>Example — Library info system: concepts include <strong>Book</strong>, <strong>Library</strong>, and so on.</p>
-    <p><strong>OO Design</strong> develops structures whereby sets of objects <strong>collaborate</strong> to provide the behaviours that satisfy the requirements of the problem. The emphasis is on defining software objects and how they collaborate.</p>
-    <p>Example — In the library system, a <code>Book</code> object may have a <strong>title</strong> attribute and a <strong>getChapter</strong> method.</p>
-
     <div class="divider"></div>
 
-    <h2>Why Use Object Orientation?</h2>
+    <h2>Classes</h2>
+    <p>A <strong>class</strong> is a blueprint / template used to describe a group of similar objects. A class defines:</p>
     <ul>
-      <li><strong>Simplicity</strong></li>
-      <li><strong>Reusability</strong></li>
-      <li><strong>Increased quality</strong></li>
-      <li><strong>Faster development</strong></li>
-      <li><strong>Easily maintainable</strong></li>
-      <li><strong>Scalable</strong></li>
-      <li><strong>Modularity</strong></li>
-      <li><strong>Modifiability</strong></li>
+      <li>Attributes</li>
+      <li>Methods</li>
+      <li>Relationships</li>
+      <li>Common behavior</li>
     </ul>
-
-    <div class="divider"></div>
-
-    <h2>The OO Environment: Objects, Attributes & Methods</h2>
-
-    <h3>What is an Object?</h3>
-    <p>The term <strong>object</strong> was first formally used in the <strong>Simula</strong> language to simulate some aspect of reality.</p>
-    <p>An object is a <strong>real-world entity</strong>:</p>
-    <ul>
-      <li>It <strong>knows</strong> things (has <strong>attributes</strong>)</li>
-      <li>It <strong>does</strong> things (provides services, or has <strong>methods</strong>)</li>
-    </ul>
-
+    <p>Example:</p>
+    <pre><code>Employee
+-------------------------
+name
+employeeID
+salary
+-------------------------
+calculateSalary()
+displayDetails()</code></pre>
+    <p>The class does not represent one particular employee. It describes what an <code>Employee</code> object should contain and what it can do.</p>
     <div class="callout callout-blue">
-      <span class="callout-label">Example</span>
-      <p>Think of a <strong>Car</strong> object: "I am a Car. I know my color, manufacturer, cost, owner and model." Or a <strong>Fish</strong> object: "I am a Fish. I know my date of arrival and expiration." These are the object's <strong>attributes</strong>.</p>
-      <p>Now think about what each object can do: a <strong>Person</strong> object says "I know how to compute my payroll," and a <strong>Car</strong> object says "I know how to stop." These are the object's <strong>methods</strong>.</p>
+      <span class="callout-label">Note</span>
+      <p>A <strong>class</strong> is a template / description for objects that share common attributes, methods, operations, and relationships.</p>
     </div>
-
-    <h3>Attributes and Methods</h3>
-    <ul>
-      <li><strong>Attributes</strong>
-        <ul>
-          <li>Represented by a data type</li>
-          <li>Describe the object's <strong>state</strong></li>
-          <li>Car example: color, manufacturer, cost, owner, model, etc.</li>
-        </ul>
-      </li>
-      <li><strong>Methods</strong>
-        <ul>
-          <li>Define the object's behavior and specify how an object's data is manipulated</li>
-          <li>Car example: drive it, lock it, tow it, carry passenger in it</li>
-        </ul>
-      </li>
-    </ul>
-
-    <p><strong>Attributes represent state.</strong> For a car: Color, Manufacturer, Cost.</p>
-    <p><strong>Methods represent behavior</strong> — what the object normally does, or what it can do on its own. A method <strong>implements</strong> the behavior of an object. Behavior denotes the collection of methods that abstractly describes what an object is capable of doing. For a car: Ride, Open doors.</p>
 
     <div class="divider"></div>
 
-    <h2>Classes and Objects</h2>
+    <h2>Class vs Object</h2>
+    <p>This is one of the most important concepts in OOAD.</p>
+    <ul>
+      <li><strong>Class</strong> — a blueprint / template.</li>
+      <li><strong>Object</strong> — an actual instance created from the class.</li>
+    </ul>
+    <p>Think about a house:</p>
+    <pre><code>House Blueprint = Class
+Actual House    = Object</code></pre>
+    <p>Example — Class: <code>Employee</code>. Possible objects: <code>employee1</code> → John, <code>employee2</code> → Jane, <code>employee3</code> → Mark. All belong to the <code>Employee</code> class but have different values.</p>
 
-    <h3>Objects Are Grouped Into Classes</h3>
-    <p>A <strong>class</strong> represents a collection of objects that share the same characteristic properties.</p>
-    <p>Example: the class <strong>Employee</strong> defines the property <strong>name</strong>. Each individual employee (object) will have a value for this property, such as "John," "Jane," or "Mark."</p>
-    <pre><code>        Employee Class
-        /      |      \\
-   John obj  Jane obj  Mark obj</code></pre>
+    <div class="divider"></div>
 
-    <h3>What is a Class?</h3>
+    <h2>Instance</h2>
+    <p>An <strong>instance</strong> is one particular object created from a class. Example — Class: <code>Student</code>. An instance:</p>
+    <pre><code>Student
+----------------
+name = Peter
+age = 15
+----------------
+study()
+walk()</code></pre>
+    <p>Peter is an instance of the <code>Student</code> class. Each instance has its own state.</p>
     <div class="callout callout-blue">
-      <span class="callout-label">Definition</span>
-      <p>A <strong>class</strong> is a description of a set of objects that share the same attributes, operations, methods, and relationships.</p>
+      <span class="callout-label">Note</span>
+      <p>An <strong>instance</strong> is a single person, thing, or concept in the application domain — another word for a single object.</p>
     </div>
-    <ul>
-      <li>The purpose of a class is to declare a collection of operations and attributes that fully describe the structure and behavior of objects</li>
-      <li>Classes are <strong>templates</strong> for objects</li>
-      <li>They are used to <strong>create</strong> objects</li>
-      <li>Objects that are sufficiently similar to each other are said to belong to the same class</li>
-    </ul>
-    <p>An object represents a particular <strong>instance</strong> of a class. All objects of a given class share a common specification and definition of its methods and attributes, which is used to distinguish one type of object from another. The chief role of a class is to define the properties (state) and procedures (behavior), and applicability, of its instances.</p>
-
-    <h3>What is an Instance?</h3>
-    <ul>
-      <li>Represents a single person, thing, or concept in the application domain</li>
-      <li>Another word for a single <strong>object</strong></li>
-      <li>Each instance of a class is <strong>unique</strong></li>
-    </ul>
-    <pre><code>Class: Student  --->  Instance:
-                       Name: Peter
-                       Age: 15
-                       Studying
-                       Walking</code></pre>
 
     <div class="divider"></div>
 
     <h2>Message Passing</h2>
+    <p>Objects need to communicate with one another. This communication is called <strong>message passing</strong>. A message is simply a request asking an object to perform some operation. For example:</p>
+    <pre><code>Customer → placeOrder() → OrderService</code></pre>
+    <p>The receiving object executes the matching method.</p>
+    <p><strong>Simple analogy:</strong> A person says <em>"Prepare the soup."</em> The chef receives that request and performs <code>prepareSoup()</code>.</p>
+    <pre><code>Message → "Prepare soup"
+Method  → prepareSoup()</code></pre>
 
-    <h3>Messages and Methods</h3>
+    <div class="divider"></div>
+
+    <h2>How Message Passing Works</h2>
+    <p>There are normally three steps:</p>
+    <ol>
+      <li><strong>Sender</strong> — one object sends a message.</li>
+      <li><strong>Receiver</strong> — another object receives the message.</li>
+      <li><strong>Method execution</strong> — the receiver executes the matching method. A result may then be returned.</li>
+    </ol>
+    <pre><code>Sender
+  |
+  | message
+  ↓
+Receiver
+  |
+  | executes method
+  ↓
+Return value</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Components of a Message</h2>
+    <p>A message can contain:</p>
+    <ol>
+      <li><strong>Object reference</strong> — identifies which object should receive the message.</li>
+      <li><strong>Method name</strong> — identifies what operation should be performed.</li>
+      <li><strong>Parameters</strong> — provide the required input values.</li>
+    </ol>
+    <p>Example:</p>
+    <pre><code>lawrence.takeOrder(
+    "sofa",
+    "1 Robinson Rd",
+    120799
+);</code></pre>
+    <p>Here: Object reference → <code>lawrence</code>, Method name → <code>takeOrder</code>, Parameters → <code>"sofa"</code>, <code>"1 Robinson Rd"</code>, <code>120799</code>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Client and Server Objects</h2>
+    <p>In an object interaction:</p>
     <ul>
-      <li><strong>Message</strong>: a function call</li>
-      <li><strong>Method</strong>: a function / procedure</li>
+      <li><strong>Message Sender</strong> acts as the <strong>client</strong>.</li>
+      <li><strong>Message Receiver</strong> acts as the <strong>server</strong> for that particular request.</li>
     </ul>
-    <p>In an object oriented system, you invoke a method of an object by <strong>sending the object a message</strong>.</p>
-    <pre><code>Person --- Message: "Tell to make soup" ---> Soup
-                                              Method: Prepare the soup</code></pre>
+    <pre><code>Customer
+  |
+  | placeOrder()
+  ↓
+SalesPerson</code></pre>
+    <p>The Customer requests a service, and the SalesPerson provides it. In this example, Alex is the customer / client, and Lawrence is the receiving / server object.</p>
 
+    <div class="divider"></div>
+
+    <h2>Method Signature</h2>
+    <p>A method has a <strong>signature</strong> that identifies the operation. For example:</p>
+    <pre><code>getMyFundsFromBank(String bankName)</code></pre>
+    <p>The signature concept focuses on the method name and the parameter list:</p>
+    <pre><code>getMyFundsFromBank(String)</code></pre>
+    <p>Different programming languages define their own exact rules for what counts as a method signature. In this lesson, a signature is simply the combination of the <strong>method name</strong> and the <strong>parameter list</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Principles of Object Orientation</h2>
+    <p>There are four major principles of Object Orientation:</p>
+    <ol>
+      <li>Abstraction</li>
+      <li>Encapsulation</li>
+      <li>Inheritance</li>
+      <li>Polymorphism</li>
+    </ol>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>These four principles are often called the <strong>four pillars of OOP</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Abstraction</h2>
+    <p><strong>Abstraction</strong> means focusing on the important aspects of something while ignoring unnecessary details. It answers <em>"What does this object do?"</em> rather than <em>"How exactly does it do it?"</em></p>
+    <p><strong>Real-world example — Map.</strong> A map is an abstraction. Different maps show different information depending on their purpose.</p>
+    <ul>
+      <li><strong>Road map</strong> shows: roads, cities, routes, distances.</li>
+      <li><strong>Geological map</strong> shows: rock types, geological structures, geological boundaries.</li>
+    </ul>
+    <p>The same geographical area can be shown differently depending on what information matters for the task.</p>
+    <p><strong>Software example.</strong> Think about a smartphone call. The user only sees:</p>
+    <pre><code>Incoming Call
+[ Accept ]  [ Reject ]</code></pre>
+    <p>The user does not need to know how the network identifies the phone, how signalling works, how audio packets are transmitted, how the operating system manages the call, or how the network sets up the connection. All that complexity is hidden.</p>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Abstraction</strong> hides unnecessary complexity and exposes only the essential functionality.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Encapsulation</h2>
+    <p><strong>Encapsulation</strong> means packaging data and the operations that work on that data together inside an object or class. It also involves controlling access to the object's internal state. For example:</p>
+    <pre><code>BankAccount
+-------------------------
+private balance
+private accountNumber
+-------------------------
+deposit()
+withdraw()
+getBalance()</code></pre>
+    <p>Outside code should not normally change <code>balance</code> directly. Instead, <code>deposit()</code> and <code>withdraw()</code> control how the balance changes.</p>
+
+    <div class="divider"></div>
+
+    <h2>Data Hiding</h2>
+    <p><strong>Data hiding</strong> means restricting direct access to internal data or implementation details. For example, instead of allowing:</p>
+    <pre><code>private double balance;
+
+account.balance = -500000;</code></pre>
+    <p>we provide controlled operations instead:</p>
+    <pre><code>account.deposit(5000);
+account.withdraw(1000);</code></pre>
+    <p>This lets the class enforce its own rules. For example:</p>
+    <pre><code>withdraw(amount)
+  if amount <= balance
+    perform withdrawal
+  else
+    reject transaction</code></pre>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>Objects communicate with each other by sending <strong>messages</strong>. A message is a method call sent from a <strong>message-sending object</strong> to a <strong>message-receiving object</strong>.</p>
+      <p><strong>Encapsulation</strong> is separating an object's external interface from its hidden internal implementation.</p>
     </div>
-
-    <h3>What Does a Message Consist Of?</h3>
-    <ul>
-      <li>An <strong>object reference</strong> that identifies the message receiver</li>
-      <li>A <strong>method name</strong>, which corresponds to a method of the receiving object</li>
-      <li><strong>Parameters</strong>, which correspond to the arguments of the calling method</li>
-    </ul>
-    <p>The <strong>message-receiving object</strong> acts as a <strong>server</strong>. The <strong>message-sending object</strong> acts as a <strong>client</strong> of the server.</p>
-
-    <h3>Method Signatures</h3>
-    <p>OO systems locate each function/method with the data it uses, as far as is practicable. These processes (functions/methods) are called <strong>operations</strong>, and each has a specific <strong>signature</strong>.</p>
-    <ul>
-      <li>A <strong>signature</strong> is the combination of the <strong>method name</strong> and the <strong>parameter list</strong></li>
-      <li>To invoke an operation, its signature must be given</li>
-    </ul>
-    <pre><code>public double getMyFundsFromBank(String bankName)
-                └──────────────┬──────────────┘
-                signature = method name + parameters only</code></pre>
-
-    <h3>Message Passing Example</h3>
-    <p>Consider a customer, <strong>alex</strong>, placing an order with a salesperson, <strong>lawrence</strong>:</p>
-    <pre><code>alex (Customer)                              lawrence (SalesPerson)
-name = "Alex"                                name = "Lawrence"
-address = "1 Robinson Rd"    --message-->    employeeNo = 15
-budget = 2000                 takeOrder(     commission = 200
-                             "sofa", name,
-placeOrder(): void            address,       takeOrder(): int
-                              "120799")
-                              <-- 199 (return value)</code></pre>
-    <p>Breaking the message down:</p>
-    <pre><code>lawrence.takeOrder("sofa", "1 Robinson Rd", "120799")
-   └─┬──┘   └───┬──┘  └───────────┬───────────────┘
- object    method              parameters
- reference   name</code></pre>
-    <p>In UML class form, this looks like:</p>
-    <pre><code>Customer                          SalesPerson
-──────────────────────            ──────────────────────
-- numCustomers = 0                - MAX_PRICE = 200
-- MIN_BUDGET = 200                - name: String
-- name: String                    - employeeNo: String
-- address: String                 - commission: int
-- budget: int
-──────────────────────            ──────────────────────
-+ printNumCustomer(): void        + takeOrder(): void
-+ placeOrder(): void
-
-   alex (client)  --- takeOrder --->  lawrence (server)</code></pre>
-    <p>Alex places the order (client), and Lawrence takes the order (server).</p>
 
     <div class="divider"></div>
 
-    <h2>Principles (Pillars) of Object Orientation</h2>
-    <p>There are four core principles of object orientation:</p>
-    <ol>
-      <li><strong>Abstraction</strong></li>
-      <li><strong>Encapsulation</strong></li>
-      <li><strong>Polymorphism</strong></li>
-      <li><strong>Inheritance</strong></li>
-    </ol>
-
-    <h3>1. Abstraction</h3>
-    <div class="callout callout-blue">
-      <span class="callout-label">Definition</span>
-      <p><strong>Abstraction</strong> is a form of representation that includes only what is important or interesting from a particular viewpoint. It includes the most important aspects of a given system while ignoring less important details.</p>
-    </div>
-    <p>Example: a <strong>map</strong> is an abstract representation — a geological map and a road map both represent the same place, but each highlights only the details relevant to its purpose.</p>
-    <p>Another example: when you receive a phone call, you only see the option to pick it up or reject it. In reality, a lot of code runs in the background — you don't need to know the internal processing of how the call is generated. That hidden complexity is abstraction at work.</p>
-
-    <h3>2. Encapsulation and Data Hiding</h3>
+    <h2>Advantages of Encapsulation</h2>
     <ul>
-      <li><strong>Encapsulation</strong> — packaging related data and operations together</li>
-      <li><strong>Information hiding</strong> — a principle of hiding the internal data and procedures of an object</li>
+      <li><strong>Data Integrity</strong> — data can only be changed through controlled operations.</li>
+      <li><strong>Security</strong> — sensitive internal information can be protected.</li>
+      <li><strong>Control</strong> — the class decides which operations are allowed.</li>
+      <li><strong>Flexibility</strong> — internal implementation can change without necessarily affecting users of the class.</li>
+      <li><strong>Reduced Complexity</strong> — users do not need to understand the internal implementation.</li>
     </ul>
-    <p>Encapsulation separates the <strong>external aspects</strong> of an object from the <strong>internal implementation details</strong> of the object, which are hidden from other objects. Typically, the structure of an object is hidden, as well as the implementation of its methods.</p>
-    <div class="callout callout-green">
-      <span class="callout-label">Tip</span>
-      <p><strong>Advantages of encapsulation:</strong></p>
-      <ul>
-        <li><strong>Ensures data integrity</strong> — access to the encapsulated data is limited to the operations defined on that data</li>
-        <li><strong>Flexibility</strong> — you can change the implementation of an object without affecting its clients</li>
-      </ul>
-    </div>
-    <p>Example — a <code>BankAccount</code> class:</p>
-    <pre><code>------------------------
-|      BankAccount      |
-------------------------
-| - accountNumber       |
-| - balance             |  <-- private (encapsulated)
-| - owner               |
-------------------------
-| + deposit(amount)     |  <-- public
-| + withdraw(amount)    |  <-- public
-| + getBalance()        |  <-- public
-------------------------</code></pre>
-    <p>The <strong>state variables</strong> (<code>theBalance</code>, <code>acctNumber</code>) make up the nucleus of the object. The <strong>methods</strong> (<code>balance()</code>, <code>withdraw()</code>, <code>deposit()</code>, <code>accountNumber()</code>) surround and hide — encapsulate — the state variables from the rest of the program.</p>
 
-    <h3>3. Inheritance</h3>
+    <div class="divider"></div>
+
+    <h2>Encapsulation vs Abstraction</h2>
+    <p><strong>Encapsulation</strong> focuses on: How do we package and protect the data and implementation?</p>
+    <p><strong>Abstraction</strong> focuses on: What should we expose, and what unnecessary complexity should we hide?</p>
+    <p>Bank Account example:</p>
+    <pre><code>BankAccount
+------------------------
+private balance
+------------------------
+deposit()
+withdraw()
+getBalance()</code></pre>
+    <p><strong>Encapsulation</strong> — <code>balance</code> is protected from direct access.</p>
+    <p><strong>Abstraction</strong> — the user only needs to know about <code>deposit()</code>, <code>withdraw()</code>, and <code>getBalance()</code>. They do not need to know exactly how the bank updates the balance internally.</p>
+
+    <div class="divider"></div>
+
+    <h2>Inheritance</h2>
+    <p><strong>Inheritance</strong> is a relationship between classes where one class derives from another class.</p>
+    <p>The existing class is usually called the <strong>Parent</strong>, <strong>Base</strong>, or <strong>Superclass</strong>. The new class is called the <strong>Child</strong>, <strong>Derived</strong>, or <strong>Subclass</strong>. Example:</p>
+    <pre><code>Vehicle
+   |
+   -------------------
+   |        |        |
+  Car      Bike     Truck</code></pre>
+    <p>The child classes can inherit common attributes and behavior from <code>Vehicle</code>.</p>
     <div class="callout callout-blue">
-      <span class="callout-label">Definition</span>
-      <p><strong>Inheritance</strong> is a relationship between classes where one class is the <strong>parent class</strong> of another (<strong>derived</strong>) class.</p>
+      <span class="callout-label">Note</span>
+      <p><strong>Inheritance</strong> is a mechanism for sharing and reusing attributes and behaviors.</p>
     </div>
-    <p>Inheritance allows classes to <strong>share and reuse</strong> behaviors and attributes. The real advantage of inheritance is that we can build upon what we already have, and reuse what we already have.</p>
+
+    <div class="divider"></div>
+
+    <h2>Why Use Inheritance?</h2>
+    <p>Suppose <code>Car</code>, <code>Bike</code>, and <code>Truck</code> all have <code>vehicleNumber</code>, <code>brand</code>, <code>speed</code>, <code>start()</code>, and <code>stop()</code>. Instead of repeating these in every class, we can define them once:</p>
+    <pre><code>Vehicle
+----------------
+vehicleNumber
+brand
+speed
+----------------
+start()
+stop()
+
+Car extends Vehicle
+Bike extends Vehicle
+Truck extends Vehicle</code></pre>
+    <p>The common functionality is written once and reused. Inheritance is most useful when there is a genuine <strong>"is-a"</strong> relationship — for example, <em>a Car is a Vehicle</em>.</p>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Modern OO design often prefers <strong>composition over inheritance</strong> when appropriate, because too much inheritance can create rigid, hard-to-change class hierarchies.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Polymorphism</h2>
+    <p>The word <strong>polymorphism</strong> means "many forms" — <em>poly</em> = many, <em>morph</em> = form. In OO systems, polymorphism allows the same operation or interface to produce different behavior depending on which object is involved.</p>
     <p>Example:</p>
-    <pre><code>                Employee (parent)
-        name, address, phoneNumber, experience
-             /                          \\
-Programmer (child)                Manager (child)
-name, address,                    name, address,
-phoneNumber, experience,          phoneNumber, experience,
-programmingLanguages              teamSize
-writeCode()                       reportProjectStatus()</code></pre>
-
-    <h3>4. Polymorphism</h3>
-    <div class="callout callout-blue">
-      <span class="callout-label">Definition</span>
-      <p>The word <strong>polymorphism</strong> means "having many forms" — from <strong>"poly"</strong> (many) and <strong>"morphs"</strong> (forms).</p>
-    </div>
-    <p>In simple words, polymorphism is the ability of a message to be displayed in more than one form. It allows us to perform a <strong>single action in different ways</strong>.</p>
-    <p>Example: a person at the same time can have different characteristics. A man, at the same time, can be a <strong>father</strong>, a <strong>husband</strong>, and an <strong>employee</strong>. The same person shows different behavior in different situations — this is polymorphism.</p>
+    <pre><code>Vehicle
+   |
+   -------------------
+   |        |        |
+  Car      Bike     Truck</code></pre>
+    <p>Suppose every vehicle has <code>calculateParkingFee()</code>. A Car may calculate the fee one way, a Bike another way, and a Truck differently again. The caller can use the same operation, <code>vehicle.calculateParkingFee()</code>, but the actual behavior depends on the real vehicle type. This is polymorphism.</p>
+    <p><strong>Modern example — Payment:</strong></p>
+    <pre><code>Payment
+   |
+   ---------------------------
+   |            |            |
+ Card         PayPal    BankTransfer</code></pre>
+    <p>Each payment type can implement <code>pay()</code>. The application can simply call <code>payment.pay()</code> without needing to know the detailed implementation.</p>
 
     <div class="divider"></div>
 
-    <h2>Object Cohesion & Coupling</h2>
-
-    <h3>What is Cohesion?</h3>
-    <div class="callout callout-blue">
-      <span class="callout-label">Definition</span>
-      <p><strong>Cohesion</strong> is a measure of the strength of relationship between the methods and data of a class and some unifying purpose or concept served by that class. In other words, it measures the strength of the relationship between a class's methods and data themselves.</p>
-    </div>
-
-    <h3>High Cohesion</h3>
-    <p>Everything an object <strong>knows</strong> is expressed by its attributes, and everything an object can <strong>do</strong> is expressed by its list of operations.</p>
-    <div class="callout callout-yellow">
-      <span class="callout-label">Remember</span>
-      <p>If a module performs <strong>one task</strong> and nothing else, or has a clear purpose, it has <strong>high cohesion</strong>. If a module tries to encapsulate more than one purpose, or has an unclear purpose, it has <strong>low cohesion</strong>.</p>
-    </div>
-    <p>Example — splitting a low-cohesion class into high-cohesion classes:</p>
-    <pre><code>// LOW COHESION — one class doing too many unrelated jobs
-class UserManager {
-  void createUser() { }
-  void deleteUser() { }
-  boolean validateEmail(String email) { }
-  void sendWelcomeEmail(String email) { }
-  void generateUserReport() { }
-  void printReport() { }
-}
-
-// HIGH COHESION — split into focused classes
-class UserService {
-  void createUser() { }
-  void deleteUser() { }
-}
-
-class EmailService {
-  boolean validateEmail(String email) { }
-  void sendWelcomeEmail(String email) { }
-}
-
-class ReportService {
-  void generateUserReport() { }
-  void printReport() { }
-}</code></pre>
-
-    <h3>What is Coupling?</h3>
-    <div class="callout callout-blue">
-      <span class="callout-label">Definition</span>
-      <p><strong>Coupling</strong> is the degree of interdependence between software modules — a measure of how closely connected two routines or modules are, and the strength of the relationships between modules. It indicates the strength of interconnections between program units.</p>
-    </div>
-
-    <h3>Low Coupling</h3>
+    <h2>Cohesion and Coupling</h2>
+    <p>Two very important OO design concepts are:</p>
     <ul>
-      <li>Attributes and operations only define their own abstraction, and no other</li>
-      <li><strong>Highly coupled</strong> systems have strong interconnections, with program units dependent on each other (shared variables, interchange control function)</li>
-      <li><strong>Loosely coupled</strong> systems are independent</li>
+      <li><strong>Cohesion</strong> — how closely related the responsibilities inside a module/class are.</li>
+      <li><strong>Coupling</strong> — how strongly one module/class depends on another.</li>
     </ul>
-
-    <h3>Cohesion vs Coupling — Key Differences</h3>
-    <pre><code>Cohesion                                    | Coupling
----------------------------------------------|--------------------------------------------
-Indication of the relationship WITHIN        | Indication of the relationships BETWEEN
-a module                                     | modules
----------------------------------------------|--------------------------------------------
-Shows the module's relative functional       | Shows the relative independence among
-strength                                     | the modules
----------------------------------------------|--------------------------------------------
-Degree to which a component/module           | Degree to which a component/module is
-focuses on a single thing                    | connected to other modules
----------------------------------------------|--------------------------------------------
-Aim for HIGH cohesion — a cohesive module    | Aim for LOW coupling — dependency
-focuses on a single task with little         | between modules should be minimal
-interaction with other modules               |
----------------------------------------------|--------------------------------------------
-A natural extension of data hiding, e.g. a   | Making private fields, private methods,
-class having all members visible with a      | and non-public classes provides loose
-package having default visibility            | coupling
----------------------------------------------|--------------------------------------------
-Intra-Module Concept (within a module)       | Inter-Module Concept (between modules)</code></pre>
-
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>Good OO design always aims for <strong>high cohesion</strong> and <strong>low coupling</strong>. This makes systems easier to understand, maintain, and change.</p>
+      <p>A good OO design generally aims for <strong>High Cohesion + Low Coupling</strong>.</p>
     </div>
 
     <div class="divider"></div>
 
-    <h2>Practice Problem: Smart Parking Management System</h2>
-    <p>A city wants to implement a <strong>Smart Parking Management System</strong> to manage parking spaces in malls and public areas. The system should:</p>
-    <ul>
-      <li>Keep track of parking slots and vehicles</li>
-      <li>Allocate slots when vehicles enter</li>
-      <li>Calculate parking charges based on duration</li>
-      <li>Handle different types of vehicles (Car, Bike, Truck)</li>
-    </ul>
-    <ol>
-      <li>Identify a <strong>minimum of 7 classes/objects</strong> required for the system. For each class, list:
-        <ul>
-          <li><strong>Attributes</strong> (at least 3)</li>
-          <li><strong>Methods</strong> (at least 2)</li>
-        </ul>
-      </li>
-      <li>Select <strong>any two classes</strong>. For each class:
-        <ul>
-          <li>Identify data that must be hidden</li>
-          <li>Explain why direct access to this data can cause problems</li>
-          <li>Describe how methods help in controlling access</li>
-        </ul>
-      </li>
-      <li>Identify a <strong>general parent class</strong> related to vehicles.</li>
-      <li>Create <strong>at least three child classes</strong>.</li>
-      <li>Explain how inheritance reduces redundancy in the system.</li>
-      <li>Identify one behavior (method) that should:
-        <ul>
-          <li>Exist in the parent class</li>
-          <li>Behave differently for different vehicle types</li>
-        </ul>
-      </li>
-      <li>Explain how polymorphism helps in calculating parking fees.</li>
-    </ol>
+    <h2>Cohesion</h2>
+    <p><strong>Cohesion</strong> measures how strongly the responsibilities, methods, and data of a class belong together around a single, meaningful purpose.</p>
+    <p><strong>High cohesion</strong> — a class has a clear, focused responsibility. Example:</p>
+    <pre><code>EmailService
+----------------
+validateEmail()
+sendEmail()
+formatEmail()</code></pre>
+    <p>These operations are all related, so this is <strong>high cohesion</strong>.</p>
+    <p><strong>Low cohesion</strong> — consider:</p>
+    <pre><code>UserManager
+----------------
+createUser()
+deleteUser()
+validateEmail()
+sendWelcomeEmail()
+generateReport()
+printReport()
+calculateTax()
+playMusic()</code></pre>
+    <p>This class does too many unrelated things — it has <strong>low cohesion</strong>. We could split it into <code>UserService</code>, <code>EmailService</code>, <code>ReportService</code>, <code>TaxService</code>, and <code>MusicService</code>.</p>
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
-      <p>Try mapping each concept from this lecture to the scenario: <strong>classes</strong> (ParkingSlot, Vehicle, Car, Bike, Truck, ParkingTicket, PaymentService...), <strong>encapsulation</strong> (hiding slot availability or payment details), <strong>inheritance</strong> (Vehicle as parent, Car/Bike/Truck as children), and <strong>polymorphism</strong> (each vehicle type calculating its fee differently through the same method call).</p>
+      <p>Quick test: "Does this class have one clear purpose?" If <strong>YES</strong> → high cohesion. If <strong>NO</strong> → low cohesion.</p>
+    </div>
+    <p>Example — <code>StudentService</code> with <code>registerStudent()</code>, <code>updateStudent()</code>, <code>removeStudent()</code> → <strong>high cohesion</strong>. But <code>StudentService</code> with <code>printInvoice()</code>, <code>sendEmail()</code>, <code>calculateSalary()</code>, <code>playVideo()</code> → <strong>low cohesion</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Coupling</h2>
+    <p><strong>Coupling</strong> refers to the degree of dependency between software modules or classes. If two classes depend heavily on each other, that is <strong>high coupling</strong>. If they are relatively independent, that is <strong>low coupling</strong>.</p>
+    <p><strong>High coupling</strong> — imagine:</p>
+    <pre><code>Class A → Class B → Class C → Class D</code></pre>
+    <p>If changing Class B forces changes in A, C, and D, the system is tightly dependent. This makes the system difficult to maintain, difficult to test, difficult to modify, and more vulnerable to changes.</p>
+    <p><strong>Low coupling</strong> — in a loosely coupled system:</p>
+    <pre><code>Class A → Interface ← Class B</code></pre>
+    <p>Classes depend less directly on implementation details. Advantages include easier maintenance, easier testing, easier replacement, easier modification, and better flexibility.</p>
+
+    <h3>Example: Online Order System (High Coupling)</h3>
+    <pre><code>class Order {
+    void placeOrder() {
+        MySQLDatabase db = new MySQLDatabase();
+        db.connect();
+        db.saveOrder();
+    }
+}
+
+class MySQLDatabase {
+    void connect() {
+        System.out.println("Connected to MySQL");
+    }
+    void saveOrder() {
+        System.out.println("Order saved");
+    }
+}</code></pre>
+    <p>Here, <code>Order</code> is directly dependent on <code>MySQLDatabase</code>. If we switch from MySQL to MongoDB, we have to modify the <code>Order</code> class itself. This is <strong>high coupling</strong>.</p>
+
+    <h3>Example: Same System, Loosely Coupled</h3>
+    <pre><code>interface Database {
+    void saveOrder();
+}
+
+class MySQLDatabase implements Database {
+    public void saveOrder() {
+        System.out.println("Order saved in MySQL");
+    }
+}
+
+class MongoDatabase implements Database {
+    public void saveOrder() {
+        System.out.println("Order saved in MongoDB");
+    }
+}
+
+class Order {
+    private Database db;
+
+    Order(Database db) {
+        this.db = db;
+    }
+
+    void placeOrder() {
+        db.saveOrder();
+    }
+}</code></pre>
+    <p><strong>Loose coupling</strong> means classes depend on an abstraction / interface, rather than a specific implementation. Here the <code>Order</code> class does not care which database is actually being used.</p>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Real-world analogy: <strong>High coupling</strong> is like a phone charger that only works with one specific phone model. <strong>Loose coupling</strong> is like a USB-C standard charger that works with many compatible devices.</p>
+    </div>
+
+    <h3>Practice: High Coupling or Loose Coupling?</h3>
+    <p>The original lecture poses these as discussion questions. Try to decide each one yourself first, using this rule: <strong>directly creating a concrete class with <code>new</code> = high coupling</strong>, while <strong>depending on an interface passed in from outside = loose coupling</strong>.</p>
+
+    <pre><code>class Student {
+    void register() {
+        MySQLDatabase db = new MySQLDatabase();
+        db.connect();
+        db.saveStudent();
+    }
+}
+
+class MySQLDatabase {
+    void connect() { System.out.println("Connected"); }
+    void saveStudent() { System.out.println("Student saved"); }
+}</code></pre>
+    <p><strong>Answer: High coupling</strong> — <code>Student</code> creates and depends directly on the concrete <code>MySQLDatabase</code> class.</p>
+
+    <pre><code>interface Payment {
+    void pay(double amount);
+}
+
+class CreditCardPayment implements Payment {
+    public void pay(double amount) {
+        System.out.println("Paid by Credit Card");
+    }
+}
+
+class Order {
+    private Payment payment;
+
+    Order(Payment payment) {
+        this.payment = payment;
+    }
+
+    void checkout(double amount) {
+        payment.pay(amount);
+    }
+}</code></pre>
+    <p><strong>Answer: Loose coupling</strong> — <code>Order</code> depends only on the <code>Payment</code> interface, not on a specific payment class.</p>
+
+    <pre><code>class Report {
+    void generate() {
+        PDFPrinter printer = new PDFPrinter();
+        printer.print();
+    }
+}
+
+class PDFPrinter {
+    void print() { System.out.println("Printing PDF"); }
+}</code></pre>
+    <p><strong>Answer: High coupling</strong> — <code>Report</code> directly creates and depends on the concrete <code>PDFPrinter</code> class.</p>
+
+    <pre><code>interface Notification {
+    void send(String message);
+}
+
+class EmailNotification implements Notification {
+    public void send(String message) { System.out.println("Email: " + message); }
+}
+
+class SMSNotification implements Notification {
+    public void send(String message) { System.out.println("SMS: " + message); }
+}
+
+class UserService {
+    private Notification notification;
+
+    UserService(Notification notification) {
+        this.notification = notification;
+    }
+
+    void notifyUser() {
+        notification.send("Welcome!");
+    }
+}</code></pre>
+    <p><strong>Answer: Loose coupling</strong> — <code>UserService</code> depends on the <code>Notification</code> interface, not on a specific notification class.</p>
+
+    <pre><code>class ShoppingCart {
+    private StripePayment payment = new StripePayment();
+
+    void checkout() {
+        payment.processPayment();
+    }
+}
+
+class StripePayment {
+    void processPayment() { System.out.println("Payment processed"); }
+}</code></pre>
+    <p><strong>Answer: High coupling</strong> — <code>ShoppingCart</code> directly creates and depends on the concrete <code>StripePayment</code> class, with no interface in between.</p>
+
+    <div class="divider"></div>
+
+    <h2>Cohesion vs Coupling</h2>
+    <pre><code>Cohesion                          Coupling
+Concerned with one class/module   Concerned with relationships between classes/modules
+Measures internal relatedness     Measures external dependency
+We want high cohesion             We want low coupling
+One clear responsibility          Minimal unnecessary dependency</code></pre>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>High Cohesion + Low Coupling = Good OO Design</strong></p>
     </div>
   `,
   summary: {
-    topic: 'Object Oriented Analysis and Design (OOAD) — Basic Concepts',
+    topic: 'Object-Oriented Analysis and Design (OOAD): Basic Concepts',
     subTopics: [
-      'Lecture Objectives',
-      'The Software Development Life Cycle (SDLC)',
+      'Learning Objectives',
+      'System Development Life Cycle',
       'What is Object Orientation?',
-      'Objects Are Self-Contained',
-      'Object Oriented Development Overview',
-      'OOA — Object Oriented Analysis',
-      'OOD — Object Oriented Design',
-      'OOP — Object Oriented Programming (Implementation)',
-      'OOA vs OOD — Library Example',
-      'Why Use Object Orientation?',
-      'The OO Environment: Objects, Attributes & Methods',
+      'Objects as Self-Contained Components',
+      'OOA, OOD and OOP',
+      'Traditional Development vs Object-Oriented Development',
+      'Why Object Orientation?',
       'What is an Object?',
-      'Attributes and Methods',
-      'Classes and Objects',
-      'Objects Are Grouped Into Classes',
-      'What is a Class?',
-      'What is an Instance?',
+      'Attributes',
+      'Methods',
+      'State and Behavior',
+      'Classes',
+      'Class vs Object',
+      'Instance',
       'Message Passing',
-      'Messages and Methods',
-      'What Does a Message Consist Of?',
-      'Method Signatures',
-      'Message Passing Example',
-      'Principles (Pillars) of Object Orientation',
+      'How Message Passing Works',
+      'Components of a Message',
+      'Client and Server Objects',
+      'Method Signature',
+      'Principles of Object Orientation',
       'Abstraction',
-      'Encapsulation and Data Hiding',
+      'Encapsulation',
+      'Data Hiding',
+      'Advantages of Encapsulation',
+      'Encapsulation vs Abstraction',
       'Inheritance',
+      'Why Use Inheritance?',
       'Polymorphism',
-      'Object Cohesion & Coupling',
-      'What is Cohesion?',
-      'High Cohesion',
-      'What is Coupling?',
-      'Low Coupling',
-      'Cohesion vs Coupling — Key Differences',
-      'Practice Problem: Smart Parking Management System',
+      'Cohesion and Coupling',
+      'Cohesion',
+      'Coupling',
+      'Cohesion vs Coupling',
     ],
     definitions: [
-      { term: 'Object Orientation', meaning: 'Viewing and modeling any system as a set of interacting and interrelated objects.' },
-      { term: 'Object', meaning: 'A real-world entity that knows things (has attributes) and does things (has methods).' },
-      { term: 'Attribute', meaning: "A piece of data, represented by a data type, that describes an object's state." },
-      { term: 'Method', meaning: "A function that defines an object's behavior and how its data is manipulated." },
-      { term: 'Class', meaning: 'A description or template of a set of objects that share the same attributes, operations, methods, and relationships.' },
-      { term: 'Instance', meaning: 'A single, unique object — a single person, thing, or concept in the application domain.' },
-      { term: 'OOA (Object Oriented Analysis)', meaning: 'Finding and describing the objects/concepts (domain objects) in the problem domain.' },
-      { term: 'OOD (Object Oriented Design)', meaning: 'Defining software objects and how they collaborate to fulfill requirements.' },
-      { term: 'OOP (Object Oriented Programming)', meaning: 'Implementing designed objects in a programming language; also called coding or construction.' },
-      { term: 'Message', meaning: 'A method call sent from a message-sending object (client) to a message-receiving object (server).' },
-      { term: 'Signature', meaning: "The combination of a method's name and its parameter list." },
-      { term: 'Abstraction', meaning: 'A form of representation that includes only the important aspects of a system from a given viewpoint, while ignoring less important details.' },
-      { term: 'Encapsulation', meaning: "Packaging related data and operations together, hiding an object's internal implementation from other objects." },
-      { term: 'Information/Data Hiding', meaning: "The principle of hiding an object's internal data and procedures from other objects." },
-      { term: 'Inheritance', meaning: 'A relationship where one class (the parent) is shared and reused by another (derived/child) class.' },
-      { term: 'Polymorphism', meaning: 'The ability of a message or action to take many forms, letting a single action be performed in different ways.' },
-      { term: 'Cohesion', meaning: "The strength of the relationship between the methods and data within a single class." },
-      { term: 'Coupling', meaning: 'The degree of interdependence between different software modules.' },
+      { term: 'Object Orientation (OO)', meaning: 'A way of designing software as a collection of interacting objects, each holding its own data and behavior.' },
+      { term: 'OOA (Object-Oriented Analysis)', meaning: 'Identifying the objects, concepts, classes, relationships, and requirements that exist in the problem domain.' },
+      { term: 'OOD (Object-Oriented Design)', meaning: 'Designing software classes, attributes, methods, and object interactions that satisfy the requirements found in OOA.' },
+      { term: 'OOP (Object-Oriented Programming)', meaning: 'Implementing the designed objects using a programming language such as Java, C#, or Python.' },
+      { term: 'Object', meaning: 'A software entity that knows things (attributes) and can do things (methods).' },
+      { term: 'Attribute', meaning: 'A piece of data or property that describes the state of an object.' },
+      { term: 'Method', meaning: 'An operation that implements a behavior of an object.' },
+      { term: 'State', meaning: 'What an object is or knows at a particular time, represented by its attributes.' },
+      { term: 'Behavior', meaning: 'What an object can do, represented by its methods.' },
+      { term: 'Class', meaning: 'A blueprint or template that defines the attributes, methods, and relationships shared by a group of similar objects.' },
+      { term: 'Instance', meaning: 'A single, particular object created from a class; another word for an individual object.' },
+      { term: 'Message Passing', meaning: 'The way objects communicate by sending requests asking each other to perform operations.' },
+      { term: 'Method Signature', meaning: 'The combination of a method name and its parameter list, used to identify an operation.' },
+      { term: 'Client object', meaning: 'The object that sends a message, requesting a service.' },
+      { term: 'Server object', meaning: 'The object that receives a message and provides the requested service.' },
+      { term: 'Abstraction', meaning: 'Focusing on the important aspects of something while hiding unnecessary implementation details.' },
+      { term: 'Encapsulation', meaning: 'Packaging data and the operations on that data together inside an object, while controlling access to its internal state.' },
+      { term: 'Data Hiding', meaning: 'Restricting direct access to an object\'s internal data so changes only happen through controlled operations.' },
+      { term: 'Inheritance', meaning: 'A relationship where one class (child) derives common attributes and behavior from another class (parent).' },
+      { term: 'Polymorphism', meaning: 'The ability of the same operation or interface to produce different behavior depending on the actual object involved.' },
+      { term: 'Cohesion', meaning: 'How closely related the responsibilities, methods, and data inside a single class are.' },
+      { term: 'High Cohesion', meaning: 'A class with a clear, focused, single responsibility.' },
+      { term: 'Coupling', meaning: 'The degree of dependency between different classes or modules.' },
+      { term: 'Low (Loose) Coupling', meaning: 'Classes depend on abstractions or interfaces rather than on specific implementations, making the system easier to change.' },
     ],
     keyPoints: [
-      'Object orientation models a system as interacting, interrelated objects, each holding its own data and behaviour.',
-      'OOA finds objects in the problem domain; OOD defines how software objects collaborate; OOP implements them in code.',
-      'Objects have attributes (state) and methods (behaviour); classes are templates that group objects sharing the same attributes and methods.',
-      'An instance is a single, unique occurrence of a class.',
-      'Objects communicate by sending messages; a message includes an object reference, a method name, and parameters.',
-      'The message-receiving object acts as a server; the message-sending object acts as a client.',
-      "A method's signature is its method name plus its parameter list — the signature must be given to invoke an operation.",
+      'The typical SDLC order is Analysis, Design, Development, Testing, Deployment, then Maintenance, and it is usually iterative rather than strictly linear.',
+      'Object Orientation organizes software as interacting objects, each bundling its own data and behavior.',
+      'OOA asks what objects exist in the problem domain; OOD asks how software objects should work together; OOP asks how to implement that design in code.',
+      'Traditional development separates functions and data; OO development keeps data and behavior together inside objects, which relates directly to encapsulation.',
+      'Advantages of OO include simplicity, reusability, higher quality, faster development, maintainability, scalability, modularity, and modifiability.',
+      'An object knows things (attributes / state) and does things (methods / behavior).',
+      'A class is a blueprint; an object is an actual instance created from that class; an instance is simply another word for one particular object.',
+      'Message passing has three steps: the sender sends a message, the receiver receives it, and the receiver executes the matching method, optionally returning a result.',
+      'A message is made up of an object reference, a method name, and parameters.',
+      'The message sender acts as the client; the message receiver acts as the server for that request.',
+      'A method signature is the method name combined with its parameter list.',
       'The four pillars of OOP are Abstraction, Encapsulation, Inheritance, and Polymorphism.',
-      "Encapsulation hides an object's internal data and implementation, protecting data integrity and allowing flexibility to change implementation without affecting clients.",
-      'Inheritance lets a child (derived) class reuse and build on the attributes and behaviour of a parent class, reducing redundancy.',
-      'Polymorphism allows the same message/method call to behave differently depending on the object that receives it (e.g. the UserManager vs UserService/EmailService/ReportService example demonstrates cohesion, not polymorphism — keep these concepts distinct for exams).',
-      'High cohesion means a class/module focuses on a single, clear task; low coupling means modules depend on each other as little as possible.',
-      'Good OO design aims for high cohesion and low coupling — this makes systems easier to understand, maintain, and change.',
-      'Making fields and methods private supports both encapsulation and loose coupling.',
+      'Abstraction hides unnecessary complexity and exposes only essential functionality (what something does, not how).',
+      'Encapsulation packages data with the methods that operate on it and controls access to that data.',
+      'Data hiding restricts direct access to internal data, forcing changes to go through controlled methods like deposit() or withdraw().',
+      'Encapsulation is about protecting and packaging data; abstraction is about deciding what to expose and what complexity to hide.',
+      'Inheritance lets a child/subclass reuse attributes and behavior from a parent/superclass, and works best for genuine "is-a" relationships.',
+      'Modern OO design often favors composition over inheritance to avoid rigid class hierarchies.',
+      'Polymorphism allows the same method call, such as calculateParkingFee() or pay(), to behave differently depending on the actual object type.',
+      'Cohesion measures how related the responsibilities inside one class are; the goal is high cohesion (one clear purpose).',
+      'Coupling measures how dependent classes are on each other; the goal is low coupling, often achieved by depending on interfaces rather than concrete classes.',
+      'Directly creating a concrete class with new usually signals high coupling; depending on an interface passed into a constructor usually signals loose coupling.',
+      'The overall goal of good OO design is High Cohesion + Low Coupling.',
     ],
   },
 },
+
+{
+  id: 2,
+  title: 'Object-Oriented Languages',
+  content: `
+    <span class="lesson-badge">LESSON 02</span>
+    <h1>Object-Oriented Languages</h1>
+    <div class="meta-info">ICT2152 <span>•</span> 18 min read <span></div>
+
+    <h2>Learning Objectives</h2>
+    <p>After finishing this lesson, you should be able to:</p>
+    <ul>
+      <li>Identify <strong>object-oriented languages</strong> and their features.</li>
+      <li>Explain the <strong>limitations</strong> of object orientation.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Introduction</h2>
+    <p>A number of <strong>OOP languages</strong> are available today, and there are differences between their capabilities and how closely they follow the OO paradigm.</p>
+    <p>Common object-oriented languages include: <strong>Java</strong>, <strong>C++</strong>, <strong>C#</strong>, <strong>Python</strong>, <strong>Delphi</strong>, <strong>Objective-C</strong>, <strong>Ruby</strong>, <strong>PHP5</strong>, <strong>Perl</strong>, <strong>Eiffel</strong>, <strong>Ada</strong>, <strong>D</strong>, <strong>ActionScript</strong>, <strong>VB.NET</strong>, and several others.</p>
+
+    <div class="divider"></div>
+
+    <h2>Some Features of Object-Oriented Programming</h2>
+
+    <h3>Strong Typing</h3>
+    <p><strong>Strong typing</strong> is the degree of discipline that a language enforces on the programmer when declaring variables.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>"Every data value and object that is used must belong to an appropriate type for its context." Most modern languages are strongly typed.</p>
+    </div>
+    <pre><code>int x = "Hello"; // Compile-time error in Java</code></pre>
+    <p>Strong typing has two main benefits:</p>
+    <ul>
+      <li>Prevents type mismatch errors</li>
+      <li>Reduces runtime bugs</li>
+    </ul>
+    <p>Strong typing also applies to objects and inheritance, not just simple values. Consider this example:</p>
+    <pre><code>class Vehicle {
+    void start() {
+        System.out.println("Vehicle starting");
+    }
+}
+
+class Car extends Vehicle {
+    void start() {
+        System.out.println("Car starting");
+    }
+}
+
+class Dog {
+    void bark() {
+        System.out.println("Woof!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehicle v1 = new Vehicle();   // OK: Vehicle variable holds a Vehicle object
+        v1.start();                   // Output: Vehicle starting
+
+        Vehicle v2 = new Car();       // OK: Vehicle variable can hold a Car object (subclass)
+        v2.start();                   // Output: Car starting
+
+        Vehicle v3 = new Dog();       // Compile-time error: Dog is unrelated to Vehicle
+    }
+}</code></pre>
+    <p>A <code>Vehicle</code> variable can hold a <code>Car</code> object because <code>Car</code> is a subclass of <code>Vehicle</code>, but it cannot hold a <code>Dog</code> object because <code>Dog</code> has no relationship to <code>Vehicle</code>. This is strong typing being enforced at compile time.</p>
+
+    <h3>Static / Dynamic Typing</h3>
+    <ul>
+      <li><strong>Static typed</strong> — types are checked at compile time.</li>
+      <li><strong>Dynamic typed</strong> — types are checked at run time.</li>
+      <li>Some languages offer a <strong>hybrid</strong> approach.</li>
+    </ul>
+    <p>Examples of languages:</p>
+    <ul>
+      <li><strong>Static:</strong> Java, C++, C#</li>
+      <li><strong>Dynamic:</strong> Python, Ruby, JavaScript</li>
+      <li><strong>Hybrid:</strong> TypeScript, Kotlin</li>
+    </ul>
+    <pre><code>Typing     Advantages                                          Disadvantages
+Static     Errors caught at compile time, better performance,  Less flexible, verbose code
+           easier IDE support
+Dynamic    Flexible, faster to write, less verbose             Errors occur at runtime, harder
+                                                                 to debug, slower performance</code></pre>
+    <p><strong>Static Typed (Java) — Verbose:</strong></p>
+    <pre><code>String name = "Alice";                     // Must declare type
+int age = 20;                              // Must declare type
+Person p = new Person(name, age);          // Must declare exact type</code></pre>
+    <p><strong>Dynamic Typed (Python) — Less Verbose:</strong></p>
+    <pre><code>name = "Alice"          # No type declaration needed
+age = 20
+p = Person(name, age)</code></pre>
+
+    <h3>Garbage Collection</h3>
+    <p><strong>Garbage collection</strong> is important for memory management in systems that create and delete many objects during their execution. Objects are removed from memory once they are no longer needed — otherwise the system may run out of memory in which to execute.</p>
+    <p>Example problem without garbage collection:</p>
+    <pre><code>for (int i = 0; i < 100000; i++) {
+    Person p = new Person("Name" + i); // many objects created
+    // Without GC, old objects remain in memory → may run out of memory
+}</code></pre>
+
+    <h3>Types of Garbage Objects in Java</h3>
+    <p><strong>Nullified Objects</strong> — the object becomes garbage once its reference is set to <code>null</code>:</p>
+    <pre><code>Person p = new Person("Alice");
+p = null; // "Alice" object is now garbage</code></pre>
+    <p><strong>Out of Scope Objects</strong> — the object becomes garbage once its reference variable goes out of scope:</p>
+    <pre><code>public void createPerson() {
+    Person p = new Person("Bob");
+} // p goes out of scope → "Bob" object is garbage</code></pre>
+    <p><strong>Unreachable Objects via Reassignment</strong> — the object becomes garbage once its only reference is reassigned elsewhere:</p>
+    <pre><code>Person p1 = new Person("Alice");
+Person p2 = new Person("Bob");
+
+p1 = p2; // "Alice" object is now unreachable → garbage</code></pre>
+
+    <h3>Standardized Class Libraries</h3>
+    <p>A <strong>standardized class library</strong> is a collection of predefined classes and interfaces provided by the language, so programmers can reuse tested code instead of writing everything from scratch.</p>
+    <p>Key features:</p>
+    <ul>
+      <li>Cross-platform compatibility</li>
+      <li>Pre-tested and reliable</li>
+    </ul>
+
+    <h3>Dynamic Loading</h3>
+    <p><strong>Dynamic loading</strong> is the ability of a program to load classes or libraries into memory at runtime, rather than at compile time.</p>
+
+    <div class="divider"></div>
+
+    <h2>Limitations of Object Orientation</h2>
+    <p>Object orientation is powerful, but it is not always the best fit for every kind of application.</p>
+
+    <h3>Applications Which Are Not Ideally Suited to OO Development</h3>
+    <p><strong>1. Systems that are strongly database oriented</strong></p>
+    <ul>
+      <li>Systems that have a record-based structure of data appropriate to a <strong>Relational Database Management System (RDBMS)</strong>.</li>
+      <li>Systems whose main processing requirement centers on the storage and retrieval of data.</li>
+    </ul>
+    <p><strong>2. Applications that are strongly algorithmic in their operation</strong></p>
+    <ul>
+      <li>Some scientific applications that involve large and complex calculations may be neither desirable nor feasible to split into smaller parts.</li>
+      <li>If such a system is implemented using OOP, there might end up being more objects, and they can become very complex.</li>
+      <li>Example: <strong>satellite orbit calculations</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Exercise</h2>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>In what scenarios might Object-Oriented (OO) development not be the best choice, and what are the limitations or mismatches with the nature of the problem being solved that contribute to this?</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Object-Oriented Languages: Features and Limitations',
+    subTopics: [
+      'Learning Objectives',
+      'Introduction',
+      'Some Features of Object-Oriented Programming',
+      'Strong Typing',
+      'Static and Dynamic Typing',
+      'Garbage Collection',
+      'Types of Garbage Objects in Java',
+      'Standardized Class Libraries',
+      'Dynamic Loading',
+      'Limitations of Object Orientation',
+      'Applications Which Are Not Ideally Suited to OO Development',
+    ],
+    definitions: [
+      { term: 'Strong Typing', meaning: 'The degree of discipline a language enforces on the programmer when declaring variables; every data value and object must belong to an appropriate type for its context.' },
+      { term: 'Static Typing', meaning: 'Variable types are checked at compile time, before the program runs.' },
+      { term: 'Dynamic Typing', meaning: 'Variable types are checked at run time, while the program is executing.' },
+      { term: 'Hybrid Typing', meaning: 'A language approach that combines elements of both static and dynamic typing, such as TypeScript or Kotlin.' },
+      { term: 'Garbage Collection', meaning: 'The automatic process of removing objects from memory once they are no longer needed, freeing up space for the program to keep running.' },
+      { term: 'Nullified Object', meaning: 'An object that becomes garbage because its reference variable has been set to null.' },
+      { term: 'Out-of-Scope Object', meaning: 'An object that becomes garbage because its reference variable has gone out of scope.' },
+      { term: 'Unreachable Object (via Reassignment)', meaning: 'An object that becomes garbage because its only reference variable has been reassigned to point to something else.' },
+      { term: 'Standardized Class Library', meaning: 'A collection of predefined, reusable, pre-tested classes and interfaces provided by a programming language.' },
+      { term: 'Dynamic Loading', meaning: 'The ability of a program to load classes or libraries into memory at runtime instead of at compile time.' },
+    ],
+    keyPoints: [
+      'Many object-oriented languages exist today (Java, C++, C#, Python, Ruby, Delphi, and others), and they differ in how closely they follow the OO paradigm.',
+      'Strong typing requires every value and object to belong to an appropriate type; this catches mismatches like int x = "Hello"; at compile time in Java.',
+      'A superclass variable can hold a subclass object (Vehicle v2 = new Car();), but it cannot hold an unrelated class object (Vehicle v3 = new Dog(); fails to compile).',
+      'Static typing checks types at compile time and is used by languages like Java, C++, and C#.',
+      'Dynamic typing checks types at run time and is used by languages like Python, Ruby, and JavaScript.',
+      'Hybrid languages such as TypeScript and Kotlin combine static and dynamic typing.',
+      'Static typing catches errors early and performs better but is more verbose; dynamic typing is more flexible and concise but errors surface later, at runtime.',
+      'Garbage collection automatically frees memory from objects that are no longer needed, which matters most in systems that create and delete many objects.',
+      'An object can become garbage in three main ways: being nullified, going out of scope, or becoming unreachable after its reference is reassigned.',
+      'Standardized class libraries let programmers reuse pre-tested, cross-platform code instead of writing everything from scratch.',
+      'Dynamic loading allows classes or libraries to be loaded into memory at runtime rather than compile time.',
+      'OO development is not ideally suited to strongly database-oriented systems, where data is record-based and best handled by an RDBMS.',
+      'OO development is also not ideally suited to strongly algorithmic applications, such as satellite orbit calculations, where splitting the logic into many objects can add unnecessary complexity.',
+    ],
+  },
+},
+
+
 ]
