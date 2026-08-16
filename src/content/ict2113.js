@@ -530,92 +530,529 @@ int main()
     ],
   },
 },
-  {
-    id: 2,
-    title: 'Arrays and Linked Lists',
-    content: `
-      <span class="lesson-badge">LESSON 02</span>
-      <h1>Arrays and Linked Lists</h1>
-      <div class="meta-info">ICT2113 <span>•</span> 8 min read <span>•</span> Beginner</div>
 
-      <p>Arrays and Linked Lists are the two most fundamental <strong>linear data structures</strong>. Every developer must understand their trade-offs.</p>
+{
+  id: 2,
+  title: 'Stacks',
+  content: `
+    <span class="lesson-badge">LESSON 02</span>
+    <h1>Stacks</h1>
+    <div class="meta-info">Data Structures &amp; Algorithms <span>•</span> 34 min read</div>
 
-      <h2>Arrays</h2>
-      <p>An array stores elements in <strong>contiguous memory</strong> locations. Access is fast, but insertion/deletion in the middle is slow.</p>
+    <p>Before we get into stacks, it helps to understand a bigger idea first: the <strong>Abstract Data Type (ADT)</strong>. A stack is actually one specific example of an ADT, so this idea will make everything else easier to follow.</p>
 
-      <pre><code>// Declare an array
-int numbers[] = {10, 20, 30, 40, 50};
+    <div class="divider"></div>
 
-// Access element at index 2
-int value = numbers[2];  // 30
+    <h2>What is an Abstract Data Type (ADT)?</h2>
 
-// Time Complexity
-// Access:  O(1)
-// Search:  O(n)
-// Insert:  O(n)
-// Delete:  O(n)</code></pre>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>An <strong>Abstract Data Type (ADT)</strong> is a collection of data together with a set of operations that work on that data. It is a mathematical model of the data objects and the functions that operate on them — without worrying about how it is actually built.</p>
+    </div>
 
-      <h2>Linked Lists</h2>
-      <p>A linked list stores elements in <strong>nodes</strong>, where each node points to the next. Insertion/deletion is fast, but access is slow.</p>
+    <p>In simple words, an ADT only cares about <strong>what</strong> the data represents and <strong>what</strong> you can do with it. It does not care about <strong>how</strong> it will eventually be constructed (implemented).</p>
 
-      <pre><code>class Node {
-    int data;
-    Node next;
+    <h3>How an ADT Works</h3>
+    <ul>
+      <li>The <strong>user</strong> interacts only with the <strong>interface</strong> — the operations the ADT has specified.</li>
+      <li>The ADT is like a <strong>shell</strong> that the user sees and interacts with.</li>
+      <li>The actual <strong>implementation</strong> is hidden one level deeper, inside that shell.</li>
+      <li>The user is not concerned with the details of the implementation.</li>
+    </ul>
 
-    Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The implementation of an abstract data type is often referred to as a <strong>data structure</strong>.</p>
+    </div>
 
-// Time Complexity
-// Access:  O(n)
-// Search:  O(n)
-// Insert:  O(1)  (at head)
-// Delete:  O(1)  (at head)</code></pre>
+    <div class="divider"></div>
 
-      <div class="callout callout-yellow">
-        <span class="callout-label">Remember</span>
-        <p>Use <strong>arrays</strong> when you need fast access by index. Use <strong>linked lists</strong> when you need frequent insertions/deletions.</p>
-      </div>
+    <h3>Primitive vs Abstract Data Structures</h3>
 
-      <h2>Comparison Table</h2>
-      <pre><code>| Feature        | Array  | Linked List |
-|----------------|--------|-------------|
-| Access         | O(1)   | O(n)        |
-| Insert (head)  | O(n)   | O(1)        |
-| Delete (head)  | O(n)   | O(1)        |
-| Memory         | Fixed  | Dynamic     |</code></pre>
+    <p><strong>Integer, Float, Boolean,</strong> and <strong>Char</strong> are all data structures too — but they are called <strong>Primitive Data Structures</strong>.</p>
 
-      <div class="callout callout-green">
-        <span class="callout-label">Tip</span>
-        <p>In interviews, always discuss the trade-offs between arrays and linked lists.</p>
-      </div>
-    `,
+    <div class="callout callout-blue">
+      <span class="callout-label">Example</span>
+      <p><strong>Integer</strong> — Describes a data type that stores numerical values. Its operations include addition, subtraction, division, and so on. How Integer is implemented internally is not something we usually worry about.</p>
+    </div>
+
+    <p>On the other hand, structures like <strong>Linked List, Tree, Graph, Stack,</strong> and <strong>Queue</strong> are called <strong>Abstract Data Structures</strong>. They give an implementation-independent view of data — you can use them without knowing exactly how they work inside.</p>
+
+    <div class="divider"></div>
+
+    <h2>Introduction to Stacks</h2>
+
+    <p>Think about a stack of donuts, a stack of pancakes, a pile of coins, or a stack of plates. What do they all have in common? You can only add or remove items from the <strong>top</strong>.</p>
+
+    <p>A <strong>stack</strong> data structure behaves exactly the same way. It only allows you to access <strong>one data item</strong> at a time — the last item that was inserted. Once you remove that item, you can then access the next-to-last item, and so on.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>stack</strong> is a linear data structure that can be accessed only at one of its ends (called the <strong>top</strong> of the stack) for storing and retrieving data. It behaves very much like a stack of plates or a stack of newspapers. A stack is a constantly changing object.</p>
+    </div>
+
+    <p>Stacks are not just a programming concept — most <strong>microprocessors</strong> use a stack-based architecture too. When a method is called, its return address and arguments are pushed onto a stack. When it returns, they're popped off. These stack operations are actually built into the microprocessor itself.</p>
+
+    <div class="divider"></div>
+
+    <h2>How Stacks Work: The LIFO Principle</h2>
+
+    <p>A <strong>stack</strong> is a data structure — a list of data elements — where all <strong>insertions</strong> and <strong>deletions</strong> happen at just <strong>one end</strong>. This end is called the <strong>TOP</strong> (also referred to as the beginning) of the stack.</p>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Insertions and deletions are <strong>restricted</strong> from the middle and the end (bottom) of a stack — they can only happen at the top.</p>
+    </div>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Elements are inserted and removed according to the <strong>Last-In-First-Out (LIFO)</strong> principle. This means the <strong>last element inserted is the first one to be removed</strong>.</p>
+    </div>
+
+    <p>When we add an item to a stack, we say we <strong>PUSH</strong> it onto the stack. When we remove an item, we say we <strong>POP</strong> it from the stack. At any point, only the most recently inserted ("last") element can be removed.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Fun Fact</span>
+      <p>The name <strong>"STACK"</strong> comes from the spring-loaded, cafeteria plate dispenser.</p>
+    </div>
+
+    <p>Real examples of stacks in software:</p>
+    <ul>
+      <li>Internet web browsers storing the addresses of recently visited sites.</li>
+      <li>A text editor's <strong>"undo"</strong> function.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Implementing a Stack (Array Basics)</h2>
+
+    <p>One common way to implement a stack is with an <strong>array</strong>. But even though it's built on an array, a stack <strong>restricts access</strong> — you cannot access it the way you would access a normal array.</p>
+
+    <p>A stack built this way needs three fields:</p>
+    <ul>
+      <li>A variable to hold the <strong>maximum size</strong> of the array.</li>
+      <li>The <strong>array</strong> itself, to hold the data.</li>
+      <li>A variable called <strong>top</strong>, which holds the index of the top element of the stack.</li>
+    </ul>
+
+    <h3>Pushing an Item</h3>
+    <p>To push a new item, we move the <strong>top</strong> pointer one step further and place the new item there. For example, pushing <code>49</code> onto a stack that already holds <code>27, 14, 3, 92, 64</code> places <code>49</code> above <code>27</code>, and <strong>top</strong> now points to <code>49</code>.</p>
+
+    <h3>Popping an Item (Pop)</h3>
+    <p>When removing an item, you can only remove the item currently at the <strong>top</strong> of the stack.</p>
+    <ol>
+      <li>First, check if the stack is <strong>empty</strong>.</li>
+      <li>If it is not empty, return the element at the top.</li>
+      <li>Decrement <strong>top</strong> by 1.</li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <h2>Stack ADT Specification</h2>
+
+    <p>Like any ADT, a stack has definitions that the user provides, and a fixed set of operations.</p>
+
+    <h3>Definitions (provided by the user)</h3>
+    <ul>
+      <li><strong>MAX_ITEMS</strong> — the maximum number of items that might be on the stack.</li>
+      <li><strong>ItemType</strong> — the data type of the items on the stack.</li>
+    </ul>
+
+    <h3>Operations</h3>
+    <ul>
+      <li><strong>MakeEmpty</strong></li>
+      <li><strong>Boolean IsEmpty</strong></li>
+      <li><strong>Boolean IsFull</strong></li>
+      <li><strong>Push(ItemType newItem)</strong></li>
+      <li><strong>Pop(ItemType&amp; item)</strong></li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Push(ItemType newItem)</span>
+      <p><strong>Function:</strong> Adds <code>newItem</code> to the top of the stack.<br>
+      <strong>Precondition:</strong> The stack has been initialized and is not full.<br>
+      <strong>Postcondition:</strong> <code>newItem</code> is now at the top of the stack.</p>
+    </div>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Pop(ItemType&amp; item)</span>
+      <p><strong>Function:</strong> Removes the top item from the stack and returns it in <code>item</code>.<br>
+      <strong>Precondition:</strong> The stack has been initialized and is not empty.<br>
+      <strong>Postcondition:</strong> The top element has been removed, and <code>item</code> is a copy of the removed element.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Example: Tracing Push and Pop Operations</h2>
+
+    <p>Let's trace a sequence of operations on an empty stack to see exactly how <strong>top</strong> changes at each step.</p>
+
+    <pre><code>Operation        top   Stack contents (index : value)
+Initial (empty)  -1    —
+stack.Push(2)     0    [0]=2
+stack.Push(3)     1    [0]=2  [1]=3
+stack.Push(5)     2    [0]=2  [1]=3  [2]=5
+stack.Pop(x)      1    x = 5   (top now points at index 1)
+stack.Pop(x)      0    x = 3   (top now points at index 0)
+stack.Push(10)    1    [0]=2  [1]=10  [2]=5 (old 5 still sits in memory)</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Popping does not "erase" the old value in the array — it simply moves the <strong>top</strong> pointer down. The old value just gets overwritten the next time something is pushed into that slot.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Stack Representation – Functions and Algorithms</h2>
+
+    <p>Any working stack implementation needs to support these core functions:</p>
+    <ul>
+      <li><strong>Initialization</strong> of the stack.</li>
+      <li><strong>Insertion</strong> into the stack (push operation).</li>
+      <li><strong>Deletion</strong> from the stack (pop operation).</li>
+      <li><strong>Check fullness</strong> of the stack.</li>
+      <li><strong>Check emptiness</strong> of the stack.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Ways to Implement a Stack</h2>
+
+    <p>There are at least three different ways to implement a stack:</p>
+    <ol>
+      <li><strong>Array</strong></li>
+      <li><strong>Vector</strong></li>
+      <li><strong>Linked List</strong></li>
+    </ol>
+
+    <p>Which method to use depends on the application — you need to weigh the advantages and disadvantages of each.</p>
+
+    <h3>Array Implementation</h3>
+    <ul>
+      <li><strong>Advantage:</strong> best performance.</li>
+      <li><strong>Disadvantage:</strong> fixed size.</li>
+    </ul>
+    <p><strong>Basic implementation:</strong></p>
+    <ul>
+      <li>Start with an initially empty array.</li>
+      <li>Keep a field that records where the next piece of data should be placed.</li>
+      <li>If the array is full, <code>push()</code> returns <strong>false</strong>.</li>
+      <li>Otherwise, the item is added into the correct spot.</li>
+      <li>If the array is empty, <code>pop()</code> returns <strong>null</strong>.</li>
+      <li>Otherwise, it removes the next item in the stack.</li>
+    </ul>
+
+    <h3>Linked List Implementation</h3>
+    <ul>
+      <li><strong>Advantages:</strong> always constant time to push or pop an element; can grow to an infinite size.</li>
+      <li><strong>Disadvantage:</strong> the common case is the slowest of all the implementations.</li>
+    </ul>
+    <p><strong>Basic implementation:</strong></p>
+    <ul>
+      <li>The list starts out empty.</li>
+      <li>The <code>push()</code> method adds a new item to the <strong>head</strong> of the list.</li>
+      <li>The <code>pop()</code> method removes the <strong>head</strong> of the list.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Stack ADT Operations (Revisited)</h2>
+
+    <p>A stack is an object — more specifically, an <strong>Abstract Data Structure (ADT)</strong> — that supports these operations:</p>
+    <ul>
+      <li><strong>Push</strong> — add an element to the top of the stack.</li>
+      <li><strong>Pop</strong> — remove an element from the top of the stack.</li>
+      <li><strong>IsEmpty</strong> — check if the stack is empty.</li>
+      <li><strong>IsFull</strong> — check if the stack is full.</li>
+      <li><strong>Peek</strong> — get the value of the top element <strong>without</strong> removing it.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>How the Stack Works: The TOP Pointer</h2>
+
+    <ul>
+      <li>A pointer called <strong>TOP</strong> is used to keep track of the top element in the stack.</li>
+      <li>When we initialize the stack, we set <strong>TOP = -1</strong>, so we can check for an empty stack by comparing <code>TOP == -1</code>.</li>
+      <li>When we <strong>push</strong> an element, we increase the value of TOP, then place the new element in the position TOP now points to.</li>
+      <li>When we <strong>pop</strong> an element, we return the element pointed to by TOP, then reduce its value.</li>
+      <li>Before pushing, we always check if the stack is already <strong>full</strong>.</li>
+      <li>Before popping, we always check if the stack is already <strong>empty</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Stack Algorithms (Pseudocode)</h2>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>In this set of algorithms, stack element indices start from <strong>1</strong> and go up to <strong>MAX</strong>. TOP is still initialized to <strong>-1</strong> to represent an empty stack.</p>
+    </div>
+
+    <h3>Initializing the Stack</h3>
+    <pre><code>INIT_STACK (STACK, TOP)
+  Algorithm to initialize a stack using an array.
+  TOP points to the top-most element of the stack.
+  1) TOP := -1
+  2) Exit</code></pre>
+
+    <h3>Push Operation</h3>
+    <p>Used to insert an element into the stack.</p>
+    <pre><code>PUSH (STACK, TOP, MAX, ITEM)
+  1) IF TOP = MAX THEN
+        Print "Stack is full"
+        Exit
+  2) ELSE
+        TOP := TOP + 1        // increment TOP
+        STACK(TOP) := ITEM
+  3) END IF
+  4) Exit</code></pre>
+
+    <h3>Pop Operation</h3>
+    <p>Used to remove an item from the stack — first read the element, then decrease the TOP pointer.</p>
+    <pre><code>POP_STACK (STACK, TOP, ITEM)
+  1) IF TOP = -1 THEN
+        Print "Stack is empty"
+        Exit
+  2) ELSE
+        ITEM := STACK(TOP)
+        TOP := TOP - 1
+  3) END IF
+  4) Exit</code></pre>
+
+    <h3>Checking If the Stack Is Full</h3>
+    <pre><code>IS_FULL (STACK, TOP, MAX, STATUS)
+  1) IF TOP = MAX THEN
+        STATUS := true
+  2) ELSE
+        STATUS := false
+  3) END IF
+  4) Exit</code></pre>
+
+    <h3>Checking If the Stack Is Empty</h3>
+    <pre><code>IS_EMPTY (STACK, TOP, MAX, STATUS)
+  1) IF TOP = -1 THEN
+        STATUS := true
+  2) ELSE
+        STATUS := false
+  3) END IF
+  4) Exit</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Visual Representation of a Stack (Worked Example)</h2>
+
+    <p>Consider a stack with the following details:</p>
+
+    <pre><code>Field                              Value
+Size of the Stack                  6
+Maximum value of Stack Top         5
+Minimum value of Stack Top         0
+Value of Top when Stack is Empty   -1
+Value of Top when Stack is Full    5</code></pre>
+
+    <h3>View 1: When the Stack Is Empty</h3>
+    <p>An empty stack has no elements inside it. Whenever the stack is empty, the position of the topmost element is <strong>-1</strong>.</p>
+
+    <h3>View 2: When the Stack Is Not Empty</h3>
+    <p>Whenever we add the very first element, the topmost position is incremented by 1. After adding the first element, <strong>top = 0</strong>.</p>
+
+    <h3>View 3: After Deleting One Element</h3>
+    <p>Top is decremented by 1 after every deletion.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Position of TOP and the status of the stack:</p>
+    </div>
+
+    <pre><code>Position of TOP      Status of the Stack
+-1                    Stack is empty
+0                     First element has just been added
+N-1                   Stack is full
+N                     Stack has overflowed</code></pre>
+
+    <pre><code>Operation           Explanation
+top = -1            Indicates an empty stack
+top = top + 1       After a push, top is incremented by 1
+top = top - 1       After a pop, top is decremented by 1</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Uses of Stacks</h2>
+
+    <ul>
+      <li>Converting a sequence of numeric characters into the equivalent integer.</li>
+      <li>Reversing character strings.</li>
+      <li>Evaluating arithmetic expressions.</li>
+      <li>Implementing recursion.</li>
+    </ul>
+
+    <h3>A Few Real Examples</h3>
+    <ul>
+      <li><strong>Reversing a word</strong> — Put all the letters in a stack and pop them out one by one. Because of the stack's LIFO order, the letters come out in reverse order.</li>
+      <li><strong>Compilers</strong> — Compilers use a stack to calculate the value of expressions like <code>2 + 4 / 5 * (7 - 9)</code>, by converting the expression into prefix or postfix form first.</li>
+      <li><strong>Browsers</strong> — The back button in a browser saves all the URLs you've visited in a stack. Every new page is added on top. Pressing back removes the current URL from the stack and takes you to the previous one.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Infix, Prefix, and Postfix Expressions</h2>
+
+    <p>Take the arithmetic expression <code>B * C</code>. The way it's written already tells you how to interpret it — here, <strong>B</strong> is being multiplied by <strong>C</strong>, because the multiplication operator <code>*</code> sits between them.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>This style, where the operator sits <strong>between</strong> the two operands it works on, is called <strong>infix</strong> notation — the notation we normally use in everyday math.</p>
+    </div>
+
+    <pre><code>Infix Expression      Prefix Expression      Postfix Expression
+A + B                 + A B                  A B +
+A + B * C             + A * B C              A B C * +</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Operator Precedence</h2>
+
+    <p>Look at the expression <code>A + B * C</code>. Both <code>+</code> and <code>*</code> sit between operands, but which goes first — does <code>+</code> work on A and B, or does <code>*</code> take B and C? On its own, this looks ambiguous.</p>
+
+    <p>To solve this, each operator is given a <strong>precedence level</strong>.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <ul>
+        <li>Operators with <strong>higher precedence</strong> are applied before operators with lower precedence.</li>
+        <li><strong>Parentheses</strong> are the only thing that can override this order.</li>
+        <li>If two operators have <strong>equal precedence</strong>, they are evaluated left-to-right (this is called associativity).</li>
+      </ul>
+    </div>
+
+    <pre><code>Order of Precedence (highest to lowest)
+Exponentiation             ^
+Multiplication / Division  *, /
+Addition / Subtraction     +, -</code></pre>
+
+    <p>When converting an infix expression to a fully parenthesized form, the operands with the <strong>higher precedence</strong> operator are grouped in parentheses first. If the same precedence appears more than once, the leftmost one is grouped first — except for exponentiation, which groups from <strong>right to left</strong>.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Example</span>
+      <p><code>A + B + C</code> is grouped as <code>(A + B) + C</code>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Expression Evaluation Examples</h2>
+
+    <p>Here's a worked example converting <code>A * B + C/D</code> into postfix, step by step:</p>
+
+    <pre><code>A * B + C/D
+= (A * B) + (C/D)
+= (AB*) + (CD/)
+= AB*CD/+</code></pre>
+
+    <p>A few more examples of infix expressions and their equivalent prefix and postfix forms:</p>
+
+    <pre><code>Infix Expression          Prefix Expression        Postfix Expression
+A + B * C + D             + + A * B C D             A B C * + D +
+(A + B) * (C + D)         * + A B + C D              A B + C D + *
+A * B + C * D             + * A B * C D              A B * C D * +
+A + B + C + D             + + + A B C D              A B + C + D +</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Evaluating Postfix Expressions Using a Stack</h2>
+
+    <p>A stack makes it easy to evaluate an expression by scanning it from <strong>left to right</strong>:</p>
+    <ol>
+      <li>When you see an <strong>operand</strong>, push it onto the stack.</li>
+      <li>When you see an <strong>operator</strong>, pop two operands off the stack, apply the operator, then push the result back on.</li>
+    </ol>
+
+    <p>Let's evaluate the postfix expression <code>1 2 4 * + 3 +</code>:</p>
+
+    <pre><code>Input   Operation          Stack (after operation)
+1       Push operand       1
+2       Push operand       2, 1
+4       Push operand       4, 2, 1
+*       Multiply           8, 1
++       Add                9
+3       Push operand       3, 9
++       Add                12</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The final result, <strong>12</strong>, is left sitting on the top of the stack once the whole expression has been processed.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Stacks: A Linear Data Structure Based on LIFO',
+    subTopics: [
+      'What is an Abstract Data Type (ADT)?',
+      'Primitive vs Abstract Data Structures',
+      'Introduction to Stacks',
+      'How Stacks Work: The LIFO Principle',
+      'Implementing a Stack (Array Basics)',
+      'Stack ADT Specification',
+      'Example: Tracing Push and Pop Operations',
+      'Stack Representation – Functions and Algorithms',
+      'Ways to Implement a Stack (Array vs Linked List)',
+      'Stack ADT Operations (Revisited)',
+      'How the Stack Works: The TOP Pointer',
+      'Stack Algorithms (Pseudocode)',
+      'Visual Representation of a Stack (Worked Example)',
+      'Uses of Stacks',
+      'Infix, Prefix, and Postfix Expressions',
+      'Operator Precedence',
+      'Expression Evaluation Examples',
+      'Evaluating Postfix Expressions Using a Stack',
+    ],
+    definitions: [
+      { term: 'Abstract Data Type (ADT)', meaning: 'A collection of data and a set of operations on that data, defined by what it does rather than how it is implemented.' },
+      { term: 'Data Structure', meaning: 'The actual implementation of an abstract data type.' },
+      { term: 'Primitive Data Structure', meaning: 'A basic data type built into a language, such as Integer, Float, Boolean, or Char.' },
+      { term: 'Abstract Data Structure', meaning: 'A structure like Linked List, Tree, Graph, Stack, or Queue that gives an implementation-independent view of data.' },
+      { term: 'Stack', meaning: 'A linear data structure where insertions and deletions can only happen at one end, called the top.' },
+      { term: 'LIFO (Last-In-First-Out)', meaning: 'The rule that the last element inserted into a stack is the first one removed.' },
+      { term: 'Push', meaning: 'The operation of adding a new item to the top of the stack.' },
+      { term: 'Pop', meaning: 'The operation of removing the item currently at the top of the stack.' },
+      { term: 'TOP', meaning: 'A pointer or variable that tracks the index of the topmost element in the stack; it is set to -1 when the stack is empty.' },
+      { term: 'Peek', meaning: 'An operation that returns the value of the top element of the stack without removing it.' },
+      { term: 'Overflow', meaning: 'The condition where an attempt is made to push an item onto a stack that is already full.' },
+      { term: 'Infix Expression', meaning: 'An expression where the operator is written between its two operands, for example A + B.' },
+      { term: 'Prefix Expression', meaning: 'An expression where the operator is written before its operands, for example + A B.' },
+      { term: 'Postfix Expression', meaning: 'An expression where the operator is written after its operands, for example A B +.' },
+      { term: 'Operator Precedence', meaning: 'The priority order that decides which operator is applied first in an expression, such as multiplication before addition.' },
+    ],
+    keyPoints: [
+      'An Abstract Data Type (ADT) defines what data represents and what operations it supports, not how it is implemented; the implementation is called a data structure.',
+      'A stack allows insertions and deletions only at one end, called the TOP, never in the middle or at the bottom.',
+      'Stacks follow the Last-In-First-Out (LIFO) principle: the last element added is the first one removed.',
+      'Push adds an item to the top of the stack; Pop removes and returns the item at the top.',
+      'TOP is initialized to -1 to represent an empty stack; TOP increases on push and decreases on pop.',
+      'Always check IsFull before pushing and IsEmpty before popping to avoid overflow or errors.',
+      'A stack can be implemented using an array, a vector, or a linked list.',
+      'Array-based stacks give the best performance but have a fixed size; linked-list-based stacks can grow indefinitely and always push or pop in constant time, but are generally slower overall.',
+      'Peek returns the value of the top element without removing it.',
+      'Common real-world uses of stacks include reversing strings, evaluating arithmetic expressions, implementing recursion, undo functions, and browser back-button history.',
+      'Infix notation places the operator between operands (A + B); prefix places it before (+ A B); postfix places it after (A B +).',
+      'Operator precedence order from highest to lowest is: Exponentiation, Multiplication/Division, Addition/Subtraction; parentheses override this order.',
+      'Postfix expressions can be evaluated with a stack: push operands, and on seeing an operator, pop two operands, compute the result, and push it back onto the stack.',
+    ],
   },
+},
+
+
+
+
+
   {
     id: 3,
-    title: 'Stacks and Queues',
+    title: 'Queues',
     content: `
       <span class="lesson-badge">LESSON 03</span>
-      <h1>Stacks and Queues</h1>
+      <h1>Queues</h1>
       <div class="meta-info">ICT2113 <span>•</span> 7 min read <span>•</span> Beginner</div>
 
-      <p>Stacks and Queues are <strong>abstract data types</strong> that restrict how elements are added and removed.</p>
-
-      <h2>Stack (LIFO)</h2>
-      <p>Last In, First Out. Think of a stack of plates.</p>
-
-      <pre><code>Stack operations:
-  push(item)  → Add to top
-  pop()       → Remove from top
-  peek()      → View top without removing
-
-// Example
-stack.push(10)   // [10]
-stack.push(20)   // [10, 20]
-stack.push(30)   // [10, 20, 30]
-stack.pop()      // returns 30 → [10, 20]</code></pre>
+      <p>Queues <strong>abstract data types</strong> that restrict how elements are added and removed.</p>
 
       <h2>Queue (FIFO)</h2>
       <p>First In, First Out. Think of a line at a counter.</p>
