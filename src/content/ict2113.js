@@ -1041,37 +1041,409 @@ A + B + C + D             + + + A B C D              A B + C + D +</code></pre>
 },
 
 
+{
+  id: 3,
+  title: 'Queues',
+  content: `
+    <span class="lesson-badge">LESSON 03</span>
+    <h1>Queues</h1>
+    <div class="meta-info">ICT2113 <span>•</span> 15 min read</div>
 
+    <p>A <strong>Queue</strong> is a linear data structure that is similar to a Stack, but it works in the opposite order. In a Queue, the <strong>first item inserted is the first item to be removed</strong>. This rule is called <strong>FIFO (First-In-First-Out)</strong>.</p>
 
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A <strong>Stack</strong> follows <strong>LIFO (Last-In-First-Out)</strong> — the last item inserted is the first one removed. A <strong>Queue</strong> follows <strong>FIFO</strong> — the first item inserted is the first one removed.</p>
+    </div>
 
-  {
-    id: 3,
-    title: 'Queues',
-    content: `
-      <span class="lesson-badge">LESSON 03</span>
-      <h1>Queues</h1>
-      <div class="meta-info">ICT2113 <span>•</span> 7 min read <span>•</span> Beginner</div>
+    <p>Queues are working quietly behind the scenes inside a computer's operating system. Some common examples are:</p>
+    <ul>
+      <li><strong>Printer queue</strong> — holds print jobs in the order they were sent</li>
+      <li><strong>Keystroke queue</strong> — stores the keys you press on the keyboard, in order</li>
+      <li><strong>Pipeline</strong> — passes data between processes in sequence</li>
+    </ul>
 
-      <p>Queues <strong>abstract data types</strong> that restrict how elements are added and removed.</p>
+    <div class="divider"></div>
 
-      <h2>Queue (FIFO)</h2>
-      <p>First In, First Out. Think of a line at a counter.</p>
+    <h2>What Does a Queue Do?</h2>
+    <ul>
+      <li>Stores a set of elements in a particular order</li>
+      <li>Follows the <strong>FIFO</strong> principle — First In, First Out</li>
+      <li>Insertions happen at the <strong>rear</strong> end</li>
+      <li>Deletions happen at the <strong>front</strong> end</li>
+      <li>Elements can only be <strong>accessed from the front</strong></li>
+      <li>Insertion and deletion in the <strong>middle</strong> of the queue is not allowed</li>
+    </ul>
 
-      <pre><code>Queue operations:
-  enqueue(item)  → Add to rear
-  dequeue()      → Remove from front
-  peek()         → View front without removing
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Queue rule: elements are inserted and removed strictly according to the <strong>First-In-First-Out (FIFO)</strong> principle.</p>
+    </div>
 
-// Example
-queue.enqueue(10)   // [10]
-queue.enqueue(20)   // [10, 20]
-queue.enqueue(30)   // [10, 20, 30]
-queue.dequeue()     // returns 10 → [20, 30]</code></pre>
+    <h3>Real-Life FIFO Examples</h3>
+    <p>Think of a queue like standing in line at a bank or a bus stop:</p>
+    <ul>
+      <li>The <strong>first</strong> person in line at the bank is the <strong>first</strong> to be served by the next available teller</li>
+      <li>The <strong>first</strong> person in line at the bus stop is the <strong>first</strong> to get on the bus</li>
+    </ul>
 
-      <div class="callout callout-red">
-        <span class="callout-label">Warning</span>
-        <p>Don't confuse LIFO (Stack) with FIFO (Queue). This is a common exam mistake.</p>
-      </div>
-    `,
+    <div class="divider"></div>
+
+    <h2>Queue Operations</h2>
+    <p>These are the standard operations every queue supports:</p>
+
+    <pre><code>Operation    | Description
+-------------|-------------------------------------------------
+enqueue      | Adds an element to the rear of the queue
+dequeue      | Removes an element from the front of the queue
+First (peek) | Examines the element at the front of the queue
+isEmpty      | Determines whether the queue is empty
+size         | Determines the number of elements in the queue
+toString     | Returns a string representation of the queue</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Real-World Examples of Queues</h2>
+    <p>In the real world, a queue is simply a <strong>waiting line</strong>. For example:</p>
+    <ul>
+      <li>At grocery stores</li>
+      <li>At banks</li>
+      <li>Aeroplanes waiting at airports</li>
+      <li>Internet data packets</li>
+    </ul>
+
+    <p>Inside computer systems:</p>
+    <ul>
+      <li><strong>Job Queue</strong> — in multi-user systems, processes wait in a queue for their turn on the CPU</li>
+      <li><strong>Print Queue</strong> — one printer is often shared by several machines, so print jobs wait in a queue</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The number of elements currently in a queue is equal to:</p>
+      <pre><code>rear - front + 1</code></pre>
+    </div>
+
+    <h3>Real-World Applications of Queue Data Structures</h3>
+    <ul>
+      <li>Computer simulation programs</li>
+      <li>Printer spooling (Simultaneous Peripheral Operations Online)</li>
+      <li>Computer and video games</li>
+      <li>Processor scheduling algorithms</li>
+      <li>Queue of packets in data communication</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Types of Queues</h2>
+    <ul>
+      <li><strong>Normal Queue (FIFO)</strong> — the basic linear queue</li>
+      <li><strong>Circular Queue</strong> — a normal queue that wraps around itself</li>
+      <li><strong>Double-Ended Queue (Deque)</strong> — insertion and deletion allowed at both ends</li>
+      <li><strong>Priority Queue</strong> — elements are removed based on priority, not just order</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Front and Rear of a Queue</h2>
+    <p>Every queue has a <strong>front</strong> and a <strong>rear</strong>. Items are deleted from the front and inserted at the rear.</p>
+
+    <pre><code>Front                                   Rear
+  ↓                                       ↓
+[    ][    ][    ][    ][    ][    ][    ]
+  ↑                                       ↑
+Remove                                 Insert</code></pre>
+
+    <ul>
+      <li><strong>enqueue</strong> — insert an element at the rear of the queue</li>
+      <li><strong>dequeue</strong> — remove an element from the front of the queue</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>How Enqueue and Dequeue Work</h2>
+    <p>Suppose we have an empty, static integer queue that can hold a maximum of <strong>three</strong> values. Let's trace through some operations.</p>
+
+    <h3>Enqueue Example</h3>
+    <pre><code>Enqueue(3):   Front→[ 3][  ][  ]←Rear (index 0)
+Enqueue(6):   Front→[ 3][ 6][  ]      Rear→(index 1)
+Enqueue(9):   Front→[ 3][ 6][ 9]              Rear→(index 2)</code></pre>
+
+    <h3>Dequeue Example</h3>
+    <pre><code>Dequeue():   [ 6][ 9][  ]  Front→index1  Rear→index2
+Dequeue():   [ 9][  ][  ]  Front = Rear = index 2
+Dequeue():   [  ][  ][  ]  Front = -1   Rear = -1 (queue is empty)</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>For an <strong>empty queue</strong>, <code>rear</code> must be initialized to <code>front - 1</code>. So the standard starting values are <code>front = -1</code>, <code>rear = -1</code>, and <code>size = 0</code>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Full Trace Example</h2>
+    <p>Here is a longer trace of enqueue and dequeue operations, and what each one returns:</p>
+
+    <pre><code>Operation      Output    Queue contents (front → rear)
+enqueue(5)     -         5
+enqueue(3)     -         5 3
+dequeue()      5         3
+enqueue(7)     -         3 7
+dequeue()      3         7
+front()        7         7
+dequeue()      7         (empty)
+dequeue()      "error"   (empty)
+isEmpty()      true      (empty)
+enqueue(9)     -         9
+enqueue(7)     -         9 7
+size()         2         9 7
+enqueue(3)     -         9 7 3
+enqueue(5)     -         9 7 3 5
+dequeue()      9         7 3 5</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Calling <code>dequeue()</code> on an empty queue produces an <strong>underflow error</strong> — it does not silently return nothing.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Implementing a Queue with an Array</h2>
+    <p>A queue implementation is usually based on an <strong>array with restricted access</strong>. The array is accessed the same way a real queue would be: new elements are inserted at the back, and elements are removed from the front.</p>
+
+    <h2>Queue Algorithms</h2>
+
+    <h3>peek() — look at the front element</h3>
+    <p>Gets the element at the front of the queue <strong>without removing it</strong>.</p>
+    <pre><code>procedure peek
+   return queue[front]
+end procedure</code></pre>
+
+    <h3>isFull()</h3>
+    <p>Since a single-dimension array is used to implement the queue, we just check whether the <code>rear</code> pointer has reached <code>MAXSIZE</code>.</p>
+    <pre><code>procedure isfull
+   if rear equals to MAXSIZE - 1
+      return true
+   else
+      return false
+   endif
+end procedure</code></pre>
+
+    <h3>isEmpty()</h3>
+    <pre><code>procedure isempty
+   if front is less than MIN OR front is greater than rear
+      return true
+   else
+      return false
+   endif
+end procedure</code></pre>
+
+    <h3>enqueue(data) — insert an element</h3>
+    <ol>
+      <li>Check if the queue is full</li>
+      <li>If full, produce an <strong>overflow error</strong> and exit</li>
+      <li>If not full, increment the <code>rear</code> pointer to the next empty space</li>
+      <li>Add the data element to the queue location where <code>rear</code> is pointing</li>
+      <li>Return success</li>
+    </ol>
+    <pre><code>procedure enqueue(data)
+   if queue is full
+      return overflow
+   endif
+
+   rear ← rear + 1
+   queue[rear] ← data
+
+   return true
+end procedure</code></pre>
+
+    <h3>dequeue() — remove an element</h3>
+    <ol>
+      <li>Check if the queue is empty</li>
+      <li>If empty, produce an <strong>underflow error</strong> and exit</li>
+      <li>If not empty, access the data where <code>front</code> is pointing</li>
+      <li>Increment the <code>front</code> pointer to the next available element</li>
+      <li>Return success</li>
+    </ol>
+    <pre><code>procedure dequeue
+   if queue is empty
+      return underflow
+   endif
+
+   data = queue[front]
+   front ← front + 1
+
+   return true
+end procedure</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Practice Exercise 1</h2>
+    <p>Perform the following operations on a queue with a size of <strong>6</strong>, and trace the front/rear values after each step:</p>
+    <ol>
+      <li>Enqueue 5, 4, 7</li>
+      <li>Dequeue</li>
+      <li>Dequeue</li>
+      <li>Enqueue 8, 9</li>
+      <li>Dequeue</li>
+      <li>Enqueue 1, 2</li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <h2>The Problem with Linear Queues</h2>
+    <p>So far, we've discussed <strong>linear queues</strong>, where removing items only increases <code>front</code> and reduces the queue's usable size. This causes a problem.</p>
+
+    <p>For example, if a queue has 8 slots (indices 0–7) and we remove 3 elements from the front:</p>
+
+    <pre><code>Before removal:              After removing 3 elements:
+0: 777  ← Front               0: (empty)
+1: 2                           1: (empty)
+2: 5                           2: (empty)
+3: 525                         3: 525  ← Front
+4: 22                          4: 22
+5: 55                          5: 55
+6: 77                          6: 77
+7: 90   ← Rear                 7: 90   ← Rear</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Even though the queue is <strong>not full</strong> (indices 0–2 are empty), we <strong>cannot insert</strong> any more elements — because <code>rear</code> is already at the last index and a linear queue never reuses freed space at the front.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Circular Queues (The Solution)</h2>
+    <p><strong>Circular queues</strong> are queues that wrap around themselves. They are also called <strong>ring buffers</strong>. This solves the wasted-space problem of a linear queue.</p>
+    <p>When we want to insert a new element and the queue is not full, we can wrap <code>rear</code> back around to the <strong>beginning</strong> of the array instead of treating it as full.</p>
+
+    <pre><code>If rear was 2, the next element is stored at index 3
+If rear was 4, the next element is stored at index 5
+If rear was 7, the next element wraps around to index 0</code></pre>
+
+    <h3>Implementing a Circular Queue with an Array</h3>
+    <p>Picture the array bent into a circle. A <strong>read pointer</strong> marks the index used for the next <code>dequeue</code> (read), and a <strong>write pointer</strong> marks the index used for the next <code>enqueue</code> (write).</p>
+
+    <pre><code>Index:   0   1   2   3   4   5   6   7 ... 15
+Value:      [ 9] [ 4] [ 8] [ 2] [ 6]
+               ↑                       ↑
+            read=2                 write=7</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>In the example above, a <strong>read</strong> operation returns the value <strong>9</strong> stored at <code>buf[2]</code>, because <code>read = 2</code>.</p>
+    </div>
+
+    <p>After reading (removing) two more data items from the circular buffer, the read pointer moves forward until it catches up with the write pointer.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>A circular array (buffer) is <strong>empty</strong> when: <code>read pointer == write pointer</code></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Circular Queue Walkthrough (Front/Rear Style)</h2>
+    <p>Here's a circular queue of size 5, tracked using <code>front</code> and <code>rear</code> instead of read/write pointers:</p>
+
+    <pre><code>Empty Queue:            front = -1, rear = -1   [ _ , _ , _ , _ , _ ]
+Enqueue first element:  front =  0, rear =  0   [ 1 , _ , _ , _ , _ ]
+Enqueue:                front =  0, rear =  1   [ 1 , 2 , _ , _ , _ ]
+Enqueue x3 more:        front =  0, rear =  4   [ 1 , 2 , 3 , 4 , 5 ]
+Dequeue:                front =  2, rear =  4   [ _ , _ , 3 , 4 , 5 ]
+Enqueue (wraps):        front =  2, rear =  0   [ 6 , _ , 3 , 4 , 5 ]
+Enqueue:                front =  2, rear =  1   [ 6 , 7 , 3 , 4 , 5 ]  ← Queue Full</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Steps to Implement a Circular Queue</h2>
+    <ol>
+      <li>Include all header files used in the program and define a constant <code>SIZE</code> with a specific value</li>
+      <li>Declare all user-defined functions used in the circular queue implementation</li>
+      <li>Create a one-dimensional array with the defined <code>SIZE</code>: <code>int cQueue[SIZE]</code></li>
+      <li>Define two integer variables <code>front</code> and <code>rear</code>, and initialize both to <code>-1</code></li>
+      <li>Implement the main method: display a menu of operations and call the right function for whatever the user selects</li>
+    </ol>
+
+    <h3>enQueue(value) — Inserting into a Circular Queue</h3>
+    <ol>
+      <li>Check whether the queue is <strong>FULL</strong>: <code>(rear == SIZE-1 && front == 0) || (front == rear + 1)</code></li>
+      <li>If FULL, display "Queue is FULL!!! Insertion is not possible!!!" and stop</li>
+      <li>If NOT FULL, check <code>rear == SIZE - 1 && front != 0</code>. If true, set <code>rear = -1</code> (wrap around)</li>
+      <li>Increment <code>rear</code> by one, set <code>queue[rear] = value</code>, then check if <code>front == -1</code>. If true, set <code>front = 0</code></li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <h2>Practice Exercise 2</h2>
+    <p>Perform the following operations on a <strong>circular queue</strong> with a size of <strong>4</strong>, and trace the front/rear values after each step:</p>
+    <ol>
+      <li>Enqueue 5, 4, 7</li>
+      <li>Dequeue</li>
+      <li>Enqueue 8, 9</li>
+      <li>Dequeue</li>
+      <li>Enqueue 1, 2</li>
+    </ol>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Draw the array boxes on paper and physically move <code>front</code> and <code>rear</code> as you go through Exercise 1 and Exercise 2 — it makes wrap-around behavior in circular queues much easier to understand.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Queues — Linear and Circular Queue Data Structures',
+    subTopics: [
+      'What Does a Queue Do?',
+      'Real-Life FIFO Examples',
+      'Queue Operations',
+      'Real-World Examples of Queues',
+      'Real-World Applications of Queue Data Structures',
+      'Types of Queues',
+      'Front and Rear of a Queue',
+      'How Enqueue and Dequeue Work',
+      'Full Trace Example',
+      'Implementing a Queue with an Array',
+      'Queue Algorithms (peek, isFull, isEmpty, enqueue, dequeue)',
+      'The Problem with Linear Queues',
+      'Circular Queues (The Solution)',
+      'Implementing a Circular Queue with an Array',
+      'Circular Queue Walkthrough (Front/Rear Style)',
+      'Steps to Implement a Circular Queue',
+      'enQueue(value) — Inserting into a Circular Queue',
+    ],
+    definitions: [
+      { term: 'Queue', meaning: 'A linear data structure similar to a Stack, where the first element inserted is the first one removed (FIFO).' },
+      { term: 'FIFO (First-In-First-Out)', meaning: 'The rule that the first element inserted into a queue is the first one removed.' },
+      { term: 'LIFO (Last-In-First-Out)', meaning: 'The opposite rule used by a Stack — the last element inserted is removed first.' },
+      { term: 'Front', meaning: 'The end of the queue where elements are removed (dequeued).' },
+      { term: 'Rear', meaning: 'The end of the queue where new elements are inserted (enqueued).' },
+      { term: 'Enqueue', meaning: 'The operation that inserts an element at the rear of a queue.' },
+      { term: 'Dequeue', meaning: 'The operation that removes an element from the front of a queue.' },
+      { term: 'Peek (First)', meaning: 'An operation that returns the front element of the queue without removing it.' },
+      { term: 'isEmpty', meaning: 'An operation that checks whether the queue has no elements.' },
+      { term: 'isFull', meaning: 'An operation that checks whether the queue has reached its maximum capacity.' },
+      { term: 'Circular Queue (Ring Buffer)', meaning: 'A queue where the rear wraps back to the start of the array once space frees up, avoiding the wasted space of a linear queue.' },
+      { term: 'Read Pointer', meaning: 'The index of a circular array used by a read (dequeue) operation.' },
+      { term: 'Write Pointer', meaning: 'The index of a circular array used by a write (enqueue) operation.' },
+      { term: 'Deque (Double-Ended Queue)', meaning: 'A queue that allows insertion and deletion at both ends.' },
+      { term: 'Priority Queue', meaning: 'A queue where elements are removed based on priority rather than arrival order.' },
+    ],
+    keyPoints: [
+      'A Queue follows FIFO (First-In-First-Out); a Stack follows LIFO.',
+      'Insertions happen only at the rear; deletions happen only at the front — no middle access allowed.',
+      'Number of elements in a queue = rear - front + 1.',
+      'An empty queue starts with front = -1, rear = -1, and size = 0.',
+      'Common real-world/OS queue examples: printer queue, job queue (CPU scheduling), keystroke buffer, network data packets.',
+      'The four queue types covered are Normal (Linear), Circular, Deque, and Priority.',
+      'Linear queues waste array space — once rear reaches the last index, no more elements can be enqueued even if front slots are free.',
+      'Circular queues solve this by wrapping rear back to index 0 when space is available.',
+      'A circular queue is empty when the read pointer equals the write pointer.',
+      'Circular queue overflow check: (rear == SIZE-1 && front == 0) || (front == rear + 1).',
+      'dequeue() on an empty queue produces an underflow error; enqueue() on a full queue produces an overflow error.',
+    ],
   },
+},
+
+
+  
 ]

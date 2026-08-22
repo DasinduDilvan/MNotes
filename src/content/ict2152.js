@@ -1085,4 +1085,388 @@ p1 = p2; // "Alice" object is now unreachable → garbage</code></pre>
 },
 
 
+{
+  id: 3,
+  title: 'Modelling Concepts and UML',
+  content: `
+    <span class="lesson-badge">LESSON 03</span>
+    <h1>Modelling Concepts and UML</h1>
+    <div class="meta-info">Week 3 <span>•</span> 26 min read</div>
+
+    <h2>What Is a Model?</h2>
+    <p>A <strong>model</strong> is a simplified, abstract representation of a system. It leaves out unnecessary detail and focuses on the important parts.</p>
+    <p>Models are needed because <strong>software systems are complex</strong>. A model helps us to:</p>
+    <ul>
+      <li><strong>Simplify</strong> the complexity of a system</li>
+      <li><strong>Understand</strong> how the system works</li>
+      <li><strong>Communicate</strong> ideas clearly with others</li>
+      <li><strong>Manage</strong> that complexity as the system grows</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A model is a <strong>simplified representation of a real-world system</strong>. It shows the key elements in the system and how they are related — without going into implementation detail.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>What Is a Diagram?</h2>
+    <p>A <strong>diagram</strong> is a particular view of a model. While a model represents the <strong>whole system</strong> with all its important elements and relationships, a diagram shows <strong>only one part or aspect</strong> of that model.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Model = the whole blueprint.</strong> It represents the entire system.<br><strong>Diagram = one view of that model.</strong> It shows only a selected part.</p>
+    </div>
+
+    <h3>An Everyday Example: A House</h3>
+    <p>Think about a house. The <strong>model</strong> is the complete idea or representation of the house — it tells us about its rooms, the relationships between rooms, doors, windows, structure, and how everything is organized.</p>
+    <p>A <strong>diagram</strong> is one visual way of showing part of that model. For example:</p>
+    <ul>
+      <li><strong>Floor plan</strong> → shows how the rooms are arranged</li>
+      <li><strong>Electrical diagram</strong> → shows the electrical connections</li>
+      <li><strong>Plumbing diagram</strong> → shows the water connections</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Model = WHAT</strong> we are representing.<br><strong>Diagram = HOW</strong> we represent or show it.</p>
+    </div>
+
+    <h3>The Same Idea in Software Engineering</h3>
+    <p>Suppose we are developing a <strong>Library System</strong>. The <strong>model</strong> represents the system's important concepts and relationships:</p>
+    <pre><code>Student   -- borrows -->   Book
+Librarian -- manages -->  Book
+Book      -- belongs to --> Library</code></pre>
+    <p>We can represent different parts of that same model using different diagrams:</p>
+    <ul>
+      <li><strong>Class Diagram</strong> → shows classes and their relationships</li>
+      <li><strong>Use Case Diagram</strong> → shows actors and their interactions with the system</li>
+      <li><strong>Sequence Diagram</strong> → shows how objects interact over time</li>
+    </ul>
+    <pre><code>Model
+  |
+  |  can be represented using
+  v
+Diagrams</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>A Worked Example: Model vs Diagram</h2>
+    <p>Here is a fuller example based on a <strong>Library Management System</strong>, showing the difference between a complete model and a single diagram drawn from it.</p>
+
+    <h3>The Full Model</h3>
+    <p>The model below represents the <strong>entire system</strong> with its important classes, attributes, and relationships:</p>
+    <pre><code>Member (Student)              Loan                       Book
+- memberId          1     *   - loanId          *     1   - bookId
+- name        -- borrows -->  - issueDate  -- for -->     - title
+- address                     - dueDate                   - author
+- email                       - returnDate                - isbn
+- phone                                                    - category
+                                                               |
+                                                          1    | has
+                                                               v  *
+Library                                                    Book Copy
+- libraryId  -- managed by (1..*) --> Member                - copyId
+- name       -- managed by (1..*) --> Book Copy              - barcode
+- location                                                    - status</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Explanation:</strong> A member borrows books through a loan. Each book can have many copies. The library manages members and book copies.</p>
+    </div>
+
+    <h3>An Extended Model</h3>
+    <p>A model can grow to include more classes and relationships as the system is understood in more detail — for example, adding <strong>Librarian</strong> and <strong>Fine</strong>:</p>
+    <pre><code>Librarian                Loan               Book Copy            Book
+- librarianId  -- processes --> (Loan)  -- for --> (Book Copy) -- of --> (Book)
+- name         -- works in --> Library
+- phone
+
+Library                 Fine
+- libraryId  -- owns --> - fineId
+- name                   - amount
+- location               - paymentDate
+
+Book Copy -- may have --> Fine</code></pre>
+
+    <h3>One Diagram Drawn From the Model</h3>
+    <p>A diagram then shows just <strong>one selected view</strong>. For example, a "Loans" Class Diagram might only include:</p>
+    <pre><code>Member                Loan                  Book Copy
+- memberId    1   *   - loanId       *   1   - copyId
+- name  -- borrows --> - issueDate -- for --> - barcode
+- email                - dueDate                - status
+                       - returnDate</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <ul>
+        <li><strong>A model shows:</strong> all major elements, all important relationships, and the complete structure of the system.</li>
+        <li><strong>A diagram shows:</strong> only selected elements, only the relationships relevant to that view, and one specific perspective of the model.</li>
+      </ul>
+    </div>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Think of it like this: <strong>Model = the complete building blueprint.</strong> <strong>Diagram = one floor plan from that blueprint.</strong></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Purpose of Diagrams</h2>
+    <ul>
+      <li>Communicate ideas</li>
+      <li>Understand structure and relationships</li>
+      <li>Test ideas</li>
+      <li>Generate new ideas</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>General Rules of Modeling</h2>
+    <ul>
+      <li><strong>Simplicity</strong> — keep the model as simple as possible while still being useful.</li>
+      <li><strong>Consistency</strong> — the model should not contradict itself.</li>
+      <li><strong>Completeness</strong> — the model should include everything important.</li>
+      <li><strong>Hierarchical representation</strong> — complex systems should be organized into layers or levels.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>What Is UML?</h2>
+    <p><strong>UML</strong> stands for <strong>Unified Modeling Language</strong>.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>UML is a <strong>standard language</strong> used for <strong>specifying, visualizing, constructing, and documenting</strong> software systems.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>UML Basics</h2>
+    <h3>Types of UML Diagrams</h3>
+    <ul>
+      <li><strong>Structure diagrams</strong></li>
+      <li><strong>Behavior diagrams</strong></li>
+    </ul>
+
+    <h3>Three UML Building Blocks</h3>
+    <ul>
+      <li><strong>Things</strong> — the basic elements being modeled (such as classes and objects)</li>
+      <li><strong>Relationships</strong> — how those elements connect to each other</li>
+      <li><strong>Diagrams</strong> — the visual views built from things and relationships</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>UML Diagram Types</h2>
+    <p>UML diagrams can be grouped into two broad categories.</p>
+
+    <h3>1. Structural Diagrams</h3>
+    <p>Show <strong>what the system is made of</strong> — its structure, components, and relationships.</p>
+    <ul>
+      <li><strong>Class Diagram</strong> → classes, attributes, methods, relationships</li>
+      <li><strong>Object Diagram</strong> → objects and their relationships at a particular time</li>
+      <li><strong>Component Diagram</strong> → software components and their dependencies</li>
+      <li><strong>Deployment Diagram</strong> → hardware/devices and where software components are deployed</li>
+    </ul>
+
+    <h3>2. Behavioral Diagrams</h3>
+    <p>Show <strong>how the system behaves or works</strong>.</p>
+    <ul>
+      <li><strong>Use Case Diagram</strong> → actors and their goals/interactions</li>
+      <li><strong>Sequence Diagram</strong> → order of interactions between objects</li>
+      <li><strong>Activity Diagram</strong> → workflow/process of activities</li>
+      <li><strong>State Machine Diagram</strong> → how an object changes from one state to another</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Case Studies</h2>
+    <p>Use these case studies to practice identifying a model and choosing the right diagram for it.</p>
+
+    <h3>Case Study 1 — University Library</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Scenario</span>
+      <p>A university library system keeps information about <strong>Students, Books, Librarians and Loans</strong>. A student can borrow several books. Each book can be borrowed by different students at different times. Librarians manage books and loans.</p>
+    </div>
+    <p><strong>Students identify:</strong></p>
+    <ol>
+      <li>What is the model?</li>
+      <li>What important things should the model contain?</li>
+      <li>Which diagram could represent the model?</li>
+      <li>What information would that diagram show?</li>
+    </ol>
+    <p><strong>Answer:</strong></p>
+    <ol>
+      <li><strong>Model:</strong> A model of the University Library System, including students, books, librarians, loans, and their relationships.</li>
+      <li><strong>Important things:</strong> Student, Book, Librarian, Loan, "Student borrows Book", "Librarian manages Book/Loan".</li>
+      <li><strong>Suitable diagram:</strong> Class Diagram.</li>
+      <li><strong>What it shows:</strong> The classes, their attributes/methods, and the relationships between them.</li>
+    </ol>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Use a Class Diagram when you want to show the <strong>structure</strong> of a system.</p>
+    </div>
+
+    <h3>Case Study 2 — Online Shopping</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Scenario</span>
+      <p>An online shopping system allows customers to <strong>browse products, add products to a cart, place orders and make payments</strong>. Administrators manage products and orders. A payment gateway is an external system.</p>
+    </div>
+    <p><strong>Students identify:</strong></p>
+    <ol>
+      <li>What aspects of the system need to be modeled?</li>
+      <li>What is the model?</li>
+      <li>Which diagram could represent the system's structure, user interactions, and the sequence of interactions?</li>
+      <li>Explain why each diagram is suitable.</li>
+    </ol>
+    <p><strong>Answer:</strong></p>
+    <ol>
+      <li><strong>Aspects to model:</strong> Customers, Products, Shopping Cart, Orders, Payments, Administrator, Payment Gateway, and the interactions between these entities.</li>
+      <li><strong>Model:</strong> A model of the Online Shopping System, representing its structure and behavior.</li>
+      <li><strong>Suitable diagrams:</strong>
+        <pre>What we want to show                Diagram
+-----------------------------------------------------------
+System structure                    Class Diagram
+User interactions                   Use Case Diagram
+Order/payment interaction sequence  Sequence Diagram</pre>
+      </li>
+      <li><strong>Why:</strong> Each diagram provides a different view of the same system model.</li>
+    </ol>
+
+    <h3>Case Study 3 — Hospital Appointment System</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Scenario</span>
+      <p>A hospital system contains <strong>Patients, Doctors and Appointments</strong>. Patients can search for doctors and book appointments. Doctors can view their appointments. An appointment has a date, time, and status.</p>
+    </div>
+    <p><strong>Students identify:</strong></p>
+    <ol>
+      <li>What is being modeled?</li>
+      <li>What are the important concepts/entities in the model?</li>
+      <li>Which diagram would best represent the relationships between these concepts?</li>
+      <li>What would the diagram show?</li>
+    </ol>
+    <p><strong>Answer:</strong></p>
+    <ol>
+      <li><strong>What is modeled:</strong> The hospital appointment system, including patients, doctors, appointments, and their relationships.</li>
+      <li><strong>Important concepts:</strong> Patient, Doctor, Appointment, Date, Time, Status.</li>
+      <li><strong>Best diagram:</strong> Class Diagram.</li>
+      <li><strong>What it shows:</strong> The structure of the system and relationships such as:
+        <pre>Patient  -- books -->  Appointment
+Doctor   -- has -->    Appointments</pre>
+      </li>
+    </ol>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Use a Class Diagram when you want to show <strong>what the system is made of and how its elements are related</strong>.</p>
+    </div>
+
+    <h3>Case Study 4 — ATM System</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Scenario</span>
+      <p>An ATM allows a customer to <strong>insert a card, enter a PIN, check balance, withdraw money and receive a receipt</strong>. The ATM communicates with the bank system.</p>
+    </div>
+    <p><strong>Students identify:</strong></p>
+    <ol>
+      <li>What is the system model?</li>
+      <li>Who/what interacts with the system?</li>
+      <li>Which diagram would show actors and their goals/interactions?</li>
+      <li>Which diagram would show the sequence of interactions during cash withdrawal?</li>
+    </ol>
+    <p><strong>Answer:</strong></p>
+    <ol>
+      <li><strong>Model:</strong> A model of the ATM system, including customers, the ATM, the bank system, transactions, and their interactions.</li>
+      <li><strong>Who/what interacts with the system:</strong> Customer, Bank System.</li>
+      <li><strong>Diagram for actors and goals:</strong> Use Case Diagram. For example:
+        <pre>Customer --> Withdraw Cash
+Customer --> Check Balance
+Customer --> Change PIN</pre>
+      </li>
+      <li><strong>Diagram for sequence of interactions:</strong> Sequence Diagram. For example:
+        <pre>Customer -> ATM -> Bank System -> ATM -> Customer</pre>
+        It shows the <strong>order in which the interactions happen</strong>.
+      </li>
+    </ol>
+
+    <h3>Case Study 5 — Food Delivery System</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Scenario</span>
+      <p>A food delivery system involves <strong>Customers, Restaurants, Delivery Drivers and Orders</strong>. A customer places an order from a restaurant. The restaurant accepts the order and prepares the food. A delivery driver collects and delivers it.</p>
+    </div>
+    <p><strong>Students identify:</strong></p>
+    <ol>
+      <li>What important aspects of the system should be included in the model?</li>
+      <li>Which diagram would represent the structural relationships?</li>
+      <li>Which diagram would represent the interaction sequence?</li>
+      <li>Which diagram would represent customer interactions with the system?</li>
+    </ol>
+    <p><strong>Answer:</strong></p>
+    <ol>
+      <li><strong>Aspects to include:</strong> Customer, Restaurant, Delivery Driver, Order, Payment, Delivery, and the relationships between them.</li>
+      <li><strong>Structural relationships:</strong> Class Diagram. For example:
+        <pre>Customer   -- places -->   Order
+Restaurant -- prepares --> Order
+Driver     -- delivers --> Order</pre>
+      </li>
+      <li><strong>Interaction sequence:</strong> Sequence Diagram. For example:
+        <pre>Customer -> Restaurant -> Order System -> Driver</pre>
+        It shows how the participants communicate step-by-step.
+      </li>
+      <li><strong>Customer interactions with the system:</strong> Use Case Diagram. For example:
+        <pre>Customer --> Browse Restaurants
+Customer --> Place Order
+Customer --> Make Payment
+Customer --> Track Delivery</pre>
+      </li>
+    </ol>
+  `,
+  summary: {
+    topic: 'Modelling Concepts and the Unified Modeling Language (UML)',
+    subTopics: [
+      'What is a Model?',
+      'What is a Diagram?',
+      'A Worked Example: Model vs Diagram',
+      'Purpose of Diagrams',
+      'General Rules of Modeling',
+      'What is UML?',
+      'UML Basics',
+      'UML Diagram Types',
+      'Case Study 1 — University Library',
+      'Case Study 2 — Online Shopping',
+      'Case Study 3 — Hospital Appointment System',
+      'Case Study 4 — ATM System',
+      'Case Study 5 — Food Delivery System',
+    ],
+    definitions: [
+      { term: 'Model', meaning: 'A simplified, abstract representation of a system that shows its important elements and relationships, without implementation detail.' },
+      { term: 'Diagram', meaning: 'A particular view of a model; it shows only a selected part or aspect of the model, not the whole system.' },
+      { term: 'UML (Unified Modeling Language)', meaning: 'A standard language for specifying, visualizing, constructing, and documenting software systems.' },
+      { term: 'Structural Diagram', meaning: 'A type of UML diagram that shows what a system is made of — its structure, components, and relationships.' },
+      { term: 'Behavioral Diagram', meaning: 'A type of UML diagram that shows how a system behaves or works.' },
+      { term: 'Class Diagram', meaning: 'A structural diagram showing classes, their attributes, methods, and relationships.' },
+      { term: 'Object Diagram', meaning: 'A structural diagram showing objects and their relationships at a particular point in time.' },
+      { term: 'Component Diagram', meaning: 'A structural diagram showing software components and their dependencies.' },
+      { term: 'Deployment Diagram', meaning: 'A structural diagram showing hardware/devices and where software components are deployed.' },
+      { term: 'Use Case Diagram', meaning: 'A behavioral diagram showing actors and their goals or interactions with a system.' },
+      { term: 'Sequence Diagram', meaning: 'A behavioral diagram showing the order of interactions between objects over time.' },
+      { term: 'Activity Diagram', meaning: 'A behavioral diagram showing the workflow or process of activities.' },
+      { term: 'State Machine Diagram', meaning: 'A behavioral diagram showing how an object changes from one state to another.' },
+      { term: 'Things (UML building block)', meaning: 'The basic elements being modeled in UML, such as classes and objects.' },
+      { term: 'Relationships (UML building block)', meaning: 'The connections that show how UML elements relate to and interact with each other.' },
+    ],
+    keyPoints: [
+      'A model is a simplified representation of a system; a diagram is one particular view of that model.',
+      'Models are needed because software systems are complex, and models help simplify, understand, communicate, and manage that complexity.',
+      'The purpose of diagrams includes communicating ideas, understanding structure and relationships, testing ideas, and generating new ideas.',
+      'The general rules of modeling are simplicity, consistency, completeness, and hierarchical representation.',
+      'UML stands for Unified Modeling Language, a standard language for specifying, visualizing, constructing, and documenting software systems.',
+      'UML diagrams are grouped into Structural diagrams (what the system is made of) and Behavioral diagrams (how the system behaves).',
+      'The three UML building blocks are Things, Relationships, and Diagrams.',
+      'Class Diagrams show system structure, Use Case Diagrams show actor interactions, and Sequence Diagrams show the order of interactions over time.',
+      'The same system model can be represented using several different diagrams, each giving a different view of the same model.',
+      'Across the case studies, a Class Diagram is used to show structure, a Use Case Diagram to show actor interactions, and a Sequence Diagram to show the order of interactions.',
+    ],
+  },
+},
+
 ]

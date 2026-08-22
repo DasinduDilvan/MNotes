@@ -1482,3 +1482,70 @@ a:focus-visible {
     break-inside: avoid;
   }
 }
+
+
+
+
+/* ================================
+   Lesson Table
+================================ */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+  border-radius: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.lesson-table {
+  width: 100%;
+  min-width: 500px;
+  border-collapse: collapse;
+  background: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border: 1px solid #e2e8f0;
+}
+
+.lesson-table th,
+.lesson-table td {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #e2e8f0;
+}
+
+.lesson-table th {
+  font-weight: 700;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.lesson-table td {
+  color: #334155;
+}
+
+.lesson-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.lesson-table tbody tr:hover {
+  background: #f1f5f9;
+}
+@media (max-width: 768px) {
+  .table-wrapper {
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+
+  .lesson-table {
+    min-width: 600px;
+    font-size: 0.875rem;
+  }
+
+  .lesson-table th,
+  .lesson-table td {
+    padding: 10px 12px;
+  }
+}

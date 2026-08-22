@@ -542,4 +542,379 @@ Improved Recommendations</code></pre>
 },
 
 
+{
+  id: 3,
+  title: 'E-Commerce Infrastructure and Technologies',
+  content: `
+    <span class="lesson-badge">LESSON 03</span>
+    <h1>E-Commerce Infrastructure and Technologies</h1>
+    <div class="meta-info">ICT2142 <span>•</span> 20 min read</div>
+
+    <h2>What You Will Learn</h2>
+    <p>By the end of this lesson, you should be able to do the following:</p>
+    <ul>
+      <li>Explain the <strong>Internet technologies</strong> that provide the foundation for e-commerce.</li>
+      <li>Describe the role of <strong>DNS</strong>, <strong>TCP/IP</strong>, <strong>HTTP/HTTPS</strong>, browsers, and web technologies in online transactions.</li>
+      <li>Explain <strong>web servers</strong>, hosting models, scalability, availability, and basic deployment considerations.</li>
+      <li>Describe <strong>Web APIs</strong> and how third-party services support payments, logistics, authentication, and other business functions.</li>
+      <li>Explain <strong>mobile commerce (m-commerce)</strong> architecture, technologies, benefits, and challenges.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Internet Technologies That Power E-Commerce</h2>
+    <p>The <strong>Internet</strong> is the communication network that connects customers, businesses, banks, payment providers, and logistics (delivery) providers. It lets all of these parties talk to each other so that an online purchase can actually happen.</p>
+    <p>The core technologies behind e-commerce include:</p>
+    <ul>
+      <li><strong>Internet Protocol (IP)</strong> — gives every device an address on the network.</li>
+      <li><strong>DNS</strong> — turns website names into IP addresses.</li>
+      <li><strong>TCP/IP</strong> — the rules that move data reliably across the Internet.</li>
+      <li><strong>HTTP/HTTPS</strong>, web browsers, web servers, databases, and cloud services.</li>
+    </ul>
+
+    <h3>How a Transaction Flows Through These Layers</h3>
+    <p>An e-commerce transaction usually passes through several layers before it is complete.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Example</span>
+      <p>A customer opens an online shop's website, searches for a product, adds it to the cart, and submits an order. Behind the scenes: <strong>DNS</strong> finds the destination server, <strong>HTTPS</strong> protects the communication, the <strong>application</strong> processes the business logic, <strong>data</strong> is saved or retrieved, and <strong>external APIs</strong> may complete the payment or delivery steps.</p>
+    </div>
+
+    <pre><code>Customer Device  -->  Internet / ISP  -->  DNS + Web Server  -->  Application Server  -->  Database / External APIs</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>A good e-commerce system must provide <strong>security</strong>, <strong>availability</strong>, an acceptable <strong>response time</strong>, <strong>scalability</strong>, and reliable <strong>data exchange</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Domain Name System (DNS)</h2>
+    <p><strong>DNS</strong> changes easy-to-read domain names (like <code>shop.example.com</code>) into the <strong>IP addresses</strong> that network devices actually use to find each other.</p>
+    <p>DNS matters for e-commerce because customers usually type a domain name, not a long string of numbers, to visit a store.</p>
+    <ul>
+      <li>DNS also helps with <strong>availability</strong> and traffic management using multiple records, routing policies, and failover setups (backup servers that take over if one fails).</li>
+      <li><strong>Security note:</strong> DNS must be managed carefully. Poor management can lead to <strong>domain hijacking</strong> or <strong>DNS spoofing</strong> (tricking users into visiting a fake site).</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>TCP/IP: The Foundation of Internet Communication</h2>
+    <p><strong>TCP/IP</strong> is the basic set of rules that lets data travel from one device to another across the Internet.</p>
+
+    <h3>TCP — Transmission Control Protocol</h3>
+    <ul>
+      <li>TCP makes sure data is delivered <strong>reliably</strong>.</li>
+      <li>When there is a lot of information to send, TCP breaks it into smaller pieces called <strong>segments</strong> and makes sure they arrive correctly and in the right order.</li>
+    </ul>
+
+    <h3>IP — Internet Protocol</h3>
+    <ul>
+      <li>IP handles <strong>addressing</strong> and <strong>routing</strong> of data.</li>
+      <li>Every device on an IP network has an <strong>IP address</strong>, and IP uses these addresses to decide where data should go.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>HTTP vs HTTPS</h2>
+    <p><strong>HTTP</strong> and <strong>HTTPS</strong> are the protocols (rules) used for communication between a web browser (the client) and a web server.</p>
+
+    <pre><code>Feature          | HTTP                                | HTTPS
+-----------------|-------------------------------------|---------------------------------------
+Full form        | Hypertext Transfer Protocol          | Hypertext Transfer Protocol Secure
+Security         | Not encrypted                        | Encrypted
+Encryption       | No TLS encryption                    | Uses TLS (Transport Layer Security)
+Data protection  | Data can be intercepted or changed   | Data is protected during transmission
+Authentication   | No server authentication via TLS     | TLS provides server authentication
+Data integrity   | No TLS-based integrity protection    | Provides integrity protection
+URL example      | http://example.com                   | https://example.com
+E-commerce use   | Not suitable for sensitive data      | Essential for e-commerce</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Never use plain <strong>HTTP</strong> for sensitive e-commerce actions like logins, checkouts, or payments. Always use <strong>HTTPS</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Client-Side vs Server-Side Processing</h2>
+
+    <h3>Client-Side</h3>
+    <ul>
+      <li>Runs mainly in the customer's <strong>browser or device</strong>.</li>
+      <li>Examples: UI rendering, form validation, interactive product filters.</li>
+      <li><strong>Advantage:</strong> fast interaction and less work for the server.</li>
+      <li><strong>Limitation:</strong> cannot be trusted for security-sensitive business decisions.</li>
+    </ul>
+
+    <h3>Server-Side</h3>
+    <ul>
+      <li>Runs on <strong>web/application servers</strong>.</li>
+      <li>Examples: authentication, order processing, pricing rules, inventory updates.</li>
+      <li><strong>Advantage:</strong> centralized control and access to protected resources.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Security principle:</strong> always validate important inputs and business rules on the <strong>server</strong>, never trust the client alone.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Web Browsers and Web Technologies</h2>
+    <ul>
+      <li><strong>HTML</strong> — defines the structure of a web page (forms, links, product information, images, tables, and semantic elements).</li>
+      <li><strong>CSS</strong> — controls how a page looks and is laid out. <strong>Responsive design</strong> helps pages adapt to desktops, tablets, and smartphones.</li>
+      <li><strong>JavaScript</strong> — adds interaction and dynamic behavior, such as client-side validation, asynchronous requests, cart updates, and rich user interfaces.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Web Application Architecture</h2>
+    <p>A typical e-commerce web application is built from four layers:</p>
+
+    <pre><code>Presentation Layer  -->  Application Layer  -->  Data Layer  -->  External Services
+(Browser/Mobile UI)      (Business Logic)        (Database)      (Payments, Shipping, etc.)</code></pre>
+
+    <ul>
+      <li><strong>Presentation layer:</strong> displays products, carts, forms, accounts, and order information.</li>
+      <li><strong>Application layer:</strong> implements authentication, shopping cart logic, pricing, promotions, inventory, and order management.</li>
+      <li><strong>Data layer:</strong> stores customer, product, inventory, order, and transaction-related data.</li>
+      <li><strong>External services:</strong> payment gateways, shipping/logistics, email/SMS, identity providers, analytics, and other APIs.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Caching and Content Delivery Networks (CDNs)</h2>
+    <p><strong>Caching</strong> stores frequently requested data temporarily so it can be served faster the next time it is needed.</p>
+    <ul>
+      <li><strong>Browser cache</strong> — stores selected resources on the user's own device.</li>
+      <li><strong>Server/application cache</strong> — stores frequently used data or computed results on the server side.</li>
+      <li><strong>CDN (Content Delivery Network)</strong> — spreads static content such as images, CSS, JavaScript, and videos across servers in many geographic locations (called edge locations).</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Benefits of caching and CDNs: lower latency (delay), less load on the origin server, better scalability, and a better user experience.</p>
+    </div>
+
+    <p><strong>E-commerce example:</strong> product images and static files can be delivered from a nearby CDN edge server, while orders keep being processed by the application server.</p>
+
+    <div class="divider"></div>
+
+    <h2>Web Servers and Hosting Options</h2>
+    <p>A <strong>web server</strong> receives HTTP/HTTPS requests and either returns web resources directly or forwards the request to application components. Common web-server software includes <strong>Apache HTTP Server</strong>, <strong>Nginx</strong>, and <strong>Microsoft IIS</strong>.</p>
+    <ul>
+      <li>Static websites can be served directly from a web server or from object storage/CDN.</li>
+      <li>Dynamic e-commerce applications usually need an application runtime and a database behind the web server.</li>
+      <li>The hosting choice affects cost, performance, scalability, security responsibilities, availability, and how much effort is needed to maintain it.</li>
+    </ul>
+
+    <h3>Static vs Dynamic Web Content</h3>
+    <p><strong>Static Web Pages</strong> — the same stored resource is delivered to many users.</p>
+    <ul>
+      <li>Examples: HTML pages, images, CSS, JavaScript files.</li>
+      <li>Easy to cache and distribute through CDNs.</li>
+      <li>Good for informational pages and static product assets.</li>
+    </ul>
+    <p><strong>Dynamic Web Pages</strong> — generated or customized based on data, the user, the session, or the specific request.</p>
+    <ul>
+      <li>Examples: shopping cart, account page, stock availability, personalized recommendations.</li>
+      <li>Usually needs application processing and database access.</li>
+      <li>Needs careful performance and security management.</li>
+    </ul>
+
+    <h3>Web Hosting Options</h3>
+    <ul>
+      <li><strong>Shared Hosting</strong></li>
+      <li><strong>VPS (Virtual Private Servers)</strong></li>
+      <li><strong>Dedicated Servers</strong></li>
+      <li><strong>Cloud-Based Servers</strong></li>
+    </ul>
+
+    <h3>Cloud Hosting for E-Commerce</h3>
+    <ul>
+      <li>Cloud platforms offer compute power, storage, networking, databases, monitoring, security, and other managed services.</li>
+      <li>Infrastructure can scale <strong>horizontally</strong> by adding more application instances.</li>
+      <li><strong>Load balancers</strong> spread requests across multiple application servers.</li>
+      <li><strong>Auto-scaling</strong> can increase or decrease capacity automatically based on demand.</li>
+      <li><strong>Managed databases</strong> reduce administrative work such as backups, patching, and high-availability setup.</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Key trade-offs of cloud hosting: cost control, dependency on the vendor, configuration complexity, security, where data is stored, and the operational skills a team needs.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Scalability, Availability, and Performance</h2>
+
+    <h3>Scalability</h3>
+    <ul>
+      <li>The ability to handle an increasing workload.</li>
+      <li><strong>Vertical scaling</strong> — increase the resources (CPU, RAM) of one server.</li>
+      <li><strong>Horizontal scaling</strong> — add more servers or instances.</li>
+    </ul>
+
+    <h3>Availability</h3>
+    <ul>
+      <li>The ability to stay accessible and operational.</li>
+      <li>Improved through redundancy, health checks, failover, backups, and monitoring.</li>
+    </ul>
+
+    <h3>Performance</h3>
+    <ul>
+      <li>How quickly and efficiently the system responds.</li>
+      <li>Improved by caching, CDNs, database optimization, efficient APIs, and choosing the right infrastructure.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Web APIs and Third-Party Integrations</h2>
+    <p>An <strong>API (Application Programming Interface)</strong> defines how software components talk to each other and exchange data.</p>
+    <ul>
+      <li>E-commerce businesses rarely build every supporting service themselves — instead, they connect to specialized external providers.</li>
+      <li>Common integrations: payment gateways, delivery/logistics, identity and authentication, email/SMS, maps, analytics, tax, and fraud detection.</li>
+      <li>APIs reduce development effort and let businesses connect different systems together.</li>
+      <li>The quality of an integration affects reliability, security, customer experience, and how smoothly the business runs.</li>
+    </ul>
+
+    <h3>Payment Gateway Integration</h3>
+    <p>A <strong>payment gateway</strong> connects an e-commerce application with the infrastructure that processes payments.</p>
+    <ul>
+      <li>Integration approaches: hosted payment pages, redirect-based flows, embedded components, or direct API integrations.</li>
+      <li>Important concepts: <strong>transaction ID</strong>, <strong>authorization</strong>, <strong>capture</strong>, <strong>refund</strong>, <strong>cancellation</strong>, <strong>webhook/callback</strong>, and <strong>reconciliation</strong>.</li>
+      <li>Security considerations: HTTPS, authentication credentials, access control, secure secret storage, validation, fraud controls, logging, and compliance requirements.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>A good payment integration must correctly handle <strong>timeouts</strong>, <strong>duplicate requests</strong>, <strong>failed payments</strong>, <strong>delayed notifications</strong>, and <strong>retry scenarios</strong>.</p>
+    </div>
+
+    <h3>Logistics and Delivery APIs</h3>
+    <p><strong>Logistics APIs</strong> let an e-commerce system exchange information with delivery or courier providers.</p>
+    <ul>
+      <li>Common functions: shipping-rate calculation, address validation, shipment creation, tracking, delivery status, and proof of delivery.</li>
+    </ul>
+
+    <pre><code>Order confirmed  -->  Shipment created  -->  Tracking number returned  -->  Tracking updates received  -->  Customer notified</code></pre>
+
+    <ul>
+      <li><strong>Webhooks</strong> let the logistics provider notify the e-commerce system whenever the shipment status changes.</li>
+      <li>Benefits: automated order fulfillment, real-time tracking, fewer manual tasks, and better visibility for the customer.</li>
+    </ul>
+
+    <h3>Authentication and Identity APIs</h3>
+    <ul>
+      <li><strong>Authentication</strong> answers "Who is the user?" <strong>Authorization</strong> answers "What is the user allowed to do?"</li>
+      <li>E-commerce systems may build their own identity service or integrate with an external identity provider.</li>
+      <li>Common technologies/concepts: sessions, cookies, access tokens, <strong>OAuth 2.0</strong>, <strong>OpenID Connect</strong>, and multi-factor authentication.</li>
+      <li><strong>Social login</strong> reduces friction by letting customers sign in using an identity provider they already have.</li>
+      <li>Security practices: strong credential protection, short-lived tokens where appropriate, secure cookies, least privilege, and protection against session/token theft.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Mobile Commerce (M-Commerce)</h2>
+    <p><strong>M-commerce</strong> is buying, selling, paying, and doing other business activities using mobile devices.</p>
+    <ul>
+      <li>Examples: mobile shopping websites, mobile apps, mobile banking, digital wallets, QR-based payments, and in-app purchases.</li>
+      <li>Mobile users expect fast loading, simple navigation, touch-friendly controls, secure authentication, and reliable payments.</li>
+      <li>M-commerce depends on mobile networks, smartphones, browsers/apps, APIs, cloud infrastructure, payment services, and location/notification features.</li>
+    </ul>
+
+    <h3>Mobile Commerce Technologies</h3>
+    <ul>
+      <li><strong>Responsive Web</strong> — one website adapts to different screen sizes, built with HTML + CSS + JavaScript, and accessible through any mobile browser.</li>
+      <li><strong>Native Apps</strong> — built specifically for one mobile platform, can access device capabilities through platform APIs, and are useful for rich, frequent interactions.</li>
+      <li><strong>Cross-Platform</strong> — a shared codebase can target multiple platforms, reducing development effort, using frameworks and platform bridges.</li>
+      <li><strong>Mobile Payments</strong> — digital wallets, QR payments, cards, bank-based payments, and provider APIs. Security and user authentication are critical here.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Activity</h2>
+    <p>Try answering these questions to check your understanding:</p>
+    <ol>
+      <li>What is a <strong>RESTful Web API</strong>?</li>
+      <li>What are the <strong>mobile UX and performance considerations</strong> in m-commerce?</li>
+      <li>How can security be maintained across e-commerce infrastructure on the <strong>network</strong>, <strong>application</strong>, <strong>data</strong>, and <strong>integration</strong> levels?</li>
+    </ol>
+  `,
+  summary: {
+    topic: 'E-Commerce Infrastructure and Technologies',
+    subTopics: [
+      'Internet Technologies That Power E-Commerce',
+      'How a Transaction Flows Through These Layers',
+      'Domain Name System (DNS)',
+      'TCP/IP: The Foundation of Internet Communication',
+      'HTTP vs HTTPS',
+      'Client-Side vs Server-Side Processing',
+      'Web Browsers and Web Technologies',
+      'Web Application Architecture',
+      'Caching and Content Delivery Networks (CDNs)',
+      'Web Servers and Hosting Options',
+      'Static vs Dynamic Web Content',
+      'Web Hosting Options',
+      'Cloud Hosting for E-Commerce',
+      'Scalability, Availability, and Performance',
+      'Web APIs and Third-Party Integrations',
+      'Payment Gateway Integration',
+      'Logistics and Delivery APIs',
+      'Authentication and Identity APIs',
+      'Mobile Commerce (M-Commerce)',
+      'Mobile Commerce Technologies',
+    ],
+    definitions: [
+      { term: 'DNS (Domain Name System)', meaning: 'Translates human-readable domain names into the IP addresses used by network devices.' },
+      { term: 'TCP (Transmission Control Protocol)', meaning: 'Responsible for reliable delivery of data by dividing it into segments and ensuring they arrive correctly and in order.' },
+      { term: 'IP (Internet Protocol)', meaning: 'Responsible for addressing and routing data using IP addresses assigned to every device on the network.' },
+      { term: 'HTTP', meaning: 'An unencrypted protocol used for communication between a browser and a web server.' },
+      { term: 'HTTPS', meaning: 'An encrypted version of HTTP that uses TLS to protect data and authenticate the server; essential for e-commerce.' },
+      { term: 'Client-Side Processing', meaning: 'Code that runs in the browser or device used by the customer, such as UI rendering and form validation.' },
+      { term: 'Server-Side Processing', meaning: 'Code that runs on web or application servers, such as authentication, order processing, and pricing rules.' },
+      { term: 'Caching', meaning: 'Temporarily storing frequently requested data so it can be served faster.' },
+      { term: 'CDN (Content Delivery Network)', meaning: 'A network of servers spread across many locations that delivers static content such as images, CSS, and JavaScript closer to users.' },
+      { term: 'Web Server', meaning: 'Software that receives HTTP/HTTPS requests and returns resources or forwards requests to application components, such as Apache, Nginx, or IIS.' },
+      { term: 'Static Web Page', meaning: 'A stored web page or resource that is delivered the same way to every user.' },
+      { term: 'Dynamic Web Page', meaning: 'A web page generated or customized based on data, the user, the session, or the request.' },
+      { term: 'Scalability', meaning: 'The ability of a system to handle an increasing workload, through vertical scaling (bigger server) or horizontal scaling (more servers).' },
+      { term: 'Availability', meaning: 'The ability of a system to remain accessible and operational, supported by redundancy, failover, and monitoring.' },
+      { term: 'Performance', meaning: 'How quickly and efficiently a system responds, improved by caching, CDNs, and database optimization.' },
+      { term: 'API (Application Programming Interface)', meaning: 'Defines how software components communicate and exchange data with each other.' },
+      { term: 'Payment Gateway', meaning: 'A service that connects an e-commerce application with payment processing infrastructure.' },
+      { term: 'Webhook', meaning: 'A callback mechanism that lets an external service, such as a logistics or payment provider, notify a system when an event happens.' },
+      { term: 'Authentication', meaning: 'The process of verifying who a user is.' },
+      { term: 'Authorization', meaning: 'The process of determining what an authenticated user is allowed to do.' },
+      { term: 'OAuth 2.0', meaning: 'A common framework used for secure authorization, such as allowing social login.' },
+      { term: 'M-Commerce (Mobile Commerce)', meaning: 'Buying, selling, paying, and other commercial activities carried out using mobile devices.' },
+      { term: 'Responsive Web Design', meaning: 'A design approach where one website adapts to different screen sizes using HTML, CSS, and JavaScript.' },
+      { term: 'Native App', meaning: 'An app built specifically for one mobile platform that can access device features through platform APIs.' },
+      { term: 'Cross-Platform App', meaning: 'An app built with a shared codebase that can run on multiple mobile platforms.' },
+    ],
+    keyPoints: [
+      'An e-commerce transaction passes through several layers: customer device, internet/ISP, DNS and web server, application server, and database/external APIs.',
+      'A good e-commerce system needs security, availability, acceptable response time, scalability, and reliable data exchange.',
+      'DNS translates domain names into IP addresses and must be protected against domain hijacking and DNS spoofing.',
+      'TCP ensures reliable, ordered delivery of data by breaking it into segments; IP handles addressing and routing.',
+      'HTTPS, not HTTP, is essential for e-commerce because it encrypts data and authenticates the server using TLS.',
+      'Client-side code cannot be trusted for security-sensitive decisions; important rules must always be validated on the server.',
+      'A web application is typically built from four layers: presentation, application, data, and external services.',
+      'Caching and CDNs reduce latency, lower the load on the origin server, and improve scalability and user experience.',
+      'Static pages are delivered the same way to all users; dynamic pages are generated per user, session, or request.',
+      'Scalability can be vertical (bigger server) or horizontal (more servers); availability relies on redundancy and failover.',
+      'Web APIs let e-commerce systems integrate payment gateways, logistics providers, and identity providers instead of building everything in-house.',
+      'A good payment integration must correctly handle timeouts, duplicate requests, failed payments, and retry scenarios.',
+      'Authentication answers who the user is, while authorization answers what the user is allowed to do.',
+      'M-commerce depends on mobile networks, apps/browsers, APIs, cloud infrastructure, and payment services.',
+      'Mobile commerce technologies include responsive web, native apps, cross-platform apps, and mobile payments.',
+      'Webhooks let external providers such as payment gateways and logistics services notify the system automatically when an event occurs.',
+    ],
+  },
+},
+
+
+
 ]
