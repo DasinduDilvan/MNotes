@@ -1444,6 +1444,620 @@ Enqueue:                front =  2, rear =  1   [ 6 , 7 , 3 , 4 , 5 ]  ← Queue
   },
 },
 
+{
+  id: 4,
+  title: 'Linked Lists',
+  content: `
+    <span class="lesson-badge">LESSON 04</span>
+    <h1>Linked Lists</h1>
+    <div class="meta-info">ICT2113 <span>•</span> 35 min read</div>
 
+    <p>In this lesson, you will learn about <strong>Linked Lists</strong> — one of the most important data structures in computer science. We will compare linked lists with arrays, learn how to build them, and explore the two main types: <strong>Singly Linked Lists</strong> and <strong>Doubly Linked Lists</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h2>What is a List?</h2>
+    <p>A <strong>list</strong> is simply a sequence of elements. More formally, it is a <strong>finite sequence of elements</strong>.</p>
+    <p>For example, a list of integers could look like this:</p>
+    <pre><code>2   1   5   6   0</code></pre>
+    <p>Lists can also store records (like a list of student details), not just numbers. Similar data can be stored in memory in two ways: using an <strong>array</strong> or using a <strong>linked list</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Implementation of a List</h2>
+    <p>There are <strong>2 main ways</strong> to store a list in memory:</p>
+    <ol>
+      <li><strong>Contiguous storage (Array)</strong> — elements are placed physically next to each other in <strong>adjacent memory locations</strong>.</li>
+      <li><strong>Non-contiguous storage (Linked List)</strong> — elements are <strong>not</strong> physically next to each other in memory.</li>
+    </ol>
+
+    <h3>Disadvantages of Arrays (Contiguous Storage)</h3>
+    <ul>
+      <li>The <strong>size of the array is fixed</strong> — you must decide the size in advance.</li>
+      <li>It <strong>wastes space</strong> if the array is not fully used.</li>
+      <li><strong>Inserting new elements at the front is expensive</strong> — existing elements must be shifted to make room.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>In an array, <strong>inserting</strong> an element means moving elements <strong>'DOWN'</strong> by one position, and <strong>deleting</strong> an element means moving elements <strong>'UP'</strong> by one position. This shifting takes extra time and is a common source of exam questions.</p>
+    </div>
+
+    <p>Example — inserting 100 into an array:</p>
+    <pre><code>Before insert:   2   5   1   8   3   10
+Insert 100 at position 4:
+After insert:    2   5   1  100  8   3   10   (elements shifted down)
+
+Before delete:   2   5   8   9
+Delete an element:
+After delete:    2   5   9        (elements shifted up)</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Introduction to Linked Lists</h2>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A <strong>Linked List</strong> eliminates the problems found in arrays (fixed size, wasted space, expensive insertion).</p>
+    </div>
+
+    <p><strong>What is a Linked List?</strong> A linked list is a <strong>collection of nodes</strong>, where each <strong>node</strong> contains some <strong>data</strong> along with information about the <strong>next</strong> node.</p>
+
+    <h3>How it Works</h3>
+    <p>A linked list uses <strong>non-contiguous</strong> memory locations. This means each node must <strong>remember where the next node is</strong>.</p>
+    <ul>
+      <li>Individual elements are stored "somewhere" in memory (not next to each other).</li>
+      <li>The <strong>order</strong> of the elements is maintained by <strong>explicit links</strong> between them (not by memory position).</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Arrays vs Linked Lists</h2>
+    <p>Arrays and linked lists are similar because they both store <strong>collections of data</strong>. However, they behave very differently.</p>
+
+    <h3>Why Arrays Are Popular</h3>
+    <ul>
+      <li>Array elements are <strong>easily accessible</strong> using an index number.</li>
+      <li>Arrays are the <strong>most common</strong> data structure used to store a collection of elements.</li>
+      <li>Most languages make arrays convenient to declare and access.</li>
+    </ul>
+
+    <h3>Advantages of Linked Lists over Arrays</h3>
+    <ul>
+      <li><strong>Dynamic size</strong> — a linked list can grow and shrink during its lifetime.</li>
+      <li><strong>Easy insertion/deletion</strong> — no shifting of elements is required.</li>
+    </ul>
+
+    <h3>Drawbacks of Linked Lists</h3>
+    <ul>
+      <li><strong>No random access</strong> — elements must be accessed sequentially starting from the first node. This means <strong>binary search is not possible</strong> on a linked list.</li>
+      <li><strong>Extra memory</strong> is needed for the pointer in each node.</li>
+      <li>Arrays have <strong>better cache locality</strong>, which can make a noticeable difference in performance.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Linked lists are <strong>dynamic data structures</strong>. Their maximum size does not need to be known in advance. They are most useful when you need to <strong>insert or delete</strong> elements in the <strong>middle</strong> of a group of elements, since no shifting is required.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Structure of a Linked List</h2>
+    <p>Each <strong>node</strong> in a linked list contains at least:</p>
+    <ul>
+      <li>A piece of <strong>data</strong> (any type)</li>
+      <li>A <strong>pointer</strong> to the next node in the list</li>
+    </ul>
+    <p>Some key terms:</p>
+    <ul>
+      <li><strong>Head</strong> — a pointer to the <strong>first</strong> node in the list.</li>
+      <li>The <strong>last node</strong> points to <strong>NULL</strong> to mark the end of the list.</li>
+    </ul>
+
+    <p>Visually, a linked list looks like this:</p>
+    <pre><code>Head -> [ Data | Next ] -> [ Data | Next ] -> [ Data | Next ] -> NULL</code></pre>
+
+    <ul>
+      <li>A Linked List contains a link element called <strong>first/head</strong>.</li>
+      <li>Each node carries a <strong>data field</strong> and a <strong>link field</strong> called <code>next</code>.</li>
+      <li>Each node is linked to the next node using its <code>next</code> link.</li>
+      <li>The <strong>last node</strong> carries a link of <code>null</code> to mark the end of the list.</li>
+    </ul>
+
+    <p>The C structure for a linked list node is:</p>
+    <pre><code>struct Node
+{
+    int Data;
+    struct Node *Next;
+};</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The pointer <code>next</code> inside <code>struct Node</code> is called a <strong>self-referencing pointer</strong> because it points to another node of the <strong>same</strong> type.</p>
+    </div>
+
+    <h3>Why Do We Need Pointers in a Linked List?</h3>
+    <p>In a linked list, data elements are given memory <strong>at runtime</strong>, so the memory location of each node can be anywhere. To be able to access every node, the <strong>address</strong> of each node is stored inside the previous node — this forms the <strong>link</strong> between nodes. This is different from an array, where memory is allocated in a <strong>contiguous</strong> (side-by-side) manner.</p>
+
+    <h3>Header Nodes</h3>
+    <p>A <strong>header node</strong> is an extra node in the linked list that holds <strong>no data</strong>. It exists to satisfy the rule that every node containing an item must have a <strong>previous node</strong> in the list.</p>
+
+    <div class="divider"></div>
+
+    <h2>Types of Linked List</h2>
+    <ul>
+      <li><strong>Simple (Singly) Linked List</strong> — item navigation is <strong>forward only</strong>.</li>
+      <li><strong>Doubly Linked List</strong> — items can be navigated <strong>forward and backward</strong>.</li>
+      <li><strong>Circular Linked List</strong> — the last item links to the first element, and the first element can link back to the last element.</li>
+    </ul>
+
+    <p>Example of a circular linked list (nodes stored at addresses 1001, 1004, 1008, 1012):</p>
+    <pre><code>head = 1001
+
+[10 | 1004] -> [15 | 1008] -> [22 | 1012] -> [50 | 1001] -> (back to head)</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Linked List Operations</h2>
+    <p>The main operations you can perform on a linked list are:</p>
+    <ul>
+      <li><strong>Create</strong> a node and linked list</li>
+      <li><strong>Traversal</strong> — visiting every node</li>
+      <li><strong>Search</strong> for a node</li>
+      <li><strong>Insert</strong> a node — at the beginning, at the end, or after/before a given node</li>
+      <li><strong>Delete</strong> a node — at the beginning, at the end, or after/before a given node</li>
+      <li><strong>Sort</strong> the list</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Creating Nodes</h2>
+    <p>A node is a structure data type. It can be created in <strong>two</strong> ways:</p>
+    <ul>
+      <li><strong>Static method</strong>
+        <ul>
+          <li>Using an array of structures</li>
+          <li>Declared globally, outside functions</li>
+          <li>Declared locally, inside a function</li>
+        </ul>
+      </li>
+      <li><strong>Dynamic method</strong> (mostly used for linked lists)
+        <ul>
+          <li>Uses the <code>malloc(size)</code> function to get memory space at runtime</li>
+        </ul>
+      </li>
+    </ul>
+    <pre><code>struct node *np = (struct node*) malloc(sizeof(struct node));</code></pre>
+
+    <h3>The malloc() Function</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><code>malloc()</code> is used to allocate a certain amount of memory <strong>during the execution</strong> of a program. It requests a block of memory from the <strong>heap</strong>. If the request is granted, the operating system reserves that amount of memory.</p>
+    </div>
+    <p><strong>Syntax:</strong></p>
+    <pre><code>void *malloc(size_t size)</code></pre>
+    <p>Here, <code>size</code> is the size of the memory block, in bytes.</p>
+
+    <div class="divider"></div>
+
+    <h2>Building a Linked List (Example)</h2>
+    <p>Here is a full example that creates three nodes and links them together:</p>
+    <pre><code>/* Initialize nodes */
+struct node *head;
+struct node *one   = NULL;
+struct node *two   = NULL;
+struct node *three = NULL;
+
+/* Allocate memory */
+one   = malloc(sizeof(struct node));
+two   = malloc(sizeof(struct node));
+three = malloc(sizeof(struct node));
+
+/* Assign data values */
+one->data   = 1;   // (one->data can also be written as (*one).data)
+two->data   = 2;
+three->data = 3;
+
+/* Connect nodes */
+one->next   = two;
+two->next   = three;
+three->next = NULL;
+
+/* Save address of first node in head */
+head = one;</code></pre>
+
+    <p>This creates the list: <code>1 -> 2 -> 3 -> NULL</code></p>
+
+    <p>A shorter way to build a list while adding to the end:</p>
+    <pre><code>node_t * head = NULL;
+head = malloc(sizeof(node_t));
+head->val  = 1;
+head->next = malloc(sizeof(node_t));
+head->next->val  = 2;
+head->next->next = NULL;</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Inserting a Node</h2>
+    <p>There are many ways to insert a new node into a linked list:</p>
+    <ul>
+      <li>As the new <strong>first</strong> element</li>
+      <li>As the new <strong>last</strong> element</li>
+      <li><strong>Before</strong> a given node</li>
+      <li><strong>After</strong> a given node</li>
+      <li>Before or after a given <strong>value</strong></li>
+    </ul>
+
+    <p>The general idea for inserting a new node <code>x</code> right after a node called <code>current</code>:</p>
+    <pre><code>tmp = new Node;
+tmp->data = x;
+tmp->next = current->next;
+current->next = tmp;</code></pre>
+
+    <h3>Inserting a Node at the Top (Beginning) of the List</h3>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>This is a <strong>4-step process</strong>:</p>
+    </div>
+    <ol>
+      <li>Create the new node, let's call it <code>E</code>.</li>
+      <li>Set the node's data field: <code>E->data = data</code></li>
+      <li>Set the <code>next</code> pointer of the new node to the current head pointer: <code>E->next = head</code></li>
+      <li>Set <code>head</code> to point to the new node: <code>head = E</code></li>
+    </ol>
+
+    <pre><code>/* Given a reference (pointer to pointer) to the head of a list
+   and an int, inserts a new node on the front of the list. */
+void insert(struct Node** head_ref, int new_data)
+{
+    /* 1. allocate node */
+    struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
+
+    /* 2. put in the data */
+    new_node->data = new_data;
+
+    /* 3. Make next of new node as head */
+    new_node->next = (*head_ref);
+
+    /* 4. move the head to point to the new node */
+    (*head_ref) = new_node;
+}</code></pre>
+
+    <h3>Adding a Node After a Given Node</h3>
+    <pre><code>/* Given a node prev_node, insert a new node after the given prev_node */
+void insertAfter(struct Node* prev_node, int new_data)
+{
+    /* 1. check if the given prev_node is NULL */
+    if (prev_node == NULL)
+    {
+        printf("the given previous node cannot be NULL");
+        return;
+    }
+
+    /* 2. allocate new node */
+    struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
+
+    /* 3. put in the data */
+    new_node->data = new_data;
+
+    /* 4. Make next of new node as next of prev_node */
+    new_node->next = prev_node->next;
+
+    /* 5. move the next of prev_node as new_node */
+    prev_node->next = new_node;
+}</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Always check that <code>prev_node</code> is not <code>NULL</code> before inserting after it. Forgetting this check is a common mistake that leads to program crashes.</p>
+    </div>
+
+    <h3>Adding a Node at the End</h3>
+    <p>To add a node at the end, you must <strong>traverse the list till the end</strong>, then change the <code>next</code> pointer of the last node to point to the new node.</p>
+    <pre><code>/* Given a reference (pointer to pointer) to the head
+   of a list and an int, appends a new node at the end */
+void append(struct Node** head_ref, int new_data)
+{
+    /* 1. allocate node */
+    struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
+    struct Node *last = *head_ref;   /* used in step 5 */
+
+    /* 2. put in the data */
+    new_node->data = new_data;
+
+    /* 3. This new node is going to be the last node,
+          so make its next as NULL */
+    new_node->next = NULL;
+
+    /* 4. If the Linked List is empty, then
+          make the new node as head */
+    if (*head_ref == NULL)
+    {
+        *head_ref = new_node;
+        return;
+    }
+
+    /* 5. Else traverse till the last node */
+    while (last->next != NULL)
+        last = last->next;
+
+    /* 6. Change the next of last node */
+    last->next = new_node;
+    return;
+}</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Deleting a Node</h2>
+    <p>To delete a node from a linked list, follow these steps:</p>
+    <ol>
+      <li>Find the <strong>previous node</strong> of the node to be deleted.</li>
+      <li>Change the <code>next</code> pointer of the previous node.</li>
+      <li><strong>Free the memory</strong> for the node being deleted.</li>
+    </ol>
+
+    <p>To remove element <code>x</code> from a linked list, we set <code>current</code> to be the node <strong>before</strong> <code>x</code>, and then make <code>current</code>'s next pointer <strong>skip past</strong> <code>x</code>:</p>
+    <pre><code>current->next = current->next->next;</code></pre>
+    <p>After this operation, a list that looked like <code>A, X, B</code> now appears as <code>A, B</code>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Applications of Linked Lists</h2>
+    <ul>
+      <li>Linked lists are used to implement <strong>stacks, queues, graphs</strong>, and more.</li>
+      <li>Linked lists let you insert elements at the <strong>beginning</strong> and <strong>end</strong> of the list easily.</li>
+      <li>In linked lists, we <strong>don't need to know the size in advance</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Doubly Linked List (DLL)</h2>
+    <p>A <strong>doubly linked list</strong> is one in which all nodes are linked together by <strong>multiple links</strong>. It allows going in <strong>both directions</strong> — forward and reverse.</p>
+
+    <p>Every node in a doubly linked list has <strong>three fields</strong>:</p>
+    <ol>
+      <li><strong>LeftPointer (prev)</strong> — points to the previous node</li>
+      <li><strong>RightPointer (next)</strong> — points to the next node</li>
+      <li><strong>DATA</strong> — the value stored</li>
+    </ol>
+
+    <pre><code>NULL <- [prev|data|next] <-> [prev|data|next] <-> [prev|data|next] -> NULL</code></pre>
+
+    <h3>Why Doubly Linked List?</h3>
+    <ul>
+      <li>Useful when moving in <strong>either direction</strong> is often necessary.</li>
+      <li>Many applications need quick access to the <strong>predecessor node</strong> (the node before a given node).</li>
+      <li>Each node has <strong>two</strong> link members: one pointing <strong>forward</strong> and one pointing <strong>backward</strong>.</li>
+    </ul>
+
+    <h3>Implementation of a DLL Node</h3>
+    <pre><code>typedef struct node {
+    int data;
+    struct node* next;
+    struct node* prev;
+} node;</code></pre>
+
+    <h3>Advantages of DLL over Singly Linked Lists</h3>
+    <ul>
+      <li>Can be traversed in <strong>both forward and backward</strong> directions.</li>
+      <li><strong>Quick updates</strong> — insertions and deletions at both ends (head and tail), and also in the middle.</li>
+      <li><strong>Deletion is more efficient</strong> if a pointer to the node to delete is already given. In a singly linked list, you would need the previous node's pointer, which sometimes means traversing the whole list to find it. A DLL avoids this using the <code>prev</code> pointer.</li>
+    </ul>
+
+    <h3>Disadvantages of DLL over Singly Linked Lists</h3>
+    <ul>
+      <li>Every node needs <strong>extra space</strong> for the previous pointer.</li>
+      <li>All operations require an <strong>extra pointer</strong> to be maintained — for example, insertion needs to update <code>previous</code> pointers as well as <code>next</code> pointers.</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Sentinel Nodes:</strong> To simplify programming, two special dummy nodes — <strong>head</strong> and <strong>tail</strong> — are added at both ends of a doubly linked list. They do <strong>not</strong> store any data. The head sentinel has a <code>null</code> previous link, and the tail sentinel has a <code>null</code> next link.</p>
+    </div>
+
+    <p>A doubly-linked list object needs to store:</p>
+    <ol>
+      <li>A reference to the sentinel <strong>head</strong> node</li>
+      <li>A reference to the sentinel <strong>tail</strong> node</li>
+      <li>A <strong>size counter</strong> that tracks the number of real nodes (excluding the two sentinels)</li>
+    </ol>
+
+    <h3>Basic Operations on a Doubly-Linked List</h3>
+    <ol>
+      <li><strong>Add</strong> a node</li>
+      <li><strong>Delete</strong> a node</li>
+      <li><strong>Search</strong> for a node</li>
+      <li><strong>Traverse</strong> (walk through) the list — useful for counting or other operations that touch every node</li>
+    </ol>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The operations on a doubly-linked list are conceptually the <strong>same</strong> as those required for a singly-linked list, just with extra pointer bookkeeping.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Inserting into a Doubly Linked List</h2>
+    <p>Suppose a new node, <code>newnode</code>, needs to be inserted <strong>after</strong> the node <code>current</code>.</p>
+
+    <p>There are <strong>4 steps</strong> to add a node to a doubly-linked list:</p>
+    <ol>
+      <li>Allocate memory for the new node.</li>
+      <li>Determine the insertion point — right after <code>pCur</code>.</li>
+      <li>Point the new node to its <strong>successor</strong> and <strong>predecessor</strong>.</li>
+      <li>Point the predecessor and successor to the <strong>new node</strong>.</li>
+    </ol>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The current node pointer (<code>pCur</code>) can be in one of two states: it can hold the address of an existing node (you are adding somewhere after the first node), or it can be <code>NULL</code> (you are adding to an empty list, or at the very beginning).</p>
+    </div>
+
+    <h3>Adding a Node to an Empty Doubly-Linked List</h3>
+    <pre><code>pNew = (struct node *) malloc(sizeof(struct dllnode));  /* create node */
+pNew -> data  = 39;
+pNew -> right = pHead;
+pNew -> left  = pHead;
+pHead = pNew;</code></pre>
+
+    <h3>Adding a Node to the Middle of a Doubly-Linked List</h3>
+    <pre><code>pNew = (struct node *) malloc(sizeof(struct dllnode));
+pNew -> data  = 64;
+pNew -> left  = pCur;
+pNew -> right = pCur -> right;
+pCur -> right -> left = pNew;
+pCur -> right = pNew;</code></pre>
+
+    <h3>Adding a Node to the End of a Doubly-Linked List</h3>
+    <pre><code>pNew = (struct node *) malloc(sizeof(struct dllnode));
+pNew -> data  = 84;
+pNew -> left  = pCur;
+pNew -> right = pCur -> right;
+pCur -> right = pNew;</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Deleting from a Doubly Linked List</h2>
+    <p>Deleting a node requires <strong>logically removing</strong> the node by changing links, and then <strong>physically deleting</strong> it (returning its memory to the heap).</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>To logically delete a node:</p>
+    </div>
+    <ol>
+      <li>First, <strong>locate</strong> the node itself (<code>pCur</code>).</li>
+      <li>Change the <strong>predecessor's</strong> and <strong>successor's</strong> link fields so they point to each other.</li>
+      <li><strong>Recycle</strong> the node using the <code>free()</code> function.</li>
+    </ol>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Before removing a node, always <strong>check for an empty list</strong>. Forgetting this check can cause errors, especially when removing the last remaining node.</p>
+    </div>
+
+    <h3>Deleting the First Node from a DLL</h3>
+    <pre><code>pHead = pCur -> right;
+pCur -> right -> left = NULL;
+free(pCur);</code></pre>
+
+    <h3>Deleting a Node — General Case</h3>
+    <pre><code>// delete a node from a linked list
+if (pCur -> left == NULL)
+{
+    // deletion is on the first node of the list
+    pHead = pCur -> right;
+    pCur -> right -> left = NULL;
+}
+else
+{
+    // deleting a node other than the first node of the list
+    pCur -> left -> right = pCur -> right;
+    pCur -> right -> left = pCur -> left;
+}
+free(pCur);</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Searching a Doubly-Linked List</h2>
+    <p>Both insertion and deletion in a linked list often require <strong>searching</strong> the list — either to find the correct insertion point, or to locate the node that should be deleted.</p>
+    <pre><code>// search the nodes in a linked list
+pCur = pHead;
+
+// search until the target value is found or the end of the list is reached
+while (pCur != NULL && pCur -> data != target)
+{
+    pCur = pCur -> right;
+}
+
+// determine if the target is found or ran off the end of the list
+if (pCur != NULL)
+    found = 1;
+else
+    found = 0;</code></pre>
+
+    <div class="divider"></div>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Quick summary for exams:</p>
+      <ul>
+        <li>A <strong>Linked List</strong> = non-contiguous nodes, each with data + a pointer to the next node.</li>
+        <li>Advantage over arrays: <strong>dynamic size</strong>, easy insert/delete. Disadvantage: <strong>no random access</strong>, extra memory for pointers.</li>
+        <li>A <strong>Doubly Linked List</strong> adds a <code>prev</code> pointer, allowing backward traversal and faster deletion, at the cost of extra memory and bookkeeping.</li>
+      </ul>
+    </div>
+  `,
+  summary: {
+    topic: 'Linked Lists: Structure, Operations, and Doubly Linked Lists',
+    subTopics: [
+      'What is a List?',
+      'Implementation of a List',
+      'Disadvantages of Arrays (Contiguous Storage)',
+      'Introduction to Linked Lists',
+      'How it Works',
+      'Arrays vs Linked Lists',
+      'Advantages of Linked Lists over Arrays',
+      'Drawbacks of Linked Lists',
+      'Structure of a Linked List',
+      'Why Do We Need Pointers in a Linked List?',
+      'Header Nodes',
+      'Types of Linked List',
+      'Linked List Operations',
+      'Creating Nodes',
+      'The malloc() Function',
+      'Building a Linked List (Example)',
+      'Inserting a Node',
+      'Inserting a Node at the Top (Beginning) of the List',
+      'Adding a Node After a Given Node',
+      'Adding a Node at the End',
+      'Deleting a Node',
+      'Applications of Linked Lists',
+      'Doubly Linked List (DLL)',
+      'Why Doubly Linked List?',
+      'Implementation of a DLL Node',
+      'Advantages of DLL over Singly Linked Lists',
+      'Disadvantages of DLL over Singly Linked Lists',
+      'Basic Operations on a Doubly-Linked List',
+      'Inserting into a Doubly Linked List',
+      'Adding a Node to an Empty Doubly-Linked List',
+      'Adding a Node to the Middle of a Doubly-Linked List',
+      'Adding a Node to the End of a Doubly-Linked List',
+      'Deleting from a Doubly Linked List',
+      'Deleting the First Node from a DLL',
+      'Deleting a Node — General Case',
+      'Searching a Doubly-Linked List',
+    ],
+    definitions: [
+      { term: 'List', meaning: 'A finite sequence of elements, such as a list of integers or records.' },
+      { term: 'Array (Contiguous Storage)', meaning: 'A way of storing a list where elements are placed physically next to each other in memory.' },
+      { term: 'Linked List', meaning: 'A collection of nodes where each node contains data and a pointer to the next node, using non-contiguous memory.' },
+      { term: 'Node', meaning: 'The basic building block of a linked list; contains a data field and a pointer (link) to the next node.' },
+      { term: 'Head', meaning: 'A pointer that stores the address of the first node in a linked list.' },
+      { term: 'malloc()', meaning: 'A C function that dynamically allocates a block of memory from the heap during program execution.' },
+      { term: 'Header Node', meaning: 'An extra node with no data, added so every node in the list has a previous node.' },
+      { term: 'Simple (Singly) Linked List', meaning: 'A linked list where each node only points to the next node, so navigation is forward only.' },
+      { term: 'Doubly Linked List (DLL)', meaning: 'A linked list where each node has two pointers — one to the next node and one to the previous node — allowing forward and backward navigation.' },
+      { term: 'Circular Linked List', meaning: 'A linked list where the last node links back to the first node instead of pointing to NULL.' },
+      { term: 'Sentinel Nodes', meaning: 'Dummy head and tail nodes in a doubly linked list that hold no data and simplify insertion and deletion.' },
+      { term: 'Traversal', meaning: 'The process of visiting every node in a linked list one by one, usually starting from the head.' },
+      { term: 'Self-referencing pointer', meaning: 'A pointer inside a structure that points to another structure of the same type, such as the next pointer inside a Node.' },
+    ],
+    keyPoints: [
+      'A list can be stored using contiguous storage (array) or non-contiguous storage (linked list).',
+      'Arrays have a fixed size, waste space, and are expensive to insert into at the front because elements must shift.',
+      'A linked list node stores data plus a pointer to the next node; the last node points to NULL.',
+      'Linked lists offer dynamic size and easy insertion/deletion but do not allow random access, so binary search is not possible on them.',
+      'Arrays have better cache locality than linked lists, which can affect performance.',
+      'Nodes are usually created dynamically at runtime using malloc(sizeof(struct Node)).',
+      'Inserting a node: allocate the node, set its data, set its next pointer, then update the previous node (or head) to point to it.',
+      'Deleting a node: find the previous node, update its next pointer to skip the deleted node, then free the deleted node.',
+      'The three types of linked lists are Simple (Singly), Doubly, and Circular.',
+      'In a Doubly Linked List, each node has three fields: prev (left) pointer, data, and next (right) pointer.',
+      'DLLs allow traversal in both directions and faster deletion when a pointer to the node is already known, but use more memory and need extra pointer updates.',
+      'Sentinel (dummy) head and tail nodes in a DLL ensure every real node always has a previous and next node, simplifying code.',
+      'Common linked list operations: Create, Traverse, Search, Insert (front/end/before/after), Delete (front/end/before/after), Sort.',
+      'Linked lists are used to implement other data structures such as stacks, queues, and graphs.',
+    ],
+  },
+},
   
 ]

@@ -1469,4 +1469,591 @@ Customer --> Track Delivery</pre>
   },
 },
 
+{
+  id: 4,
+  title: 'Use Case Modeling',
+  content: `
+    <span class="lesson-badge">LESSON 04</span>
+    <h1>Use Case Modeling</h1>
+    <div class="meta-info">COURSE_CODE <span>•</span> 20 min read</div>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>By the end of this lesson, you should be able to:</p>
+      <ul>
+        <li>Define <strong>use case modeling</strong></li>
+        <li>Tell apart <strong>functional</strong> and <strong>non-functional requirements</strong></li>
+        <li>Define <strong>actor</strong>, <strong>scenario</strong>, <strong>use case</strong>, and <strong>system boundary</strong></li>
+        <li>Identify <strong>primary</strong>, <strong>supporting</strong>, and <strong>offstage actors</strong></li>
+        <li>Identify <strong>actors and their goals</strong> from a given scenario</li>
+        <li>Turn <strong>user goals into use cases</strong></li>
+        <li>Name a use case correctly using <strong>verb + object</strong></li>
+        <li>Tell apart the <strong>main success scenario</strong> and its <strong>extensions</strong></li>
+        <li>Explain the <strong>Brief</strong>, <strong>Casual</strong>, and <strong>Fully Dressed</strong> formats</li>
+        <li>Write a <strong>fully dressed use case</strong> from a given scenario</li>
+        <li>Identify <strong>Summary</strong>, <strong>User Goal</strong>, and <strong>Sub-function</strong> levels</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>What is Use Case Modeling?</h2>
+    <p><strong>Use Case Modeling</strong> is a <strong>requirements engineering technique</strong> used to identify, collect, and document the <strong>functional requirements</strong> of a system.</p>
+    <p>It describes <strong>how users interact with a system to reach their goals</strong>.</p>
+    <ul>
+      <li>Focuses on <strong>user goals and interactions</strong></li>
+      <li>Describes the system from the <strong>user's point of view</strong></li>
+      <li>Use cases are mainly <strong>written descriptions</strong>, not diagrams</li>
+      <li>A <strong>Use Case Diagram</strong> in UML visually shows actors, use cases, and how they relate</li>
+    </ul>
+
+    <h3>Functional vs Non-Functional Requirements</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Functional Requirement</strong> — a statement of <strong>what the system should do</strong>.</p>
+      <p>Example: Validate ATM card. Validate PIN. Dispense cash.</p>
+    </div>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Non-Functional Requirement</strong> — a <strong>constraint on how the system should operate or be built</strong>.</p>
+      <p>Example: Validate PIN within 3 seconds. Use encryption. Use a specific programming language.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>What is a Use Case?</h2>
+    <p>A <strong>use case is a story describing how an actor uses a system to achieve a goal</strong>.</p>
+    <p><strong>Example: ATM</strong></p>
+    <p><strong>Actor:</strong> Customer &nbsp; <strong>Goal:</strong> Withdraw money</p>
+    <p>The customer:</p>
+    <ol>
+      <li>Inserts the ATM card</li>
+      <li>Enters the PIN</li>
+      <li>Selects "Withdraw Cash"</li>
+      <li>Enters the amount</li>
+      <li>System checks the account</li>
+      <li>System dispenses cash</li>
+    </ol>
+    <p>This whole interaction represents the use case <strong>Withdraw Cash</strong>.</p>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>A use case is really a <strong>collection of different scenarios</strong> — both successful and unsuccessful ones.</p>
+    </div>
+
+    <h3>Use Case vs Scenario</h3>
+    <ul>
+      <li><strong>Use Case</strong> — a general goal or process</li>
+      <li><strong>Scenario</strong> — one specific path through that use case</li>
+    </ul>
+    <p><strong>Example — Use Case: Withdraw Cash</strong></p>
+    <ul>
+      <li><strong>Scenario 1 — Successful withdrawal:</strong> Customer enters the correct PIN and withdraws Rs. 10,000</li>
+      <li><strong>Scenario 2 — Wrong PIN:</strong> Customer enters an incorrect PIN</li>
+      <li><strong>Scenario 3 — Insufficient balance:</strong> Customer requests Rs. 50,000 but has only Rs. 20,000</li>
+      <li><strong>Scenario 4 — Daily limit exceeded:</strong> Customer has already withdrawn the maximum allowed amount</li>
+    </ul>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Use Case = a collection of related scenarios.</strong></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Functional Requirement vs Use Case</h2>
+    <p><strong>Functional Requirement</strong> describes <strong>what the system should do</strong>.</p>
+    <pre><code>The ATM shall validate the customer's PIN.
+The ATM shall dispense cash.
+The ATM shall display the account balance.</code></pre>
+    <p><strong>Use Case</strong> describes <strong>how an actor interacts with the system to achieve a goal</strong>.</p>
+    <pre><code>Use Case: Withdraw Cash
+
+Customer  -> Insert card
+Customer  -> Enter PIN
+System    -> Validate PIN
+Customer  -> Enter amount
+System    -> Check balance
+System    -> Dispense cash</code></pre>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Functional requirement</strong> = what the system does. <strong>Use case</strong> = how the actor uses the system to achieve a goal.</p>
+    </div>
+
+    <h3>Non-Functional Requirement (Revisited)</h3>
+    <p>A non-functional requirement describes a <strong>constraint or quality requirement</strong>.</p>
+    <p>Example for an ATM:</p>
+    <ul>
+      <li><strong>Functional:</strong> The ATM shall validate the PIN.</li>
+      <li><strong>Non-functional:</strong> The ATM shall validate the PIN within 3 seconds.</li>
+    </ul>
+    <p>Other examples:</p>
+    <ul>
+      <li>Communication must use encryption</li>
+      <li>System should be available 99.9% of the time</li>
+      <li>Passwords must be securely stored</li>
+      <li>The system should respond within 2 seconds</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Actor</h2>
+    <p>An <strong>actor interacts with the system to achieve a goal</strong>. An actor can be:</p>
+    <ul>
+      <li>A person</li>
+      <li>An organization</li>
+      <li>Another computer system</li>
+    </ul>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>An actor is identified by its <strong>role</strong>, not necessarily its name.</p>
+    </div>
+    <p><strong>Example: University Library System</strong></p>
+    <p>Possible actors: Student, Librarian, Payment System, University Authentication System.</p>
+    <p>Not "Kamal" — instead, <strong>Student</strong>, because many different students can perform the same role.</p>
+
+    <h3>Primary Actor</h3>
+    <p>The <strong>primary actor has a goal that is fulfilled by using the system</strong>.</p>
+    <p><strong>Example: Online Shopping System</strong> — <strong>Primary actor:</strong> Customer &nbsp; <strong>Goal:</strong> Purchase Product</p>
+    <p>The customer directly uses the system to achieve the goal.</p>
+    <pre><code>System              Primary Actor     Goal
+------------------  ----------------  -------------------
+ATM                 Customer          Withdraw Cash
+Library             Student           Borrow Book
+Hospital            Patient           Book Appointment
+Online Shopping     Customer          Place Order
+University System   Student           Register Course</code></pre>
+
+    <h3>Supporting Actor</h3>
+    <p>A <strong>supporting actor provides a service to the system</strong>.</p>
+    <p><strong>Example: Online Shopping</strong> — the customer places an order, and the shopping system needs payment authorization.</p>
+    <p><strong>Primary Actor:</strong> Customer &nbsp; <strong>Supporting Actor:</strong> Bank / Payment Gateway</p>
+    <pre><code>Customer
+   |
+   v
+Online Shopping System
+   |
+   v
+Payment Gateway</code></pre>
+    <p>The payment gateway is not using the shopping system to achieve its own goal — instead, it <strong>provides a service to the system</strong>.</p>
+
+    <h3>Offstage Actor</h3>
+    <p>An offstage actor <strong>has an interest in the system's behavior but does not directly take part in the interaction</strong>.</p>
+    <p><strong>Example: Online Shopping</strong> — suppose the shopping system calculates and reports sales tax.</p>
+    <ul>
+      <li><strong>Customer</strong> → Primary actor</li>
+      <li><strong>Payment Gateway</strong> → Supporting actor</li>
+      <li><strong>Tax Authority</strong> → Offstage actor</li>
+    </ul>
+    <p>The tax authority may care whether the correct tax is calculated, even though it never directly interacts with the system during the purchase.</p>
+
+    <div class="divider"></div>
+
+    <h2>Actor Types in Practice</h2>
+    <p><strong>Example: Restaurant Ordering System</strong> — a customer orders food using a restaurant POS system.</p>
+    <pre><code>Actor              Type          Why?
+-----------------  ------------  ------------------------------------
+Customer           Primary       Wants to place an order
+Cashier            Primary       Processes the order
+Payment Gateway    Supporting    Authorizes payment
+Kitchen System     Supporting    Receives order information
+Tax Authority      Offstage      Has an interest in tax calculation</code></pre>
+
+    <h3>Case Study: Online University Course Registration System</h3>
+    <p>Students use the system to view available courses, register for courses, drop courses, and view their registered courses. <strong>Academic Staff</strong> use the system to manage course information and approve special course-registration requests.</p>
+    <p>The system connects with the <strong>University Payment System</strong> to verify payments for courses that require fees, and with the <strong>University Student Information System</strong> to retrieve student information and academic records. The <strong>University Academic Administration</strong> cares about registration following university rules and records staying accurate, but does not directly use the system.</p>
+    <pre><code>Actor                        Type              Reason
+---------------------------  ----------------  -------------------------------------------
+Student                      Primary Actor     Uses the system to register/drop courses
+                                                and view courses
+Academic Staff                Primary Actor     Manages courses and handles registration
+                                                requests
+University Payment System     Supporting Actor  Provides payment verification services
+Student Information System    Supporting Actor  Provides student and academic information
+Academic Administration       Offstage Actor    Has an interest in correct registration and
+                                                university rules
+University Management         Offstage Actor    Has an interest in registration reports and
+                                                academic planning</code></pre>
+
+    <h3>Case Study: Hospital Appointment and Prescription System</h3>
+    <p>Patients search for doctors, book appointments, cancel appointments, and view their appointment history. <strong>Doctors</strong> use the system to view their appointments and issue electronic prescriptions.</p>
+    <p>The system talks to the <strong>Hospital Payment System</strong> to process appointment payments, and to an <strong>SMS Notification Service</strong> to send appointment reminders. The <strong>Hospital Administration</strong> cares about appointments being properly managed and hospital policies being followed. The <strong>Ministry of Health</strong> cares about prescription and patient-service activities following healthcare regulations — but neither directly uses the system.</p>
+    <pre><code>Actor                      Type              Reason
+-------------------------  ----------------  -------------------------------------------
+Patient                    Primary Actor     Books/cancels appointments and views
+                                              appointment information
+Doctor                     Primary Actor     Manages appointments and issues prescriptions
+Hospital Payment System    Supporting Actor  Processes appointment payments
+SMS Notification Service   Supporting Actor  Sends appointment reminders
+Hospital Administration    Offstage Actor    Has an interest in proper appointment
+                                              management and policies
+Ministry of Health         Offstage Actor    Has an interest in regulatory compliance</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>System Boundary</h2>
+    <p>The <strong>system boundary defines what is inside the system and what is outside it</strong>.</p>
+    <p><strong>Example: Online Shopping System</strong></p>
+    <p><strong>Inside the boundary</strong> (the Online Shopping System): Search Products, Place Order, Make Payment, Track Order.</p>
+    <p><strong>Outside the boundary:</strong> Customer, Payment Gateway, Delivery Company.</p>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The <strong>actor is outside</strong> the system boundary. The <strong>use cases are inside</strong> the system boundary.</p>
+    </div>
+
+    <h3>Actor-Goal List</h3>
+    <p>After identifying actors, work out what each actor wants to achieve.</p>
+    <p><strong>Example: University Library System</strong></p>
+    <pre><code>Actor            Goals
+---------------  --------------------
+Student          Search Books
+Student          Borrow Books
+Student          Return Books
+Student          View Borrowed Books
+Librarian        Add Book
+Librarian        Remove Book
+Librarian        Update Book
+Payment System   Process Fine Payment</code></pre>
+    <p>It's recommended to record primary actors and their user goals in an <strong>actor-goal list</strong>.</p>
+
+    <h3>How to Identify Actors</h3>
+    <p>Ask yourself:</p>
+    <ul>
+      <li><strong>Who directly uses the system?</strong> — e.g. Student</li>
+      <li><strong>Who has different roles or permissions?</strong> — e.g. Student, Librarian, Administrator</li>
+      <li><strong>Who interacts with the system during errors?</strong> — e.g. Customer Service Officer</li>
+      <li><strong>Who provides a service to the system?</strong> — e.g. Payment Gateway</li>
+      <li><strong>Who is affected by the system's results?</strong> — e.g. Tax Authority</li>
+    </ul>
+    <p>These questions line up directly with the actor types covered above.</p>
+
+    <div class="divider"></div>
+
+    <h2>One Use Case for Each User Goal</h2>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The basic rule: <strong>one user goal → one use case.</strong></p>
+    </div>
+    <p><strong>Example — Student goals:</strong> Search Book, Borrow Book, Return Book, View Borrowed Books.</p>
+    <pre><code>Student
+  |
+  +---- Search Book
+  |
+  +---- Borrow Book
+  |
+  +---- Return Book
+  |
+  +---- View Borrowed Books</code></pre>
+
+    <h3>Exception: CRUD</h3>
+    <p>Sometimes several goals can be combined. <strong>CRUD</strong> means <strong>Create, Read, Update, Delete</strong>.</p>
+    <p>Instead of: Create User, View User, Update User, Delete User — we can use one use case: <strong>Manage Users</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Naming a Use Case</h2>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Use <strong>Verb + Object</strong>.</p>
+    </div>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Good names: <strong>Purchase Concert Ticket</strong>, <strong>Borrow Book</strong>, <strong>Search Book</strong>, <strong>Place Order</strong>, <strong>Register Course</strong>.</p>
+    </div>
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Avoid: Ticket Purchase, Ticket Order, Purchase, Pay — these are written as Object + Verb, or leave out the object entirely.</p>
+    </div>
+    <p>Why does this matter? A use case name should:</p>
+    <ul>
+      <li>Represent one clear goal</li>
+      <li>Be written from the actor's point of view</li>
+      <li>Use active voice</li>
+      <li>Usually take the verb–object form</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Main Success Scenario</h2>
+    <p>This is <strong>what happens when everything goes correctly</strong>.</p>
+    <p><strong>Example: Borrow Book</strong></p>
+    <ol>
+      <li>Student searches for a book</li>
+      <li>System displays available books</li>
+      <li>Student selects a book</li>
+      <li>System checks availability</li>
+      <li>System records the borrowing</li>
+      <li>System displays the due date</li>
+    </ol>
+    <p>That's the <strong>normal, successful path</strong>.</p>
+
+    <h3>Alternate / Failure Scenarios (Extensions)</h3>
+    <p>This covers <strong>what can go wrong</strong>. For <strong>Borrow Book</strong>:</p>
+    <ul>
+      <li><strong>Extension 1 — Book unavailable:</strong> Student selects a book → system finds it's unavailable → system displays "Book currently unavailable."</li>
+      <li><strong>Extension 2 — Student has unpaid fine:</strong> System checks the student's account → an unpaid fine exists → system prevents borrowing.</li>
+      <li><strong>Extension 3 — Student has reached borrowing limit:</strong> System informs the student that the borrowing limit has been reached.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Use Case Formats</h2>
+    <p>There are three formats:</p>
+    <ul>
+      <li><strong>Brief</strong> — a very short summary</li>
+      <li><strong>Casual</strong> — an informal description covering several scenarios</li>
+      <li><strong>Fully Dressed</strong> — a detailed, structured description with steps, variations, and supporting information</li>
+    </ul>
+
+    <h3>Brief Use Case Example</h3>
+    <p><strong>Use Case: Borrow Book</strong></p>
+    <p>A student searches for a book, selects an available book, and borrows it. The system records the borrowing and displays the due date.</p>
+    <p>Very short — useful for simple, well-understood functionality.</p>
+
+    <h3>Casual Use Case Example</h3>
+    <p><strong>Use Case: Handle Return</strong></p>
+    <p>A customer arrives at the checkout with items to return. The cashier records the returned items using the POS system. If the refund is approved, the system processes the refund. If the refund is rejected, the cashier uses another refund method. If the item cannot be identified, the system asks the cashier to enter the item code manually.</p>
+    <p>More detailed than Brief, but still written as normal paragraphs.</p>
+
+    <div class="divider"></div>
+
+    <h2>Fully Dressed Use Case</h2>
+    <p>This is the <strong>most important format</strong>. A fully dressed use case gives structured details such as:</p>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <ul>
+        <li><strong>Use Case Name</strong></li>
+        <li><strong>Primary Actor</strong></li>
+        <li><strong>Stakeholders and Interests</strong></li>
+        <li><strong>Preconditions</strong></li>
+        <li><strong>Main Success Scenario</strong></li>
+        <li><strong>Extensions</strong></li>
+        <li><strong>Postconditions / Success Guarantees</strong></li>
+      </ul>
+    </div>
+
+    <h3>Fully Dressed Example — Online Library</h3>
+    <p><strong>Use Case: Search Book</strong></p>
+    <p><strong>Primary Actor:</strong> Student</p>
+    <p><strong>Precondition</strong></p>
+    <ul>
+      <li>Student is logged in</li>
+      <li>Books are registered in the system</li>
+    </ul>
+    <p><strong>Main Success Scenario</strong></p>
+    <ol>
+      <li>Student enters book name, author name, or ISBN</li>
+      <li>Student selects <strong>Search</strong></li>
+      <li>System validates the search details</li>
+      <li>System searches for matching books</li>
+      <li>System displays book details</li>
+    </ol>
+    <p><strong>Extensions</strong></p>
+    <p><strong>3a. Invalid search details</strong></p>
+    <ol>
+      <li>System detects invalid parameters</li>
+      <li>System displays: "Please enter valid details."</li>
+    </ol>
+    <p><strong>4a. Book not found</strong></p>
+    <ol>
+      <li>System cannot find a matching book</li>
+      <li>System displays: "No search results to show."</li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <h2>Preconditions</h2>
+    <p>A <strong>precondition</strong> is something that must already be true <strong>before the use case starts</strong>.</p>
+    <ul>
+      <li><strong>Borrow Book:</strong> Student is logged in; book exists in the library system</li>
+      <li><strong>Withdraw Cash:</strong> ATM is operational; customer has inserted a valid card</li>
+      <li><strong>Place Order:</strong> Customer is logged in; products are available</li>
+    </ul>
+
+    <h3>Postconditions</h3>
+    <p>A <strong>postcondition</strong> describes what should be true <strong>after the use case finishes</strong>.</p>
+    <p><strong>Borrow Book</strong> — after successful completion:</p>
+    <ul>
+      <li>Book is marked as borrowed</li>
+      <li>Student's borrowed-book list is updated</li>
+      <li>Due date is recorded</li>
+    </ul>
+    <p><strong>Place Order</strong> — after successful completion:</p>
+    <ul>
+      <li>Order is created</li>
+      <li>Payment is recorded</li>
+      <li>Product quantity is updated</li>
+      <li>Order confirmation is generated</li>
+    </ul>
+
+    <h3>Stakeholders and Interests</h3>
+    <p>A <strong>stakeholder</strong> is anyone who has an interest in the outcome of the use case.</p>
+    <p><strong>Example: Place Order</strong></p>
+    <pre><code>Stakeholder        Interest
+-----------------  ---------------------------------------
+Customer           Wants order placed successfully
+Store              Wants correct order and payment
+Payment provider   Wants valid payment
+Delivery company   Needs correct delivery information
+Tax authority      Wants correct tax calculation</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Complete Example — Online Shopping</h2>
+    <p>Let's put everything together.</p>
+    <p><strong>System:</strong> Online Shopping System</p>
+    <p><strong>System Boundary</strong></p>
+    <p>Inside: Product search, Cart, Order placement, Payment processing, Order tracking.</p>
+    <p>Outside: Customer, Payment Gateway, Delivery Company.</p>
+    <p><strong>Actors</strong></p>
+    <ul>
+      <li><strong>Primary:</strong> Customer, Admin</li>
+      <li><strong>Supporting:</strong> Payment Gateway, Delivery Service</li>
+      <li><strong>Offstage:</strong> Tax Authority</li>
+    </ul>
+    <p><strong>Customer Goals:</strong> Browse Products, Place Order, Track Order</p>
+    <p><strong>Admin Goals:</strong> Manage Products, View Sales Reports</p>
+    <pre><code>Customer
+  |
+  +---- Browse Products
+  |
+  +---- Place Order
+  |
+  +---- Track Order
+
+Admin
+  |
+  +---- Manage Products
+  |
+  +---- View Sales Reports</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>How to Solve a Use Case (7-Step Method)</h2>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <ol>
+        <li><strong>Find the system</strong> — what system are we studying? e.g. University Library System</li>
+        <li><strong>Find actors</strong> — who uses it? e.g. Student, Librarian</li>
+        <li><strong>Find goals</strong> — what does each actor want to achieve? e.g. Student: Search Book, Borrow Book, Return Book</li>
+        <li><strong>Convert goals into use cases</strong> using Verb + Object — e.g. Search Book, Borrow Book, Return Book, Manage Books</li>
+        <li><strong>Find scenarios</strong> — what normally happens?</li>
+        <li><strong>Find exceptions</strong> — what can go wrong?</li>
+        <li><strong>Choose the required format</strong> — Brief (short paragraph), Casual (informal with scenarios), or Fully Dressed (structured template)</li>
+      </ol>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Quick Comparison Table</h2>
+    <pre><code>Concept           Simple Meaning                     Example
+----------------  ---------------------------------  --------------------------
+System            What we are studying                Library System
+Actor             Who interacts with the system       Student
+Primary Actor     Has the goal                        Student
+Supporting Actor  Provides a service                  Payment Gateway
+Offstage Actor    Has an interest                     Tax Authority
+Goal              What the actor wants                Borrow Book
+Use Case          Complete goal/process                Borrow Book
+Scenario          One particular path                 Successfully borrow book
+Main Success      Normal successful flow              Book available -> borrowed
+Extension         Alternative/failure flow            Book unavailable
+Precondition      Must be true before                 Student logged in
+Postcondition     Result after completion             Book marked as borrowed
+System Boundary   Separates system from outside       Library system boundary
+Brief             Very short description              One paragraph
+Casual            Informal, multiple scenarios        Short paragraphs
+Fully Dressed     Detailed, structured description    Template</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Practice Activities</h2>
+    <p>For each scenario below, write a <strong>fully dressed use case</strong> for the named target use case, using the 7-step method above.</p>
+    <ol>
+      <li><strong>Library Book Search</strong> — An Online Library System lets students search for books by title, author, or ISBN. The student must log in first. If login succeeds, the student can enter search details. If the details are valid and the book exists, the system shows the book details. If the details are invalid, the system shows an error message. If no matching book is found, the system shows a "No results found" message.<br>Target use case: <em>Search Book</em></li>
+      <li><strong>ATM Cash Withdrawal</strong> — An ATM System lets customers withdraw cash. The customer inserts an ATM card and enters a PIN. If the PIN is correct, the customer enters the amount to withdraw. The system checks the account balance and daily withdrawal limit. If everything is valid, the ATM dispenses cash and updates the account balance. If the PIN is incorrect, the system shows an error; after three incorrect attempts, the card is blocked. If the account has insufficient funds or the daily limit is exceeded, the withdrawal is rejected.<br>Target use case: <em>Withdraw Cash</em></li>
+      <li><strong>Online Shopping</strong> — An Online Shopping System lets customers purchase products. The customer searches for a product, selects it, adds it to the cart, and proceeds to checkout. The customer enters delivery details and selects a payment method. If payment succeeds, the system creates the order and shows a confirmation. If the product is out of stock, the system tells the customer. If payment fails, the customer is asked to pick another payment method.<br>Target use case: <em>Place Order</em></li>
+      <li><strong>University Course Registration</strong> — A University Course Registration System lets students register for courses. The student logs in, views available courses, selects a course, and submits the registration request. The system checks whether the student meets the prerequisites and whether seats are available. If all conditions are met, the student is registered. If the prerequisite isn't met, registration is rejected. If the course is full, the system tells the student registration is unavailable.<br>Target use case: <em>Register for Course</em></li>
+      <li><strong>Hospital Appointment Booking</strong> — A Hospital Appointment System lets patients book appointments with doctors. The patient logs in, selects a doctor and preferred date, and views available time slots. The patient picks a time slot and confirms the appointment. The system records the appointment and sends a confirmation. If no time slots are available, the system tells the patient. If the selected slot becomes unavailable before confirmation, the system asks the patient to choose another slot.<br>Target use case: <em>Book Appointment</em></li>
+      <li><strong>Online Banking Login</strong> — An Online Banking System lets registered users securely access their accounts. The user enters a username and password, and the system verifies the credentials. If correct, the user is redirected to the account dashboard. If the password is wrong, the system shows an error and allows another attempt; after three consecutive failed attempts, the account is locked. If the user forgets the password, they can select "Forgot Password" and reset it by email or SMS verification.<br>Target use case: <em>Login to Online Banking</em></li>
+      <li><strong>Food Delivery Order</strong> — A Food Delivery System lets customers order food from restaurants. The customer picks a restaurant, chooses food items, adds them to the cart, enters the delivery address, and confirms the order. The system processes the payment and sends the order to the restaurant. If a chosen food item becomes unavailable, the system asks the customer to remove or replace it. If payment fails, the order is not confirmed.<br>Target use case: <em>Place Food Order</em></li>
+      <li><strong>Hotel Room Booking</strong> — An Online Hotel Booking System lets customers search for available rooms. The customer enters check-in and check-out dates and selects a room. The system shows available rooms and prices. The customer provides guest details and confirms the booking. After successful payment, the system confirms the reservation. If no rooms are available, the system shows an appropriate message. If payment fails, the booking is not completed.<br>Target use case: <em>Book Hotel Room</em></li>
+      <li><strong>Prescription Refill</strong> — A Hospital System lets patients request prescription refills online. The patient logs in, views active prescriptions, selects one, and submits a refill request. The system checks whether the prescription is still valid and whether the refill limit has been exceeded. If eligible, the request goes to the doctor for approval. If the prescription is expired or the refill limit is exceeded, the system rejects the request. If the doctor approves it, the system updates the prescription status and notifies the patient.<br>Target use case: <em>Request Prescription Refill</em></li>
+      <li><strong>Cinema Ticket Booking</strong> — An Online Cinema Booking System lets customers pick a movie, date, show time, and seats. The customer confirms the selected seats and makes payment. If payment succeeds, the system generates the ticket and sends a confirmation. If the selected seats are already booked, the system asks the customer to pick different seats. If payment fails, the booking is not completed.<br>Target use case: <em>Book Cinema Ticket</em></li>
+      <li><strong>University Examination Registration</strong> — A University Examination System lets students register for upcoming exams. The student logs in, views eligible exams, selects exams, and submits the registration. The system checks whether the student has completed the required courses and whether registration is still open. If all conditions are met, the registration is recorded and confirmed. If the student isn't eligible for an exam, the registration is rejected. If the registration deadline has passed, the system doesn't allow registration. If the student has already registered, the system informs them.<br>Target use case: <em>Register for Examination</em></li>
+      <li><strong>Bank Fund Transfer</strong> — An Online Banking System lets customers transfer money between accounts. The customer logs in, selects the source account, enters the recipient account and transfer amount, and confirms the transaction. The system verifies the customer's identity, checks the account balance, and processes the transfer. If successful, the system updates both accounts and shows a transaction confirmation. If the balance is insufficient, the transfer is rejected. If the recipient account is invalid, the system shows an error. If extra authentication is required and fails, the transaction is cancelled.<br>Target use case: <em>Transfer Money</em></li>
+    </ol>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>These are in-class practice exercises. For each one, build the full structure: Use Case Name, Primary Actor, Stakeholders and Interests, Preconditions, Main Success Scenario, Extensions, and Postconditions.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Use Case Modeling in Requirements Engineering',
+    subTopics: [
+      'What is Use Case Modeling?',
+      'Functional vs Non-Functional Requirements',
+      'What is a Use Case?',
+      'Use Case vs Scenario',
+      'Functional Requirement vs Use Case',
+      'Actor',
+      'Primary Actor',
+      'Supporting Actor',
+      'Offstage Actor',
+      'Actor Types in Practice',
+      'System Boundary',
+      'Actor-Goal List',
+      'How to Identify Actors',
+      'One Use Case for Each User Goal',
+      'Exception: CRUD',
+      'Naming a Use Case',
+      'Main Success Scenario',
+      'Alternate / Failure Scenarios (Extensions)',
+      'Use Case Formats',
+      'Brief Use Case Example',
+      'Casual Use Case Example',
+      'Fully Dressed Use Case',
+      'Preconditions',
+      'Postconditions',
+      'Stakeholders and Interests',
+      'Complete Example — Online Shopping',
+      'How to Solve a Use Case (7-Step Method)',
+      'Quick Comparison Table',
+    ],
+    definitions: [
+      { term: 'Use Case Modeling', meaning: 'A requirements engineering technique for identifying and documenting the functional requirements of a system, from the user\u2019s point of view.' },
+      { term: 'Functional Requirement', meaning: 'A statement of what the system should do (e.g., validate PIN, dispense cash).' },
+      { term: 'Non-Functional Requirement', meaning: 'A constraint on how the system should operate or be built (e.g., respond within 3 seconds, use encryption).' },
+      { term: 'Use Case', meaning: 'A story describing how an actor uses a system to achieve a goal; really a collection of related scenarios.' },
+      { term: 'Scenario', meaning: 'One specific path through a use case, successful or unsuccessful.' },
+      { term: 'Actor', meaning: 'A person, organization, or external system that interacts with the system to achieve a goal, identified by role rather than name.' },
+      { term: 'Primary Actor', meaning: 'An actor whose goal is fulfilled by using the system directly.' },
+      { term: 'Supporting Actor', meaning: 'An actor that provides a service to the system, rather than using it to reach its own goal.' },
+      { term: 'Offstage Actor', meaning: 'An actor with an interest in the system\u2019s behavior who does not directly interact with it.' },
+      { term: 'System Boundary', meaning: 'The line that separates what is inside the system (use cases) from what is outside it (actors).' },
+      { term: 'Actor-Goal List', meaning: 'A record of each primary actor paired with the goals they want to achieve using the system.' },
+      { term: 'CRUD', meaning: 'Create, Read, Update, Delete — related goals that can sometimes be combined into a single use case, like "Manage Users".' },
+      { term: 'Main Success Scenario', meaning: 'The normal, successful path through a use case when everything goes correctly.' },
+      { term: 'Extension', meaning: 'An alternate or failure branch off the main success scenario, describing what can go wrong.' },
+      { term: 'Brief', meaning: 'A use case format that is a very short summary paragraph, used for simple, well-understood functionality.' },
+      { term: 'Casual', meaning: 'A use case format that is an informal description covering several scenarios in normal paragraphs.' },
+      { term: 'Fully Dressed', meaning: 'A detailed, structured use case format including name, primary actor, stakeholders, preconditions, main success scenario, extensions, and postconditions.' },
+      { term: 'Precondition', meaning: 'Something that must already be true before a use case starts.' },
+      { term: 'Postcondition', meaning: 'Something that must be true after a use case finishes successfully.' },
+      { term: 'Stakeholder', meaning: 'Anyone who has an interest in the outcome of a use case, even if they are not the actor performing it.' },
+    ],
+    keyPoints: [
+      'A use case is a collection of related scenarios, not just one path — some succeed, some fail.',
+      'Actors are identified by role, not by name (e.g., "Student", not "Kamal").',
+      'Primary actor: goal fulfilled by the system. Supporting actor: provides a service to the system. Offstage actor: has an interest but never directly interacts with the system.',
+      'The actor sits outside the system boundary; the use cases sit inside it.',
+      'Rule of thumb: one user goal → one use case — except CRUD operations, which can be merged into one use case (e.g., "Manage Users").',
+      'Name use cases with Verb + Object (e.g., "Borrow Book"), never Object + Verb or a bare verb like "Pay".',
+      'A fully dressed use case has seven parts: Use Case Name, Primary Actor, Stakeholders and Interests, Preconditions, Main Success Scenario, Extensions, Postconditions.',
+      'Precondition = must be true before the use case starts. Postcondition = must be true after it finishes.',
+      'Extensions are labeled by step number and letter (e.g., "3a. Invalid search details") to show exactly where they branch off the main scenario.',
+      'The three use case formats — Brief, Casual, Fully Dressed — trade off detail for speed; Fully Dressed is the exam-critical one.',
+      'The 7-step method for solving any use case problem: find the system → find actors → find goals → convert goals to use cases → find scenarios → find exceptions → choose the format.',
+    ],
+  },
+},
+
 ]
