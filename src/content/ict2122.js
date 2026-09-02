@@ -837,4 +837,391 @@ public class TestEmployee
     ],
   },
 },
+
+{
+  id: 2,
+  title: 'Classes and Objects — Part 02',
+  content: `
+    <span class="lesson-badge">LESSON 02 – PART 02</span>
+    <h1>Classes and Objects — Part 02</h1>
+    <div class="meta-info">ICT2122 <span>•</span> 16 min read</div>
+
+    <h2>Recap — Part 01</h2>
+    <p>Part 01 of this lesson covered:</p>
+    <ul>
+      <li>Object Oriented Programming — Concepts</li>
+      <li>Understanding Objects</li>
+      <li>Understanding Classes</li>
+      <li>Understanding Fields</li>
+      <li>Understanding Methods</li>
+      <li>JAVA — Access Modifiers</li>
+      <li>Creating Objects</li>
+      <li>Initializing Objects (by reference variable, by method, by constructor)</li>
+      <li>Understanding Constructors (Default, Parameterized)</li>
+    </ul>
+
+    <h2>Outline — Part 02</h2>
+    <ul>
+      <li>JAVA — <code>this</code> keyword (methods, constructors)</li>
+      <li>JAVA — Constructor Chaining</li>
+      <li>JAVA — Anonymous objects</li>
+      <li>JAVA — Garbage Collection</li>
+      <li>Static in Java (Static Fields, Static Methods, Static Initializers)</li>
+      <li>Preventing instantiating a class</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>JAVA — <code>this</code> Keyword</h2>
+
+    <h3>Have You Tried???</h3>
+    <p>Consider this code:</p>
+    <pre><code>class Account
+{
+    int a,b;
+    public void setData(int a, int b)
+    {
+        a=a;
+        b=b;
+    }
+    public void showData(){
+        System.out.println("Value of A=" +a);
+        System.out.println("Value of B=" +b);
+    }
+    public static void main(String[] args)
+    {
+        Account myAccount= new Account();
+        myAccount.setData(2,3);
+        myAccount.showData();
+    }
+}</code></pre>
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p><strong>Why does this go wrong?</strong> Both the local parameters (<code>a</code>, <code>b</code>) and the instance fields (<code>a</code>, <code>b</code>) have the <strong>same names</strong>. Writing <code>a=a;</code> just assigns the local parameter to itself — the instance fields are never actually set.</p>
+    </div>
+
+    <h3>The Solution: The <code>this</code> Reference</h3>
+    <ul>
+      <li>Every object has a reference to itself, represented by the <strong><code>this</code></strong> keyword.</li>
+      <li>Fix the code segment like this:</li>
+    </ul>
+    <pre><code>public void setData(int a, int b){
+    this.a=a;
+    this.b=b;
+}</code></pre>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>At compile time, <code>this</code> is replaced with the actual object reference (e.g. <code>myAccount</code>). The <strong>left-hand side</strong> variable (<code>this.a</code>) becomes the <strong>instance variable</strong>, and the <strong>right-hand side</strong> variable (<code>a</code>) becomes the <strong>local variable</strong>.</p>
+    </div>
+
+    <h3>Uses of the <code>this</code> Keyword</h3>
+    <p>You can use <strong><code>this</code></strong> in the body of a class constructor or method to refer to the <strong>current object</strong> — that is, the class instance for which the constructor or method has been called.</p>
+
+    <h3>Uses for <code>this</code> — Methods</h3>
+    <pre><code>// Instance variables
+String firstName, lastName;
+
+public void setNames(String last, String first)
+{
+    this.lastName = last;
+    this.firstName = first;
+}
+
+public void setNames(String lastName, String firstName)
+{
+    this.lastName = lastName;
+    this.firstName = firstName;
+}
+
+public String getFullName()
+{
+    return this.firstName + " " + this.lastName;
+}
+
+System.out.println(this);  // What happens???</code></pre>
+
+    <h3>Uses for <code>this</code> — Constructors</h3>
+    <ul>
+      <li>Can call another constructor <strong>only in the very first statement</strong> of a constructor, by using the <code>this</code> keyword.</li>
+      <li>Each constructor can call only <strong>one</strong> other constructor, but you can chain constructors.</li>
+      <li>You <strong>can't create loops</strong> in which constructors call one another.</li>
+    </ul>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>Hands-on:</strong> try chaining constructors using <code>this()</code> in the very first line of a constructor.</p>
+    </div>
+
+    <h3>Uses for <code>this</code> — Try It</h3>
+    <ul>
+      <li>To call current class methods.</li>
+      <li>To pass the current object as an argument.</li>
+      <li>To return the current object.</li>
+      <li><code>System.out.println(this);</code></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>JAVA — Constructor Chaining</h2>
+    <p><strong>Constructor chaining</strong> refers to the ability to call a constructor inside another constructor. You can use a constructor chain either within the same class, or even with another one.</p>
+    <ul>
+      <li><strong>Constructor Chaining in the Same Class</strong> — using the <code>this</code> keyword (as discussed above).</li>
+      <li><strong>Constructor Chaining to Another Class</strong> — using the <code>super</code> keyword (will be discussed under Inheritance).</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>JAVA — Initializer (Initializer Block)</h2>
+    <ul>
+      <li>An initializer block is a lonely block of code that's placed <strong>outside</strong> any method, constructor, or other block of code.</li>
+      <li>Initializers are executed whenever an instance of a class is created, <strong>regardless of which constructor</strong> is used to create the instance.</li>
+    </ul>
+    <pre><code>public class InitializerTest
+{
+    {
+        System.out.print("Initializer block executed...!!!");
+    }
+}</code></pre>
+    <ul>
+      <li>If a class contains more than one initializer, the initializers are executed <strong>in the order in which they appear</strong> in the program.</li>
+      <li>Initializers are executed <strong>before any class constructors</strong>.</li>
+      <li>A special kind of initializer block called a <strong>static initializer</strong> lets you initialize static fields.</li>
+      <li>Initializers are sometimes used with anonymous classes.</li>
+    </ul>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>Hands-on:</strong> let's try some initializer blocks.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>JAVA — Anonymous Objects</h2>
+    <ul>
+      <li><strong>Anonymous</strong> simply means nameless.</li>
+      <li>An object which has <strong>no reference</strong> is known as an anonymous object.</li>
+      <li>It can be used at the time of object creation only.</li>
+      <li>If you have to use an object only once, an anonymous object is a good approach.</li>
+    </ul>
+    <pre><code>new Calculation(); //anonymous object</code></pre>
+    <p>Calling a method through a reference:</p>
+    <pre><code>Calculation c=new Calculation();
+c.fact(5);</code></pre>
+    <p>Calling a method through an anonymous object:</p>
+    <pre><code>new Calculation().fact(5);</code></pre>
+
+    <h3>How Can an Object Be Unreferenced?</h3>
+    <ul>
+      <li><strong>By nulling the reference:</strong>
+<pre><code>Employee e=new Employee();
+e=null;</code></pre>
+      </li>
+      <li><strong>By assigning a reference to another:</strong>
+<pre><code>Employee e1=new Employee();
+Employee e2=new Employee();
+e1=e2; //now the first object referred by
+       //e1 is available for garbage collection</code></pre>
+      </li>
+      <li><strong>By anonymous object, etc.:</strong>
+<pre><code>new Employee();</code></pre>
+      </li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>JAVA — Garbage Collection</h2>
+    <ul>
+      <li>In Java, <strong>garbage</strong> means unreferenced objects.</li>
+      <li><strong>Garbage Collection</strong> is the process of reclaiming runtime unused memory automatically — in other words, it is a way to destroy unused objects.</li>
+      <li>The Java runtime environment deletes objects when it determines that they are no longer being used.</li>
+      <li>In Java, this is performed automatically. So, Java provides better memory management.</li>
+    </ul>
+
+    <h3>Advantages of the JAVA Garbage Collector</h3>
+    <ul>
+      <li>It makes Java memory efficient, because the garbage collector removes unreferenced objects from heap memory.</li>
+      <li>It is automatically done by the garbage collector (a part of the JVM), so we don't need to make extra efforts.</li>
+    </ul>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Homework:</strong> what are the disadvantages of the JAVA garbage collector?</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>JAVA — Working with Statics</h2>
+
+    <h3>What Does the Term <code>static</code> Mean in Java?</h3>
+    <ul>
+      <li>It's used to describe a special type of field or method that <strong>isn't associated with a particular instance</strong> of a class — static fields and methods are associated with the class itself.</li>
+      <li>You don't have to create an instance of the class to access a static field or method — you can access it by specifying the <strong>class name</strong>, not a variable that references an object.</li>
+    </ul>
+
+    <h3>Common Uses of Static Fields and Methods in Java</h3>
+    <ul>
+      <li>To provide constants or other values that aren't related to class instances.</li>
+      <li>To keep count of how many instances of a class have been created.</li>
+      <li>To keep track of a reference or serial number that's assigned to each new object instance.</li>
+      <li>To provide an alternative way to create instances of the class.</li>
+      <li>To provide utility functions that aren't associated with an object at all.</li>
+    </ul>
+
+    <h3>Static Fields</h3>
+    <ul>
+      <li>A static field is a field that's declared with the <code>static</code> keyword — e.g. <code>private static int age;</code> — following the pattern <code>&lt;access modifier&gt; static &lt;datatype&gt; &lt;field&gt;</code>.</li>
+      <li>You can't use the <code>static</code> keyword within a class method — the code won't compile.</li>
+      <li><strong>Fields can be static, but local variables can't.</strong></li>
+      <li>You can provide an initial value for a static field — e.g. <code>private static int age = 20;</code></li>
+      <li>Static fields are created and initialized when the class is first loaded — when a static member of the class is referred to, or when an instance of the class is created (whichever comes first), or using a static initializer.</li>
+    </ul>
+
+    <h3>Static Methods</h3>
+    <ul>
+      <li>A static method is a method declared with the <code>static</code> keyword. Like static fields, static methods are associated with the class itself, not with any particular object created from the class.</li>
+      <li>The best-known static method is <strong><code>main</code></strong> — called by the Java runtime to start an application. Java applications are run in a static context by default.</li>
+      <li>You <strong>can't</strong> access a non-static method or field from a static method, because the static method doesn't have an instance of the class to use to reference instance methods or fields.</li>
+      <li>But you <strong>can</strong> access static methods and fields from an instance method.</li>
+    </ul>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>Hands-on:</strong> try writing your own static fields and static methods.</p>
+    </div>
+
+    <h3>Counting Instances with Static</h3>
+    <p>One common use for static variables is to keep track of how many instances of a class have been created. Note that an instance count reset to zero each time the application runs only keeps track of how many instances have been created during that particular execution of the program — not how many have ever been created.</p>
+
+    <h3>What Can Call What? — Static vs. Instance Calls</h3>
+    <pre><code>Type              Calling                       Legal?   How?
+----------------- ----------------------------- -------- --------------------------------
+Static method     Another static method/variable  Yes    Using the classname
+Static method     An instance method/variable      No    -
+Instance method   A static method/variable         Yes   Using the classname or a reference variable
+Instance method   Another instance method/variable Yes   Using a reference variable</code></pre>
+
+    <h3>Static Initializers</h3>
+    <ul>
+      <li>Java provides a feature called a <strong>static initializer</strong> that's designed specifically to let you initialize static fields.</li>
+    </ul>
+    <pre><code>static
+{
+    statements
+}</code></pre>
+    <ul>
+      <li>An initializer block begins with the word <code>static</code>.</li>
+      <li>You can have static initializers in the class body, outside any other block, such as the body of a method or constructor.</li>
+      <li>The first time you access a static member (a static field or a static method), any static initializers in the class are executed.</li>
+      <li>Static initializers are also executed the first time you create an instance — the static initializers are executed <strong>before</strong> the constructor is executed.</li>
+      <li>If a class has more than one static initializer, they are executed in the order in which they appear in the program.</li>
+    </ul>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>Hands-on:</strong> let's try some static initializers.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Preventing Instantiating a Class</h2>
+    <ul>
+      <li>To create a class instance, you have to have at least one public constructor. If you don't provide a constructor in your class, Java automatically inserts a default constructor, which happens to be public.</li>
+      <li>All you have to do <strong>to prevent a class instance from being created</strong> is provide a single <strong>private</strong> constructor:</li>
+    </ul>
+    <pre><code>public class MyClass
+{
+    private MyClass() {} // prevents instances
+    // static methods and fields go here
+}</code></pre>
+    <p>Now, because the constructor is private, the class can't be instantiated.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Hands-on discussion:</strong> why would we need to prevent instantiating a class? Example: the <code>Math</code> class. This idea also connects to the <strong>Singleton Design</strong> pattern.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Summary of Access Modifiers</h2>
+    <pre><code>Can access                                  private?  default (package-private)?  protected?  public?
+-------------------------------------------- --------- ---------------------------- ----------- --------
+Member in the same class                       Yes                Yes                  Yes        Yes
+Member in another class, same package          No                 Yes                  Yes        Yes
+Member in a superclass, different package      No                 No                   Yes        Yes
+Method/field in a non-superclass class,
+different package                              No                 No                   No         Yes</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Homework — Order of Initialization</h2>
+    <p>Try out your own coding to confirm this order:</p>
+    <ol>
+      <li>If there is a superclass, initialize it first.</li>
+      <li>Static variable declarations and static initializers, in the order they appear in the file.</li>
+      <li>Instance variable declarations and instance initializers, in the order they appear in the file.</li>
+      <li>The constructor.</li>
+    </ol>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Quiz 01</strong> is scheduled for 19th February 2026, 09.00 a.m. – 09.30 a.m., covering Lesson 01 (Introduction to OOP) and Lesson 02 (Classes and Objects — Part 01 and Part 02).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Summary</h2>
+    <ul>
+      <li>JAVA — <code>this</code> keyword (methods, constructors)</li>
+      <li>JAVA — Constructor Chaining</li>
+      <li>JAVA — Anonymous objects</li>
+      <li>JAVA — Garbage Collection</li>
+      <li>Static in Java (Static Fields, Static Methods, Static Initializers)</li>
+      <li>Preventing instantiating a class</li>
+    </ul>
+
+    <h3>References</h3>
+    <ul>
+      <li>Oracle Java Tutorials — "this" keyword and understanding class members</li>
+      <li><em>How To Program (Early Objects)</em> — H. Deitel and P. Deitel</li>
+      <li><em>Head First Java</em> — Kathy Sierra and Bert Bates</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Classes and Objects — Part 02: this Keyword, Constructor Chaining, Anonymous Objects, Garbage Collection & Statics',
+    subTopics: [
+      'JAVA — this Keyword',
+      'JAVA — Constructor Chaining',
+      'JAVA — Initializer (Initializer Block)',
+      'JAVA — Anonymous Objects',
+      'How Can an Object Be Unreferenced?',
+      'JAVA — Garbage Collection',
+      'JAVA — Working with Statics',
+      'Static Fields',
+      'Static Methods',
+      'What Can Call What? — Static vs. Instance Calls',
+      'Static Initializers',
+      'Preventing Instantiating a Class',
+      'Summary of Access Modifiers',
+    ],
+    definitions: [
+      { term: 'this', meaning: 'A reference every object has to itself, used inside a constructor or method to refer to the current object instance.' },
+      { term: 'Constructor Chaining', meaning: 'The ability to call one constructor from inside another — within the same class using this(), or to another class using super().' },
+      { term: 'Initializer Block', meaning: 'A block of code placed outside any method or constructor that runs whenever an instance of the class is created, before any constructor runs.' },
+      { term: 'Anonymous Object', meaning: 'An object created with no reference variable, usable only at the point of creation — e.g. new Calculation().fact(5);' },
+      { term: 'Garbage Collection', meaning: 'The automatic process by which the Java runtime reclaims memory from unreferenced (unused) objects.' },
+      { term: 'Static', meaning: 'A modifier describing a field or method that belongs to the class itself rather than to any particular instance.' },
+      { term: 'Static Initializer', meaning: 'A block beginning with the word static that runs once, before any constructor, the first time a class is loaded or an instance is created, to initialize static fields.' },
+      { term: 'Singleton Design', meaning: 'A design approach connected to preventing instantiation, in which a class allows only a single instance of itself to exist.' },
+    ],
+    keyPoints: [
+      'The this keyword solves the "same-named local and instance variable" problem — this.a=a; assigns the parameter to the instance field.',
+      'this can only be used to call another constructor in the very first statement of a constructor; constructors can be chained but not looped.',
+      'Constructor chaining within the same class uses this(); chaining to another class uses super() (covered under Inheritance).',
+      'Initializer blocks run before any constructor, in the order they appear, every time an instance is created.',
+      'An anonymous object has no reference variable and can only be used once, at creation time — e.g. new Calculation().fact(5);.',
+      'Objects become unreferenced (eligible for garbage collection) by nulling a reference, reassigning a reference elsewhere, or being created anonymously.',
+      'Garbage collection is Java\'s automatic reclaiming of memory from unreferenced objects, making Java more memory-efficient without manual effort.',
+      'Static fields and methods belong to the class itself, are accessed via the class name, and can be used without creating an instance.',
+      'A static method cannot access non-static (instance) methods or fields directly, since it has no object instance to reference.',
+      'Static initializers run before constructors, the first time a static member is accessed or an instance is created.',
+      'A class can be prevented from being instantiated by giving it a single private constructor — relevant to utility classes like Math and to the Singleton design pattern.',
+      'Order of initialization: superclass first, then static declarations/initializers in file order, then instance declarations/initializers in file order, then the constructor.',
+      'Access modifier visibility: private members are visible only in the same class; default (package-private) adds same-package access; protected adds subclasses in other packages; public is visible everywhere.',
+    ],
+  },
+},
 ]
