@@ -915,6 +915,316 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
   },
 },
 
+{
+  id: 4,
+  title: 'Designing & Developing E-Commerce Websites',
+  content: `
+    <span class="lesson-badge">LESSON 04</span>
+    <h1>Designing &amp; Developing E-Commerce Websites</h1>
+    <div class="meta-info">ICT2142 <span>•</span> 18 min read</div>
 
+    <h2>Learning Outcomes</h2>
+    <p>By the end of this lesson, you should understand:</p>
+    <ol>
+      <li><strong>Core Functions of an E-Commerce System</strong> — the essential front-end and back-end building blocks every online store needs.</li>
+      <li><strong>UX/UI Design Principles</strong> — design principles that build trust and guide customers smoothly toward purchase.</li>
+      <li><strong>Information Architecture &amp; Navigation</strong> — structuring content and menus so products are easy to find.</li>
+      <li><strong>Product Catalog, Search &amp; Filtering</strong> — designing listings, detail pages, search and faceted filtering.</li>
+      <li><strong>Responsive &amp; Mobile-First Design</strong> — adapting layouts across devices, with mobile as the starting point.</li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <h2>What Is an E-Commerce Website?</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A digital platform that lets a business showcase, sell and manage products or services online — covering the full customer journey from product discovery to payment and delivery.</p>
+    </div>
+    <ul>
+      <li>Combines a customer-facing <strong>storefront</strong> with back-office systems for inventory, orders and payments.</li>
+      <li>Must work reliably for many simultaneous users, across many devices and locations.</li>
+      <li>Success depends as much on <strong>design and usability</strong> as on the underlying technology.</li>
+    </ul>
+    <p>Three key characteristics of an e-commerce website:</p>
+    <ul>
+      <li><strong>Always On</strong> — the storefront operates continuously, worldwide, with no fixed opening hours.</li>
+      <li><strong>Data-Driven</strong> — clicks, searches and purchases can be tracked to continuously improve the experience.</li>
+      <li><strong>Multi-Device</strong> — customers move between desktop, tablet and phone within a single shopping journey.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Core Functions of an E-Commerce System</h2>
+
+    <h3>Front-End: Customer-Facing Functions</h3>
+    <p>The features a shopper interacts with directly while browsing and buying.</p>
+    <ul>
+      <li><strong>Product Browsing &amp; Catalog</strong> — category pages and listings that display products with images, names and prices.</li>
+      <li><strong>Search &amp; Filtering</strong> — tools that help shoppers locate specific products quickly within a large catalog.</li>
+      <li><strong>Shopping Cart</strong> — a temporary holding area for items a customer intends to purchase.</li>
+      <li><strong>Checkout &amp; Payment</strong> — the guided process that turns a cart into a confirmed, paid order.</li>
+      <li><strong>User Accounts</strong> — registration, login, saved addresses, order history and wishlists.</li>
+      <li><strong>Customer Support</strong> — live chat, FAQs and contact options that resolve doubts before they cause drop-off.</li>
+    </ul>
+
+    <h3>Back-End: Administrative &amp; System Functions</h3>
+    <p>The behind-the-scenes systems that keep the storefront running and up to date.</p>
+    <ul>
+      <li><strong>Inventory Management</strong> — tracking stock levels in real time so unavailable items aren't sold.</li>
+      <li><strong>Order Management</strong> — processing, packing, shipping and handling returns or exchanges.</li>
+      <li><strong>Content Management (CMS)</strong> — updating product details, pricing, banners and promotions without new code.</li>
+      <li><strong>Payment Gateway Integration</strong> — securely connecting to processors such as PayHere, Stripe or PayPal.</li>
+      <li><strong>User &amp; Access Management</strong> — controlling admin roles, permissions and customer account data.</li>
+      <li><strong>Analytics &amp; Reporting</strong> — measuring traffic, sales trends and conversion rates to guide decisions.</li>
+    </ul>
+
+    <h3>Payment Processing &amp; Security</h3>
+    <pre><code>Browse -> Add to Cart -> Checkout -> Payment Gateway -> Confirmation</code></pre>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Every completed sale depends on this hand-off being both smooth for the customer and secure end-to-end.</p>
+    </div>
+    <ul>
+      <li><strong>SSL / TLS Encryption</strong> — encrypts data in transit between the customer's browser and the server.</li>
+      <li><strong>PCI-DSS Compliance</strong> — the industry standard for handling and storing cardholder data safely.</li>
+      <li><strong>Tokenization</strong> — replaces sensitive card details with a non-reversible token for storage.</li>
+      <li><strong>Fraud Detection</strong> — flags unusual transaction patterns before an order is confirmed.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>UX/UI Design Principles for E-Commerce</h2>
+
+    <h3>UX vs UI in E-Commerce</h3>
+    <ul>
+      <li><strong>UX (User Experience)</strong> — how easily and confidently a customer can complete a task. Example: finding a laptop, comparing options and checking out without confusion.</li>
+      <li><strong>UI (User Interface)</strong> — the visual and interactive layer. Example: buttons, typography, colors, product cards, icons, spacing and form controls.</li>
+    </ul>
+
+    <h3>Core Design Principles</h3>
+    <ul>
+      <li><strong>Simplicity &amp; Clarity</strong> — minimise cognitive load: clear labels, short paths, no unnecessary steps.</li>
+      <li><strong>Consistency</strong> — uniform colours, fonts and button styles across every page and screen.</li>
+      <li><strong>Visual Hierarchy</strong> — guide the eye to what matters most: product, price, and call-to-action.</li>
+      <li><strong>Immediate Feedback</strong> — loading states, confirmations and clear error messages at every action.</li>
+      <li><strong>Accessibility</strong> — sufficient colour contrast, alt text and full keyboard navigation.</li>
+      <li><strong>Trust &amp; Credibility</strong> — a professional, polished look signals a safe place to enter payment details.</li>
+    </ul>
+
+    <h3>Visual Design Elements</h3>
+    <ul>
+      <li><strong>Colour</strong> — use brand colour purposefully; reserve one strong accent colour exclusively for calls-to-action like "Add to Cart".</li>
+      <li><strong>Typography</strong> — limit pages to two font families; keep prices and headings legible at a glance.</li>
+      <li><strong>Whitespace</strong> — avoid clutter; generous spacing lets product images and key details breathe.</li>
+      <li><strong>Imagery</strong> — high-quality, consistent product photography raises perceived value and trust.</li>
+    </ul>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>Good design:</strong> clear hierarchy, one CTA colour, plenty of whitespace. <strong>Poor design:</strong> competing colours, a crowded layout, and no clear indication of which button matters.</p>
+    </div>
+
+    <h3>Building Trust &amp; Reducing Friction</h3>
+    <ul>
+      <li>Trust badges &amp; secure checkout icons visible near payment fields.</li>
+      <li>Genuine customer reviews and star ratings on product pages.</li>
+      <li>Clear, prominent calls-to-action — one primary action per screen.</li>
+      <li>Transparent pricing — shipping and tax shown early, not at the last step.</li>
+      <li>Guest checkout available — registration is optional, not forced.</li>
+      <li>Return and refund policy is easy to find before purchase.</li>
+    </ul>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Example product page: <strong>Wireless Over-Ear Headphones</strong>, Rs. 12,500 (incl. tax, free shipping over Rs. 5,000), with 1,248 reviews, an "Add to Cart" button, and "Secure checkout • 30-day returns" shown directly beneath it.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Information Architecture &amp; Navigation Design</h2>
+
+    <h3>Structuring Content</h3>
+    <p><strong>Information architecture (IA)</strong> is the practice of organising, structuring and labelling content so it is findable and usable.</p>
+    <ul>
+      <li>Logical categorisation that matches how customers think about products.</li>
+      <li><strong>Shallow hierarchy</strong> — keep any product reachable within 2–3 clicks.</li>
+      <li>Consistent labelling of categories, filters and navigation terms.</li>
+      <li>Scalable structure that accommodates new products and categories.</li>
+    </ul>
+    <p>Example site hierarchy:</p>
+    <pre><code>Home
+ |-- Electronics
+ |      \`-- Laptops
+ |             \`-- Gaming Laptop X15
+ |-- Fashion
+ \`-- Home & Living
+
+Breadcrumb: Home > Electronics > Laptops > Gaming Laptop X15
+</code></pre>
+
+    <h3>Navigation Design Patterns</h3>
+    <ul>
+      <li><strong>Global Navigation</strong> — primary categories stay visible on every page.</li>
+      <li><strong>Mega Menus</strong> — multi-column dropdowns organise a large catalogue at a glance.</li>
+      <li><strong>Breadcrumbs</strong> — shows the current location and lets users step back easily.</li>
+      <li><strong>Sticky Navigation</strong> — menu and cart icon stay visible while the page is scrolled.</li>
+      <li><strong>Footer Navigation</strong> — secondary links (policies, contact, sitemap) live in the footer.</li>
+    </ul>
+    <p>Example mega menu under "Electronics":</p>
+    <pre><code>Laptops & PCs      Mobile & Tablets     Audio
+- Laptops          - Smartphones        - Headphones
+- Desktops         - Tablets            - Speakers
+- Monitors         - Accessories        - Earbuds
+
+Breadcrumb: Home > Electronics > Laptops > Gaming Laptops
+</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Product Catalog, Search &amp; Filtering</h2>
+
+    <h3>Listing &amp; Detail Page Design</h3>
+    <p><strong>Product Listing Page (PLP):</strong></p>
+    <ul>
+      <li>Grid or list view of products within a category.</li>
+      <li>Product image, name, price and rating snapshot.</li>
+      <li>Quick-add-to-cart without opening the full page.</li>
+      <li>Pagination or infinite scroll for large result sets.</li>
+    </ul>
+    <p><strong>Product Detail Page (PDP):</strong></p>
+    <ul>
+      <li>Image gallery with zoom, plus variant selectors.</li>
+      <li>Title, price, stock status and a clear primary CTA.</li>
+      <li>Description, specifications, and customer reviews.</li>
+    </ul>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Example PDP: <strong>Gaming Laptop X15</strong>, Rs. 385,000, in stock, with colour and storage (512GB / 1TB) selectors, an "Add to Cart" button, tabs for Specifications, Description, Reviews (326) and Q&amp;A, plus a "Related products" section.</p>
+    </div>
+
+    <h3>Search Features — Making Products Findable</h3>
+    <ul>
+      <li><strong>Autocomplete</strong> — suggests matching products and categories as the user types, before pressing enter.</li>
+      <li><strong>Typo Tolerance</strong> — a search for "sneekers" still returns results for "sneakers".</li>
+      <li><strong>Relevance Ranking</strong> — ordered by relevance, popularity and current stock availability.</li>
+      <li><strong>Visual &amp; Voice Search</strong> — emerging ways to search using a photo or a spoken query.</li>
+      <li><strong>No-Results Handling</strong> — suggest close alternatives instead of a dead end.</li>
+    </ul>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Prefix and fuzzy matching return relevant items instantly and keep the shopper in flow. For example, searching <code>run</code> matches "Running Shoes (Men)", "Running Shorts" and "Running Watch — GPS", even though only a partial word was typed.</p>
+    </div>
+
+    <h3>Filtering &amp; Sorting — Faceted Navigation</h3>
+    <ul>
+      <li><strong>Facets</strong> — price range, brand, size, colour, rating and availability.</li>
+      <li><strong>Sorting</strong> — relevance, price (low–high), newest, best-selling.</li>
+      <li><strong>Applied Filter Chips</strong> — active filters shown as removable tags above the results.</li>
+      <li><strong>Live Result Count</strong> — the number of matching products updates instantly.</li>
+    </ul>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Example: filtering the "Laptops" category by <strong>Brand: Dell</strong> and <strong>Price: 100k–300k</strong> narrows the catalog to 128 results, sorted by Price (Low to High), with both filters shown as removable chips above the results grid.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Responsive &amp; Mobile-First Design</h2>
+
+    <h3>Core Concepts</h3>
+    <ul>
+      <li><strong>Fluid Grid Layouts</strong> — proportional widths (%, fr) instead of fixed pixel columns.</li>
+      <li><strong>Flexible Images &amp; Media</strong> — images and video scale to fit within their containers.</li>
+      <li><strong>CSS Media Queries</strong> — breakpoints adapt the layout to the available screen width.</li>
+    </ul>
+
+    <h3>The Mobile-First Approach</h3>
+    <p>Design for the smallest screen and the biggest constraints first — limited space, touch input, variable network speed — then progressively enhance the layout for larger screens.</p>
+    <ul>
+      <li><strong>Thumb-Friendly Tap Targets</strong> — buttons and links sized at least ~44×44px so they're easy to tap accurately.</li>
+      <li><strong>Simplified Navigation</strong> — condensed, single-column layouts with a hamburger menu for secondary items.</li>
+      <li><strong>Streamlined Checkout</strong> — fewer form fields, autofill, and mobile wallets like Apple Pay or Google Pay.</li>
+      <li><strong>Fast Load Times</strong> — compressed images and lazy loading keep pages quick on mobile networks.</li>
+    </ul>
+
+    <h3>Comparison — Desktop vs. Mobile Layout</h3>
+    <p>Desktop uses a multi-column grid, full top navigation, and shows more content per screen. Mobile adapts with these key differences:</p>
+    <ul>
+      <li>Columns collapse to one.</li>
+      <li>Menu becomes a hamburger.</li>
+      <li>CTA sticks to the bottom.</li>
+      <li>Bigger tap targets, less on screen.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Summary</h2>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Core Functions</strong> — front-end browsing/checkout and back-end inventory/payments must work as one system.</p>
+    </div>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>UX/UI Principles</strong> — simplicity, consistency and visible trust signals turn visits into completed purchases.</p>
+    </div>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Information Architecture</strong> — a shallow, logical structure and clear navigation keep products findable.</p>
+    </div>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Catalog, Search &amp; Filters</strong> — well-designed listings, forgiving search and faceted filters help users decide fast.</p>
+    </div>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Responsive &amp; Mobile-First</strong> — design from the smallest screen up, since most shoppers arrive on a phone.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Designing & Developing E-Commerce Websites',
+    subTopics: [
+      'What Is an E-Commerce Website?',
+      'Front-End: Customer-Facing Functions',
+      'Back-End: Administrative & System Functions',
+      'Payment Processing & Security',
+      'UX vs UI in E-Commerce',
+      'Core Design Principles',
+      'Visual Design Elements',
+      'Building Trust & Reducing Friction',
+      'Structuring Content',
+      'Navigation Design Patterns',
+      'Listing & Detail Page Design',
+      'Search Features — Making Products Findable',
+      'Filtering & Sorting — Faceted Navigation',
+      'Core Concepts (Responsive Design)',
+      'The Mobile-First Approach',
+      'Comparison — Desktop vs. Mobile Layout',
+    ],
+    definitions: [
+      { term: 'E-Commerce Website', meaning: 'A digital platform that lets a business showcase, sell and manage products or services online, covering the full customer journey from discovery to payment and delivery.' },
+      { term: 'Information Architecture (IA)', meaning: 'The practice of organising, structuring and labelling content so it is findable and usable.' },
+      { term: 'UX (User Experience)', meaning: 'How easily and confidently a customer can complete a task on a website.' },
+      { term: 'UI (User Interface)', meaning: 'The visual and interactive layer of a website — buttons, typography, colors, icons and spacing.' },
+      { term: 'PCI-DSS Compliance', meaning: 'The industry standard for handling and storing cardholder data safely.' },
+      { term: 'Tokenization', meaning: 'Replacing sensitive card details with a non-reversible token for storage.' },
+      { term: 'Faceted Navigation', meaning: 'Filtering products by multiple attributes at once, such as price, brand, size, colour and rating.' },
+      { term: 'Mobile-First Design', meaning: 'Designing for the smallest screen and biggest constraints first, then progressively enhancing the layout for larger screens.' },
+    ],
+    keyPoints: [
+      'An e-commerce website combines a customer-facing storefront with back-office systems for inventory, orders and payments, and must be Always On, Data-Driven, and Multi-Device.',
+      'Front-end functions include product browsing, search, shopping cart, checkout, user accounts and customer support.',
+      'Back-end functions include inventory management, order management, CMS, payment gateway integration, user/access management and analytics.',
+      'Payment flow: Browse to Add to Cart to Checkout to Payment Gateway to Confirmation — secured by SSL/TLS encryption, PCI-DSS compliance, tokenization and fraud detection.',
+      'UX is about task completion; UI is the visual and interactive layer that supports it.',
+      'Core design principles: simplicity & clarity, consistency, visual hierarchy, immediate feedback, accessibility, and trust & credibility.',
+      'Trust is built through visible security badges, genuine reviews, transparent pricing, guest checkout, and an easy-to-find return policy.',
+      'Good information architecture keeps any product reachable within 2–3 clicks using a shallow, logical, consistently labelled hierarchy.',
+      'Navigation patterns include global navigation, mega menus, breadcrumbs, sticky navigation, and footer navigation.',
+      'Product Listing Pages (PLP) show product grids with quick-add-to-cart; Product Detail Pages (PDP) show galleries, variants, price, stock status and reviews.',
+      'Effective search includes autocomplete, typo tolerance, relevance ranking, visual/voice search, and no-results handling.',
+      'Faceted navigation lets shoppers filter by price, brand, size, colour, rating, with applied filter chips and a live result count.',
+      'Responsive design relies on fluid grid layouts, flexible images/media, and CSS media query breakpoints.',
+      'Mobile-first design starts with thumb-friendly tap targets, simplified navigation, streamlined checkout, and fast load times, then scales up to desktop.',
+    ],
+  },
+},
 
 ]

@@ -2060,4 +2060,309 @@ else
   },
 },
   
+{
+  id: 5,
+  title: 'Circular Linked Lists, and Stack & Queue Using Linked List',
+  content: `
+    <span class="lesson-badge">LESSON 05</span>
+    <h1>Circular Linked Lists, and Stack &amp; Queue Using Linked List</h1>
+    <div class="meta-info">ICT2113 <span>•</span> 12 min read</div>
+
+    <h2>What is a Circular Linked List?</h2>
+    <p>A <strong>circular linked list</strong> is a linked list that has no beginning and no end.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A <strong>singly linked list</strong> can be turned into a circular linked list simply by storing the address of the very first node inside the <code>next</code> field of the last node, instead of leaving it as <code>NULL</code>.</p>
+    </div>
+    <pre><code>START
+  |
+  v
+[10]->[20]->[30]->[40]->[50]
+  ^                        |
+  |________________________|
+</code></pre>
+
+    <h2>Circular Doubly Linked List</h2>
+    <p>A <strong>circular doubly linked list</strong> has both a successor pointer and a predecessor pointer, and both are arranged in a circular manner.</p>
+    <pre><code>START
+  |
+  v
+[10]<->[20]<->[30]
+  ^               |
+  |_______________|
+(both the next and prev pointers wrap around)
+</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Advantages of Circular Linked Lists</h2>
+    <ul>
+      <li><strong>Any node can be a starting point</strong> — we can traverse the whole list starting from any node. We just need to stop when the first visited node is visited again.</li>
+      <li><strong>Useful for queue implementation</strong> — unlike the normal implementation, we don't need to maintain two separate pointers for front and rear. We can maintain a pointer to the last inserted node, and the front can always be obtained as "next of last".</li>
+      <li><strong>Useful for applications that repeatedly go around the list</strong> — for example, when multiple applications are running on a PC, the operating system commonly keeps the running applications in a list and cycles through them, giving each a slice of time to execute, then moving on to the next. A circular list makes it convenient to jump back to the front of the list once the end is reached.</li>
+    </ul>
+
+    <h2>Applications of Circular Linked List</h2>
+    <ul>
+      <li><strong>Personal computers</strong> — all the running applications are kept in a circular linked list, and the operating system gives each one a fixed time slot, iterating over the list until all applications are completed.</li>
+      <li><strong>Multiplayer games</strong> — all the players are kept in a circular linked list, and the pointer keeps moving forward as a player's turn ends.</li>
+      <li><strong>Circular queues</strong> — a circular linked list can also be used to create a circular queue. In a normal queue, we have to keep two pointers, <code>FRONT</code> and <code>REAR</code>, in memory at all times. In a circular linked list, only one pointer is required.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Implementing a Circular Linked List</h2>
+    <p>Implementing a circular linked list is very easy, and is almost identical to a linear linked list implementation. The only difference is that, in a circular linked list, the <strong>last node's <code>next</code> pointer points back to the Head</strong> of the list. In a linear linked list, the last node simply holds <code>NULL</code> in its <code>next</code> pointer.</p>
+    <pre><code>HEAD
+ |
+ v
+[3|next]->[10|next]->[2|next]
+   ^                      |
+   |______________________|
+   (Last element points back to first)
+</code></pre>
+
+    <h3>Structure Definition for Circular Lists</h3>
+    <p>The structure definition of a circular linked list is exactly the same as that of a linear linked list.</p>
+    <pre><code>struct node{
+  int info;
+  struct node *next;
+};
+typedef struct node *NODEptr;
+</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Stack and Queue Implementation Using Linked List</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Stacks and queues do not have to be built using arrays — they can also be implemented using linked lists.</p>
+    </div>
+    <ul>
+      <li>The major problem with a stack/queue implemented using an <strong>array</strong> is that it only works for a <strong>fixed number of data values</strong>.</li>
+      <li>A stack/queue implemented using an array is not suitable when we don't know the size of the data we are going to use in advance.</li>
+      <li>A stack/queue implemented using a <strong>linked list</strong> can work for an <strong>unlimited number of values</strong>.</li>
+      <li>There is <strong>no need to fix the size</strong> at the beginning of the implementation.</li>
+      <li>A stack/queue implemented using a linked list can organize as many data values as we want.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Stack Implementation Using Linked List</h2>
+    <p>In a linked list implementation of a stack, every new element is inserted as the <strong>'top'</strong> element. Every newly inserted element is pointed to by <code>top</code>.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Example: if elements are inserted in the order 25, 32, 50, 99 — the <strong>last inserted node is 99</strong> and the <strong>first inserted node is 25</strong>. The <code>top</code> pointer points to 99.</p>
+    </div>
+
+    <h3>Setting Up the Stack</h3>
+    <p>The first thing required to make a stack using a linked list is the creation of the <code>top</code> pointer.</p>
+    <pre><code>struct node
+{
+  int data;
+  struct node *next;
+};
+typedef struct node node;
+node *top;
+</code></pre>
+    <p>The <strong>initialize</strong> function sets up the stack by making <code>top</code> equal to <code>NULL</code>.</p>
+    <pre><code>void initialize()
+{
+  top = NULL;
+}
+</code></pre>
+
+    <h3>Push Operation</h3>
+    <p>The most important operations on a stack are <strong>push</strong> and <strong>pop</strong>.</p>
+    <p>Steps for the push operation:</p>
+    <ol>
+      <li>Make a new node.</li>
+      <li>Give the <code>data</code> of the new node its value.</li>
+      <li>Point the <code>next</code> of the new node to the current top of the stack.</li>
+      <li>Make the <code>top</code> pointer point to this new node.</li>
+    </ol>
+    <pre><code>void push(int value)
+{
+    node *tmp;
+    tmp = malloc(sizeof(node));
+    tmp -> data = value;
+    tmp -> next = top;
+    top = tmp;
+}
+</code></pre>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Order matters: set <code>tmp -> next = top</code> <strong>before</strong> updating <code>top = tmp</code>. If you update <code>top</code> first, the link to the rest of the stack is lost.</p>
+    </div>
+
+    <h3>Pop Operation</h3>
+    <p>In the pop operation, we delete the topmost node and return its value.</p>
+    <ol>
+      <li>Make a temporary node.</li>
+      <li>Point this temporary node to the top of the stack.</li>
+      <li>Store the value of <code>data</code> of this temporary node in a variable.</li>
+      <li>Point the <code>top</code> pointer to the node next to the current top node.</li>
+      <li>Delete the temporary node using the <code>free</code> function.</li>
+      <li>Return the value stored in step 3.</li>
+    </ol>
+    <pre><code>int pop()
+{
+    node *tmp;
+    int n;
+    tmp = top;
+    n = tmp->data;
+    top = top->next;
+    free(tmp);
+    return n;
+}
+</code></pre>
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Always check <code>isempty()</code> before calling <code>pop()</code>. Calling <code>pop()</code> on an empty stack dereferences a <code>NULL</code> pointer.</p>
+    </div>
+
+    <h3>Other Stack Functions</h3>
+    <p>Other useful functions include <code>Top</code> and <code>isempty</code>.</p>
+    <pre><code>int Top()
+{
+  return top->data;
+}
+int isempty()
+{
+  return top==NULL;
+}
+</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Queue Implementation Using Linked List</h2>
+
+    <h3>Setting Up the Queue</h3>
+    <p>The first thing required to make a queue using a linked list is a node structure.</p>
+    <pre><code>struct node
+{
+  int data;
+  struct node *next;
+};
+typedef struct node node;
+</code></pre>
+    <p>Next, create a <code>queue</code> structure which stores the front node, the rear node, and the total number of nodes in the linked list. The <code>queue</code> structure has three parts — <strong>count</strong>, <strong>front</strong>, and <strong>rear</strong>.</p>
+    <pre><code>struct queue
+{ 
+  int count;
+  node *front;
+  node *rear;
+};
+typedef struct queue queue;
+</code></pre>
+    <p>The <strong>initialize</strong> function sets the queue's <code>count</code> to 0, and points both <code>front</code> and <code>rear</code> to <code>NULL</code>.</p>
+    <pre><code>void initialize(queue *q)
+{
+  q->count = 0;
+  q->front = NULL;
+  q->rear = NULL;
+}
+</code></pre>
+
+    <h3>Checking If the Queue Is Empty</h3>
+    <p>The <code>rear</code> (or <code>front</code>) will be <code>NULL</code> for an empty queue. So we can easily check whether a queue is empty by checking whether <code>rear</code> is <code>NULL</code>.</p>
+    <pre><code>int isempty(queue *q)
+{
+  return (q->rear == NULL);
+}
+</code></pre>
+
+    <h3>Enqueue Operation</h3>
+    <p>Steps for the enqueue operation:</p>
+    <ol>
+      <li>Make a new node — <code>node *tmp; tmp = malloc(sizeof(node));</code></li>
+      <li>Give the <code>data</code> of the new node its value — <code>tmp -> data = value;</code></li>
+      <li>If the queue is empty, point both <code>front</code> and <code>rear</code> of the queue to this node — <code>q->front = q->rear = tmp;</code></li>
+      <li>If it is not empty, point the <code>rear</code> of the queue to this new node, then make this new node the <code>rear</code> — <code>q->rear->next = tmp; q->rear = tmp;</code></li>
+    </ol>
+    <pre><code>void enqueue(queue *q, int value)
+{
+  node *tmp;
+  tmp = malloc(sizeof(node));
+  tmp->data = value;
+  tmp->next = NULL;
+  if(!isempty(q))
+  {
+    q->rear->next = tmp;
+    q->rear = tmp;
+  }
+  else
+  {
+    q->front = q->rear = tmp;
+  }
+  q->count++; 
+}
+</code></pre>
+
+    <h3>Dequeue Operation</h3>
+    <p>Steps for the dequeue operation:</p>
+    <ol>
+      <li>Make a temporary node.</li>
+      <li>Point this temporary node to the front node of the queue.</li>
+      <li>Store the value of <code>data</code> of this temporary node in a variable.</li>
+      <li>Point the <code>front</code> pointer to the node next to the current front node.</li>
+      <li>Delete the temporary node using the <code>free</code> function.</li>
+      <li>Return the value stored in step 3.</li>
+    </ol>
+    <pre><code>int dequeue(queue *q)
+{
+  node *tmp;
+  int n = q->front->data;
+  tmp = q->front;
+  q->front = q->front->next;
+  q->count--;
+  free(tmp);
+  return(n);
+}
+</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>A <strong>stack</strong> follows <strong>LIFO</strong> (Last In, First Out) — <code>push</code> and <code>pop</code> both happen at <code>top</code>. A <strong>queue</strong> follows <strong>FIFO</strong> (First In, First Out) — <code>enqueue</code> happens at <code>rear</code>, <code>dequeue</code> happens at <code>front</code>.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Circular Linked Lists, and Stack & Queue Implementation Using Linked Lists',
+    subTopics: [
+      'What is a Circular Linked List?',
+      'Circular Doubly Linked List',
+      'Advantages of Circular Linked Lists',
+      'Applications of Circular Linked List',
+      'Implementing a Circular Linked List',
+      'Structure Definition for Circular Lists',
+      'Stack and Queue Implementation Using Linked List',
+      'Stack Implementation Using Linked List',
+      'Queue Implementation Using Linked List',
+    ],
+    definitions: [
+      { term: 'Circular Linked List', meaning: 'A linked list with no beginning and no end; the last node\'s next pointer stores the address of the first node instead of NULL.' },
+      { term: 'Circular Doubly Linked List', meaning: 'A doubly linked list where both the successor (next) and predecessor (prev) pointers are arranged in a circular manner.' },
+      { term: 'Stack', meaning: 'A LIFO (Last In, First Out) data structure where insertion and deletion both happen at the top.' },
+      { term: 'Queue', meaning: 'A FIFO (First In, First Out) data structure where insertion happens at the rear and deletion happens at the front.' },
+      { term: 'push', meaning: 'The stack operation that inserts a new node at the top.' },
+      { term: 'pop', meaning: 'The stack operation that removes and returns the value of the top node.' },
+      { term: 'enqueue', meaning: 'The queue operation that inserts a new node at the rear.' },
+      { term: 'dequeue', meaning: 'The queue operation that removes and returns the value of the front node.' },
+    ],
+    keyPoints: [
+      'A circular linked list has no beginning or end — the last node\'s next pointer stores the address of the first node instead of NULL.',
+      'A circular doubly linked list has both next and prev pointers wrapping around in a circular manner.',
+      'Circular linked lists allow traversal starting from any node; you stop when the starting node is reached again.',
+      'Circular linked lists are useful for queue implementation because only one pointer (to the last node) is needed instead of separate front and rear pointers.',
+      'Operating systems use circular linked lists to cycle through running applications, giving each a time slice.',
+      'Multiplayer games use circular linked lists to cycle through players\' turns.',
+      'The struct definition for a circular linked list node is identical to that of a linear linked list node.',
+      'Array-based stacks/queues have a fixed size; linked-list-based stacks/queues can grow to hold an unlimited number of values.',
+      'Stack: push inserts at top, pop removes from top — LIFO order.',
+      'Queue: enqueue inserts at rear, dequeue removes from front — FIFO order.',
+      'A linked-list queue needs a queue structure holding count, front, and rear pointers.',
+      'Always check isempty() before calling pop() (stack) or dequeue() (queue) to avoid NULL pointer errors.',
+    ],
+  },
+},
 ]
