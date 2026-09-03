@@ -1446,7 +1446,7 @@ Enqueue:                front =  2, rear =  1   [ 6 , 7 , 3 , 4 , 5 ]  ← Queue
 
 {
   id: 4,
-  title: 'Linked Lists',
+  title: 'Linked Lists - 01',
   content: `
     <span class="lesson-badge">LESSON 04</span>
     <h1>Linked Lists</h1>
@@ -2062,7 +2062,7 @@ else
   
 {
   id: 5,
-  title: 'Circular Linked Lists, and Stack & Queue Using Linked List',
+  title: 'Linked Lists - 02',
   content: `
     <span class="lesson-badge">LESSON 05</span>
     <h1>Circular Linked Lists, and Stack &amp; Queue Using Linked List</h1>
