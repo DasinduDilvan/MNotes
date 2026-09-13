@@ -1224,4 +1224,671 @@ different package                              No                 No            
     ],
   },
 },
+
+{
+  id: 3,
+  title: 'Inheritance in Java',
+  content: `
+    <span class="lesson-badge">LESSON 03</span>
+    <h1>Inheritance in Java</h1>
+    <div class="meta-info">ICT2122 <span>•</span> 18 min read</div>
+
+    <p>This lesson introduces <strong>Inheritance</strong>, one of the four main ideas in Object-Oriented Programming (OOP). You will learn what inheritance is, how to create subclasses in Java, the different types of inheritance, and important keywords like <code>extends</code>, <code>super</code>, <code>this</code>, and <code>final</code>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Recap: What We Learned Before</h2>
+    <p>Before starting this lesson, let's quickly remember what we studied earlier:</p>
+    <ul>
+      <li><strong>Java <code>this</code> keyword</strong> — used in methods and constructors</li>
+      <li><strong>Constructor Chaining</strong> in Java</li>
+      <li><strong>Anonymous objects</strong> in Java</li>
+      <li><strong>Garbage Collection</strong> in Java</li>
+      <li><strong>Static in Java</strong>
+        <ul>
+          <li>Static Fields</li>
+          <li>Static Methods</li>
+          <li>Static Initializers</li>
+        </ul>
+      </li>
+      <li>Preventing a class from being instantiated</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>What You Will Learn Today</h2>
+    <ul>
+      <li>Inheritance (with examples and hands-on practice)</li>
+      <li>Creating Subclasses</li>
+      <li>Behavior of Java Access Modifiers</li>
+      <li>Types of inheritance in Java</li>
+      <li>Overriding Methods</li>
+      <li>Hiding Methods</li>
+      <li>Hiding Fields</li>
+      <li>Usage of <code>this</code> and <code>super</code> in Subclasses</li>
+      <li>Constructors in Subclasses</li>
+      <li>Usage of the <code>final</code> keyword</li>
+      <li>Casting Objects</li>
+      <li>Determining an Object's Type</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Object-Oriented Concepts</h2>
+    <p><strong>Object-Oriented Programming (OOP)</strong> makes software development and maintenance easier by giving us some important concepts:</p>
+    <ul>
+      <li><strong>Object</strong></li>
+      <li><strong>Class</strong></li>
+      <li><strong>Inheritance</strong></li>
+      <li><strong>Polymorphism</strong></li>
+      <li><strong>Abstraction</strong></li>
+      <li><strong>Encapsulation</strong></li>
+    </ul>
+    <p>This lesson focuses on <strong>Inheritance</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Classes and Objects</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A <strong>class</strong> is like a cookie cutter — it defines the shape of objects. <strong>Objects</strong> are like cookies — they are <strong>instances</strong> of the class.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>What is Inheritance?</h2>
+    <p>Inheritance happens <strong>when one object (sub class) acquires all the properties and behaviors of another object (super class)</strong>. It lets you create classes that are derived from other classes.</p>
+    <ul>
+      <li>A class that is derived from another class is called a <strong>sub class</strong> (also called a derived class, extended class, or child class).</li>
+      <li>The class from which the subclass is derived is called a <strong>super class</strong> (also called a base class or a parent class).</li>
+    </ul>
+
+    <pre><code>Super Class:   A
+                |
+Sub Class:     B</code></pre>
+
+    <p>A derived class automatically takes on all the behavior and attributes of its base class:</p>
+    <ul>
+      <li>A subclass inherits all the members of its superclass — <strong>fields</strong>, <strong>methods</strong>, and <strong>nested classes</strong>.</li>
+      <li>A derived class can add new features by defining its own methods and fields.</li>
+      <li>A derived class can also change the behavior it got from the base class.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Inheritance is best used to build <strong>is-a</strong> type relationships. For example, a Car <em>is a</em> Vehicle.</p>
+    </div>
+
+    <p>The idea is to add what you want to the new class so it has more customized features than the original class. The subclass shows the behaviors of its superclass and can also add behaviors of its own. This is why inheritance is sometimes called <strong>specialization</strong>.</p>
+
+    <ul>
+      <li>The <strong>direct superclass</strong> is the superclass that the subclass explicitly inherits from.</li>
+      <li>An <strong>indirect superclass</strong> is any class above the direct superclass in the class hierarchy.</li>
+      <li>The Java class hierarchy begins with the class <code>Object</code> (found in the package <code>java.lang</code>). Every class in Java directly or indirectly extends (or "inherits from") <code>Object</code>.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Java supports only <strong>single inheritance</strong> for classes — each class is derived from exactly one direct superclass.</p>
+    </div>
+
+    <h3>Example: Animal Classification</h3>
+    <p>Think of <strong>Animals</strong> as the super class. <strong>Amphibians</strong>, <strong>Reptiles</strong>, <strong>Mammals</strong>, and <strong>Birds</strong> are all sub classes of Animals — each one inherits the general features of an animal, while also adding its own special features.</p>
+
+    <div class="divider"></div>
+
+    <h2>Hands-On: Creating Subclasses</h2>
+    <p>To create a subclass in Java, use the <code>extends</code> keyword:</p>
+
+    <pre><code>public class ClassName extends BaseClass {
+    // class body
+}</code></pre>
+
+    <p>Suppose you have a class named <code>Vehicle</code> with one method, <code>start()</code>, that prints "Starting….":</p>
+
+    <pre><code>public class Vehicle {
+    public void start(){
+        System.out.println("Starting ….");
+    }
+}</code></pre>
+
+    <p>There are many kinds of vehicles. If you want to specialize the <code>Vehicle</code> class into a <code>Car</code> class, you can use inheritance with the <code>extends</code> keyword:</p>
+
+    <pre><code>public class Car extends Vehicle
+{
+    ……….
+    ……….
+    ……….
+}</code></pre>
+
+    <p><strong>Car</strong> is derived from the <strong>Vehicle</strong> class, so it will inherit the <code>start()</code> method from <code>Vehicle</code>.</p>
+
+    <p>You can also add your own data members and methods in subclasses:</p>
+
+    <pre><code>public class Car extends Vehicle {
+    public void drive() {
+        System.out.println("Driving ….");
+    }
+}</code></pre>
+
+    <p>Now you can access both the <code>start()</code> method and the <code>drive()</code> method through an object of the <code>Car</code> class:</p>
+
+    <pre><code>class VehicleDemo {
+    public static void main(String[] args) {
+        System.out.println("Creating a Car");
+        Car c = new Car();
+        c.start();
+        c.drive();
+    }
+}</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>Homework:</strong> Add a field <code>double speed = 40.0;</code> to the <code>Vehicle</code> class. Then try to access <code>speed</code> through a <code>Car</code> object using the dot (.) operator, changing the access modifier of <code>speed</code> to <code>public</code>, <code>private</code>, <code>protected</code>, and <code>default</code> inside the <code>VehicleDemo</code> class, and see what happens.</p>
+    </div>
+
+    <pre><code>public class Vehicle {
+    double speed = 40.0 ;
+    public void start(){
+        System.out.println("Starting ….");
+    }
+}</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Behavior of Java Access Modifiers</h2>
+    <p>This table shows where each access modifier can be used:</p>
+
+    <pre><code>Access Modifier | Within Class | Within Package | Outside Package (Subclass Only) | Outside Package
+----------------|--------------|-----------------|-----------------------------------|-----------------
+Private         |     Yes      |       No        |                No                 |       No
+Default         |     Yes      |       Yes       |                No                 |       No
+Protected       |     Yes      |       Yes       |                Yes                |       No
+Public          |     Yes      |       Yes       |                Yes                |       Yes</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Types of Inheritance in Java</h2>
+    <p>Java supports several types of inheritance:</p>
+    <ul>
+      <li>Single Inheritance</li>
+      <li>Multilevel Inheritance</li>
+      <li>Hierarchical Inheritance</li>
+      <li>Hybrid Inheritance</li>
+      <li>Multiple Inheritance → <strong>Not supported</strong> in Java</li>
+    </ul>
+
+    <h3>Single Inheritance</h3>
+    <p>One class extends one other class.</p>
+    <pre><code>class A {
+}
+class B extends A {
+}
+
+   A
+   |
+   B
+(Single Inheritance)</code></pre>
+
+    <h3>Multilevel Inheritance</h3>
+    <p>A class extends a class, which itself extends another class — forming a chain.</p>
+    <pre><code>class A {
+}
+class B extends A {
+}
+class C extends B {
+}
+
+   A
+   |
+   B
+   |
+   C
+(Multilevel Inheritance)</code></pre>
+
+    <h3>Hierarchical Inheritance</h3>
+    <p>Multiple classes extend the same single superclass.</p>
+    <pre><code>class A {
+}
+class B extends A {
+}
+class C extends A {
+}
+class D extends A {
+}
+
+        A
+      / | \\
+     B  C  D
+(Hierarchical Inheritance)</code></pre>
+
+    <h3>Hybrid Inheritance</h3>
+    <p>A mix of more than one type of inheritance, for example hierarchical combined with multilevel.</p>
+    <pre><code>class A {
+}
+class B extends A {
+}
+class C extends A {
+}
+class D extends C {
+}
+
+        A
+       / \\
+      B   C
+          |
+          D
+(Hybrid Inheritance)</code></pre>
+
+    <h3>Multiple Inheritance</h3>
+    <p>This means one class extends more than one class at the same time.</p>
+    <pre><code>class A {
+}
+class B {
+}
+class C extends A, B {
+}
+
+   A       B
+    \\     /
+      C
+(Multiple Inheritance — this is NOT allowed in Java)</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Java does <strong>not</strong> support multiple inheritance of classes (one class extending two or more classes at once). Writing <code>class C extends A, B</code> will not compile.</p>
+    </div>
+
+    <h3>Why Isn't Multiple Inheritance Allowed? (Diamond Problem)</h3>
+    <p>The reason is called the <strong>Diamond Problem</strong>.</p>
+    <p>Imagine <code>CDBurner</code> and <code>DVDBurner</code> both inherit from <code>DigitalRecorder</code>, and both override the <code>burn()</code> method. Both also inherit the same instance variable, <code>i</code>.</p>
+    <p>Now imagine that <code>i</code> is used by both <code>CDBurner</code> and <code>DVDBurner</code>, but with different values. If a class called <code>ComboDrive</code> inherits from both of them, which value of <code>i</code> should it use? And when you call <code>burn()</code> on <code>ComboDrive</code>, which version of <code>burn()</code> should run — the one from <code>CDBurner</code> or the one from <code>DVDBurner</code>?</p>
+
+    <pre><code>          DigitalRecorder
+           (int i, burn())
+          /                \\
+    CDBurner            DVDBurner
+     (burn())            (burn())
+          \\                /
+            ComboDrive</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>This confusion is called the <strong>Diamond Problem</strong>. Java avoids it by not allowing multiple inheritance of classes. If similar functionality is needed, <strong>Interfaces</strong> can be used instead.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Overriding Methods (Instance Methods)</h2>
+    <p>An instance method in a subclass <strong>overrides</strong> the superclass's method when it has:</p>
+    <ul>
+      <li>The same <strong>signature</strong> — the same name, plus the same number and type of parameters, and</li>
+      <li>The same <strong>return type</strong></li>
+      <li>as an instance method in the superclass.</li>
+    </ul>
+    <p>Use the <code>@Override</code> annotation to mark an overriding method.</p>
+
+    <pre><code>public class Car extends Vehicle {
+    @Override
+    public void start(){
+        System.out.println("Car is Starting ….");
+    }
+
+    public void drive() {
+        System.out.println("Driving ….");
+    }
+}</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Return type:</strong> An overriding method can return a <strong>covariant return type</strong> (a subtype of the original return type).</p>
+      <p><strong>Access modifier:</strong> An overriding method can allow <em>more</em> access than the overridden method, but not <em>less</em>. For example, a <code>protected</code> method in the superclass can be made <code>public</code> in the subclass ✓, but it cannot be made <code>private</code> in the subclass ✗.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Hiding Methods (Static / Class Methods)</h2>
+    <p>If a subclass defines a <strong>static method</strong> with the same signature as a static method in the superclass, the method in the subclass <strong>hides</strong> the one in the superclass — this is different from overriding.</p>
+
+    <pre><code>// In Vehicle
+public static void printTopSpeed(){
+    System.out.println("Top speed of Vehicle is 50");
+}
+
+// In Car
+public static void printTopSpeed(){
+    System.out.println("Top speed of Car is 300");
+}</code></pre>
+
+    <p>Here is a summary of what happens when a subclass defines a method with the same signature as one in the superclass:</p>
+
+    <pre><code>                          | Superclass Instance Method | Superclass Static Method
+--------------------------|-----------------------------|---------------------------
+Subclass Instance Method  | Overrides                   | Compile-time error
+Subclass Static Method    | Compile-time error          | Hides</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Mixing an instance method with a static method of the same signature between a superclass and subclass causes a <strong>compile-time error</strong>. Only instance-instance (overriding) and static-static (hiding) combinations are allowed.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Hiding Fields</h2>
+    <p>Within a class, a field with the <strong>same name</strong> as a field in the superclass <strong>hides</strong> the superclass's field — even if their types are different.</p>
+    <p>To access the superclass's hidden field, you must use the <code>super</code> keyword.</p>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>It is generally <strong>not recommended</strong> to hide fields, since it makes code harder to read.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Usage of <code>this</code> and <code>super</code> in Subclasses</h2>
+
+    <h3>The <code>this</code> keyword</h3>
+    <ul>
+      <li>Refers to the current object instance.</li>
+      <li>Used to tell apart a local variable or parameter from a class field with the same name.</li>
+    </ul>
+
+    <h3>The <code>super</code> keyword</h3>
+    <p>The <code>super</code> keyword is used when a subclass needs to access members of its superclass.</p>
+    <ul>
+      <li><code>super.fieldName</code> — refers to the immediate parent class's instance variable.</li>
+      <li><code>super.methodName()</code> — invokes the immediate parent class's method.</li>
+      <li><code>super()</code> — invokes the immediate parent class's constructor.</li>
+    </ul>
+
+    <p><strong>Referring to a parent class method:</strong></p>
+    <pre><code>// In Car
+@Override
+public void start(){
+    System.out.println("Car is Starting ….");
+    super.start();
+}</code></pre>
+    <p>Use <code>super.methodName()</code> inside an overriding (subclass) method to also call the overridden (superclass) method.</p>
+
+    <p><strong>Referring to a parent class instance variable:</strong></p>
+    <pre><code>// In Vehicle
+public String color = "White";
+
+// In Car
+public void printColor(){
+    color = "Red";
+    System.out.println("Car color : " + color);      // this.color
+    System.out.println("Vehicle color : " + super.color);
+}</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Constructors in Subclasses</h2>
+    <p>Creating a subclass object begins a <strong>chain of constructor calls</strong>:</p>
+    <ul>
+      <li>Before doing its own work, the subclass constructor either explicitly uses <code>super</code> to call a constructor in its direct superclass, or implicitly calls the superclass's default (no-argument) constructor.</li>
+      <li>If the superclass is itself a subclass, its constructor invokes the constructor of the next class up the hierarchy, and so on.</li>
+      <li>The last constructor called in the chain is always the <code>Object</code> class's constructor.</li>
+      <li>The original subclass constructor's body finishes executing <strong>last</strong>.</li>
+      <li>Each superclass's constructor works on the superclass instance variables that the subclass object inherits.</li>
+    </ul>
+
+    <p>Suppose class <code>A</code> has a constructor with no parameters:</p>
+    <pre><code>class A {
+    A() {
+        System.out.println("Inside A's Constructor");
+    }
+}</code></pre>
+
+    <p>Now derive a subclass <code>B</code> from <code>A</code>:</p>
+    <pre><code>class B extends A {
+}</code></pre>
+
+    <p>When you create an object of class <code>B</code>, the constructor in class <code>A</code> is called automatically:</p>
+    <pre><code>public class App {
+    public static void main(String[] args) {
+        B obj = new B();
+    }
+}</code></pre>
+
+    <p>Output:</p>
+    <pre><code>Inside A's Constructor</code></pre>
+
+    <p>Now suppose you add a constructor to class <code>B</code> that also takes no parameters:</p>
+    <pre><code>class B extends A {
+    B() {
+        System.out.println("Inside B's Constructor");
+    }
+}</code></pre>
+
+    <p>When you create an object of class <code>B</code>, the constructors from <strong>both</strong> <code>A</code> and <code>B</code> run:</p>
+    <pre><code>Output:
+Inside A's Constructor
+Inside B's Constructor</code></pre>
+
+    <p>Now suppose you change <code>B</code>'s constructor so it takes one parameter:</p>
+    <pre><code>class B extends A {
+    B(String s) {
+        System.out.println("Inside B's Parameterized Constructor");
+        System.out.println(s);
+    }
+}</code></pre>
+
+    <pre><code>class App {
+    public static void main(String arg[]) {
+        B obj = new B("Hello");
+    }
+}</code></pre>
+    <p>What do you think the output will be? Try it out and check your answer.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Things to remember about <code>super()</code>:</p>
+      <ul>
+        <li>The <code>super()</code> call must be the <strong>very first statement</strong> in the constructor.</li>
+        <li>If you don't explicitly call <code>super</code>, the compiler automatically inserts a call to the base class's default constructor. In that case, the base class <strong>must have</strong> a default constructor — otherwise the compiler refuses to compile the program.</li>
+        <li>If the superclass is itself a subclass, its constructor is called the same way. This continues all the way up the hierarchy until reaching the <code>Object</code> class, which has no superclass.</li>
+      </ul>
+    </div>
+
+    <p><strong>Homework example:</strong></p>
+    <pre><code>class Box {
+    double width;
+    double height;
+    double depth;
+
+    Box(double w, double h, double d) {
+        width = w;
+        height = h;
+        depth = d;
+    }
+}</code></pre>
+
+    <p>Without using the <code>super</code> keyword:</p>
+    <pre><code>public class BoxWeight extends Box {
+    double weight;
+
+    BoxWeight(double w, double h, double d, double m) {
+        width = w;
+        height = h;
+        depth = d;
+        weight = m;
+    }
+}</code></pre>
+
+    <p>The same code written using the <code>super</code> keyword:</p>
+    <pre><code>public class BoxWeight extends Box {
+    double weight;
+
+    BoxWeight(double w, double h, double d, double m) {
+        super(w, h, d);
+        weight = m;
+    }
+}</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Using <code>super(w, h, d)</code> is cleaner — it lets the parent class handle its own fields instead of repeating that logic in the subclass.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Usage of the <code>final</code> Keyword</h2>
+    <ul>
+      <li><strong><code>final</code> with a variable</strong> — creates a constant whose value cannot be changed after it has been set.</li>
+      <li><strong><code>final</code> with a method</strong> — a final method cannot be overridden by a subclass.
+        <pre><code>public final void eat() { }</code></pre>
+      </li>
+      <li><strong><code>final</code> with a class</strong> — a final class cannot be used as a base class (it cannot be extended).
+        <pre><code>public final class MyConstants { }</code></pre>
+        In a final class, all of its methods are automatically considered final as well.
+      </li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Casting Objects</h2>
+    <p><strong>Casting</strong> means taking an object of one particular type and treating it as another object type. There are two ways to do this:</p>
+    <ul>
+      <li><strong>Implicit casting</strong> — known as <strong>up-casting</strong> (subclass to super class).</li>
+      <li><strong>Explicit casting</strong> — known as <strong>down-casting</strong> (super class to subclass).</li>
+    </ul>
+
+    <h3>Implicit Casting (Up-Casting)</h3>
+    <p>This shows the use of an object of one type in place of another type, among the objects allowed by inheritance:</p>
+    <pre><code>Object obj = new Car();   // Object is an indirect super class of Car
+Vehicle v = new Car();    // Vehicle is the direct super class of Car</code></pre>
+
+    <h3>Explicit Casting (Down-Casting)</h3>
+    <p>Java does not allow you to assign a super class object to a subclass variable implicitly. To do this, you need <strong>explicit casting</strong>:</p>
+    <pre><code>Car myCar = obj;         // compile time error
+Car myCar = (Car) obj;   // explicit casting - correct</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Down-casting requires explicit conversion using <code>(TypeName)</code>. Forgetting this causes a compile-time error.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Determining an Object's Type</h2>
+    <p>Use the <code>instanceof</code> operator to check an object's type:</p>
+
+    <pre><code>Vehicle v = new Vehicle();
+Car c = new Car();
+Vehicle v2 = new Car();
+
+c instanceof Car        // true
+c instanceof Vehicle    // true
+c instanceof Object     // true
+
+v instanceof Car        // false</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Even though the variable <code>v2</code> is declared as type <code>Vehicle</code>, the actual object assigned to it is a <code>Car</code>. So <code>v2 instanceof Car</code> would be <strong>true</strong> — the declared type and the actual object type can be different because of inheritance.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Lesson Summary</h2>
+    <p>In this lesson, we covered:</p>
+    <ul>
+      <li>Inheritance — with examples and hands-on practice</li>
+      <li>Creating Sub Classes</li>
+      <li>Behavior of Java Access Modifiers</li>
+      <li>Types of inheritance in Java (Single, Multilevel, Hierarchical, Hybrid, Multiple)</li>
+      <li>Overriding Methods</li>
+      <li>Hiding Methods</li>
+      <li>Hiding Fields</li>
+      <li>Usage of <code>this</code> and <code>super</code> in Subclasses</li>
+      <li>Constructors in Subclasses</li>
+      <li>Usage of the <code>final</code> keyword</li>
+      <li>Casting Objects</li>
+      <li>Determining an Object's Type</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>References</h2>
+    <ul>
+      <li><code>https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html</code></li>
+      <li><code>https://docs.oracle.com/javase/tutorial/java/concepts/inheritance.html</code></li>
+      <li><strong>How To Program (Early Objects)</strong> — by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> — by Kathy Sierra and Bert Bates</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Inheritance in Java',
+    subTopics: [
+      'Object-Oriented Concepts',
+      'Classes and Objects',
+      'What is Inheritance?',
+      'Example: Animal Classification',
+      'Creating Subclasses',
+      'Behavior of Java Access Modifiers',
+      'Types of Inheritance in Java',
+      'Single Inheritance',
+      'Multilevel Inheritance',
+      'Hierarchical Inheritance',
+      'Hybrid Inheritance',
+      'Multiple Inheritance and the Diamond Problem',
+      'Overriding Methods (Instance Methods)',
+      'Hiding Methods (Static Methods)',
+      'Hiding Fields',
+      'Usage of this and super in Subclasses',
+      'Constructors in Subclasses',
+      'Usage of the final Keyword',
+      'Casting Objects',
+      "Determining an Object's Type (instanceof)",
+    ],
+    definitions: [
+      { term: 'Class', meaning: 'A blueprint (like a cookie cutter) that defines the shape and structure of objects.' },
+      { term: 'Object', meaning: 'An instance of a class, created from that class blueprint.' },
+      { term: 'Inheritance', meaning: 'When one class (subclass) acquires the properties and behaviors of another class (superclass).' },
+      { term: 'Subclass', meaning: 'A class derived from another class; also called a derived class, extended class, or child class.' },
+      { term: 'Superclass', meaning: 'The class from which a subclass is derived; also called a base class or parent class.' },
+      { term: 'Direct superclass', meaning: 'The superclass a subclass explicitly inherits from using extends.' },
+      { term: 'Indirect superclass', meaning: 'Any class above the direct superclass in the class hierarchy.' },
+      { term: 'Single inheritance', meaning: 'A class extends exactly one direct superclass; the only kind of class inheritance Java supports.' },
+      { term: 'Multilevel inheritance', meaning: 'A chain of inheritance where a class extends a subclass, which itself extends another class.' },
+      { term: 'Hierarchical inheritance', meaning: 'Multiple subclasses extend the same single superclass.' },
+      { term: 'Hybrid inheritance', meaning: 'A combination of more than one type of inheritance, such as hierarchical and multilevel together.' },
+      { term: 'Multiple inheritance', meaning: 'A class extending more than one class at the same time; not supported by Java for classes.' },
+      { term: 'Diamond problem', meaning: 'The ambiguity that occurs when a class inherits the same member through two different paths, making it unclear which version to use; the reason Java disallows multiple inheritance of classes.' },
+      { term: 'Overriding', meaning: 'Defining an instance method in a subclass with the same signature and return type as one in the superclass, replacing its behavior.' },
+      { term: '@Override annotation', meaning: 'An annotation used to mark a method that overrides a superclass method.' },
+      { term: 'Covariant return type', meaning: 'A return type in an overriding method that is a subtype of the return type in the overridden method.' },
+      { term: 'Hiding', meaning: "When a subclass defines a static method or field with the same name as one in the superclass, hiding the superclass's version instead of overriding it." },
+      { term: 'this keyword', meaning: 'Refers to the current object instance; used to distinguish a field from a local variable or parameter with the same name.' },
+      { term: 'super keyword', meaning: 'Used by a subclass to access the fields, methods, or constructor of its immediate superclass.' },
+      { term: 'final keyword', meaning: 'Used to create constants, prevent a method from being overridden, or prevent a class from being extended.' },
+      { term: 'Casting', meaning: 'Treating an object of one type as another type, allowed only between related classes.' },
+      { term: 'Up-casting (implicit casting)', meaning: 'Treating a subclass object as its superclass type; done automatically by Java.' },
+      { term: 'Down-casting (explicit casting)', meaning: 'Treating a superclass-typed object as its subclass type; must be written explicitly using (TypeName).' },
+      { term: 'instanceof operator', meaning: 'Checks whether an object is an instance of a particular class or its subclass.' },
+    ],
+    keyPoints: [
+      'Inheritance lets a subclass acquire fields, methods, and nested classes from its superclass.',
+      'Use the extends keyword to create a subclass: class Sub extends Super.',
+      'Java supports only single inheritance for classes — a class can extend just one direct superclass.',
+      'Every class in Java directly or indirectly inherits from the Object class.',
+      'Java does NOT support multiple inheritance of classes because of the Diamond Problem; interfaces can be used instead.',
+      'The types of inheritance are Single, Multilevel, Hierarchical, Hybrid, and Multiple (unsupported in Java).',
+      'Overriding requires the same method signature and the same (or a covariant) return type as the superclass method; mark it with @Override.',
+      "An overriding method's access modifier can be more open but never more restrictive than the superclass method's.",
+      'Static methods with the same signature in subclass and superclass HIDE each other; they do not override.',
+      'Mixing an instance method in one class with a static method of the same signature in the related class causes a compile-time error.',
+      "Fields with the same name in subclass and superclass are hidden, not overridden; access the superclass field using super.fieldName.",
+      "super.methodName() calls the immediate parent class's method; super() calls the immediate parent class's constructor.",
+      'The super() call, if used, must be the first statement in a constructor.',
+      "If a subclass constructor doesn't explicitly call super(), Java automatically calls the superclass's no-argument constructor.",
+      'If the superclass has no default constructor and the subclass does not call a matching super(...), the code will not compile.',
+      'final variables cannot be changed once initialized; final methods cannot be overridden; final classes cannot be extended.',
+      'Up-casting (subclass to superclass) happens automatically; down-casting (superclass to subclass) needs explicit casting, like (Car) obj.',
+      "Use the instanceof operator to check an object's actual type at runtime.",
+    ],
+  },
+},
+
 ]

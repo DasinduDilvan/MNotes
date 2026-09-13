@@ -14,12 +14,7 @@ const courses = [
     name: 'Object Oriented Programming',
     desc: 'Classes, objects, inheritance, polymorphism, encapsulation, and abstraction.',
   },
-  {
-    id: 'ict2132',
-    code: 'ICT2132',
-    name: 'Object Oriented Programming Practicum',
-    desc: 'Hands-on lab exercises, coding projects, and practical OOP implementations.',
-  },
+
   {
     id: 'ict2142',
     code: 'ICT2142',
