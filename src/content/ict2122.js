@@ -374,10 +374,10 @@ gatesAccount = new BankAccount();</code></pre>
 
 {
   id: 2,
-  title: 'Classes and Objects',
+  title: 'Classes and Objects - P01',
   content: `
     <span class="lesson-badge">LESSON 02</span>
-    <h1>Classes and Objects</h1>
+    <h1>Classes and Objects - Part 01</h1>
     <div class="meta-info">ICT2122 <span>•</span> 13 min read</div>
 
     <h2>Quick Recap</h2>
@@ -839,11 +839,11 @@ public class TestEmployee
 },
 
 {
-  id: 2,
-  title: 'Classes and Objects — Part 02',
+  id: 3,
+  title: 'Classes and Objects - P02',
   content: `
     <span class="lesson-badge">LESSON 02 – PART 02</span>
-    <h1>Classes and Objects — Part 02</h1>
+    <h1>Classes and Objects - Part 02</h1>
     <div class="meta-info">ICT2122 <span>•</span> 16 min read</div>
 
     <h2>Recap — Part 01</h2>
@@ -1226,7 +1226,7 @@ different package                              No                 No            
 },
 
 {
-  id: 3,
+  id: 4,
   title: 'Inheritance in Java',
   content: `
     <span class="lesson-badge">LESSON 03</span>
@@ -1887,6 +1887,886 @@ v instanceof Car        // false</code></pre>
       'final variables cannot be changed once initialized; final methods cannot be overridden; final classes cannot be extended.',
       'Up-casting (subclass to superclass) happens automatically; down-casting (superclass to subclass) needs explicit casting, like (Car) obj.',
       "Use the instanceof operator to check an object's actual type at runtime.",
+    ],
+  },
+},
+
+{
+  id: 5,
+  title: 'Polymorphism is Java',
+  content: `
+    <span class="lesson-badge">LESSON 03</span>
+    <h1>Polymorphism is Java</h1>
+    <div class="meta-info">ICT2122 <span>•</span> 22 min read</div>
+
+    <h2>Quick Recap</h2>
+    <p>Before starting this lesson, let's quickly recall what we learned in <strong>Part 01</strong> of OOP Concepts.</p>
+    <ul>
+      <li><strong>Inheritance</strong> — examples and hands-on practice</li>
+      <li>Creating <strong>Sub Classes</strong></li>
+      <li>Behavior of Java <strong>Access Modifiers</strong></li>
+      <li>Types of inheritance in Java: <strong>Single</strong>, <strong>Multilevel</strong>, <strong>Hierarchical</strong>, <strong>Hybrid</strong>, and <strong>Multiple</strong> Inheritance</li>
+      <li><strong>Overriding Methods</strong></li>
+      <li><strong>Hiding Methods</strong></li>
+      <li><strong>Hiding Fields</strong></li>
+      <li>Usage of <code>this</code> and <code>super</code> in Subclasses</li>
+      <li><strong>Constructors</strong> in Subclasses</li>
+      <li>Usage of the <code>final</code> keyword</li>
+      <li><strong>Casting Objects</strong></li>
+      <li>Determining an Object's Type</li>
+    </ul>
+
+    <h2>What We Will Learn Today</h2>
+    <ul>
+      <li>Polymorphism</li>
+      <li>Method Overloading</li>
+      <li>Method Overriding</li>
+      <li>Dynamic Polymorphism</li>
+      <li>Static Polymorphism</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Object Oriented Concepts</h2>
+    <p>Object Oriented Programming (OOP) makes software development and maintenance simpler. It does this by providing some important concepts:</p>
+    <ul>
+      <li><strong>Object</strong></li>
+      <li><strong>Class</strong></li>
+      <li><strong>Inheritance</strong></li>
+      <li><strong>Polymorphism</strong> — our focus for this lesson</li>
+      <li><strong>Abstraction</strong></li>
+      <li><strong>Encapsulation</strong></li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A <strong>class</strong> is like a cookie cutter — it defines the shape of objects. <strong>Objects</strong> are like cookies — they are instances created from that class.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Inheritance — A Quick Reminder</h2>
+    <p>Inheritance is a mechanism that allows a <strong>subclass</strong> to inherit the properties and behaviors of a <strong>superclass</strong>.</p>
+    <ul>
+      <li>The subclass can access and use all the methods and variables of the superclass, as well as add its own methods and variables.</li>
+      <li>The subclass can also <strong>override</strong> methods from the superclass to provide its own implementation.</li>
+      <li>Inheritance enables code reuse and makes it easier to manage and maintain complex systems by reducing duplication and providing a hierarchical structure for classes.</li>
+      <li>It is a key feature of object-oriented programming and is widely used in Java.</li>
+    </ul>
+    <pre><code>Super Class:   A
+                 ↑
+Sub Class:     B      (B extends A)
+</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>What is Polymorphism?</h2>
+    <p><strong>Poly-Morphism</strong> means the ability to have multiple forms (shapes) of the same thing.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>In Java, <strong>Polymorphism</strong> is the capability of an action or method to do different things based on the object that it is acting upon.</p>
+    </div>
+    <p>Think about a mobile <strong>Phone</strong>. The same device can act:</p>
+    <ul>
+      <li>As a Phone</li>
+      <li>As a Camera</li>
+      <li>As an MP3 Player</li>
+    </ul>
+    <p>The same object shows different behavior depending on how it is used. This everyday idea is the same one behind polymorphism in programming.</p>
+
+    <div class="divider"></div>
+
+    <h2>Types of Polymorphism in Java</h2>
+    <p>In Java, polymorphism is achieved through <strong>method overriding</strong> and <strong>method overloading</strong>.</p>
+    <pre><code>                    Polymorphism
+                          |
+          --------------------------------
+          |                              |
+   Compile Time                    Run-Time
+   Polymorphism                   Polymorphism
+ (Static Polymorphism,         (Dynamic Polymorphism,
+    Early Binding)                Late Binding)
+          |                              |
+  Method Overloading              Method Overriding
+</code></pre>
+    <ul>
+      <li><strong>Method Overriding</strong> — a subclass provides a different implementation of a method already defined in its superclass. Objects of different subclasses respond differently to the same method call. Resolved during <strong>Run Time</strong>.</li>
+      <li><strong>Method Overloading</strong> — multiple methods with the same name exist in the same class, as long as they have different parameter lists. This gives more concise and readable code. Resolved during <strong>Compile Time</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Method Overloading</h2>
+    <p><strong>Method overloading</strong> in Java is a technique for creating <strong>multiple methods with the same name within the same class</strong>, as long as they have <strong>different parameter lists</strong>.</p>
+    <ul>
+      <li>This allows the same method name to be used in different contexts, giving more concise and readable code.</li>
+      <li>If we only need to perform one operation, using the same method name for all versions increases the readability of the program.</li>
+      <li>It is similar to the concept of <strong>Constructor Overloading</strong> in Java.</li>
+    </ul>
+
+    <h3>Three Ways to Overload a Method</h3>
+    <p>There are three ways to overload a method in Java:</p>
+    <ol>
+      <li><strong>By changing the number of arguments</strong> (different number of parameters)</li>
+      <li><strong>By changing the data types of arguments</strong> (same number of parameters)</li>
+      <li><strong>By changing the sequence (order) of data types of arguments</strong> (same number of parameters)</li>
+    </ol>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>In Java, method overloading is <strong>not possible by changing only the return type</strong> of the method.</p>
+    </div>
+
+    <h3>Example 1 — Changing the Number of Arguments</h3>
+    <pre><code>class Calculation {
+    void sum(int a, int b) {
+        System.out.println(a+b);
+    }
+
+    void sum(int a, int b, int c) {
+        System.out.println(a+b+c);
+    }
+
+    public static void main(String args[]) {
+        Calculation obj = new Calculation();
+        obj.sum(10, 10, 10);
+        obj.sum(20, 20);
+    }
+}
+</code></pre>
+
+    <h3>Example 2 — Changing the Data Type of Arguments</h3>
+    <pre><code>class Calculation {
+    void sum(int a, int b) {
+        System.out.println(a+b);
+    }
+
+    void sum(double a, double b) {
+        System.out.println(a+b);
+    }
+
+    public static void main(String[] args) {
+        Calculation obj = new Calculation();
+        obj.sum(10.5, 10.5);
+        obj.sum(20, 20);
+    }
+}
+</code></pre>
+
+    <h3>Example 3 — Changing the Sequence of Data Types</h3>
+    <pre><code>class Calculation {
+    void sum(double a, int b) {
+        System.out.println(a+b);
+    }
+
+    void sum(int a, double b) {
+        System.out.println(a+b);
+    }
+
+    public static void main(String[] args) {
+        Calculation obj = new Calculation();
+        obj.sum(10.5, 2);
+        obj.sum(1, 20.5);
+    }
+}
+</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Method overloading in Java is based on the <strong>number and types of parameters</strong>, not just the method name.</p>
+      <p>Methods with the same name but <strong>different return types only</strong> are <strong>not</strong> considered overloaded methods. Methods with the same parameters but different return types are also not overloaded, since this would cause ambiguity in the code.</p>
+    </div>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>Homework:</strong> Find out what <strong>Type Promotion</strong> is in Java, and think about how it relates to method overloading.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Method Overriding</h2>
+    <p>An instance method in a subclass <strong>overrides</strong> the superclass's method when it has:</p>
+    <ul>
+      <li>The <strong>same signature</strong> (name, plus the number and type of its parameters), and</li>
+      <li>The <strong>same return type</strong>, as an instance method in the superclass.</li>
+    </ul>
+    <p>Use the <code>@Override</code> annotation when overriding a method.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>For more detail and examples on method overriding, refer to slides 26–30 in "Lesson 03 – OOP Concepts – Part 01".</p>
+    </div>
+
+    <h3>Example — Method Overriding</h3>
+    <pre><code>class Human {
+    public void eat() {
+        System.out.println("Human is eating");
+    }
+}
+
+class Boy extends Human {
+    public void eat() {
+        System.out.println("Boy is eating");
+    }
+
+    public static void main(String args[]) {
+        Boy nimal = new Boy();
+        nimal.eat();
+    }
+}
+</code></pre>
+
+    <p>An easy way to remember the difference between the two:</p>
+    <ul>
+      <li><strong>Overloading</strong> is like an archer who can shoot arrows in several different directions using the same bow — many versions of the same method name, each doing something slightly different.</li>
+      <li><strong>Overriding</strong> is like fitting a new arrowhead onto the same bow before firing — the subclass replaces the superclass's implementation with its own.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Dynamic Binding</h2>
+    <p>How do Dynamic Binding and Static Binding relate to inheritance?</p>
+    <p>In Java, any <strong>derived class object</strong> can be assigned to a <strong>base class variable</strong>. For example, consider a <code>Vehicle</code> superclass and a <code>Car</code> subclass:</p>
+    <pre><code>Vehicle v = new Car();
+</code></pre>
+    <p>Here, the variable on the left (<code>v</code>) is of type <code>Vehicle</code>, but the object on the right is of type <code>Car</code>. As long as the variable's type is a base class of <code>Car</code>, this assignment is allowed.</p>
+
+    <p>Being able to do assignments like this sets up what is called <strong>"polymorphic behavior"</strong>.</p>
+    <ul>
+      <li>If <code>Vehicle</code> has a method <code>start()</code> that is also defined in <code>Car</code>, then calling <code>v.start()</code> will run the version of <code>start()</code> defined in <strong>Car</strong>.</li>
+      <li>Even though the variable type is <code>Vehicle</code>, the version of <code>start()</code> in the <code>Vehicle</code> class will <strong>not</strong> be executed.</li>
+      <li>The <strong>type of the object</strong> assigned to the variable determines which method is called.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>When the compiler scans <code>v.start();</code>, it knows <code>v</code> is of type <code>Vehicle</code>, but it also knows <code>v</code> could reference any class derived from <code>Vehicle</code>. So the compiler cannot know which version of <code>start()</code> is being called just by reading the code.</p>
+      <p>It is only when <code>Vehicle v = new Car();</code> actually runs that the version of <code>start()</code> is determined. Since this assignment happens at <strong>runtime</strong>, the correct version of <code>start()</code> is only known at runtime.</p>
+    </div>
+
+    <p>This is known as <strong>"dynamic binding"</strong> or <strong>"late binding"</strong>.</p>
+    <ul>
+      <li>It is not until the program performs some operation at runtime that the correct version of a method can be determined. In Java, most uses of inheritance involve dynamic binding.</li>
+      <li><strong>Dynamic binding</strong> is deciding at run time which method to invoke.</li>
+      <li>With dynamic binding, the method that gets invoked is determined by the <strong>class of the object</strong>, not the type of the reference variable.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>In Java, instance methods (with a few exceptions) are dynamically bound. The exceptions are: <strong>private methods</strong>, <code>&lt;init&gt;</code> methods (constructors), <strong>super</strong> invocations, and <strong>final methods</strong>.</p>
+    </div>
+
+    <h3>Hands-On Practice</h3>
+    <p>Add the following code to your <code>Demo</code> class and test it:</p>
+    <pre><code>Car c = new Car();
+c.start();
+
+Vehicle v = new Car();
+v.start();
+</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Static Binding</h2>
+    <p><strong>"Static binding"</strong> or <strong>"early binding"</strong> occurs when the compiler can readily determine the correct version of something during <strong>compile time</strong> — that is, before the program is executed.</p>
+    <ul>
+      <li>All instance method calls are always resolved at <strong>runtime</strong>.</li>
+      <li>All <strong>static method calls</strong> are resolved at <strong>compile time</strong> itself, so static method calls use static binding.</li>
+      <li>In Java, <strong>member variables have static binding</strong>, because Java does not allow dynamic binding with member variables.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>If both the <code>Vehicle</code> class and the <code>Car</code> class have a member variable with the same name, it is the <strong>base class version</strong> that is used, because the value of a member variable is determined at <strong>compile time</strong>, not at runtime.</p>
+    </div>
+
+    <h3>Hands-On Practice</h3>
+    <p>Add a <code>String color</code> field to both <code>Vehicle</code> (set it to <code>"white"</code>) and <code>Car</code> (set it to <code>"Red"</code>). Then check the following in your <code>Demo</code> class:</p>
+    <pre><code>Car c = new Car();
+c.color        // ??
+
+Vehicle v = new Car();
+v.color        // ??
+</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Try running both lines yourself and compare the results with what you learned about dynamic vs static binding above.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Summary</h2>
+    <p><strong>Polymorphism</strong> is a fundamental concept in object-oriented programming that allows objects of different classes to respond to the same method call in different ways.</p>
+    <p>There are two types of polymorphism in Java:</p>
+    <ul>
+      <li><strong>Static polymorphism</strong> (method overloading)</li>
+      <li><strong>Dynamic polymorphism</strong> (method overriding)</li>
+    </ul>
+
+    <h3>Method Overloading</h3>
+    <ul>
+      <li>Is a form of <strong>static polymorphism</strong>.</li>
+      <li>Allows multiple methods with the same name to exist in a single class, as long as they have different parameter lists.</li>
+      <li>The method to be called is determined at <strong>compile time</strong>, based on the number and type of arguments passed.</li>
+    </ul>
+
+    <h3>Method Overriding</h3>
+    <ul>
+      <li>Is a form of <strong>dynamic polymorphism</strong>.</li>
+      <li>Allows a subclass to provide its own implementation of a method that is already defined in its superclass.</li>
+      <li>The method to be called is determined at <strong>runtime</strong>, based on the actual type of the object, rather than the reference type.</li>
+    </ul>
+
+    <h3>Dynamic Binding</h3>
+    <ul>
+      <li>Allows objects of different subclasses to respond differently to the same method call, based on their own implementation.</li>
+      <li>Makes the program more flexible and dynamic, since the behavior of objects can change based on their actual type, rather than being limited by the reference type.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The <code>@Override</code> annotation is used to indicate that a method in a subclass is intended to override a method in the superclass. This helps prevent mistakes and improves code readability.</p>
+    </div>
+
+    <p>Polymorphism is a powerful tool for creating more flexible and reusable code. By using polymorphism, it is possible to write code that handles objects of different types in a generic way, without having to know the exact type of the object.</p>
+
+    <div class="divider"></div>
+
+    <h2>References</h2>
+    <ul>
+      <li>Oracle Java Tutorials — Polymorphism (docs.oracle.com)</li>
+      <li><strong>How To Program (Early Objects)</strong> — by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> — by Kathy Sierra and Bert Bates</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Polymorphism in Java: Method Overloading and Method Overriding',
+    subTopics: [
+      'Recap of Inheritance Concepts',
+      'Object Oriented Concepts Overview',
+      'What is Polymorphism?',
+      'Types of Polymorphism in Java (Static vs Dynamic)',
+      'Method Overloading',
+      'Ways to Overload a Method',
+      'Method Overriding',
+      'Dynamic Binding (Late Binding)',
+      'Static Binding (Early Binding)',
+      'Summary of Polymorphism Concepts',
+    ],
+    definitions: [
+      { term: 'Polymorphism', meaning: 'The ability of an action or method to do different things based on the object it is acting upon. The word means having multiple forms of the same thing.' },
+      { term: 'Method Overloading', meaning: 'A technique in Java for creating multiple methods with the same name in the same class, as long as they have different parameter lists.' },
+      { term: 'Method Overriding', meaning: 'When an instance method in a subclass has the same signature and return type as a method in its superclass, replacing the superclass version.' },
+      { term: 'Static Polymorphism (Compile Time Polymorphism)', meaning: 'Polymorphism where the method to call is decided at compile time. Achieved in Java through method overloading, also called early binding.' },
+      { term: 'Dynamic Polymorphism (Run-Time Polymorphism)', meaning: 'Polymorphism where the method to call is decided at runtime, based on the actual object type. Achieved in Java through method overriding, also called late binding.' },
+      { term: 'Dynamic Binding (Late Binding)', meaning: 'Deciding at runtime which method to invoke, based on the class of the object rather than the reference variable type.' },
+      { term: 'Static Binding (Early Binding)', meaning: 'Deciding at compile time which version of something to use, before the program is executed. Applies to static methods and member variables in Java.' },
+      { term: '@Override Annotation', meaning: 'An annotation used to indicate that a method in a subclass is intended to override a method in the superclass, helping prevent mistakes.' },
+      { term: 'Class', meaning: 'Like a cookie cutter, a class defines the shape of objects that can be created from it.' },
+      { term: 'Object', meaning: 'Like a cookie made from a cookie cutter, an object is an instance created from a class.' },
+    ],
+    keyPoints: [
+      'Polymorphism means an object or method can take multiple forms and behave differently depending on the object it acts upon.',
+      'Java achieves polymorphism through method overloading (static) and method overriding (dynamic).',
+      'Method overloading is resolved at compile time; method overriding is resolved at runtime.',
+      'A method can be overloaded by changing the number of arguments, the data types of arguments, or the sequence of data types, but never by changing only the return type.',
+      'Overloaded methods must differ in their parameter list; having the same parameters with only a different return type causes ambiguity and is not allowed.',
+      'Method overriding requires the same method signature (name and parameters) and the same return type as the superclass method.',
+      'Always use the @Override annotation when overriding a method to catch mistakes early.',
+      'A superclass reference variable can hold a subclass object, for example Vehicle v = new Car(); this is the basis of polymorphic behavior.',
+      'With dynamic binding, the actual object type, not the reference variable type, determines which overridden method runs at runtime.',
+      'Member variables and static methods use static binding, so they are resolved at compile time based on the reference type, not the object type.',
+      'Instance methods are dynamically bound in Java, except for private methods, constructors, super invocations, and final methods.',
+    ],
+  },
+},
+
+{
+  id: 6,
+  title: 'Abstraction in Java',
+  content: `
+    <span class="lesson-badge">LESSON 03</span>
+    <h1>Abstraction in Java</h1>
+    <div class="meta-info">ICT2122 <span>•</span> 14 min read</div>
+
+    <h2>Quick Recap</h2>
+    <p>Before starting this lesson, let's quickly recall what we learned in <strong>Part 02</strong> of OOP Concepts.</p>
+    <ul>
+      <li><strong>Polymorphism</strong></li>
+      <li><strong>Method Overloading</strong></li>
+      <li><strong>Method Overriding</strong></li>
+      <li><strong>Dynamic Polymorphism</strong></li>
+      <li><strong>Static Polymorphism</strong></li>
+    </ul>
+
+    <h2>What We Will Learn Today</h2>
+    <ul>
+      <li>Abstraction</li>
+      <li>Abstraction in Java</li>
+      <li>Abstract Methods</li>
+      <li>Abstract Classes</li>
+      <li>Hands-On</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Object Oriented Concepts</h2>
+    <p>Object Oriented Programming (OOP) makes software development and maintenance simpler. It does this by providing some important concepts:</p>
+    <ul>
+      <li><strong>Object</strong></li>
+      <li><strong>Class</strong></li>
+      <li><strong>Inheritance</strong></li>
+      <li><strong>Polymorphism</strong></li>
+      <li><strong>Abstraction</strong> — our focus for this lesson</li>
+      <li><strong>Encapsulation</strong></li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A <strong>class</strong> is like a cookie cutter — it defines the shape of objects. <strong>Objects</strong> are like cookies — they are instances created from that class.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Quick Reminders — Inheritance and Polymorphism</h2>
+    <p>Inheritance is a mechanism that allows a <strong>subclass</strong> to inherit the properties and behaviors of a <strong>superclass</strong>. It enables code reuse and makes it easier to manage complex systems by reducing duplication and providing a hierarchical structure for classes. It is a key feature of object-oriented programming and is widely used in Java.</p>
+    <p><strong>Poly-Morphism</strong> means the ability to have multiple forms (shapes) of the same thing. Polymorphism is the capability of an action or method to do different things based on the object that it is acting upon.</p>
+
+    <div class="divider"></div>
+
+    <h2>What is Abstraction?</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>"We (humans) have developed an exceptionally powerful technique for dealing with complexity. We abstract from it. Unable to master the entirety of a complex object, we choose to ignore its inessential details, dealing instead with the generalized, idealized model of the object." (Ref: Wulf)</p>
+    </div>
+    <p>In simple words, <strong>abstraction</strong> means extracting only the necessary details, and hiding away the rest.</p>
+    <p>Think about a <strong>cat</strong>:</p>
+    <ul>
+      <li>A <strong>nonmedical person</strong> thinks of a cat in terms of things like purring, being petted, and being fed.</li>
+      <li>A <strong>medical person</strong> (such as a veterinary surgeon) thinks of the same cat in terms of its heart, lungs, kidneys, stomach, and other internal organs.</li>
+    </ul>
+    <p>Both people are looking at the <strong>same object</strong> (the cat), but each one models it differently, keeping only the details that matter for their own purpose.</p>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>A <strong>class</strong> represents a real-world entity. The class contains only the <strong>essential details matching the problem domain</strong> — it leaves out everything that is not relevant to the task at hand.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Abstraction in Java</h2>
+    <p><strong>Abstraction</strong> in Java is a mechanism that helps to reduce the complexity of a system by <strong>hiding its implementation details from the user</strong>.</p>
+    <p>This means that the user only sees what is necessary to perform a certain task, and does not need to know about the underlying implementation.</p>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>Example:</strong> When sending an SMS, you just type the text and send the message. You don't know (and don't need to know) the internal processing that happens behind the scenes to deliver that message.</p>
+    </div>
+    <p>Abstraction can be achieved in Java using two mechanisms:</p>
+    <ul>
+      <li><strong>Abstract class</strong> — provides 0% to 100% abstraction</li>
+      <li><strong>Interface</strong> — provides 100% abstraction</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Abstract Method</h2>
+    <p>A method that is <strong>declared as abstract</strong> and <strong>does not have an implementation</strong> is known as an <strong>abstract method</strong>.</p>
+    <pre><code>abstract void printStatus();
+</code></pre>
+    <p>Note the following about an abstract method:</p>
+    <ul>
+      <li>It has <strong>no body</strong>.</li>
+      <li>It must be marked with the <code>abstract</code> keyword.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Abstract Class</h2>
+    <p>Use the <code>abstract</code> keyword to declare a class abstract. The keyword <code>abstract</code> appears in the class declaration somewhere before the <code>class</code> keyword.</p>
+    <pre><code>public abstract class Employee
+</code></pre>
+    <ul>
+      <li>An abstract class is a class that <strong>cannot be instantiated</strong>, but <strong>can be extended</strong> by other classes.</li>
+      <li>An abstract class can have <strong>both abstract and concrete methods</strong>.</li>
+      <li><strong>Abstract methods</strong> are methods that have no implementation, and must be <strong>overridden</strong> by any concrete (non-abstract) subclass.</li>
+      <li>All other functionality of the class still exists — its fields, methods, and constructors are all accessed in the same manner as in any other class.</li>
+    </ul>
+
+    <h3>Hands-On — Abstract Class and Subclass</h3>
+    <pre><code>public abstract class Bike {
+    abstract void run();
+}
+
+public class Honda extends Bike {
+    void run() {
+        System.out.println("running safely..");
+    }
+
+    public static void main(String args[]) {
+        Bike obj = new Honda4();
+        obj.run();
+    }
+}
+</code></pre>
+
+    <h3>Hands-On — Adding a Constructor and a Concrete Method</h3>
+    <pre><code>public abstract class Bike {
+    Bike() { //Constructor
+        System.out.println("bike is created");
+    }
+
+    abstract void run(); //abstract method
+
+    void changeGear() { //concrete method
+        System.out.println("gear changed");
+    }
+}
+
+public class Honda extends Bike {
+    void run() {
+        System.out.println("running safely..");
+    }
+}
+</code></pre>
+
+    <h3>Hands-On — Testing the Abstract Class</h3>
+    <pre><code>class TestAbstraction {
+    public static void main(String args[]) {
+        Bike obj = new Honda();
+        obj.run();
+        obj.changeGear();
+    }
+}
+</code></pre>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Notice that <code>obj</code> is declared as type <code>Bike</code> (the abstract superclass), but it is holding a <code>Honda</code> object. This is the same polymorphic behavior you learned about in the previous lesson — the object's actual type decides which <code>run()</code> is executed.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Abstract Class — Rules</h2>
+    <ol>
+      <li>An abstract class must be declared with an <code>abstract</code> keyword.</li>
+      <li>It can have abstract and non-abstract (concrete) methods.</li>
+      <li>It <strong>cannot be instantiated</strong>.</li>
+      <li>It can have <strong>final methods</strong>.</li>
+      <li>It can have <strong>constructors and static methods</strong> as well.</li>
+    </ol>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>If there is <strong>any abstract method</strong> in a class, that <strong>class must be abstract</strong> too.</p>
+      <p>If you are extending an abstract class that has an abstract method, you must either <strong>provide the implementation of that method</strong>, or <strong>make your subclass abstract</strong> as well.</p>
+    </div>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Forgetting to implement all inherited abstract methods in a concrete subclass — and forgetting to mark the subclass itself as <code>abstract</code> in that case — is a common exam mistake.</p>
+    </div>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>Homework:</strong></p>
+      <ul>
+        <li>Identify the difference between "Abstract Classes" and "Concrete Classes".</li>
+        <li>Can an abstract class have a constructor? Why?</li>
+        <li>How can we access "Concrete" methods that are inside an abstract class?</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Summary</h2>
+    <ul>
+      <li><strong>Abstraction</strong> means extracting only the essential details of a real-world entity for the problem at hand, and hiding away everything else.</li>
+      <li><strong>Abstraction in Java</strong> hides implementation details from the user, so the user only sees what is necessary to perform a task.</li>
+      <li>Abstraction is achieved in Java through <strong>abstract classes</strong> (0% to 100% abstraction) and <strong>interfaces</strong> (100% abstraction).</li>
+      <li>An <strong>abstract method</strong> has no body and must be declared with the <code>abstract</code> keyword.</li>
+      <li>An <strong>abstract class</strong> cannot be instantiated but can be extended, and may contain both abstract and concrete methods, fields, constructors, and static methods.</li>
+      <li>If a class contains even one abstract method, the class itself must be declared <code>abstract</code>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>References</h2>
+    <ul>
+      <li>Oracle Java Tutorials — Abstraction (docs.oracle.com)</li>
+      <li><strong>How To Program (Early Objects)</strong> — by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> — by Kathy Sierra and Bert Bates</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Abstraction in Java',
+    subTopics: [
+      'Recap of Polymorphism Concepts',
+      'Object Oriented Concepts Overview',
+      'What is Abstraction?',
+      'Abstraction in Java',
+      'Abstract Methods',
+      'Abstract Classes',
+      'Abstract Class Rules and Hands-On Examples',
+      'Summary of Abstraction Concepts',
+    ],
+    definitions: [
+      { term: 'Abstraction', meaning: 'The technique of extracting only the necessary, essential details of a real-world entity while hiding away everything that is not relevant to the problem at hand.' },
+      { term: 'Abstraction in Java', meaning: 'A mechanism that reduces the complexity of a system by hiding its implementation details, so the user only sees what is necessary to perform a task.' },
+      { term: 'Abstract Method', meaning: 'A method that is declared with the abstract keyword and has no body or implementation. It must be overridden by any concrete subclass.' },
+      { term: 'Abstract Class', meaning: 'A class declared with the abstract keyword that cannot be instantiated directly, but can be extended by other classes. It may contain both abstract and concrete methods.' },
+      { term: 'Concrete Method', meaning: 'A method that has a full implementation (a body), as opposed to an abstract method.' },
+      { term: 'Interface', meaning: 'A way to achieve full (100%) abstraction in Java, alongside abstract classes which can provide anywhere from 0% to 100% abstraction.' },
+    ],
+    keyPoints: [
+      'Abstraction means showing only necessary information and hiding the implementation details, like sending an SMS without knowing how it is delivered internally.',
+      'A class represents a real-world entity but contains only the essential details that match the problem domain, not every possible detail.',
+      'Abstraction is achieved in Java using abstract classes (0% to 100% abstraction) and interfaces (100% abstraction).',
+      'An abstract method has no body and must be marked with the abstract keyword.',
+      'An abstract class is declared using the abstract keyword before the class keyword, and it cannot be instantiated directly.',
+      'An abstract class can have both abstract and concrete methods, along with fields, constructors, and static methods.',
+      'If a class has even one abstract method, that class itself must be declared abstract.',
+      'A subclass that extends an abstract class must implement all of its abstract methods, or the subclass must also be declared abstract.',
+      'An abstract class object reference (like Bike obj = new Honda();) demonstrates the same polymorphic behavior seen with method overriding.',
+    ],
+  },
+},
+
+{
+  id: 7,
+  title: 'Encapsulation in Java',
+  content: `
+    <span class="lesson-badge">LESSON 03</span>
+    <h1>Encapsulation in Java</h1>
+    <div class="meta-info">ICT2122 <span>•</span> 13 min read</div>
+
+    <h2>Quick Recap</h2>
+    <p>Before starting this lesson, let's quickly recall what we learned in <strong>Part 03</strong> of OOP Concepts.</p>
+    <ul>
+      <li><strong>Abstraction</strong></li>
+      <li><strong>Abstraction in Java</strong></li>
+      <li><strong>Abstract Methods</strong></li>
+      <li><strong>Abstract Classes</strong></li>
+      <li><strong>Hands-On</strong> examples</li>
+    </ul>
+
+    <h2>What We Will Learn Today</h2>
+    <ul>
+      <li>Encapsulation</li>
+      <li>Encapsulation — Hands-On</li>
+      <li>Encapsulation — Advantages</li>
+      <li>Abstraction vs Encapsulation</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Object Oriented Concepts</h2>
+    <p>Object Oriented Programming (OOP) makes software development and maintenance simpler. It does this by providing some important concepts:</p>
+    <ul>
+      <li><strong>Object</strong></li>
+      <li><strong>Class</strong></li>
+      <li><strong>Inheritance</strong></li>
+      <li><strong>Polymorphism</strong></li>
+      <li><strong>Abstraction</strong></li>
+      <li><strong>Encapsulation</strong> — our focus for this lesson</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A <strong>class</strong> is like a cookie cutter — it defines the shape of objects. <strong>Objects</strong> are like cookies — they are instances created from that class.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Quick Reminders — Inheritance, Polymorphism, and Abstraction</h2>
+    <p>Inheritance is a mechanism that allows a <strong>subclass</strong> to inherit the properties and behaviors of a <strong>superclass</strong>, enabling code reuse and a hierarchical structure for classes.</p>
+    <p><strong>Polymorphism</strong> is the capability of an action or method to do different things based on the object it is acting upon.</p>
+    <p><strong>Abstraction</strong> in Java is a mechanism that helps reduce the complexity of a system by hiding its implementation details from the user. For example, when sending an SMS, you just type the text and send it — you don't know the internal processing behind the message delivery.</p>
+
+    <div class="divider"></div>
+
+    <h2>What is Encapsulation?</h2>
+    <p><strong>Encapsulation</strong> in Java is a process of <strong>wrapping code and data together into a single unit</strong>.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Example:</strong> Think of a medicine <strong>capsule</strong> — it is a mix of several medicines wrapped together into a single unit. In the same way, a class wraps its data (fields) and code (methods) together.</p>
+    </div>
+    <p>In a class, this wrapping looks like this:</p>
+    <pre><code>Class
+ ├── Variables  (the data)
+ └── Methods    (the code)
+</code></pre>
+    <p>Together, the variables and methods bundled inside a class form the basis of <strong>encapsulation</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Encapsulation — The Details</h2>
+    <p><strong>Encapsulation</strong> is the technique of making the fields in a class <strong>private</strong>, and providing access to those fields via <strong>public methods</strong>.</p>
+    <ul>
+      <li>If a field is declared <strong>private</strong>, it cannot be accessed by anyone outside the class — this hides the field within the class.</li>
+      <li>For this reason, encapsulation is also referred to as <strong>data (information) hiding</strong>.</li>
+    </ul>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The <strong>get</strong> methods that allow a field to be viewed are known as <strong>accessor</strong> methods.</p>
+      <p>The <strong>set</strong> methods that allow a field to be changed are known as <strong>mutator</strong> methods.</p>
+    </div>
+
+    <h3>Hands-On — A Simple Encapsulated Class</h3>
+    <pre><code>public class MyEncapsulator {
+
+    //Private member, accessible only within the class
+    private String name;
+
+    //public setter (mutator) method to set the value
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    //public getter (accessor) method to get the value
+    public String getName() {
+        return name;
+    }
+}
+</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Encapsulation — Try It Yourself</h2>
+    <p>The following <code>SalesPerson</code> class demonstrates encapsulation. Each of its fields is marked <strong>private</strong>, and there are <strong>public</strong> methods to access the fields.</p>
+
+    <pre><code>public class SalesPerson {
+
+    private String name;
+    private int id;
+    private float commissionRate;
+    private double sales;
+
+    SalesPerson(String name, int id, double commissionRate) {
+        setName(name);
+        this.id = id;
+        setCommissionRate(commissionRate);
+    }
+
+    public void setName(String n) {
+        name = n;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setCommissionRate(double newRate) {
+        if (newRate >= 0.0 && newRate <= 0.20) {
+            commissionRate = (float) newRate;
+        } else {
+            System.out.println("Rate must be between 0 and 20%");
+        }
+    }
+
+    public double getCommisssionRate() {
+        return commissionRate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void addToSales(double s) {
+        sales += s;
+    }
+
+    public double computeCommission() {
+        double commission = 0.0;
+        if (sales > 0.0) {
+            commission = sales * commissionRate;
+        }
+        sales = 0.0; // start over
+        return commission;
+    }
+}
+</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Notice how <code>setCommissionRate()</code> checks that the new rate is between <code>0.0</code> and <code>0.20</code> before accepting it. This validation logic is only possible because the field is <strong>private</strong> — no one can bypass it and set <code>commissionRate</code> directly.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Encapsulation — Advantages</h2>
+    <ul>
+      <li>By providing only a setter or only a getter method, you can make a class <strong>read-only</strong> or <strong>write-only</strong>.</li>
+      <li>It gives you <strong>control over the data</strong>. For example, if you want to allow the value of <code>id</code> to be set only when it is greater than 100, you can write that logic inside the setter method.</li>
+      <li>A class can have <strong>total control</strong> over what is stored in its fields. The <code>SalesPerson</code> class demonstrates this with the <code>commissionRate</code> field, which can only ever be a value between <code>0.0</code> and <code>0.20</code>.</li>
+      <li>The users of a class do <strong>not need to know</strong> how the class stores its data internally. A class can change the data type of a field, and users of the class do not need to change any of their own code.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Abstraction vs. Encapsulation</h2>
+    <p>Encapsulation is often confused with Abstraction, but they solve different problems:</p>
+    <ul>
+      <li><strong>Encapsulation</strong> is more about <strong>"How"</strong> to achieve a functionality.</li>
+      <li><strong>Abstraction</strong> is more about <strong>"What"</strong> a class can do.</li>
+    </ul>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A simple example to understand this difference is a <strong>mobile phone</strong>: the complex logic in the circuit board is <strong>encapsulated</strong> inside the phone, while the touch screen (the user interface) is provided to <strong>abstract</strong> that complexity out, so the user only sees simple icons and taps.</p>
+    </div>
+
+    <h3>Abstraction vs. Encapsulation — Comparison</h3>
+    <table>
+      <tr><th>Abstraction</th><th>Encapsulation</th></tr>
+      <tr><td>Solves the issues at the <strong>design level</strong>.</td><td>Solves the issues at the <strong>implementation level</strong>.</td></tr>
+      <tr><td>Is about hiding <strong>unwanted details</strong> while showing the most essential information.</td><td>Means hiding the <strong>code and data</strong> into a single unit.</td></tr>
+      <tr><td>Allows focusing on <strong>what</strong> the information object must contain.</td><td>Means hiding the internal details or mechanics of <strong>how</strong> an object does something, for security reasons.</td></tr>
+    </table>
+
+    <div class="divider"></div>
+
+    <h2>Summary</h2>
+    <ul>
+      <li><strong>Encapsulation</strong> wraps code (methods) and data (fields) together into a single unit — like a capsule mixing several medicines together.</li>
+      <li>It is achieved by making fields <strong>private</strong> and exposing them only through <strong>public</strong> accessor (getter) and mutator (setter) methods, which is why it is also called <strong>data hiding</strong>.</li>
+      <li>Encapsulation gives a class <strong>control over its own data</strong>, allows fields to be made read-only or write-only, and lets internal implementation change without affecting the code that uses the class.</li>
+      <li><strong>Abstraction</strong> is about "What" a class can do (the design level); <strong>Encapsulation</strong> is about "How" it does it (the implementation level).</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>References</h2>
+    <ul>
+      <li><strong>How To Program (Early Objects)</strong> — by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> — by Kathy Sierra and Bert Bates</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Encapsulation in Java, and Abstraction vs Encapsulation',
+    subTopics: [
+      'Recap of Abstraction Concepts',
+      'Object Oriented Concepts Overview',
+      'What is Encapsulation?',
+      'Encapsulation — Private Fields and Public Methods',
+      'Accessor (Getter) and Mutator (Setter) Methods',
+      'Encapsulation Hands-On (SalesPerson Example)',
+      'Advantages of Encapsulation',
+      'Abstraction vs Encapsulation',
+    ],
+    definitions: [
+      { term: 'Encapsulation', meaning: 'The process of wrapping code (methods) and data (fields) together into a single unit, typically by making fields private and exposing them through public methods.' },
+      { term: 'Data Hiding', meaning: 'Another name for encapsulation, referring to the fact that private fields cannot be accessed directly from outside their class.' },
+      { term: 'Accessor Method (Getter)', meaning: 'A public method that allows a private field to be viewed or read from outside the class.' },
+      { term: 'Mutator Method (Setter)', meaning: 'A public method that allows a private field to be changed or updated, often including validation logic.' },
+      { term: 'Abstraction vs Encapsulation', meaning: 'Abstraction focuses on "What" a class can do and hides unwanted details at the design level; Encapsulation focuses on "How" it works and hides internal details at the implementation level.' },
+    ],
+    keyPoints: [
+      'Encapsulation wraps data (fields) and code (methods) together into a single unit, like a capsule containing several medicines.',
+      'Encapsulation is achieved by declaring fields private and providing access through public getter (accessor) and setter (mutator) methods.',
+      'Because private fields cannot be accessed directly from outside the class, encapsulation is also called data (information) hiding.',
+      'Providing only a getter makes a field effectively read-only; providing only a setter makes it effectively write-only.',
+      'Setter methods can include validation logic, such as only allowing a commissionRate between 0.0 and 0.20, giving the class full control over its own data.',
+      'Because users only interact with a class through its public methods, the internal data representation can be changed later without breaking the code that uses the class.',
+      'Encapsulation is about "How" a class implements its functionality; Abstraction is about "What" a class can do.',
+      'Example: in a mobile phone, the complex circuit board logic is encapsulated, while the touch screen abstracts that complexity away from the user.',
+      'Abstraction operates at the design level (hiding unwanted details); Encapsulation operates at the implementation level (hiding internal mechanics for security).',
     ],
   },
 },
