@@ -1175,4 +1175,841 @@ Suppliers' Suppliers → Suppliers → Firm → Distributors → Customers
     ],
   },
 },
+
+
+{
+id: 4,
+title: 'Ethical and Social Issues in Information Systems',
+content: `
+<span class="lesson-badge">LESSON 04</span>
+<h1>Ethical and Social Issues in Information Systems</h1>
+<div class="meta-info">ICT2162 <span>•</span> 9 min read</div>
+
+<div class="callout callout-blue">
+  <span class="callout-label">What We Discuss Today</span>
+  <ol>
+    <li>Introduction to ethical and social issues in information systems</li>
+    <li>Relationship between ethical, social and political issues</li>
+    <li>Ethics in a digital and AI-driven society</li>
+    <li>Moral dimensions of information systems</li>
+    <li>Emerging concerns: AI ethics, data governance and algorithmic bias</li>
+  </ol>
+</div>
+
+<h2>Introduction</h2>
+<p>Changes in technology bring both <strong>positive</strong> and <strong>negative</strong> results.</p>
+<ul>
+  <li>Information technology can be used for <strong>social progress</strong>.</li>
+  <li>It can also be used to <strong>commit crimes</strong> and threaten cherished social values.</li>
+  <li><strong>AI</strong>, <strong>Big Data</strong>, <strong>IoT</strong> and <strong>Blockchain</strong> raise complex ethical and regulatory challenges.</li>
+  <li>Information systems raise new ethical questions for <strong>both individuals and societies</strong>.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Ethics and Social Issues</h2>
+<p>In simple words, <strong>ethics is about professional behavior</strong>.</p>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Definition — Ethics</span>
+  <p><strong>Ethics</strong> refers to the principles of <strong>right and wrong</strong> that individuals, acting as <strong>free moral agents</strong>, use to make choices that guide their behavior.</p>
+</div>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Definition — Social Issues</span>
+  <p><strong>Social issues</strong> are matters of concern to <strong>governments and the community</strong>.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Relationship Between Ethical, Social and Political Issues</h2>
+<p>New information technology has a <strong>ripple effect</strong>. It raises new <strong>ethical, social and political issues</strong>. These must be handled at the <strong>individual</strong>, <strong>social</strong> and <strong>political</strong> levels.</p>
+
+<pre><code>Information Technology and Systems (centre)
+    |
+    +-- Ethical issues   --&gt; Individual
+    +-- Social issues    --&gt; Society
+    +-- Political issues --&gt; Polity (government level)
+
+Surrounding these are the 5 moral dimensions:
+Information Rights and Obligations
+Property Rights and Obligations
+System Quality
+Quality of Life
+Accountability and Control</code></pre>
+
+<ul>
+  <li><strong>Ethical issues</strong> → personal and professional conduct</li>
+  <li><strong>Social issues</strong> → community and societal well-being</li>
+  <li><strong>Political issues</strong> → regulation, digital rights and cybersecurity</li>
+</ul>
+
+<div class="callout callout-green">
+  <span class="callout-label">Tip</span>
+  <p>The <strong>modern intersection</strong> is about balancing <strong>innovation</strong>, <strong>human rights</strong> and <strong>AI regulation</strong>.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Key Technology Trends that Raise Ethical Issues</h2>
+<ol>
+  <li><strong>AI and ML expansion</strong> — bias and transparency concerns</li>
+  <li><strong>Advanced data analytics</strong> — profiling and surveillance capitalism</li>
+  <li><strong>Cloud and edge computing</strong> — data jurisdiction issues</li>
+  <li><strong>IoT</strong> — massive data collection</li>
+  <li><strong>Blockchain</strong> — privacy and inclusion ethics</li>
+  <li><strong>Quantum computing</strong> — encryption risks</li>
+  <li><strong>Sustainability</strong> — green IT and e-waste</li>
+</ol>
+
+<div class="divider"></div>
+
+<h2>Ethics in an Information Society</h2>
+<h3>Basic Concepts</h3>
+<ul>
+  <li><strong>Responsibility</strong> — accepting the potential costs, duties and obligations of your decisions.</li>
+  <li><strong>Accountability</strong> — deciding <em>who</em> should take responsibility for decisions and actions.</li>
+  <li><strong>Liability</strong> — <em>legally</em> placing responsibility on a person or group.</li>
+  <li><strong>Due process</strong> — making sure laws are applied <em>fairly and correctly</em>.</li>
+  <li><strong>Digital trust</strong> — transparency and data integrity.</li>
+</ul>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>Responsibility</strong> = you accept the duty.<br><strong>Accountability</strong> = who should take responsibility.<br><strong>Liability</strong> = responsibility placed by <strong>law</strong>.<br><strong>Due process</strong> = <strong>fair</strong> application of laws.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Five Moral Dimensions of the Information Age</h2>
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <ol>
+    <li><strong>Information rights and obligations</strong></li>
+    <li><strong>Property rights and obligations</strong></li>
+    <li><strong>Accountability and control</strong></li>
+    <li><strong>System quality</strong></li>
+    <li><strong>Quality of life</strong></li>
+  </ol>
+</div>
+
+<h3>The Key Question for Each Dimension</h3>
+<ol>
+  <li><strong>Information rights and obligations</strong> — What information rights do individuals and organizations have about themselves? What can they protect?</li>
+  <li><strong>Property rights and obligations</strong> — How will traditional intellectual property rights be protected in a digital society, where tracing and accounting for ownership is difficult and ignoring such rights is very easy?</li>
+  <li><strong>Accountability and control</strong> — Who can and will be held accountable and liable for harm done to individual and collective information and property rights?</li>
+  <li><strong>System quality</strong> — What standards of data and system quality should we demand to protect individual rights and the safety of society?</li>
+  <li><strong>Quality of life</strong> — What values should be preserved in an information and knowledge-based society? Which institutions should we protect from violation? Which cultural values and practices are supported by new information technology?</li>
+</ol>
+
+<div class="divider"></div>
+
+<h2>1. Information Rights and Obligations</h2>
+<p>Main topics under this dimension:</p>
+<ul>
+  <li><strong>Privacy</strong></li>
+  <li><strong>Web site policies</strong></li>
+  <li><strong>Cookies</strong></li>
+</ul>
+
+<h2>2. Property Rights and Obligations</h2>
+<h3>Intellectual Property Issues</h3>
+<p><strong>Intellectual property</strong> means the <strong>tangible and intangible products of the mind</strong> created by individuals or corporations.</p>
+
+<h3>Copyrights</h3>
+<div class="callout callout-blue">
+  <span class="callout-label">Definition — Copyright</span>
+  <p><strong>Copyright</strong> is a <strong>statutory grant</strong> (given by law) that protects creators of intellectual property from having their work <strong>copied</strong> by others.</p>
+</div>
+
+<h3>Patents</h3>
+<div class="callout callout-blue">
+  <span class="callout-label">Definition — Patent</span>
+  <p>A <strong>patent</strong> gives the owner an <strong>exclusive monopoly</strong> on the ideas behind an invention for <strong>20 years</strong>.</p>
+</div>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>Copyright</strong> protects the work from being <strong>copied</strong>. A <strong>patent</strong> protects the <strong>ideas behind an invention</strong> for <strong>20 years</strong>.</p>
+</div>
+
+<h2>3. Accountability and Control</h2>
+<p>Many laws and court decisions on <strong>accountability, liability and control</strong> were set long <strong>before computers were invented</strong>.</p>
+<p>Along with privacy and property laws, new information technologies are <strong>challenging existing liability law</strong> and social practices for holding individuals and institutions accountable.</p>
+
+<h2>4. System Quality</h2>
+<h3>Data Quality</h3>
+<ul>
+  <li>We depend heavily on information systems and trust them.</li>
+  <li>So <strong>data quality issues</strong> are very important.</li>
+  <li>These issues affect <strong>both customers and users</strong>.</li>
+</ul>
+<h3>System Errors</h3>
+<ul>
+  <li><strong>Software bugs and errors</strong></li>
+</ul>
+
+<h2>5. Quality of Life</h2>
+<ul>
+  <li>What <strong>values</strong> should be preserved in an information and knowledge-based society?</li>
+  <li>Which <strong>institutions</strong> should we protect from violation?</li>
+  <li>Which <strong>cultural values and practices</strong> are supported by new information technology?</li>
+</ul>
+
+<div class="callout callout-red">
+  <span class="callout-label">Warning</span>
+  <p>Do not mix up <strong>accountability</strong> (who should take responsibility) with <strong>liability</strong> (legal responsibility). Exams often ask you to tell them apart.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Reference</h2>
+<p>Laudon, K. C., &amp; Laudon, J. P. <em>Management Information Systems</em>, 17th Edition.</p>
+
+`,
+summary: {
+topic: 'Ethical and Social Issues in Information Systems',
+subTopics: [
+'Introduction',
+'Ethics and Social Issues',
+'Relationship Between Ethical, Social and Political Issues',
+'Key Technology Trends that Raise Ethical Issues',
+'Ethics in an Information Society',
+'Five Moral Dimensions of the Information Age',
+'Information Rights and Obligations',
+'Property Rights and Obligations',
+'Accountability and Control',
+'System Quality',
+'Quality of Life',
+],
+definitions: [
+{ term: 'Ethics', meaning: 'Principles of right and wrong that free moral agents use to make choices and guide their behavior.' },
+{ term: 'Social Issues', meaning: 'Matters of concern to governments and the community.' },
+{ term: 'Responsibility', meaning: 'Accepting the potential costs, duties and obligations of your decisions.' },
+{ term: 'Accountability', meaning: 'Determining who should take responsibility for decisions and actions.' },
+{ term: 'Liability', meaning: 'Legally placing responsibility on a person or group.' },
+{ term: 'Due Process', meaning: 'Ensuring that laws are applied fairly and correctly.' },
+{ term: 'Digital Trust', meaning: 'Trust built on transparency and data integrity.' },
+{ term: 'Intellectual Property', meaning: 'Tangible and intangible products of the mind created by individuals or corporations.' },
+{ term: 'Copyright', meaning: 'A statutory grant that protects creators of intellectual property from having their work copied.' },
+{ term: 'Patent', meaning: 'An exclusive monopoly on the ideas behind an invention for 20 years.' },
+{ term: 'Data Quality', meaning: 'How accurate and reliable data is. It is vital because people depend on and trust information systems.' },
+],
+keyPoints: [
+'Technology has both positive and negative consequences; it can drive social progress but also enable crime.',
+'AI, Big Data, IoT and Blockchain raise complex ethical and regulatory challenges.',
+'Ethical issues relate to personal and professional conduct; social issues to community well-being; political issues to regulation, digital rights and cybersecurity.',
+'New technology has a ripple effect at the individual, social and political levels.',
+'Trends raising ethical issues: AI/ML (bias), data analytics (profiling, surveillance capitalism), cloud/edge (data jurisdiction), IoT (massive data collection), blockchain, quantum computing (encryption risks), sustainability (e-waste).',
+'Know the difference: responsibility, accountability, liability and due process.',
+'The five moral dimensions: information rights and obligations, property rights and obligations, accountability and control, system quality, quality of life.',
+'Information rights cover privacy, web site policies and cookies.',
+'Property rights cover intellectual property, copyrights and patents (20-year monopoly).',
+'Accountability laws existed before computers; new IT challenges existing liability law.',
+'System quality covers data quality and system errors such as software bugs.',
+'Quality of life asks which values, institutions and cultural practices we should protect.',
+'Modern challenge: balance innovation, human rights and AI regulation.',
+],
+},
+},
+
+{
+id: 5,
+title: 'Operational Excellence and Customer Intimacy – Part I',
+content: `
+<span class="lesson-badge">LESSON 05</span>
+<h1>Operational Excellence and Customer Intimacy – Part I</h1>
+<div class="meta-info">ICT2162 <span>•</span> 12 min read</div>
+
+<div class="callout callout-blue">
+  <span class="callout-label">What We Discuss Today</span>
+  <ul>
+    <li><strong>Enterprise Systems (ERP)</strong> — characteristics, how it works, business value</li>
+    <li><strong>Supply Chain Management (SCM) Systems</strong> — upstream and downstream, information and SCM, bullwhip effect, how IS facilitate SCM, SCM software, global supply chain issues, SCM system models, business value of SCM, the emerging internet-driven supply chain</li>
+  </ul>
+</div>
+
+<div class="callout callout-green">
+  <span class="callout-label">Objectives</span>
+  <ul>
+    <li>Understand how <strong>enterprise systems</strong> help businesses achieve <strong>operational excellence</strong>.</li>
+    <li>Understand how <strong>supply chain management systems</strong> coordinate <strong>planning, production and logistics</strong> with suppliers.</li>
+  </ul>
+</div>
+
+<div class="divider"></div>
+
+<h2>Enterprise Systems</h2>
+<p>Enterprise systems are also called <strong>Enterprise Resource Planning (ERP) systems</strong>.</p>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Definition — Enterprise System</span>
+  <p>A <strong>suite of integrated software modules</strong> with a <strong>common central database</strong>.</p>
+</div>
+
+<ul>
+  <li>It collects data from <strong>many divisions</strong> of the firm.</li>
+  <li>The data is used in nearly <strong>all internal business activities</strong>.</li>
+  <li>Information entered in one process is <strong>immediately available</strong> to other processes.</li>
+</ul>
+
+<h3>Characteristics of an Enterprise System</h3>
+<ol>
+  <li><strong>Real-time operations</strong></li>
+  <li><strong>Integration of all business activities</strong></li>
+  <li><strong>Flow of information</strong></li>
+</ol>
+
+<h3>How Enterprise Systems Work</h3>
+<p>All functional areas share one <strong>centralized database</strong>. Each area sends data to it and reads data from it.</p>
+<pre><code>Finance &amp; Accounting  : cash on hand, accounts receivable,
+                    customer credit, revenue
+
+Sales & Marketing : orders, sales forecasts,
+return requests, price changes
+Human Resources : hours worked, labor cost, job skills
+Manufacturing &
+Production : materials, production schedules,
+shipment dates, production capacity,
+purchases
+
+    All four areas  &lt;----&gt;  CENTRALIZED DATABASE</code></pre>
+
+<h3>Enterprise Software</h3>
+<ul>
+  <li>Built around <strong>thousands of predefined business processes</strong> that reflect <strong>best practices</strong>.</li>
+</ul>
+
+<p><strong>Business processes supported:</strong></p>
+<ul>
+  <li><strong>Finance/accounting:</strong> general ledger, accounts payable, etc.</li>
+  <li><strong>Human resources:</strong> personnel administration, payroll, etc.</li>
+  <li><strong>Manufacturing/production:</strong> purchasing, shipping, etc.</li>
+  <li><strong>Sales/marketing:</strong> order processing, billing, sales planning, etc.</li>
+</ul>
+
+<p><strong>To implement enterprise software, firms:</strong></p>
+<ol>
+  <li><strong>Select</strong> the functions of the system they want to use.</li>
+  <li><strong>Map</strong> their business processes to the software processes. They use the software's <strong>configuration tables</strong> for customizing.</li>
+</ol>
+
+<h3>Business Value of Enterprise Systems</h3>
+<ul>
+  <li>Increase <strong>operational efficiency</strong>.</li>
+  <li>Provide <strong>firm-wide information</strong> to support decision making.</li>
+  <li>Enable <strong>rapid responses</strong> to customer requests for information or products.</li>
+  <li>Include <strong>analytical tools</strong> to evaluate overall organizational performance.</li>
+</ul>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p>ERP = <strong>integrated modules</strong> + <strong>one central database</strong>. Data entered once is <strong>instantly shared</strong> across all processes.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Supply Chain Management Systems</h2>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Definition — Supply Chain</span>
+  <p>A <strong>network of organizations and business processes</strong> for:</p>
+  <ul>
+    <li><strong>Procuring</strong> raw materials</li>
+    <li><strong>Transforming</strong> them into intermediate and finished products</li>
+    <li><strong>Distributing</strong> the products</li>
+  </ul>
+</div>
+
+<h3>Example — Nike's Supply Chain</h3>
+<pre><code>UPSTREAM
+
+Tier 3 suppliers -> Tier 2 suppliers -> Tier 1 suppliers (contract suppliers)
+<----> NIKE <----> Distributor <----> Retailer <----> Customer
+DOWNSTREAM
+
+Upstream flows : capacity, inventory level, delivery schedule, payment terms
+Downstream flows : orders, return requests, repair and service requests, payments</code></pre>
+
+<h3>Upstream and Downstream</h3>
+<ul>
+  <li><strong>Upstream supply chain:</strong> the firm's <strong>suppliers</strong>, the suppliers' suppliers, and the processes for managing relationships with them.</li>
+  <li><strong>Downstream supply chain:</strong> the organizations and processes responsible for <strong>distributing and delivering products to customers</strong>.</li>
+</ul>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>Upstream</strong> = suppliers side. <strong>Downstream</strong> = customers side.</p>
+</div>
+
+<h3>Information and Supply Chain Management</h3>
+<ul>
+  <li>Supply chain <strong>inefficiencies waste as much as 25 percent</strong> of a company's operating costs.</li>
+  <li><strong>Just-in-time strategy:</strong> components arrive <strong>as they are needed</strong>, and finished goods are shipped <strong>after leaving the assembly line</strong>.</li>
+  <li><strong>Safety stock:</strong> acts as a <strong>buffer</strong> for the lack of flexibility in the supply chain.</li>
+  <li><strong>Bullwhip effect:</strong> information about product demand gets <strong>distorted</strong> as it passes from one entity to the next across the supply chain.</li>
+</ul>
+
+<div class="callout callout-red">
+  <span class="callout-label">Warning</span>
+  <p>The <strong>bullwhip effect</strong> is about <strong>distorted demand information</strong>. Small changes in customer demand become larger swings as they move upstream (see the diagram: the demand "peaks" grow bigger from customer back to Tier 3 suppliers).</p>
+</div>
+
+<h3>How Information Systems Facilitate Supply Chain Management</h3>
+<p>Information systems help firms to:</p>
+<ul>
+  <li>Decide <strong>when and what to produce, store and move</strong>.</li>
+  <li>Rapidly <strong>communicate orders</strong>.</li>
+  <li><strong>Track the status</strong> of orders.</li>
+  <li>Check <strong>inventory availability</strong> and monitor inventory levels.</li>
+  <li>Reduce <strong>inventory, transportation and warehousing costs</strong>.</li>
+  <li><strong>Track shipments</strong>.</li>
+  <li>Plan production based on <strong>actual customer demand</strong>.</li>
+  <li>Rapidly communicate <strong>changes in product design</strong>.</li>
+</ul>
+
+<h3>Supply Chain Management Software</h3>
+
+<p><strong>1. Supply chain planning systems</strong></p>
+<ul>
+  <li><strong>Model</strong> the existing supply chain.</li>
+  <li><strong>Optimize</strong> sourcing and manufacturing plans.</li>
+  <li>Establish <strong>inventory levels</strong> (raw, intermediate, finished).</li>
+  <li>Decide <strong>where to store</strong> finished products.</li>
+  <li>Identify <strong>transportation modes</strong>.</li>
+  <li>Facilitate <strong>demand planning</strong>.</li>
+</ul>
+
+<p><strong>2. Supply chain execution systems</strong></p>
+<ul>
+  <li>Manage the <strong>flow of products</strong> through distribution centers and warehouses.</li>
+  <li>Make sure products are delivered to the <strong>right locations</strong> in the <strong>most efficient way</strong>.</li>
+</ul>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>Planning</strong> systems = <strong>plan</strong> (model, optimize, demand planning).<br><strong>Execution</strong> systems = <strong>deliver</strong> (manage product flow through warehouses).</p>
+</div>
+
+<h3>Global Supply Chains</h3>
+<p>The <strong>Internet</strong> helps companies manage many parts of global supply chains: <strong>sourcing, transportation, communications, international finance</strong>, etc.</p>
+
+<p><strong>Global supply chain issues:</strong></p>
+<ul>
+  <li>They span <strong>greater geographic distances and time differences</strong>.</li>
+  <li><strong>More complex pricing</strong> issues (local taxes, transportation, etc.).</li>
+  <li><strong>Foreign government regulations</strong>.</li>
+  <li><strong>Cultural differences</strong>.</li>
+</ul>
+
+<h3>Types of Supply Chain Management Systems</h3>
+
+<h3>Push-based vs Pull-based Models</h3>
+<ul>
+  <li><strong>Push-based model (build-to-stock):</strong> schedules are based on <strong>best guesses (forecasts) of demand</strong>.</li>
+  <li><strong>Pull-based model (demand-driven):</strong> <strong>customer orders trigger</strong> events in the supply chain.</li>
+</ul>
+<pre><code>PUSH-BASED MODEL (based on forecasts)
+
+Supplier : supply to forecast
+Manufacturer : production based on forecasts
+Distributor : inventory based on forecasts
+Retailer : stock based on forecasts
+Customer : purchase what is on shelves
+
+PULL-BASED MODEL (based on orders)
+Customer : customer orders
+Retailer : automatically replenish stock
+Distributor : automatically replenish warehouse
+Manufacturer : produce to order
+Supplier : supply to order</code></pre>
+
+<h3>Sequential vs Concurrent Supply Chains</h3>
+<ul>
+  <li><strong>Sequential supply chains:</strong> information and materials flow <strong>sequentially</strong> from company to company.</li>
+  <li><strong>Concurrent supply chains:</strong> information flows in <strong>many directions at the same time</strong> among members of a supply chain network.</li>
+</ul>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>Push</strong> = forecast-driven (build-to-stock).<br><strong>Pull</strong> = customer-order-driven (demand-driven).<br><strong>Sequential</strong> = one after another. <strong>Concurrent</strong> = many directions at once.</p>
+</div>
+
+<h3>Business Value of SCM Systems</h3>
+<ul>
+  <li><strong>Match supply to demand</strong>.</li>
+  <li><strong>Reduce inventory levels</strong>.</li>
+  <li><strong>Improve delivery service</strong>.</li>
+  <li><strong>Speed up product time to market</strong>.</li>
+  <li>Use <strong>assets more effectively</strong>.</li>
+  <li>Reduced supply chain costs lead to <strong>increased profitability</strong>.</li>
+  <li><strong>Increased sales</strong>.</li>
+</ul>
+
+<h3>The Emerging Internet-Driven Supply Chain</h3>
+<p>The emerging Internet-driven supply chain works like a <strong>digital logistics nervous system</strong>. It provides <strong>multidirectional communication</strong> among firms, networks of firms, and e-marketplaces. So entire networks of supply chain partners can <strong>immediately adjust inventories, orders and capacities</strong>.</p>
+<p>Partners in this network include suppliers, manufacturers, distributors, retailers, customers, logistics providers, virtual manufacturers, contract manufacturers, private industrial networks / net marketplaces, and logistics exchanges.</p>
+
+<div class="callout callout-green">
+  <span class="callout-label">Tip</span>
+  <p>Think of an ERP as the <strong>inside</strong> of one company (integrated departments) and SCM as the <strong>outside</strong> (linking suppliers, distributors and customers).</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Summary</h2>
+<ul>
+  <li><strong>Enterprise Systems (ERP):</strong> characteristics, how it works, business value</li>
+  <li><strong>Supply Chain Management Systems:</strong> upstream and downstream, information and SCM, bullwhip effect, how IS facilitate SCM, SCM software, global supply chain issues, push/pull and sequential/concurrent models, business value of SCM systems, the emerging internet-driven supply chain</li>
+</ul>
+
+<h2>Reference</h2>
+<p>Laudon, K. C., &amp; Laudon, J. P. <em>Management Information Systems</em>, 17th Edition.</p>
+
+`,
+summary: {
+topic: 'Operational Excellence and Customer Intimacy: Enterprise Systems (ERP) and Supply Chain Management Systems',
+subTopics: [
+'Enterprise Systems (ERP)',
+'Characteristics of an Enterprise System',
+'How Enterprise Systems Work',
+'Enterprise Software',
+'Business Value of Enterprise Systems',
+'Supply Chain Management Systems',
+'Upstream and Downstream Supply Chain',
+'Information and Supply Chain Management',
+'How Information Systems Facilitate SCM',
+'Supply Chain Management Software',
+'Global Supply Chains',
+'Push-based vs Pull-based Models',
+'Sequential vs Concurrent Supply Chains',
+'Business Value of SCM Systems',
+'The Emerging Internet-Driven Supply Chain',
+],
+definitions: [
+{ term: 'Enterprise System (ERP)', meaning: 'A suite of integrated software modules with a common central database that shares data across all business functions.' },
+{ term: 'Configuration Tables', meaning: "Tables in enterprise software used to customize the system to a firm's business processes." },
+{ term: 'Supply Chain', meaning: 'A network of organizations and processes for procuring raw materials, turning them into products and distributing them.' },
+{ term: 'Upstream Supply Chain', meaning: "The firm's suppliers, their suppliers, and the processes for managing those relationships." },
+{ term: 'Downstream Supply Chain', meaning: 'Organizations and processes that distribute and deliver products to customers.' },
+{ term: 'Just-in-Time Strategy', meaning: 'Components arrive as needed and finished goods ship right after leaving the assembly line.' },
+{ term: 'Safety Stock', meaning: 'Extra inventory that acts as a buffer against lack of flexibility in the supply chain.' },
+{ term: 'Bullwhip Effect', meaning: 'Distortion of product demand information as it passes from one entity to the next in the supply chain.' },
+{ term: 'Supply Chain Planning System', meaning: 'Models the supply chain, optimizes sourcing and manufacturing, sets inventory levels and supports demand planning.' },
+{ term: 'Supply Chain Execution System', meaning: 'Manages the flow of products through distribution centers and warehouses for efficient delivery.' },
+{ term: 'Push-Based Model (Build-to-Stock)', meaning: 'Production schedules are based on best guesses (forecasts) of demand.' },
+{ term: 'Pull-Based Model (Demand-Driven)', meaning: 'Customer orders trigger events in the supply chain.' },
+{ term: 'Sequential Supply Chain', meaning: 'Information and materials flow one company after another.' },
+{ term: 'Concurrent Supply Chain', meaning: 'Information flows in many directions at once among supply chain network members.' },
+],
+keyPoints: [
+'ERP systems use integrated modules and one central database; data entered once is instantly available to other processes.',
+'ERP characteristics: real-time operations, integration of all business activities, flow of information.',
+'ERP covers finance/accounting, HR, manufacturing/production and sales/marketing.',
+'Implementing ERP: select functions, then map business processes to software processes using configuration tables.',
+'ERP business value: operational efficiency, firm-wide information for decisions, rapid customer response, analytical tools.',
+'Upstream = suppliers side; downstream = distribution and customers side.',
+'Supply chain inefficiencies can waste up to 25 percent of operating costs.',
+'Just-in-time reduces inventory; safety stock buffers inflexibility.',
+'The bullwhip effect distorts demand information across the supply chain.',
+'SCM planning systems plan and optimize; SCM execution systems manage product flow through warehouses.',
+'Global supply chains face distance, time differences, complex pricing, foreign regulations and cultural differences.',
+'Push model = forecast-driven; pull model = customer-order-driven.',
+'Sequential chains pass information step by step; concurrent chains share information in many directions at once.',
+'SCM value: match supply to demand, lower inventory, better delivery, faster time to market, better asset use, higher profit and sales.',
+'The internet-driven supply chain is a digital logistics nervous system allowing partners to adjust inventories, orders and capacities immediately.',
+],
+},
+},
+
+
+{
+id: 6,
+title: 'Operational Excellence and Customer Intimacy – Part II',
+content: `
+<span class="lesson-badge">LESSON 06</span>
+<h1>Operational Excellence and Customer Intimacy – Part II</h1>
+<div class="meta-info">ICT2162 <span>•</span> 12 min read</div>
+
+<div class="callout callout-blue">
+  <span class="callout-label">What We Discuss Today</span>
+  <ul>
+    <li><strong>Customer Relationship Management (CRM) Systems</strong> — what, software, operational and analytical CRM, business value</li>
+    <li>Enterprise applications — new opportunities and challenges</li>
+    <li>Next-generation enterprise applications</li>
+    <li>Social CRM</li>
+    <li>Business Intelligence</li>
+  </ul>
+</div>
+
+<div class="callout callout-green">
+  <span class="callout-label">Recap of the Previous Lesson</span>
+  <ul>
+    <li><strong>Enterprise Systems (ERP):</strong> characteristics, how it works, business value</li>
+    <li><strong>Supply Chain Management Systems:</strong> upstream and downstream, information and SCM, bullwhip effect, how IS facilitate SCM, SCM software, global supply chain issues, push/pull and sequential/concurrent models, business value, the emerging internet-driven supply chain</li>
+  </ul>
+</div>
+
+<div class="divider"></div>
+
+<h2>Customer Relationship Management (CRM) Systems</h2>
+
+<h3>What Information Do You Need About Customers?</h3>
+<p>To build and keep strong, long-lasting relationships with customers, you need to:</p>
+<ul>
+  <li>Know <strong>exactly who</strong> your customers are (KYC – Know Your Customer).</li>
+  <li>Know <strong>how to contact</strong> them.</li>
+  <li>Know whether they are <strong>costly to service and sell to</strong>.</li>
+  <li>Know what <strong>products and services</strong> they are interested in.</li>
+  <li>Know <strong>how much money</strong> they spend on your company.</li>
+</ul>
+
+<h3>What is a CRM System?</h3>
+<p>In large businesses there are <strong>too many customers</strong> and <strong>too many ways</strong> customers interact with the firm. CRM systems solve this.</p>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Definition — CRM Systems</span>
+  <p>CRM systems <strong>capture and integrate</strong> customer data from all over the organization, <strong>consolidate and analyze</strong> it, and <strong>distribute</strong> customer information to various systems and <strong>customer touch points</strong>. They provide a <strong>single enterprise view of customers</strong>.</p>
+</div>
+
+<ul>
+  <li>CRM systems examine customers from a <strong>multifaceted perspective</strong>.</li>
+  <li>They use a <strong>set of integrated applications</strong> to address all aspects of the customer relationship: <strong>customer service, sales and marketing</strong>.</li>
+</ul>
+
+<pre><code>                 CUSTOMER
+
+SALES MARKETING SERVICE
+
+telephone sales - campaign data - call center data
+web sales - content - web self-service data
+retail store sales - data analysis - wireless data
+field sales</code></pre> <h3>CRM Software</h3> <p>CRM packages range from <strong>niche tools</strong> to <strong>large-scale enterprise applications</strong>. More comprehensive packages have modules for:</p> <p><strong>1. Partner Relationship Management (PRM)</strong></p> <ul> <li>Enhances <strong>collaboration</strong> between a company and its <strong>selling partners</strong>.</li> <li>Lets them <strong>trade information</strong> and distribute <strong>leads and customer data</strong>, integrating lead generation, pricing, promotions, order configurations and availability.</li> <li>Provides tools to <strong>assess partners' performance</strong>.</li> </ul> <p><strong>2. Employee Relationship Management (ERM)</strong></p> <ul> <li>Deals with <strong>employee issues closely related to CRM</strong>.</li> <li>Examples: <strong>setting objectives, employee performance management, performance-based compensation, employee training</strong>.</li> </ul> <div class="callout callout-yellow"> <span class="callout-label">Remember</span> <p><strong>PRM</strong> = Partner Relationship Management (selling partners).<br><strong>ERM</strong> = Employee Relationship Management (employees).</p> </div> <h3>Main Tools in CRM Packages</h3> <ol> <li><strong>Sales Force Automation (SFA)</strong></li> <li><strong>Customer service</strong></li> <li><strong>Marketing</strong></li> </ol> <h3>1. Sales Force Automation (SFA)</h3> <p>Helps sales staff <strong>increase productivity</strong> by focusing sales efforts on the <strong>most profitable customers</strong>, those who are good candidates for sales and services.</p> <p>It provides:</p> <ul> <li>Sales <strong>prospect and contact</strong> information</li> <li><strong>Product</strong> information</li> <li>Product <strong>configuration</strong> capabilities</li> <li>Sales <strong>quote generation</strong> capabilities</li> </ul> <h3>2. Customer Service</h3> <p>Provides information and tools to increase the <strong>efficiency of call centers, help desks and customer support staff</strong>. Capabilities include:</p> <ul> <li><strong>Assigning and managing</strong> customer service requests</li> <li><strong>Web-based self-service</strong> capabilities</li> </ul> <h3>3. Marketing</h3> <p>Supports <strong>direct-marketing campaigns</strong> by:</p> <ul> <li><strong>Capturing</strong> prospect and customer data</li> <li>Providing <strong>product and service information</strong></li> <li><strong>Qualifying leads</strong> for targeted marketing</li> <li><strong>Scheduling and tracking</strong> direct-marketing mailings or e-mail</li> </ul> <p>It also includes tools for:</p> <ul> <li><strong>Analyzing</strong> marketing and customer data</li> <li>Identifying <strong>profitable and unprofitable</strong> customers</li> <li><strong>Designing products and services</strong> to satisfy specific customer needs and interests</li> <li>Identifying opportunities for <strong>cross-selling</strong></li> </ul> <h3>How CRM Supports Marketing</h3> <p>CRM software gives a <strong>single point</strong> for users to manage and evaluate marketing campaigns across <strong>multiple channels</strong>: e-mail, direct mail, telephone, the web and social media.</p> <p>Example: responses by channel for a January promotional campaign:</p> <pre><code>Telephone 30.8%
+
+Direct mail 29.2%
+E-mail 17.3%
+Web 16.0%
+Cell phone text 6.7%</code></pre>
+
+<h3>CRM Software Capabilities</h3>
+<p>All capabilities share one pool of <strong>customer data</strong>.</p>
+<pre><code>SALES                 MARKETING              SERVICE
+
+Account management Campaign management Service delivery
+Lead management Channel promotions Customer satisfaction
+Order management management management
+Sales planning Events management Returns management
+Field sales Market planning Service planning
+Sales analytics Marketing operations Call center & help desk
+Marketing analytics Service analytics</code></pre>
+
+<h3>Customer Loyalty Management Process Map</h3>
+<pre><code>Receive service request
+
+-> Obtain customer information (from customer database)
+-> <Customer information available?>
+Yes -> Score customer -> <High value and loyalty?>
+Yes -> Provide special offers and service
+No -> Route to best agent
+No -> Route to best agent
+-> Resolve service issue</code></pre>
+
+<h3>Operational CRM and Analytical CRM</h3>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Operational CRM</span>
+  <p>Includes <strong>customer-facing applications</strong> such as tools for <strong>sales force automation</strong>, <strong>call center and customer service support</strong>, and <strong>marketing automation</strong>.</p>
+</div>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Analytical CRM</span>
+  <p>Includes applications that <strong>analyze customer data</strong> generated by operational CRM, to provide information for <strong>improving business performance</strong>. It provides <strong>Customer Lifetime Value (CLTV)</strong>.</p>
+</div>
+
+<p><strong>How analytical CRM works:</strong></p>
+<pre><code>Customer data (channels: call center, web site, wireless, field sales,
+
+direct mail, e-mail, retail store, partner;
+other sources: legacy systems, demographic data, third-party data,
+marketing campaign data)
+-> CUSTOMER DATA WAREHOUSE <-> OLAP, data mining,
+other data analysis tools
+-> Output: profitable customers, market segments,
+customer profiles, churn rates</code></pre>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>Operational CRM</strong> = customer-facing tools (SFA, call center, marketing automation).<br><strong>Analytical CRM</strong> = analyzes the data to improve performance (data warehouse, OLAP, data mining, CLTV).</p>
+</div>
+
+<h3>Business Value of CRM Systems</h3>
+<ul>
+  <li>Increased <strong>customer satisfaction</strong></li>
+  <li>Reduced <strong>direct-marketing costs</strong></li>
+  <li>More <strong>effective marketing</strong></li>
+  <li>Lower costs for <strong>customer acquisition and retention</strong></li>
+  <li>Increased <strong>sales revenue</strong></li>
+  <li>Reduced <strong>churn rate</strong></li>
+</ul>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Definition — Churn Rate</span>
+  <p>The <strong>number of customers who stop using or buying</strong> a company's products or services. It is an indicator of the <strong>growth or decline</strong> of the firm's customer base.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Enterprise Applications: New Opportunities and Challenges</h2>
+<p>Enterprise applications bring benefits, but also challenges:</p>
+<ul>
+  <li><strong>Highly expensive</strong> to purchase and implement — about <strong>$3.5 million to over $12 million, over 16 months</strong>.</li>
+  <li><strong>Technological</strong> changes.</li>
+  <li><strong>Business process</strong> changes.</li>
+  <li><strong>Organizational</strong> changes.</li>
+  <li><strong>Switching costs</strong> and dependence on software vendors.</li>
+  <li><strong>Data standardization, management and cleansing</strong>.</li>
+</ul>
+
+<div class="callout callout-red">
+  <span class="callout-label">Warning</span>
+  <p>Enterprise application challenges are <strong>not only technical</strong>. Exams often ask about <strong>business process and organizational changes</strong>, <strong>switching costs</strong> and <strong>data cleansing</strong> too.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Next-Generation Enterprise Applications</h2>
+<p>The move is to make applications <strong>more flexible, Web-enabled and integrated</strong> with other systems.</p>
+
+<ul>
+  <li><strong>Enterprise suites:</strong> software that lets CRM, SCM and enterprise systems work together and with suppliers' and clients' systems. They use <strong>Web services</strong> and <strong>SOA</strong> (Service-Oriented Architecture).</li>
+  <li><strong>Open source and on-demand</strong> solutions.</li>
+  <li><strong>Mobile compatible</strong>; <strong>Web 2.0</strong> capabilities.</li>
+  <li><strong>Complementary analytics</strong> products.</li>
+  <li><strong>Cloud-based</strong> software and services.</li>
+</ul>
+
+<h3>Service Platform</h3>
+<p>A <strong>service platform</strong> integrates multiple applications to deliver a <strong>seamless experience</strong> for all parties. Example: the <strong>order-to-cash</strong> process.</p>
+
+<h3>Portal Software</h3>
+<p><strong>Portal software</strong> integrates information from enterprise applications and legacy systems and presents it <strong>as if it comes from a single source</strong>.</p>
+
+<h3>Order-to-Cash Example</h3>
+<pre><code>Order-to-cash steps:
+
+Customer order -> Order fulfillment -> Delivery -> Invoicing
+-> Customer payments/collection -> Cash application
+
+Composite process : Order-to-cash (leads, orders, availability,
+fulfillment, billing)
+^
+Integration layer
+^
+Existing systems : CRM | SCM | ERP | Other systems</code></pre>
+
+<div class="divider"></div>
+
+<h2>Social CRM</h2>
+<p><strong>Social CRM</strong> lets a business connect <strong>customer conversations and relationships from social networking sites</strong> to CRM processes.</p>
+<p>Capabilities include:</p>
+<ul>
+  <li>Linking <strong>data from social networks</strong></li>
+  <li><strong>Social media analytics</strong></li>
+  <li><strong>Campaign management</strong></li>
+  <li><strong>Social marketing</strong>, etc.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Business Intelligence</h2>
+<p><strong>Business intelligence (BI)</strong> helps managers get <strong>more meaningful information</strong> from the massive amounts of data generated by enterprise systems.</p>
+<p>It includes tools for:</p>
+<ul>
+  <li><strong>Flexible reporting</strong></li>
+  <li><strong>Ad-hoc analysis</strong></li>
+  <li><strong>Interactive dashboards</strong></li>
+  <li><strong>What-if scenario analysis</strong></li>
+  <li><strong>Data visualization</strong> techniques, etc.</li>
+</ul>
+<p>BI comes in <strong>embedded</strong> and <strong>standalone</strong> versions in the market.</p>
+
+<div class="callout callout-green">
+  <span class="callout-label">Tip</span>
+  <p>Link the ideas: <strong>ERP</strong> runs internal processes, <strong>SCM</strong> links suppliers, <strong>CRM</strong> links customers, and <strong>BI</strong> turns all the data into useful decisions.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Summary</h2>
+<ul>
+  <li><strong>CRM:</strong> what it is; software (PRM, ERM; SFA, customer service, marketing); operational and analytical CRM; business value</li>
+  <li>Enterprise applications: new opportunities and challenges</li>
+  <li>Next-generation enterprise applications: service platform, portal, etc.</li>
+  <li>Social CRM</li>
+  <li>Business intelligence</li>
+</ul>
+
+<h2>Reference</h2>
+<p>Laudon, K. C., &amp; Laudon, J. P. <em>Management Information Systems</em>, 17th Edition.</p>
+
+`,
+summary: {
+topic: 'Operational Excellence and Customer Intimacy: CRM Systems, Next-Generation Enterprise Applications, Social CRM and Business Intelligence',
+subTopics: [
+'Customer Relationship Management (CRM) Systems',
+'What Information Do You Need About Customers?',
+'What is a CRM System?',
+'CRM Software (PRM and ERM)',
+'Sales Force Automation (SFA)',
+'Customer Service',
+'Marketing',
+'How CRM Supports Marketing',
+'CRM Software Capabilities',
+'Customer Loyalty Management Process Map',
+'Operational CRM and Analytical CRM',
+'Business Value of CRM Systems',
+'Enterprise Applications: Opportunities and Challenges',
+'Next-Generation Enterprise Applications',
+'Service Platform and Portal Software',
+'Social CRM',
+'Business Intelligence',
+],
+definitions: [
+{ term: 'CRM System', meaning: 'A system that captures, integrates, analyzes and distributes customer data to give a single enterprise view of customers.' },
+{ term: 'Partner Relationship Management (PRM)', meaning: 'A CRM module that improves collaboration between a company and its selling partners.' },
+{ term: 'Employee Relationship Management (ERM)', meaning: 'A CRM module for employee issues such as objectives, performance management, compensation and training.' },
+{ term: 'Sales Force Automation (SFA)', meaning: 'CRM tools that help sales staff be more productive by focusing on the most profitable customers.' },
+{ term: 'Operational CRM', meaning: 'Customer-facing applications such as sales force automation, call center support and marketing automation.' },
+{ term: 'Analytical CRM', meaning: 'Applications that analyze customer data from operational CRM to improve business performance.' },
+{ term: 'Customer Lifetime Value (CLTV)', meaning: 'A measure provided by analytical CRM of the total value of a customer over time.' },
+{ term: 'Churn Rate', meaning: 'Number of customers who stop using or buying from a company; shows growth or decline of the customer base.' },
+{ term: 'Cross-selling', meaning: 'Selling additional products or services to existing customers.' },
+{ term: 'Enterprise Suite', meaning: 'Software that lets CRM, SCM and enterprise systems work together with supplier and client systems.' },
+{ term: 'Service Platform', meaning: 'Integrates multiple applications to give a seamless experience to all parties, e.g. order-to-cash.' },
+{ term: 'Portal Software', meaning: 'Integrates information from enterprise applications and legacy systems and presents it as coming from one source.' },
+{ term: 'Social CRM', meaning: 'Connects customer conversations and relationships on social networking sites to CRM processes.' },
+{ term: 'Business Intelligence (BI)', meaning: 'Tools that help managers get meaningful information from the large amounts of data generated by enterprise systems.' },
+],
+keyPoints: [
+'CRM gives a single enterprise view of the customer across sales, marketing and service.',
+'CRM captures and integrates customer data, consolidates and analyzes it, and distributes it to touch points.',
+'Comprehensive CRM packages include PRM and ERM modules.',
+'CRM tools: sales force automation, customer service, marketing.',
+'Marketing tools identify profitable customers and cross-selling opportunities and manage multichannel campaigns.',
+'Operational CRM is customer-facing; analytical CRM analyzes data (data warehouse, OLAP, data mining) and provides CLTV.',
+'Analytical CRM outputs: profitable customers, market segments, customer profiles, churn rates.',
+'CRM business value: higher satisfaction, lower marketing and acquisition/retention costs, more effective marketing, higher sales, lower churn.',
+'Enterprise applications are expensive ($3.5M to over $12M over 16 months) and need technology, process and organizational change.',
+'Other challenges: switching costs, vendor dependence, data standardization and cleansing.',
+'Next-generation applications are flexible, Web-enabled, mobile, cloud-based, use Web services and SOA, and come with analytics.',
+'Service platforms (e.g. order-to-cash) and portal software integrate applications and present a unified view.',
+'Social CRM links social network data, social analytics, campaign management and social marketing to CRM.',
+'Business intelligence offers flexible reporting, ad-hoc analysis, dashboards, what-if analysis and data visualization.',
+],
+},
+},
+
+
+
+
 ]

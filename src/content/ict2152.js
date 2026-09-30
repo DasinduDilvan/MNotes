@@ -2504,6 +2504,869 @@ keyPoints: [
 },
 
 
+{
+id: 6,
+title: 'Activity Diagrams',
+content: `
+<span class="lesson-badge">LESSON 06</span>
+<h1>Activity Diagrams</h1>
+<div class="meta-info">ICT2142 <span>•</span> 12 min read</div>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Objectives</span>
+  <p>After this lesson, you should be able to:</p>
+  <ul>
+    <li>Identify the <strong>notations</strong> used in activity diagrams.</li>
+    <li><strong>Draw activity diagrams</strong> for given scenarios.</li>
+  </ul>
+</div>
+
+<h2>Introduction</h2>
+<p><strong>Activity diagrams</strong> are often called <strong>"OO flowcharts"</strong> (Object-Oriented flowcharts).</p>
+<ul>
+  <li>They can show both <strong>data flow</strong> and <strong>control flow</strong>.</li>
+  <li>They let you model a process as a collection of <strong>activities</strong> and the <strong>transitions</strong> between those activities.</li>
+  <li>They are especially useful for <strong>process modeling</strong>, <strong>behavior visualization</strong>, <strong>requirement analysis</strong>, <strong>process improvement</strong>, and <strong>communication among stakeholders</strong>.</li>
+</ul>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Main Purpose</span>
+  <p>The main purpose of an activity diagram is to model the <strong>flow of activities and actions</strong> within a system or process.</p>
+</div>
+
+<h3>Elements of an Activity Diagram</h3>
+<ul>
+  <li><strong>Action nodes</strong></li>
+  <li><strong>Control nodes</strong>
+    <ul>
+      <li><strong>Initial</strong> and <strong>final</strong> nodes (final nodes have two types: <strong>activity final</strong> and <strong>flow final</strong>)</li>
+      <li><strong>Decision</strong> and <strong>merge</strong></li>
+      <li><strong>Fork</strong> and <strong>join</strong></li>
+    </ul>
+  </li>
+  <li><strong>Object nodes</strong></li>
+</ul>
+
+<h3>When to Use Activity Diagrams?</h3>
+<ul>
+  <li>To model <strong>flows of actions</strong>, <strong>decisions</strong>, and <strong>control logic</strong>.</li>
+  <li>To show how actions are <strong>distributed across actors or components</strong> using <strong>swimlanes</strong>.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Activity Diagram Notations</h2>
+
+<h3>1. Activity</h3>
+<p>An <strong>activity</strong> is a behavior made up of one or more actions. It is a network of <strong>nodes</strong> connected by <strong>edges</strong>.</p>
+<ul>
+  <li><strong>Action nodes</strong> — executable steps.</li>
+  <li><strong>Control nodes</strong> — manage the flow of execution (e.g., decisions, forks).</li>
+  <li><strong>Object nodes</strong> — objects or data used within the activity.</li>
+  <li><strong>Edges</strong> — paths or flows of execution between nodes.</li>
+</ul>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p>Every activity <strong>begins with an initial node</strong> and <strong>ends with a final node</strong>.</p>
+</div>
+
+<h3>2. Actions</h3>
+<p><strong>Actions</strong> are the basic units of behavior in an activity diagram. They are drawn as <strong>rounded rectangles</strong>.</p>
+<pre><code>  ( Write letter )      &lt;- rounded rectangle = action</code></pre>
+<ul>
+  <li>The label can be written in <strong>plain English</strong> or <strong>pseudo-code</strong>.</li>
+  <li>In English, the label should be a <strong>verb or verb phrase</strong> (e.g., "Post letter"), because an action is something being performed.</li>
+</ul>
+
+<h3>Properties of Actions</h3>
+<ul>
+  <li><strong>Atomic</strong> — not broken down inside the activity; treated as a single step.</li>
+  <li><strong>Uninterruptible</strong> — once it starts, it runs to completion.</li>
+  <li><strong>Instantaneous</strong> — assumed to take negligible time compared to the whole activity.</li>
+</ul>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p>Actions are <strong>Atomic</strong>, <strong>Uninterruptible</strong> and <strong>Instantaneous</strong>.</p>
+</div>
+
+<h3>3. Action Flow</h3>
+<p>Action flows are also called <strong>edges</strong> or <strong>paths</strong>. They show the <strong>transition from one action to another</strong>, drawn as arrows.</p>
+<pre><code>( Action A ) ------&gt; ( Action B )</code></pre>
+
+<h3>4. Starting and Stopping</h3>
+<ul>
+  <li><strong>Initial node</strong> — the starting point. Drawn as a <strong>solid filled circle</strong>.</li>
+  <li><strong>Activity final node</strong> — ends the <strong>entire activity</strong>. Drawn as a <strong>bull's-eye</strong> (filled circle inside an outer circle).</li>
+  <li><strong>Flow final node</strong> — drawn as a <strong>circle with an X</strong>. It ends <strong>only the flow that reaches it</strong>, not the whole activity.</li>
+</ul>
+<pre><code>  (●)   Initial node
+
+(◉) Activity final node (ends everything)
+(⊗) Flow final node (ends one flow only)</code></pre>
+
+<div class="callout callout-red">
+  <span class="callout-label">Warning</span>
+  <p>Do not mix up the two final nodes. <strong>Activity final</strong> stops the <strong>whole activity</strong>. <strong>Flow final</strong> stops <strong>only one path</strong>.</p>
+</div>
+
+<h3>5. Decision and Merge Nodes</h3>
+<p>Both are drawn as a <strong>diamond</strong>. They control <strong>alternative flows</strong> inside an activity.</p>
+
+<p><strong>Decision node</strong></p>
+<ul>
+  <li>Has <strong>one incoming flow</strong> and <strong>multiple outgoing flows</strong>.</li>
+  <li>Each outgoing flow has a <strong>guard</strong> (a condition), written like <code>[is junk]</code>.</li>
+  <li>Only <strong>one path</strong> is chosen at runtime.</li>
+</ul>
+
+<p><strong>Merge node</strong></p>
+<ul>
+  <li>Has <strong>multiple incoming flows</strong> and <strong>one outgoing flow</strong>.</li>
+  <li>Joins alternative paths <strong>without synchronization</strong>.</li>
+  <li><strong>Any one</strong> incoming flow can continue the execution.</li>
+</ul>
+
+<pre><code>               [condition 1] ---&gt; ( Action X ) ---
+
+Decision <> > Merge <> --->
+[condition 2] ---> ( Action Y ) ---</code></pre>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>Decision</strong> = 1 in, many out, only <strong>one</strong> path taken.<br><strong>Merge</strong> = many in, 1 out, <strong>no waiting</strong>.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Exercises on Basic Notations</h2>
+
+<h3>Exercise 1 — Posting a Letter</h3>
+<p>Draw an activity diagram for posting a letter using these actions: <strong>Write letter</strong>, <strong>Address letter</strong>, <strong>Post letter</strong>.</p>
+<pre><code>(●) --&gt; ( Write letter ) --&gt; ( Address letter ) --&gt; ( Post letter ) --&gt; (◉)</code></pre>
+
+<h3>Exercise 2 — Getting Mail</h3>
+<ul>
+  <li>The activity starts with the <strong>Get mail</strong> action.</li>
+  <li>If the mail is junk, <code>[is junk]</code> is true. Go to <strong>Bin mail</strong>, then to the stop state.</li>
+  <li>Otherwise, go to <strong>Open mail</strong>, then to the stop state.</li>
+</ul>
+<p><strong>Answer (text version):</strong></p>
+<pre><code>(●) --&gt; ( Get mail ) --&gt; &lt;decision&gt;
+                           |
+        [is junk] ---------+--------- [else]
+            |                           |
+      ( Bin mail )                ( Open mail )
+            |                           |
+            +-----------&gt; (◉) &lt;---------+</code></pre>
+
+<div class="callout callout-green">
+  <span class="callout-label">Tip</span>
+  <p>Always <strong>label every outgoing arrow</strong> of a decision node with a guard. Use <code>[else]</code> for the remaining case.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Partitions (Swimlanes)</h2>
+<p>Elements in an activity diagram can be organized using <strong>partitions</strong>, also called <strong>swimlanes</strong>. A partition shows <strong>who is responsible</strong> for performing each action.</p>
+
+<h3>What Can a Partition Represent?</h3>
+<ul>
+  <li><strong>In business modeling:</strong> business units, departments or divisions, business actors or roles, organizations.</li>
+  <li><strong>In system modeling:</strong> systems, subsystems, external systems.</li>
+  <li><strong>In application modeling:</strong> objects, components, logical entities within the application.</li>
+</ul>
+
+<h3>Example — Airline Check-in</h3>
+<p>The swimlanes are decided by <strong>who performs each action</strong>.</p>
+
+<p><strong>Swimlane: Passenger</strong> (user / actor behaviors)</p>
+<ul>
+  <li>Showing ticket at check-in counter</li>
+  <li>Checking luggage</li>
+  <li>Paying fee</li>
+</ul>
+
+<p><strong>Swimlane: Passenger Services</strong> (airline staff / system responsibilities)</p>
+<ul>
+  <li>Verifying ticket</li>
+  <li>Referring passenger to customer services</li>
+  <li>Accepting luggage</li>
+  <li>Issuing boarding pass</li>
+</ul>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p>A <strong>swimlane</strong> = <strong>responsibility</strong>. Put each action in the lane of the person, role, or system that performs it.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Forks and Joins (Concurrent Threads)</h2>
+<p>Activity diagrams can model <strong>concurrent flows</strong>. Concurrency means activities that can happen <strong>in parallel</strong>.</p>
+<ul>
+  <li>A <strong>fork node</strong> splits <strong>one flow into multiple concurrent flows</strong>.</li>
+  <li>A <strong>join node</strong> <strong>synchronizes</strong> concurrent flows back into <strong>one flow</strong>.</li>
+</ul>
+
+<h3>Fork vs Decision</h3>
+<ul>
+  <li>Fork and join are similar to <strong>decision</strong> and <strong>merge</strong> nodes.</li>
+  <li>The big difference is <strong>concurrency</strong>.</li>
+  <li>A fork has <strong>one flow in</strong> and <strong>many flows out</strong>, like a decision node.</li>
+  <li>A decision node selects <strong>only one</strong> outgoing flow. A fork makes <strong>all</strong> outgoing flows happen <strong>at the same time</strong>.</li>
+</ul>
+
+<h3>Join</h3>
+<ul>
+  <li>A join has <strong>many flows in</strong> and <strong>one flow out</strong>, like a merge node.</li>
+  <li>With a join, <strong>all incoming flows must finish</strong> before the outgoing flow starts.</li>
+</ul>
+
+<pre><code>              +--&gt; ( Action A ) --+
+
+( Start ) --|===== =====|--> ( Next )
+fork bar +--> ( Action B ) --+ join bar</code></pre>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>Decision</strong> → picks <strong>one</strong> path. <strong>Fork</strong> → takes <strong>all</strong> paths together.<br><strong>Merge</strong> → <strong>any one</strong> incoming flow continues. <strong>Join</strong> → <strong>all</strong> incoming flows must arrive.</p>
+</div>
+
+<div class="callout callout-red">
+  <span class="callout-label">Warning</span>
+  <p>A common exam mistake is using a <strong>diamond</strong> for parallel work. Use a <strong>fork/join bar</strong> for concurrency and a <strong>diamond</strong> for alternatives.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Object Flow</h2>
+<p><strong>Object flow</strong> shows the <strong>creation and modification of objects</strong> by activities.</p>
+<ul>
+  <li><strong>Action → Object:</strong> the action <strong>produces, creates, or updates</strong> the object.</li>
+  <li><strong>Object → Action:</strong> the action <strong>uses, reads, or needs</strong> the object.</li>
+</ul>
+<pre><code>( Receive order ) ---&gt; [ Order ] ---&gt; ( Fill order )
+
+creates the object uses the object</code></pre>
+
+<div class="callout callout-green">
+  <span class="callout-label">Tip</span>
+  <p>Show <strong>only the important objects</strong> on an object flow. Too many objects make the diagram messy.</p>
+</div>
+
+<h3>Showing Object State</h3>
+<p>You can show an object's <strong>state</strong> by writing the state name in <strong>square brackets below the object's name</strong>.</p>
+<pre><code>[ Order ]
+
+[ accepted ]</code></pre>
+
+<div class="divider"></div>
+
+<h2>More Exercises</h2>
+
+<h3>Exercise 3 — Creating a Document</h3>
+<p>Draw an activity diagram for creating a document using a word processing package. The steps are:</p>
+<ol>
+  <li>Open the word processing package.</li>
+  <li>Create a file.</li>
+  <li>Save the file under a unique name within its directory.</li>
+  <li>Type the document.</li>
+  <li>If graphics are needed: open the graphics package, create the graphics, and paste them into the document.</li>
+  <li>If a spreadsheet is needed: open the spreadsheet package, create the spreadsheet, and paste it into the document.</li>
+  <li>Save the file.</li>
+  <li>Print a hard copy of the document.</li>
+  <li>Exit the word processing package.</li>
+</ol>
+<p><strong>Answer outline:</strong></p>
+<pre><code>(●) -&gt; Open word processor -&gt; Create file -&gt; Save file (unique name)
+-&gt; Type document -&gt; &lt;decision: graphics needed?&gt;
+     [yes] Open graphics package -&gt; Create graphics -&gt; Paste graphics
+     [no]  (skip)
+   -&gt; &lt;merge&gt; -&gt; &lt;decision: spreadsheet needed?&gt;
+     [yes] Open spreadsheet package -&gt; Create spreadsheet -&gt; Paste spreadsheet
+     [no]  (skip)
+   -&gt; &lt;merge&gt; -&gt; Save file -&gt; Print hard copy
+   -&gt; Exit word processor -&gt; (◉)</code></pre>
+
+<h3>Exercise 4 — Order Processing</h3>
+<ul>
+  <li><strong>Requested order</strong> is the input parameter of <strong>Receive order</strong>.</li>
+  <li>If the order is accepted: fill in all required information, send the invoice, then accept the payment.</li>
+  <li>When the payment is accepted, the order is shipped.</li>
+  <li>This business flow allows <strong>shipment at the same time as</strong> sending the invoice and confirming payment.</li>
+  <li>Finally, the order is <strong>closed</strong>.</li>
+</ul>
+<p><strong>Answer outline:</strong></p>
+<pre><code>(●) -&gt; Receive order (input: Requested order)
+-&gt; &lt;decision: order accepted?&gt;
+    [accepted] -&gt; Fill order
+          -&gt; FORK
+              Thread 1: Ship order
+              Thread 2: Send invoice -&gt; Accept payment
+          -&gt; JOIN -&gt; Close order -&gt; (◉)
+    [rejected] -&gt; Close order -&gt; (◉)</code></pre>
+
+<h3>Exercise 5 — Client Engagement Process</h3>
+<p>A company follows a structured process with prospective clients:</p>
+<ul>
+  <li>A <strong>sales person</strong> contacts a client to schedule an appointment.</li>
+  <li><strong>Onsite meeting:</strong> a corporate <strong>technician</strong> prepares the meeting facilities.</li>
+  <li><strong>Offsite meeting:</strong> a <strong>consultant</strong> prepares the required equipment.</li>
+  <li>After preparation, the <strong>consultant</strong> meets the client.</li>
+  <li>After the meeting, the <strong>sales person</strong> sends a follow-up letter.</li>
+  <li>If the client gives a <strong>statement of the problem</strong>, the consultant creates a <strong>proposal</strong> and sends it to the client.</li>
+  <li>If the client does <strong>not</strong> give a problem statement, the process ends.</li>
+</ul>
+<p>Construct a UML activity diagram for this workflow. Use <strong>swimlanes</strong> for Sales Person, Technician, and Consultant.</p>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Note</span>
+  <p>In this scenario, the <strong>client</strong> is an <strong>external participant</strong>. The client does <strong>not perform modeled actions</strong> and only <strong>triggers conditions</strong> (for example, "provides statement of problem").</p>
+</div>
+
+<pre><code>Sales Person : (●) -&gt; Contact client &amp; schedule appointment -&gt; &lt;decision: meeting type&gt;
+
+Technician : [onsite] -> Prepare meeting facilities ----+
+Consultant : [offsite] -> Prepare equipment -------------+-> <merge>
+Consultant : Meet client
+Sales Person : Send follow-up letter -> <decision>
+Consultant : [problem statement provided] -> Create proposal -> Send proposal -> (◉)
+Sales Person : [no statement] -> (◉)</code></pre>
+
+<div class="divider"></div>
+
+<h2>Quick Notation Summary</h2>
+<pre><code>Initial node ........ solid filled circle
+
+Activity final ...... bull's-eye (circle inside circle)
+Flow final .......... circle with X
+Action .............. rounded rectangle
+Decision / Merge .... diamond
+Fork / Join ......... thick bar
+Object node ......... rectangle
+Swimlane ............ vertical or horizontal partition</code></pre>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p>Activity diagrams = <strong>OO flowcharts</strong> that show <strong>control flow and data flow</strong>. Always start with an <strong>initial node</strong> and end with a <strong>final node</strong>.</p>
+</div>
+
+`,
+summary: {
+topic: 'Activity Diagrams in UML: notations, control flow, swimlanes, concurrency and object flow',
+subTopics: [
+'Introduction',
+'Elements of an Activity Diagram',
+'When to Use Activity Diagrams?',
+'Activity',
+'Actions',
+'Action Flow',
+'Starting and Stopping',
+'Decision and Merge Nodes',
+'Exercises 1 and 2',
+'Partitions (Swimlanes)',
+'Forks and Joins',
+'Object Flow',
+'Exercises 3, 4 and 5',
+'Quick Notation Summary',
+],
+definitions: [
+{ term: 'Activity Diagram', meaning: 'A UML diagram, often called an OO flowchart, that models the flow of activities, decisions and control logic in a process.' },
+{ term: 'Activity', meaning: 'A behavior made up of one or more actions, shown as a network of nodes connected by edges.' },
+{ term: 'Action', meaning: 'The basic unit of behavior, drawn as a rounded rectangle. It is atomic, uninterruptible and instantaneous.' },
+{ term: 'Action Flow (Edge)', meaning: 'An arrow showing the transition from one action or node to the next.' },
+{ term: 'Initial Node', meaning: 'The starting point of an activity, drawn as a solid filled circle.' },
+{ term: 'Activity Final Node', meaning: "Ends the entire activity. Drawn as a bull's-eye." },
+{ term: 'Flow Final Node', meaning: 'Ends only the flow that reaches it, not the whole activity. Drawn as a circle with an X.' },
+{ term: 'Decision Node', meaning: 'A diamond with one incoming flow and several guarded outgoing flows. Only one path is chosen.' },
+{ term: 'Guard', meaning: 'A condition written in square brackets on a flow leaving a decision node, e.g. [is junk].' },
+{ term: 'Merge Node', meaning: 'A diamond with many incoming flows and one outgoing flow. It joins alternative paths without synchronization.' },
+{ term: 'Partition (Swimlane)', meaning: 'A section of the diagram showing who or what is responsible for performing the actions inside it.' },
+{ term: 'Concurrency', meaning: 'Activities that can proceed in parallel at the same time.' },
+{ term: 'Fork Node', meaning: 'Splits one incoming flow into multiple concurrent outgoing flows. All outgoing flows occur.' },
+{ term: 'Join Node', meaning: 'Synchronizes concurrent flows into one. All incoming flows must finish before the outgoing flow starts.' },
+{ term: 'Object Flow', meaning: 'Shows how objects are created, modified or used by actions.' },
+{ term: 'Object State', meaning: 'The condition of an object, written in square brackets below the object name.' },
+],
+keyPoints: [
+'Activity diagrams are "OO flowcharts" that show both control flow and data flow.',
+'They are useful for process modeling, behavior visualization, requirement analysis, process improvement and stakeholder communication.',
+'Elements: action nodes, control nodes (initial, final, decision, merge, fork, join) and object nodes.',
+'Every activity begins with an initial node and ends with a final node.',
+'Actions are rounded rectangles labeled with a verb or verb phrase. They are atomic, uninterruptible and instantaneous.',
+'Activity final ends the whole activity. Flow final ends only one flow.',
+'Decision and merge both use a diamond. Decision picks one guarded path; merge lets any one incoming flow continue.',
+'Fork and join use a bar. Fork starts all outgoing flows concurrently; join waits for all incoming flows.',
+'The key difference between decision and fork is concurrency.',
+'Swimlanes (partitions) show responsibility for actions, such as actors, departments, systems or objects.',
+'Object flow: action → object means create or update; object → action means use or read. Show only important objects.',
+'Object state is shown in square brackets below the object name.',
+'Exercises practice: sequential flow (posting a letter), decision (junk mail), sequence with decisions (document creation), fork and join (order processing), and swimlanes with decisions (client engagement).',
+],
+},
+},
+
+
+{
+id: 7,
+title: 'Class Diagrams',
+content: `
+<span class="lesson-badge">LESSON 07</span>
+<h1>Class Diagrams</h1>
+<div class="meta-info">ICT2142 <span>•</span> 18 min read</div>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Objectives</span>
+  <p>After this lesson, you should be able to:</p>
+  <ul>
+    <li>Identify the <strong>difference between domain model and design model</strong> class diagrams.</li>
+    <li><strong>Draw class diagrams</strong> by analyzing a given scenario.</li>
+  </ul>
+</div>
+
+<h2>Domain Class Diagram vs Design Class Diagram</h2>
+
+<h3>Domain Class Diagram</h3>
+<ul>
+  <li>Models the <strong>concepts in the problem domain</strong>.</li>
+  <li>Usually shows only <strong>class names and relationships</strong>.</li>
+  <li>Helps define the <strong>vocabulary</strong> of the problem domain.</li>
+</ul>
+
+<h3>Design Class Diagram</h3>
+<ul>
+  <li>Models the <strong>actual software design</strong>.</li>
+  <li>Includes more detail: <strong>attributes</strong>, <strong>operations (methods)</strong> and <strong>visibility</strong>.</li>
+  <li>Gives more detail than a domain class diagram.</li>
+</ul>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>Domain</strong> class diagram = class names + relationships only.<br><strong>Design</strong> class diagram = names + attributes + operations + visibility + relationships.</p>
+</div>
+
+<h3>From Analysis to Design</h3>
+<p>Moving from analysis to design means moving from understanding <strong>what</strong> the system must do (requirements and domain understanding) to deciding <strong>how</strong> it will do it (implementation details). This makes sure business requirements become a structured, implementable software solution.</p>
+
+<p>Two important diagrams are used in this transition:</p>
+<ol>
+  <li><strong>Design Class Diagram (Static View)</strong>
+    <ul>
+      <li>Shows the <strong>static structure</strong> of the system.</li>
+      <li>Comes from the Domain Model, with extra design details such as methods, attributes and relationships.</li>
+      <li>Focuses on object-oriented relationships, class hierarchies and encapsulation.</li>
+    </ul>
+  </li>
+  <li><strong>Sequence Diagram (Dynamic View)</strong>
+    <ul>
+      <li>Shows the <strong>dynamic behavior</strong> of the system by modeling interactions between objects over time.</li>
+      <li>Shows how objects work together to do a function by specifying <strong>message flows</strong>.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3>Design Class Models</h3>
+<ul>
+  <li>They contain <strong>software classes</strong> with attributes and operations, together with detailed relationships between the classes.</li>
+  <li>A design class model <strong>extends the domain class model</strong> by refining attributes, relationships and operations.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Class Diagrams</h2>
+<ul>
+  <li>Give an <strong>overview of a system</strong> by showing its classes and the relationships between them.</li>
+  <li>Show the <strong>attributes</strong> (data) and <strong>operations</strong> (methods/functions) of each class.</li>
+  <li>Describe the <strong>overall structure and architecture</strong> of system components.</li>
+</ul>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Note</span>
+  <p>A class diagram gives a <strong>static view</strong> of the system. It shows <strong>how the system is organized</strong>, not how it behaves while running.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Finding Classes</h2>
+<p>There are two common ways to identify classes in a system:</p>
+<ol>
+  <li><strong>Noun–Verb Analysis</strong></li>
+  <li><strong>CRC Analysis</strong> (Class–Responsibility–Collaboration)</li>
+</ol>
+
+<h3>Finding Classes Using Noun–Verb Analysis</h3>
+<p>This method has been used for many years and works well because it is based on the <strong>direct analysis of the language</strong> used in the problem domain.</p>
+<p>When a text description is given:</p>
+<ul>
+  <li><strong>Nouns and noun phrases</strong> usually point to <strong>classes or attributes</strong>.</li>
+  <li><strong>Verbs and verb phrases</strong> point to <strong>responsibilities or operations (methods)</strong> of a class.</li>
+</ul>
+
+<h3>Hidden Classes</h3>
+<p>Some classes are part of the problem domain but are <strong>not clearly mentioned</strong> in the description. These are called <strong>hidden classes</strong>.</p>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Example — University Course Registration</span>
+  <p>Description: <em>"Students enroll in courses offered by the university."</em></p>
+  <p><strong>Identified nouns:</strong> Student, Course, University.</p>
+  <p><strong>Hidden class:</strong> <code>Enrollment</code>. The system must track which student registered for which course, in which semester, with what grade.</p>
+</div>
+<pre><code>Enrollment
+enrollmentID
+semester
+grade</code></pre> <div class="callout callout-red"> <span class="callout-label">Warning</span> <p>Be careful with <strong>synonyms</strong> (different words, same meaning) and <strong>homonyms</strong> (one word, many meanings). They can cause wrong classes or operations.<br>Example: <strong>Order</strong> can mean a purchase request (e-commerce) or a command/instruction (military or management).</p> </div> <h3>Noun–Verb Analysis: Step by Step</h3> <h3>Step 01 — Noun Phrase Identification</h3> <p>Find the nouns and noun phrases in the system definition. Example system definition:</p> <ul> <li>The <strong>Portfolio Manager</strong> shall be able to roll up <strong>portfolios</strong> on several <strong>levels</strong>.</li> <li>A <strong>Trader</strong> shall be able to place <strong>orders</strong>, on behalf of a <strong>portfolio</strong>, that generate one or more <strong>trades</strong>.</li> <li>A <strong>Portfolio Manager</strong> shall be able to select a <strong>purchase method</strong> in conjunction with placing a <strong>sell order</strong>.</li> <li>A <strong>trade entry</strong> shall generate <strong>forecasted cash flows</strong> associated with the given <strong>trade lot</strong>.</li> <li>The <strong>system</strong> shall match up <strong>actual cash flows</strong> with <strong>forecasted cash flows</strong>.</li> <li>The <strong>system</strong> shall automatically generate appropriate <strong>postings</strong> to the <strong>General Ledger</strong>.</li> <li>The <strong>system</strong> shall allow an <strong>Assistant Trader</strong> to modify <strong>trade data</strong> and propagate the <strong>results</strong> accordingly.</li> </ul> <h3>Step 02 — Noun Phrase Consolidation</h3> <p>After finding the nouns and noun phrases:</p> <ol> <li>Make plural terms <strong>singular</strong>.</li> <li>Remove <strong>duplicate</strong> terms.</li> <li>Combine <strong>synonyms</strong> into a single term.</li> <li>Put the list in <strong>alphabetical order</strong>.</li> </ol> <p>Result after consolidation:</p> <pre><code>Assistant Trader | Portfolio | System
+
+Cash Flow | Portfolio Manager| Trade
+General Ledger | Posting | Trade Data
+Level | Purchase Method | Trade Entry
+Order | Result | Trade Lot
+Sell Order | Trader |</code></pre>
+
+<h3>Step 03 — Noun Phrase Analysis</h3>
+<p>Now <strong>remove</strong> the following from the list:</p>
+<ul>
+  <li>References to the <strong>system itself</strong> or its context.</li>
+  <li>Nouns that are <strong>out of scope</strong> of the project.</li>
+  <li>Nouns that are <strong>too vague</strong>.</li>
+  <li>Nouns that represent <strong>actions</strong>.</li>
+</ul>
+<div class="callout callout-green">
+  <span class="callout-label">Tip</span>
+  <p><strong>Actors</strong> (like Trader or Portfolio Manager) may be removed from the candidate classes and placed in <strong>use case diagrams</strong> instead.</p>
+</div>
+
+<h3>Step 04 — Draw the Initial Analysis Class Model</h3>
+<ul>
+  <li>Draw a model showing <strong>only class names, generalizations (inheritance) and associations</strong>.</li>
+  <li>Just as noun phrase analysis finds candidate classes, <strong>verb phrase analysis finds relationships</strong> between classes.</li>
+  <li>The result can be shown in a table of <strong>candidate associations</strong>.</li>
+</ul>
+<pre><code>Student   enrolls in   Course
+
+Professor teaches Course</code></pre>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p>Noun–verb analysis steps: <strong>1. Identify</strong> nouns → <strong>2. Consolidate</strong> → <strong>3. Analyze</strong> (remove unwanted) → <strong>4. Draw</strong> the initial class model.<br><strong>Nouns → classes/attributes. Verbs → operations/relationships.</strong></p>
+</div>
+
+<h3>Finding Classes Using CRC Analysis</h3>
+<ul>
+  <li><strong>CRC</strong> stands for <strong>Class, Responsibilities and Collaborators</strong>.</li>
+  <li>It uses a very simple tool: the <strong>sticky note</strong> (index card).</li>
+  <li>You begin by marking up sticky notes, one for each candidate class.</li>
+</ul>
+
+<p>A <strong>CRC card</strong> has three compartments:</p>
+<ul>
+  <li><strong>Top:</strong> name of the candidate class.</li>
+  <li><strong>Left:</strong> <strong>responsibilities</strong> of the class.</li>
+  <li><strong>Right:</strong> <strong>collaborators</strong> of the class.</li>
+</ul>
+<pre><code>+---------------------------------+
+
+| Class Name |
++----------------+----------------+
+| Responsibilities| Collaborators |
+| | |
++----------------+----------------+</code></pre>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Note</span>
+  <p><strong>Collaborators</strong> are other classes that help a class fulfill its responsibilities. So the collaborators compartment records the <strong>relationships between classes</strong>.</p>
+</div>
+
+<p>CRC analysis is a <strong>two-phase activity</strong>:</p>
+<ol>
+  <li><strong>Brainstorming</strong> — gather information.</li>
+  <li><strong>Analysis</strong> — examine and refine the information.</li>
+</ol>
+
+<div class="divider"></div>
+
+<h2>Class Diagram Notations</h2>
+
+<h3>1. Classes</h3>
+<p>A <strong>class</strong> is a description (blueprint) of a set of objects that share the same <strong>attributes, operations (methods), relationships and behavior</strong>.</p>
+<p>In UML, a class is a <strong>rectangle with three compartments</strong>:</p>
+<pre><code>+-------------------+
+
+| Class Name |
++-------------------+
+| Attributes |
++-------------------+
+| Operations |
++-------------------+</code></pre>
+
+<h3>2. Visibility Modifiers</h3>
+<p>Visibility modifiers show <strong>who can access</strong> an attribute or operation.</p>
+<pre><code>Symbol | Visibility        | Meaning
+
+-------+-------------------+------------------------------------------
+
+| Public | Accessible from any other class
+| Private | Accessible only within the same class
+| Protected | Accessible within the class and its subclasses
+
+~ | Package (Default) | Accessible only to classes in the same package</code></pre>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>+</strong> Public &nbsp; <strong>−</strong> Private &nbsp; <strong>#</strong> Protected &nbsp; <strong>~</strong> Package</p>
+</div>
+
+<h3>Example — Student Class</h3>
+<pre><code>+----------------------------------+
+
+| Student |
++----------------------------------+
+| + studentID : Integer |
+| - password : String |
+| # email : String |
+| ~ address : String |
++----------------------------------+
+| + registerCourse() : Void |
+| + dropCourse() : Void |
+| - calculateGPA() : Float |
++----------------------------------+</code></pre>
+
+<h3>3. Attributes and Operations</h3>
+<p><strong>Attributes</strong> (fields, instance variables) use this format:</p>
+<pre><code>visibility name : data_type
+
+Example: - balance : double</code></pre>
+<p><strong>Operations / methods</strong> use this format:</p>
+<pre><code>visibility name (parameters) : return_type
+Example: + calDistance(p1: double) : double</code></pre>
+
+<h3>4. Objects</h3>
+<p>An <strong>object</strong> is an <strong>instance of a class</strong>. The top compartment holds the <strong>object identifier</strong>, which is <strong>always underlined</strong>.</p>
+
+<div class="callout callout-red">
+  <span class="callout-label">Warning</span>
+  <p>Do not forget to <strong>underline</strong> the object name. This is how an <strong>object</strong> is told apart from a <strong>class</strong>.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Relationships</h2>
+
+<h3>1. Association</h3>
+<ul>
+  <li>An <strong>association</strong> connects two classes and shows a meaningful relationship between them.</li>
+  <li>It is drawn as a <strong>straight line</strong> between the classes.</li>
+  <li>A class can be associated with itself. This is a <strong>reflexive association</strong>.</li>
+  <li>Associations can be decorated with <strong>multiplicity</strong> to show how many objects take part.</li>
+</ul>
+
+<h3>2. Directed Association</h3>
+<ul>
+  <li>A simple relationship where one class is linked to another with an <strong>explicit direction</strong>.</li>
+  <li>One class directly <strong>knows about or uses</strong> another class.</li>
+  <li>Usually <strong>one-directional</strong>: one class depends on or refers to the other.</li>
+  <li>Drawn as a <strong>line with an arrow</strong> pointing to the class being referenced.</li>
+</ul>
+<pre><code>Car ---------&gt; Engine</code></pre>
+<p>Example: A <strong>Car</strong> knows about its <strong>Engine</strong>, but an Engine does not need to know about a specific Car.</p>
+
+<h3>3. Multiplicity</h3>
+<p><strong>Multiplicity</strong> tells how many instances of one class can be linked to one instance of another class. It is written at the <strong>target end</strong> of the association and shows the number of links between each instance of the source class and instances of the target class.</p>
+<p>Example: one <strong>Vehicle</strong> can be linked to many <strong>Wheel</strong> instances.</p>
+
+<p><strong>Multiplicity examples:</strong></p>
+<ul>
+  <li>A library can have <strong>zero or more</strong> books. (<code>0..*</code>)</li>
+  <li>A person may or may not own a car. (<code>0..1</code>)</li>
+  <li>A teacher can teach multiple students. (<code>1..*</code> or <code>*</code>)</li>
+  <li>Each person has <strong>exactly one</strong> passport. (<code>1</code>)</li>
+</ul>
+<pre><code>Library  1 ----------- 0..* Book
+
+Person 1 ----------- 0..1 Car
+Teacher 1 ----------- 1..* Student
+Person 1 ----------- 1 Passport</code></pre>
+
+<h3>4. Generalization</h3>
+<ul>
+  <li>Shows a <strong>generalization / specialization</strong> relationship, the <strong>"is a"</strong> relationship.</li>
+  <li>Drawn as an association with a <strong>closed (hollow triangle) arrowhead</strong>.</li>
+  <li>The arrowhead points to the <strong>superclass</strong>. The other end is the <strong>subclass</strong>.</li>
+</ul>
+<pre><code>Student ---------|&gt; Person
+
+(subclass) (superclass)</code></pre>
+
+<h3>5. Dependency</h3>
+<ul>
+  <li>A <strong>temporary or weak</strong> relationship where one class depends on another but <strong>does not own</strong> it.</li>
+  <li>Drawn as a <strong>dashed line with an arrow</strong> from the client class to the supplier class.</li>
+</ul>
+<pre><code>Client Class - - - - - - - -&gt; Supplier Class
+
+Student - - - - - - - -> Library Card</code></pre>
+<p>Example: A <strong>Student</strong> depends on a <strong>Library Card</strong> to access books. The Library Card does <strong>not</strong> depend on the Student. It exists independently and can be given to another student.</p>
+
+<h3>6. Aggregation</h3>
+<ul>
+  <li>A constrained form of association, the <strong>"has-a"</strong> relationship.</li>
+  <li>An association where one class <strong>belongs to a collection</strong>. Example: an Instructor is part of the Faculty.</li>
+  <li>Shown with an <strong>empty (hollow) diamond</strong> on the side of the collection (the <strong>whole</strong>).</li>
+</ul>
+<pre><code>Faculty &lt;&gt;---------- Instructor</code></pre>
+
+<h3>7. Composition</h3>
+<ul>
+  <li>A <strong>strong form of aggregation</strong>.</li>
+  <li>The components <strong>cannot exist without</strong> the aggregate (the whole).</li>
+  <li>Shown with a <strong>solid (filled) diamond</strong> on the side of the whole.</li>
+  <li>The multiplicity at the whole's end is <strong>1</strong>, because the parts have no meaning outside the whole that owns them.</li>
+  <li>It is an <strong>"is entirely made of"</strong> relationship.</li>
+</ul>
+
+<h3>Composition Example — House and Room</h3>
+<pre><code>House ◆---------- Room
+  1        1..*</code></pre>
+<ul>
+  <li>The diamond is on the <strong>whole/owner</strong> side (House).</li>
+  <li>A House is composed of <strong>one or more</strong> Rooms.</li>
+  <li>Each Room belongs to <strong>exactly one</strong> House.</li>
+  <li>If the House is destroyed, the Rooms <strong>also cease to exist</strong>.</li>
+</ul>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>Aggregation</strong> = <strong>empty</strong> diamond (parts can exist alone).<br><strong>Composition</strong> = <strong>solid</strong> diamond (parts die with the whole).<br><strong>Generalization</strong> = <strong>closed arrowhead</strong> to the superclass.<br><strong>Dependency</strong> = <strong>dashed</strong> arrow.</p>
+</div>
+
+<div class="callout callout-red">
+  <span class="callout-label">Warning</span>
+  <p>A common exam mistake is mixing up aggregation and composition. Ask: <strong>"Can the part exist without the whole?"</strong> Yes → aggregation. No → composition.</p>
+</div>
+
+<h3>Composition / Aggregation Example</h3>
+<p>A <strong>Box Office</strong> is a place where tickets for movies, plays, concerts or other events are sold. Use it as a scenario for practising both aggregation and composition.</p>
+
+<div class="divider"></div>
+
+<h2>Exercise — Hockey League</h2>
+<p>Draw a UML class diagram for the problem domain of a hockey league. <strong>Label all associations with multiplicities.</strong></p>
+<ul>
+  <li>A hockey league is made up of <strong>at least four</strong> hockey teams.</li>
+  <li>Each hockey team has <strong>six to twelve</strong> players, and <strong>one player captains</strong> the team.</li>
+  <li>A team has a <strong>name</strong> and a <strong>record</strong>.</li>
+  <li>Players have a <strong>number</strong> and a <strong>position</strong>.</li>
+  <li>Hockey teams <strong>play games against each other</strong>. Each game has a <strong>score</strong> and a <strong>location</strong>.</li>
+  <li>Teams are <strong>sometimes led by a coach</strong>. A coach has a <strong>level of accreditation</strong> and <strong>years of experience</strong>, and can coach <strong>multiple teams</strong>.</li>
+  <li><strong>Coaches and players are people</strong>, and people have <strong>names and addresses</strong>.</li>
+</ul>
+
+<p><strong>Assumptions:</strong></p>
+<ul>
+  <li>Each player plays on only <strong>one team</strong>.</li>
+  <li>Each captain captains only <strong>one team</strong>.</li>
+  <li>Each team plays in only <strong>one league</strong>.</li>
+</ul>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Note</span>
+  <p>A <strong>league</strong> is an association of sports teams that organizes matches for its members. The captain can also be shown as a <strong>second, named association</strong> between Player and Team.</p>
+</div>
+
+<p><strong>Answer (text version):</strong></p>
+<pre><code>Person (name, address)
+
+^ ^
+| |
+Player Coach
+(number, (accreditationLevel,
+position) yearsOfExperience)
+
+League 1 ------------- 4..* Team (name, record)
+Team 1 ------------- 6..12 Player (plays for)
+Team 0..1 ---------- 1 Player (captain)
+Coach 0..1 ---------- 0..* Team (coaches)
+Team 2 ------------- 0..* Game (score, location) (plays in)</code></pre>
+
+<div class="callout callout-green">
+  <span class="callout-label">Tip</span>
+  <p>Use the <strong>"is a"</strong> phrases in the text to find <strong>generalizations</strong> (Coach is a Person, Player is a Person). Use <strong>"has / made up of"</strong> phrases to find <strong>associations</strong>, and read the numbers ("six to twelve", "at least four") to set <strong>multiplicities</strong>.</p>
+</div>
+
+`,
+summary: {
+topic: 'Class Diagrams: domain vs design models, finding classes, UML notations and relationships',
+subTopics: [
+'Domain Class Diagram vs Design Class Diagram',
+'From Analysis to Design',
+'Design Class Models',
+'Class Diagrams',
+'Finding Classes',
+'Noun–Verb Analysis (Steps 01–04)',
+'Hidden Classes',
+'CRC Analysis',
+'Class Diagram Notations',
+'Classes',
+'Visibility Modifiers',
+'Attributes and Operations',
+'Objects',
+'Association',
+'Directed Association',
+'Multiplicity',
+'Generalization',
+'Dependency',
+'Aggregation',
+'Composition',
+'Exercise — Hockey League',
+],
+definitions: [
+{ term: 'Domain Class Diagram', meaning: 'Models concepts in the problem domain. Usually shows only class names and relationships.' },
+{ term: 'Design Class Diagram', meaning: 'Models the actual software design with attributes, operations, visibility and relationships.' },
+{ term: 'Class Diagram', meaning: 'A static UML view showing the classes of a system, their attributes, operations and relationships.' },
+{ term: 'Noun–Verb Analysis', meaning: 'Finding classes from a text description. Nouns suggest classes or attributes; verbs suggest operations or relationships.' },
+{ term: 'Hidden Class', meaning: 'A class inherent to the problem domain but not clearly mentioned in the description, e.g. Enrollment.' },
+{ term: 'Synonym', meaning: 'Different words with the same meaning. Can cause duplicate or wrong classes.' },
+{ term: 'Homonym', meaning: 'One word with multiple meanings, e.g. Order. Can cause wrong classes or operations.' },
+{ term: 'CRC Analysis', meaning: 'Class–Responsibility–Collaboration technique that uses cards or sticky notes to find classes in two phases: brainstorming and analysis.' },
+{ term: 'Collaborator', meaning: 'Another class that helps a class fulfill its responsibilities.' },
+{ term: 'Class', meaning: 'A blueprint for objects sharing the same attributes, operations, relationships and behavior.' },
+{ term: 'Object', meaning: 'An instance of a class. Its identifier is underlined.' },
+{ term: 'Visibility', meaning: 'Shows accessibility: + public, - private, # protected, ~ package.' },
+{ term: 'Association', meaning: 'A meaningful relationship between two classes, shown as a straight line.' },
+{ term: 'Reflexive Association', meaning: 'An association between a class and itself.' },
+{ term: 'Directed Association', meaning: 'A one-directional association where one class knows about or uses another. Shown with an arrow.' },
+{ term: 'Multiplicity', meaning: 'Shows how many instances of one class can link to one instance of another, written at the target end.' },
+{ term: 'Generalization', meaning: 'An "is a" relationship shown with a closed arrowhead pointing to the superclass.' },
+{ term: 'Dependency', meaning: 'A temporary, weak relationship where one class uses another without owning it. Shown with a dashed arrow.' },
+{ term: 'Aggregation', meaning: 'A "has-a" relationship where parts can exist without the whole. Shown with an empty diamond at the whole.' },
+{ term: 'Composition', meaning: 'A strong aggregation where parts cannot exist without the whole. Shown with a solid diamond at the whole.' },
+],
+keyPoints: [
+'Domain diagrams show class names and relationships; design diagrams add attributes, operations and visibility.',
+'Analysis answers "what" the system does; design answers "how" it does it.',
+'The class diagram is the static view; the sequence diagram is the dynamic view.',
+'Design class model extends the domain class model by refining attributes, relationships and operations.',
+'Two ways to find classes: Noun–Verb analysis and CRC analysis.',
+'Noun–verb steps: identify noun phrases, consolidate, analyze (remove unwanted), draw the initial class model.',
+'Remove from the candidate list: references to the system, out-of-scope nouns, vague nouns, nouns that are actions, and actors.',
+'Watch for hidden classes, synonyms and homonyms.',
+'CRC card: class name on top, responsibilities on the left, collaborators on the right.',
+'Class rectangle has three compartments: name, attributes, operations.',
+'Visibility symbols: + public, - private, # protected, ~ package.',
+'Attribute format: visibility name : data_type. Operation format: visibility name(parameters) : return_type.',
+'Object names are underlined.',
+'Multiplicity examples: 0.., 0..1, 1.., 1.',
+'Generalization arrow points to the superclass.',
+'Dependency is dashed and weak; aggregation uses an empty diamond; composition uses a solid diamond.',
+'Composition: if the whole is destroyed, the parts are destroyed too (House and Room).',
+'Hockey league exercise combines generalization (Person), multiplicities (4..*, 6..12), a captain association and coach-team association.',
+],
+},
+},
+
+
+
 
 
 
