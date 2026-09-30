@@ -2056,4 +2056,456 @@ Fully Dressed     Detailed, structured description    Template</code></pre>
   },
 },
 
+{
+id: 5,
+title: 'Use Case Diagrams',
+content: `
+<span class="lesson-badge">LESSON 05</span>
+<h1>Use Case Diagrams</h1>
+<div class="meta-info">ICT2142 <span>•</span> 22 min read</div>
+
+<p>Before building a system, we need to know <strong>who will use it</strong> and <strong>what it should do</strong>. A <strong>Use Case Diagram</strong> shows this in one simple picture. This lesson explains its components, relationships, drawing steps, and gives many case studies to practise.</p>
+
+<div class="divider"></div>
+
+<h2>1. What is a Use Case Diagram?</h2>
+<p>A <strong>Use Case Diagram</strong> is a <strong>UML diagram</strong> used to show:</p>
+<ul>
+  <li><strong>Who</strong> interacts with a system</li>
+  <li><strong>What</strong> the system can do</li>
+  <li><strong>How</strong> actors and system functions are related</li>
+</ul>
+
+<div class="callout callout-blue">
+  <span class="callout-label">Note</span>
+  <p>A use case diagram gives a <strong>high-level view of the functional requirements</strong> of a system.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>2. Main Components</h2>
+<p>A use case diagram has <strong>four main components</strong>: Actor, Use Case, System Boundary and Relationship.</p>
+
+<h3>2.1 Actor</h3>
+<p>An <strong>actor</strong> is a person, system, device or other entity that interacts with the system.</p>
+<p><strong>Examples:</strong> Customer, Student, Doctor, Bank Officer, Payment System, ATM.</p>
+<p>An actor represents a <strong>role</strong>, not a specific person.</p>
+
+<div class="callout callout-red">
+  <span class="callout-label">Warning</span>
+  <p><strong>Correct:</strong> Doctor<br><strong>Incorrect:</strong> Dr. John<br>Always use the <strong>role</strong> name, never a personal name.</p>
+</div>
+
+<p>Actors can be drawn using:</p>
+<ul>
+  <li>A <strong>stick figure</strong> for a human/user</li>
+  <li>A <strong>rectangle labelled &laquo;actor&raquo;</strong> for an external system</li>
+</ul>
+
+<h3>2.2 Use Case</h3>
+<p>A <strong>use case</strong> represents something an actor wants the system to do.</p>
+<p><strong>Examples:</strong> Login, Place Order, Check Balance, Withdraw Funds, Register Student, Generate Report.</p>
+<ul>
+  <li>Use case names should be <strong>short and meaningful</strong>.</li>
+  <li>They usually describe an <strong>action</strong>.</li>
+  <li><strong>Notation:</strong> a use case is drawn as an <strong>oval</strong>.</li>
+</ul>
+
+<h3>2.3 System Boundary</h3>
+<p>The <strong>system boundary</strong> is a <strong>rectangle</strong> that surrounds the use cases.</p>
+<ul>
+  <li>It shows <strong>what belongs to the system</strong> and <strong>what is outside</strong> the system.</li>
+  <li>The <strong>system name</strong> is normally written at the top of the rectangle.</li>
+</ul>
+
+<h3>2.4 Relationship</h3>
+<p>Relationships show how actors and use cases are connected. The main relationships are:</p>
+<ul>
+  <li><strong>Association</strong></li>
+  <li><strong>Include</strong></li>
+  <li><strong>Extend</strong></li>
+  <li><strong>Generalization</strong></li>
+</ul>
+<pre><code>+------------------ Online Shop (System Boundary) ------------------+ | | | ( Search Product ) | | / | | O / | | /|\\ -----------+----- ( Place Order ) | | / \\ Customer \\ | | ( Cancel Order ) | | | +--------------------------------------------------------------------+ O with arms/legs = Actor ( ) = Use Case --- = Association</code></pre>
+<div class="divider"></div>
+
+<h2>3. Association</h2>
+<p>An <strong>association</strong> shows that an <strong>actor interacts with a use case</strong>.</p>
+<p><strong>Notation:</strong> a <strong>solid line</strong>.</p>
+<pre><code>Actor ---------- Use Case Customer ---------- Place Order</code></pre>
+<p>One customer can be associated with several use cases, such as:</p>
+<ul>
+  <li>Search Product</li>
+  <li>Place Order</li>
+  <li>Cancel Order</li>
+  <li>Check Order Status</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>4. How to Identify Actors and Use Cases</h2>
+<p>Use these two simple steps:</p>
+
+<h3>Step 1: Identify the actors</h3>
+<p>Ask: <strong>Who or what interacts with the system?</strong></p>
+
+<h3>Step 2: Identify what each actor wants to do</h3>
+<p>Ask: <strong>What does this actor want the system to do?</strong></p>
+<p>These activities become <strong>candidate use cases</strong>.</p>
+
+<h3>Example: University System</h3>
+<ul>
+  <li><strong>Actor:</strong> Student</li>
+  <li><strong>Possible use cases:</strong> Enroll in Course, View Results, View Timetable, Request Transcript</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>5. &lt;&lt;include&gt;&gt; Relationship</h2>
+
+<h3>Meaning</h3>
+<p><code>&lt;&lt;include&gt;&gt;</code> is used when one use case <strong>must use the behavior of another use case</strong>. The included behavior is <strong>mandatory</strong>.</p>
+
+<h3>Example</h3>
+<p>A customer wants to check an order:</p>
+<pre><code>Check Order Status --&lt;&lt;include&gt;&gt;--&gt; Login</code></pre>
+<p>This means <strong>Check Order Status</strong> always includes <strong>Login</strong>. The base use case cannot properly complete without the included use case.</p>
+
+<h3>Direction</h3>
+<p><strong>Base (client) → Included (supplier)</strong></p>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>INCLUDE = MUST happen.</strong></p>
+</div>
+
+<h3>Reusing common behavior</h3>
+<p>If several functions need login, we can separate <strong>Login</strong> as a <strong>reusable use case</strong>:</p>
+<ul>
+  <li>Check Order Status → Login</li>
+  <li>View Profile → Login</li>
+  <li>Change Password → Login</li>
+</ul>
+<pre><code>Check Order Status --&lt;&lt;include&gt;&gt;--+ | View Profile -------&lt;&lt;include&gt;&gt;-----+--&gt; Login | Change Password ----&lt;&lt;include&gt;&gt;-----+</code></pre>
+<div class="divider"></div>
+
+<h2>6. &lt;&lt;extend&gt;&gt; Relationship</h2>
+
+<h3>Meaning</h3>
+<p><code>&lt;&lt;extend&gt;&gt;</code> is used when one use case <strong>adds extra behavior to another existing use case</strong>. The base use case should still <strong>work without</strong> the extending use case.</p>
+
+<h3>Example</h3>
+<pre><code>Issue Fine --&lt;&lt;extend&gt;&gt;--&gt; Return Book</code></pre>
+<ul>
+  <li>Returning a book is possible <strong>by itself</strong>.</li>
+  <li>If the book is <strong>overdue</strong>, <strong>Issue Fine</strong> adds extra behavior.</li>
+</ul>
+
+<h3>Direction</h3>
+<p><strong>Extension use case → Base use case</strong></p>
+<pre><code>Extension --&lt;&lt;extend&gt;&gt;--&gt; Base</code></pre>
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>EXTEND = ADD EXTRA BEHAVIOR.</strong> The base use case can work without the extension.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>7. Generalization Relationship</h2>
+<p><strong>Generalization</strong> represents an <strong>"is-a" relationship</strong>. It creates a <strong>parent-child relationship</strong>. The child is a more specific version (or enhancement) of the parent.</p>
+
+<h3>Example</h3>
+<pre><code> Search ^ / \\ / \\ Search by Author Search by Call Number</code></pre>
+<ul>
+  <li><strong>Search</strong> = Parent</li>
+  <li><strong>Search by Author</strong> = Child</li>
+  <li><strong>Search by Call Number</strong> = Child</li>
+</ul>
+
+<h3>Notation and Direction</h3>
+<ul>
+  <li><strong>Notation:</strong> a directed arrow with a <strong>triangular arrowhead</strong>.</li>
+  <li><strong>Direction:</strong> <strong>Child → Parent</strong></li>
+</ul>
+
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <p><strong>GENERALIZATION = IS-A.</strong></p>
+</div>
+
+<div class="divider"></div>
+
+<h2>8. Relationship Summary</h2>
+<pre><code>+----------------+---------------------------+-------------------+---------+ | Relationship | Meaning | Direction | Key idea| +----------------+---------------------------+-------------------+---------+ | Association | Actor interacts with a | Actor &lt;-&gt; Use Case| USES | | | use case | | | +----------------+---------------------------+-------------------+---------+ | &lt;&lt;include&gt;&gt; | Required behavior is | Base -&gt; Included | MUST | | | included | | | +----------------+---------------------------+-------------------+---------+ | &lt;&lt;extend&gt;&gt; | Additional behavior is | Extension -&gt; Base | EXTRA | | | added | | | +----------------+---------------------------+-------------------+---------+ | Generalization | Specialized one inherits | Child -&gt; Parent | IS-A | | | from the general one | | | +----------------+---------------------------+-------------------+---------+</code></pre>
+<div class="divider"></div>
+
+<h2>9. Important Difference: Include vs Extend</h2>
+<pre><code>+--------------------------------+----------------------------------+ | &lt;&lt;include&gt;&gt; | &lt;&lt;extend&gt;&gt; | +--------------------------------+----------------------------------+ | Mandatory | Additional / supplementary | | Base use case needs the | Base use case can work | | included behavior | independently | | Used to reuse common behavior | Used to add extra behavior | | Base -&gt; Included | Extension -&gt; Base | | Think MUST | Think EXTRA | +--------------------------------+----------------------------------+</code></pre>
+<div class="callout callout-red">
+  <span class="callout-label">Warning</span>
+  <p>The <strong>arrow directions are different</strong>. Include goes <strong>from the base to the included</strong> use case. Extend goes <strong>from the extension to the base</strong> use case. Mixing these up is a very common exam mistake.</p>
+</div>
+
+<h3>Simple Example: Online Banking</h3>
+<ul>
+  <li><strong>Deposit Funds → Update Balance</strong> is <code>&lt;&lt;include&gt;&gt;</code>, because updating the balance is <strong>required</strong>.</li>
+  <li><strong>Calculate Bonus → Deposit Funds</strong> is <code>&lt;&lt;extend&gt;&gt;</code>, because bonus calculation happens only under a <strong>particular condition</strong>.</li>
+</ul>
+<pre><code>Deposit Funds --&lt;&lt;include&gt;&gt;--&gt; Update Balance Calculate Bonus --&lt;&lt;extend&gt;&gt;--&gt; Deposit Funds</code></pre>
+<div class="divider"></div>
+
+<h2>10. General Steps to Draw a Use Case Diagram</h2>
+<ol>
+  <li>Identify the <strong>system</strong>.</li>
+  <li>Draw the <strong>system boundary</strong>.</li>
+  <li>Identify all <strong>actors</strong>.</li>
+  <li>Identify the <strong>use cases</strong> for each actor.</li>
+  <li>Connect actors to use cases using <strong>association</strong>.</li>
+  <li>Look for <strong>mandatory reusable behavior</strong> → <code>&lt;&lt;include&gt;&gt;</code></li>
+  <li>Look for <strong>additional / supplementary behavior</strong> → <code>&lt;&lt;extend&gt;&gt;</code></li>
+  <li>Look for <strong>is-a relationships</strong> → <strong>Generalization</strong></li>
+</ol>
+
+<div class="callout callout-green">
+  <span class="callout-label">Tip</span>
+  <p>When reading a case study, look for clue words. <strong>"must", "before", "every"</strong> usually mean <code>&lt;&lt;include&gt;&gt;</code>. <strong>"may", "if", "additional"</strong> usually mean <code>&lt;&lt;extend&gt;&gt;</code>. <strong>"There are two types of..."</strong> usually means <strong>Generalization</strong>.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>11. Example: Online Banking System</h2>
+
+<h3>Possible Actors</h3>
+<ul>
+  <li>Customer</li>
+  <li>NRFC Customer</li>
+  <li>Bank Officer</li>
+</ul>
+
+<h3>Possible Use Cases</h3>
+<ul>
+  <li>Open Account</li>
+  <li>Check Balance</li>
+  <li>Deposit Funds</li>
+  <li>Withdraw Funds</li>
+  <li>Transfer Funds</li>
+  <li>Convert Currency</li>
+  <li>Update Balance</li>
+  <li>Calculate Bonus</li>
+</ul>
+
+<h3>Relationships</h3>
+<ul>
+  <li>Customer → Open Account</li>
+  <li>Customer → Check Balance</li>
+  <li>Customer → Deposit Funds</li>
+  <li>Customer → Withdraw Funds</li>
+  <li>Customer → Transfer Funds</li>
+  <li>NRFC Customer → Convert Currency</li>
+  <li>Bank Officer → Open Account</li>
+  <li>Deposit Funds <code>&lt;&lt;include&gt;&gt;</code> Update Balance</li>
+  <li>Withdraw Funds <code>&lt;&lt;include&gt;&gt;</code> Update Balance</li>
+  <li>Transfer Funds <code>&lt;&lt;include&gt;&gt;</code> Update Balance</li>
+  <li>Calculate Bonus <code>&lt;&lt;extend&gt;&gt;</code> Deposit Funds</li>
+  <li>NRFC Customer <strong>generalizes</strong> from Customer (NRFC Customer is a special type of Customer)</li>
+</ul>
+<pre><code>+---------------------- Online Banking System -----------------------+ | | | ( Open Account ) | | ( Check Balance ) | | ( Deposit Funds ) --&lt;&lt;include&gt;&gt;--+ | | ( Withdraw Funds ) -&lt;&lt;include&gt;&gt;--+--&gt; ( Update Balance ) | | ( Transfer Funds ) -&lt;&lt;include&gt;&gt;--+ | | ( Calculate Bonus ) --&lt;&lt;extend&gt;&gt;--&gt; ( Deposit Funds ) | | ( Convert Currency ) | | | +--------------------------------------------------------------------+ Actors (outside the boundary): Customer -- Open Account, Check Balance, Deposit, Withdraw, Transfer NRFC Customer -- Convert Currency (NRFC Customer ---|&gt; Customer) Bank Officer -- Open Account</code></pre>
+<div class="callout callout-yellow">
+  <span class="callout-label">Remember</span>
+  <ul>
+    <li><strong>Association</strong> = USES (solid line)</li>
+    <li><strong>Include</strong> = MUST (Base → Included)</li>
+    <li><strong>Extend</strong> = EXTRA (Extension → Base)</li>
+    <li><strong>Generalization</strong> = IS-A (Child → Parent)</li>
+    <li>An actor represents a <strong>role</strong>, not a person's name.</li>
+    <li>The <strong>system boundary</strong> is a rectangle with the system name on top.</li>
+  </ul>
+</div>
+
+<div class="divider"></div>
+
+<h2>12. Case Studies: In Class</h2>
+<p>For each case study, draw a use case diagram. Find the <strong>actors</strong>, the <strong>use cases</strong> and the <strong>relationships</strong> (association, include, extend, generalization).</p>
+
+<h3>Case 1: University Library System</h3>
+<p>A university library system allows students to search for books, view book details, borrow books, return books, and view their borrowed books. A librarian can add new books, remove books, and update book information.</p>
+
+<h3>Case 2: ATM</h3>
+<p>An ATM allows a customer to check account balance, withdraw cash, deposit money, and transfer money. An ATM technician can perform maintenance and repair activities.</p>
+
+<h3>Case 3: Restaurant System</h3>
+<p>A restaurant system allows customers to view the menu, select food, place orders, and make payments. Restaurant staff can view orders and update order status.</p>
+<p>Before placing an order, the customer must log in. Every order must include payment processing.</p>
+
+<h3>Case 4: Online Shopping System</h3>
+<p>An online shopping system allows customers to search products, view product details, add products to a shopping cart, place orders, and make payments. A store manager can add, update, and remove products.</p>
+<p>Customers must log in before placing an order. Customers may apply a discount coupon when placing an order.</p>
+
+<h3>Case 5: Cinema Booking System</h3>
+<p>A cinema booking system allows customers to view movies, check showtimes, select seats, book tickets, and make payments. A cinema employee can manage movies, showtimes, and seat availability.</p>
+<p>Customers must log in before booking a ticket. If a customer selects a premium seat, an additional premium-seat charge is applied.</p>
+
+<h3>Case 6: University System</h3>
+<p>A university system allows students to view courses, register for courses, drop courses, and view their registered courses. A lecturer can view students registered for their courses and enter grades. A department administrator can create, update, and remove courses.</p>
+<p>Students must log in before registering. When registering, the system must check course availability. If a course is full, the system displays an appropriate notification.</p>
+
+<h3>Case 7: Hotel Reservation System</h3>
+<p>A hotel reservation system allows customers to search available rooms, view room details, make reservations, cancel reservations, and make payments. A receptionist can create and manage reservations and check guests in and out.</p>
+<p>Customers must log in before making a reservation. The system must check room availability before confirming a reservation. Customers may request an additional airport pickup service during booking.</p>
+
+<h3>Case 8: Online Banking System</h3>
+<p>An online banking system allows customers to check balances, deposit money, withdraw money, transfer money, and request bank statements. A bank officer can verify customers and manage customer accounts.</p>
+<p>Customers must be authenticated before performing banking transactions. Every deposit, withdrawal, or transfer must update the account balance.</p>
+<p>If a transaction exceeds the permitted limit, additional verification by a bank officer is required.</p>
+
+<h3>Case 9: Examination System</h3>
+<p>An examination system allows students to log in, view available examinations, take examinations, submit answers, and view results. Lecturers can create examinations, add questions, publish examinations, and view student results. Administrators can manage student and lecturer accounts.</p>
+<p>Before taking an examination, the system must verify the student's identity and examination eligibility. If a student submits an examination after the deadline, the system records it as a late submission.</p>
+
+<h3>Case 10: Food Delivery System</h3>
+<p>A food delivery system allows customers to search restaurants, view menus, place orders, make payments, track orders, and cancel orders. Restaurant staff can accept or reject orders and update order status. Delivery riders can view assigned deliveries and update delivery status.</p>
+<p>Customers must log in before placing orders. The system must verify payment before confirming an order.</p>
+<p>Customers may apply a promotional coupon when placing an order. If an order is cancelled after preparation has started, a cancellation charge may be applied.</p>
+
+<h3>Case 11: Hospital System</h3>
+<p>A hospital system allows patients to register, search for doctors, view doctor availability, book appointments, cancel appointments, and make payments. Doctors can view appointments, update availability, and access patient information. Receptionists can register patients and manage appointments.</p>
+<p>Patients must log in before booking an appointment. The system must check doctor availability before confirming an appointment.</p>
+<p>If a patient cancels an appointment after the allowed cancellation period, a cancellation fee is applied.</p>
+<p>There are two types of patients: <strong>General Patients</strong> and <strong>Insurance Patients</strong>. Insurance patients can submit insurance claims.</p>
+
+<h3>Case 12: Vehicle Rental System</h3>
+<p>A vehicle rental system allows customers to search available vehicles, view vehicle details, make reservations, make payments, collect vehicles, and return vehicles. Rental staff can manage vehicles, approve rentals, and inspect returned vehicles.</p>
+<p>Customers must be authenticated before making a reservation. The system must check vehicle availability before confirming a reservation.</p>
+<p>Customers may request additional insurance during a rental. If a vehicle is returned late, a late-return charge is calculated.</p>
+<p>There are two types of customers: <strong>Individual Customers</strong> and <strong>Corporate Customers</strong>. Corporate customers can request multiple vehicles under a corporate rental agreement.</p>
+
+<h3>Case 13: E-Learning Platform</h3>
+<p>An e-learning platform allows students to register for courses, view lessons, submit assignments, take quizzes, view results, and receive certificates. Instructors can create courses, upload lessons, create quizzes, evaluate assignments, and publish results. Administrators can manage users and courses.</p>
+<p>Students must log in before accessing course content. A student must be enrolled in a course before accessing its lessons.</p>
+<p>When submitting an assignment, the system records the submission. If the assignment is submitted after the deadline, it is marked as late.</p>
+<p>There are two types of courses: <strong>Free Courses</strong> and <strong>Paid Courses</strong>. Paid courses require payment before enrollment.</p>
+
+<h3>Case 14: Airline Reservation System</h3>
+<p>An airline reservation system allows passengers to search flights, view flight details, select seats, make reservations, make payments, cancel reservations, and check in online. Airline staff can manage flights, seats, reservations, and passenger information.</p>
+<p>Passengers must log in before completing a reservation. The system must check seat availability before confirming a seat selection.</p>
+<p>Passengers may purchase additional baggage during reservation. If a passenger cancels a reservation after the permitted cancellation period, a cancellation fee is applied.</p>
+<p>There are two types of passengers: <strong>Regular Passengers</strong> and <strong>Frequent Flyer Passengers</strong>. Frequent Flyer Passengers can redeem reward points when making a reservation.</p>
+
+<h3>Case 15: University Management System</h3>
+<p>A university management system supports students, lecturers, administrators, finance officers, and library staff.</p>
+<p>Students can register for courses, view timetables, submit assignments, view results, pay fees, borrow library books, and request transcripts. Lecturers can manage courses, upload learning materials, create assessments, enter grades, and view student information.</p>
+<p>Administrators can manage students, lecturers, courses, and academic records. Finance officers can manage student payments and verify fee payments. Library staff can manage books, borrowing, returns, and fines.</p>
+<p>Students must authenticate before accessing academic services. Course registration requires checking course availability and prerequisite requirements. Fee payment must be verified before a student can complete certain registrations.</p>
+<p>Students may request special approval from an administrator when they do not satisfy a normal registration condition. If a borrowed library book is returned late, a fine is calculated.</p>
+<p>There are three types of students: <strong>Undergraduate Students</strong>, <strong>Postgraduate Students</strong>, and <strong>Exchange Students</strong>. Each type has some specialized services in addition to common student services.</p>
+
+<div class="divider"></div>
+
+<h2>13. Case Studies: Take Home</h2>
+<p>Practise these at home using the same method: actors → use cases → association → include → extend → generalization.</p>
+
+<h3>Case 16: Gym Management System</h3>
+<p>A gym management system allows members to register for memberships, view available classes, book classes, cancel bookings, and make payments. Trainers can create classes, manage class schedules, and view registered members. Receptionists can register members and manage memberships.</p>
+<p>Before booking a class, a member must log in. The system must check class availability before confirming a booking. Members may request personal training sessions. If a class is cancelled, registered members receive a cancellation notification.</p>
+
+<h3>Case 17: Car Parking Management System</h3>
+<p>A car parking management system allows drivers to view available parking spaces, reserve spaces, enter the parking area, and make payments. Parking staff can manage parking spaces and monitor vehicles.</p>
+<p>Before making a reservation, a driver must log in. The system must check parking-space availability before confirming a reservation. Drivers may reserve premium parking spaces for an additional charge. If a vehicle stays beyond the reserved period, an additional parking fee is calculated.</p>
+
+<h3>Case 18: Online Grocery Shopping System</h3>
+<p>An online grocery shopping system allows customers to search products, view product details, add products to a cart, place orders, make payments, and track deliveries. Store staff can manage products and process orders. Delivery staff can view assigned deliveries and update delivery status.</p>
+<p>Customers must log in before placing an order. The system must check product availability before confirming an order. Customers may apply discount coupons. If a product becomes unavailable after an order is placed, the system notifies the customer.</p>
+
+<h3>Case 19: Doctor Consultation System</h3>
+<p>A doctor consultation system allows patients to search for doctors, view doctor availability, book appointments, make payments, and view consultation details. Doctors can manage availability, view appointments, and update consultation records. Receptionists can register patients and manage appointments.</p>
+<p>Patients must log in before booking an appointment. The system must check doctor availability before confirming an appointment. Patients may request an online video consultation. If an appointment is cancelled late, a cancellation charge is applied.</p>
+
+<h3>Case 20: Movie Streaming System</h3>
+<p>A movie streaming system allows users to search movies, view movie details, watch movies, create watchlists, and rate movies. Content managers can add, update, and remove movies.</p>
+<p>Users must log in before watching restricted content. A user may download a movie for offline viewing. Premium movies require an additional payment before they can be watched.</p>
+
+<h3>Case 21: Job Recruitment System</h3>
+<p>A job recruitment system allows job seekers to create profiles, search jobs, view job details, apply for jobs, and track applications. Employers can create job vacancies, view applications, shortlist candidates, and schedule interviews. Administrators can manage users and job postings.</p>
+<p>Job seekers must log in before applying for a job. The system must verify that the applicant satisfies the basic job requirements before accepting an application. Job seekers may upload additional documents with an application.</p>
+
+<h3>Case 22: Hotel Management System</h3>
+<p>A hotel management system allows guests to search rooms, view room details, make reservations, make payments, check in, check out, and request room services. Receptionists can manage reservations and guest check-in/check-out. Housekeeping staff can update room-cleaning status.</p>
+<p>The system must check room availability before confirming a reservation. Guests must complete payment before checking in. Guests may request additional services such as breakfast or airport transportation. If a guest checks out late, an additional charge is applied.</p>
+
+<h3>Case 23: School Examination Management System</h3>
+<p>A school examination management system allows students to view examinations, register for examinations, take online examinations, submit answers, and view results. Teachers can create examinations, add questions, evaluate answers, and publish results. Administrators can manage student and teacher accounts.</p>
+<p>Students must log in before accessing an examination. The system must verify examination eligibility before allowing registration. If a student submits an examination after the deadline, it is marked as a late submission.</p>
+<p>There are two types of examinations: <strong>Online Examinations</strong> and <strong>Practical Examinations</strong>, each having specialized activities.</p>
+
+<h3>Case 24: Travel Booking System</h3>
+<p>A travel booking system allows customers to search flights and hotels, view available options, make bookings, make payments, cancel bookings, and view booking details. Travel agents can create and manage bookings on behalf of customers. Administrators can manage flights, hotels, and customer accounts.</p>
+<p>The system must check availability before confirming a booking. Customers must complete payment before a booking is confirmed. Customers may add travel insurance to a booking. If a booking is cancelled after the permitted period, a cancellation fee is applied.</p>
+
+<h3>Case 25: Smart Hospital Management System</h3>
+<p>A smart hospital management system allows patients to register, book appointments, view medical records, make payments, request laboratory tests, and view test results. Doctors can view patient records, manage appointments, request tests, and update treatment records. Nurses can view assigned patients and update basic patient information. Laboratory staff can manage test requests and upload test results. Pharmacy staff can view prescriptions and manage medicine orders. Administrators can manage users and hospital services.</p>
+<p>Patients must authenticate before accessing their medical information. An appointment must include checking doctor availability. A laboratory test request must be processed by laboratory staff before results can be added to the patient's record. Patients may request emergency appointments. If a patient has insurance coverage, the system can process an insurance claim.</p>
+<p>There are different types of patients, including <strong>General Patients</strong> and <strong>Insurance Patients</strong>, with specialized services available to each type.</p>
+
+<div class="callout callout-green">
+  <span class="callout-label">Tip</span>
+  <p>For each case study, first list the <strong>actors</strong>. Then list each actor's <strong>use cases</strong>. Finally, read the last paragraphs carefully to find the <strong>include</strong>, <strong>extend</strong> and <strong>generalization</strong> relationships.</p>
+</div>
+
+`,
+summary: {
+topic: 'Use Case Diagrams: actors, use cases, system boundary and relationships (UML)',
+subTopics: [
+'What is a Use Case Diagram?',
+'Main Components (Actor, Use Case, System Boundary, Relationship)',
+'Association',
+'How to Identify Actors and Use Cases',
+'<<include>> Relationship',
+'<<extend>> Relationship',
+'Generalization Relationship',
+'Relationship Summary',
+'Include vs Extend',
+'General Steps to Draw a Use Case Diagram',
+'Example: Online Banking System',
+'Case Studies: In Class',
+'Case Studies: Take Home',
+],
+definitions: [
+{ term: 'Use Case Diagram', meaning: 'A UML diagram that shows who interacts with a system, what the system can do, and how actors and functions are related.' },
+{ term: 'Actor', meaning: 'A person, system, device or other entity that interacts with the system. It represents a role, not a specific person.' },
+{ term: 'Use Case', meaning: 'Something an actor wants the system to do, drawn as an oval with a short action name.' },
+{ term: 'System Boundary', meaning: 'A rectangle around the use cases that shows what is inside and outside the system, with the system name on top.' },
+{ term: 'Association', meaning: 'A solid line showing that an actor interacts with a use case.' },
+{ term: '<<include>>', meaning: 'A relationship where a base use case must use the behavior of another use case. The included behavior is mandatory.' },
+{ term: '<<extend>>', meaning: 'A relationship where a use case adds extra, optional behavior to a base use case that can work without it.' },
+{ term: 'Generalization', meaning: 'An is-a relationship between a child and a parent, drawn as an arrow with a triangular head from child to parent.' },
+{ term: 'Base Use Case', meaning: 'The main use case that uses or is extended by another use case.' },
+{ term: 'Candidate Use Cases', meaning: 'Activities that actors want the system to do, found by asking what each actor wants from the system.' },
+],
+keyPoints: [
+'A use case diagram gives a high-level view of the functional requirements of a system.',
+'There are four main components: actor, use case, system boundary and relationship.',
+'An actor is a role (Doctor), not a person name (Dr. John).',
+'Humans are drawn as stick figures; external systems as a rectangle labelled <<actor>>.',
+'Use cases are ovals with short, meaningful, action-based names.',
+'The system boundary is a rectangle that separates the system from the outside.',
+'The four relationships are association, include, extend and generalization.',
+'Association uses a solid line between an actor and a use case.',
+'To find actors ask who or what interacts with the system; to find use cases ask what each actor wants the system to do.',
+'INCLUDE = MUST happen; direction is Base -> Included (e.g. Check Order Status -> Login).',
+'EXTEND = EXTRA behavior; direction is Extension -> Base (e.g. Issue Fine -> Return Book).',
+'The base use case works without an extension but cannot complete without an included use case.',
+'GENERALIZATION = IS-A; direction is Child -> Parent, with a triangular arrowhead.',
+'Use include to reuse common mandatory behavior such as Login across many use cases.',
+'Drawing steps: system, boundary, actors, use cases, associations, include, extend, generalization.',
+'Clue words: must/before/every suggest include; may/if/additional suggest extend; two types of suggests generalization.',
+'In the banking example, Deposit, Withdraw and Transfer include Update Balance; Calculate Bonus extends Deposit Funds; NRFC Customer generalizes Customer.',
+],
+},
+},
+
+
+
+
+
+
 ]

@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICT2122 · OOP Mid-Exam Notes</title>
+<style>
+:root {
+  --bg: #fafafa;
+  --bg-alt: #f0f0f0;
+  --surface: #ffffff;
+  --surface-alt: #f8f9fa;
+  --text: #1a1a2e;
+  --text-muted: #555770;
+  --border: #e2e4e9;
+  --accent: #4361ee;
+  --accent-soft: #eef1ff;
+  --code-bg: #1e1e2e;
+  --code-text: #cdd6f4;
+  --code-keyword: #cba6f7;
+  --code-string: #a6e3a1;
+  --code-comment: #6c7086;
+  --code-type: #89b4fa;
+  --code-number: #fab387;
+  --code-func: #89dceb;
+  --note-bg: #e8f4fd;
+  --note-border: #43a5f5;
+  --tip-bg: #e8f8e8;
+  --tip-border: #4caf50;
+  --warn-bg: #fff3e0;
+  --warn-border: #ff9800;
+  --danger-bg: #fde8e8;
+  --danger-border: #ef5350;
+  --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.1);
+  --radius: 10px;
+  --sidebar-w: 280px;
+  --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --bg: #0f0f1a;
+  --bg-alt: #161625;
+  --surface: #1a1a2e;
+  --surface-alt: #1f1f35;
+  --text: #e4e4f0;
+  --text-muted: #9999b3;
+  --border: #2a2a45;
+  --accent: #7b93ff;
+  --accent-soft: #1e2245;
+  --code-bg: #11111b;
+  --code-text: #cdd6f4;
+  --note-bg: #1a2a3a;
+  --note-border: #43a5f5;
+  --tip-bg: #1a2e1a;
+  --tip-border: #4caf50;
+  --warn-bg: #2e2a1a;
+  --warn-border: #ff9800;
+  --danger-bg: #2e1a1a;
+  --danger-border: #ef5350;
+  --shadow: 0 2px 12px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow);
+  transition: background 0.3s;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-logo {
+  width: 36px; height: 36px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.header-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.header-title span {
+  color: var(--text-muted);
+  font-weight: 400;
+  font-size: 0.85rem;
+  margin-left: 8px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 8px 16px 8px 36px;
+  font-size: 0.85rem;
+  color: var(--text);
+  width: 200px;
+  transition: width 0.3s, border-color 0.3s;
+  font-family: var(--font-body);
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--accent);
+  width: 280px;
+}
+
+.search-box::before {
+  content: '🔍';
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.theme-toggle {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  color: var(--text);
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.sidebar-toggle {
+  display: none;
+  width: 40px; height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: var(--sidebar-w);
+  height: calc(100vh - 64px);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  padding: 20px 0;
+  transition: transform 0.3s, background 0.3s;
+  z-index: 900;
+}
+
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+.sidebar-section {
+  margin-bottom: 8px;
+}
+
+.sidebar-heading {
+  padding: 8px 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-muted);
+}
+
+.sidebar a {
+  display: block;
+  padding: 7px 20px 7px 28px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.sidebar a:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-left-color: var(--accent);
+}
+
+.sidebar a.active {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-left-color: var(--accent);
+  font-weight: 600;
+}
+
+/* ===== MAIN ===== */
+.main {
+  margin-left: var(--sidebar-w);
+  margin-top: 64px;
+  padding: 40px 48px;
+  max-width: 1400px;
+  transition: margin 0.3s;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+p { margin-bottom: 14px; }
+
+ul, ol {
+  margin-bottom: 14px;
+  padding-left: 24px;
+}
+
+li { margin-bottom: 6px; }
+
+strong { font-weight: 650; }
+
+a { color: var(--accent); }
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+}
+
+/* ===== CARDS / SECTIONS ===== */
+.lesson-section {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.lesson-section:last-child { border-bottom: none; }
+
+.lesson-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.lesson-num {
+  background: var(--accent);
+  color: #fff;
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* ===== CALLOUTS ===== */
+.callout {
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  margin: 18px 0;
+  border-left: 4px solid;
+  font-size: 0.92rem;
+}
+
+.callout-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.callout-note {
+  background: var(--note-bg);
+  border-color: var(--note-border);
+}
+
+.callout-tip {
+  background: var(--tip-bg);
+  border-color: var(--tip-border);
+}
+
+.callout-warn {
+  background: var(--warn-bg);
+  border-color: var(--warn-border);
+}
+
+.callout-danger {
+  background: var(--danger-bg);
+  border-color: var(--danger-border);
+}
+
+/* ===== CODE BLOCKS ===== */
+.code-block {
+  position: relative;
+  margin: 16px 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #181825;
+  padding: 8px 16px;
+  border-bottom: 1px solid #313244;
+}
+
+.code-lang {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #89b4fa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.code-copy {
+  background: none;
+  border: 1px solid #45475a;
+  color: #cdd6f4;
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-mono);
+}
+
+.code-copy:hover {
+  background: #313244;
+  border-color: #585b70;
+}
+
+.code-copy.copied {
+  background: #a6e3a1;
+  color: #1e1e2e;
+  border-color: #a6e3a1;
+}
+
+.code-block pre {
+  background: var(--code-bg);
+  padding: 18px 20px;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--code-text);
+  tab-size: 4;
+}
+
+.code-block pre::-webkit-scrollbar { height: 6px; }
+.code-block pre::-webkit-scrollbar-thumb { background: #45475a; border-radius: 3px; }
+
+/* Syntax colors */
+.kw { color: var(--code-keyword); }
+.str { color: var(--code-string); }
+.cm { color: var(--code-comment); font-style: italic; }
+.typ { color: var(--code-type); }
+.num { color: var(--code-number); }
+.fn { color: var(--code-func); }
+.annotation { color: #f9e2af; }
+
+/* ===== TABLES ===== */
+.table-wrap {
+  overflow-x: auto;
+  margin: 16px 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  background: var(--surface);
+}
+
+thead th {
+  background: var(--bg-alt);
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  border-bottom: 2px solid var(--border);
+}
+
+tbody td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--accent-soft); }
+
+/* ===== COLLAPSIBLE ===== */
+.collapse-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 12px 0;
+  user-select: none;
+}
+
+.collapse-header:hover h3 { color: var(--accent); }
+
+.collapse-icon {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.collapse-header.open .collapse-icon {
+  transform: rotate(180deg);
+}
+
+.collapse-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.collapse-body.open {
+  max-height: 50000px;
+}
+
+/* ===== GLOSSARY ===== */
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.glossary-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.glossary-item:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.glossary-term {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.glossary-def {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ===== BADGES ===== */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.badge-yes { background: var(--tip-bg); color: var(--tip-border); }
+.badge-no { background: var(--danger-bg); color: var(--danger-border); }
+
+/* ===== PROGRESS BAR ===== */
+.progress-bar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  z-index: 1001;
+  transition: width 0.1s;
+  width: 0%;
+}
+
+/* ===== BACK TO TOP ===== */
+.back-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s;
+  z-index: 800;
+}
+
+.back-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-top:hover { transform: translateY(-3px); }
+
+/* ===== SEARCH HIGHLIGHT ===== */
+mark {
+  background: #ffe066;
+  color: #1a1a2e;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+[data-theme="dark"] mark {
+  background: #b8860b;
+  color: #fff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: var(--shadow-lg);
+  }
+  .main {
+    margin-left: 0;
+    padding: 24px 20px;
+  }
+  .sidebar-toggle {
+    display: flex;
+  }
+  .search-box input {
+    width: 140px;
+  }
+  .search-box input:focus {
+    width: 180px;
+  }
+  .header-title span { display: none; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  .glossary-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .header, .sidebar, .back-top, .progress-bar, .code-copy, .sidebar-toggle { display: none !important; }
+  .main { margin: 0; padding: 20px; max-width: 100%; }
+  .code-block { break-inside: avoid; }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lesson-section { animation: fadeIn 0.4s ease; }
+</style>
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-left">
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+    <div class="header-logo">OOP</div>
+    <div class="header-title">ICT2122 <span>· Mid-Exam Notes</span></div>
+  </div>
+  <div class="header-right">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search notes..." autocomplete="off">
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+  </div>
+</header>
+
+<!-- Sidebar -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-heading">Quick Reference</div>
+    <a href="#cheatsheet">Exam Cheat-Sheet</a>
+    <a href="#access-modifiers">Access Modifiers</a>
+    <a href="#overload-vs-override">Overloading vs Overriding</a>
+    <a href="#binding">Static vs Dynamic Binding</a>
+    <a href="#traps">Common Exam Traps</a>
+    <a href="#glossary">Glossary</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-heading">Lessons</div>
+    <a href="#lesson-01">01 · Introduction to OOP</a>
+    <a href="#lesson-02">02 · Classes &amp; Objects</a>
+    <a href="#lesson-03">03 · Inheritance</a>
+    <a href="#lesson-04">04 · Polymorphism</a>
+    <a href="#lesson-05">05 · Abstraction</a>
+    <a href="#lesson-06">06 · Encapsulation</a>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="main" id="mainContent">
+
+  <!-- TITLE -->
+  <h1>Object-Oriented Programming</h1>
+  <p class="subtitle">ICT2122 · Mid-term coverage · Lessons 01–07 · Theory &amp; Practical Java</p>
+
+  <!-- ===== CHEAT SHEET ===== -->
+  <section class="lesson-section" id="cheatsheet">
+    <div class="lesson-header">
+      <div class="lesson-num">⚡</div>
+      <h2 style="margin-top:0;border:none;">Exam Cheat-Sheet</h2>
+    </div>
+    <p>A fast pass over the material most likely to appear as short-answer or "what does this print" questions.</p>
+
+    <!-- Access Modifiers -->
+    <h3 id="access-modifiers">Access Modifiers, at a Glance</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Modifier</th><th>Same Class</th><th>Same Package</th><th>Subclass, Other Pkg</th><th>Other Pkg</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>private</strong></td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+          <tr><td><strong>default</strong> (none)</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
+          <tr><td><strong>protected</strong></td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
+          <tr><td><strong>public</strong></td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout-note">
+      <div class="callout-title">📌 Remember</div>
+      There is <strong>no keyword</strong> for default access — you simply omit the modifier. An overriding method may <strong>widen</strong> access (protected → public) but <strong>never narrow</strong> it (protected → private).
+    </div>
+
+    <!-- Overloading vs Overriding -->
+    <h3 id="overload-vs-override">Overloading vs. Overriding</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th></th><th>Method Overloading</th><th>Method Overriding</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Type</strong></td><td>Static / compile-time</td><td>Dynamic / run-time</td></tr>
+          <tr><td><strong>Where</strong></td><td>Same class, same method name</td><td>Subclass redefining a superclass method</td></tr>
+          <tr><td><strong>Params</strong></td><td>Must differ (number, type, or order)</td><td>Must be identical</td></tr>
+          <tr><td><strong>Return</strong></td><td>Can be anything — never the sole difference</td><td>Same type, or a covariant subtype</td></tr>
+          <tr><td><strong>Resolved by</strong></td><td>Compiler, from arguments passed</td><td>JVM, from object's actual class</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Binding -->
+    <h3 id="binding">Static vs. Dynamic Binding</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Binding</th><th>Resolved</th><th>Applies To</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Static (early)</strong></td><td>Compile time</td><td>Static methods, field access, private methods, final methods, constructors</td></tr>
+          <tr><td><strong>Dynamic (late)</strong></td><td>Run time</td><td>Overridable instance method calls — resolved by the object's <em>actual</em> class</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Traps -->
+    <h3 id="traps">Common Exam Traps</h3>
+    <div class="callout callout-danger">
+      <div class="callout-title">⚠️ Watch For These</div>
+      <ul style="margin-bottom:0;">
+        <li>Writing <code>a = a;</code> inside a setter — assigns parameter to itself. Fix: <code>this.a = a;</code></li>
+        <li>Java does <strong>not</strong> support multiple inheritance of classes — <code>class C extends A, B</code> won't compile.</li>
+        <li>Pairing an instance method with a static method of the same signature in a related class = compile error.</li>
+        <li>Down-casting needs an explicit cast: <code>Car c = (Car) obj;</code></li>
+        <li>Implementing only some abstract methods without marking the subclass <code>abstract</code> won't compile.</li>
+        <li>Overloading can <strong>never</strong> be achieved by changing return type alone.</li>
+        <li>A <code>super()</code> call, if explicit, must be the <strong>very first</strong> statement in a constructor.</li>
+        <li>Once constructed, a constructor can't be called again — <code>new</code> is the only trigger.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== GLOSSARY ===== -->
+  <section class="lesson-section" id="glossary">
+    <div class="lesson-header">
+      <div class="lesson-num">📖</div>
+      <h2 style="margin-top:0;border:none;">Glossary</h2>
+    </div>
+    <div class="glossary-grid">
+      <div class="glossary-item"><div class="glossary-term">Class</div><div class="glossary-def">A blueprint for objects — visible in source code, not duplicated per object.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Object</div><div class="glossary-def">An instance of a class; has its own state, occupies memory at run time.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Instantiation</div><div class="glossary-def">Creating a realized instance from a class using <code>new</code>.</div></div>
+      <div class="glossary-item"><div class="glossary-term">State / Behavior / Identity</div><div class="glossary-def">An object's data, its methods, and what tells it apart from others of the same class.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Field</div><div class="glossary-def">A variable declared in a class body, outside any method.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Method</div><div class="glossary-def">A named block of statements that runs only when called.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Constructor</div><div class="glossary-def">A same-named, no-return block that initializes a new object; called once by <code>new</code>.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Access Modifier</div><div class="glossary-def"><code>public</code>, <code>private</code>, <code>protected</code>, or default — controls visibility.</div></div>
+      <div class="glossary-item"><div class="glossary-term">this</div><div class="glossary-def">A reference every object holds to itself; disambiguates fields from same-named parameters.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Constructor Chaining</div><div class="glossary-def">One constructor calling another via <code>this(...)</code> as its first statement.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Initializer Block</div><div class="glossary-def">Unnamed <code>{ }</code> block in a class body that runs on every instantiation, before the constructor.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Anonymous Object</div><div class="glossary-def">An object created with no reference variable, usable only at creation time.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Garbage Collection</div><div class="glossary-def">The JVM's automatic reclaiming of memory from unreferenced objects.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Static Member</div><div class="glossary-def">A field or method that belongs to the class itself, not to any one instance.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Inheritance</div><div class="glossary-def">A subclass acquiring fields and methods of a superclass via <code>extends</code>.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Overriding</div><div class="glossary-def">A subclass redefining an inherited instance method with the same signature.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Hiding</div><div class="glossary-def">A subclass redeclaring a static method or field — resolved by reference type.</div></div>
+      <div class="glossary-item"><div class="glossary-term">super</div><div class="glossary-def">Refers to the immediate superclass — fields, methods, or constructor.</div></div>
+      <div class="glossary-item"><div class="glossary-term">final</div><div class="glossary-def">Locks a variable's value, a method against overriding, or a class against extension.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Casting</div><div class="glossary-def">Treating an object as another type — up-casting implicit, down-casting needs <code>(Type)</code>.</div></div>
+      <div class="glossary-item"><div class="glossary-term">instanceof</div><div class="glossary-def">Checks whether an object is (or subclasses) a given type at run time.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Polymorphism</div><div class="glossary-def">One action taking different forms depending on the object acting it out.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Abstraction</div><div class="glossary-def">Exposing only essential details and hiding the rest.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Abstract Class</div><div class="glossary-def">A class with at least one abstract method; cannot be instantiated.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Interface</div><div class="glossary-def">A 100%-abstract contract of method signatures.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Encapsulation</div><div class="glossary-def">Bundling fields and methods together, keeping fields private behind accessors.</div></div>
+      <div class="glossary-item"><div class="glossary-term">Accessor / Mutator</div><div class="glossary-def">A getter (reads) and a setter (writes, often with validation).</div></div>
+      <div class="glossary-item"><div class="glossary-term">Diamond Problem</div><div class="glossary-def">Ambiguity from inheriting the same member via two paths — why Java bars multiple class inheritance.</div></div>
+    </div>
+  </section>
+
+  <!-- ===== LESSON 01 ===== -->
+  <section class="lesson-section" id="lesson-01">
+    <div class="lesson-header">
+      <div class="lesson-num">01</div>
+      <h2 style="margin-top:0;border:none;">Introduction to OOP</h2>
+    </div>
+
+    <h3>What is OOP?</h3>
+    <p>Object-Oriented Programming is a paradigm that wraps <strong>data</strong> and the <strong>behavior</strong> related to that data into bundles called <strong>objects</strong>. Objects are built from blueprints defined by a programmer, called <strong>classes</strong>.</p>
+    <p>A program written the OOP way is a collection of objects: each object decides for itself what to do with a message it receives. The focus is on <strong>data</strong>, not on the exact procedure used to manipulate it.</p>
+
+    <h3>Why Object Orientation?</h3>
+    <ul>
+      <li><strong>Modularity</strong> — an object's source can be written and maintained independently.</li>
+      <li><strong>Information-hiding</strong> — interacting only through methods keeps internals hidden.</li>
+      <li><strong>Code re-use</strong> — an object already built and tested can simply be used.</li>
+      <li><strong>Pluggability &amp; debugging ease</strong> — a problematic object can be swapped for a replacement.</li>
+    </ul>
+
+    <h3>Procedural vs. Object-Oriented</h3>
+    <p><strong>Procedural:</strong> data and behavior stay separate — free-floating functions operate on a plain data structure.</p>
+    <p><strong>OO:</strong> nouns become classes, verbs become methods. Data and operations are grouped together.</p>
+
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java — OO Approach</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">public class</span> <span class="typ">Account</span> {
+    <span class="kw">private int</span> accountNum;
+    <span class="kw">private double</span> balance;
+    <span class="kw">private char</span> accountType;
+
+    <span class="typ">Account</span>(<span class="kw">int</span> accountNum, <span class="kw">char</span> accountType) {
+        <span class="kw">this</span>.accountNum = accountNum;
+        <span class="kw">this</span>.accountType = accountType;
+    }
+
+    <span class="kw">public void</span> <span class="fn">deposit</span>(<span class="kw">double</span> amount) {
+        balance += amount;
+    }
+
+    <span class="kw">public boolean</span> <span class="fn">withdraw</span>(<span class="kw">double</span> amount) {
+        <span class="kw">if</span> (amount &gt; balance) <span class="kw">return false</span>;
+        balance -= amount;
+        <span class="kw">return true</span>;
+    }
+
+    <span class="kw">public boolean</span> <span class="fn">transfer</span>(<span class="typ">Account</span> to, <span class="kw">double</span> amount) {
+        <span class="kw">if</span> (!<span class="fn">withdraw</span>(amount)) <span class="kw">return false</span>;
+        to.<span class="fn">deposit</span>(amount);
+        <span class="kw">return true</span>;
+    }
+}</pre>
+    </div>
+
+    <h3>Class, Object, Instance, Instantiation</h3>
+    <div class="callout callout-note">
+      <div class="callout-title">📌 Class vs. Object</div>
+      <strong>Class:</strong> visible in source code; the code is never duplicated.<br>
+      <strong>Object:</strong> has its own copy of data; is active in a running program; occupies memory.
+    </div>
+    <p>Every object has three characteristics:</p>
+    <ul>
+      <li><strong>State</strong> — its properties and current values.</li>
+      <li><strong>Behavior</strong> — what it can do through its methods.</li>
+      <li><strong>Identity</strong> — what tells two objects of the same class apart.</li>
+    </ul>
+
+    <h3>Alan Kay's Rules</h3>
+    <div class="callout callout-tip">
+      <div class="callout-title">💡 Alan Kay's Five Rules</div>
+      <ol style="margin-bottom:0;">
+        <li>Everything is an object.</li>
+        <li>A program is a bunch of objects telling each other what to do, by sending messages.</li>
+        <li>Each object has its own memory, made up of other objects.</li>
+        <li>Every object has a type.</li>
+        <li>All objects of a particular type can receive the same messages.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== LESSON 02 ===== -->
+  <section class="lesson-section" id="lesson-02">
+    <div class="lesson-header">
+      <div class="lesson-num">02</div>
+      <h2 style="margin-top:0;border:none;">Classes &amp; Objects</h2>
+    </div>
+
+    <h3>Declaring a Class</h3>
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java — Extended Form</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">package</span> com.example;
+<span class="kw">import</span> java.util.*;
+
+<span class="kw">public class</span> <span class="typ">ClassName</span> <span class="kw">extends</span> <span class="typ">BaseClass</span> <span class="kw">implements</span> <span class="typ">Interface1</span>, <span class="typ">Interface2</span> {
+    <span class="cm">// Fields</span>
+    <span class="cm">// Initializers</span>
+    <span class="cm">// Constructors</span>
+    <span class="cm">// Methods</span>
+    <span class="cm">// Inner classes / interfaces</span>
+}</pre>
+    </div>
+
+    <div class="callout callout-note">
+      <div class="callout-title">📌 Rules</div>
+      <ul style="margin-bottom:0;">
+        <li>Class names start with a capital letter and are usually nouns.</li>
+        <li>A <code>public</code> class must live in a file with the same name, ending <code>.java</code>.</li>
+        <li>A single file can't contain two or more <code>public</code> classes.</li>
+      </ul>
+    </div>
+
+    <h3>Fields &amp; Methods</h3>
+    <p>A <strong>field</strong> is a variable declared in the class body, outside any method. A <strong>method</strong> is a named collection of statements that runs only when called.</p>
+
+    <h3>Access Modifiers</h3>
+    <ul>
+      <li><code>public</code> — callable from any class.</li>
+      <li><code>private</code> — callable only from inside the same class.</li>
+      <li><code>protected</code> — callable from the same package or from subclasses.</li>
+      <li><code>default</code> (package-private) — callable only from the same package.</li>
+    </ul>
+
+    <h3>Constructors</h3>
+    <ul>
+      <li>Name must exactly match the class name.</li>
+      <li>No return type, not even <code>void</code>.</li>
+      <li>Called automatically via <code>new</code>.</li>
+      <li>If no constructor is defined, Java supplies a default no-arg one.</li>
+    </ul>
+
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java — Parameterized Constructor</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">public class</span> <span class="typ">Employee</span> {
+    <span class="kw">private</span> <span class="typ">String</span> Name;
+    <span class="kw">private int</span> Age;
+    <span class="kw">private char</span> Gender;
+
+    <span class="typ">Employee</span>(<span class="typ">String</span> n, <span class="kw">int</span> a, <span class="kw">char</span> g) {
+        Name = n;
+        Age = a;
+        Gender = g;
+    }
+}</pre>
+    </div>
+
+    <h3>The <code>this</code> Keyword</h3>
+    <div class="callout callout-danger">
+      <div class="callout-title">🐛 Common Bug</div>
+      <code>a = a;</code> assigns the parameter to itself. Use <code>this.a = a;</code> to reach the field.
+    </div>
+
+    <h3>Constructor Chaining</h3>
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">public class</span> <span class="typ">Box</span> {
+    <span class="kw">double</span> width, height, depth;
+
+    <span class="typ">Box</span>() {
+        <span class="kw">this</span>(<span class="num">1.0</span>, <span class="num">1.0</span>, <span class="num">1.0</span>);
+        System.out.<span class="fn">println</span>(<span class="str">"Default box created"</span>);
+    }
+
+    <span class="typ">Box</span>(<span class="kw">double</span> side) {
+        <span class="kw">this</span>(side, side, side);
+    }
+
+    <span class="typ">Box</span>(<span class="kw">double</span> w, <span class="kw">double</span> h, <span class="kw">double</span> d) {
+        <span class="kw">this</span>.width = w;
+        <span class="kw">this</span>.height = h;
+        <span class="kw">this</span>.depth = d;
+    }
+}</pre>
+    </div>
+
+    <h3>Initializer Blocks</h3>
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">public class</span> <span class="typ">InitializerTest</span> {
+    {
+        System.out.<span class="fn">println</span>(<span class="str">"Initializer block executed"</span>);
+    }
+
+    <span class="typ">InitializerTest</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"Constructor executed"</span>);
+    }
+}</pre>
+    </div>
+
+    <h3>Statics</h3>
+    <p>A <code>static</code> field or method belongs to the <strong>class</strong> itself, not to any one instance.</p>
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java — Static Counter</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">public class</span> <span class="typ">Counter</span> {
+    <span class="kw">private static int</span> instanceCount = <span class="num">0</span>;
+
+    <span class="typ">Counter</span>() {
+        instanceCount++;
+    }
+
+    <span class="kw">public static int</span> <span class="fn">getInstanceCount</span>() {
+        <span class="kw">return</span> instanceCount;
+    }
+}</pre>
+    </div>
+
+    <h3>Preventing Instantiation</h3>
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java — Utility Class</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">public class</span> <span class="typ">MyMathUtils</span> {
+    <span class="kw">private</span> <span class="typ">MyMathUtils</span>() {}  <span class="cm">// prevents instantiation</span>
+
+    <span class="kw">public static double</span> <span class="fn">square</span>(<span class="kw">double</span> x) {
+        <span class="kw">return</span> x * x;
+    }
+}</pre>
+    </div>
+  </section>
+
+  <!-- ===== LESSON 03 ===== -->
+  <section class="lesson-section" id="lesson-03">
+    <div class="lesson-header">
+      <div class="lesson-num">03</div>
+      <h2 style="margin-top:0;border:none;">Inheritance</h2>
+    </div>
+
+    <h3>What is Inheritance?</h3>
+    <p>A subclass acquires all properties and behaviors of a superclass — an <strong>is-a</strong> relationship, built with <code>extends</code>. Java supports only <strong>single</strong> inheritance for classes.</p>
+
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">public class</span> <span class="typ">Vehicle</span> {
+    <span class="kw">double</span> speed = <span class="num">40.0</span>;
+
+    <span class="kw">public void</span> <span class="fn">start</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"Starting…"</span>);
+    }
+}
+
+<span class="kw">public class</span> <span class="typ">Car</span> <span class="kw">extends</span> <span class="typ">Vehicle</span> {
+    <span class="kw">public void</span> <span class="fn">drive</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"Driving…"</span>);
+    }
+}</pre>
+    </div>
+
+    <h3>Types of Inheritance</h3>
+    <ul>
+      <li><strong>Single</strong> — B extends A</li>
+      <li><strong>Multilevel</strong> — A → B → C (chain)</li>
+      <li><strong>Hierarchical</strong> — B, C, D all extend A</li>
+      <li><strong>Hybrid</strong> — combination of the above</li>
+      <li><strong>Multiple</strong> — <strong>NOT allowed</strong> in Java (Diamond Problem)</li>
+    </ul>
+
+    <div class="callout callout-warn">
+      <div class="callout-title">⚠️ The Diamond Problem</div>
+      If <code>CDBurner</code> and <code>DVDBurner</code> both extend <code>DigitalRecorder</code> and both override <code>burn()</code>, a <code>ComboDrive</code> inheriting from both wouldn't know which version to use. Java sidesteps this by disallowing multiple class inheritance. <strong>Interfaces</strong> fill the gap.
+    </div>
+
+    <h3>Overriding vs. Hiding</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th></th><th>Superclass Instance Method</th><th>Superclass Static Method</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Subclass Instance Method</strong></td><td>✅ Overrides</td><td>❌ Compile error</td></tr>
+          <tr><td><strong>Subclass Static Method</strong></td><td>❌ Compile error</td><td>✅ Hides</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Constructors in Subclasses</h3>
+    <div class="callout callout-note">
+      <div class="callout-title">📌 Rules for super()</div>
+      <ul style="margin-bottom:0;">
+        <li>If used, must be the <strong>very first</strong> statement in the constructor.</li>
+        <li>If not called explicitly, the compiler inserts a call to the superclass's default constructor.</li>
+        <li>This chains all the way up to <code>Object</code>.</li>
+      </ul>
+    </div>
+
+    <h3>The <code>final</code> Keyword</h3>
+    <ul>
+      <li><code>final</code> variable — a constant; value set once, never changed.</li>
+      <li><code>final</code> method — cannot be overridden by any subclass.</li>
+      <li><code>final</code> class — cannot be extended; all methods implicitly final.</li>
+    </ul>
+
+    <h3>Casting &amp; <code>instanceof</code></h3>
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="cm">// Up-casting (implicit)</span>
+<span class="typ">Vehicle</span> v = <span class="kw">new</span> <span class="typ">Car</span>();
+
+<span class="cm">// Down-casting (explicit)</span>
+<span class="typ">Car</span> c = (<span class="typ">Car</span>) v;
+
+<span class="cm">// instanceof check</span>
+<span class="kw">if</span> (v <span class="kw">instanceof</span> <span class="typ">Car</span>) {
+    <span class="typ">Car</span> car = (<span class="typ">Car</span>) v;
+    car.<span class="fn">drive</span>();
+}</pre>
+    </div>
+  </section>
+
+  <!-- ===== LESSON 04 ===== -->
+  <section class="lesson-section" id="lesson-04">
+    <div class="lesson-header">
+      <div class="lesson-num">04</div>
+      <h2 style="margin-top:0;border:none;">Polymorphism</h2>
+    </div>
+
+    <h3>What is Polymorphism?</h3>
+    <p>The capability of an action or method to do different things depending on the object it acts upon.</p>
+    <ul>
+      <li><strong>Compile-time (static)</strong> → Method Overloading</li>
+      <li><strong>Run-time (dynamic)</strong> → Method Overriding</li>
+    </ul>
+
+    <h3>Method Overloading</h3>
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">class</span> <span class="typ">Calculation</span> {
+    <span class="kw">void</span> <span class="fn">sum</span>(<span class="kw">int</span> a, <span class="kw">int</span> b) {
+        System.out.<span class="fn">println</span>(a + b);
+    }
+    <span class="kw">void</span> <span class="fn">sum</span>(<span class="kw">int</span> a, <span class="kw">int</span> b, <span class="kw">int</span> c) {
+        System.out.<span class="fn">println</span>(a + b + c);
+    }
+    <span class="kw">void</span> <span class="fn">sum</span>(<span class="kw">double</span> a, <span class="kw">double</span> b) {
+        System.out.<span class="fn">println</span>(a + b);
+    }
+}</pre>
+    </div>
+    <div class="callout callout-warn">
+      <div class="callout-title">⚠️ Warning</div>
+      Overloading can <strong>never</strong> be achieved by changing the return type alone — the parameter list must differ.
+    </div>
+
+    <h3>Method Overriding &amp; Dynamic Binding</h3>
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">class</span> <span class="typ">Vehicle</span> {
+    <span class="kw">public void</span> <span class="fn">start</span>() { System.out.<span class="fn">println</span>(<span class="str">"Vehicle starting"</span>); }
+}
+
+<span class="kw">class</span> <span class="typ">Car</span> <span class="kw">extends</span> <span class="typ">Vehicle</span> {
+    <span class="annotation">@Override</span>
+    <span class="kw">public void</span> <span class="fn">start</span>() { System.out.<span class="fn">println</span>(<span class="str">"Car is starting"</span>); }
+}
+
+<span class="cm">// Dynamic binding in action:</span>
+<span class="typ">Vehicle</span> v = <span class="kw">new</span> <span class="typ">Car</span>();
+v.<span class="fn">start</span>();  <span class="cm">// "Car is starting" — actual object decides</span></pre>
+    </div>
+
+    <h3>Static Binding (Fields)</h3>
+    <div class="callout callout-danger">
+      <div class="callout-title">⚠️ Key Difference</div>
+      Fields use <strong>static binding</strong> — resolved by the <em>reference's declared type</em>, not the object's actual type. Methods (overridable) use <strong>dynamic binding</strong> — resolved by the <em>object's actual class</em>.
+    </div>
+  </section>
+
+  <!-- ===== LESSON 05 ===== -->
+  <section class="lesson-section" id="lesson-05">
+    <div class="lesson-header">
+      <div class="lesson-num">05</div>
+      <h2 style="margin-top:0;border:none;">Abstraction</h2>
+    </div>
+
+    <h3>What is Abstraction?</h3>
+    <p>Hides implementation and exposes only what's essential. Achieved via:</p>
+    <ul>
+      <li><strong>Abstract class</strong> — 0% to 100% abstraction (can mix implemented and unimplemented methods).</li>
+      <li><strong>Interface</strong> — 100% abstraction.</li>
+    </ul>
+
+    <h3>Abstract Classes</h3>
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">public abstract class</span> <span class="typ">Bike</span> {
+    <span class="typ">Bike</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"bike is created"</span>);
+    }
+
+    <span class="kw">abstract void</span> <span class="fn">run</span>();  <span class="cm">// no body</span>
+
+    <span class="kw">void</span> <span class="fn">changeGear</span>() {  <span class="cm">// concrete method</span>
+        System.out.<span class="fn">println</span>(<span class="str">"gear changed"</span>);
+    }
+}
+
+<span class="kw">public class</span> <span class="typ">Honda</span> <span class="kw">extends</span> <span class="typ">Bike</span> {
+    <span class="annotation">@Override</span>
+    <span class="kw">void</span> <span class="fn">run</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"running safely"</span>);
+    }
+}</pre>
+    </div>
+
+    <h3>Interfaces</h3>
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">interface</span> <span class="typ">Drivable</span> {
+    <span class="kw">int</span> MAX_SPEED = <span class="num">200</span>;  <span class="cm">// public static final</span>
+    <span class="kw">void</span> <span class="fn">drive</span>();           <span class="cm">// public abstract</span>
+}
+
+<span class="kw">class</span> <span class="typ">Car</span> <span class="kw">implements</span> <span class="typ">Drivable</span> {
+    <span class="annotation">@Override</span>
+    <span class="kw">public void</span> <span class="fn">drive</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"Car driving, max "</span> + MAX_SPEED);
+    }
+}</pre>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th></th><th>Abstract Class</th><th>Interface</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Abstraction</strong></td><td>0% – 100%</td><td>100%</td></tr>
+          <tr><td><strong>Keyword</strong></td><td><code>extends</code></td><td><code>implements</code></td></tr>
+          <tr><td><strong>Multiple?</strong></td><td>No (single inheritance)</td><td>Yes (many at once)</td></tr>
+          <tr><td><strong>Fields</strong></td><td>Any kind</td><td><code>public static final</code> only</td></tr>
+          <tr><td><strong>Constructors</strong></td><td>Allowed</td><td>Not allowed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== LESSON 06 ===== -->
+  <section class="lesson-section" id="lesson-06">
+    <div class="lesson-header">
+      <div class="lesson-num">06</div>
+      <h2 style="margin-top:0;border:none;">Encapsulation</h2>
+    </div>
+
+    <h3>What is Encapsulation?</h3>
+    <p>Wraps code (methods) and data (fields) together into a single unit. Fields are made <strong>private</strong> and exposed only through public methods (getters/setters). Also called <strong>data hiding</strong>.</p>
+
+    <div class="code-block">
+      <div class="code-header"><span class="code-lang">Java — Encapsulated Class</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+      <pre><span class="kw">public class</span> <span class="typ">SalesPerson</span> {
+    <span class="kw">private</span> <span class="typ">String</span> name;
+    <span class="kw">private int</span> id;
+    <span class="kw">private float</span> commissionRate;
+    <span class="kw">private double</span> sales;
+
+    <span class="typ">SalesPerson</span>(<span class="typ">String</span> name, <span class="kw">int</span> id, <span class="kw">double</span> rate) {
+        <span class="fn">setName</span>(name);
+        <span class="kw">this</span>.id = id;
+        <span class="fn">setCommissionRate</span>(rate);
+    }
+
+    <span class="kw">public void</span> <span class="fn">setCommissionRate</span>(<span class="kw">double</span> newRate) {
+        <span class="kw">if</span> (newRate &gt;= <span class="num">0.0</span> &amp;&amp; newRate &lt;= <span class="num">0.20</span>) {
+            commissionRate = (<span class="kw">float</span>) newRate;
+        } <span class="kw">else</span> {
+            System.out.<span class="fn">println</span>(<span class="str">"Rate must be between 0 and 20%"</span>);
+        }
+    }
+
+    <span class="kw">public double</span> <span class="fn">computeCommission</span>() {
+        <span class="kw">double</span> commission = <span class="num">0.0</span>;
+        <span class="kw">if</span> (sales &gt; <span class="num">0.0</span>) commission = sales * commissionRate;
+        sales = <span class="num">0.0</span>;
+        <span class="kw">return</span> commission;
+    }
+}</pre>
+    </div>
+
+    <h3>Advantages</h3>
+    <ul>
+      <li>Providing only a getter makes a field effectively <strong>read-only</strong>.</li>
+      <li>Gives a class full control over its own data (validation).</li>
+      <li>Callers never need to know internal storage — representation can change later.</li>
+    </ul>
+
+    <h3>Abstraction vs. Encapsulation</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th></th><th>Abstraction</th><th>Encapsulation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Level</strong></td><td>Design level</td><td>Implementation level</td></tr>
+          <tr><td><strong>Purpose</strong></td><td>Hides unwanted details, shows essential</td><td>Bundles code and data into one unit</td></tr>
+          <tr><td><strong>Focus</strong></td><td>What an object must contain</td><td>How an object does something</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<!-- Back to Top -->
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+<script>
+// ===== THEME TOGGLE =====
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+function setTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+  localStorage.setItem('oop-theme', theme);
+}
+
+themeToggle.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+// Load saved theme
+const savedTheme = localStorage.getItem('oop-theme') ||
+  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+setTheme(savedTheme);
+
+// ===== SIDEBAR TOGGLE (mobile) =====
+const sidebarToggle = document.getElementById('sidebarToggle');
+const sidebar = document.getElementById('sidebar');
+
+sidebarToggle.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+});
+
+// Close sidebar when clicking a link (mobile)
+sidebar.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <=
