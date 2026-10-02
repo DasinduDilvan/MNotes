@@ -1132,4 +1132,732 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
 },
 
 
+{
+  id: 4,
+  title: 'Government Intervention in Markets',
+  content: `
+    <span class="lesson-badge">LESSON 04</span>
+    <h1>Government Intervention in Markets</h1>
+    <div class="meta-info">COURSE_CODE <span>•</span> 30 min read</div>
+
+    <h2>What You Will Learn</h2>
+    <p>After finishing this lesson, you will be able to:</p>
+    <ul>
+      <li>Understand <strong>market equilibrium</strong> and <strong>market disequilibria</strong></li>
+      <li>Describe the <strong>types of government intervention</strong></li>
+      <li>Describe <strong>types of goods</strong>, <strong>buffer stocks</strong>, <strong>income guarantee schemes</strong> and <strong>price controls</strong></li>
+      <li>Explain <strong>market failures</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Market Equilibrium</h2>
+    <p>A market works through the <strong>interaction between buyers and sellers</strong>. Buyers decide how much to buy (demand). Sellers decide how much to sell (supply).</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Equilibrium</strong> is the condition that exists when the <strong>quantity supplied</strong> and the <strong>quantity demanded</strong> are <strong>equal</strong>.</p>
+    </div>
+
+    <ul>
+      <li>At equilibrium, there is <strong>no tendency for the market price to change</strong>.</li>
+      <li>Only at equilibrium is <code>Qs</code> equal to <code>Qd</code>.</li>
+      <li>At any price other than <code>P0</code>, the wishes of buyers and sellers <strong>do not match</strong>.</li>
+    </ul>
+
+    <pre><code>  Price
+   |
+   |   D         S
+   |    \       /
+   |     \     /
+   |      \   /
+   |       \ /
+ P0|- - - - X - - - -
+   |       / \
+   |      /   \
+   |     /     \
+   +--------+---------
+            Q0     Quantity
+
+ X = equilibrium point
+ (Qs = Qd at price P0, quantity Q0)</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Equilibrium = <strong>Quantity Supplied (Qs) = Quantity Demanded (Qd)</strong>. Price has no reason to move.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Market Disequilibria</h2>
+    <p>When the price is <strong>not</strong> at the equilibrium level, the market is in <strong>disequilibrium</strong>. There are two cases.</p>
+
+    <h3>Excess Demand (Shortage)</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Excess demand</strong>, or <strong>shortage</strong>, exists when the <strong>quantity demanded is more than the quantity supplied</strong> at the current price.</p>
+    </div>
+    <p>When this happens, the <strong>price tends to rise</strong> until equilibrium is restored.</p>
+    <pre><code>At price P1 (below P0):
+ Qd = high
+ Qs = low
+ Shortage = Qd - Qs
+ → Price rises until Qd = Qs</code></pre>
+
+    <h3>Excess Supply (Surplus)</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Excess supply</strong>, or <strong>surplus</strong>, exists when the <strong>quantity supplied is more than the quantity demanded</strong> at the current price.</p>
+    </div>
+    <p>When this happens, the <strong>price tends to fall</strong> until equilibrium is restored.</p>
+    <pre><code>At price P1 (above P0):
+ Qs = high
+ Qd = low
+ Surplus = Qs - Qd
+ → Price falls until Qs = Qd</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Shortage</strong> (Qd &gt; Qs) → price goes <strong>up</strong>. <strong>Surplus</strong> (Qs &gt; Qd) → price goes <strong>down</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Methods of Government Intervention</h2>
+    <p>Sometimes the government steps in to change how a market works. These are the main methods:</p>
+    <ul>
+      <li><strong>Buffer stocks</strong></li>
+      <li><strong>Price controls</strong> — maximum price (price ceiling) and minimum price (price floor)</li>
+      <li><strong>Taxation</strong></li>
+      <li><strong>Subsidies</strong></li>
+      <li><strong>State provision</strong> (government provision)</li>
+      <li><strong>Regulation</strong></li>
+    </ul>
+    <p>Each method is explained one by one below.</p>
+
+    <div class="divider"></div>
+
+    <h2>Method 1: Buffer Stocks</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>buffer stock</strong> is a system in which the government <strong>buys and stores</strong> stocks when harvests are good, and <strong>releases</strong> stocks when harvests are bad.</p>
+    </div>
+
+    <ul>
+      <li><strong>Good harvest</strong> → the government buys and stores stock to stop prices <strong>falling below</strong> a certain price level.</li>
+      <li><strong>Bad harvest</strong> → the government releases stock to stop prices <strong>rising above</strong> a certain price level.</li>
+    </ul>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li>Influences <strong>market supply</strong> by holding or releasing stocks, to <strong>stabilise prices or incomes</strong></li>
+      <li>A <strong>short-term</strong> measure</li>
+      <li>Used in <strong>agriculture</strong>, where supply can be <strong>volatile</strong> (it goes up and down a lot)</li>
+      <li><strong>Assumption:</strong> supply is <strong>perfectly inelastic</strong> in the short run</li>
+      <li>Only useful where goods <strong>can be stored</strong></li>
+    </ul>
+
+    <h3>How a Buffer Stock Stabilises Price</h3>
+    <p>The government sets a <strong>target price (TP)</strong>. The example below uses 100 units as the quantity sold at the target price.</p>
+    <pre><code>Target price: quantity = 100 units
+
+Bad harvest : supply = 50
+  Govt releases 50 onto market
+  50 + 50 = 100 (target met)
+
+Good harvest: supply = 160
+  Govt buys up 60 and stores them
+  160 - 60 = 100 (target met)</code></pre>
+
+    <h3>Income Stabilisation Schemes</h3>
+    <ul>
+      <li>Buffer stocks <strong>do not protect</strong> farmers against <strong>volatile incomes</strong>.</li>
+      <li>Income stabilisation schemes aim to keep <strong>farm incomes fairly constant</strong>.</li>
+      <li>They do this by <strong>changing the price</strong> — releasing stocks or adding to stores.</li>
+    </ul>
+
+    <h3>Problems of These Schemes</h3>
+    <ul>
+      <li>Farmers <strong>do not respond to market signals</strong> — the market becomes <strong>distorted</strong></li>
+      <li><strong>Overproduction</strong> if incomes are guaranteed</li>
+      <li><strong>Issues in storing food</strong></li>
+      <li><strong>Cost of storage</strong></li>
+      <li>Farmers' <strong>moral issues</strong> — with a constant income guaranteed, farmers may lose the motivation to work hard or improve</li>
+      <li><strong>Long-term sustainability</strong> and <strong>international effects</strong> — for example on LDCs (less developed countries) and the <strong>World Trade Organisation (WTO)</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Method 2: Price Ceilings (Maximum Price)</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>price ceiling</strong> occurs when the government sets a <strong>legal limit on the price</strong> of a good or service, with the aim of keeping prices <strong>below the market equilibrium price</strong>.</p>
+    </div>
+
+    <ul>
+      <li>It is the <strong>highest price</strong> that can be charged by a producer, a group of producers or a whole industry.</li>
+      <li>It is also called a <strong>maximum price</strong>.</li>
+      <li>It is seen as a <strong>benefit to consumers</strong> (it protects consumers).</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>To be effective, a maximum price must be set <strong>below</strong> the free market (equilibrium) price.</p>
+    </div>
+
+    <h3>Example: Maximum Price Below Equilibrium</h3>
+    <pre><code>Free market  : P = £10, Q = 100
+Max price    : P = £6
+  Supply falls to  60
+  Demand rises to  140
+  Shortage = 140 - 60 = 80
+Black market : price may reach £18</code></pre>
+    <ul>
+      <li>Suppliers reduce the amount offered to <strong>60</strong>, but demand rises to <strong>140</strong>. This creates a <strong>shortage of 80</strong>.</li>
+      <li><strong>Rationing</strong> might have to be introduced.</li>
+      <li>Shortages may lead to <strong>black market</strong> prices <strong>way above</strong> the equilibrium free market level.</li>
+    </ul>
+
+    <h3>Question 01 — Worked Solution</h3>
+    <p><code>Qd = 100 − 5P</code>, <code>Qs = 5P</code>, <strong>Maximum price = Rs. 8</strong></p>
+    <pre><code>Step 1: Equilibrium (Qd = Qs)
+  100 - 5P = 5P
+  P = 10, Q = 50
+
+Step 2: At the max price of Rs. 8
+  Qd = 100 - 5(8) = 60
+  Qs = 5(8) = 40
+  Shortage = 60 - 40 = 20
+  Quantity actually sold = 40
+
+Step 3: Key prices
+  Demand intercept (Qd = 0): P = 20
+  Supply intercept (Qs = 0): P = 0
+  Consumers would pay for 40 units:
+  100 - 5P = 40 → P = 12
+
+Step 4: Surplus at equilibrium
+  CS = (20 - 10) × 50 / 2 = 250
+  PS = (10 - 0) × 50 / 2 = 250
+
+Step 5: Surplus with max price
+  CS = (20 - 12) × 40 / 2
+       + (12 - 8) × 40 = 320
+  PS = (8 - 0) × 40 / 2 = 160
+
+Step 6: Areas (see price control
+        diagram later in lesson)
+  A = (10 - 8) × 40 = 80
+      (consumers gain)
+  B = (12 - 10) × 10 / 2 = 10
+      (consumers lose)
+  C = (10 - 8) × 10 / 2 = 10
+  Producers lose A + C = 90
+  Deadweight loss = B + C = 20</code></pre>
+
+    <h3>Advantages and Disadvantages of a Price Ceiling</h3>
+    <p><strong>Advantages</strong></p>
+    <ul>
+      <li>More <strong>affordable price</strong></li>
+      <li><strong>Price stability</strong></li>
+      <li><strong>Greater demand</strong></li>
+    </ul>
+    <p><strong>Disadvantages</strong></p>
+    <ul>
+      <li><strong>Shortages</strong></li>
+      <li><strong>Lack of incentives</strong> for producers</li>
+      <li><strong>Black market</strong></li>
+      <li><strong>More unemployment</strong></li>
+      <li><strong>Less choice</strong> for consumers</li>
+    </ul>
+
+    <h3>Exercise 1</h3>
+    <div class="callout callout-green">
+      <span class="callout-label">Try It Yourself</span>
+      <p>A developing country decides to set a <strong>maximum price</strong> on product "X" to make sure it is <strong>affordable to everyone</strong>. The demand, supply and maximum price are:</p>
+      <p><code>Qd = 100 − 5P</code><br><code>Qs = −20 + 5P</code><br><strong>Maximum price = Rs. 100</strong></p>
+    </div>
+    <div class="callout callout-red">
+      <span class="callout-label">Check the Numbers</span>
+      <p>The equilibrium price here is <strong>Rs. 12</strong> (at Q = 40). A maximum price of Rs. 100 is far <strong>above</strong> Rs. 12, so it would have <strong>no effect</strong>. The value above is exactly as given in the lecture slide. Confirm with your lecturer whether a maximum price below Rs. 12 was intended.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Method 3: Price Floor (Minimum Price)</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>price floor</strong> is a government-imposed price control that sets the <strong>lowest legal price</strong> at which a good or service can be sold.</p>
+    </div>
+
+    <ul>
+      <li>It is also called a <strong>minimum price</strong>.</li>
+      <li>It is usually set <strong>above the equilibrium price</strong> (the point where supply meets demand in a free market).</li>
+      <li><strong>Goal:</strong> protect producers from prices that are seen as too low, so they can <strong>cover their costs of production</strong> and earn a <strong>reasonable income</strong>.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Price ceiling (max price) → set <strong>below</strong> equilibrium. Price floor (min price) → set <strong>above</strong> equilibrium.</p>
+    </div>
+
+    <h3>Example: Minimum Price Above Equilibrium</h3>
+    <pre><code>Free market  : P = £5, Q = 200
+Min price    : P = £9
+  Demand falls to  170
+  Supply rises to  240
+  Surplus = 240 - 170 = 70</code></pre>
+    <p>At the higher price, <strong>demand falls</strong> and <strong>supply rises</strong>. A <strong>surplus</strong> exists.</p>
+
+    <h3>Question 02 — Worked Solution</h3>
+    <p><code>Qd = 100 − 5P</code>, <code>Qs = 5P</code>, <strong>Minimum price = Rs. 12</strong></p>
+    <pre><code>Step 1: Equilibrium (Qd = Qs)
+  100 - 5P = 5P
+  P = 10, Q = 50
+
+Step 2: At the min price of Rs. 12
+  Qd = 100 - 5(12) = 40
+  Qs = 5(12) = 60
+  Surplus = 60 - 40 = 20
+  Quantity actually sold = 40
+
+Step 3: Key prices
+  Demand intercept (Qd = 0): P = 20
+  Supply price for 40 units:
+  5P = 40 → P = 8
+
+Step 4: Surplus at equilibrium
+  CS = (20 - 10) × 50 / 2 = 250
+  PS = (10 - 0) × 50 / 2 = 250
+
+Step 5: Surplus with min price
+  CS = (20 - 12) × 40 / 2 = 160
+  PS = revenue - cost
+     = (12 × 40) - (8 × 40 / 2)
+     = 480 - 160 = 320
+
+Step 6: Areas
+  A = (12 - 10) × 40 = 80
+  B = (12 - 10) × 10 / 2 = 10
+  C = (10 - 8) × 10 / 2 = 10
+  Consumers lose A + B = 90
+  Producers gain A - C = 70
+  Deadweight loss = B + C = 20</code></pre>
+
+    <h3>Advantages and Disadvantages of a Minimum Price</h3>
+    <p><strong>Advantages</strong></p>
+    <ul>
+      <li><strong>Protecting producers</strong></li>
+      <li><strong>Encourage production</strong></li>
+      <li><strong>Correcting market failure</strong></li>
+      <li><strong>Reducing consumption</strong></li>
+    </ul>
+    <p><strong>Disadvantages</strong></p>
+    <ul>
+      <li><strong>Inefficient resource allocation</strong></li>
+      <li>Customers have to <strong>pay a higher price</strong></li>
+      <li><strong>Surplus production</strong></li>
+    </ul>
+
+    <h3>Exercise 2</h3>
+    <div class="callout callout-green">
+      <span class="callout-label">Try It Yourself</span>
+      <p>The government decides to set a <strong>minimum price</strong> on product "Y" to motivate its producers. The demand, supply and minimum price are:</p>
+      <p><code>Qd = 9000 − 10P</code><br><code>Qs = −1000 + 10P</code><br><strong>Minimum price = Rs. 700</strong></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Consumer Surplus and Producer Surplus</h2>
+    <p>When the government controls a price, some people become <strong>better off</strong>. For example, some buyers can buy a good at a lower price. But what is the effect on <strong>society as a whole</strong>? Is total welfare higher or lower, and by how much?</p>
+    <p>To answer this, we need a way to <strong>measure gains and losses</strong> from government policies. We use <strong>consumer surplus</strong> and <strong>producer surplus</strong>.</p>
+
+    <h3>Consumer Surplus</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Consumer surplus</strong> is the total benefit or value that consumers receive <strong>beyond what they pay</strong> for the good.</p>
+    </div>
+    <ul>
+      <li>Example: the market price is <strong>$5</strong>. You were willing to pay <strong>$9</strong>, but you paid only $5. Your consumer surplus is <strong>$4</strong>.</li>
+      <li>The <strong>demand curve</strong> shows the <strong>willingness to pay</strong> of all consumers in the market.</li>
+      <li>Consumer surplus is the <strong>area between the demand curve and the market price</strong>.</li>
+      <li>It measures the <strong>total net benefit to consumers</strong>.</li>
+    </ul>
+
+    <h3>Producer Surplus</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Producer surplus</strong> is the total benefit or revenue that producers receive <strong>beyond what it cost</strong> to produce the good.</p>
+    </div>
+    <ul>
+      <li>Example: a producer would accept <strong>$3</strong> for the good but gets the market price of <strong>$5</strong>. The producer surplus is <strong>$2</strong>.</li>
+      <li>The <strong>supply curve</strong> shows the amount a producer is <strong>willing to accept</strong> for a certain quantity.</li>
+      <li>Producer surplus is the <strong>area between the supply curve and the market price</strong>.</li>
+      <li>It measures the <strong>total net benefit to producers</strong>.</li>
+    </ul>
+
+    <pre><code>Price
+  |  S                 D
+  |   \               /   (curves as drawn
+  |    \  Producer   /     in the lecture)
+ 9|-----\ ---------X       Consumer
+  |      \   Surplus       surplus is
+ 5|- - - - X - - - -       above the price,
+  |       / \              below demand
+ 3|------/   \             Producer surplus
+  |                        is below the price,
+  +-------+--------        above supply
+          Q0   Quantity</code></pre>
+
+    <p>Between 0 and <code>Q0</code>, consumers get a <strong>net gain</strong> from buying (consumer surplus) and producers get a <strong>net gain</strong> from selling (producer surplus).</p>
+
+    <h3>Equations at Equilibrium</h3>
+    <pre><code>Consumer surplus =
+ (Max price willing to pay
+  − Equilibrium price)
+  × Quantity at equilibrium
+  ÷ 2
+
+Producer surplus =
+ (Equilibrium price
+  − Min price willing to receive)
+  × Quantity at equilibrium
+  ÷ 2</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>To find the <strong>welfare effect</strong> of a government policy, measure the <strong>gain or loss in consumer surplus and producer surplus</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Price Controls and Welfare Effects</h2>
+    <p>When the government sets a <strong>price ceiling</strong>, the price cannot go above that level. With a <strong>binding</strong> price ceiling, both consumers and producers are affected. We measure how much by looking at the <strong>changes in consumer and producer surplus</strong>.</p>
+
+    <h3>What Happens When Price Is Held Too Low</h3>
+    <ul>
+      <li>Quantity demanded <strong>increases</strong> and quantity supplied <strong>decreases</strong>.</li>
+      <li>Some consumers are <strong>worse off</strong> because they can no longer buy the good → <strong>decrease</strong> in consumer surplus.</li>
+      <li>Some consumers are <strong>better off</strong> because they can buy at a lower price → <strong>increase</strong> in consumer surplus.</li>
+      <li>Producers sell <strong>less</strong> at a <strong>lower price</strong>, and some producers <strong>leave the market</strong>.</li>
+      <li>Both producer groups lose, so <strong>producer surplus decreases</strong>.</li>
+    </ul>
+    <p>The economy as a whole is <strong>worse off</strong>, because the surplus that used to belong to producers or consumers is simply <strong>gone</strong>.</p>
+
+    <h3>Price Control and Surplus Changes (Price Ceiling)</h3>
+    <p>In the price control diagram, <code>P0</code> and <code>Q0</code> are the equilibrium price and quantity, and <code>Pmax</code> is the maximum price. At <code>Pmax</code>, the quantity supplied (<code>Q1</code>) is lower than the quantity demanded (<code>Q2</code>).</p>
+    <pre><code>Area   Who           Effect
+A      Consumers     Gain
+       (can buy at lower price)
+B      Consumers     Loss
+       (cannot buy at all)
+A + C  Producers     Loss
+B + C  Society       Deadweight loss</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Deadweight loss</strong> is the <strong>inefficiency of price controls</strong>. It is the total loss in surplus (consumer surplus + producer surplus). Total loss = <strong>B + C</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>The Efficiency of a Competitive Market</h2>
+    <p>When we judge markets, we often ask whether they reach <strong>economic efficiency</strong>.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Economic efficiency</strong> means the <strong>maximisation of total consumer surplus and producer surplus</strong>.</p>
+    </div>
+
+    <ul>
+      <li>Policies like price controls that cause <strong>deadweight loss</strong> impose an <strong>efficiency cost</strong> on the economy.</li>
+      <li>If efficiency is the goal, you can argue that <strong>leaving markets alone</strong> is the answer.</li>
+      <li>Other than market failures, <strong>unregulated competitive markets lead to economic efficiency</strong>.</li>
+    </ul>
+
+    <h3>Market Failures</h3>
+    <p>Sometimes <strong>market failures</strong> occur. This means <strong>prices fail to give the right signals</strong> to consumers and producers. The result is an <strong>inefficient</strong> unregulated competitive market.</p>
+
+    <h3>Types of Market Failures</h3>
+    <ol>
+      <li><strong>Externalities</strong> — costs or benefits that <strong>do not show up in the market price</strong> (they are external to the market). Example: <strong>pollution</strong>.</li>
+      <li><strong>Public goods</strong> — goods that benefit everyone and are hard for the market to provide properly. Example: <strong>national defence</strong>.</li>
+      <li><strong>Monopolies</strong> — a single seller controls the market.</li>
+      <li><strong>Lack of information</strong> — <strong>imperfect information</strong> stops consumers from making <strong>utility-maximising decisions</strong>.</li>
+    </ol>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The 4 market failures: <strong>Externalities, Public goods, Monopolies, Lack of information</strong>. In these cases, <strong>government intervention may be desirable</strong>.</p>
+    </div>
+
+    <h3>Deadweight Loss with a Price Floor</h3>
+    <p>What if the market is forced to a price <strong>higher</strong> than the efficient equilibrium price?</p>
+    <p>When the price is regulated to be <strong>no lower than Pmin</strong>, the deadweight loss shown by <strong>triangles B and C</strong> results.</p>
+    <ul>
+      <li>Triangles <strong>B and C</strong> give a good estimate of the <strong>efficiency cost</strong> of policies that force the price above or below the market-clearing price.</li>
+      <li>We can estimate the effect of government price controls on the economy by <strong>measuring these two triangles</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Method 4: Taxation</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Financial intervention</strong> means the use of <strong>taxes</strong> and <strong>subsidies</strong>. The government uses them as financial tools to <strong>influence the production and price</strong> of goods or services in an economy.</p>
+    </div>
+
+    <p>A <strong>tax</strong> is a <strong>charge</strong> imposed by the government on <strong>incomes, profits</strong>, and some types of consumer <strong>goods and services</strong>, to <strong>fund government expenditure</strong>.</p>
+    <p>Examples: <strong>stamp duty, income tax, GST, service tax</strong>, etc.</p>
+
+    <h3>Tax Model</h3>
+    <pre><code>Demand          : Qd  = a - bP
+Supply          : Qs  = a + bP
+Supply with tax : Qst = a + b(P - t)
+
+t = tax per unit</code></pre>
+
+    <h3>Effects of a Tax</h3>
+    <pre><code>PD = price consumers pay
+PS = price producers receive
+     (PS = PD - tax)
+
+New consumer surplus
+New producer surplus
+Tax revenue
+  = tax × new quantity
+Lost consumer surplus
+Lost producer surplus
+Deadweight loss
+  = loss in efficiency</code></pre>
+
+    <h3>Question 03 — Worked Solution</h3>
+    <p><code>Qd = 200 − 10P</code>, <code>Qs = −100 + 20P</code>, <strong>Tax = Rs. 3</strong></p>
+    <pre><code>Step 1: Equilibrium (Qd = Qs)
+  200 - 10P = -100 + 20P
+  300 = 30P
+  P = 10, Q = 100
+
+Step 2: Supply with tax
+  Qst = -100 + 20(P - 3)
+      = -160 + 20P
+
+Step 3: New equilibrium
+  200 - 10P = -160 + 20P
+  360 = 30P
+  PD = 12, Q = 80
+  PS = 12 - 3 = 9
+
+Step 4: Tax revenue
+  3 × 80 = 240
+
+Step 5: Intercepts
+  Qd = 0 → P = 20
+  Qs = 0 → P = 5
+
+Step 6: Consumer surplus
+  Before: (20 - 10) × 100 / 2 = 500
+  After : (20 - 12) × 80 / 2 = 320
+  Lost  : 180
+
+Step 7: Producer surplus
+  Before: (10 - 5) × 100 / 2 = 250
+  After : (9 - 5) × 80 / 2 = 160
+  Lost  : 90
+
+Step 8: Deadweight loss
+  (12 - 9) × (100 - 80) / 2 = 30
+
+Check: 180 + 90 = 240 + 30</code></pre>
+
+    <h3>Exercise 3</h3>
+    <div class="callout callout-green">
+      <span class="callout-label">Try It Yourself</span>
+      <p><code>Qd = 150 − 10P</code><br><code>Qs = −90 + 10P</code><br><strong>Tax = Rs. 2</strong></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Method 5: Subsidies</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>subsidy</strong> is a <strong>direct payment or grant</strong> by the government to producers, making the <strong>price paid by consumers less</strong> than it should be.</p>
+    </div>
+
+    <ul>
+      <li>Subsidies are given to goods and services that <strong>benefit the community</strong> and might <strong>not be provided</strong> in a free market.</li>
+      <li>Examples: <strong>certain foods, public transport, free school meals</strong> for children from low-income families.</li>
+    </ul>
+
+    <h3>Subsidy Model</h3>
+    <pre><code>Demand              : Qd  = a - bP
+Supply              : Qs  = a + bP
+Supply with subsidy : Qss = a + b(P + s)
+
+s = subsidy per unit</code></pre>
+
+    <h3>Effects of a Subsidy</h3>
+    <pre><code>PD = price consumers pay
+PS = price producers receive
+     (PS = PD + subsidy)
+
+Gain in consumer surplus
+Gain in producer surplus
+Subsidy cost
+  = subsidy × new quantity
+Deadweight loss
+  = loss in efficiency</code></pre>
+
+    <h3>Question 04 — Worked Solution</h3>
+    <p><code>Qd = 100 − 5P</code>, <code>Qs = −20 + 5P</code>, <strong>Subsidy = Rs. 4</strong></p>
+    <pre><code>Step 1: Equilibrium (Qd = Qs)
+  100 - 5P = -20 + 5P
+  120 = 10P
+  P = 12, Q = 40
+
+Step 2: Supply with subsidy
+  Qss = -20 + 5(P + 4)
+      = 5P
+
+Step 3: New equilibrium
+  100 - 5P = 5P
+  PD = 10, Q = 50
+  PS = 10 + 4 = 14
+
+Step 4: Subsidy cost
+  4 × 50 = 200
+
+Step 5: Intercepts
+  Qd = 0 → P = 20
+  Qs = 0 → P = 4
+
+Step 6: Consumer surplus
+  Before: (20 - 12) × 40 / 2 = 160
+  After : (20 - 10) × 50 / 2 = 250
+  Gain  : 90
+
+Step 7: Producer surplus
+  Before: (12 - 4) × 40 / 2 = 160
+  After : (14 - 4) × 50 / 2 = 250
+  Gain  : 90
+
+Step 8: Deadweight loss
+  (14 - 10) × (50 - 40) / 2 = 20
+
+Check: gains 180 vs cost 200
+       difference = 20</code></pre>
+
+    <h3>Exercise 4</h3>
+    <div class="callout callout-green">
+      <span class="callout-label">Try It Yourself</span>
+      <p><code>Qd = 70 − 2P</code><br><code>Qs = −10 + 2P</code><br><strong>Subsidy = Rs. 2.5</strong></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Method 6: Government Provision (Direct Provision)</h2>
+    <ul>
+      <li>The government <strong>takes over the production</strong> of goods or services, either <strong>in part or in whole</strong>.</li>
+      <li>It supplies the goods or services <strong>directly to the customer, free of charge</strong>.</li>
+      <li><strong>State-owned industries:</strong> electricity, water provision, railways.</li>
+      <li>It also applies to industries supplied by <strong>both public and private sectors:</strong> education and hospitals.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Method 7: Regulation</h2>
+    <ul>
+      <li>Various means by which the government seeks to <strong>control production and consumption</strong>.</li>
+      <li><strong>Rules and laws</strong> that apply to firms to control the free market.</li>
+      <li>Uses legal or other methods such as control of <strong>price, quality and quantity</strong> of goods and services that are produced or consumed.</li>
+      <li>Example: a <strong>doctor's prescription</strong> is needed to buy controlled drugs.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>7 methods of government intervention:</strong> Buffer stocks, Price ceiling (max price), Price floor (min price), Taxation, Subsidies, Government provision, Regulation.</p>
+    </div>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Price controls, taxes and subsidies all cause <strong>deadweight loss</strong>, which is the <strong>efficiency cost</strong> to the economy.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Government Intervention in Markets',
+    subTopics: [
+      'What You Will Learn',
+      'Market Equilibrium',
+      'Market Disequilibria',
+      'Excess Demand (Shortage)',
+      'Excess Supply (Surplus)',
+      'Methods of Government Intervention',
+      'Method 1: Buffer Stocks',
+      'Income Stabilisation Schemes',
+      'Problems of These Schemes',
+      'Method 2: Price Ceilings (Maximum Price)',
+      'Advantages and Disadvantages of a Price Ceiling',
+      'Method 3: Price Floor (Minimum Price)',
+      'Advantages and Disadvantages of a Minimum Price',
+      'Consumer Surplus and Producer Surplus',
+      'Price Controls and Welfare Effects',
+      'The Efficiency of a Competitive Market',
+      'Types of Market Failures',
+      'Method 4: Taxation',
+      'Method 5: Subsidies',
+      'Method 6: Government Provision (Direct Provision)',
+      'Method 7: Regulation',
+    ],
+    definitions: [
+      { term: 'Equilibrium', meaning: 'The condition when quantity supplied equals quantity demanded, so there is no tendency for the price to change.' },
+      { term: 'Excess Demand (Shortage)', meaning: 'The condition when quantity demanded is more than quantity supplied at the current price. Price tends to rise.' },
+      { term: 'Excess Supply (Surplus)', meaning: 'The condition when quantity supplied is more than quantity demanded at the current price. Price tends to fall.' },
+      { term: 'Buffer Stock', meaning: 'A system where the government buys and stores stock in good harvests and releases it in bad harvests to stabilise prices.' },
+      { term: 'Income Stabilisation Scheme', meaning: 'A scheme that aims to keep farm incomes fairly constant by changing the price through releasing stocks or adding to stores.' },
+      { term: 'Price Ceiling (Maximum Price)', meaning: 'A legal limit on the highest price of a good, set below the equilibrium price to protect consumers.' },
+      { term: 'Black Market', meaning: 'Illegal trading at prices far above the free market level, often caused by shortages.' },
+      { term: 'Price Floor (Minimum Price)', meaning: 'The lowest legal price at which a good can be sold, usually set above the equilibrium price to protect producers.' },
+      { term: 'Consumer Surplus', meaning: 'The total benefit consumers receive beyond what they pay. It is the area between the demand curve and the market price.' },
+      { term: 'Producer Surplus', meaning: 'The total benefit producers receive beyond what it cost to produce. It is the area between the supply curve and the market price.' },
+      { term: 'Deadweight Loss', meaning: 'The total loss in consumer and producer surplus caused by price controls, taxes or subsidies. It shows the inefficiency.' },
+      { term: 'Economic Efficiency', meaning: 'The maximisation of total consumer surplus and producer surplus.' },
+      { term: 'Market Failure', meaning: 'A situation where prices fail to give proper signals to consumers and producers, leading to an inefficient market.' },
+      { term: 'Externalities', meaning: 'Costs or benefits that do not show up in the market price, such as pollution.' },
+      { term: 'Public Goods', meaning: 'Goods that benefit everyone and are hard for the market to provide properly, such as national defence.' },
+      { term: 'Monopoly', meaning: 'A market where a single seller controls supply.' },
+      { term: 'Lack of Information', meaning: 'Imperfect information that stops consumers from making utility-maximising decisions.' },
+      { term: 'Financial Intervention', meaning: 'The government use of taxes and subsidies to influence production and price.' },
+      { term: 'Tax', meaning: 'A charge imposed by the government on incomes, profits, and some goods and services to fund government spending.' },
+      { term: 'Subsidy', meaning: 'A direct payment or grant from the government to producers that makes the price paid by consumers lower.' },
+      { term: 'Government Provision (Direct Provision)', meaning: 'The government takes over production, fully or partly, and supplies goods or services directly, often free of charge.' },
+      { term: 'Regulation', meaning: 'Rules and laws used by the government to control production and consumption, such as price, quality and quantity.' },
+    ],
+    keyPoints: [
+      'Equilibrium: Qs = Qd. At any other price, buyers and sellers do not agree.',
+      'Shortage (Qd > Qs) makes price rise. Surplus (Qs > Qd) makes price fall.',
+      'The 7 methods of intervention: buffer stocks, price ceiling, price floor, taxation, subsidies, government provision, regulation.',
+      'Buffer stocks are a short-term measure used in agriculture. They only work for goods that can be stored.',
+      'Buffer stock rule: buy and store in a good harvest, release in a bad harvest.',
+      'Income stabilisation schemes can cause market distortion, overproduction, storage costs and long-term sustainability problems.',
+      'A price ceiling must be set below the equilibrium price to be effective. It causes shortages, rationing and black markets.',
+      'A price floor must be set above the equilibrium price to be effective. It causes surpluses.',
+      'Consumer surplus = (max willingness to pay - equilibrium price) x equilibrium quantity / 2.',
+      'Producer surplus = (equilibrium price - min price willing to receive) x equilibrium quantity / 2.',
+      'Price controls cause deadweight loss (triangles B + C), which is the efficiency cost to the economy.',
+      'Market failures: externalities, public goods, monopolies and lack of information. Government intervention may be desirable here.',
+      'Tax model: Qst = a + b(P - t). Tax revenue = tax x new quantity. Producers receive PD - tax.',
+      'Subsidy model: Qss = a + b(P + s). Subsidy cost = subsidy x new quantity. Producers receive PD + subsidy.',
+      'Taxes and subsidies also create deadweight loss.',
+      'Government provision means the state produces or supplies goods directly. Examples: electricity, water, railways, education, hospitals.',
+      'Regulation uses laws to control price, quality and quantity. Example: prescription needed for controlled drugs.',
+      'Worked examples demonstrate: price ceiling, price floor, tax and subsidy calculations of equilibrium, surplus changes and deadweight loss.',
+    ],
+  },
+},
+
+
+
+
 ]
