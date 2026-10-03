@@ -1857,7 +1857,754 @@ Check: gains 180 vs cost 200
   },
 },
 
+{
+  id: 5,
+  title: 'Theory of Production and Cost',
+  content: `
+    <span class="lesson-badge">LESSON 05</span>
+    <h1>Theory of Production and Cost</h1>
+    <div class="meta-info">COURSE_CODE <span>•</span> 28 min read</div>
 
+    <p>This lesson shows how a firm turns <strong>inputs</strong> into <strong>output</strong>, and how much this costs. You will study production in the <strong>short run</strong> and the <strong>long run</strong>, the different types of <strong>costs</strong>, and the difference between <strong>economic profit</strong> and <strong>accounting profit</strong>.</p>
+
+    <h2>The Firm and Its Environment</h2>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A <strong>business firm</strong> is an organization, owned and operated by private individuals, that specializes in <strong>production</strong>.</p>
+    </div>
+
+    <p><strong>Production</strong> is the process of combining inputs to make outputs. The firm buys inputs from households or other firms and sells its output to consumers.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Profit of the firm = Sales revenue – Input costs</strong></p>
+    </div>
+
+    <h3>The Firm and the Government</h3>
+    <p>Every firm must deal with the government. A firm:</p>
+    <ul>
+      <li><strong>Pays taxes</strong> to the government</li>
+      <li>Must obey government <strong>laws and regulations</strong></li>
+      <li>Receives valuable <strong>services</strong> from the government, such as <strong>public capital</strong>, <strong>legal systems</strong> and <strong>financial systems</strong></li>
+    </ul>
+
+    <h3>How the Firm Connects with Others</h3>
+    <p>The firm (run by its management) has money and goods flowing between it and four groups:</p>
+    <ul>
+      <li><strong>Owners</strong> — give <strong>initial financing</strong>; receive <strong>profit after taxes</strong></li>
+      <li><strong>Input suppliers</strong> — provide <strong>inputs</strong>; receive <strong>input costs</strong></li>
+      <li><strong>Customers</strong> — receive <strong>output</strong>; pay <strong>output revenue</strong></li>
+      <li><strong>Government</strong> — receives <strong>taxes</strong>; provides <strong>government services</strong> and sets <strong>government regulations</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>What is Production?</h2>
+    <p>Production means <strong>using inputs to produce an output</strong>. It is the process of transforming inputs (labor, machines, raw materials, etc.) into output.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>An <strong>input</strong> is a good or service that goes into the process of production. An <strong>output</strong> is any good or service that comes out of the production process.</p>
+    </div>
+
+    <h3>Inputs (Resources)</h3>
+    <ul>
+      <li><strong>Labor</strong></li>
+      <li><strong>Capital</strong></li>
+      <li><strong>Land</strong></li>
+      <li><strong>Raw materials</strong></li>
+      <li>Other goods and services provided by other firms</li>
+    </ul>
+
+    <p>The way these inputs can be combined to produce output is the firm's <strong>technology</strong>.</p>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Production is not only about factories. It does <strong>not</strong> always mean changing raw materials into <strong>tangible</strong> (physical) goods. It also includes changing <strong>intangible</strong> inputs into <strong>intangible</strong> outputs (things you cannot touch). Examples: lawyers, doctors and social workers.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Production Technology and the Production Function</h2>
+    <p>A firm's technology is treated as a <strong>given</strong> (taken as fixed). It is a <strong>constraint</strong> (a limit) on production. This limit is spelled out by the firm's <strong>production function</strong>.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>The <strong>production function</strong> tells us, for each different combination of inputs, the <strong>maximum quantity of output</strong> a firm can produce over some period of time.</p>
+    </div>
+
+    <pre><code> Alternative input combinations
+            │
+            ▼
+   PRODUCTION FUNCTION
+            │
+            ▼
+ Different quantities of output</code></pre>
+
+    <p>In the short run, capital is fixed, so the production function is written as:</p>
+    <pre><code>Q = f(K̄, L)
+
+Q  = output
+K̄  = capital (held fixed)
+L  = labor (variable)</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>The Short Run and the Long Run</h2>
+    <p>It is useful to divide a firm's decisions into <strong>long-run decisions</strong> and <strong>short-run decisions</strong>.</p>
+    <ul>
+      <li><strong>To guide the firm over the next several years</strong> — the manager must use the <strong>long-run lens</strong></li>
+      <li><strong>To decide what the firm should do next week</strong> — the <strong>short-run lens</strong> is best</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Production in the Short Run</h2>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Short run</strong> is a period of time in which the supply of certain inputs (e.g., plant, building, machines) is <strong>fixed or inelastic</strong> (it cannot easily change).</p>
+    </div>
+
+    <p>So, increasing production during this period is possible <strong>only by increasing the variable input</strong>. When firms make short-run decisions, there is nothing they can do about their fixed inputs.</p>
+
+    <ul>
+      <li><strong>Fixed input</strong> — an input whose quantity must remain constant, regardless of how much output is produced</li>
+      <li><strong>Variable input</strong> — an input whose usage can change as the level of output changes</li>
+      <li><strong>Total product (TP)</strong> — the maximum quantity of output that can be produced from a given combination of inputs</li>
+    </ul>
+
+    <h3>Marginal Product of Labor (MPL)</h3>
+    <p>The <strong>marginal product of labor (MPL)</strong> is the change in the total product (ΔQ) divided by the change in the number of workers hired (ΔL).</p>
+
+    <pre><code>MPL = ΔQ / ΔL</code></pre>
+
+    <p>It tells us the <strong>rise in output</strong> produced when <strong>one more worker is hired</strong>, leaving all other inputs unchanged.</p>
+
+    <h3>Total Product and Marginal Product (Example)</h3>
+    <p>The chart in the lecture shows how total output grows as workers are hired. The extra output from each new worker (ΔQ) is the marginal product. The values below are worked out from the chart:</p>
+
+    <pre><code>Workers   TP    MP (ΔQ)
+   1       30      30
+   2       90      60
+   3      130      40
+   4      161      31
+   5      184      23
+   6      196      12</code></pre>
+
+    <ul>
+      <li><strong>Workers 1 to 2</strong> — each new worker adds more than the one before (30 → 60). This is <strong>increasing marginal returns</strong>.</li>
+      <li><strong>After worker 2</strong> — each new worker adds less than the one before (40, 31, 23, 12). This is <strong>diminishing marginal returns</strong>.</li>
+    </ul>
+
+    <h3>Marginal Returns to Labor</h3>
+    <p>As more and more workers are hired:</p>
+    <ul>
+      <li>MPL <strong>first increases</strong></li>
+      <li>Then MPL <strong>decreases</strong></li>
+    </ul>
+    <p>This pattern is believed to be <strong>typical at many types of firms</strong>.</p>
+
+    <h3>Increasing Marginal Returns to Labor</h3>
+    <p>When the marginal product of labor <strong>increases</strong> as employment rises, we say there are <strong>increasing marginal returns to labor</strong>.</p>
+    <p>Each time a worker is hired, total output rises by <strong>more</strong> than it did when the previous worker was hired.</p>
+
+    <h3>Diminishing Returns to Labor</h3>
+    <p>When the marginal product of labor is <strong>decreasing</strong>, there are <strong>diminishing marginal returns to labor</strong>.</p>
+    <ul>
+      <li>Output still rises when another worker is added, so the marginal product is <strong>positive</strong></li>
+      <li>But the rise in output gets <strong>smaller and smaller</strong> with each new worker</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The <strong>law of diminishing (marginal) returns</strong> states that as we continue to add more of any one input (holding the other inputs constant), its <strong>marginal product will eventually decline</strong>.</p>
+    </div>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Diminishing returns does <strong>not</strong> mean total output falls. Output keeps rising while MP is positive, just by smaller amounts. Total product only falls when MP becomes <strong>negative</strong>.</p>
+    </div>
+
+    <h3>Average Product (AP)</h3>
+    <p><strong>Average product</strong> is the output per worker. The marginal and average product formulas are:</p>
+    <pre><code>MPL = ΔTP / ΔL     (change in TP per extra worker)
+MPK = ΔTP / ΔK     (change in TP per extra unit of capital)
+APL = TP / L       (total product per worker)</code></pre>
+
+    <h3>Short-Term Production Function (Example)</h3>
+    <p>Here Q = f(K̄, L): capital is fixed and only labor (L) changes.</p>
+
+    <pre><code> L     Q     MP    AP
+ 1    80     80    80
+ 2   170     90    85
+ 3   270    100    90
+ 4   368     98    92
+ 5   430     62    86
+ 6   480     50    80
+ 7   504     24    72
+ 8   504      0    63
+ 9   495     -9    55
+10   470    -25    47</code></pre>
+
+    <p>What the table and graphs show:</p>
+    <ul>
+      <li><strong>TP</strong> rises quickly at first, then slowly, reaches its peak (504) at 7 to 8 workers, then <strong>falls</strong></li>
+      <li><strong>MP</strong> rises to its maximum (100) at 3 workers, then falls, becomes <strong>zero</strong> at 8 workers and <strong>negative</strong> after that</li>
+      <li><strong>AP</strong> rises to its maximum (92) at 4 workers, then falls</li>
+    </ul>
+
+    <h3>The Three Zones of Marginal Productivity</h3>
+    <ul>
+      <li><strong>Zone 1 — Increasing marginal productivity zone</strong>: MP is rising (up to about 3 workers)</li>
+      <li><strong>Zone 2 — Diminishing marginal productivity zone</strong>: MP is falling but still positive (about 3 to 8 workers)</li>
+      <li><strong>Zone 3 — Negative marginal productivity zone</strong>: MP is below zero and TP is falling (beyond about 8 workers)</li>
+    </ul>
+
+    <h3>Relationship Between TP, AP and MP</h3>
+    <p>The lecture graph splits production into <strong>Stage I</strong>, <strong>Stage II</strong> and <strong>Stage III</strong>, using three points: <strong>A</strong> (MP is at its maximum), <strong>B</strong> (AP is at its maximum, where MP = AP) and <strong>C</strong> (TP is at its maximum, where MP = 0). Stage I ends at B, Stage II runs from B to C, and Stage III comes after C.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <ol>
+        <li>When <strong>AP is maximum</strong>, <strong>MP = AP</strong></li>
+        <li>When <strong>TP is maximum</strong>, <strong>MP = 0</strong></li>
+        <li>When <strong>TP is falling</strong>, <strong>MP is negative</strong></li>
+        <li>As long as <strong>TP is positive</strong>, <strong>AP is positive</strong></li>
+        <li><strong>AP and MP</strong> are <strong>inverted U-shaped</strong> curves</li>
+        <li><strong>MP cuts AP at its maximum point</strong>, and at that point MP = AP</li>
+      </ol>
+    </div>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>An easy way to remember the AP and MP link: when <strong>MP is above AP</strong>, AP is rising. When <strong>MP is below AP</strong>, AP is falling.</p>
+    </div>
+
+    <h3>Practice Exercise</h3>
+    <p>Fill in the AP and MP columns for the data below. The answers are shown in the table.</p>
+
+    <pre><code>Workers   TP    AP      MP
+   1      10   10.00    10
+   2      22   11.00    12
+   3      36   12.00    14
+   4      52   13.00    16
+   5      66   13.20    14
+   6      76   12.67    10
+   7      82   11.71     6
+   8      85   10.63     3
+   9      85    9.44     0
+  10      83    8.30    -2</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Long Run Production</h2>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Long run</strong> is a period of time in which the supply of <strong>all inputs is elastic</strong> (can change), but not enough to permit a change in technology.</p>
+    </div>
+
+    <ul>
+      <li>In the long run, the availability of even <strong>fixed factors increases</strong></li>
+      <li>So, in the long run, production can be increased by employing more of <strong>both variable and fixed inputs</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Costs</h2>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A firm's <strong>total cost</strong> of producing a given level of output is the <strong>opportunity cost of the owners</strong>. This means everything they must <strong>give up</strong> in order to produce that amount of output.</p>
+    </div>
+
+    <h3>The Irrelevance of Sunk Costs</h3>
+    <p>A <strong>sunk cost</strong> is a cost that <strong>has already been paid</strong>, or <strong>must be paid</strong>, regardless of any future action being considered.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Sunk costs <strong>should not be considered when making decisions</strong>.</p>
+    </div>
+
+    <p>Even a <strong>future payment can be sunk</strong>, if an unavoidable commitment to pay it has already been made.</p>
+
+    <h3>Explicit vs Implicit Costs</h3>
+    <ul>
+      <li><strong>Explicit costs</strong> (involve actual payments) — money actually paid out for the use of inputs</li>
+      <li><strong>Implicit costs</strong> (no money changes hands) — the cost of inputs for which there is no direct money payment</li>
+    </ul>
+
+    <h3>Economic vs Accounting Costs</h3>
+    <ul>
+      <li><strong>Economic costs</strong> are theoretical constructs intended to aid <strong>rational decision-making</strong></li>
+      <li><strong>Accounting costs</strong> are legal constructs intended to provide <strong>uniformity in measurement</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Profit</h2>
+    <pre><code>Profit = Total Revenue – Total Costs
+
+Total Net Benefits = Total Benefits – Total Costs</code></pre>
+
+    <h3>Costs as Opportunity Costs</h3>
+    <p>All costs can be seen as opportunity costs. They are of two types:</p>
+    <ul>
+      <li><strong>Explicit costs</strong></li>
+      <li><strong>Implicit costs</strong>, which include:
+        <ul>
+          <li>The opportunity cost of the entrepreneur's <strong>invested capital</strong></li>
+          <li>The opportunity cost of the entrepreneur's <strong>time</strong></li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Economic vs Accounting Profit</h3>
+    <p>In both views, the whole bar is <strong>total revenue</strong>.</p>
+
+    <pre><code> ECONOMIST VIEW     ACCOUNTANT VIEW
+┌───────────────┐   ┌───────────────┐
+│ Economic      │   │ Accounting    │
+│ profit        │   │ profit        │
+├───────────────┤   │               │
+│ Implicit      │   ├───────────────┤
+│ costs         │   │ Explicit      │
+├───────────────┤   │ costs         │
+│ Explicit      │   └───────────────┘
+│ costs         │
+└───────────────┘
+ Implicit + Explicit
+ = Total opportunity costs</code></pre>
+
+    <pre><code>Economic profit   = Total revenue – All economic costs
+Accounting profit = Total revenue – All accounting costs</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Accounting costs include only current or historical explicit costs, not implicit costs.</strong> Because of this, accounting profit is never smaller than economic profit.</p>
+    </div>
+
+    <h3>Normal Profit</h3>
+    <ul>
+      <li>The difference between economic cost and accounting cost is the <strong>opportunity cost of resources supplied by the firm's owner</strong></li>
+      <li>The opportunity cost of these owner-supplied resources is called <strong>normal profit</strong></li>
+      <li>Normal profit is the <strong>cost of production</strong></li>
+    </ul>
+
+    <h3>Economic Losses</h3>
+    <p>If a firm is receiving <strong>economic losses</strong> (negative economic profits), the owners are receiving <strong>less income</strong> than they could receive if their resources were used in an alternative use.</p>
+    <p>In the long run, we expect to see <strong>firms leave the industry</strong> when this occurs.</p>
+
+    <h3>Economic Profit and Output</h3>
+    <pre><code>Economic profit = Total Revenue – Economic Costs</code></pre>
+    <ul>
+      <li>When output rises, both <strong>total revenue and total costs increase</strong></li>
+      <li>Profits <strong>increase</strong> when output increases, if total revenue rises by <strong>more</strong> than total costs</li>
+      <li>Profits <strong>decrease</strong> when output rises, if total costs rise by <strong>more</strong> than total revenue</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do not mix up the two profits in exams. <strong>Accounting profit</strong> subtracts only explicit costs. <strong>Economic profit</strong> subtracts explicit costs <strong>and</strong> implicit costs (including normal profit).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Costs in the Short Run</h2>
+    <p>In the short run, costs are split into two groups:</p>
+    <ul>
+      <li><strong>Fixed costs</strong> — costs of a firm's fixed inputs</li>
+      <li><strong>Variable costs</strong> — costs of obtaining the firm's variable inputs</li>
+    </ul>
+
+    <h3>Fixed Cost</h3>
+    <ul>
+      <li>Fixed costs are costs that <strong>do not vary with the volume of production</strong></li>
+      <li>Even if production is <strong>zero</strong>, a firm still has to pay fixed costs</li>
+      <li>Examples: <strong>rent, interest, depreciation, insurance, salaries</strong>, etc.</li>
+      <li>Also called <strong>supplementary costs, capacity costs, period costs</strong> or <strong>overhead costs</strong></li>
+    </ul>
+
+    <h3>Variable Cost</h3>
+    <ul>
+      <li>Variable costs are costs that <strong>change with the quantity of production</strong></li>
+      <li>When output increases, variable cost increases. When output decreases, variable cost decreases.</li>
+      <li>Examples: <strong>materials, wages, power, stores</strong>, etc.</li>
+      <li>Also known as <strong>prime costs</strong> or <strong>direct costs</strong></li>
+    </ul>
+
+    <h3>Total Costs</h3>
+    <ul>
+      <li><strong>Total fixed cost (TFC)</strong> — cost of all inputs that are fixed in the short run</li>
+      <li><strong>Total variable cost (TVC)</strong> — cost of all variable inputs used in producing a particular level of output</li>
+      <li><strong>Total cost (TC)</strong> — cost of all inputs, fixed and variable</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>TC = TFC + TVC</strong></p>
+    </div>
+
+    <p>The total cost curves in the lecture (costs in Rs '000, output levels 30, 90, 130, 161, 184 and 196) look like this:</p>
+    <ul>
+      <li><strong>TFC</strong> is a <strong>flat horizontal line</strong>, because it does not change with output</li>
+      <li><strong>TVC</strong> starts at zero and <strong>rises</strong> as output rises</li>
+      <li><strong>TC</strong> sits above TVC, and the gap between them is always equal to TFC</li>
+    </ul>
+
+    <h3>Average Costs</h3>
+    <ul>
+      <li><strong>Average fixed cost (AFC)</strong> — total fixed cost divided by the quantity of output produced</li>
+      <li><strong>Average variable cost (AVC)</strong> — total variable cost divided by the quantity of output produced</li>
+      <li><strong>Average total cost (ATC)</strong> — total cost divided by the quantity of output produced</li>
+    </ul>
+
+    <pre><code>AFC = TFC / Q
+AVC = TVC / Q
+ATC = TC  / Q</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>The original slide writes "Average variable cost (TVC)" and "Average total cost (TC)". These short forms are typing mistakes. The correct short forms are <strong>AVC</strong> and <strong>ATC</strong>, as the formulas above show.</p>
+    </div>
+
+    <h3>Marginal Cost</h3>
+    <p><strong>Marginal cost (MC)</strong> is the increase in total cost from producing <strong>one more unit</strong> of output. It is the change in total cost (ΔTC) divided by the change in output (ΔQ).</p>
+
+    <pre><code>MC = ΔTC / ΔQ</code></pre>
+
+    <ul>
+      <li>It tells us how much <strong>cost rises per unit increase in output</strong></li>
+      <li>The marginal cost for any change in output is equal to the <strong>slope of the total cost curve</strong> along that interval of output</li>
+    </ul>
+
+    <h3>Shape of the Marginal Cost Curve</h3>
+    <ul>
+      <li>When the marginal product of labor (MPL) <strong>rises</strong>, marginal cost (MC) <strong>falls</strong></li>
+      <li>MPL usually rises and then falls, so MC does the <strong>opposite</strong>: it <strong>falls first and then rises</strong></li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Thus, the <strong>MC curve is U-shaped</strong>.</p>
+    </div>
+
+    <p>In the lecture graphs, the point where MP is at its maximum matches the point where MC is at its lowest. The point where MP cuts AP matches the point where MC cuts AVC.</p>
+
+    <h3>Average and Marginal Costs Together</h3>
+    <ul>
+      <li>At <strong>low levels of output</strong>, the MC curve lies <strong>below</strong> the AVC and ATC curves, so these curves <strong>slope downward</strong></li>
+      <li>At <strong>higher levels of output</strong>, the MC curve rises <strong>above</strong> the AVC and ATC curves, so these curves <strong>slope upward</strong></li>
+      <li>As output increases, the average curves first slope downward and then slope upward, so they have a <strong>U-shape</strong></li>
+      <li>The <strong>MC curve intersects the minimum points</strong> of the AVC and ATC curves</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>AFC</strong> keeps falling as output rises, because the same fixed cost is shared among more units. That is why the gap between ATC and AVC gets smaller as output grows.</p>
+    </div>
+
+    <h3>Cost Formulas</h3>
+    <p>Start with the total cost formula and divide both sides by Q:</p>
+
+    <pre><code>TC = TFC + TVC
+
+TC/Q = TFC/Q + TVC/Q
+
+ATC = AFC + AVC</code></pre>
+
+    <p><strong>Average Total Cost = Average Fixed Cost + Average Variable Cost</strong></p>
+
+    <h3>Example 1: Lemonade Stand</h3>
+    <p>Fixed cost, variable costs, total costs and marginal costs:</p>
+
+    <pre><code>Q    Fixed   Variable   Total    MC
+0    $3.00      -         -       -
+1    $3.00    $0.30     $3.30   $0.30
+2    $3.00    $0.80     $3.80   $0.50
+3    $3.00    $1.50     $4.50   $0.70
+4    $3.00    $2.40     $5.40   $0.90
+5    $3.00    $3.50     $6.50   $1.10
+6    $3.00    $4.80     $7.80   $1.30
+7    $3.00    $6.30     $9.30   $1.50
+8    $3.00    $8.00    $11.00   $1.70
+9    $3.00    $9.90    $12.90   $1.90
+10   $3.00   $12.00    $15.00   $2.10</code></pre>
+
+    <p>Average costs for the same example:</p>
+
+    <pre><code>Q     AFC     AVC     ATC     MC
+1    $3.00   $0.30   $3.30   $0.30
+2    $1.50   $0.40   $1.90   $0.50
+3    $1.00   $0.50   $1.50   $0.70
+4    $0.75   $0.60   $1.35   $0.90
+5    $0.60   $0.70   $1.30   $1.10
+6    $0.50   $0.80   $1.30   $1.30
+7    $0.43   $0.90   $1.33   $1.50
+8    $0.38   $1.00   $1.38   $1.70
+9    $0.33   $1.10   $1.43   $1.90
+10   $0.30   $1.20   $1.50   $2.10</code></pre>
+
+    <ul>
+      <li><strong>AFC</strong> falls all the way down as output rises</li>
+      <li><strong>ATC</strong> falls first (to $1.30 at 5 to 6 glasses) and then rises</li>
+      <li><strong>MC</strong> rises with every extra glass and passes through ATC at its lowest point (Q = 6, where ATC = MC = $1.30)</li>
+    </ul>
+
+    <h3>Example 2: Short-Run Cost Table</h3>
+    <p>Total costs (TFC = 100 at every quantity):</p>
+
+    <pre><code>Q     TFC      TVC         TC
+0     100     0.00     100.00
+1     100    55.70     155.70
+2     100   105.60     205.60
+3     100   153.90     253.90
+4     100   204.80     304.80
+5     100   262.50     362.50
+6     100   331.20     431.20
+7     100   415.10     515.10
+8     100   518.40     618.40
+9     100   645.30     745.30
+10    100   800.00     900.00
+11    100   986.70   1,086.70
+12    100 1,209.60   1,309.60</code></pre>
+
+    <p>Average and marginal costs:</p>
+
+    <pre><code>Q      AFC      AVC       AC       MC
+1   100.00    55.70   155.70    55.70
+2    50.00    52.80   102.80    49.90
+3    33.33    51.30    84.63    48.30
+4    25.00    51.20    76.20    50.90
+5    20.00    52.50    72.50    57.70
+6    16.67    55.20    71.87    68.70
+7    14.29    59.30    73.59    83.90
+8    12.50    64.80    77.30   103.30
+9    11.11    71.70    82.81   126.90
+10   10.00    80.00    90.00   154.70
+11    9.09    89.70    98.79   186.70
+12    8.33   100.80   109.13   222.90</code></pre>
+
+    <ul>
+      <li>In the graph, <strong>MC</strong> is U-shaped and cuts the <strong>AVC</strong> curve at its lowest point (around Q = 4)</li>
+      <li><strong>MC</strong> also cuts the <strong>AC (ATC)</strong> curve at its lowest point (around Q = 6)</li>
+      <li><strong>TVC</strong> and <strong>TC</strong> rise, and <strong>TFC</strong> stays flat at 100</li>
+    </ul>
+
+    <h3>Practice Questions</h3>
+    <p>The lecture gives two cost tables with some values filled in and the rest blank. Complete each table using the formulas above.</p>
+    <ul>
+      <li><strong>Question 01</strong> — columns: Quantity (0 to 5), TFC, TVC, TC, MC, AFC, AVC, ATC</li>
+      <li><strong>Question 02</strong> — columns: Quantity (1 to 5), TVC, TFC, TC, AVC, AFC, ATC, MC</li>
+    </ul>
+
+    <ol>
+      <li>TFC stays the <strong>same</strong> at every quantity</li>
+      <li><strong>TC = TFC + TVC</strong>, so TVC = TC – TFC and TFC = TC – TVC</li>
+      <li><strong>MC = ΔTC / ΔQ</strong></li>
+      <li><strong>AFC = TFC / Q</strong>, <strong>AVC = TVC / Q</strong>, <strong>ATC = TC / Q</strong></li>
+      <li>Check your answers with <strong>ATC = AFC + AVC</strong></li>
+    </ol>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>At <strong>Q = 0</strong>, TVC is zero, so TC is equal to TFC. Use this to find TFC first.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Production and Cost in the Long Run</h2>
+    <ul>
+      <li>In the long run there are <strong>no fixed inputs or fixed costs</strong>. <strong>All inputs and all costs are variable.</strong></li>
+      <li>The firm's goal is to earn the <strong>highest possible profit</strong>. To do this, it must follow the <strong>least-cost rule</strong>.</li>
+    </ul>
+
+    <h3>Long-Run Total Cost and LRATC</h3>
+    <ul>
+      <li><strong>Long-run total cost (LRTC)</strong> — the cost of producing each quantity of output when the <strong>least-cost input mix</strong> is chosen in the long run</li>
+      <li><strong>Long-run average total cost (LRATC)</strong> — the cost per unit of output in the long run, when all inputs are variable</li>
+    </ul>
+
+    <pre><code>LRATC = LRTC / Q</code></pre>
+
+    <h3>Long-Run vs Short-Run Costs</h3>
+    <ul>
+      <li>For some output levels, LRTC is <strong>smaller</strong> than TC</li>
+      <li>The long-run total cost can <strong>never be higher</strong> than the short-run total cost</li>
+      <li>The long-run average cost can <strong>never be higher</strong> than the short-run average total cost</li>
+    </ul>
+
+    <h3>Average Cost and Plant Size</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Plant</strong> is the collection of fixed inputs at a firm's disposal.</p>
+    </div>
+
+    <ul>
+      <li>In the <strong>long run</strong>, the firm can change the size of its plant</li>
+      <li>In the <strong>short run</strong>, it is stuck with its current plant size</li>
+      <li>The <strong>ATC curve</strong> tells us how average cost behaves in the short run when the firm uses a plant of a given size</li>
+      <li>To produce any level of output, the firm will always choose the ATC curve that lets it produce at the <strong>lowest possible average total cost</strong></li>
+    </ul>
+
+    <h3>Graphing the LRATC Curve</h3>
+    <ul>
+      <li>A firm's <strong>LRATC curve combines portions of each ATC curve</strong> available to the firm in the long run</li>
+      <li>In the <strong>short run</strong>, a firm can only move <strong>along its current ATC curve</strong></li>
+      <li>In the <strong>long run</strong>, it can move from one ATC curve to another by <strong>varying the size of its plant</strong></li>
+    </ul>
+
+    <p>In the lecture example, the plant size is the number of automated lines. Each choice has its own ATC curve:</p>
+    <pre><code>ATC0 = use 0 automated lines
+ATC1 = use 1 automated line
+ATC2 = use 2 automated lines
+ATC3 = use 3 automated lines
+
+LRATC = the lowest parts of
+        these ATC curves joined together</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Economies of Scale</h2>
+    <ul>
+      <li><strong>Economies of scale</strong>: the long-run average total cost <strong>falls as output increases</strong></li>
+      <li>When an increase in output causes LRATC to fall, the firm is enjoying <strong>increasing economies of scale</strong></li>
+      <li>When economies of scale exist, the <strong>LRATC curve slopes downward</strong></li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>The original slide says that when long-run total cost rises proportionately <em>less</em> than output, production has "decreasing economies of scale". This wording is confusing. The standard meaning is: if LRTC rises <strong>less than proportionately</strong>, cost per unit falls, so there are <strong>economies of scale</strong>. If LRTC rises <strong>more than proportionately</strong>, cost per unit rises, so there are <strong>diseconomies of scale</strong>. Confirm with your lecturer if unsure.</p>
+    </div>
+
+    <h3>Shape of LRATC</h3>
+    <p>The LRATC curve has three parts as output increases (the lecture graph marks output levels 130 and 184):</p>
+    <ol>
+      <li><strong>Economies of scale</strong> — LRATC falls</li>
+      <li><strong>Constant returns to scale</strong> — LRATC stays flat</li>
+      <li><strong>Diseconomies of scale</strong> — LRATC rises</li>
+    </ol>
+
+    <h3>Reasons for Economies of Scale</h3>
+    <ul>
+      <li><strong>Technical economies</strong> — bigger firms can use better machines and more specialized workers</li>
+      <li><strong>Managerial economies</strong> — bigger firms can hire specialist managers</li>
+      <li><strong>Risk-bearing economies</strong> — bigger firms can spread risk over many products or markets</li>
+      <li><strong>Marketing economies</strong> — marketing and buying costs are shared over more output</li>
+      <li><strong>Financial economies</strong> — bigger firms can often raise money more easily and more cheaply</li>
+    </ul>
+
+    <h3>Reasons for Diseconomies of Scale</h3>
+    <ul>
+      <li><strong>Managerial diseconomies of scale</strong> — management becomes harder in a very large firm</li>
+      <li><strong>Coordination and control problems</strong></li>
+      <li><strong>Workers' alienation</strong> — workers feel disconnected from the firm</li>
+      <li><strong>Communication challenges</strong></li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Economies of scale: <strong>technical, managerial, risk-bearing, marketing, financial</strong>. Diseconomies of scale: <strong>managerial, coordination and control, workers' alienation, communication</strong>.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Theory of Production and Cost: how firms turn inputs into output, and how production and costs behave in the short run and the long run',
+    subTopics: [
+      'The Firm and Its Environment',
+      'What is Production?',
+      'Production Technology and the Production Function',
+      'The Short Run and the Long Run',
+      'Production in the Short Run',
+      'Marginal Product and Average Product',
+      'Marginal Returns to Labor and the Law of Diminishing Returns',
+      'Relationship Between TP, AP and MP',
+      'Long Run Production',
+      'Costs and Opportunity Cost',
+      'The Irrelevance of Sunk Costs',
+      'Explicit vs Implicit Costs',
+      'Economic vs Accounting Costs',
+      'Profit: Economic vs Accounting Profit',
+      'Normal Profit and Economic Losses',
+      'Costs in the Short Run: Fixed, Variable and Total Costs',
+      'Average Costs and Marginal Cost',
+      'Shape of the Marginal Cost Curve',
+      'Cost Formulas and Short-Run Cost Tables',
+      'Production and Cost in the Long Run',
+      'Average Cost and Plant Size (LRATC Curve)',
+      'Economies of Scale',
+      'Reasons for Economies and Diseconomies of Scale',
+    ],
+    definitions: [
+      { term: 'Business Firm', meaning: 'An organization, owned and operated by private individuals, that specializes in production.' },
+      { term: 'Production', meaning: 'The process of combining or transforming inputs (labor, machines, raw materials, etc.) into output.' },
+      { term: 'Input', meaning: 'A good or service that goes into the process of production.' },
+      { term: 'Output', meaning: 'Any good or service that comes out of the production process.' },
+      { term: 'Technology', meaning: 'The way in which inputs may be combined to produce output.' },
+      { term: 'Production Function', meaning: 'Shows the maximum quantity of output a firm can produce from each combination of inputs over some period of time.' },
+      { term: 'Short Run', meaning: 'A period in which the supply of certain inputs (plant, building, machines) is fixed or inelastic, so output can only be raised by increasing the variable input.' },
+      { term: 'Long Run', meaning: 'A period in which the supply of all inputs is elastic, but not enough to change technology; output can be raised by using more of both variable and fixed inputs.' },
+      { term: 'Fixed Input', meaning: 'An input whose quantity must remain constant, regardless of how much output is produced.' },
+      { term: 'Variable Input', meaning: 'An input whose usage can change as the level of output changes.' },
+      { term: 'Total Product (TP)', meaning: 'The maximum quantity of output that can be produced from a given combination of inputs.' },
+      { term: 'Marginal Product of Labor (MPL)', meaning: 'The change in total product divided by the change in the number of workers (MPL = ΔQ / ΔL).' },
+      { term: 'Average Product (AP)', meaning: 'Total product per worker (APL = TP / L).' },
+      { term: 'Increasing Marginal Returns', meaning: 'MPL rises as employment rises; each new worker adds more output than the previous one.' },
+      { term: 'Diminishing Marginal Returns', meaning: 'MPL falls as employment rises; output still rises but by smaller and smaller amounts.' },
+      { term: 'Law of Diminishing Returns', meaning: 'As more of one input is added while other inputs stay constant, its marginal product will eventually decline.' },
+      { term: 'Total Cost (Opportunity Cost)', meaning: 'The total cost of producing a given output is the opportunity cost of the owners: everything they must give up to produce it.' },
+      { term: 'Sunk Cost', meaning: 'A cost that has already been paid, or must be paid, regardless of any future action; it should not affect decisions.' },
+      { term: 'Explicit Cost', meaning: 'Money actually paid out for the use of inputs.' },
+      { term: 'Implicit Cost', meaning: 'The cost of inputs for which there is no direct money payment, such as the opportunity cost of the owner capital and time.' },
+      { term: 'Economic Costs', meaning: 'Theoretical constructs (explicit plus implicit costs) intended to aid rational decision-making.' },
+      { term: 'Accounting Costs', meaning: 'Legal constructs intended to provide uniformity in measurement; only current or historical explicit costs.' },
+      { term: 'Economic Profit', meaning: 'Total revenue minus all economic costs (explicit and implicit).' },
+      { term: 'Accounting Profit', meaning: 'Total revenue minus all accounting costs (explicit costs only).' },
+      { term: 'Normal Profit', meaning: 'The opportunity cost of resources supplied by the firm owner; it is the cost of production.' },
+      { term: 'Fixed Cost', meaning: 'Costs that do not vary with the volume of production, e.g. rent, interest, depreciation, insurance, salaries.' },
+      { term: 'Variable Cost', meaning: 'Costs that change with the quantity of production, e.g. materials, wages, power, stores.' },
+      { term: 'Total Cost (TC)', meaning: 'The cost of all inputs, fixed and variable: TC = TFC + TVC.' },
+      { term: 'Average Fixed Cost (AFC)', meaning: 'Total fixed cost divided by output (AFC = TFC / Q).' },
+      { term: 'Average Variable Cost (AVC)', meaning: 'Total variable cost divided by output (AVC = TVC / Q).' },
+      { term: 'Average Total Cost (ATC)', meaning: 'Total cost divided by output (ATC = TC / Q = AFC + AVC).' },
+      { term: 'Marginal Cost (MC)', meaning: 'The increase in total cost from producing one more unit of output (MC = ΔTC / ΔQ).' },
+      { term: 'Long-Run Total Cost (LRTC)', meaning: 'The cost of producing each quantity of output when the least-cost input mix is chosen in the long run.' },
+      { term: 'Long-Run Average Total Cost (LRATC)', meaning: 'The cost per unit of output in the long run, when all inputs are variable (LRATC = LRTC / Q).' },
+      { term: 'Plant', meaning: 'The collection of fixed inputs at a firm disposal.' },
+      { term: 'Economies of Scale', meaning: 'A situation where LRATC falls as output increases.' },
+      { term: 'Diseconomies of Scale', meaning: 'A situation where LRATC rises as output increases, caused by management, coordination, worker and communication problems.' },
+    ],
+    keyPoints: [
+      'Profit of the firm = Sales revenue – Input costs.',
+      'Inputs include labor, capital, land, raw materials, and goods and services from other firms; the way they are combined is the technology.',
+      'Production is not only physical goods; services such as those of lawyers, doctors and social workers also count.',
+      'In the short run, some inputs are fixed, so output can only be raised by increasing the variable input.',
+      'In the long run, all inputs are variable, but technology still cannot change.',
+      'MPL = ΔQ / ΔL and APL = TP / L.',
+      'MPL usually first rises (increasing marginal returns) and then falls (diminishing marginal returns).',
+      'Law of diminishing returns: adding more of one input with others fixed eventually lowers its marginal product.',
+      'When AP is maximum, MP = AP; MP cuts AP at the maximum point of AP.',
+      'When TP is maximum, MP = 0; when TP is falling, MP is negative.',
+      'AP and MP curves are inverted U-shaped; TP positive means AP positive.',
+      'Three zones: increasing marginal productivity, diminishing marginal productivity, negative marginal productivity.',
+      'Sunk costs should not be considered when making decisions.',
+      'Economic profit = Total revenue – (explicit + implicit costs); accounting profit = Total revenue – explicit costs only.',
+      'Normal profit is the opportunity cost of owner-supplied resources and counts as a cost of production.',
+      'Economic losses in the long run make firms leave the industry.',
+      'TC = TFC + TVC and ATC = AFC + AVC; AFC always falls as output rises.',
+      'MC = ΔTC / ΔQ; when MPL rises MC falls, so the MC curve is U-shaped.',
+      'The MC curve cuts the minimum points of the AVC and ATC curves.',
+      'In the long run there are no fixed costs; the firm follows the least-cost rule to earn the highest profit.',
+      'LRTC and LRATC can never be higher than the short-run TC and ATC.',
+      'The LRATC curve combines the lowest portions of the short-run ATC curves for different plant sizes.',
+      'LRATC shape: economies of scale (falling), constant returns to scale (flat), diseconomies of scale (rising).',
+      'Economies of scale come from technical, managerial, risk-bearing, marketing and financial advantages.',
+      'Diseconomies of scale come from managerial problems, coordination and control problems, workers alienation and communication challenges.',
+      'The worked examples (MP and AP table, lemonade stand cost table, short-run cost table) show the cost and product relationships above.',
+    ],
+  },
+},
 
 
 ]
