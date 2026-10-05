@@ -1254,6 +1254,553 @@ Breadcrumb: Home > Electronics > Laptops > Gaming Laptops
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: 5,
+  title: 'Payment Systems for Electronic Commerce',
+  content: `
+    <span class="lesson-badge">LESSON 05</span>
+    <h1>Payment Systems for Electronic Commerce</h1>
+    <div class="meta-info">ICT2152 <span>•</span> 18 min read</div>
+
+    <p>When you buy something online, you must <strong>pay</strong> for it in some way. This lesson explains the main <strong>online payment systems</strong> used in electronic commerce and how each one works.</p>
+
+    <h2>Lesson Objectives</h2>
+    <p>In this lesson, you will learn about:</p>
+    <ul>
+      <li>The basic functions of <strong>online payment systems</strong></li>
+      <li>The use of <strong>payment cards</strong> in electronic commerce</li>
+      <li>How <strong>electronic wallets</strong> work</li>
+      <li>The use of <strong>stored-value cards</strong> in electronic commerce</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Online Payment Basics</h2>
+
+    <h3>Most Common Ways to Pay</h3>
+    <p><strong>Cash</strong>, <strong>checks</strong>, <strong>credit cards</strong>, and <strong>debit cards</strong> account for more than <strong>90 percent</strong> of all consumer payments.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Cash, checks, credit cards, and debit cards = <strong>more than 90%</strong> of all consumer payments.</p>
+    </div>
+
+    <h3>Automated Electronic Transfers</h3>
+    <p>The most popular consumer electronic transfers are <strong>automated payments</strong> of:</p>
+    <ul>
+      <li><strong>Auto loans</strong></li>
+      <li><strong>Insurance payments</strong></li>
+      <li><strong>Mortgage payments</strong> made from consumers' checking accounts</li>
+    </ul>
+
+    <h3>Scrip</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Scrip</strong> is something that is <strong>not currency</strong> but can be used in the same way as money.</p>
+    </div>
+    <p>Popular examples of scrip are:</p>
+    <ul>
+      <li><strong>Gift cards</strong></li>
+      <li><strong>Reward points</strong></li>
+      <li><strong>Coupons</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Payment Cards</h2>
+    <p><strong>Payment cards</strong> is a general term for all types of plastic cards used to make purchases. The three main types are the <strong>credit card</strong>, the <strong>debit card</strong>, and the <strong>charge card</strong>.</p>
+
+    <h3>Credit Card</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>credit card</strong> is a card issued by a financial institution, typically a bank. It lets the cardholder <strong>borrow funds</strong> from that institution.</p>
+    </div>
+    <ul>
+      <li>Cardholders agree to <strong>pay the money back with interest</strong>, according to the institution's terms.</li>
+      <li>It has a <strong>spending limit</strong> based on the user's <strong>credit history</strong>.</li>
+    </ul>
+
+    <h3>Debit Card</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>debit card</strong> is a payment card that makes payments by <strong>deducting money directly from a consumer's checking account</strong>, rather than on loan from a bank.</p>
+    </div>
+    <p>In simple words: with a debit card you spend <strong>your own money</strong>, not borrowed money.</p>
+
+    <h3>Charge Card</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>charge card</strong> works as a type of credit card that requires you to <strong>pay your balance in full at the end of each billing cycle</strong>. You cannot make small monthly minimum payments over several months.</p>
+    </div>
+    <p>Charge cards force you to be <strong>responsible with your spending</strong>, because you have to pay your balance off every single month.</p>
+
+    <h3>Charge Cards vs Credit Cards</h3>
+<pre><code>PAYMENT EACH MONTH
+  Charge : Full payment required
+  Credit : Minimum payment allowed
+
+SPENDING LIMIT
+  Charge : No hard limit
+  Credit : Strict limit
+
+ANNUAL FEES
+  Charge : Usually high
+  Credit : Low or none
+
+INTEREST
+  Charge : None (paid in full)
+  Credit : High if not paid in full
+
+ACCEPTANCE
+  Charge : Not as widely accepted
+  Credit : Accepted by most sellers
+
+CREDIT NEEDED
+  Charge : Typically very good credit
+  Credit : Some cards available to
+           people with lower scores</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do not mix up the three cards! <strong>Credit card</strong> = borrow money and pay it back later (with interest). <strong>Debit card</strong> = money taken straight from your checking account. <strong>Charge card</strong> = must pay the full balance every month.</p>
+    </div>
+
+    <h3>Advantages and Disadvantages of Payment Cards</h3>
+    <p><strong>Advantages</strong></p>
+    <ul>
+      <li><strong>Worldwide acceptance</strong></li>
+      <li><strong>Built-in security</strong> for merchants</li>
+    </ul>
+    <p><strong>Disadvantages</strong></p>
+    <ul>
+      <li>Payment card service companies charge merchants <strong>per-transaction fees</strong> and <strong>monthly processing fees</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Payment Acceptance and Processing</h2>
+    <p>Once a merchant receives the consumer's payment card information, these steps are followed:</p>
+    <ol>
+      <li>The merchant <strong>authenticates</strong> the payment card.</li>
+      <li>The merchant <strong>checks with the payment card issuer</strong> to make sure that credit or funds are available.</li>
+      <li>The issuer puts a <strong>hold</strong> on the credit line (or on the funds) needed to cover the charge.</li>
+      <li><strong>Settlement</strong> occurs.</li>
+    </ol>
+
+    <h3>Open Loop and Closed Loop Payment Cards</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Open Loop Card</span>
+      <p>An <strong>open loop payment card</strong> is one that can be <strong>widely used</strong>. The most common example is a credit card from a major payment processor, such as <strong>Visa</strong> or <strong>MasterCard</strong>.</p>
+    </div>
+    <div class="callout callout-blue">
+      <span class="callout-label">Closed Loop Card</span>
+      <p><strong>Closed loop payment cards</strong> are <strong>limited</strong> in terms of where they can be used. The most common examples are <strong>store-specific credit cards</strong> and <strong>gift cards</strong>.</p>
+    </div>
+    <p>More about closed loop cards:</p>
+    <ul>
+      <li>Store credit cards are generally limited to purchases from the <strong>issuing retailer</strong>.</li>
+      <li>They typically give benefits such as <strong>discounts</strong> and <strong>loyalty program points</strong> that can be redeemed on future purchases.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Open loop</strong> = can be used widely (Visa, MasterCard). <strong>Closed loop</strong> = limited to certain places (store credit cards, gift cards).</p>
+    </div>
+
+    <h3>Merchant Accounts</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>merchant account</strong> is a type of business bank account that allows a business to <strong>accept and process electronic payment card transactions</strong>.</p>
+    </div>
+    <ul>
+      <li>A business must partner with a <strong>merchant acquiring bank</strong>. This bank handles all communications in an electronic payment transaction.</li>
+      <li>Merchant account relationships are <strong>essential for online businesses</strong>.</li>
+    </ul>
+
+    <h3>Processing Payments Online</h3>
+    <p><strong>InternetSecure</strong></p>
+    <ul>
+      <li>A provider of <strong>card processing systems</strong>.</li>
+      <li>It offers a credit card processing system for <strong>ecommerce merchants</strong>, and also <strong>point of sale</strong> services for retail and mail order businesses.</li>
+    </ul>
+    <p><strong>First Data</strong></p>
+    <ul>
+      <li><strong>First Data Corporation</strong> is a financial services company headquartered in <strong>Atlanta, Georgia, United States</strong>.</li>
+      <li>It handles <strong>45%</strong> of all US credit and debit transactions.</li>
+      <li>It also handles <strong>prepaid gift card processing</strong> for many US brands, such as <strong>Starbucks</strong>.</li>
+    </ul>
+
+    <h3>How Online Payment Processing Works</h3>
+<pre><code>1. Customer picks products or
+   services and goes to checkout
+        ↓
+2. Customer selects a payment
+   option
+        ↓
+3. Encrypted transaction data is
+   sent to the payment processor
+        ↓
+4. Transaction details are sent to
+   the issuing bank for approval
+        ↓
+5. Issuing bank authorizes the
+   payment
+        ↓
+6. Acquiring bank is informed
+   about the authorization
+        ↓
+7. Funds move from the customer's
+   bank account to the merchant's
+   account</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Easy way to remember: <strong>Customer → Processor → Issuing bank (approves) → Acquiring bank → Merchant gets the money</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Electronic Cash</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Electronic cash</strong> is a digital money product. It gives a way to pay for products and services <strong>without paper or coin currency</strong>. It can serve as a <strong>substitute for government-issued physical currency</strong>.</p>
+    </div>
+    <p>Electronic cash is mainly used in <strong>micropayments</strong>.</p>
+
+    <h3>Micropayments</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>micropayment</strong> is a small transaction, often carried out online, that can be as small as <strong>a fraction of a cent</strong>.</p>
+    </div>
+    <p>Depending on the payment system, a micropayment may be defined as any transaction smaller than <strong>$1.00</strong>, <strong>$5.00</strong>, or more.</p>
+
+    <h3>Two Important Characteristics</h3>
+    <p>Electronic cash should have two important things in common with physical currency:</p>
+    <ol>
+      <li>It must be possible to spend electronic cash <strong>only once</strong>.</li>
+      <li>Electronic cash ought to be <strong>anonymous</strong>.</li>
+    </ol>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Electronic cash must be <strong>spent only once</strong> and should be <strong>anonymous</strong>, just like physical cash.</p>
+    </div>
+
+    <h3>How eCash Works</h3>
+    <ul>
+      <li>An eCash user <strong>downloads electronic money from their bank account</strong> and stores it on their <strong>hard drive</strong>.</li>
+      <li>When ready to pay an Internet merchant or shareware provider, the <strong>same software</strong> takes the amount from the user's eCash <strong>"wallet"</strong> and adds it to the merchant's <strong>"wallet"</strong>.</li>
+    </ul>
+
+    <h3>Holding Electronic Cash: Online and Offline</h3>
+    <p><strong>Online cash storage</strong></p>
+    <ul>
+      <li>A <strong>trusted third party</strong> (an online bank) is involved in <strong>all transfers</strong> of electronic cash.</li>
+      <li>It holds the consumers' cash accounts.</li>
+    </ul>
+    <p><strong>Offline cash storage</strong></p>
+    <ul>
+      <li>The <strong>virtual equivalent of money kept in a wallet</strong>.</li>
+      <li><strong>No third party</strong> is involved in the transaction.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Exam trap! <strong>Offline</strong> cash storage is the virtual equivalent of money kept in a wallet (no third party). <strong>Online</strong> cash storage always involves a trusted third party such as an online bank.</p>
+    </div>
+
+    <h3>Advantages and Disadvantages of Electronic Cash</h3>
+    <p><strong>Advantages</strong></p>
+    <ul>
+      <li>Transactions are <strong>more efficient</strong>.</li>
+      <li>Transfer on the Internet <strong>costs less</strong> than processing credit card transactions.</li>
+    </ul>
+    <p><strong>Disadvantages</strong></p>
+    <ul>
+      <li>Its use provides <strong>no audit trail</strong>.</li>
+      <li>True electronic cash is <strong>not traceable</strong>, so <strong>money laundering</strong> is a problem.</li>
+    </ul>
+
+    <h3>Providing Security for Electronic Cash</h3>
+    <ul>
+      <li><strong>Cryptographic algorithms</strong> — the keys to creating <strong>tamperproof</strong> electronic cash that can be traced back to its origins.</li>
+      <li><strong>Anonymous electronic cash</strong> — electronic cash that <strong>cannot be traced back</strong> to the person who spent it.</li>
+      <li><strong>Creating truly anonymous electronic cash</strong> — requires the bank to issue electronic cash with <strong>embedded serial numbers</strong>.</li>
+    </ul>
+
+    <h3>Double-Spending of Electronic Cash</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Double-spending</strong> is the risk that a digital currency can be <strong>spent twice</strong>.</p>
+    </div>
+    <ul>
+      <li>It is a problem <strong>unique to digital currencies</strong>, because digital information can be <strong>reproduced</strong> relatively easily by individuals.</li>
+      <li>It occurs when a <strong>blockchain network</strong> is disrupted and cryptocurrency is essentially <strong>stolen</strong>.</li>
+      <li>The thief may send a <strong>copy</strong> of the currency transaction to make it look legitimate, or may <strong>erase</strong> the transaction altogether.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Double-spending means spending the <strong>same piece of electronic cash twice</strong> (for example, sending the same electronic currency to two different vendors).</p>
+    </div>
+
+    <h3>Electronic Cash Systems</h3>
+    <p><strong>CheckFree</strong></p>
+    <ul>
+      <li>The <strong>largest online bill processor</strong> in the world.</li>
+      <li>It lets you <strong>receive and pay your bills online</strong>.</li>
+      <li>Provides online payment processing services.</li>
+    </ul>
+    <p><strong>Clickshare</strong></p>
+    <ul>
+      <li>An electronic cash system aimed at <strong>magazine and newspaper publishers</strong>.</li>
+    </ul>
+    <p><strong>InternetCash</strong></p>
+    <ul>
+      <li>Provides electronic currency that is very similar to <strong>traditional cash</strong>.</li>
+      <li>Customers first <strong>buy an InternetCash card from a store</strong>.</li>
+      <li>Then they go online and <strong>activate the card</strong> by entering a <strong>20-digit code</strong> and creating a <strong>PIN</strong>.</li>
+      <li>After activation, they can pay at <strong>any site that accepts it</strong>.</li>
+    </ul>
+    <p><strong>PayPal</strong></p>
+    <ul>
+      <li>Provides <strong>payment processing services</strong> to businesses and to individuals.</li>
+      <li>PayPal.com is a <strong>free service</strong> that earns a profit on the <strong>float</strong> — the money deposited in PayPal accounts.</li>
+      <li>The free payment clearing service PayPal gives to individuals is called a <strong>peer-to-peer payment system</strong>.</li>
+      <li>It lets customers send money <strong>instantly and securely</strong> to anyone with an <strong>e-mail address</strong>, including an online merchant.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Electronic Wallets</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>An <strong>electronic wallet</strong> works like a physical wallet. It holds <strong>credit cards</strong>, <strong>electronic cash</strong>, <strong>owner identification</strong>, and <strong>owner contact information</strong>.</p>
+    </div>
+    <ul>
+      <li>It provides the owner's contact information at an electronic commerce site's <strong>checkout counter</strong>.</li>
+      <li>It makes <strong>shopping more efficient</strong>.</li>
+    </ul>
+
+    <h3>Types of Electronic Wallets</h3>
+    <ul>
+      <li><strong>Server-side electronic wallet</strong> — stores the customer's information on a <strong>remote server</strong> belonging to a particular merchant or wallet publisher.</li>
+      <li><strong>Client-side electronic wallet</strong> — stores the consumer's information on <strong>his or her own computer</strong>.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Server-side</strong> wallet = information kept on a <strong>remote server</strong>. <strong>Client-side</strong> wallet = information kept on the <strong>user's own computer</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Stored-Value Cards</h2>
+
+    <h3>Stored-Value Card (SVC)</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>stored-value card (SVC)</strong> is a payment card with a <strong>monetary value stored on the card itself</strong>, not in an external account kept by a financial institution.</p>
+    </div>
+    <ul>
+      <li>This means <strong>no network access</strong> is needed by the payment collection terminals. Funds can be withdrawn and deposited straight from the card.</li>
+      <li><strong>Examples:</strong> a telephone card with prepaid minutes, or a gift card from a department store.</li>
+    </ul>
+
+    <h3>Magnetic Stripe Cards</h3>
+    <ul>
+      <li>A <strong>magnetic stripe card</strong> is a type of pass that lets the user <strong>complete electronic transactions</strong> or <strong>access a locked physical space</strong>.</li>
+      <li>The <strong>"stripe"</strong> contains embedded information that <strong>identifies its user</strong>.</li>
+      <li>Types in use today include <strong>driver's licenses</strong>, <strong>credit cards</strong>, and <strong>employee ID cards</strong>.</li>
+    </ul>
+
+    <h3>Smart Cards</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>smart card</strong> stores information on a <strong>microprocessor or memory chip</strong>, rather than on the magnetic stripe found on ATM and credit cards.</p>
+    </div>
+    <ul>
+      <li>It can hold <strong>private user data</strong>, such as financial facts, <strong>encryption keys</strong>, and <strong>credit card numbers</strong>.</li>
+      <li>It can store about <strong>100 times more information</strong> than a magnetic stripe plastic card.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Magnetic stripe card</strong> = data on a stripe. <strong>Smart card</strong> = data on a chip, and holds about <strong>100 times more</strong> information.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Practice Questions</h2>
+    <p>Test yourself. Try to answer before reading the answers below.</p>
+    <ol>
+      <li>______ is a general term for any value storage and exchange system created by a private (non-governmental) entity that does not use paper documents or coins, and can serve as a substitute for government-issued physical currency.</li>
+      <li>Internet payments for items costing from a few cents to about a dollar are called ______.</li>
+      <li>______ is spending a particular piece of electronic cash twice by submitting the same electronic currency to two different vendors.</li>
+      <li>______ is a technique used by criminals to convert money they got illegally into cash they can spend without it being identified as the proceeds of an illegal activity.</li>
+      <li>True or False: Online cash storage is the virtual equivalent of money kept in a wallet.</li>
+      <li>______ is electronic cash that, like bills and coins, cannot be traced back to the person who spent it.</li>
+    </ol>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Answers</span>
+      <p>1. <strong>Electronic cash</strong><br>2. <strong>Micropayments</strong><br>3. <strong>Double-spending</strong><br>4. <strong>Money laundering</strong><br>5. <strong>False</strong> — that describes <em>offline</em> cash storage<br>6. <strong>Anonymous electronic cash</strong></p>
+    </div>
+  `,
+  summary: {
+    topic: 'Payment Systems for Electronic Commerce',
+    subTopics: [
+      'Lesson Objectives',
+      'Online Payment Basics',
+      'Most Common Ways to Pay',
+      'Automated Electronic Transfers',
+      'Scrip',
+      'Payment Cards',
+      'Credit Card',
+      'Debit Card',
+      'Charge Card',
+      'Charge Cards vs Credit Cards',
+      'Advantages and Disadvantages of Payment Cards',
+      'Payment Acceptance and Processing',
+      'Open Loop and Closed Loop Payment Cards',
+      'Merchant Accounts',
+      'Processing Payments Online',
+      'How Online Payment Processing Works',
+      'Electronic Cash',
+      'Micropayments',
+      'Two Important Characteristics',
+      'How eCash Works',
+      'Holding Electronic Cash: Online and Offline',
+      'Advantages and Disadvantages of Electronic Cash',
+      'Providing Security for Electronic Cash',
+      'Double-Spending of Electronic Cash',
+      'Electronic Cash Systems',
+      'Electronic Wallets',
+      'Types of Electronic Wallets',
+      'Stored-Value Cards',
+      'Magnetic Stripe Cards',
+      'Smart Cards',
+      'Practice Questions',
+    ],
+    definitions: [
+      { term: 'Scrip', meaning: 'Something that is not currency but can be used in the same way as money, such as gift cards, reward points, and coupons.' },
+      { term: 'Payment Cards', meaning: 'A general term for all types of plastic cards used to make purchases.' },
+      { term: 'Credit Card', meaning: 'A card issued by a financial institution that lets the cardholder borrow funds and pay them back with interest, within a spending limit based on credit history.' },
+      { term: 'Debit Card', meaning: 'A payment card that pays by deducting money directly from a consumer\'s checking account instead of borrowing from a bank.' },
+      { term: 'Charge Card', meaning: 'A type of credit card that requires the full balance to be paid at the end of each billing cycle.' },
+      { term: 'Open Loop Payment Card', meaning: 'A payment card that can be widely used, such as a Visa or MasterCard credit card.' },
+      { term: 'Closed Loop Payment Card', meaning: 'A payment card limited in where it can be used, such as a store-specific credit card or gift card.' },
+      { term: 'Merchant Account', meaning: 'A business bank account that allows a business to accept and process electronic payment card transactions.' },
+      { term: 'Merchant Acquiring Bank', meaning: 'The bank a business partners with to handle all communications in an electronic payment transaction.' },
+      { term: 'InternetSecure', meaning: 'A provider of card processing systems for ecommerce merchants, plus point of sale services for retail and mail order businesses.' },
+      { term: 'First Data', meaning: 'A financial services company based in Atlanta, Georgia that handles 45% of all US credit and debit transactions and prepaid gift card processing.' },
+      { term: 'Electronic Cash', meaning: 'A digital money product used to pay without paper or coins; it can substitute for government-issued physical currency.' },
+      { term: 'Micropayment', meaning: 'A small online transaction that can be as small as a fraction of a cent, often defined as less than $1.00 or $5.00.' },
+      { term: 'Online Cash Storage', meaning: 'Electronic cash storage where a trusted third party (an online bank) is involved in all transfers and holds consumer cash accounts.' },
+      { term: 'Offline Cash Storage', meaning: 'The virtual equivalent of money kept in a wallet, with no third party involved in the transaction.' },
+      { term: 'Cryptographic Algorithms', meaning: 'The keys to creating tamperproof electronic cash that can be traced back to its origins.' },
+      { term: 'Anonymous Electronic Cash', meaning: 'Electronic cash that cannot be traced back to the person who spent it.' },
+      { term: 'Double-Spending', meaning: 'The risk that a digital currency can be spent twice, because digital information is easy to copy.' },
+      { term: 'Money Laundering', meaning: 'A technique criminals use to convert illegally obtained money into cash that cannot be identified as the proceeds of illegal activity.' },
+      { term: 'CheckFree', meaning: 'The largest online bill processor in the world; lets users receive and pay bills online.' },
+      { term: 'Clickshare', meaning: 'An electronic cash system aimed at magazine and newspaper publishers.' },
+      { term: 'InternetCash', meaning: 'An electronic currency system similar to traditional cash; users buy a card in a store, then activate it online with a 20-digit code and a PIN.' },
+      { term: 'PayPal', meaning: 'A payment processing service for businesses and individuals that lets users send money instantly and securely to anyone with an e-mail address.' },
+      { term: 'Float', meaning: 'Money deposited in PayPal accounts, on which PayPal earns a profit.' },
+      { term: 'Peer-to-Peer Payment System', meaning: 'The free payment clearing service PayPal provides to individuals.' },
+      { term: 'Electronic Wallet', meaning: 'A digital tool, like a physical wallet, that holds credit cards, electronic cash, owner identification, and contact information.' },
+      { term: 'Server-Side Electronic Wallet', meaning: 'A wallet that stores customer information on a remote server belonging to a merchant or wallet publisher.' },
+      { term: 'Client-Side Electronic Wallet', meaning: 'A wallet that stores consumer information on the consumer\'s own computer.' },
+      { term: 'Stored-Value Card (SVC)', meaning: 'A payment card with monetary value stored on the card itself, not in an external account; no network access is needed.' },
+      { term: 'Magnetic Stripe Card', meaning: 'A card with a stripe containing embedded user information, used for electronic transactions or to access locked spaces.' },
+      { term: 'Smart Card', meaning: 'A card that stores information on a microprocessor or memory chip and can hold about 100 times more data than a magnetic stripe card.' },
+    ],
+    keyPoints: [
+      'Cash, checks, credit cards, and debit cards account for more than 90% of all consumer payments.',
+      'Popular automated electronic transfers include auto loans, insurance payments, and mortgage payments.',
+      'Scrip is not currency but can be used like money (gift cards, reward points, coupons).',
+      'Credit card = borrowed money repaid with interest; debit card = money taken directly from a checking account; charge card = full balance due every billing cycle.',
+      'Charge cards: full monthly payment, no hard limit, usually high annual fees, no interest, less widely accepted, need very good credit.',
+      'Credit cards: minimum payment allowed, strict limit, low or no annual fees, high interest if unpaid, accepted by most sellers.',
+      'Payment card advantages: worldwide acceptance and built-in security for merchants. Disadvantage: merchants pay per-transaction and monthly processing fees.',
+      'Card processing steps: merchant authenticates the card, checks with the issuer and a hold is placed on funds or credit, then settlement occurs.',
+      'Open loop cards (Visa, MasterCard) are widely usable; closed loop cards (store cards, gift cards) are limited to specific places.',
+      'A merchant account and a merchant acquiring bank are essential for online businesses to accept card payments.',
+      'Online payment flow: customer checks out, picks a payment option, encrypted data goes to the processor, the issuing bank authorizes, the acquiring bank is informed, and funds move to the merchant.',
+      'Electronic cash is mainly used for micropayments and must be spendable only once and should be anonymous.',
+      'eCash is downloaded from a bank account, stored on the hard drive, and moved from the user wallet to the merchant wallet when paying.',
+      'Online cash storage involves a trusted third party; offline cash storage is like money in a wallet with no third party. (Online cash storage being a wallet equivalent is FALSE.)',
+      'Electronic cash is efficient and cheaper than credit card processing, but has no audit trail and makes money laundering a problem.',
+      'Cryptographic algorithms make e-cash tamperproof; truly anonymous e-cash needs the bank to issue it with embedded serial numbers.',
+      'Double-spending is a risk unique to digital currencies because digital information is easy to copy; thieves may copy or erase transactions.',
+      'Electronic cash systems: CheckFree (bill payment), Clickshare (publishers), InternetCash (20-digit code and PIN), PayPal (peer-to-peer, earns profit on the float).',
+      'Electronic wallets make shopping more efficient; server-side wallets store data on a remote server, client-side wallets store data on the user computer.',
+      'Stored-value cards keep the money on the card itself, so no network access is needed (e.g. prepaid phone card, gift card).',
+      'Magnetic stripe cards store identifying data on a stripe; smart cards use a chip and can store about 100 times more data, including encryption keys.',
+    ],
+  },
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 id: 6,
 title: 'E-Commerce Platforms and Tools',
