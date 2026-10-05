@@ -13,9 +13,9 @@ export const lessons = [
 
     <h2>Course Overview</h2>
     <ul>
-      <li><strong>Course Unit</strong> — Management Information Systems (ICT2162)</li>
-      <li><strong>Credits</strong> — 2</li>
-      <li><strong>Lecture Hours</strong> — 30 hours</li>
+      <li><strong>Course Unit</strong> - Management Information Systems (ICT2162)</li>
+      <li><strong>Credits</strong> - 2</li>
+      <li><strong>Lecture Hours</strong> - 30 hours</li>
     </ul>
 
     <h2>Course Learning Outcomes</h2>
@@ -44,8 +44,8 @@ export const lessons = [
 
     <h2>References</h2>
     <ul>
-      <li><em>Management Information Systems: Managing the Digital Firm</em> — K. C. Laudon, J. P. Laudon</li>
-      <li><em>Essentials of MIS</em> — K. C. Laudon, J. P. Laudon</li>
+      <li><em>Management Information Systems: Managing the Digital Firm</em> - K. C. Laudon, J. P. Laudon</li>
+      <li><em>Essentials of MIS</em> - K. C. Laudon, J. P. Laudon</li>
     </ul>
 
     <h2>Evaluation Criteria</h2>
@@ -54,8 +54,8 @@ export const lessons = [
       <p><strong>80% attendance</strong> is mandatory to be eligible for the final assessment.</p>
     </div>
     <ul>
-      <li><strong>Continuous Assessment (CA)</strong> — 30% of the total grade (Assignments 20%, Quizzes 10%)</li>
-      <li><strong>Final Assessment (FA)</strong> — 70% of the total grade, covering Learning Outcomes 1–4 (Theory 70%)</li>
+      <li><strong>Continuous Assessment (CA)</strong> - 30% of the total grade (Assignments 20%, Quizzes 10%)</li>
+      <li><strong>Final Assessment (FA)</strong> - 70% of the total grade, covering Learning Outcomes 1–4 (Theory 70%)</li>
     </ul>
 
     <div class="divider"></div>
@@ -91,7 +91,7 @@ export const lessons = [
 113  Ginger Root         .85</code></pre>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p><strong>Data</strong> is raw, unorganized facts — like item numbers and prices from a supermarket checkout counter. <strong>Information</strong> is data that has been processed and organized into a meaningful form, such as total unit sales or total sales revenue for a specific store.</p>
+      <p><strong>Data</strong> is raw, unorganized facts - like item numbers and prices from a supermarket checkout counter. <strong>Information</strong> is data that has been processed and organized into a meaningful form, such as total unit sales or total sales revenue for a specific store.</p>
     </div>
 
     <h3>Functions of an Information System</h3>
@@ -105,13 +105,13 @@ export const lessons = [
                │              └───────── Feedback ────────┘
                └──────────────────────────────────────────┘
  Regulatory Agencies ↔          Stockholders          ↔  Competitors</code></pre>
-    <p>An information system contains information about an organization and the environment around it. <strong>Feedback</strong> is output that is sent back to the right people or activities so the input can be checked and improved. Actors in the environment — such as customers, suppliers, competitors, stockholders, and regulatory agencies — interact with the organization and its information systems.</p>
+    <p>An information system contains information about an organization and the environment around it. <strong>Feedback</strong> is output that is sent back to the right people or activities so the input can be checked and improved. Actors in the environment - such as customers, suppliers, competitors, stockholders, and regulatory agencies - interact with the organization and its information systems.</p>
 
     <p>There are three main activities in an information system:</p>
     <ul>
-      <li><strong>Input</strong> — captures or collects raw data from within the organization or from its outside environment.</li>
-      <li><strong>Processing</strong> — converts this raw input into a meaningful form.</li>
-      <li><strong>Output</strong> — transfers the processed information to the people or activities that will use it.</li>
+      <li><strong>Input</strong> - captures or collects raw data from within the organization or from its outside environment.</li>
+      <li><strong>Processing</strong> - converts this raw input into a meaningful form.</li>
+      <li><strong>Output</strong> - transfers the processed information to the people or activities that will use it.</li>
     </ul>
 
     <div class="callout callout-yellow">
@@ -128,8 +128,8 @@ export const lessons = [
      Management ── Information ── Technology
                       Systems</code></pre>
     <ul>
-      <li><strong>Organizations</strong> — information systems are a core part of organizations. For some companies, such as credit reporting firms, there would be no business at all without an information system. The key elements of an organization are its people, structure, business processes, politics, and culture.</li>
-      <li><strong>Management</strong> — organizations have a structure made up of different levels and specialties, showing a clear division of labor. Authority and responsibility in a business are organized as a hierarchy, or pyramid structure.</li>
+      <li><strong>Organizations</strong> - information systems are a core part of organizations. For some companies, such as credit reporting firms, there would be no business at all without an information system. The key elements of an organization are its people, structure, business processes, politics, and culture.</li>
+      <li><strong>Management</strong> - organizations have a structure made up of different levels and specialties, showing a clear division of labor. Authority and responsibility in a business are organized as a hierarchy, or pyramid structure.</li>
     </ul>
 
     <pre><code>            Senior Management
@@ -137,38 +137,38 @@ export const lessons = [
     ensures financial performance)
    -----------------------------------
           Middle Management
-   (scientists & knowledge workers —
+   (scientists & knowledge workers -
     carries out senior management's
          programs and plans)
    -----------------------------------
         Operational Management
  (production & service workers, data
-   workers — monitors day-to-day
+   workers - monitors day-to-day
         business activities)</code></pre>
     <p>The upper levels of the hierarchy have managerial, professional, and technical employees, while the lower levels have operational staff.</p>
 
     <h3>Information Technology Components</h3>
     <ul>
-      <li><strong>Computer hardware</strong> — the physical equipment used for input, processing, and output activities in an information system.</li>
-      <li><strong>Computer software</strong> — the detailed, preprogrammed instructions that control and coordinate the computer hardware parts of an information system.</li>
-      <li><strong>Data management technology</strong> — the software that organizes data on physical storage media.</li>
-      <li><strong>Networking and telecommunications technology</strong> — physical devices and software that connect hardware together and move data from one location to another.</li>
+      <li><strong>Computer hardware</strong> - the physical equipment used for input, processing, and output activities in an information system.</li>
+      <li><strong>Computer software</strong> - the detailed, preprogrammed instructions that control and coordinate the computer hardware parts of an information system.</li>
+      <li><strong>Data management technology</strong> - the software that organizes data on physical storage media.</li>
+      <li><strong>Networking and telecommunications technology</strong> - physical devices and software that connect hardware together and move data from one location to another.</li>
     </ul>
 
     <div class="divider"></div>
 
     <h3>What's New in Management Information Systems?</h3>
     <ul>
-      <li><strong>IT Innovations</strong> — for example, cloud computing (Google Drive, OneDrive).</li>
-      <li><strong>New Business Models</strong> — for example, Netflix.</li>
+      <li><strong>IT Innovations</strong> - for example, cloud computing (Google Drive, OneDrive).</li>
+      <li><strong>New Business Models</strong> - for example, Netflix.</li>
       <li><strong>E-commerce Expansion</strong></li>
       <li><strong>Management Changes</strong></li>
       <li><strong>Changes in Firms and Organizations</strong></li>
     </ul>
 
     <h3>How Information Systems Are Transforming Business</h3>
-    <p>Between 1999 and 2017, <strong>IT investment</strong> grew steadily as a share of total business investment — from about <strong>21%</strong> to about <strong>33%</strong> of total investment. This shows how deeply information systems have become part of everyday business.</p>
-    <p><strong>Example:</strong> the mobile phone industry (e.g., Samsung Galaxy Note and Apple iPhone) — companies constantly invest in new technology to stay competitive.</p>
+    <p>Between 1999 and 2017, <strong>IT investment</strong> grew steadily as a share of total business investment - from about <strong>21%</strong> to about <strong>33%</strong> of total investment. This shows how deeply information systems have become part of everyday business.</p>
+    <p><strong>Example:</strong> the mobile phone industry (e.g., Samsung Galaxy Note and Apple iPhone) - companies constantly invest in new technology to stay competitive.</p>
     <ul>
       <li>Increased technology investments</li>
       <li>Information systems provide economic value to business</li>
@@ -182,7 +182,7 @@ export const lessons = [
     <h3>Globalization & Information Systems</h3>
     <ul>
       <li>About <strong>80%</strong> of the toys sold in the U.S. are made in China, while about <strong>90%</strong> of the PCs made in China use American-made Intel or AMD chips.</li>
-      <li>It is not just goods that move across borders — jobs move too.</li>
+      <li>It is not just goods that move across borders - jobs move too.</li>
       <li>A <strong>24 × 7 culture</strong> has developed.</li>
       <li>The internet lowers the cost of operating on a global scale.</li>
       <li>New technology-based companies have emerged, such as Google, eBay, Amazon.com, and Facebook (Meta).</li>
@@ -199,16 +199,16 @@ export const lessons = [
     <h3>Why Business Firms Invest Heavily in Information Systems</h3>
     <p>Business firms invest heavily in information systems to reach six strategic business objectives:</p>
     <ul>
-      <li><strong>Operational excellence</strong> — example: Wal-Mart</li>
-      <li><strong>New products, services, and business models</strong> — example: Apple Inc.</li>
-      <li><strong>Customer and supplier intimacy</strong> — example: The Mandarin Oriental hotel group</li>
+      <li><strong>Operational excellence</strong> - example: Wal-Mart</li>
+      <li><strong>New products, services, and business models</strong> - example: Apple Inc.</li>
+      <li><strong>Customer and supplier intimacy</strong> - example: The Mandarin Oriental hotel group</li>
       <li><strong>Improved decision making</strong></li>
-      <li><strong>Competitive advantage</strong> — example: Toyota</li>
-      <li><strong>Survival</strong> — example: HSBC</li>
+      <li><strong>Competitive advantage</strong> - example: Toyota</li>
+      <li><strong>Survival</strong> - example: HSBC</li>
     </ul>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>These <strong>six strategic business objectives</strong> are a common exam question — learn each objective together with its example company.</p>
+      <p>These <strong>six strategic business objectives</strong> are a common exam question - learn each objective together with its example company.</p>
     </div>
 
     <div class="divider"></div>
@@ -224,13 +224,13 @@ export const lessons = [
 
     <h3>Technical Approach</h3>
     <ul>
-      <li><strong>Computer science</strong> — builds theories of computability, methods of computation, and methods of efficient data storage and access.</li>
-      <li><strong>Management science</strong> — focuses on developing models for decision-making and management practice.</li>
-      <li><strong>Operations research</strong> — focuses on mathematical techniques for optimizing parts of an organization, such as transportation, inventory control, and transaction costs.</li>
+      <li><strong>Computer science</strong> - builds theories of computability, methods of computation, and methods of efficient data storage and access.</li>
+      <li><strong>Management science</strong> - focuses on developing models for decision-making and management practice.</li>
+      <li><strong>Operations research</strong> - focuses on mathematical techniques for optimizing parts of an organization, such as transportation, inventory control, and transaction costs.</li>
     </ul>
 
     <h3>Behavioral Approach</h3>
-    <p>The behavioral approach deals with the human and organizational issues that come up while building and maintaining information systems over the long term — issues such as strategic business integration, design, implementation, use, and management, which cannot be studied usefully with technical models alone.</p>
+    <p>The behavioral approach deals with the human and organizational issues that come up while building and maintaining information systems over the long term - issues such as strategic business integration, design, implementation, use, and management, which cannot be studied usefully with technical models alone.</p>
 
     <div class="divider"></div>
 
@@ -246,7 +246,7 @@ export const lessons = [
     <p>Changes in strategy, rules, and business processes increasingly require changes in hardware, software, databases, and telecommunications. In turn, what an organization can do often depends on what its systems will allow it to do.</p>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>Organizations and information systems have a two-way, <strong>interdependent relationship</strong> — business needs shape IT systems, and existing IT systems shape what the business can do.</p>
+      <p>Organizations and information systems have a two-way, <strong>interdependent relationship</strong> - business needs shape IT systems, and existing IT systems shape what the business can do.</p>
     </div>
 
     <div class="divider"></div>
@@ -312,9 +312,9 @@ export const lessons = [
       'Firms invest in information systems to achieve six strategic objectives: operational excellence, new products/services/business models, customer & supplier intimacy, improved decision making, competitive advantage, and survival.',
       'A digital firm conducts nearly all significant business relationships digitally, with information available anytime, anywhere in the firm.',
       'Two contemporary approaches are used to study information systems: the technical approach (computer science, management science, operations research) and the behavioral approach (sociology, economics, psychology).',
-      'Organizations and information systems are interdependent — business strategy shapes IT systems, and existing IT systems shape what a business can do.',
+      'Organizations and information systems are interdependent - business strategy shapes IT systems, and existing IT systems shape what a business can do.',
       'IT investment as a share of total business investment grew from about 21% (1999) to about 33% (2017), showing how deeply information systems have become embedded in business.',
-      'Globalization example: about 80% of toys sold in the U.S. are made in China, while about 90% of PCs made in China use American-made Intel or AMD chips — goods, jobs, and technology all cross borders together.',
+      'Globalization example: about 80% of toys sold in the U.S. are made in China, while about 90% of PCs made in China use American-made Intel or AMD chips - goods, jobs, and technology all cross borders together.',
     ],
   },
 },
@@ -364,7 +364,7 @@ export const lessons = [
 
     <ul>
       <li>Business processes may be tied to a single <strong>functional area</strong>, or they can be <strong>cross functional</strong> (crossing several departments).</li>
-      <li><strong>Functional example:</strong> Human Resources — hiring employees.</li>
+      <li><strong>Functional example:</strong> Human Resources - hiring employees.</li>
       <li><strong>Cross functional example:</strong> fulfilling a customer order (this touches sales, accounting, and production).</li>
       <li>Business processes can be <strong>assets</strong> (when they work well) or <strong>liabilities</strong> (when they are slow or broken).</li>
       <li>A business itself can be seen as a <strong>collection of business processes</strong>.</li>
@@ -372,14 +372,14 @@ export const lessons = [
 
     <h3>Examples of Functional Business Processes</h3>
     <ul>
-      <li><strong>Manufacturing and production</strong> — assembling the product, checking for quality, producing bills of materials.</li>
-      <li><strong>Sales and marketing</strong> — identifying customers, making customers aware of the product, selling the product.</li>
-      <li><strong>Finance and accounting</strong> — paying creditors, creating financial statements, managing cash accounts.</li>
-      <li><strong>Human resources</strong> — hiring employees, evaluating employees' job performance, enrolling employees in benefits plans.</li>
+      <li><strong>Manufacturing and production</strong> - assembling the product, checking for quality, producing bills of materials.</li>
+      <li><strong>Sales and marketing</strong> - identifying customers, making customers aware of the product, selling the product.</li>
+      <li><strong>Finance and accounting</strong> - paying creditors, creating financial statements, managing cash accounts.</li>
+      <li><strong>Human resources</strong> - hiring employees, evaluating employees' job performance, enrolling employees in benefits plans.</li>
     </ul>
 
     <h3>The Order Fulfillment Process (Cross-Functional Example)</h3>
-    <p>This example shows how one process — fulfilling a customer order — flows across three different departments:</p>
+    <p>This example shows how one process - fulfilling a customer order - flows across three different departments:</p>
 
     <pre><code>SALES         : Generate order  → Submit order
                                         ↓
@@ -390,13 +390,13 @@ PRODUCTION    : Assemble product → Ship product</code></pre>
 
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>The Order Fulfillment Process is a classic exam example of a <strong>cross-functional business process</strong> — it needs Sales, Accounting, and Manufacturing to work together.</p>
+      <p>The Order Fulfillment Process is a classic exam example of a <strong>cross-functional business process</strong> - it needs Sales, Accounting, and Manufacturing to work together.</p>
     </div>
 
     <h3>How Information Technology Enhances Business Processes</h3>
     <p>Information technology (IT) enhances business processes in <strong>two main ways</strong>:</p>
     <ol>
-      <li><strong>Increasing efficiency of existing processes</strong> — by automating steps that used to be done manually.</li>
+      <li><strong>Increasing efficiency of existing processes</strong> - by automating steps that used to be done manually.</li>
       <li><strong>Enabling entirely new processes</strong> that can transform the business, by:
         <ul>
           <li>Changing the flow of information</li>
@@ -409,7 +409,7 @@ PRODUCTION    : Assemble product → Ship product</code></pre>
 
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
-      <p><strong>Examples:</strong> Kindle e-books from Amazon, and buying a computer online at Best Buy — both are new business models made possible by IT.</p>
+      <p><strong>Examples:</strong> Kindle e-books from Amazon, and buying a computer online at Best Buy - both are new business models made possible by IT.</p>
     </div>
 
     <div class="divider"></div>
@@ -516,7 +516,7 @@ Accounting files ↔ General ledger system ─→ Product change│           & 
       <li>Serve <strong>middle management</strong>.</li>
       <li>Support <strong>non-routine decision making</strong>.</li>
       <li><strong>Example:</strong> "What is the impact on the production schedule if December sales doubled?"</li>
-      <li>Often use <strong>external information</strong> as well as data from TPS and MIS — for example, current stock prices or competitors' product prices.</li>
+      <li>Often use <strong>external information</strong> as well as data from TPS and MIS - for example, current stock prices or competitors' product prices.</li>
     </ul>
 
     <h3>2.7 Executive Support Systems (ESS)</h3>
@@ -524,16 +524,16 @@ Accounting files ↔ General ledger system ─→ Product change│           & 
       <li>Support <strong>senior management</strong>.</li>
       <li>Address <strong>non-routine decisions</strong> that require judgment, evaluation, and insight.</li>
       <li>Incorporate <strong>external data</strong> (e.g. new tax laws, competitors) as well as summarized internal data from MIS and DSS.</li>
-      <li><strong>Example:</strong> a digital dashboard giving a real-time view of the firm's financial performance — working capital, accounts receivable, accounts payable, cash flow, and inventory.</li>
+      <li><strong>Example:</strong> a digital dashboard giving a real-time view of the firm's financial performance - working capital, accounts receivable, accounts payable, cash flow, and inventory.</li>
     </ul>
 
     <div class="divider"></div>
 
     <h3>Systems from a Constituency Perspective</h3>
     <ul>
-      <li><strong>TPS</strong> — supports operational-level employees</li>
-      <li><strong>MIS &amp; DSS</strong> — supports managers</li>
-      <li><strong>ESS</strong> — supports executives</li>
+      <li><strong>TPS</strong> - supports operational-level employees</li>
+      <li><strong>MIS &amp; DSS</strong> - supports managers</li>
+      <li><strong>ESS</strong> - supports executives</li>
     </ul>
 
     <h3>Relationship of Systems to One Another</h3>
@@ -544,7 +544,7 @@ Accounting files ↔ General ledger system ─→ Product change│           & 
     </ul>
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
-      <p>In reality, most businesses' systems are only <strong>loosely integrated</strong> — though this is getting better over time. Don't assume all systems in a real company are perfectly connected.</p>
+      <p>In reality, most businesses' systems are only <strong>loosely integrated</strong> - though this is getting better over time. Don't assume all systems in a real company are perfectly connected.</p>
     </div>
 
     <div class="divider"></div>
@@ -616,13 +616,13 @@ Production | Finance & Accounting | Human Resources</code></pre>
 
     <h3>3. Customer Relationship Management (CRM) Systems</h3>
     <ul>
-      <li>Provide information to coordinate all business processes that deal with customers — <strong>sales, marketing, and service</strong> — to optimize revenue, customer satisfaction, and customer retention.</li>
+      <li>Provide information to coordinate all business processes that deal with customers - <strong>sales, marketing, and service</strong> - to optimize revenue, customer satisfaction, and customer retention.</li>
       <li><strong>Integrate</strong> the firm's customer-related processes and consolidate customer information from multiple communication channels.</li>
     </ul>
 
     <h3>4. Knowledge Management Systems (KMS)</h3>
     <ul>
-      <li>Support processes for <strong>acquiring, creating, storing, distributing, applying,</strong> and integrating knowledge — such as how to create, produce, and distribute products and services.</li>
+      <li>Support processes for <strong>acquiring, creating, storing, distributing, applying,</strong> and integrating knowledge - such as how to create, produce, and distribute products and services.</li>
       <li>Collect internal knowledge and experience within the firm and make it available to employees.</li>
       <li>Link to <strong>external sources</strong> of knowledge.</li>
     </ul>
@@ -632,8 +632,8 @@ Production | Finance & Accounting | Human Resources</code></pre>
     <h3>Intranets and Extranets</h3>
     <p>These are alternative tools that increase integration and speed up the flow of information:</p>
     <ul>
-      <li><strong>Intranets</strong> — internal company websites accessible only by employees.</li>
-      <li><strong>Extranets</strong> — company websites accessible externally, but only to vendors and suppliers. Often used to coordinate the supply chain.</li>
+      <li><strong>Intranets</strong> - internal company websites accessible only by employees.</li>
+      <li><strong>Extranets</strong> - company websites accessible externally, but only to vendors and suppliers. Often used to coordinate the supply chain.</li>
     </ul>
 
     <div class="divider"></div>
@@ -641,15 +641,15 @@ Production | Finance & Accounting | Human Resources</code></pre>
     <h2>E-business, E-commerce and E-government</h2>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p><strong>E-business</strong> — the use of digital technology and the Internet to drive major business processes.</p>
+      <p><strong>E-business</strong> - the use of digital technology and the Internet to drive major business processes.</p>
     </div>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p><strong>E-commerce</strong> — a subset of e-business; buying and selling goods and services through the Internet.</p>
+      <p><strong>E-commerce</strong> - a subset of e-business; buying and selling goods and services through the Internet.</p>
     </div>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p><strong>E-government</strong> — using Internet technology to deliver information and services to citizens, employees, and businesses.</p>
+      <p><strong>E-government</strong> - using Internet technology to deliver information and services to citizens, employees, and businesses.</p>
     </div>
 
     <div class="divider"></div>
@@ -659,8 +659,8 @@ Production | Finance & Accounting | Human Resources</code></pre>
       <li>Business Processes and Information Systems</li>
       <li>Types of Information Systems
         <ul>
-          <li>Systems for Different Management Groups — Transaction Processing Systems, Systems for Business Intelligence</li>
-          <li>Systems for Linking the Enterprise — Enterprise Applications, Intranets and Extranets</li>
+          <li>Systems for Different Management Groups - Transaction Processing Systems, Systems for Business Intelligence</li>
+          <li>Systems for Linking the Enterprise - Enterprise Applications, Intranets and Extranets</li>
         </ul>
       </li>
       <li>E-business, E-commerce and E-government</li>
@@ -725,7 +725,7 @@ Production | Finance & Accounting | Human Resources</code></pre>
       'MIS serve middle management with routine reports built from TPS data, but have little analytic capability.',
       'DSS support non-routine decisions for middle management and often pull in external data (e.g. stock prices, competitor prices).',
       "ESS support senior management's non-routine decisions, combining external data with internal MIS/DSS summaries (e.g. digital dashboards).",
-      'The four major enterprise applications are Enterprise Systems (ERP), SCM, CRM, and KMS — each spans functional areas and organizational levels, and may extend outside the firm.',
+      'The four major enterprise applications are Enterprise Systems (ERP), SCM, CRM, and KMS - each spans functional areas and organizational levels, and may extend outside the firm.',
       'Intranets serve employees only; extranets extend limited access to vendors and suppliers.',
       'E-commerce is a subset of e-business; e-government applies Internet technology to deliver public services.',
       'In practice, most organizational systems are only loosely integrated, even though integration is improving over time.',
@@ -741,7 +741,7 @@ Production | Finance & Accounting | Human Resources</code></pre>
     <h1>Using Information Systems to Achieve Competitive Advantage</h1>
     <div class="meta-info">ICT2162 <span>•</span> 22 min read</div>
 
-    <p>This lesson looks at what an <strong>organization</strong> actually is, the features every organization shares, and two powerful models — <strong>Porter's Five Forces</strong> and <strong>Porter's Value Chain Analysis</strong> — that companies use to build <strong>competitive advantage</strong> with information systems.</p>
+    <p>This lesson looks at what an <strong>organization</strong> actually is, the features every organization shares, and two powerful models - <strong>Porter's Five Forces</strong> and <strong>Porter's Value Chain Analysis</strong> - that companies use to build <strong>competitive advantage</strong> with information systems.</p>
 
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
@@ -765,7 +765,7 @@ Production | Finance & Accounting | Human Resources</code></pre>
     <div class="divider"></div>
 
     <h2>Relationship Between Organizations and Information Technology</h2>
-    <p>Organizations and Information Technology have a <strong>two-way (reciprocal)</strong> relationship — each shapes the other. This relationship is filtered through several <strong>mediating factors</strong>:</p>
+    <p>Organizations and Information Technology have a <strong>two-way (reciprocal)</strong> relationship - each shapes the other. This relationship is filtered through several <strong>mediating factors</strong>:</p>
     <pre><code>Organizations ⇄ [ Mediating Factors ] ⇄ Information Technology
 
 Mediating Factors:
@@ -819,9 +819,9 @@ Structure:                  Process:
 
     <h3>Routines and Business Processes</h3>
     <ul>
-      <li><strong>Routines</strong> (Standard Operating Procedures) — precise rules, procedures, and practices developed to cope with virtually all expected situations.</li>
-      <li><strong>Business processes</strong> — collections of routines.</li>
-      <li><strong>Business firm</strong> — a collection of business processes.</li>
+      <li><strong>Routines</strong> (Standard Operating Procedures) - precise rules, procedures, and practices developed to cope with virtually all expected situations.</li>
+      <li><strong>Business processes</strong> - collections of routines.</li>
+      <li><strong>Business firm</strong> - a collection of business processes.</li>
     </ul>
     <pre><code>Routines
     ↓
@@ -851,7 +851,7 @@ Collection of business processes  →  (Business Firm)</code></pre>
       <li>Organizations are <strong>open to, and dependent on,</strong> the social and physical environment.</li>
       <li>Organizations can <strong>influence</strong> their environments.</li>
       <li><strong>Environments generally change faster</strong> than organizations.</li>
-      <li>Information systems can be an instrument of <strong>environmental scanning</strong> — acting like a lens.</li>
+      <li>Information systems can be an instrument of <strong>environmental scanning</strong> - acting like a lens.</li>
     </ul>
     <pre><code>Environmental Resources & Constraints:
 Governments, Competitors, Customers,
@@ -871,27 +871,27 @@ Financial Institutions, Culture, Knowledge, Technology
       <p>A <strong>disruptive technology</strong> brings about sweeping change to businesses, industries, and markets. Examples: personal computers, word processing software, the Internet, the PageRank algorithm.</p>
     </div>
     <ul>
-      <li><strong>First movers</strong> — the inventors of disruptive technologies.</li>
-      <li><strong>Fast followers</strong> — firms with the size and resources to capitalize on that technology.</li>
+      <li><strong>First movers</strong> - the inventors of disruptive technologies.</li>
+      <li><strong>Fast followers</strong> - firms with the size and resources to capitalize on that technology.</li>
     </ul>
     <h4 style="margin:0 0 6px 0;">Examples of Disruptive Technologies</h4>
     <ul>
-      <li><strong>Microprocessor chips (1971)</strong> — thousands, and eventually millions, of transistors on a silicon chip.</li>
-      <li><strong>Personal computers (1975)</strong> — small, inexpensive, but fully functional desktop computers.</li>
-      <li><strong>Digital photography (1975)</strong> — using CCD (charge-coupled device) image sensor chips to record images.</li>
-      <li><strong>World Wide Web (1989)</strong> — a global database of digital files and "pages" instantly available.</li>
-      <li><strong>Internet music, video, TV services (1998)</strong> — repositories of downloadable music, video, and TV broadcasts on the web.</li>
-      <li><strong>PageRank algorithm</strong> — a method for ranking web pages by popularity to supplement keyword search.</li>
-      <li><strong>Software as a web service</strong> — using the Internet to provide remote access to online software.</li>
+      <li><strong>Microprocessor chips (1971)</strong> - thousands, and eventually millions, of transistors on a silicon chip.</li>
+      <li><strong>Personal computers (1975)</strong> - small, inexpensive, but fully functional desktop computers.</li>
+      <li><strong>Digital photography (1975)</strong> - using CCD (charge-coupled device) image sensor chips to record images.</li>
+      <li><strong>World Wide Web (1989)</strong> - a global database of digital files and "pages" instantly available.</li>
+      <li><strong>Internet music, video, TV services (1998)</strong> - repositories of downloadable music, video, and TV broadcasts on the web.</li>
+      <li><strong>PageRank algorithm</strong> - a method for ranking web pages by popularity to supplement keyword search.</li>
+      <li><strong>Software as a web service</strong> - using the Internet to provide remote access to online software.</li>
     </ul>
 
     <h3>Organizational Structure</h3>
     <ul>
-      <li><strong>Entrepreneurial structure</strong> — small start-up business.</li>
-      <li><strong>Machine bureaucracy</strong> — midsize manufacturing firm.</li>
-      <li><strong>Divisionalized bureaucracy</strong> — Fortune 500 firms, such as General Motors.</li>
-      <li><strong>Professional bureaucracy</strong> — law firms, school systems, hospitals.</li>
-      <li><strong>Adhocracy</strong> — consulting firms.</li>
+      <li><strong>Entrepreneurial structure</strong> - small start-up business.</li>
+      <li><strong>Machine bureaucracy</strong> - midsize manufacturing firm.</li>
+      <li><strong>Divisionalized bureaucracy</strong> - Fortune 500 firms, such as General Motors.</li>
+      <li><strong>Professional bureaucracy</strong> - law firms, school systems, hospitals.</li>
+      <li><strong>Adhocracy</strong> - consulting firms.</li>
     </ul>
 
     <div class="divider"></div>
@@ -909,7 +909,7 @@ Financial Institutions, Culture, Knowledge, Technology
       <li>IT changes the <strong>relative costs of capital</strong> and the <strong>costs of information</strong>.</li>
       <li>Information systems technology is a <strong>factor of production</strong>, like capital and labor.</li>
       <li>IT affects the cost and quality of information and changes the <strong>economics of information</strong>.</li>
-      <li>Information technology helps firms <strong>contract in size</strong> because it can reduce <strong>transaction costs</strong> (the cost of participating in markets) — this leads to <strong>outsourcing</strong>.</li>
+      <li>Information technology helps firms <strong>contract in size</strong> because it can reduce <strong>transaction costs</strong> (the cost of participating in markets) - this leads to <strong>outsourcing</strong>.</li>
     </ul>
 
     <h3>Organizational and Behavioral Impacts</h3>
@@ -920,10 +920,10 @@ Financial Institutions, Culture, Knowledge, Technology
           <li>Fewer managers needed (IT enables faster decision making and increases span of control)</li>
         </ul>
       </li>
-      <li><strong>Postindustrial organizations</strong> — organizations flatten because in postindustrial societies, authority increasingly relies on <strong>knowledge and competence</strong> rather than formal positions.</li>
+      <li><strong>Postindustrial organizations</strong> - organizations flatten because in postindustrial societies, authority increasingly relies on <strong>knowledge and competence</strong> rather than formal positions.</li>
       <li><strong>Organizational resistance to change</strong>:
         <ul>
-          <li>Information systems become bound up in organizational politics because they influence access to a key resource — <strong>information</strong>.</li>
+          <li>Information systems become bound up in organizational politics because they influence access to a key resource - <strong>information</strong>.</li>
           <li>Information systems potentially change an organization's structure, culture, politics, and work.</li>
         </ul>
       </li>
@@ -935,7 +935,7 @@ Financial Institutions, Culture, Knowledge, Technology
   ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲                     (fewer layers of management)</code></pre>
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
-      <p>The <strong>most common reason</strong> for the failure of large IT projects is <strong>organizational and political resistance to change</strong> — not the technology itself.</p>
+      <p>The <strong>most common reason</strong> for the failure of large IT projects is <strong>organizational and political resistance to change</strong> - not the technology itself.</p>
     </div>
 
     <h3>Impact of the Internet</h3>
@@ -986,8 +986,8 @@ Bargaining power  →  Rivalry among   ←  Bargaining power
       <li>Concentration Ratio</li>
       <li>Industry Growth</li>
       <li>Relationship between Competitors</li>
-      <li><strong>Competencies</strong> — Resources, Leadership, Brand, Innovation</li>
-      <li><strong>Exit Barriers</strong> — Redundancy Payments, Effect of withdrawal on other operations, Reluctance of management to accept defeat, Government pressure</li>
+      <li><strong>Competencies</strong> - Resources, Leadership, Brand, Innovation</li>
+      <li><strong>Exit Barriers</strong> - Redundancy Payments, Effect of withdrawal on other operations, Reluctance of management to accept defeat, Government pressure</li>
     </ul>
 
     <h3>3. Threat of Substitutes</h3>
@@ -1022,19 +1022,19 @@ Bargaining power  →  Rivalry among   ←  Bargaining power
 
     <h3>Information System Strategies for Dealing with Competitive Forces</h3>
     <ul>
-      <li><strong>Low-cost leadership</strong> — use information systems to produce products and services at a lower price than competitors while enhancing quality and level of service.</li>
-      <li><strong>Product differentiation</strong> — use information systems to differentiate products and enable new services and products.</li>
-      <li><strong>Focus on market niche</strong> — use information systems to enable a focused strategy on a single market niche; specialize.</li>
-      <li><strong>Customer and supplier intimacy</strong> — use information systems to develop strong ties and loyalty with customers and suppliers.</li>
+      <li><strong>Low-cost leadership</strong> - use information systems to produce products and services at a lower price than competitors while enhancing quality and level of service.</li>
+      <li><strong>Product differentiation</strong> - use information systems to differentiate products and enable new services and products.</li>
+      <li><strong>Focus on market niche</strong> - use information systems to enable a focused strategy on a single market niche; specialize.</li>
+      <li><strong>Customer and supplier intimacy</strong> - use information systems to develop strong ties and loyalty with customers and suppliers.</li>
     </ul>
 
     <h3>Impact of the Internet on Competitive Forces and Industry Structure</h3>
     <ul>
-      <li><strong>Substitute products or services</strong> — enables substitutes to emerge with new approaches to meeting needs and performing functions.</li>
-      <li><strong>Customers' bargaining power</strong> — availability of global price and product information shifts bargaining power to customers.</li>
-      <li><strong>Suppliers' bargaining power</strong> — procurement over the Internet tends to raise bargaining power over suppliers; suppliers can also benefit from reduced barriers to entry and the elimination of distributors and other intermediaries.</li>
-      <li><strong>Threat of new entrants</strong> — reduces barriers to entry, such as the need for a sales force, access to channels, and physical assets; provides technology that makes other things easier to do.</li>
-      <li><strong>Positioning and rivalry among existing competitors</strong> — widens the geographic market, increasing the number of competitors and reducing differences among competitors; makes it harder to sustain operational advantages; puts pressure to compete on price.</li>
+      <li><strong>Substitute products or services</strong> - enables substitutes to emerge with new approaches to meeting needs and performing functions.</li>
+      <li><strong>Customers' bargaining power</strong> - availability of global price and product information shifts bargaining power to customers.</li>
+      <li><strong>Suppliers' bargaining power</strong> - procurement over the Internet tends to raise bargaining power over suppliers; suppliers can also benefit from reduced barriers to entry and the elimination of distributors and other intermediaries.</li>
+      <li><strong>Threat of new entrants</strong> - reduces barriers to entry, such as the need for a sales force, access to channels, and physical assets; provides technology that makes other things easier to do.</li>
+      <li><strong>Positioning and rivalry among existing competitors</strong> - widens the geographic market, increasing the number of competitors and reducing differences among competitors; makes it harder to sustain operational advantages; puts pressure to compete on price.</li>
     </ul>
 
     <div class="divider"></div>
@@ -1062,19 +1062,19 @@ Suppliers' Suppliers → Suppliers → Firm → Distributors → Customers
 
     <h3>Primary Activities</h3>
     <ul>
-      <li><strong>Inbound Logistics</strong> — Receiving, Storing, Stock Control of Raw Materials</li>
-      <li><strong>Operations</strong> — Conversion of Input to Finished Goods; Production System; Capacity Utilization</li>
-      <li><strong>Outbound Logistics</strong> — Storing, Testing, Packaging, and Distribution of the Finished Goods</li>
-      <li><strong>Marketing &amp; Sales</strong> — Promotional Activities; Informing customers and persuading them to buy</li>
-      <li><strong>[After Sales] Services</strong> — Maintenance, Repairing, Guarantees, Advisory Services</li>
+      <li><strong>Inbound Logistics</strong> - Receiving, Storing, Stock Control of Raw Materials</li>
+      <li><strong>Operations</strong> - Conversion of Input to Finished Goods; Production System; Capacity Utilization</li>
+      <li><strong>Outbound Logistics</strong> - Storing, Testing, Packaging, and Distribution of the Finished Goods</li>
+      <li><strong>Marketing &amp; Sales</strong> - Promotional Activities; Informing customers and persuading them to buy</li>
+      <li><strong>[After Sales] Services</strong> - Maintenance, Repairing, Guarantees, Advisory Services</li>
     </ul>
 
     <h3>Support Activities</h3>
     <ul>
-      <li><strong>Procurement</strong> — Purchase of Inputs for Primary Activities</li>
-      <li><strong>Technological Developments (R&amp;D)</strong> — Product and Process Design, Continuous Improvement, Innovation</li>
-      <li><strong>Human Resources</strong> — Recruitment, Training and Development, Motivation and Rewarding</li>
-      <li><strong>Firm Infrastructure</strong> — Structure, Culture, Management Planning, Finance</li>
+      <li><strong>Procurement</strong> - Purchase of Inputs for Primary Activities</li>
+      <li><strong>Technological Developments (R&amp;D)</strong> - Product and Process Design, Continuous Improvement, Innovation</li>
+      <li><strong>Human Resources</strong> - Recruitment, Training and Development, Motivation and Rewarding</li>
+      <li><strong>Firm Infrastructure</strong> - Structure, Culture, Management Planning, Finance</li>
     </ul>
 
     <div class="callout callout-yellow">
@@ -1085,7 +1085,7 @@ Suppliers' Suppliers → Suppliers → Firm → Distributors → Customers
     <h3>Extending the Value Chain: The Value Web</h3>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>A <strong>value web</strong> is a collection of independent firms that use information technology to coordinate their value chains to produce a product or service for a market collectively. It is more <strong>customer driven</strong> and operates in a <strong>less linear</strong> fashion than the traditional value chain — synchronizing the value chains of business partners within an industry to respond rapidly to changes in supply and demand.</p>
+      <p>A <strong>value web</strong> is a collection of independent firms that use information technology to coordinate their value chains to produce a product or service for a market collectively. It is more <strong>customer driven</strong> and operates in a <strong>less linear</strong> fashion than the traditional value chain - synchronizing the value chains of business partners within an industry to respond rapidly to changes in supply and demand.</p>
     </div>
 
     <div class="divider"></div>
@@ -1108,7 +1108,7 @@ Suppliers' Suppliers → Suppliers → Firm → Distributors → Customers
 
     <h2>Lesson Summary</h2>
     <ul>
-      <li>What is an Organization — Technical and Behavioral definitions</li>
+      <li>What is an Organization - Technical and Behavioral definitions</li>
       <li>Features of Organizations</li>
       <li>Porter's Five Forces Model</li>
       <li>Porter's Value Chain Analysis</li>
@@ -1211,12 +1211,12 @@ content: `
 <p>In simple words, <strong>ethics is about professional behavior</strong>.</p>
 
 <div class="callout callout-blue">
-  <span class="callout-label">Definition — Ethics</span>
+  <span class="callout-label">Definition - Ethics</span>
   <p><strong>Ethics</strong> refers to the principles of <strong>right and wrong</strong> that individuals, acting as <strong>free moral agents</strong>, use to make choices that guide their behavior.</p>
 </div>
 
 <div class="callout callout-blue">
-  <span class="callout-label">Definition — Social Issues</span>
+  <span class="callout-label">Definition - Social Issues</span>
   <p><strong>Social issues</strong> are matters of concern to <strong>governments and the community</strong>.</p>
 </div>
 
@@ -1253,13 +1253,13 @@ Accountability and Control</code></pre>
 
 <h2>Key Technology Trends that Raise Ethical Issues</h2>
 <ol>
-  <li><strong>AI and ML expansion</strong> — bias and transparency concerns</li>
-  <li><strong>Advanced data analytics</strong> — profiling and surveillance capitalism</li>
-  <li><strong>Cloud and edge computing</strong> — data jurisdiction issues</li>
-  <li><strong>IoT</strong> — massive data collection</li>
-  <li><strong>Blockchain</strong> — privacy and inclusion ethics</li>
-  <li><strong>Quantum computing</strong> — encryption risks</li>
-  <li><strong>Sustainability</strong> — green IT and e-waste</li>
+  <li><strong>AI and ML expansion</strong> - bias and transparency concerns</li>
+  <li><strong>Advanced data analytics</strong> - profiling and surveillance capitalism</li>
+  <li><strong>Cloud and edge computing</strong> - data jurisdiction issues</li>
+  <li><strong>IoT</strong> - massive data collection</li>
+  <li><strong>Blockchain</strong> - privacy and inclusion ethics</li>
+  <li><strong>Quantum computing</strong> - encryption risks</li>
+  <li><strong>Sustainability</strong> - green IT and e-waste</li>
 </ol>
 
 <div class="divider"></div>
@@ -1267,11 +1267,11 @@ Accountability and Control</code></pre>
 <h2>Ethics in an Information Society</h2>
 <h3>Basic Concepts</h3>
 <ul>
-  <li><strong>Responsibility</strong> — accepting the potential costs, duties and obligations of your decisions.</li>
-  <li><strong>Accountability</strong> — deciding <em>who</em> should take responsibility for decisions and actions.</li>
-  <li><strong>Liability</strong> — <em>legally</em> placing responsibility on a person or group.</li>
-  <li><strong>Due process</strong> — making sure laws are applied <em>fairly and correctly</em>.</li>
-  <li><strong>Digital trust</strong> — transparency and data integrity.</li>
+  <li><strong>Responsibility</strong> - accepting the potential costs, duties and obligations of your decisions.</li>
+  <li><strong>Accountability</strong> - deciding <em>who</em> should take responsibility for decisions and actions.</li>
+  <li><strong>Liability</strong> - <em>legally</em> placing responsibility on a person or group.</li>
+  <li><strong>Due process</strong> - making sure laws are applied <em>fairly and correctly</em>.</li>
+  <li><strong>Digital trust</strong> - transparency and data integrity.</li>
 </ul>
 
 <div class="callout callout-yellow">
@@ -1295,11 +1295,11 @@ Accountability and Control</code></pre>
 
 <h3>The Key Question for Each Dimension</h3>
 <ol>
-  <li><strong>Information rights and obligations</strong> — What information rights do individuals and organizations have about themselves? What can they protect?</li>
-  <li><strong>Property rights and obligations</strong> — How will traditional intellectual property rights be protected in a digital society, where tracing and accounting for ownership is difficult and ignoring such rights is very easy?</li>
-  <li><strong>Accountability and control</strong> — Who can and will be held accountable and liable for harm done to individual and collective information and property rights?</li>
-  <li><strong>System quality</strong> — What standards of data and system quality should we demand to protect individual rights and the safety of society?</li>
-  <li><strong>Quality of life</strong> — What values should be preserved in an information and knowledge-based society? Which institutions should we protect from violation? Which cultural values and practices are supported by new information technology?</li>
+  <li><strong>Information rights and obligations</strong> - What information rights do individuals and organizations have about themselves? What can they protect?</li>
+  <li><strong>Property rights and obligations</strong> - How will traditional intellectual property rights be protected in a digital society, where tracing and accounting for ownership is difficult and ignoring such rights is very easy?</li>
+  <li><strong>Accountability and control</strong> - Who can and will be held accountable and liable for harm done to individual and collective information and property rights?</li>
+  <li><strong>System quality</strong> - What standards of data and system quality should we demand to protect individual rights and the safety of society?</li>
+  <li><strong>Quality of life</strong> - What values should be preserved in an information and knowledge-based society? Which institutions should we protect from violation? Which cultural values and practices are supported by new information technology?</li>
 </ol>
 
 <div class="divider"></div>
@@ -1318,13 +1318,13 @@ Accountability and Control</code></pre>
 
 <h3>Copyrights</h3>
 <div class="callout callout-blue">
-  <span class="callout-label">Definition — Copyright</span>
+  <span class="callout-label">Definition - Copyright</span>
   <p><strong>Copyright</strong> is a <strong>statutory grant</strong> (given by law) that protects creators of intellectual property from having their work <strong>copied</strong> by others.</p>
 </div>
 
 <h3>Patents</h3>
 <div class="callout callout-blue">
-  <span class="callout-label">Definition — Patent</span>
+  <span class="callout-label">Definition - Patent</span>
   <p>A <strong>patent</strong> gives the owner an <strong>exclusive monopoly</strong> on the ideas behind an invention for <strong>20 years</strong>.</p>
 </div>
 
@@ -1424,8 +1424,8 @@ content: `
 <div class="callout callout-blue">
   <span class="callout-label">What We Discuss Today</span>
   <ul>
-    <li><strong>Enterprise Systems (ERP)</strong> — characteristics, how it works, business value</li>
-    <li><strong>Supply Chain Management (SCM) Systems</strong> — upstream and downstream, information and SCM, bullwhip effect, how IS facilitate SCM, SCM software, global supply chain issues, SCM system models, business value of SCM, the emerging internet-driven supply chain</li>
+    <li><strong>Enterprise Systems (ERP)</strong> - characteristics, how it works, business value</li>
+    <li><strong>Supply Chain Management (SCM) Systems</strong> - upstream and downstream, information and SCM, bullwhip effect, how IS facilitate SCM, SCM software, global supply chain issues, SCM system models, business value of SCM, the emerging internet-driven supply chain</li>
   </ul>
 </div>
 
@@ -1443,7 +1443,7 @@ content: `
 <p>Enterprise systems are also called <strong>Enterprise Resource Planning (ERP) systems</strong>.</p>
 
 <div class="callout callout-blue">
-  <span class="callout-label">Definition — Enterprise System</span>
+  <span class="callout-label">Definition - Enterprise System</span>
   <p>A <strong>suite of integrated software modules</strong> with a <strong>common central database</strong>.</p>
 </div>
 
@@ -1512,7 +1512,7 @@ purchases
 <h2>Supply Chain Management Systems</h2>
 
 <div class="callout callout-blue">
-  <span class="callout-label">Definition — Supply Chain</span>
+  <span class="callout-label">Definition - Supply Chain</span>
   <p>A <strong>network of organizations and business processes</strong> for:</p>
   <ul>
     <li><strong>Procuring</strong> raw materials</li>
@@ -1521,7 +1521,7 @@ purchases
   </ul>
 </div>
 
-<h3>Example — Nike's Supply Chain</h3>
+<h3>Example - Nike's Supply Chain</h3>
 <pre><code>UPSTREAM
 
 Tier 3 suppliers -> Tier 2 suppliers -> Tier 1 suppliers (contract suppliers)
@@ -1734,8 +1734,8 @@ content: `
 <div class="callout callout-blue">
   <span class="callout-label">What We Discuss Today</span>
   <ul>
-    <li><strong>Customer Relationship Management (CRM) Systems</strong> — what, software, operational and analytical CRM, business value</li>
-    <li>Enterprise applications — new opportunities and challenges</li>
+    <li><strong>Customer Relationship Management (CRM) Systems</strong> - what, software, operational and analytical CRM, business value</li>
+    <li>Enterprise applications - new opportunities and challenges</li>
     <li>Next-generation enterprise applications</li>
     <li>Social CRM</li>
     <li>Business Intelligence</li>
@@ -1768,7 +1768,7 @@ content: `
 <p>In large businesses there are <strong>too many customers</strong> and <strong>too many ways</strong> customers interact with the firm. CRM systems solve this.</p>
 
 <div class="callout callout-blue">
-  <span class="callout-label">Definition — CRM Systems</span>
+  <span class="callout-label">Definition - CRM Systems</span>
   <p>CRM systems <strong>capture and integrate</strong> customer data from all over the organization, <strong>consolidate and analyze</strong> it, and <strong>distribute</strong> customer information to various systems and <strong>customer touch points</strong>. They provide a <strong>single enterprise view of customers</strong>.</p>
 </div>
 
@@ -1853,7 +1853,7 @@ customer profiles, churn rates</code></pre>
 </ul>
 
 <div class="callout callout-blue">
-  <span class="callout-label">Definition — Churn Rate</span>
+  <span class="callout-label">Definition - Churn Rate</span>
   <p>The <strong>number of customers who stop using or buying</strong> a company's products or services. It is an indicator of the <strong>growth or decline</strong> of the firm's customer base.</p>
 </div>
 
@@ -1862,7 +1862,7 @@ customer profiles, churn rates</code></pre>
 <h2>Enterprise Applications: New Opportunities and Challenges</h2>
 <p>Enterprise applications bring benefits, but also challenges:</p>
 <ul>
-  <li><strong>Highly expensive</strong> to purchase and implement — about <strong>$3.5 million to over $12 million, over 16 months</strong>.</li>
+  <li><strong>Highly expensive</strong> to purchase and implement - about <strong>$3.5 million to over $12 million, over 16 months</strong>.</li>
   <li><strong>Technological</strong> changes.</li>
   <li><strong>Business process</strong> changes.</li>
   <li><strong>Organizational</strong> changes.</li>

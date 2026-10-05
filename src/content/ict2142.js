@@ -14,7 +14,7 @@ export const lessons = [
 
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>This course unit is worth <strong>2 credits</strong> and runs for <strong>45 hours</strong> in total — <strong>15 hours</strong> of theory and <strong>30 hours</strong> of practical work.</p>
+      <p>This course unit is worth <strong>2 credits</strong> and runs for <strong>45 hours</strong> in total - <strong>15 hours</strong> of theory and <strong>30 hours</strong> of practical work.</p>
     </div>
 
     <h3>Aim of the Module</h3>
@@ -44,10 +44,10 @@ export const lessons = [
 
     <h3>Evaluation Criteria</h3>
     <ul>
-      <li><strong>Theory Exam</strong> — 70%</li>
-      <li><strong>Continuous Assessment</strong> — 30%</li>
-      <li>&nbsp;&nbsp;Quizzes — 10%</li>
-      <li>&nbsp;&nbsp;Mini Project — 20%</li>
+      <li><strong>Theory Exam</strong> - 70%</li>
+      <li><strong>Continuous Assessment</strong> - 30%</li>
+      <li>&nbsp;&nbsp;Quizzes - 10%</li>
+      <li>&nbsp;&nbsp;Mini Project - 20%</li>
     </ul>
 
     <h3>References</h3>
@@ -73,7 +73,7 @@ export const lessons = [
 
     <div class="callout callout-blue">
       <span class="callout-label">Definition</span>
-      <p><strong>Electronic business (e-business)</strong> means doing business electronically — completing business processes over open networks, using information instead of physical business processes.</p>
+      <p><strong>Electronic business (e-business)</strong> means doing business electronically - completing business processes over open networks, using information instead of physical business processes.</p>
     </div>
 
     <div class="callout callout-blue">
@@ -91,7 +91,7 @@ export const lessons = [
       <li>Business intelligence</li>
       <li>Collaborative technologies</li>
     </ul>
-    <p>E-business also connects to other areas such as <strong>enterprise resource management</strong>, <strong>online activities between businesses</strong>, and <strong>electronic transfer within a firm</strong> — all built around a central e-business hub.</p>
+    <p>E-business also connects to other areas such as <strong>enterprise resource management</strong>, <strong>online activities between businesses</strong>, and <strong>electronic transfer within a firm</strong> - all built around a central e-business hub.</p>
 
     <h3>Comparison Table</h3>
     <pre><code>BASIS                    | E-COMMERCE                 | E-BUSINESS
@@ -222,11 +222,11 @@ Consumer-to-Administration    | All electronic transactions between            |
       <p>E-commerce also comes with real risks:</p>
       <ul>
         <li>Perishable grocery products are much harder to sell online</li>
-        <li>Anyone, good or bad, can easily start a business — many bad sites end up taking customers' money</li>
+        <li>Anyone, good or bad, can easily start a business - many bad sites end up taking customers' money</li>
         <li>There is no guarantee of product quality</li>
         <li>No one can buy anything during a site crash</li>
         <li>There is little direct customer-to-company interaction, so customer loyalty is always uncertain</li>
-        <li>Hackers constantly look for opportunities — e-commerce sites, services, and payment gateways are always prone to attack</li>
+        <li>Hackers constantly look for opportunities - e-commerce sites, services, and payment gateways are always prone to attack</li>
       </ul>
     </div>
 
@@ -349,7 +349,7 @@ Consumer-to-Administration    | All electronic transactions between            |
         <li><strong>Uber</strong> → physical transportation + digital platform</li>
         <li><strong>Airbnb</strong> → physical accommodation + digital platform</li>
       </ul>
-      <p>The digital component changes <strong>how</strong> value is created and delivered — not necessarily <strong>what</strong> is being sold.</p>
+      <p>The digital component changes <strong>how</strong> value is created and delivered - not necessarily <strong>what</strong> is being sold.</p>
     </div>
 
     <div class="divider"></div>
@@ -489,13 +489,13 @@ Improved Recommendations</code></pre>
     </div>
 
     <ul>
-      <li><strong>Direct Network Effect</strong> — the value to a user increases as more users of the <em>same type</em> join the network.</li>
-      <li><strong>Indirect Network Effect</strong> — the value for one group increases because the number of users in <em>another group</em> increases.</li>
+      <li><strong>Direct Network Effect</strong> - the value to a user increases as more users of the <em>same type</em> join the network.</li>
+      <li><strong>Indirect Network Effect</strong> - the value for one group increases because the number of users in <em>another group</em> increases.</li>
     </ul>
 
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>Platform businesses like Uber and Airbnb rely heavily on network effects — more riders attract more drivers (and vice versa), which is an example of an <strong>indirect network effect</strong>.</p>
+      <p>Platform businesses like Uber and Airbnb rely heavily on network effects - more riders attract more drivers (and vice versa), which is an example of an <strong>indirect network effect</strong>.</p>
     </div>
   `,
   summary: {
@@ -513,7 +513,7 @@ Improved Recommendations</code></pre>
       'Network Effect',
     ],
     definitions: [
-      { term: 'Business Model', meaning: "A company's core strategy for how it creates, delivers, and captures value — covering what is sold, target customers, reach, and how it profits." },
+      { term: 'Business Model', meaning: "A company's core strategy for how it creates, delivers, and captures value - covering what is sold, target customers, reach, and how it profits." },
       { term: 'Digital Business Model', meaning: 'A business model that uses digital technologies to create, deliver, and/or capture value.' },
       { term: 'E-Business Model', meaning: 'A description of how an organization uses electronic networks and digital technologies to conduct business activities and create value.' },
       { term: 'Digital Platform', meaning: 'A digital service that facilitates interactions between two or more distinct but interdependent groups of users.' },
@@ -529,7 +529,7 @@ Improved Recommendations</code></pre>
     ],
     keyPoints: [
       'A business model explains what is sold, who the customers are, how they are reached, and how the company makes a profit.',
-      'Digital business does not require a digital product — Daraz, Uber, and Airbnb all combine physical products or services with a digital platform.',
+      'Digital business does not require a digital product - Daraz, Uber, and Airbnb all combine physical products or services with a digital platform.',
       'The six categories of e-business models are B2B, B2C, C2C, C2B, B2A, and C2A.',
       'Digital models differ from traditional ones in reach, scalability, personalization, and revenue models (subscription, commission, advertising, freemium).',
       'Five common digital business models: platform-based, subscription, freemium, on-demand, and marketplace.',
@@ -566,9 +566,9 @@ Improved Recommendations</code></pre>
     <p>The <strong>Internet</strong> is the communication network that connects customers, businesses, banks, payment providers, and logistics (delivery) providers. It lets all of these parties talk to each other so that an online purchase can actually happen.</p>
     <p>The core technologies behind e-commerce include:</p>
     <ul>
-      <li><strong>Internet Protocol (IP)</strong> — gives every device an address on the network.</li>
-      <li><strong>DNS</strong> — turns website names into IP addresses.</li>
-      <li><strong>TCP/IP</strong> — the rules that move data reliably across the Internet.</li>
+      <li><strong>Internet Protocol (IP)</strong> - gives every device an address on the network.</li>
+      <li><strong>DNS</strong> - turns website names into IP addresses.</li>
+      <li><strong>TCP/IP</strong> - the rules that move data reliably across the Internet.</li>
       <li><strong>HTTP/HTTPS</strong>, web browsers, web servers, databases, and cloud services.</li>
     </ul>
 
@@ -602,13 +602,13 @@ Improved Recommendations</code></pre>
     <h2>TCP/IP: The Foundation of Internet Communication</h2>
     <p><strong>TCP/IP</strong> is the basic set of rules that lets data travel from one device to another across the Internet.</p>
 
-    <h3>TCP — Transmission Control Protocol</h3>
+    <h3>TCP - Transmission Control Protocol</h3>
     <ul>
       <li>TCP makes sure data is delivered <strong>reliably</strong>.</li>
       <li>When there is a lot of information to send, TCP breaks it into smaller pieces called <strong>segments</strong> and makes sure they arrive correctly and in the right order.</li>
     </ul>
 
-    <h3>IP — Internet Protocol</h3>
+    <h3>IP - Internet Protocol</h3>
     <ul>
       <li>IP handles <strong>addressing</strong> and <strong>routing</strong> of data.</li>
       <li>Every device on an IP network has an <strong>IP address</strong>, and IP uses these addresses to decide where data should go.</li>
@@ -663,9 +663,9 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
 
     <h2>Web Browsers and Web Technologies</h2>
     <ul>
-      <li><strong>HTML</strong> — defines the structure of a web page (forms, links, product information, images, tables, and semantic elements).</li>
-      <li><strong>CSS</strong> — controls how a page looks and is laid out. <strong>Responsive design</strong> helps pages adapt to desktops, tablets, and smartphones.</li>
-      <li><strong>JavaScript</strong> — adds interaction and dynamic behavior, such as client-side validation, asynchronous requests, cart updates, and rich user interfaces.</li>
+      <li><strong>HTML</strong> - defines the structure of a web page (forms, links, product information, images, tables, and semantic elements).</li>
+      <li><strong>CSS</strong> - controls how a page looks and is laid out. <strong>Responsive design</strong> helps pages adapt to desktops, tablets, and smartphones.</li>
+      <li><strong>JavaScript</strong> - adds interaction and dynamic behavior, such as client-side validation, asynchronous requests, cart updates, and rich user interfaces.</li>
     </ul>
 
     <div class="divider"></div>
@@ -688,9 +688,9 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
     <h2>Caching and Content Delivery Networks (CDNs)</h2>
     <p><strong>Caching</strong> stores frequently requested data temporarily so it can be served faster the next time it is needed.</p>
     <ul>
-      <li><strong>Browser cache</strong> — stores selected resources on the user's own device.</li>
-      <li><strong>Server/application cache</strong> — stores frequently used data or computed results on the server side.</li>
-      <li><strong>CDN (Content Delivery Network)</strong> — spreads static content such as images, CSS, JavaScript, and videos across servers in many geographic locations (called edge locations).</li>
+      <li><strong>Browser cache</strong> - stores selected resources on the user's own device.</li>
+      <li><strong>Server/application cache</strong> - stores frequently used data or computed results on the server side.</li>
+      <li><strong>CDN (Content Delivery Network)</strong> - spreads static content such as images, CSS, JavaScript, and videos across servers in many geographic locations (called edge locations).</li>
     </ul>
 
     <div class="callout callout-green">
@@ -711,13 +711,13 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
     </ul>
 
     <h3>Static vs Dynamic Web Content</h3>
-    <p><strong>Static Web Pages</strong> — the same stored resource is delivered to many users.</p>
+    <p><strong>Static Web Pages</strong> - the same stored resource is delivered to many users.</p>
     <ul>
       <li>Examples: HTML pages, images, CSS, JavaScript files.</li>
       <li>Easy to cache and distribute through CDNs.</li>
       <li>Good for informational pages and static product assets.</li>
     </ul>
-    <p><strong>Dynamic Web Pages</strong> — generated or customized based on data, the user, the session, or the specific request.</p>
+    <p><strong>Dynamic Web Pages</strong> - generated or customized based on data, the user, the session, or the specific request.</p>
     <ul>
       <li>Examples: shopping cart, account page, stock availability, personalized recommendations.</li>
       <li>Usually needs application processing and database access.</li>
@@ -753,8 +753,8 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
     <h3>Scalability</h3>
     <ul>
       <li>The ability to handle an increasing workload.</li>
-      <li><strong>Vertical scaling</strong> — increase the resources (CPU, RAM) of one server.</li>
-      <li><strong>Horizontal scaling</strong> — add more servers or instances.</li>
+      <li><strong>Vertical scaling</strong> - increase the resources (CPU, RAM) of one server.</li>
+      <li><strong>Horizontal scaling</strong> - add more servers or instances.</li>
     </ul>
 
     <h3>Availability</h3>
@@ -774,7 +774,7 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
     <h2>Web APIs and Third-Party Integrations</h2>
     <p>An <strong>API (Application Programming Interface)</strong> defines how software components talk to each other and exchange data.</p>
     <ul>
-      <li>E-commerce businesses rarely build every supporting service themselves — instead, they connect to specialized external providers.</li>
+      <li>E-commerce businesses rarely build every supporting service themselves - instead, they connect to specialized external providers.</li>
       <li>Common integrations: payment gateways, delivery/logistics, identity and authentication, email/SMS, maps, analytics, tax, and fraud detection.</li>
       <li>APIs reduce development effort and let businesses connect different systems together.</li>
       <li>The quality of an integration affects reliability, security, customer experience, and how smoothly the business runs.</li>
@@ -827,10 +827,10 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
 
     <h3>Mobile Commerce Technologies</h3>
     <ul>
-      <li><strong>Responsive Web</strong> — one website adapts to different screen sizes, built with HTML + CSS + JavaScript, and accessible through any mobile browser.</li>
-      <li><strong>Native Apps</strong> — built specifically for one mobile platform, can access device capabilities through platform APIs, and are useful for rich, frequent interactions.</li>
-      <li><strong>Cross-Platform</strong> — a shared codebase can target multiple platforms, reducing development effort, using frameworks and platform bridges.</li>
-      <li><strong>Mobile Payments</strong> — digital wallets, QR payments, cards, bank-based payments, and provider APIs. Security and user authentication are critical here.</li>
+      <li><strong>Responsive Web</strong> - one website adapts to different screen sizes, built with HTML + CSS + JavaScript, and accessible through any mobile browser.</li>
+      <li><strong>Native Apps</strong> - built specifically for one mobile platform, can access device capabilities through platform APIs, and are useful for rich, frequent interactions.</li>
+      <li><strong>Cross-Platform</strong> - a shared codebase can target multiple platforms, reducing development effort, using frameworks and platform bridges.</li>
+      <li><strong>Mobile Payments</strong> - digital wallets, QR payments, cards, bank-based payments, and provider APIs. Security and user authentication are critical here.</li>
     </ul>
 
     <div class="divider"></div>
@@ -926,11 +926,11 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
     <h2>Learning Outcomes</h2>
     <p>By the end of this lesson, you should understand:</p>
     <ol>
-      <li><strong>Core Functions of an E-Commerce System</strong> — the essential front-end and back-end building blocks every online store needs.</li>
-      <li><strong>UX/UI Design Principles</strong> — design principles that build trust and guide customers smoothly toward purchase.</li>
-      <li><strong>Information Architecture &amp; Navigation</strong> — structuring content and menus so products are easy to find.</li>
-      <li><strong>Product Catalog, Search &amp; Filtering</strong> — designing listings, detail pages, search and faceted filtering.</li>
-      <li><strong>Responsive &amp; Mobile-First Design</strong> — adapting layouts across devices, with mobile as the starting point.</li>
+      <li><strong>Core Functions of an E-Commerce System</strong> - the essential front-end and back-end building blocks every online store needs.</li>
+      <li><strong>UX/UI Design Principles</strong> - design principles that build trust and guide customers smoothly toward purchase.</li>
+      <li><strong>Information Architecture &amp; Navigation</strong> - structuring content and menus so products are easy to find.</li>
+      <li><strong>Product Catalog, Search &amp; Filtering</strong> - designing listings, detail pages, search and faceted filtering.</li>
+      <li><strong>Responsive &amp; Mobile-First Design</strong> - adapting layouts across devices, with mobile as the starting point.</li>
     </ol>
 
     <div class="divider"></div>
@@ -938,7 +938,7 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
     <h2>What Is an E-Commerce Website?</h2>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>A digital platform that lets a business showcase, sell and manage products or services online — covering the full customer journey from product discovery to payment and delivery.</p>
+      <p>A digital platform that lets a business showcase, sell and manage products or services online - covering the full customer journey from product discovery to payment and delivery.</p>
     </div>
     <ul>
       <li>Combines a customer-facing <strong>storefront</strong> with back-office systems for inventory, orders and payments.</li>
@@ -947,9 +947,9 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
     </ul>
     <p>Three key characteristics of an e-commerce website:</p>
     <ul>
-      <li><strong>Always On</strong> — the storefront operates continuously, worldwide, with no fixed opening hours.</li>
-      <li><strong>Data-Driven</strong> — clicks, searches and purchases can be tracked to continuously improve the experience.</li>
-      <li><strong>Multi-Device</strong> — customers move between desktop, tablet and phone within a single shopping journey.</li>
+      <li><strong>Always On</strong> - the storefront operates continuously, worldwide, with no fixed opening hours.</li>
+      <li><strong>Data-Driven</strong> - clicks, searches and purchases can be tracked to continuously improve the experience.</li>
+      <li><strong>Multi-Device</strong> - customers move between desktop, tablet and phone within a single shopping journey.</li>
     </ul>
 
     <div class="divider"></div>
@@ -959,23 +959,23 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
     <h3>Front-End: Customer-Facing Functions</h3>
     <p>The features a shopper interacts with directly while browsing and buying.</p>
     <ul>
-      <li><strong>Product Browsing &amp; Catalog</strong> — category pages and listings that display products with images, names and prices.</li>
-      <li><strong>Search &amp; Filtering</strong> — tools that help shoppers locate specific products quickly within a large catalog.</li>
-      <li><strong>Shopping Cart</strong> — a temporary holding area for items a customer intends to purchase.</li>
-      <li><strong>Checkout &amp; Payment</strong> — the guided process that turns a cart into a confirmed, paid order.</li>
-      <li><strong>User Accounts</strong> — registration, login, saved addresses, order history and wishlists.</li>
-      <li><strong>Customer Support</strong> — live chat, FAQs and contact options that resolve doubts before they cause drop-off.</li>
+      <li><strong>Product Browsing &amp; Catalog</strong> - category pages and listings that display products with images, names and prices.</li>
+      <li><strong>Search &amp; Filtering</strong> - tools that help shoppers locate specific products quickly within a large catalog.</li>
+      <li><strong>Shopping Cart</strong> - a temporary holding area for items a customer intends to purchase.</li>
+      <li><strong>Checkout &amp; Payment</strong> - the guided process that turns a cart into a confirmed, paid order.</li>
+      <li><strong>User Accounts</strong> - registration, login, saved addresses, order history and wishlists.</li>
+      <li><strong>Customer Support</strong> - live chat, FAQs and contact options that resolve doubts before they cause drop-off.</li>
     </ul>
 
     <h3>Back-End: Administrative &amp; System Functions</h3>
     <p>The behind-the-scenes systems that keep the storefront running and up to date.</p>
     <ul>
-      <li><strong>Inventory Management</strong> — tracking stock levels in real time so unavailable items aren't sold.</li>
-      <li><strong>Order Management</strong> — processing, packing, shipping and handling returns or exchanges.</li>
-      <li><strong>Content Management (CMS)</strong> — updating product details, pricing, banners and promotions without new code.</li>
-      <li><strong>Payment Gateway Integration</strong> — securely connecting to processors such as PayHere, Stripe or PayPal.</li>
-      <li><strong>User &amp; Access Management</strong> — controlling admin roles, permissions and customer account data.</li>
-      <li><strong>Analytics &amp; Reporting</strong> — measuring traffic, sales trends and conversion rates to guide decisions.</li>
+      <li><strong>Inventory Management</strong> - tracking stock levels in real time so unavailable items aren't sold.</li>
+      <li><strong>Order Management</strong> - processing, packing, shipping and handling returns or exchanges.</li>
+      <li><strong>Content Management (CMS)</strong> - updating product details, pricing, banners and promotions without new code.</li>
+      <li><strong>Payment Gateway Integration</strong> - securely connecting to processors such as PayHere, Stripe or PayPal.</li>
+      <li><strong>User &amp; Access Management</strong> - controlling admin roles, permissions and customer account data.</li>
+      <li><strong>Analytics &amp; Reporting</strong> - measuring traffic, sales trends and conversion rates to guide decisions.</li>
     </ul>
 
     <h3>Payment Processing &amp; Security</h3>
@@ -985,10 +985,10 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
       <p>Every completed sale depends on this hand-off being both smooth for the customer and secure end-to-end.</p>
     </div>
     <ul>
-      <li><strong>SSL / TLS Encryption</strong> — encrypts data in transit between the customer's browser and the server.</li>
-      <li><strong>PCI-DSS Compliance</strong> — the industry standard for handling and storing cardholder data safely.</li>
-      <li><strong>Tokenization</strong> — replaces sensitive card details with a non-reversible token for storage.</li>
-      <li><strong>Fraud Detection</strong> — flags unusual transaction patterns before an order is confirmed.</li>
+      <li><strong>SSL / TLS Encryption</strong> - encrypts data in transit between the customer's browser and the server.</li>
+      <li><strong>PCI-DSS Compliance</strong> - the industry standard for handling and storing cardholder data safely.</li>
+      <li><strong>Tokenization</strong> - replaces sensitive card details with a non-reversible token for storage.</li>
+      <li><strong>Fraud Detection</strong> - flags unusual transaction patterns before an order is confirmed.</li>
     </ul>
 
     <div class="divider"></div>
@@ -997,26 +997,26 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
 
     <h3>UX vs UI in E-Commerce</h3>
     <ul>
-      <li><strong>UX (User Experience)</strong> — how easily and confidently a customer can complete a task. Example: finding a laptop, comparing options and checking out without confusion.</li>
-      <li><strong>UI (User Interface)</strong> — the visual and interactive layer. Example: buttons, typography, colors, product cards, icons, spacing and form controls.</li>
+      <li><strong>UX (User Experience)</strong> - how easily and confidently a customer can complete a task. Example: finding a laptop, comparing options and checking out without confusion.</li>
+      <li><strong>UI (User Interface)</strong> - the visual and interactive layer. Example: buttons, typography, colors, product cards, icons, spacing and form controls.</li>
     </ul>
 
     <h3>Core Design Principles</h3>
     <ul>
-      <li><strong>Simplicity &amp; Clarity</strong> — minimise cognitive load: clear labels, short paths, no unnecessary steps.</li>
-      <li><strong>Consistency</strong> — uniform colours, fonts and button styles across every page and screen.</li>
-      <li><strong>Visual Hierarchy</strong> — guide the eye to what matters most: product, price, and call-to-action.</li>
-      <li><strong>Immediate Feedback</strong> — loading states, confirmations and clear error messages at every action.</li>
-      <li><strong>Accessibility</strong> — sufficient colour contrast, alt text and full keyboard navigation.</li>
-      <li><strong>Trust &amp; Credibility</strong> — a professional, polished look signals a safe place to enter payment details.</li>
+      <li><strong>Simplicity &amp; Clarity</strong> - minimise cognitive load: clear labels, short paths, no unnecessary steps.</li>
+      <li><strong>Consistency</strong> - uniform colours, fonts and button styles across every page and screen.</li>
+      <li><strong>Visual Hierarchy</strong> - guide the eye to what matters most: product, price, and call-to-action.</li>
+      <li><strong>Immediate Feedback</strong> - loading states, confirmations and clear error messages at every action.</li>
+      <li><strong>Accessibility</strong> - sufficient colour contrast, alt text and full keyboard navigation.</li>
+      <li><strong>Trust &amp; Credibility</strong> - a professional, polished look signals a safe place to enter payment details.</li>
     </ul>
 
     <h3>Visual Design Elements</h3>
     <ul>
-      <li><strong>Colour</strong> — use brand colour purposefully; reserve one strong accent colour exclusively for calls-to-action like "Add to Cart".</li>
-      <li><strong>Typography</strong> — limit pages to two font families; keep prices and headings legible at a glance.</li>
-      <li><strong>Whitespace</strong> — avoid clutter; generous spacing lets product images and key details breathe.</li>
-      <li><strong>Imagery</strong> — high-quality, consistent product photography raises perceived value and trust.</li>
+      <li><strong>Colour</strong> - use brand colour purposefully; reserve one strong accent colour exclusively for calls-to-action like "Add to Cart".</li>
+      <li><strong>Typography</strong> - limit pages to two font families; keep prices and headings legible at a glance.</li>
+      <li><strong>Whitespace</strong> - avoid clutter; generous spacing lets product images and key details breathe.</li>
+      <li><strong>Imagery</strong> - high-quality, consistent product photography raises perceived value and trust.</li>
     </ul>
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
@@ -1027,9 +1027,9 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
     <ul>
       <li>Trust badges &amp; secure checkout icons visible near payment fields.</li>
       <li>Genuine customer reviews and star ratings on product pages.</li>
-      <li>Clear, prominent calls-to-action — one primary action per screen.</li>
-      <li>Transparent pricing — shipping and tax shown early, not at the last step.</li>
-      <li>Guest checkout available — registration is optional, not forced.</li>
+      <li>Clear, prominent calls-to-action - one primary action per screen.</li>
+      <li>Transparent pricing - shipping and tax shown early, not at the last step.</li>
+      <li>Guest checkout available - registration is optional, not forced.</li>
       <li>Return and refund policy is easy to find before purchase.</li>
     </ul>
     <div class="callout callout-blue">
@@ -1045,7 +1045,7 @@ E-commerce use   | Not suitable for sensitive data      | Essential for e-commer
     <p><strong>Information architecture (IA)</strong> is the practice of organising, structuring and labelling content so it is findable and usable.</p>
     <ul>
       <li>Logical categorisation that matches how customers think about products.</li>
-      <li><strong>Shallow hierarchy</strong> — keep any product reachable within 2–3 clicks.</li>
+      <li><strong>Shallow hierarchy</strong> - keep any product reachable within 2–3 clicks.</li>
       <li>Consistent labelling of categories, filters and navigation terms.</li>
       <li>Scalable structure that accommodates new products and categories.</li>
     </ul>
@@ -1062,11 +1062,11 @@ Breadcrumb: Home > Electronics > Laptops > Gaming Laptop X15
 
     <h3>Navigation Design Patterns</h3>
     <ul>
-      <li><strong>Global Navigation</strong> — primary categories stay visible on every page.</li>
-      <li><strong>Mega Menus</strong> — multi-column dropdowns organise a large catalogue at a glance.</li>
-      <li><strong>Breadcrumbs</strong> — shows the current location and lets users step back easily.</li>
-      <li><strong>Sticky Navigation</strong> — menu and cart icon stay visible while the page is scrolled.</li>
-      <li><strong>Footer Navigation</strong> — secondary links (policies, contact, sitemap) live in the footer.</li>
+      <li><strong>Global Navigation</strong> - primary categories stay visible on every page.</li>
+      <li><strong>Mega Menus</strong> - multi-column dropdowns organise a large catalogue at a glance.</li>
+      <li><strong>Breadcrumbs</strong> - shows the current location and lets users step back easily.</li>
+      <li><strong>Sticky Navigation</strong> - menu and cart icon stay visible while the page is scrolled.</li>
+      <li><strong>Footer Navigation</strong> - secondary links (policies, contact, sitemap) live in the footer.</li>
     </ul>
     <p>Example mega menu under "Electronics":</p>
     <pre><code>Laptops & PCs      Mobile & Tablets     Audio
@@ -1100,25 +1100,25 @@ Breadcrumb: Home > Electronics > Laptops > Gaming Laptops
       <p>Example PDP: <strong>Gaming Laptop X15</strong>, Rs. 385,000, in stock, with colour and storage (512GB / 1TB) selectors, an "Add to Cart" button, tabs for Specifications, Description, Reviews (326) and Q&amp;A, plus a "Related products" section.</p>
     </div>
 
-    <h3>Search Features — Making Products Findable</h3>
+    <h3>Search Features - Making Products Findable</h3>
     <ul>
-      <li><strong>Autocomplete</strong> — suggests matching products and categories as the user types, before pressing enter.</li>
-      <li><strong>Typo Tolerance</strong> — a search for "sneekers" still returns results for "sneakers".</li>
-      <li><strong>Relevance Ranking</strong> — ordered by relevance, popularity and current stock availability.</li>
-      <li><strong>Visual &amp; Voice Search</strong> — emerging ways to search using a photo or a spoken query.</li>
-      <li><strong>No-Results Handling</strong> — suggest close alternatives instead of a dead end.</li>
+      <li><strong>Autocomplete</strong> - suggests matching products and categories as the user types, before pressing enter.</li>
+      <li><strong>Typo Tolerance</strong> - a search for "sneekers" still returns results for "sneakers".</li>
+      <li><strong>Relevance Ranking</strong> - ordered by relevance, popularity and current stock availability.</li>
+      <li><strong>Visual &amp; Voice Search</strong> - emerging ways to search using a photo or a spoken query.</li>
+      <li><strong>No-Results Handling</strong> - suggest close alternatives instead of a dead end.</li>
     </ul>
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
-      <p>Prefix and fuzzy matching return relevant items instantly and keep the shopper in flow. For example, searching <code>run</code> matches "Running Shoes (Men)", "Running Shorts" and "Running Watch — GPS", even though only a partial word was typed.</p>
+      <p>Prefix and fuzzy matching return relevant items instantly and keep the shopper in flow. For example, searching <code>run</code> matches "Running Shoes (Men)", "Running Shorts" and "Running Watch - GPS", even though only a partial word was typed.</p>
     </div>
 
-    <h3>Filtering &amp; Sorting — Faceted Navigation</h3>
+    <h3>Filtering &amp; Sorting - Faceted Navigation</h3>
     <ul>
-      <li><strong>Facets</strong> — price range, brand, size, colour, rating and availability.</li>
-      <li><strong>Sorting</strong> — relevance, price (low–high), newest, best-selling.</li>
-      <li><strong>Applied Filter Chips</strong> — active filters shown as removable tags above the results.</li>
-      <li><strong>Live Result Count</strong> — the number of matching products updates instantly.</li>
+      <li><strong>Facets</strong> - price range, brand, size, colour, rating and availability.</li>
+      <li><strong>Sorting</strong> - relevance, price (low–high), newest, best-selling.</li>
+      <li><strong>Applied Filter Chips</strong> - active filters shown as removable tags above the results.</li>
+      <li><strong>Live Result Count</strong> - the number of matching products updates instantly.</li>
     </ul>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
@@ -1131,21 +1131,21 @@ Breadcrumb: Home > Electronics > Laptops > Gaming Laptops
 
     <h3>Core Concepts</h3>
     <ul>
-      <li><strong>Fluid Grid Layouts</strong> — proportional widths (%, fr) instead of fixed pixel columns.</li>
-      <li><strong>Flexible Images &amp; Media</strong> — images and video scale to fit within their containers.</li>
-      <li><strong>CSS Media Queries</strong> — breakpoints adapt the layout to the available screen width.</li>
+      <li><strong>Fluid Grid Layouts</strong> - proportional widths (%, fr) instead of fixed pixel columns.</li>
+      <li><strong>Flexible Images &amp; Media</strong> - images and video scale to fit within their containers.</li>
+      <li><strong>CSS Media Queries</strong> - breakpoints adapt the layout to the available screen width.</li>
     </ul>
 
     <h3>The Mobile-First Approach</h3>
-    <p>Design for the smallest screen and the biggest constraints first — limited space, touch input, variable network speed — then progressively enhance the layout for larger screens.</p>
+    <p>Design for the smallest screen and the biggest constraints first - limited space, touch input, variable network speed - then progressively enhance the layout for larger screens.</p>
     <ul>
-      <li><strong>Thumb-Friendly Tap Targets</strong> — buttons and links sized at least ~44×44px so they're easy to tap accurately.</li>
-      <li><strong>Simplified Navigation</strong> — condensed, single-column layouts with a hamburger menu for secondary items.</li>
-      <li><strong>Streamlined Checkout</strong> — fewer form fields, autofill, and mobile wallets like Apple Pay or Google Pay.</li>
-      <li><strong>Fast Load Times</strong> — compressed images and lazy loading keep pages quick on mobile networks.</li>
+      <li><strong>Thumb-Friendly Tap Targets</strong> - buttons and links sized at least ~44×44px so they're easy to tap accurately.</li>
+      <li><strong>Simplified Navigation</strong> - condensed, single-column layouts with a hamburger menu for secondary items.</li>
+      <li><strong>Streamlined Checkout</strong> - fewer form fields, autofill, and mobile wallets like Apple Pay or Google Pay.</li>
+      <li><strong>Fast Load Times</strong> - compressed images and lazy loading keep pages quick on mobile networks.</li>
     </ul>
 
-    <h3>Comparison — Desktop vs. Mobile Layout</h3>
+    <h3>Comparison - Desktop vs. Mobile Layout</h3>
     <p>Desktop uses a multi-column grid, full top navigation, and shows more content per screen. Mobile adapts with these key differences:</p>
     <ul>
       <li>Columns collapse to one.</li>
@@ -1159,23 +1159,23 @@ Breadcrumb: Home > Electronics > Laptops > Gaming Laptops
     <h2>Summary</h2>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p><strong>Core Functions</strong> — front-end browsing/checkout and back-end inventory/payments must work as one system.</p>
+      <p><strong>Core Functions</strong> - front-end browsing/checkout and back-end inventory/payments must work as one system.</p>
     </div>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p><strong>UX/UI Principles</strong> — simplicity, consistency and visible trust signals turn visits into completed purchases.</p>
+      <p><strong>UX/UI Principles</strong> - simplicity, consistency and visible trust signals turn visits into completed purchases.</p>
     </div>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p><strong>Information Architecture</strong> — a shallow, logical structure and clear navigation keep products findable.</p>
+      <p><strong>Information Architecture</strong> - a shallow, logical structure and clear navigation keep products findable.</p>
     </div>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p><strong>Catalog, Search &amp; Filters</strong> — well-designed listings, forgiving search and faceted filters help users decide fast.</p>
+      <p><strong>Catalog, Search &amp; Filters</strong> - well-designed listings, forgiving search and faceted filters help users decide fast.</p>
     </div>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p><strong>Responsive &amp; Mobile-First</strong> — design from the smallest screen up, since most shoppers arrive on a phone.</p>
+      <p><strong>Responsive &amp; Mobile-First</strong> - design from the smallest screen up, since most shoppers arrive on a phone.</p>
     </div>
   `,
   summary: {
@@ -1192,17 +1192,17 @@ Breadcrumb: Home > Electronics > Laptops > Gaming Laptops
       'Structuring Content',
       'Navigation Design Patterns',
       'Listing & Detail Page Design',
-      'Search Features — Making Products Findable',
-      'Filtering & Sorting — Faceted Navigation',
+      'Search Features - Making Products Findable',
+      'Filtering & Sorting - Faceted Navigation',
       'Core Concepts (Responsive Design)',
       'The Mobile-First Approach',
-      'Comparison — Desktop vs. Mobile Layout',
+      'Comparison - Desktop vs. Mobile Layout',
     ],
     definitions: [
       { term: 'E-Commerce Website', meaning: 'A digital platform that lets a business showcase, sell and manage products or services online, covering the full customer journey from discovery to payment and delivery.' },
       { term: 'Information Architecture (IA)', meaning: 'The practice of organising, structuring and labelling content so it is findable and usable.' },
       { term: 'UX (User Experience)', meaning: 'How easily and confidently a customer can complete a task on a website.' },
-      { term: 'UI (User Interface)', meaning: 'The visual and interactive layer of a website — buttons, typography, colors, icons and spacing.' },
+      { term: 'UI (User Interface)', meaning: 'The visual and interactive layer of a website - buttons, typography, colors, icons and spacing.' },
       { term: 'PCI-DSS Compliance', meaning: 'The industry standard for handling and storing cardholder data safely.' },
       { term: 'Tokenization', meaning: 'Replacing sensitive card details with a non-reversible token for storage.' },
       { term: 'Faceted Navigation', meaning: 'Filtering products by multiple attributes at once, such as price, brand, size, colour and rating.' },
@@ -1212,7 +1212,7 @@ Breadcrumb: Home > Electronics > Laptops > Gaming Laptops
       'An e-commerce website combines a customer-facing storefront with back-office systems for inventory, orders and payments, and must be Always On, Data-Driven, and Multi-Device.',
       'Front-end functions include product browsing, search, shopping cart, checkout, user accounts and customer support.',
       'Back-end functions include inventory management, order management, CMS, payment gateway integration, user/access management and analytics.',
-      'Payment flow: Browse to Add to Cart to Checkout to Payment Gateway to Confirmation — secured by SSL/TLS encryption, PCI-DSS compliance, tokenization and fraud detection.',
+      'Payment flow: Browse to Add to Cart to Checkout to Payment Gateway to Confirmation - secured by SSL/TLS encryption, PCI-DSS compliance, tokenization and fraud detection.',
       'UX is about task completion; UI is the visual and interactive layer that supports it.',
       'Core design principles: simplicity & clarity, consistency, visual hierarchy, immediate feedback, accessibility, and trust & credibility.',
       'Trust is built through visible security badges, genuine reviews, transparent pricing, guest checkout, and an easy-to-find return policy.',
@@ -1534,9 +1534,9 @@ CREDIT NEEDED
 
     <h3>Providing Security for Electronic Cash</h3>
     <ul>
-      <li><strong>Cryptographic algorithms</strong> — the keys to creating <strong>tamperproof</strong> electronic cash that can be traced back to its origins.</li>
-      <li><strong>Anonymous electronic cash</strong> — electronic cash that <strong>cannot be traced back</strong> to the person who spent it.</li>
-      <li><strong>Creating truly anonymous electronic cash</strong> — requires the bank to issue electronic cash with <strong>embedded serial numbers</strong>.</li>
+      <li><strong>Cryptographic algorithms</strong> - the keys to creating <strong>tamperproof</strong> electronic cash that can be traced back to its origins.</li>
+      <li><strong>Anonymous electronic cash</strong> - electronic cash that <strong>cannot be traced back</strong> to the person who spent it.</li>
+      <li><strong>Creating truly anonymous electronic cash</strong> - requires the bank to issue electronic cash with <strong>embedded serial numbers</strong>.</li>
     </ul>
 
     <h3>Double-Spending of Electronic Cash</h3>
@@ -1576,7 +1576,7 @@ CREDIT NEEDED
     <p><strong>PayPal</strong></p>
     <ul>
       <li>Provides <strong>payment processing services</strong> to businesses and to individuals.</li>
-      <li>PayPal.com is a <strong>free service</strong> that earns a profit on the <strong>float</strong> — the money deposited in PayPal accounts.</li>
+      <li>PayPal.com is a <strong>free service</strong> that earns a profit on the <strong>float</strong> - the money deposited in PayPal accounts.</li>
       <li>The free payment clearing service PayPal gives to individuals is called a <strong>peer-to-peer payment system</strong>.</li>
       <li>It lets customers send money <strong>instantly and securely</strong> to anyone with an <strong>e-mail address</strong>, including an online merchant.</li>
     </ul>
@@ -1595,8 +1595,8 @@ CREDIT NEEDED
 
     <h3>Types of Electronic Wallets</h3>
     <ul>
-      <li><strong>Server-side electronic wallet</strong> — stores the customer's information on a <strong>remote server</strong> belonging to a particular merchant or wallet publisher.</li>
-      <li><strong>Client-side electronic wallet</strong> — stores the consumer's information on <strong>his or her own computer</strong>.</li>
+      <li><strong>Server-side electronic wallet</strong> - stores the customer's information on a <strong>remote server</strong> belonging to a particular merchant or wallet publisher.</li>
+      <li><strong>Client-side electronic wallet</strong> - stores the consumer's information on <strong>his or her own computer</strong>.</li>
     </ul>
 
     <div class="callout callout-yellow">
@@ -1655,7 +1655,7 @@ CREDIT NEEDED
 
     <div class="callout callout-green">
       <span class="callout-label">Answers</span>
-      <p>1. <strong>Electronic cash</strong><br>2. <strong>Micropayments</strong><br>3. <strong>Double-spending</strong><br>4. <strong>Money laundering</strong><br>5. <strong>False</strong> — that describes <em>offline</em> cash storage<br>6. <strong>Anonymous electronic cash</strong></p>
+      <p>1. <strong>Electronic cash</strong><br>2. <strong>Micropayments</strong><br>3. <strong>Double-spending</strong><br>4. <strong>Money laundering</strong><br>5. <strong>False</strong> - that describes <em>offline</em> cash storage<br>6. <strong>Anonymous electronic cash</strong></p>
     </div>
   `,
   summary: {
@@ -1854,7 +1854,7 @@ content: `
 
 <h3>Key Features</h3>
 <ul>
-  <li><strong>Quick to set up</strong> — no servers or infrastructure to manage.</li>
+  <li><strong>Quick to set up</strong> - no servers or infrastructure to manage.</li>
   <li>The <strong>provider handles</strong> hosting, security, updates and scalability.</li>
   <li><strong>Monthly or annual subscription fee</strong>; customization is <strong>more limited</strong>.</li>
   <li>Comes with <strong>built-in payment gateways, themes</strong> and an <strong>apps/add-ons marketplace</strong>.</li>
@@ -1873,7 +1873,7 @@ content: `
 
 <h3>Key Features</h3>
 <ul>
-  <li><strong>Complete flexibility</strong> — tailored features, workflows and UX (user experience).</li>
+  <li><strong>Complete flexibility</strong> - tailored features, workflows and UX (user experience).</li>
   <li><strong>Deep integration</strong> with existing <strong>ERP, CRM</strong> or <strong>legacy systems</strong>.</li>
   <li><strong>Higher development cost</strong> and <strong>longer time-to-market</strong>.</li>
   <li><strong>Full ownership</strong> of code and data, with <strong>no licensing limits</strong>.</li>
@@ -1909,12 +1909,12 @@ content: `
 <p>When choosing a platform, a business should look at these <strong>six key decision factors</strong>:</p>
 
 <ol>
-  <li><strong>Budget</strong> — upfront cost versus ongoing subscription fees.</li>
-  <li><strong>Technical Expertise</strong> — skills available in-house or through hiring.</li>
-  <li><strong>Customization Needs</strong> — how unique the required features are.</li>
-  <li><strong>Time-to-Market</strong> — how quickly the store must launch.</li>
-  <li><strong>Scalability</strong> — expected growth in traffic and orders.</li>
-  <li><strong>Integration Needs</strong> — connecting with ERP, CRM or other systems.</li>
+  <li><strong>Budget</strong> - upfront cost versus ongoing subscription fees.</li>
+  <li><strong>Technical Expertise</strong> - skills available in-house or through hiring.</li>
+  <li><strong>Customization Needs</strong> - how unique the required features are.</li>
+  <li><strong>Time-to-Market</strong> - how quickly the store must launch.</li>
+  <li><strong>Scalability</strong> - expected growth in traffic and orders.</li>
+  <li><strong>Integration Needs</strong> - connecting with ERP, CRM or other systems.</li>
 </ol>
 
 <div class="callout callout-green">

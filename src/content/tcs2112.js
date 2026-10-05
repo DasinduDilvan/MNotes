@@ -21,7 +21,7 @@ export const lessons = [
     <div class="divider"></div>
 
     <h2>Life Before Money</h2>
-    <p>Long before money existed, people lived by growing their own food and keeping animals. When someone needed something they did not have, they used the <strong>barter system</strong> — directly exchanging one good or service for another, such as trading a sheep for some fruit. In busy markets, many people exchanged goods with each other this same way.</p>
+    <p>Long before money existed, people lived by growing their own food and keeping animals. When someone needed something they did not have, they used the <strong>barter system</strong> - directly exchanging one good or service for another, such as trading a sheep for some fruit. In busy markets, many people exchanged goods with each other this same way.</p>
 
     <div class="divider"></div>
 
@@ -31,12 +31,12 @@ export const lessons = [
 mechanizer -> industrialist -> oil driller -> corporate executive ->
 financier -> startup founder</code></pre>
     <ul>
-      <li><strong>Hunter → Grower</strong> — growing food turned out to be more stable than hunting.</li>
-      <li><strong>Warrior → Craftsman</strong> — warriors could plunder a grower's food; craftsmen made things and built cities that warriors would not plunder.</li>
-      <li><strong>Explorer → Merchant</strong> — explorers plundered far-away lands; merchants brought things from other lands and sold them.</li>
-      <li><strong>Mechanizer → Industrialist</strong> — machines made things faster; electric machines made things even faster.</li>
-      <li><strong>Oil Driller → Corporate Executive</strong> — industrialists needed oil to power their machines; executives built and sold large corporations.</li>
-      <li><strong>Financier → Startup Founder</strong> — financiers began buying and selling large corporations; startup founders now make useful things faster than a large corporation can.</li>
+      <li><strong>Hunter → Grower</strong> - growing food turned out to be more stable than hunting.</li>
+      <li><strong>Warrior → Craftsman</strong> - warriors could plunder a grower's food; craftsmen made things and built cities that warriors would not plunder.</li>
+      <li><strong>Explorer → Merchant</strong> - explorers plundered far-away lands; merchants brought things from other lands and sold them.</li>
+      <li><strong>Mechanizer → Industrialist</strong> - machines made things faster; electric machines made things even faster.</li>
+      <li><strong>Oil Driller → Corporate Executive</strong> - industrialists needed oil to power their machines; executives built and sold large corporations.</li>
+      <li><strong>Financier → Startup Founder</strong> - financiers began buying and selling large corporations; startup founders now make useful things faster than a large corporation can.</li>
     </ul>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
@@ -48,8 +48,8 @@ financier -> startup founder</code></pre>
     <h2>What Is Economics?</h2>
     <p>The word <strong>"Economics"</strong> comes from the Greek word <strong>"Oikonomikos"</strong>, which can be split into two parts:</p>
     <ul>
-      <li><strong>"Oikos"</strong> — meaning "House"</li>
-      <li><strong>"Nomos"</strong> — meaning "Management"</li>
+      <li><strong>"Oikos"</strong> - meaning "House"</li>
+      <li><strong>"Nomos"</strong> - meaning "Management"</li>
     </ul>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
@@ -93,7 +93,7 @@ Survival               | Essential                             | Inessential
 Change                | May remain constant over time        | May change over time</code></pre>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p><strong>Needs</strong> are essential for survival — food, water, housing, and clothing. <strong>Wants</strong> are desired for enjoyment — a smartphone, a luxury car, a gaming console, or a vacation.</p>
+      <p><strong>Needs</strong> are essential for survival - food, water, housing, and clothing. <strong>Wants</strong> are desired for enjoyment - a smartphone, a luxury car, a gaming console, or a vacation.</p>
     </div>
 
     <div class="divider"></div>
@@ -131,7 +131,7 @@ Change                | May remain constant over time        | May change over t
     <div class="divider"></div>
 
     <h2>Tradeoff</h2>
-    <p>Because of scarcity, you cannot have everything. So you have to choose how to spend your money, time, and energy. These decisions mean picking one option over all the other possibilities — this is called a <strong>tradeoff</strong>.</p>
+    <p>Because of scarcity, you cannot have everything. So you have to choose how to spend your money, time, and energy. These decisions mean picking one option over all the other possibilities - this is called a <strong>tradeoff</strong>.</p>
 
     <div class="divider"></div>
 
@@ -141,7 +141,7 @@ Change                | May remain constant over time        | May change over t
     <ul>
       <li>Opportunity cost is a <strong>concrete concept</strong>.</li>
       <li>Opportunity cost is a <strong>subjective concept</strong>.</li>
-      <li>Opportunity cost is <strong>not limited to the person making the decision</strong> — it can affect others too.</li>
+      <li>Opportunity cost is <strong>not limited to the person making the decision</strong> - it can affect others too.</li>
     </ul>
 
     <h3>When Is Opportunity Cost Zero?</h3>
@@ -153,7 +153,7 @@ Change                | May remain constant over time        | May change over t
 
     <div class="callout callout-blue">
       <span class="callout-label">Example</span>
-      <p>Mia has $50 to spend on toys. She wants both a Robot ($48) and a Telescope ($35), but <strong>scarcity</strong> means she cannot buy both. She has to make a <strong>choice</strong> between Option A (the Robot) and Option B (the Telescope). She picks the Telescope — that is her <strong>tradeoff</strong>: giving up the strong, interactive robot for the chance to see the stars. Her <strong>opportunity cost</strong> is the joy and play time of the robot she gave up.</p>
+      <p>Mia has $50 to spend on toys. She wants both a Robot ($48) and a Telescope ($35), but <strong>scarcity</strong> means she cannot buy both. She has to make a <strong>choice</strong> between Option A (the Robot) and Option B (the Telescope). She picks the Telescope - that is her <strong>tradeoff</strong>: giving up the strong, interactive robot for the chance to see the stars. Her <strong>opportunity cost</strong> is the joy and play time of the robot she gave up.</p>
     </div>
 
     <div class="callout callout-yellow">
@@ -179,8 +179,8 @@ Change                | May remain constant over time        | May change over t
     <h3>Labour</h3>
     <ul>
       <li>Labour is the work done by people in a workforce.</li>
-      <li>Labour is <strong>heterogeneous</strong> — people have different skills and abilities.</li>
-      <li>Labour is <strong>perishable</strong> in nature — a lost work-hour cannot be recovered.</li>
+      <li>Labour is <strong>heterogeneous</strong> - people have different skills and abilities.</li>
+      <li>Labour is <strong>perishable</strong> in nature - a lost work-hour cannot be recovered.</li>
       <li>Labour is strongly associated with <strong>human effort</strong>.</li>
       <li>Labour includes both <strong>skilled and unskilled</strong> workers.</li>
       <li><strong>Training</strong> improves productivity and quality.</li>
@@ -190,8 +190,8 @@ Change                | May remain constant over time        | May change over t
     <ul>
       <li>Capital refers to <strong>capital goods</strong>, or man-made resources.</li>
       <li>Capital goods are different from <strong>consumer goods</strong>.</li>
-      <li><strong>Fixed capital</strong> — for example, ponds, cages, aerators, and boats.</li>
-      <li><strong>Working capital</strong> — for example, feed, fuel, medicines, and fingerlings.</li>
+      <li><strong>Fixed capital</strong> - for example, ponds, cages, aerators, and boats.</li>
+      <li><strong>Working capital</strong> - for example, feed, fuel, medicines, and fingerlings.</li>
       <li><strong>Technology</strong> increases efficiency.</li>
     </ul>
     <p><strong>Examples:</strong> machinery, buildings, raw materials.</p>
@@ -234,7 +234,7 @@ Change                | May remain constant over time        | May change over t
     <h3>Normative Economics</h3>
     <p>Normative economics focuses on <strong>what ought to be</strong>.</p>
     <ul>
-      <li>A factual statement can be true or false, but normative statements are <strong>subjective</strong> — matters of opinion or value judgment.</li>
+      <li>A factual statement can be true or false, but normative statements are <strong>subjective</strong> - matters of opinion or value judgment.</li>
     </ul>
     <div class="callout callout-blue">
       <span class="callout-label">Example</span>
@@ -290,7 +290,7 @@ Change                | May remain constant over time        | May change over t
     </div>
 
     <h3>For Whom to Produce?</h3>
-    <p>The main objective of producing a commodity is its consumption in the economy. An economy has to decide for whom goods should be produced — this is the problem of the <strong>distribution</strong> of produced goods and services. What goods are consumed, and by whom, depends on the distribution of the <strong>National Product</strong>.</p>
+    <p>The main objective of producing a commodity is its consumption in the economy. An economy has to decide for whom goods should be produced - this is the problem of the <strong>distribution</strong> of produced goods and services. What goods are consumed, and by whom, depends on the distribution of the <strong>National Product</strong>.</p>
 
     <div class="divider"></div>
 
@@ -469,9 +469,9 @@ Change                | May remain constant over time        | May change over t
       <p><strong>Full employment</strong> means using all the resources that can currently be used for production. <strong>Full production</strong> means every resource used in production contributes to its maximum to meet customers' physical needs.</p>
     </div>
 
-    <p>In reality this does not always happen — an <strong>under-employment</strong> situation can also occur.</p>
-    <p>Even an economy with full employment and full production cannot produce unlimited goods and services, because resources are still scarce. So every economy must decide <strong>which goods and services to produce</strong> and which not to — this is fundamentally a question of <strong>choice</strong>.</p>
-    <p>Economists use a simple model to analyze this choice and its consequences — the <strong>production possibilities model</strong>. It can be shown as a table or as a graph.</p>
+    <p>In reality this does not always happen - an <strong>under-employment</strong> situation can also occur.</p>
+    <p>Even an economy with full employment and full production cannot produce unlimited goods and services, because resources are still scarce. So every economy must decide <strong>which goods and services to produce</strong> and which not to - this is fundamentally a question of <strong>choice</strong>.</p>
+    <p>Economists use a simple model to analyze this choice and its consequences - the <strong>production possibilities model</strong>. It can be shown as a table or as a graph.</p>
 
     <div class="divider"></div>
 
@@ -494,12 +494,12 @@ Change                | May remain constant over time        | May change over t
 
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>Memorize these 4 assumptions — they are the base for every PPC question, including the "shifters" section later in this lesson.</p>
+      <p>Memorize these 4 assumptions - they are the base for every PPC question, including the "shifters" section later in this lesson.</p>
     </div>
 
     <div class="divider"></div>
 
-    <h2>Example 01 — Smartphones and Laptops</h2>
+    <h2>Example 01 - Smartphones and Laptops</h2>
     <p>Assuming all resources are used at maximum efficiency at a given level of technology, the possible combinations of smartphones and laptops are:</p>
 
     <pre><code>Point   Smartphones   Laptops
@@ -516,7 +516,7 @@ Change                | May remain constant over time        | May change over t
       <li>Points <strong>B, C, D, E</strong>: resources are split between both goods, giving many alternative combinations</li>
     </ul>
 
-    <p>As more resources are used to make <strong>more smartphones</strong>, the number of <strong>laptops produced falls</strong> — and vice versa.</p>
+    <p>As more resources are used to make <strong>more smartphones</strong>, the number of <strong>laptops produced falls</strong> - and vice versa.</p>
 
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
@@ -526,18 +526,18 @@ Change                | May remain constant over time        | May change over t
     <div class="divider"></div>
 
     <h2>The Frontier</h2>
-    <p>The frontier (the curve itself) shows the limit of what can be produced — every possible combination when all resources are fully used.</p>
-    <p>A point is usually chosen where <strong>both</strong> goods are being produced. Production may happen <strong>on or inside</strong> the frontier, but it can <strong>never happen beyond</strong> it — there simply are not enough resources to do so.</p>
+    <p>The frontier (the curve itself) shows the limit of what can be produced - every possible combination when all resources are fully used.</p>
+    <p>A point is usually chosen where <strong>both</strong> goods are being produced. Production may happen <strong>on or inside</strong> the frontier, but it can <strong>never happen beyond</strong> it - there simply are not enough resources to do so.</p>
 
     <div class="divider"></div>
 
-    <h2>Example 02 — Capital Goods and Consumer Goods</h2>
+    <h2>Example 02 - Capital Goods and Consumer Goods</h2>
     <pre><code>Point       Meaning
  B     All resources → Capital Goods
  A     All resources → Consumer Goods
- C, D  Both goods produced — production is efficient
- E     Inside the frontier — production is inefficient
- F     Outside the frontier — unattainable point</code></pre>
+ C, D  Both goods produced - production is efficient
+ E     Inside the frontier - production is inefficient
+ F     Outside the frontier - unattainable point</code></pre>
 
     <div class="divider"></div>
 
@@ -549,23 +549,23 @@ Change                | May remain constant over time        | May change over t
     </ul>
 
     <h2>Inefficient Production</h2>
-    <p><strong>Inefficient production</strong> means not all resources are fully employed — it is still possible to increase the output of <strong>both</strong> goods. This can happen during a <strong>recession or depression</strong>, or in a developing country.</p>
+    <p><strong>Inefficient production</strong> means not all resources are fully employed - it is still possible to increase the output of <strong>both</strong> goods. This can happen during a <strong>recession or depression</strong>, or in a developing country.</p>
 
     <h2>Unattainable Points</h2>
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
-      <p>Any point <strong>outside</strong> the PP curve is <strong>impossible</strong>. More of both goods cannot be produced with the current resources — this is only possible if the whole PPF expands (shifts outward).</p>
+      <p>Any point <strong>outside</strong> the PP curve is <strong>impossible</strong>. More of both goods cannot be produced with the current resources - this is only possible if the whole PPF expands (shifts outward).</p>
     </div>
 
     <div class="divider"></div>
 
-    <h2>PPF Example — Rice and Corn</h2>
+    <h2>PPF Example - Rice and Corn</h2>
     <p>A farmer's PPF shows how many bags of rice and corn can be produced with the resources available, where <strong>1 bag of rice = 5 bags of corn</strong>.</p>
     <pre><code>Producing only corn:  60 bags of corn,  0 bags of rice
 Point A:              50 bags of corn,  6 bags of rice
 Point B:              30 bags of corn, 10 bags of rice
 Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
-    <p>To produce more corn, the farmer must give up rice resources — and to produce more rice, the farmer must give up corn resources.</p>
+    <p>To produce more corn, the farmer must give up rice resources - and to produce more rice, the farmer must give up corn resources.</p>
 
     <div class="divider"></div>
 
@@ -577,11 +577,11 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
       <p><strong>Opportunity cost</strong> is the value of the <strong>best alternative forgone</strong> when a choice is made.</p>
     </div>
 
-    <p><strong>Example — Video Games vs Books:</strong> shifting resources from Point A to Point B to produce more books meant giving up video game production. If Point A produced 90,000 video games and Point B produces 60,000, the opportunity cost of the extra books is <strong>30,000 video games</strong> (90k − 60k).</p>
+    <p><strong>Example - Video Games vs Books:</strong> shifting resources from Point A to Point B to produce more books meant giving up video game production. If Point A produced 90,000 video games and Point B produces 60,000, the opportunity cost of the extra books is <strong>30,000 video games</strong> (90k − 60k).</p>
 
     <div class="divider"></div>
 
-    <h2>Production Possibilities Table — Bikes and Computers</h2>
+    <h2>Production Possibilities Table - Bikes and Computers</h2>
     <p>Each point below represents one combination of goods that can be produced with full employment of resources. Bikes are placed on the y-axis and computers on the x-axis.</p>
 
     <pre><code>Point      Bikes   Computers
@@ -593,8 +593,8 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
 
     <p>Two extra reference points are added to the graph:</p>
     <ul>
-      <li>Point <strong>F</strong> — sits <strong>inside</strong> the curve (same computer output as C, but fewer bikes) → <strong>inefficient / underemployment</strong></li>
-      <li>Point <strong>G</strong> — sits <strong>outside</strong> the curve → <strong>impossible / unattainable</strong> with current resources</li>
+      <li>Point <strong>F</strong> - sits <strong>inside</strong> the curve (same computer output as C, but fewer bikes) → <strong>inefficient / underemployment</strong></li>
+      <li>Point <strong>G</strong> - sits <strong>outside</strong> the curve → <strong>impossible / unattainable</strong> with current resources</li>
     </ul>
 
     <h3>Opportunity Cost Practice</h3>
@@ -608,26 +608,26 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
 
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
-      <p>A common exam mistake is forgetting that opportunity cost depends on <strong>direction</strong> — moving from B to D costs bikes, but moving back from D to B costs computers instead.</p>
+      <p>A common exam mistake is forgetting that opportunity cost depends on <strong>direction</strong> - moving from B to D costs bikes, but moving back from D to B costs computers instead.</p>
     </div>
 
     <div class="divider"></div>
 
-    <h2>Example 03 — Product X and Product Y</h2>
+    <h2>Example 03 - Product X and Product Y</h2>
     <pre><code>Point   Product X   Product Y   Opp. Cost of 100 more X
  A          0          1000              -
  B        100           900            100 Y
  C        200           700            200 Y
  D        300           400            300 Y
  E        400             0            400 Y</code></pre>
-    <p>As Product X output rises by equal steps of 100 units, the amount of Product Y given up gets <strong>larger and larger</strong> — this is why the PPC curves outward (bows away from the origin) instead of being a straight line.</p>
+    <p>As Product X output rises by equal steps of 100 units, the amount of Product Y given up gets <strong>larger and larger</strong> - this is why the PPC curves outward (bows away from the origin) instead of being a straight line.</p>
 
     <div class="divider"></div>
 
     <h2>Two Types of Efficiency</h2>
     <ul>
-      <li><strong>Productive Efficiency</strong> — goods are produced in the least costly way. This is <strong>any point ON</strong> the Production Possibility Curve.</li>
-      <li><strong>Allocative Efficiency</strong> — the goods being produced are the ones most <strong>desired by society</strong>. This is the <em>optimal</em> point on the PPC, and it depends on the desires of society.</li>
+      <li><strong>Productive Efficiency</strong> - goods are produced in the least costly way. This is <strong>any point ON</strong> the Production Possibility Curve.</li>
+      <li><strong>Allocative Efficiency</strong> - the goods being produced are the ones most <strong>desired by society</strong>. This is the <em>optimal</em> point on the PPC, and it depends on the desires of society.</li>
     </ul>
 
     <div class="divider"></div>
@@ -647,13 +647,13 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
 
     <div class="divider"></div>
 
-    <h2>PPC Practice — Questions and Answers</h2>
+    <h2>PPC Practice - Questions and Answers</h2>
     <p>Each scenario below either shifts the curve, shifts it only for one good, or does not shift the curve at all.</p>
 
     <h3>Pizza and Robots</h3>
     <ol>
       <li><strong>New robot-making technology</strong> → the curve shifts outward <strong>only for Robots</strong></li>
-      <li><strong>Decrease in the demand for pizza</strong> → the curve <strong>does not shift</strong> — a change in demand never shifts the PPC</li>
+      <li><strong>Decrease in the demand for pizza</strong> → the curve <strong>does not shift</strong> - a change in demand never shifts the PPC</li>
       <li><strong>Mad cow disease kills 85% of cows</strong> (a resource for pizza toppings) → the curve shifts <strong>inward only for Pizza</strong></li>
     </ol>
 
@@ -661,13 +661,13 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
     <ol start="4">
       <li><strong>Destruction of power plants causes an electricity shortage</strong> → resources decrease, so production possibilities <strong>fall for both</strong> goods</li>
       <li><strong>Faster computer hardware</strong> → the <strong>quality</strong> of a resource improves, shifting the curve <strong>outward</strong></li>
-      <li><strong>Many workers are unemployed</strong> → the curve <strong>does not shift</strong> — unemployment is just a point <strong>inside</strong> the curve</li>
+      <li><strong>Many workers are unemployed</strong> → the curve <strong>does not shift</strong> - unemployment is just a point <strong>inside</strong> the curve</li>
       <li><strong>Significant increases in education</strong> → the quality of labor improves, shifting the curve <strong>outward</strong></li>
     </ol>
 
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
-      <p>Two classic exam traps: a change in <strong>demand</strong> does <strong>not</strong> shift the PPC, and <strong>unemployment</strong> does <strong>not</strong> shift the PPC either — it is only a point inside it.</p>
+      <p>Two classic exam traps: a change in <strong>demand</strong> does <strong>not</strong> shift the PPC, and <strong>unemployment</strong> does <strong>not</strong> shift the PPC either - it is only a point inside it.</p>
     </div>
 
     <div class="divider"></div>
@@ -690,20 +690,20 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
       'From Scarcity to the Production Possibility Curve',
       'What is a Production Possibility Curve (PPC)?',
       'Assumptions of the Production Possibility Curve',
-      'Example 01 — Smartphones and Laptops',
+      'Example 01 - Smartphones and Laptops',
       'The Frontier',
-      'Example 02 — Capital Goods and Consumer Goods',
+      'Example 02 - Capital Goods and Consumer Goods',
       'Efficient Production',
       'Inefficient Production',
       'Unattainable Points',
-      'PPF Example — Rice and Corn',
+      'PPF Example - Rice and Corn',
       'Trade-offs and Opportunity Cost on the PPF',
-      'Production Possibilities Table — Bikes and Computers',
+      'Production Possibilities Table - Bikes and Computers',
       'Opportunity Cost Practice',
-      'Example 03 — Product X and Product Y',
+      'Example 03 - Product X and Product Y',
       'Two Types of Efficiency',
       'Shifting the Production Possibility Curve',
-      'PPC Practice — Questions and Answers',
+      'PPC Practice - Questions and Answers',
       'Importance of the Production Possibility Curve',
       'Limitations of the Production Possibility Curve',
     ],
@@ -720,11 +720,11 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
     keyPoints: [
       'The PPC has 4 assumptions: fixed resources, full employment & productive efficiency, fixed technology, and only two products.',
       'Points ON the curve are efficient; points INSIDE are inefficient (unemployment); points OUTSIDE are unattainable.',
-      'Moving along the curve always involves an opportunity cost — producing more of one good means producing less of the other.',
+      'Moving along the curve always involves an opportunity cost - producing more of one good means producing less of the other.',
       'The PPC bows outward because the opportunity cost of a good increases the more of it is produced (shown in Example 03).',
       'There are 3 shifters of the PPC: change in resource quantity/quality, change in technology, and change in trade.',
-      'A change in demand does NOT shift the PPC — this is a common exam mistake.',
-      'Unemployment does NOT shift the PPC — it is only a point inside the curve.',
+      'A change in demand does NOT shift the PPC - this is a common exam mistake.',
+      'Unemployment does NOT shift the PPC - it is only a point inside the curve.',
       'Productive efficiency = any point ON the curve; Allocative efficiency = the point society desires most.',
       'Limitations of the PPC: it only compares two goods, ignores demand/want, and ignores satisfaction from the output.',
     ],
@@ -768,7 +768,7 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
     <h3>Input Market and Output Market</h3>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p><strong>Output (product) markets</strong> are markets in which goods and services are exchanged. <strong>Input markets</strong> are markets in which resources — labor, capital, and land used to produce products — are exchanged.</p>
+      <p><strong>Output (product) markets</strong> are markets in which goods and services are exchanged. <strong>Input markets</strong> are markets in which resources - labor, capital, and land used to produce products - are exchanged.</p>
     </div>
     <p>Payments flow in the <strong>opposite direction</strong> to the physical flow of resources, goods, and services (counterclockwise).</p>
 
@@ -818,7 +818,7 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
      2                 55
      1                 80</code></pre>
 
-    <p>The <strong>demand curve</strong> is a graph illustrating how much of a given product a household would be willing to buy at different prices — plotting these points gives a downward-sloping curve.</p>
+    <p>The <strong>demand curve</strong> is a graph illustrating how much of a given product a household would be willing to buy at different prices - plotting these points gives a downward-sloping curve.</p>
 
     <div class="divider"></div>
 
@@ -847,8 +847,8 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
       </li>
       <li>Given <strong>Qd = 100 − 5P</strong>, derive the demand schedule and draw the graph.</li>
       <li>Given <strong>Qd = 2200 − 200P</strong>, derive the demand schedule and draw the graph.</li>
-      <li>A demand line meets the price axis at <strong>280</strong> and the quantity axis at <strong>28</strong> — derive the demand equation and schedule.</li>
-      <li>A demand line meets the price axis at <strong>50</strong> and the quantity axis at <strong>150</strong> — derive the demand equation and schedule.</li>
+      <li>A demand line meets the price axis at <strong>280</strong> and the quantity axis at <strong>28</strong> - derive the demand equation and schedule.</li>
+      <li>A demand line meets the price axis at <strong>50</strong> and the quantity axis at <strong>150</strong> - derive the demand equation and schedule.</li>
     </ol>
 
     <div class="divider"></div>
@@ -884,18 +884,18 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
 
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
-      <p><strong>Practice:</strong> Decide whether each of these is more likely a normal or an inferior good, and explain why — chocolate, public transportation, used cars, mobile phones, computers, bicycles, movie theaters, dog shows, organic food, pizza, legal services.</p>
+      <p><strong>Practice:</strong> Decide whether each of these is more likely a normal or an inferior good, and explain why - chocolate, public transportation, used cars, mobile phones, computers, bicycles, movie theaters, dog shows, organic food, pizza, legal services.</p>
     </div>
 
     <h3>Substitutes and Complements</h3>
     <ul>
-      <li><strong>Substitutes</strong> are goods that can serve as replacements for one another — when the price of one increases, demand for the other goes up. <strong>Perfect substitutes</strong> are identical products.</li>
-      <li><strong>Complements</strong> are goods that "go together" — a decrease in the price of one results in an increase in demand for the other, and vice versa.</li>
+      <li><strong>Substitutes</strong> are goods that can serve as replacements for one another - when the price of one increases, demand for the other goes up. <strong>Perfect substitutes</strong> are identical products.</li>
+      <li><strong>Complements</strong> are goods that "go together" - a decrease in the price of one results in an increase in demand for the other, and vice versa.</li>
     </ul>
 
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
-      <p><strong>Practice:</strong> Decide whether each pair is more likely substitutes or complements — bread and butter, PlayStation and games, Nike and Reebok sneakers, IBM and Apple computers, dress shirts and ties, Domino's and Pizza Hut, vehicle and fuel, beer and wine, faxes and e-mail, cereal and milk.</p>
+      <p><strong>Practice:</strong> Decide whether each pair is more likely substitutes or complements - bread and butter, PlayStation and games, Nike and Reebok sneakers, IBM and Apple computers, dress shirts and ties, Domino's and Pizza Hut, vehicle and fuel, beer and wine, faxes and e-mail, cereal and milk.</p>
     </div>
 
     <div class="divider"></div>
@@ -906,9 +906,9 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
       <p>A change in the <strong>price</strong> of a good or service leads to a <strong>change in quantity demanded</strong> (movement along the demand curve). A change in <strong>income, preferences, or the prices of other goods/services</strong> leads to a <strong>change in demand</strong> (a shift of the demand curve).</p>
     </div>
 
-    <p>A change in demand is caused by changes in the <strong>non-price determinants</strong> of demand. It shows up as a shift of the demand curve either to the right or left, and represents a change in the quantity demanded at <strong>every</strong> price — so it cannot be caused by a change in price itself.</p>
+    <p>A change in demand is caused by changes in the <strong>non-price determinants</strong> of demand. It shows up as a shift of the demand curve either to the right or left, and represents a change in the quantity demanded at <strong>every</strong> price - so it cannot be caused by a change in price itself.</p>
 
-    <p>When demand shifts to the <strong>right</strong>, demand increases — the quantity demanded is greater than before, at every price level.</p>
+    <p>When demand shifts to the <strong>right</strong>, demand increases - the quantity demanded is greater than before, at every price level.</p>
 
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
@@ -934,7 +934,7 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
     <p>Demand for a good or service can be defined for an individual household, or for a group of households that make up a market.</p>
     <div class="callout callout-blue">
       <span class="callout-label">Definition</span>
-      <p><strong>Market demand</strong> is the sum of all the quantities of a good or service demanded per period by all the households buying in the market for that good or service — it is the <strong>horizontal summation</strong> of individual households' demand curves.</p>
+      <p><strong>Market demand</strong> is the sum of all the quantities of a good or service demanded per period by all the households buying in the market for that good or service - it is the <strong>horizontal summation</strong> of individual households' demand curves.</p>
     </div>
 
     <div class="callout callout-green">
@@ -966,7 +966,7 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
     <p>The <strong>law of supply</strong> states that there is a <strong>positive</strong> relationship between the price and quantity of a good supplied.</p>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>Because of the law of supply, <strong>supply curves have a positive (upward) slope</strong> — the opposite direction to demand curves.</p>
+      <p>Because of the law of supply, <strong>supply curves have a positive (upward) slope</strong> - the opposite direction to demand curves.</p>
     </div>
 
     <div class="divider"></div>
@@ -993,7 +993,7 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
       <span class="callout-label">Remember</span>
       <p>A change in the <strong>price</strong> of a good or service leads to a <strong>change in quantity supplied</strong> (movement along the supply curve). A change in <strong>costs, input prices, technology, or the prices of related goods/services</strong> leads to a <strong>change in supply</strong> (a shift of the supply curve).</p>
     </div>
-    <p>When supply shifts to the <strong>right</strong>, supply increases — the quantity supplied is greater than before, at every price level.</p>
+    <p>When supply shifts to the <strong>right</strong>, supply increases - the quantity supplied is greater than before, at every price level.</p>
 
     <div class="divider"></div>
 
@@ -1001,7 +1001,7 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
     <p>The supply of a good or service can be defined for an individual firm, or for a group of firms that make up a market or industry.</p>
     <div class="callout callout-blue">
       <span class="callout-label">Definition</span>
-      <p><strong>Market supply</strong> is the sum of all the quantities of a good or service supplied per period by all the firms selling in the market — it is the <strong>horizontal summation</strong> of individual firms' supply curves.</p>
+      <p><strong>Market supply</strong> is the sum of all the quantities of a good or service supplied per period by all the firms selling in the market - it is the <strong>horizontal summation</strong> of individual firms' supply curves.</p>
     </div>
 
     <div class="divider"></div>
@@ -1032,12 +1032,12 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
 
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>Demand and supply always move equilibrium <strong>quantity</strong> in the direction they shift, but they move equilibrium <strong>price</strong> in <strong>opposite</strong> ways — more demand raises price, more supply lowers it.</p>
+      <p>Demand and supply always move equilibrium <strong>quantity</strong> in the direction they shift, but they move equilibrium <strong>price</strong> in <strong>opposite</strong> ways - more demand raises price, more supply lowers it.</p>
     </div>
 
     <div class="divider"></div>
 
-    <h2>Exercise 01 — Product X</h2>
+    <h2>Exercise 01 - Product X</h2>
     <p>Given the demand and supply schedule for Product X, compute the equations for quantity demanded and quantity supplied, find the equilibrium price and quantity, and confirm it graphically.</p>
     <pre><code>Price   Demand   Supply
  2       16       -6
@@ -1054,7 +1054,7 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
     <h2>Exercise 02</h2>
     <p>Given the demand curve <strong>Qd = 3300 − 2P</strong> and the supply curve <strong>Qs = 500 + 8P</strong>, compute the equilibrium price and quantity, and illustrate it graphically.</p>
 
-    <h2>Exercise 03 — Soft Drinks Market</h2>
+    <h2>Exercise 03 - Soft Drinks Market</h2>
     <p>Using the demand and supply lines for the soft drinks market (price in dollars per can, quantity in cans per day):</p>
     <ul>
       <li>Calculate the equilibrium price and quantity using the equations.</li>
@@ -1227,7 +1227,7 @@ Producing only rice:   0 bags of corn, 12 bags of rice</code></pre>
     <p>Sometimes the government steps in to change how a market works. These are the main methods:</p>
     <ul>
       <li><strong>Buffer stocks</strong></li>
-      <li><strong>Price controls</strong> — maximum price (price ceiling) and minimum price (price floor)</li>
+      <li><strong>Price controls</strong> - maximum price (price ceiling) and minimum price (price floor)</li>
       <li><strong>Taxation</strong></li>
       <li><strong>Subsidies</strong></li>
       <li><strong>State provision</strong> (government provision)</li>
@@ -1273,17 +1273,17 @@ Good harvest: supply = 160
     <ul>
       <li>Buffer stocks <strong>do not protect</strong> farmers against <strong>volatile incomes</strong>.</li>
       <li>Income stabilisation schemes aim to keep <strong>farm incomes fairly constant</strong>.</li>
-      <li>They do this by <strong>changing the price</strong> — releasing stocks or adding to stores.</li>
+      <li>They do this by <strong>changing the price</strong> - releasing stocks or adding to stores.</li>
     </ul>
 
     <h3>Problems of These Schemes</h3>
     <ul>
-      <li>Farmers <strong>do not respond to market signals</strong> — the market becomes <strong>distorted</strong></li>
+      <li>Farmers <strong>do not respond to market signals</strong> - the market becomes <strong>distorted</strong></li>
       <li><strong>Overproduction</strong> if incomes are guaranteed</li>
       <li><strong>Issues in storing food</strong></li>
       <li><strong>Cost of storage</strong></li>
-      <li>Farmers' <strong>moral issues</strong> — with a constant income guaranteed, farmers may lose the motivation to work hard or improve</li>
-      <li><strong>Long-term sustainability</strong> and <strong>international effects</strong> — for example on LDCs (less developed countries) and the <strong>World Trade Organisation (WTO)</strong></li>
+      <li>Farmers' <strong>moral issues</strong> - with a constant income guaranteed, farmers may lose the motivation to work hard or improve</li>
+      <li><strong>Long-term sustainability</strong> and <strong>international effects</strong> - for example on LDCs (less developed countries) and the <strong>World Trade Organisation (WTO)</strong></li>
     </ul>
 
     <div class="divider"></div>
@@ -1318,7 +1318,7 @@ Black market : price may reach £18</code></pre>
       <li>Shortages may lead to <strong>black market</strong> prices <strong>way above</strong> the equilibrium free market level.</li>
     </ul>
 
-    <h3>Question 01 — Worked Solution</h3>
+    <h3>Question 01 - Worked Solution</h3>
     <p><code>Qd = 100 − 5P</code>, <code>Qs = 5P</code>, <strong>Maximum price = Rs. 8</strong></p>
     <pre><code>Step 1: Equilibrium (Qd = Qs)
   100 - 5P = 5P
@@ -1409,7 +1409,7 @@ Min price    : P = £9
   Surplus = 240 - 170 = 70</code></pre>
     <p>At the higher price, <strong>demand falls</strong> and <strong>supply rises</strong>. A <strong>surplus</strong> exists.</p>
 
-    <h3>Question 02 — Worked Solution</h3>
+    <h3>Question 02 - Worked Solution</h3>
     <p><code>Qd = 100 − 5P</code>, <code>Qs = 5P</code>, <strong>Minimum price = Rs. 12</strong></p>
     <pre><code>Step 1: Equilibrium (Qd = Qs)
   100 - 5P = 5P
@@ -1580,10 +1580,10 @@ B + C  Society       Deadweight loss</code></pre>
 
     <h3>Types of Market Failures</h3>
     <ol>
-      <li><strong>Externalities</strong> — costs or benefits that <strong>do not show up in the market price</strong> (they are external to the market). Example: <strong>pollution</strong>.</li>
-      <li><strong>Public goods</strong> — goods that benefit everyone and are hard for the market to provide properly. Example: <strong>national defence</strong>.</li>
-      <li><strong>Monopolies</strong> — a single seller controls the market.</li>
-      <li><strong>Lack of information</strong> — <strong>imperfect information</strong> stops consumers from making <strong>utility-maximising decisions</strong>.</li>
+      <li><strong>Externalities</strong> - costs or benefits that <strong>do not show up in the market price</strong> (they are external to the market). Example: <strong>pollution</strong>.</li>
+      <li><strong>Public goods</strong> - goods that benefit everyone and are hard for the market to provide properly. Example: <strong>national defence</strong>.</li>
+      <li><strong>Monopolies</strong> - a single seller controls the market.</li>
+      <li><strong>Lack of information</strong> - <strong>imperfect information</strong> stops consumers from making <strong>utility-maximising decisions</strong>.</li>
     </ol>
 
     <div class="callout callout-yellow">
@@ -1631,7 +1631,7 @@ Lost producer surplus
 Deadweight loss
   = loss in efficiency</code></pre>
 
-    <h3>Question 03 — Worked Solution</h3>
+    <h3>Question 03 - Worked Solution</h3>
     <p><code>Qd = 200 − 10P</code>, <code>Qs = −100 + 20P</code>, <strong>Tax = Rs. 3</strong></p>
     <pre><code>Step 1: Equilibrium (Qd = Qs)
   200 - 10P = -100 + 20P
@@ -1708,7 +1708,7 @@ Subsidy cost
 Deadweight loss
   = loss in efficiency</code></pre>
 
-    <h3>Question 04 — Worked Solution</h3>
+    <h3>Question 04 - Worked Solution</h3>
     <p><code>Qd = 100 − 5P</code>, <code>Qs = −20 + 5P</code>, <strong>Subsidy = Rs. 4</strong></p>
     <pre><code>Step 1: Equilibrium (Qd = Qs)
   100 - 5P = -20 + 5P
@@ -1892,10 +1892,10 @@ Check: gains 180 vs cost 200
     <h3>How the Firm Connects with Others</h3>
     <p>The firm (run by its management) has money and goods flowing between it and four groups:</p>
     <ul>
-      <li><strong>Owners</strong> — give <strong>initial financing</strong>; receive <strong>profit after taxes</strong></li>
-      <li><strong>Input suppliers</strong> — provide <strong>inputs</strong>; receive <strong>input costs</strong></li>
-      <li><strong>Customers</strong> — receive <strong>output</strong>; pay <strong>output revenue</strong></li>
-      <li><strong>Government</strong> — receives <strong>taxes</strong>; provides <strong>government services</strong> and sets <strong>government regulations</strong></li>
+      <li><strong>Owners</strong> - give <strong>initial financing</strong>; receive <strong>profit after taxes</strong></li>
+      <li><strong>Input suppliers</strong> - provide <strong>inputs</strong>; receive <strong>input costs</strong></li>
+      <li><strong>Customers</strong> - receive <strong>output</strong>; pay <strong>output revenue</strong></li>
+      <li><strong>Government</strong> - receives <strong>taxes</strong>; provides <strong>government services</strong> and sets <strong>government regulations</strong></li>
     </ul>
 
     <div class="divider"></div>
@@ -1954,8 +1954,8 @@ L  = labor (variable)</code></pre>
     <h2>The Short Run and the Long Run</h2>
     <p>It is useful to divide a firm's decisions into <strong>long-run decisions</strong> and <strong>short-run decisions</strong>.</p>
     <ul>
-      <li><strong>To guide the firm over the next several years</strong> — the manager must use the <strong>long-run lens</strong></li>
-      <li><strong>To decide what the firm should do next week</strong> — the <strong>short-run lens</strong> is best</li>
+      <li><strong>To guide the firm over the next several years</strong> - the manager must use the <strong>long-run lens</strong></li>
+      <li><strong>To decide what the firm should do next week</strong> - the <strong>short-run lens</strong> is best</li>
     </ul>
 
     <div class="divider"></div>
@@ -1970,9 +1970,9 @@ L  = labor (variable)</code></pre>
     <p>So, increasing production during this period is possible <strong>only by increasing the variable input</strong>. When firms make short-run decisions, there is nothing they can do about their fixed inputs.</p>
 
     <ul>
-      <li><strong>Fixed input</strong> — an input whose quantity must remain constant, regardless of how much output is produced</li>
-      <li><strong>Variable input</strong> — an input whose usage can change as the level of output changes</li>
-      <li><strong>Total product (TP)</strong> — the maximum quantity of output that can be produced from a given combination of inputs</li>
+      <li><strong>Fixed input</strong> - an input whose quantity must remain constant, regardless of how much output is produced</li>
+      <li><strong>Variable input</strong> - an input whose usage can change as the level of output changes</li>
+      <li><strong>Total product (TP)</strong> - the maximum quantity of output that can be produced from a given combination of inputs</li>
     </ul>
 
     <h3>Marginal Product of Labor (MPL)</h3>
@@ -1994,8 +1994,8 @@ L  = labor (variable)</code></pre>
    6      196      12</code></pre>
 
     <ul>
-      <li><strong>Workers 1 to 2</strong> — each new worker adds more than the one before (30 → 60). This is <strong>increasing marginal returns</strong>.</li>
-      <li><strong>After worker 2</strong> — each new worker adds less than the one before (40, 31, 23, 12). This is <strong>diminishing marginal returns</strong>.</li>
+      <li><strong>Workers 1 to 2</strong> - each new worker adds more than the one before (30 → 60). This is <strong>increasing marginal returns</strong>.</li>
+      <li><strong>After worker 2</strong> - each new worker adds less than the one before (40, 31, 23, 12). This is <strong>diminishing marginal returns</strong>.</li>
     </ul>
 
     <h3>Marginal Returns to Labor</h3>
@@ -2057,9 +2057,9 @@ APL = TP / L       (total product per worker)</code></pre>
 
     <h3>The Three Zones of Marginal Productivity</h3>
     <ul>
-      <li><strong>Zone 1 — Increasing marginal productivity zone</strong>: MP is rising (up to about 3 workers)</li>
-      <li><strong>Zone 2 — Diminishing marginal productivity zone</strong>: MP is falling but still positive (about 3 to 8 workers)</li>
-      <li><strong>Zone 3 — Negative marginal productivity zone</strong>: MP is below zero and TP is falling (beyond about 8 workers)</li>
+      <li><strong>Zone 1 - Increasing marginal productivity zone</strong>: MP is rising (up to about 3 workers)</li>
+      <li><strong>Zone 2 - Diminishing marginal productivity zone</strong>: MP is falling but still positive (about 3 to 8 workers)</li>
+      <li><strong>Zone 3 - Negative marginal productivity zone</strong>: MP is below zero and TP is falling (beyond about 8 workers)</li>
     </ul>
 
     <h3>Relationship Between TP, AP and MP</h3>
@@ -2132,8 +2132,8 @@ APL = TP / L       (total product per worker)</code></pre>
 
     <h3>Explicit vs Implicit Costs</h3>
     <ul>
-      <li><strong>Explicit costs</strong> (involve actual payments) — money actually paid out for the use of inputs</li>
-      <li><strong>Implicit costs</strong> (no money changes hands) — the cost of inputs for which there is no direct money payment</li>
+      <li><strong>Explicit costs</strong> (involve actual payments) - money actually paid out for the use of inputs</li>
+      <li><strong>Implicit costs</strong> (no money changes hands) - the cost of inputs for which there is no direct money payment</li>
     </ul>
 
     <h3>Economic vs Accounting Costs</h3>
@@ -2215,8 +2215,8 @@ Accounting profit = Total revenue – All accounting costs</code></pre>
     <h2>Costs in the Short Run</h2>
     <p>In the short run, costs are split into two groups:</p>
     <ul>
-      <li><strong>Fixed costs</strong> — costs of a firm's fixed inputs</li>
-      <li><strong>Variable costs</strong> — costs of obtaining the firm's variable inputs</li>
+      <li><strong>Fixed costs</strong> - costs of a firm's fixed inputs</li>
+      <li><strong>Variable costs</strong> - costs of obtaining the firm's variable inputs</li>
     </ul>
 
     <h3>Fixed Cost</h3>
@@ -2237,9 +2237,9 @@ Accounting profit = Total revenue – All accounting costs</code></pre>
 
     <h3>Total Costs</h3>
     <ul>
-      <li><strong>Total fixed cost (TFC)</strong> — cost of all inputs that are fixed in the short run</li>
-      <li><strong>Total variable cost (TVC)</strong> — cost of all variable inputs used in producing a particular level of output</li>
-      <li><strong>Total cost (TC)</strong> — cost of all inputs, fixed and variable</li>
+      <li><strong>Total fixed cost (TFC)</strong> - cost of all inputs that are fixed in the short run</li>
+      <li><strong>Total variable cost (TVC)</strong> - cost of all variable inputs used in producing a particular level of output</li>
+      <li><strong>Total cost (TC)</strong> - cost of all inputs, fixed and variable</li>
     </ul>
 
     <div class="callout callout-yellow">
@@ -2256,9 +2256,9 @@ Accounting profit = Total revenue – All accounting costs</code></pre>
 
     <h3>Average Costs</h3>
     <ul>
-      <li><strong>Average fixed cost (AFC)</strong> — total fixed cost divided by the quantity of output produced</li>
-      <li><strong>Average variable cost (AVC)</strong> — total variable cost divided by the quantity of output produced</li>
-      <li><strong>Average total cost (ATC)</strong> — total cost divided by the quantity of output produced</li>
+      <li><strong>Average fixed cost (AFC)</strong> - total fixed cost divided by the quantity of output produced</li>
+      <li><strong>Average variable cost (AVC)</strong> - total variable cost divided by the quantity of output produced</li>
+      <li><strong>Average total cost (ATC)</strong> - total cost divided by the quantity of output produced</li>
     </ul>
 
     <pre><code>AFC = TFC / Q
@@ -2396,8 +2396,8 @@ ATC = AFC + AVC</code></pre>
     <h3>Practice Questions</h3>
     <p>The lecture gives two cost tables with some values filled in and the rest blank. Complete each table using the formulas above.</p>
     <ul>
-      <li><strong>Question 01</strong> — columns: Quantity (0 to 5), TFC, TVC, TC, MC, AFC, AVC, ATC</li>
-      <li><strong>Question 02</strong> — columns: Quantity (1 to 5), TVC, TFC, TC, AVC, AFC, ATC, MC</li>
+      <li><strong>Question 01</strong> - columns: Quantity (0 to 5), TFC, TVC, TC, MC, AFC, AVC, ATC</li>
+      <li><strong>Question 02</strong> - columns: Quantity (1 to 5), TVC, TFC, TC, AVC, AFC, ATC, MC</li>
     </ul>
 
     <ol>
@@ -2423,8 +2423,8 @@ ATC = AFC + AVC</code></pre>
 
     <h3>Long-Run Total Cost and LRATC</h3>
     <ul>
-      <li><strong>Long-run total cost (LRTC)</strong> — the cost of producing each quantity of output when the <strong>least-cost input mix</strong> is chosen in the long run</li>
-      <li><strong>Long-run average total cost (LRATC)</strong> — the cost per unit of output in the long run, when all inputs are variable</li>
+      <li><strong>Long-run total cost (LRTC)</strong> - the cost of producing each quantity of output when the <strong>least-cost input mix</strong> is chosen in the long run</li>
+      <li><strong>Long-run average total cost (LRATC)</strong> - the cost per unit of output in the long run, when all inputs are variable</li>
     </ul>
 
     <pre><code>LRATC = LRTC / Q</code></pre>
@@ -2482,25 +2482,25 @@ LRATC = the lowest parts of
     <h3>Shape of LRATC</h3>
     <p>The LRATC curve has three parts as output increases (the lecture graph marks output levels 130 and 184):</p>
     <ol>
-      <li><strong>Economies of scale</strong> — LRATC falls</li>
-      <li><strong>Constant returns to scale</strong> — LRATC stays flat</li>
-      <li><strong>Diseconomies of scale</strong> — LRATC rises</li>
+      <li><strong>Economies of scale</strong> - LRATC falls</li>
+      <li><strong>Constant returns to scale</strong> - LRATC stays flat</li>
+      <li><strong>Diseconomies of scale</strong> - LRATC rises</li>
     </ol>
 
     <h3>Reasons for Economies of Scale</h3>
     <ul>
-      <li><strong>Technical economies</strong> — bigger firms can use better machines and more specialized workers</li>
-      <li><strong>Managerial economies</strong> — bigger firms can hire specialist managers</li>
-      <li><strong>Risk-bearing economies</strong> — bigger firms can spread risk over many products or markets</li>
-      <li><strong>Marketing economies</strong> — marketing and buying costs are shared over more output</li>
-      <li><strong>Financial economies</strong> — bigger firms can often raise money more easily and more cheaply</li>
+      <li><strong>Technical economies</strong> - bigger firms can use better machines and more specialized workers</li>
+      <li><strong>Managerial economies</strong> - bigger firms can hire specialist managers</li>
+      <li><strong>Risk-bearing economies</strong> - bigger firms can spread risk over many products or markets</li>
+      <li><strong>Marketing economies</strong> - marketing and buying costs are shared over more output</li>
+      <li><strong>Financial economies</strong> - bigger firms can often raise money more easily and more cheaply</li>
     </ul>
 
     <h3>Reasons for Diseconomies of Scale</h3>
     <ul>
-      <li><strong>Managerial diseconomies of scale</strong> — management becomes harder in a very large firm</li>
+      <li><strong>Managerial diseconomies of scale</strong> - management becomes harder in a very large firm</li>
       <li><strong>Coordination and control problems</strong></li>
-      <li><strong>Workers' alienation</strong> — workers feel disconnected from the firm</li>
+      <li><strong>Workers' alienation</strong> - workers feel disconnected from the firm</li>
       <li><strong>Communication challenges</strong></li>
     </ul>
 

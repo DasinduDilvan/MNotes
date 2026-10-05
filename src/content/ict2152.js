@@ -129,7 +129,7 @@ export const lessons = [
 reserve()</code></pre>
     <p><strong>3. Interacts with other objects</strong></p>
     <pre><code>Member → borrows → Book</code></pre>
-    <p><strong>Advantages</strong> — because responsibilities are organized into objects, components can potentially be:</p>
+    <p><strong>Advantages</strong> - because responsibilities are organized into objects, components can potentially be:</p>
     <ul>
       <li>Reused</li>
       <li>Modified</li>
@@ -146,7 +146,7 @@ reserve()</code></pre>
     <h2>OOA, OOD and OOP</h2>
     <p>These three terms are very important and are easy to mix up.</p>
 
-    <h3>OOA — Object-Oriented Analysis</h3>
+    <h3>OOA - Object-Oriented Analysis</h3>
     <p><strong>Question:</strong> What exists in the problem domain?</p>
     <p>OOA focuses on identifying:</p>
     <ul>
@@ -156,9 +156,9 @@ reserve()</code></pre>
       <li>Relationships</li>
       <li>Requirements</li>
     </ul>
-    <p>We look at the problem from the point of view of the problem domain. Example — in a Library System, we may identify: Book, Member, Librarian, Loan, Library.</p>
+    <p>We look at the problem from the point of view of the problem domain. Example - in a Library System, we may identify: Book, Member, Librarian, Loan, Library.</p>
 
-    <h3>OOD — Object-Oriented Design</h3>
+    <h3>OOD - Object-Oriented Design</h3>
     <p><strong>Question:</strong> How should the software objects work together?</p>
     <p>OOD takes the concepts identified during analysis and designs software structures that satisfy the requirements. We determine:</p>
     <ul>
@@ -182,7 +182,7 @@ reserve()</code></pre>
       <p><strong>OOD</strong> focuses on defining software objects and how those objects collaborate to fulfill requirements.</p>
     </div>
 
-    <h3>OOP — Object-Oriented Programming</h3>
+    <h3>OOP - Object-Oriented Programming</h3>
     <p><strong>Question:</strong> How do we implement the design?</p>
     <p>OOP is the implementation of object-oriented concepts using a programming language. Examples of OO languages include Java, C#, C++, Python, Kotlin, Swift, and TypeScript.</p>
     <div class="callout callout-blue">
@@ -234,14 +234,14 @@ updateDetails()</code></pre>
     <h2>Why Object Orientation?</h2>
     <p>Object-oriented development can offer several advantages:</p>
     <ul>
-      <li><strong>Simplicity</strong> — complex systems can be divided into understandable objects.</li>
-      <li><strong>Reusability</strong> — existing classes and components can potentially be reused.</li>
-      <li><strong>Increased Quality</strong> — modular designs can make testing and maintenance easier.</li>
-      <li><strong>Faster Development</strong> — reusable components can reduce development effort.</li>
-      <li><strong>Maintainability</strong> — changes can often be localized to particular classes or components.</li>
-      <li><strong>Scalability</strong> — large systems can be divided into smaller components.</li>
-      <li><strong>Modularity</strong> — each class can have a clear responsibility.</li>
-      <li><strong>Modifiability</strong> — well-designed systems can accommodate changes more easily.</li>
+      <li><strong>Simplicity</strong> - complex systems can be divided into understandable objects.</li>
+      <li><strong>Reusability</strong> - existing classes and components can potentially be reused.</li>
+      <li><strong>Increased Quality</strong> - modular designs can make testing and maintenance easier.</li>
+      <li><strong>Faster Development</strong> - reusable components can reduce development effort.</li>
+      <li><strong>Maintainability</strong> - changes can often be localized to particular classes or components.</li>
+      <li><strong>Scalability</strong> - large systems can be divided into smaller components.</li>
+      <li><strong>Modularity</strong> - each class can have a clear responsibility.</li>
+      <li><strong>Modifiability</strong> - well-designed systems can accommodate changes more easily.</li>
     </ul>
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
@@ -253,10 +253,10 @@ updateDetails()</code></pre>
     <h2>What is an Object?</h2>
     <p>The idea of objects in programming has historical roots in languages such as <strong>Simula</strong>. An object can be thought of as a software entity that:</p>
     <ul>
-      <li><strong>Knows things</strong> — these are its attributes / state.</li>
-      <li><strong>Does things</strong> — these are its methods / behavior.</li>
+      <li><strong>Knows things</strong> - these are its attributes / state.</li>
+      <li><strong>Does things</strong> - these are its methods / behavior.</li>
     </ul>
-    <p>Example — a <strong>Car</strong> object:</p>
+    <p>Example - a <strong>Car</strong> object:</p>
     <p><strong>Knows:</strong> color, manufacturer, model, cost, owner</p>
     <p><strong>Can do:</strong> drive, stop, lock, carry passengers</p>
 
@@ -264,7 +264,7 @@ updateDetails()</code></pre>
 
     <h2>Attributes</h2>
     <p>An <strong>attribute</strong> represents a piece of data or a property of an object. Attributes describe the <strong>state</strong> of an object.</p>
-    <p>Example — Car:</p>
+    <p>Example - Car:</p>
     <pre><code>color
 manufacturer
 model
@@ -279,7 +279,7 @@ model = Toyota        model = Honda</code></pre>
 
     <h2>Methods</h2>
     <p>A <strong>method</strong> represents what an object can do. A method implements some behavior of the object.</p>
-    <p>Example — Car:</p>
+    <p>Example - Car:</p>
     <pre><code>drive()
 stop()
 lock()
@@ -294,12 +294,12 @@ BankAccount   accountNo, balance      deposit(), withdraw()</code></pre>
 
     <h2>State and Behavior</h2>
     <p>This is a very important distinction to remember.</p>
-    <p><strong>State</strong> — what the object is / knows at a particular time. Represented by attributes. Example:</p>
+    <p><strong>State</strong> - what the object is / knows at a particular time. Represented by attributes. Example:</p>
     <pre><code>Car
 color = Red
 manufacturer = Toyota
 cost = 8,000,000</code></pre>
-    <p><strong>Behavior</strong> — what the object can do. Represented by methods. Example:</p>
+    <p><strong>Behavior</strong> - what the object can do. Represented by methods. Example:</p>
     <pre><code>drive()
 stop()
 openDoor()</code></pre>
@@ -338,18 +338,18 @@ displayDetails()</code></pre>
     <h2>Class vs Object</h2>
     <p>This is one of the most important concepts in OOAD.</p>
     <ul>
-      <li><strong>Class</strong> — a blueprint / template.</li>
-      <li><strong>Object</strong> — an actual instance created from the class.</li>
+      <li><strong>Class</strong> - a blueprint / template.</li>
+      <li><strong>Object</strong> - an actual instance created from the class.</li>
     </ul>
     <p>Think about a house:</p>
     <pre><code>House Blueprint = Class
 Actual House    = Object</code></pre>
-    <p>Example — Class: <code>Employee</code>. Possible objects: <code>employee1</code> → John, <code>employee2</code> → Jane, <code>employee3</code> → Mark. All belong to the <code>Employee</code> class but have different values.</p>
+    <p>Example - Class: <code>Employee</code>. Possible objects: <code>employee1</code> → John, <code>employee2</code> → Jane, <code>employee3</code> → Mark. All belong to the <code>Employee</code> class but have different values.</p>
 
     <div class="divider"></div>
 
     <h2>Instance</h2>
-    <p>An <strong>instance</strong> is one particular object created from a class. Example — Class: <code>Student</code>. An instance:</p>
+    <p>An <strong>instance</strong> is one particular object created from a class. Example - Class: <code>Student</code>. An instance:</p>
     <pre><code>Student
 ----------------
 name = Peter
@@ -360,7 +360,7 @@ walk()</code></pre>
     <p>Peter is an instance of the <code>Student</code> class. Each instance has its own state.</p>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>An <strong>instance</strong> is a single person, thing, or concept in the application domain — another word for a single object.</p>
+      <p>An <strong>instance</strong> is a single person, thing, or concept in the application domain - another word for a single object.</p>
     </div>
 
     <div class="divider"></div>
@@ -378,9 +378,9 @@ Method  → prepareSoup()</code></pre>
     <h2>How Message Passing Works</h2>
     <p>There are normally three steps:</p>
     <ol>
-      <li><strong>Sender</strong> — one object sends a message.</li>
-      <li><strong>Receiver</strong> — another object receives the message.</li>
-      <li><strong>Method execution</strong> — the receiver executes the matching method. A result may then be returned.</li>
+      <li><strong>Sender</strong> - one object sends a message.</li>
+      <li><strong>Receiver</strong> - another object receives the message.</li>
+      <li><strong>Method execution</strong> - the receiver executes the matching method. A result may then be returned.</li>
     </ol>
     <pre><code>Sender
   |
@@ -397,9 +397,9 @@ Return value</code></pre>
     <h2>Components of a Message</h2>
     <p>A message can contain:</p>
     <ol>
-      <li><strong>Object reference</strong> — identifies which object should receive the message.</li>
-      <li><strong>Method name</strong> — identifies what operation should be performed.</li>
-      <li><strong>Parameters</strong> — provide the required input values.</li>
+      <li><strong>Object reference</strong> - identifies which object should receive the message.</li>
+      <li><strong>Method name</strong> - identifies what operation should be performed.</li>
+      <li><strong>Parameters</strong> - provide the required input values.</li>
     </ol>
     <p>Example:</p>
     <pre><code>lawrence.takeOrder(
@@ -452,7 +452,7 @@ SalesPerson</code></pre>
 
     <h2>Abstraction</h2>
     <p><strong>Abstraction</strong> means focusing on the important aspects of something while ignoring unnecessary details. It answers <em>"What does this object do?"</em> rather than <em>"How exactly does it do it?"</em></p>
-    <p><strong>Real-world example — Map.</strong> A map is an abstraction. Different maps show different information depending on their purpose.</p>
+    <p><strong>Real-world example - Map.</strong> A map is an abstraction. Different maps show different information depending on their purpose.</p>
     <ul>
       <li><strong>Road map</strong> shows: roads, cities, routes, distances.</li>
       <li><strong>Geological map</strong> shows: rock types, geological structures, geological boundaries.</li>
@@ -506,11 +506,11 @@ account.withdraw(1000);</code></pre>
 
     <h2>Advantages of Encapsulation</h2>
     <ul>
-      <li><strong>Data Integrity</strong> — data can only be changed through controlled operations.</li>
-      <li><strong>Security</strong> — sensitive internal information can be protected.</li>
-      <li><strong>Control</strong> — the class decides which operations are allowed.</li>
-      <li><strong>Flexibility</strong> — internal implementation can change without necessarily affecting users of the class.</li>
-      <li><strong>Reduced Complexity</strong> — users do not need to understand the internal implementation.</li>
+      <li><strong>Data Integrity</strong> - data can only be changed through controlled operations.</li>
+      <li><strong>Security</strong> - sensitive internal information can be protected.</li>
+      <li><strong>Control</strong> - the class decides which operations are allowed.</li>
+      <li><strong>Flexibility</strong> - internal implementation can change without necessarily affecting users of the class.</li>
+      <li><strong>Reduced Complexity</strong> - users do not need to understand the internal implementation.</li>
     </ul>
 
     <div class="divider"></div>
@@ -526,8 +526,8 @@ private balance
 deposit()
 withdraw()
 getBalance()</code></pre>
-    <p><strong>Encapsulation</strong> — <code>balance</code> is protected from direct access.</p>
-    <p><strong>Abstraction</strong> — the user only needs to know about <code>deposit()</code>, <code>withdraw()</code>, and <code>getBalance()</code>. They do not need to know exactly how the bank updates the balance internally.</p>
+    <p><strong>Encapsulation</strong> - <code>balance</code> is protected from direct access.</p>
+    <p><strong>Abstraction</strong> - the user only needs to know about <code>deposit()</code>, <code>withdraw()</code>, and <code>getBalance()</code>. They do not need to know exactly how the bank updates the balance internally.</p>
 
     <div class="divider"></div>
 
@@ -561,7 +561,7 @@ stop()
 Car extends Vehicle
 Bike extends Vehicle
 Truck extends Vehicle</code></pre>
-    <p>The common functionality is written once and reused. Inheritance is most useful when there is a genuine <strong>"is-a"</strong> relationship — for example, <em>a Car is a Vehicle</em>.</p>
+    <p>The common functionality is written once and reused. Inheritance is most useful when there is a genuine <strong>"is-a"</strong> relationship - for example, <em>a Car is a Vehicle</em>.</p>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
       <p>Modern OO design often prefers <strong>composition over inheritance</strong> when appropriate, because too much inheritance can create rigid, hard-to-change class hierarchies.</p>
@@ -570,7 +570,7 @@ Truck extends Vehicle</code></pre>
     <div class="divider"></div>
 
     <h2>Polymorphism</h2>
-    <p>The word <strong>polymorphism</strong> means "many forms" — <em>poly</em> = many, <em>morph</em> = form. In OO systems, polymorphism allows the same operation or interface to produce different behavior depending on which object is involved.</p>
+    <p>The word <strong>polymorphism</strong> means "many forms" - <em>poly</em> = many, <em>morph</em> = form. In OO systems, polymorphism allows the same operation or interface to produce different behavior depending on which object is involved.</p>
     <p>Example:</p>
     <pre><code>Vehicle
    |
@@ -578,7 +578,7 @@ Truck extends Vehicle</code></pre>
    |        |        |
   Car      Bike     Truck</code></pre>
     <p>Suppose every vehicle has <code>calculateParkingFee()</code>. A Car may calculate the fee one way, a Bike another way, and a Truck differently again. The caller can use the same operation, <code>vehicle.calculateParkingFee()</code>, but the actual behavior depends on the real vehicle type. This is polymorphism.</p>
-    <p><strong>Modern example — Payment:</strong></p>
+    <p><strong>Modern example - Payment:</strong></p>
     <pre><code>Payment
    |
    ---------------------------
@@ -591,8 +591,8 @@ Truck extends Vehicle</code></pre>
     <h2>Cohesion and Coupling</h2>
     <p>Two very important OO design concepts are:</p>
     <ul>
-      <li><strong>Cohesion</strong> — how closely related the responsibilities inside a module/class are.</li>
-      <li><strong>Coupling</strong> — how strongly one module/class depends on another.</li>
+      <li><strong>Cohesion</strong> - how closely related the responsibilities inside a module/class are.</li>
+      <li><strong>Coupling</strong> - how strongly one module/class depends on another.</li>
     </ul>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
@@ -603,14 +603,14 @@ Truck extends Vehicle</code></pre>
 
     <h2>Cohesion</h2>
     <p><strong>Cohesion</strong> measures how strongly the responsibilities, methods, and data of a class belong together around a single, meaningful purpose.</p>
-    <p><strong>High cohesion</strong> — a class has a clear, focused responsibility. Example:</p>
+    <p><strong>High cohesion</strong> - a class has a clear, focused responsibility. Example:</p>
     <pre><code>EmailService
 ----------------
 validateEmail()
 sendEmail()
 formatEmail()</code></pre>
     <p>These operations are all related, so this is <strong>high cohesion</strong>.</p>
-    <p><strong>Low cohesion</strong> — consider:</p>
+    <p><strong>Low cohesion</strong> - consider:</p>
     <pre><code>UserManager
 ----------------
 createUser()
@@ -621,21 +621,21 @@ generateReport()
 printReport()
 calculateTax()
 playMusic()</code></pre>
-    <p>This class does too many unrelated things — it has <strong>low cohesion</strong>. We could split it into <code>UserService</code>, <code>EmailService</code>, <code>ReportService</code>, <code>TaxService</code>, and <code>MusicService</code>.</p>
+    <p>This class does too many unrelated things - it has <strong>low cohesion</strong>. We could split it into <code>UserService</code>, <code>EmailService</code>, <code>ReportService</code>, <code>TaxService</code>, and <code>MusicService</code>.</p>
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
       <p>Quick test: "Does this class have one clear purpose?" If <strong>YES</strong> → high cohesion. If <strong>NO</strong> → low cohesion.</p>
     </div>
-    <p>Example — <code>StudentService</code> with <code>registerStudent()</code>, <code>updateStudent()</code>, <code>removeStudent()</code> → <strong>high cohesion</strong>. But <code>StudentService</code> with <code>printInvoice()</code>, <code>sendEmail()</code>, <code>calculateSalary()</code>, <code>playVideo()</code> → <strong>low cohesion</strong>.</p>
+    <p>Example - <code>StudentService</code> with <code>registerStudent()</code>, <code>updateStudent()</code>, <code>removeStudent()</code> → <strong>high cohesion</strong>. But <code>StudentService</code> with <code>printInvoice()</code>, <code>sendEmail()</code>, <code>calculateSalary()</code>, <code>playVideo()</code> → <strong>low cohesion</strong>.</p>
 
     <div class="divider"></div>
 
     <h2>Coupling</h2>
     <p><strong>Coupling</strong> refers to the degree of dependency between software modules or classes. If two classes depend heavily on each other, that is <strong>high coupling</strong>. If they are relatively independent, that is <strong>low coupling</strong>.</p>
-    <p><strong>High coupling</strong> — imagine:</p>
+    <p><strong>High coupling</strong> - imagine:</p>
     <pre><code>Class A → Class B → Class C → Class D</code></pre>
     <p>If changing Class B forces changes in A, C, and D, the system is tightly dependent. This makes the system difficult to maintain, difficult to test, difficult to modify, and more vulnerable to changes.</p>
-    <p><strong>Low coupling</strong> — in a loosely coupled system:</p>
+    <p><strong>Low coupling</strong> - in a loosely coupled system:</p>
     <pre><code>Class A → Interface ← Class B</code></pre>
     <p>Classes depend less directly on implementation details. Advantages include easier maintenance, easier testing, easier replacement, easier modification, and better flexibility.</p>
 
@@ -707,7 +707,7 @@ class MySQLDatabase {
     void connect() { System.out.println("Connected"); }
     void saveStudent() { System.out.println("Student saved"); }
 }</code></pre>
-    <p><strong>Answer: High coupling</strong> — <code>Student</code> creates and depends directly on the concrete <code>MySQLDatabase</code> class.</p>
+    <p><strong>Answer: High coupling</strong> - <code>Student</code> creates and depends directly on the concrete <code>MySQLDatabase</code> class.</p>
 
     <pre><code>interface Payment {
     void pay(double amount);
@@ -730,7 +730,7 @@ class Order {
         payment.pay(amount);
     }
 }</code></pre>
-    <p><strong>Answer: Loose coupling</strong> — <code>Order</code> depends only on the <code>Payment</code> interface, not on a specific payment class.</p>
+    <p><strong>Answer: Loose coupling</strong> - <code>Order</code> depends only on the <code>Payment</code> interface, not on a specific payment class.</p>
 
     <pre><code>class Report {
     void generate() {
@@ -742,7 +742,7 @@ class Order {
 class PDFPrinter {
     void print() { System.out.println("Printing PDF"); }
 }</code></pre>
-    <p><strong>Answer: High coupling</strong> — <code>Report</code> directly creates and depends on the concrete <code>PDFPrinter</code> class.</p>
+    <p><strong>Answer: High coupling</strong> - <code>Report</code> directly creates and depends on the concrete <code>PDFPrinter</code> class.</p>
 
     <pre><code>interface Notification {
     void send(String message);
@@ -767,7 +767,7 @@ class UserService {
         notification.send("Welcome!");
     }
 }</code></pre>
-    <p><strong>Answer: Loose coupling</strong> — <code>UserService</code> depends on the <code>Notification</code> interface, not on a specific notification class.</p>
+    <p><strong>Answer: Loose coupling</strong> - <code>UserService</code> depends on the <code>Notification</code> interface, not on a specific notification class.</p>
 
     <pre><code>class ShoppingCart {
     private StripePayment payment = new StripePayment();
@@ -780,7 +780,7 @@ class UserService {
 class StripePayment {
     void processPayment() { System.out.println("Payment processed"); }
 }</code></pre>
-    <p><strong>Answer: High coupling</strong> — <code>ShoppingCart</code> directly creates and depends on the concrete <code>StripePayment</code> class, with no interface in between.</p>
+    <p><strong>Answer: High coupling</strong> - <code>ShoppingCart</code> directly creates and depends on the concrete <code>StripePayment</code> class, with no interface in between.</p>
 
     <div class="divider"></div>
 
@@ -956,8 +956,8 @@ public class Main {
 
     <h3>Static / Dynamic Typing</h3>
     <ul>
-      <li><strong>Static typed</strong> — types are checked at compile time.</li>
-      <li><strong>Dynamic typed</strong> — types are checked at run time.</li>
+      <li><strong>Static typed</strong> - types are checked at compile time.</li>
+      <li><strong>Dynamic typed</strong> - types are checked at run time.</li>
       <li>Some languages offer a <strong>hybrid</strong> approach.</li>
     </ul>
     <p>Examples of languages:</p>
@@ -971,17 +971,17 @@ Static     Errors caught at compile time, better performance,  Less flexible, ve
            easier IDE support
 Dynamic    Flexible, faster to write, less verbose             Errors occur at runtime, harder
                                                                  to debug, slower performance</code></pre>
-    <p><strong>Static Typed (Java) — Verbose:</strong></p>
+    <p><strong>Static Typed (Java) - Verbose:</strong></p>
     <pre><code>String name = "Alice";                     // Must declare type
 int age = 20;                              // Must declare type
 Person p = new Person(name, age);          // Must declare exact type</code></pre>
-    <p><strong>Dynamic Typed (Python) — Less Verbose:</strong></p>
+    <p><strong>Dynamic Typed (Python) - Less Verbose:</strong></p>
     <pre><code>name = "Alice"          # No type declaration needed
 age = 20
 p = Person(name, age)</code></pre>
 
     <h3>Garbage Collection</h3>
-    <p><strong>Garbage collection</strong> is important for memory management in systems that create and delete many objects during their execution. Objects are removed from memory once they are no longer needed — otherwise the system may run out of memory in which to execute.</p>
+    <p><strong>Garbage collection</strong> is important for memory management in systems that create and delete many objects during their execution. Objects are removed from memory once they are no longer needed - otherwise the system may run out of memory in which to execute.</p>
     <p>Example problem without garbage collection:</p>
     <pre><code>for (int i = 0; i < 100000; i++) {
     Person p = new Person("Name" + i); // many objects created
@@ -989,14 +989,14 @@ p = Person(name, age)</code></pre>
 }</code></pre>
 
     <h3>Types of Garbage Objects in Java</h3>
-    <p><strong>Nullified Objects</strong> — the object becomes garbage once its reference is set to <code>null</code>:</p>
+    <p><strong>Nullified Objects</strong> - the object becomes garbage once its reference is set to <code>null</code>:</p>
     <pre><code>Person p = new Person("Alice");
 p = null; // "Alice" object is now garbage</code></pre>
-    <p><strong>Out of Scope Objects</strong> — the object becomes garbage once its reference variable goes out of scope:</p>
+    <p><strong>Out of Scope Objects</strong> - the object becomes garbage once its reference variable goes out of scope:</p>
     <pre><code>public void createPerson() {
     Person p = new Person("Bob");
 } // p goes out of scope → "Bob" object is garbage</code></pre>
-    <p><strong>Unreachable Objects via Reassignment</strong> — the object becomes garbage once its only reference is reassigned elsewhere:</p>
+    <p><strong>Unreachable Objects via Reassignment</strong> - the object becomes garbage once its only reference is reassigned elsewhere:</p>
     <pre><code>Person p1 = new Person("Alice");
 Person p2 = new Person("Bob");
 
@@ -1105,7 +1105,7 @@ p1 = p2; // "Alice" object is now unreachable → garbage</code></pre>
 
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>A model is a <strong>simplified representation of a real-world system</strong>. It shows the key elements in the system and how they are related — without going into implementation detail.</p>
+      <p>A model is a <strong>simplified representation of a real-world system</strong>. It shows the key elements in the system and how they are related - without going into implementation detail.</p>
     </div>
 
     <div class="divider"></div>
@@ -1119,7 +1119,7 @@ p1 = p2; // "Alice" object is now unreachable → garbage</code></pre>
     </div>
 
     <h3>An Everyday Example: A House</h3>
-    <p>Think about a house. The <strong>model</strong> is the complete idea or representation of the house — it tells us about its rooms, the relationships between rooms, doors, windows, structure, and how everything is organized.</p>
+    <p>Think about a house. The <strong>model</strong> is the complete idea or representation of the house - it tells us about its rooms, the relationships between rooms, doors, windows, structure, and how everything is organized.</p>
     <p>A <strong>diagram</strong> is one visual way of showing part of that model. For example:</p>
     <ul>
       <li><strong>Floor plan</strong> → shows how the rooms are arranged</li>
@@ -1176,7 +1176,7 @@ Library                                                    Book Copy
     </div>
 
     <h3>An Extended Model</h3>
-    <p>A model can grow to include more classes and relationships as the system is understood in more detail — for example, adding <strong>Librarian</strong> and <strong>Fine</strong>:</p>
+    <p>A model can grow to include more classes and relationships as the system is understood in more detail - for example, adding <strong>Librarian</strong> and <strong>Fine</strong>:</p>
     <pre><code>Librarian                Loan               Book Copy            Book
 - librarianId  -- processes --> (Loan)  -- for --> (Book Copy) -- of --> (Book)
 - name         -- works in --> Library
@@ -1224,10 +1224,10 @@ Book Copy -- may have --> Fine</code></pre>
 
     <h2>General Rules of Modeling</h2>
     <ul>
-      <li><strong>Simplicity</strong> — keep the model as simple as possible while still being useful.</li>
-      <li><strong>Consistency</strong> — the model should not contradict itself.</li>
-      <li><strong>Completeness</strong> — the model should include everything important.</li>
-      <li><strong>Hierarchical representation</strong> — complex systems should be organized into layers or levels.</li>
+      <li><strong>Simplicity</strong> - keep the model as simple as possible while still being useful.</li>
+      <li><strong>Consistency</strong> - the model should not contradict itself.</li>
+      <li><strong>Completeness</strong> - the model should include everything important.</li>
+      <li><strong>Hierarchical representation</strong> - complex systems should be organized into layers or levels.</li>
     </ul>
 
     <div class="divider"></div>
@@ -1251,9 +1251,9 @@ Book Copy -- may have --> Fine</code></pre>
 
     <h3>Three UML Building Blocks</h3>
     <ul>
-      <li><strong>Things</strong> — the basic elements being modeled (such as classes and objects)</li>
-      <li><strong>Relationships</strong> — how those elements connect to each other</li>
-      <li><strong>Diagrams</strong> — the visual views built from things and relationships</li>
+      <li><strong>Things</strong> - the basic elements being modeled (such as classes and objects)</li>
+      <li><strong>Relationships</strong> - how those elements connect to each other</li>
+      <li><strong>Diagrams</strong> - the visual views built from things and relationships</li>
     </ul>
 
     <div class="divider"></div>
@@ -1262,7 +1262,7 @@ Book Copy -- may have --> Fine</code></pre>
     <p>UML diagrams can be grouped into two broad categories.</p>
 
     <h3>1. Structural Diagrams</h3>
-    <p>Show <strong>what the system is made of</strong> — its structure, components, and relationships.</p>
+    <p>Show <strong>what the system is made of</strong> - its structure, components, and relationships.</p>
     <ul>
       <li><strong>Class Diagram</strong> → classes, attributes, methods, relationships</li>
       <li><strong>Object Diagram</strong> → objects and their relationships at a particular time</li>
@@ -1284,7 +1284,7 @@ Book Copy -- may have --> Fine</code></pre>
     <h2>Case Studies</h2>
     <p>Use these case studies to practice identifying a model and choosing the right diagram for it.</p>
 
-    <h3>Case Study 1 — University Library</h3>
+    <h3>Case Study 1 - University Library</h3>
     <div class="callout callout-blue">
       <span class="callout-label">Scenario</span>
       <p>A university library system keeps information about <strong>Students, Books, Librarians and Loans</strong>. A student can borrow several books. Each book can be borrowed by different students at different times. Librarians manage books and loans.</p>
@@ -1308,7 +1308,7 @@ Book Copy -- may have --> Fine</code></pre>
       <p>Use a Class Diagram when you want to show the <strong>structure</strong> of a system.</p>
     </div>
 
-    <h3>Case Study 2 — Online Shopping</h3>
+    <h3>Case Study 2 - Online Shopping</h3>
     <div class="callout callout-blue">
       <span class="callout-label">Scenario</span>
       <p>An online shopping system allows customers to <strong>browse products, add products to a cart, place orders and make payments</strong>. Administrators manage products and orders. A payment gateway is an external system.</p>
@@ -1334,7 +1334,7 @@ Order/payment interaction sequence  Sequence Diagram</pre>
       <li><strong>Why:</strong> Each diagram provides a different view of the same system model.</li>
     </ol>
 
-    <h3>Case Study 3 — Hospital Appointment System</h3>
+    <h3>Case Study 3 - Hospital Appointment System</h3>
     <div class="callout callout-blue">
       <span class="callout-label">Scenario</span>
       <p>A hospital system contains <strong>Patients, Doctors and Appointments</strong>. Patients can search for doctors and book appointments. Doctors can view their appointments. An appointment has a date, time, and status.</p>
@@ -1361,7 +1361,7 @@ Doctor   -- has -->    Appointments</pre>
       <p>Use a Class Diagram when you want to show <strong>what the system is made of and how its elements are related</strong>.</p>
     </div>
 
-    <h3>Case Study 4 — ATM System</h3>
+    <h3>Case Study 4 - ATM System</h3>
     <div class="callout callout-blue">
       <span class="callout-label">Scenario</span>
       <p>An ATM allows a customer to <strong>insert a card, enter a PIN, check balance, withdraw money and receive a receipt</strong>. The ATM communicates with the bank system.</p>
@@ -1388,7 +1388,7 @@ Customer --> Change PIN</pre>
       </li>
     </ol>
 
-    <h3>Case Study 5 — Food Delivery System</h3>
+    <h3>Case Study 5 - Food Delivery System</h3>
     <div class="callout callout-blue">
       <span class="callout-label">Scenario</span>
       <p>A food delivery system involves <strong>Customers, Restaurants, Delivery Drivers and Orders</strong>. A customer places an order from a restaurant. The restaurant accepts the order and prepares the food. A delivery driver collects and delivers it.</p>
@@ -1431,17 +1431,17 @@ Customer --> Track Delivery</pre>
       'What is UML?',
       'UML Basics',
       'UML Diagram Types',
-      'Case Study 1 — University Library',
-      'Case Study 2 — Online Shopping',
-      'Case Study 3 — Hospital Appointment System',
-      'Case Study 4 — ATM System',
-      'Case Study 5 — Food Delivery System',
+      'Case Study 1 - University Library',
+      'Case Study 2 - Online Shopping',
+      'Case Study 3 - Hospital Appointment System',
+      'Case Study 4 - ATM System',
+      'Case Study 5 - Food Delivery System',
     ],
     definitions: [
       { term: 'Model', meaning: 'A simplified, abstract representation of a system that shows its important elements and relationships, without implementation detail.' },
       { term: 'Diagram', meaning: 'A particular view of a model; it shows only a selected part or aspect of the model, not the whole system.' },
       { term: 'UML (Unified Modeling Language)', meaning: 'A standard language for specifying, visualizing, constructing, and documenting software systems.' },
-      { term: 'Structural Diagram', meaning: 'A type of UML diagram that shows what a system is made of — its structure, components, and relationships.' },
+      { term: 'Structural Diagram', meaning: 'A type of UML diagram that shows what a system is made of - its structure, components, and relationships.' },
       { term: 'Behavioral Diagram', meaning: 'A type of UML diagram that shows how a system behaves or works.' },
       { term: 'Class Diagram', meaning: 'A structural diagram showing classes, their attributes, methods, and relationships.' },
       { term: 'Object Diagram', meaning: 'A structural diagram showing objects and their relationships at a particular point in time.' },
@@ -1510,12 +1510,12 @@ Customer --> Track Delivery</pre>
     <h3>Functional vs Non-Functional Requirements</h3>
     <div class="callout callout-blue">
       <span class="callout-label">Definition</span>
-      <p><strong>Functional Requirement</strong> — a statement of <strong>what the system should do</strong>.</p>
+      <p><strong>Functional Requirement</strong> - a statement of <strong>what the system should do</strong>.</p>
       <p>Example: Validate ATM card. Validate PIN. Dispense cash.</p>
     </div>
     <div class="callout callout-blue">
       <span class="callout-label">Definition</span>
-      <p><strong>Non-Functional Requirement</strong> — a <strong>constraint on how the system should operate or be built</strong>.</p>
+      <p><strong>Non-Functional Requirement</strong> - a <strong>constraint on how the system should operate or be built</strong>.</p>
       <p>Example: Validate PIN within 3 seconds. Use encryption. Use a specific programming language.</p>
     </div>
 
@@ -1537,20 +1537,20 @@ Customer --> Track Delivery</pre>
     <p>This whole interaction represents the use case <strong>Withdraw Cash</strong>.</p>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>A use case is really a <strong>collection of different scenarios</strong> — both successful and unsuccessful ones.</p>
+      <p>A use case is really a <strong>collection of different scenarios</strong> - both successful and unsuccessful ones.</p>
     </div>
 
     <h3>Use Case vs Scenario</h3>
     <ul>
-      <li><strong>Use Case</strong> — a general goal or process</li>
-      <li><strong>Scenario</strong> — one specific path through that use case</li>
+      <li><strong>Use Case</strong> - a general goal or process</li>
+      <li><strong>Scenario</strong> - one specific path through that use case</li>
     </ul>
-    <p><strong>Example — Use Case: Withdraw Cash</strong></p>
+    <p><strong>Example - Use Case: Withdraw Cash</strong></p>
     <ul>
-      <li><strong>Scenario 1 — Successful withdrawal:</strong> Customer enters the correct PIN and withdraws Rs. 10,000</li>
-      <li><strong>Scenario 2 — Wrong PIN:</strong> Customer enters an incorrect PIN</li>
-      <li><strong>Scenario 3 — Insufficient balance:</strong> Customer requests Rs. 50,000 but has only Rs. 20,000</li>
-      <li><strong>Scenario 4 — Daily limit exceeded:</strong> Customer has already withdrawn the maximum allowed amount</li>
+      <li><strong>Scenario 1 - Successful withdrawal:</strong> Customer enters the correct PIN and withdraws Rs. 10,000</li>
+      <li><strong>Scenario 2 - Wrong PIN:</strong> Customer enters an incorrect PIN</li>
+      <li><strong>Scenario 3 - Insufficient balance:</strong> Customer requests Rs. 50,000 but has only Rs. 20,000</li>
+      <li><strong>Scenario 4 - Daily limit exceeded:</strong> Customer has already withdrawn the maximum allowed amount</li>
     </ul>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
@@ -1608,11 +1608,11 @@ System    -> Dispense cash</code></pre>
     </div>
     <p><strong>Example: University Library System</strong></p>
     <p>Possible actors: Student, Librarian, Payment System, University Authentication System.</p>
-    <p>Not "Kamal" — instead, <strong>Student</strong>, because many different students can perform the same role.</p>
+    <p>Not "Kamal" - instead, <strong>Student</strong>, because many different students can perform the same role.</p>
 
     <h3>Primary Actor</h3>
     <p>The <strong>primary actor has a goal that is fulfilled by using the system</strong>.</p>
-    <p><strong>Example: Online Shopping System</strong> — <strong>Primary actor:</strong> Customer &nbsp; <strong>Goal:</strong> Purchase Product</p>
+    <p><strong>Example: Online Shopping System</strong> - <strong>Primary actor:</strong> Customer &nbsp; <strong>Goal:</strong> Purchase Product</p>
     <p>The customer directly uses the system to achieve the goal.</p>
     <pre><code>System              Primary Actor     Goal
 ------------------  ----------------  -------------------
@@ -1624,7 +1624,7 @@ University System   Student           Register Course</code></pre>
 
     <h3>Supporting Actor</h3>
     <p>A <strong>supporting actor provides a service to the system</strong>.</p>
-    <p><strong>Example: Online Shopping</strong> — the customer places an order, and the shopping system needs payment authorization.</p>
+    <p><strong>Example: Online Shopping</strong> - the customer places an order, and the shopping system needs payment authorization.</p>
     <p><strong>Primary Actor:</strong> Customer &nbsp; <strong>Supporting Actor:</strong> Bank / Payment Gateway</p>
     <pre><code>Customer
    |
@@ -1633,11 +1633,11 @@ Online Shopping System
    |
    v
 Payment Gateway</code></pre>
-    <p>The payment gateway is not using the shopping system to achieve its own goal — instead, it <strong>provides a service to the system</strong>.</p>
+    <p>The payment gateway is not using the shopping system to achieve its own goal - instead, it <strong>provides a service to the system</strong>.</p>
 
     <h3>Offstage Actor</h3>
     <p>An offstage actor <strong>has an interest in the system's behavior but does not directly take part in the interaction</strong>.</p>
-    <p><strong>Example: Online Shopping</strong> — suppose the shopping system calculates and reports sales tax.</p>
+    <p><strong>Example: Online Shopping</strong> - suppose the shopping system calculates and reports sales tax.</p>
     <ul>
       <li><strong>Customer</strong> → Primary actor</li>
       <li><strong>Payment Gateway</strong> → Supporting actor</li>
@@ -1648,7 +1648,7 @@ Payment Gateway</code></pre>
     <div class="divider"></div>
 
     <h2>Actor Types in Practice</h2>
-    <p><strong>Example: Restaurant Ordering System</strong> — a customer orders food using a restaurant POS system.</p>
+    <p><strong>Example: Restaurant Ordering System</strong> - a customer orders food using a restaurant POS system.</p>
     <pre><code>Actor              Type          Why?
 -----------------  ------------  ------------------------------------
 Customer           Primary       Wants to place an order
@@ -1675,7 +1675,7 @@ University Management         Offstage Actor    Has an interest in registration 
 
     <h3>Case Study: Hospital Appointment and Prescription System</h3>
     <p>Patients search for doctors, book appointments, cancel appointments, and view their appointment history. <strong>Doctors</strong> use the system to view their appointments and issue electronic prescriptions.</p>
-    <p>The system talks to the <strong>Hospital Payment System</strong> to process appointment payments, and to an <strong>SMS Notification Service</strong> to send appointment reminders. The <strong>Hospital Administration</strong> cares about appointments being properly managed and hospital policies being followed. The <strong>Ministry of Health</strong> cares about prescription and patient-service activities following healthcare regulations — but neither directly uses the system.</p>
+    <p>The system talks to the <strong>Hospital Payment System</strong> to process appointment payments, and to an <strong>SMS Notification Service</strong> to send appointment reminders. The <strong>Hospital Administration</strong> cares about appointments being properly managed and hospital policies being followed. The <strong>Ministry of Health</strong> cares about prescription and patient-service activities following healthcare regulations - but neither directly uses the system.</p>
     <pre><code>Actor                      Type              Reason
 -------------------------  ----------------  -------------------------------------------
 Patient                    Primary Actor     Books/cancels appointments and views
@@ -1717,11 +1717,11 @@ Payment System   Process Fine Payment</code></pre>
     <h3>How to Identify Actors</h3>
     <p>Ask yourself:</p>
     <ul>
-      <li><strong>Who directly uses the system?</strong> — e.g. Student</li>
-      <li><strong>Who has different roles or permissions?</strong> — e.g. Student, Librarian, Administrator</li>
-      <li><strong>Who interacts with the system during errors?</strong> — e.g. Customer Service Officer</li>
-      <li><strong>Who provides a service to the system?</strong> — e.g. Payment Gateway</li>
-      <li><strong>Who is affected by the system's results?</strong> — e.g. Tax Authority</li>
+      <li><strong>Who directly uses the system?</strong> - e.g. Student</li>
+      <li><strong>Who has different roles or permissions?</strong> - e.g. Student, Librarian, Administrator</li>
+      <li><strong>Who interacts with the system during errors?</strong> - e.g. Customer Service Officer</li>
+      <li><strong>Who provides a service to the system?</strong> - e.g. Payment Gateway</li>
+      <li><strong>Who is affected by the system's results?</strong> - e.g. Tax Authority</li>
     </ul>
     <p>These questions line up directly with the actor types covered above.</p>
 
@@ -1732,7 +1732,7 @@ Payment System   Process Fine Payment</code></pre>
       <span class="callout-label">Remember</span>
       <p>The basic rule: <strong>one user goal → one use case.</strong></p>
     </div>
-    <p><strong>Example — Student goals:</strong> Search Book, Borrow Book, Return Book, View Borrowed Books.</p>
+    <p><strong>Example - Student goals:</strong> Search Book, Borrow Book, Return Book, View Borrowed Books.</p>
     <pre><code>Student
   |
   +---- Search Book
@@ -1745,7 +1745,7 @@ Payment System   Process Fine Payment</code></pre>
 
     <h3>Exception: CRUD</h3>
     <p>Sometimes several goals can be combined. <strong>CRUD</strong> means <strong>Create, Read, Update, Delete</strong>.</p>
-    <p>Instead of: Create User, View User, Update User, Delete User — we can use one use case: <strong>Manage Users</strong>.</p>
+    <p>Instead of: Create User, View User, Update User, Delete User - we can use one use case: <strong>Manage Users</strong>.</p>
 
     <div class="divider"></div>
 
@@ -1760,7 +1760,7 @@ Payment System   Process Fine Payment</code></pre>
     </div>
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
-      <p>Avoid: Ticket Purchase, Ticket Order, Purchase, Pay — these are written as Object + Verb, or leave out the object entirely.</p>
+      <p>Avoid: Ticket Purchase, Ticket Order, Purchase, Pay - these are written as Object + Verb, or leave out the object entirely.</p>
     </div>
     <p>Why does this matter? A use case name should:</p>
     <ul>
@@ -1788,9 +1788,9 @@ Payment System   Process Fine Payment</code></pre>
     <h3>Alternate / Failure Scenarios (Extensions)</h3>
     <p>This covers <strong>what can go wrong</strong>. For <strong>Borrow Book</strong>:</p>
     <ul>
-      <li><strong>Extension 1 — Book unavailable:</strong> Student selects a book → system finds it's unavailable → system displays "Book currently unavailable."</li>
-      <li><strong>Extension 2 — Student has unpaid fine:</strong> System checks the student's account → an unpaid fine exists → system prevents borrowing.</li>
-      <li><strong>Extension 3 — Student has reached borrowing limit:</strong> System informs the student that the borrowing limit has been reached.</li>
+      <li><strong>Extension 1 - Book unavailable:</strong> Student selects a book → system finds it's unavailable → system displays "Book currently unavailable."</li>
+      <li><strong>Extension 2 - Student has unpaid fine:</strong> System checks the student's account → an unpaid fine exists → system prevents borrowing.</li>
+      <li><strong>Extension 3 - Student has reached borrowing limit:</strong> System informs the student that the borrowing limit has been reached.</li>
     </ul>
 
     <div class="divider"></div>
@@ -1798,15 +1798,15 @@ Payment System   Process Fine Payment</code></pre>
     <h2>Use Case Formats</h2>
     <p>There are three formats:</p>
     <ul>
-      <li><strong>Brief</strong> — a very short summary</li>
-      <li><strong>Casual</strong> — an informal description covering several scenarios</li>
-      <li><strong>Fully Dressed</strong> — a detailed, structured description with steps, variations, and supporting information</li>
+      <li><strong>Brief</strong> - a very short summary</li>
+      <li><strong>Casual</strong> - an informal description covering several scenarios</li>
+      <li><strong>Fully Dressed</strong> - a detailed, structured description with steps, variations, and supporting information</li>
     </ul>
 
     <h3>Brief Use Case Example</h3>
     <p><strong>Use Case: Borrow Book</strong></p>
     <p>A student searches for a book, selects an available book, and borrows it. The system records the borrowing and displays the due date.</p>
-    <p>Very short — useful for simple, well-understood functionality.</p>
+    <p>Very short - useful for simple, well-understood functionality.</p>
 
     <h3>Casual Use Case Example</h3>
     <p><strong>Use Case: Handle Return</strong></p>
@@ -1830,7 +1830,7 @@ Payment System   Process Fine Payment</code></pre>
       </ul>
     </div>
 
-    <h3>Fully Dressed Example — Online Library</h3>
+    <h3>Fully Dressed Example - Online Library</h3>
     <p><strong>Use Case: Search Book</strong></p>
     <p><strong>Primary Actor:</strong> Student</p>
     <p><strong>Precondition</strong></p>
@@ -1870,13 +1870,13 @@ Payment System   Process Fine Payment</code></pre>
 
     <h3>Postconditions</h3>
     <p>A <strong>postcondition</strong> describes what should be true <strong>after the use case finishes</strong>.</p>
-    <p><strong>Borrow Book</strong> — after successful completion:</p>
+    <p><strong>Borrow Book</strong> - after successful completion:</p>
     <ul>
       <li>Book is marked as borrowed</li>
       <li>Student's borrowed-book list is updated</li>
       <li>Due date is recorded</li>
     </ul>
-    <p><strong>Place Order</strong> — after successful completion:</p>
+    <p><strong>Place Order</strong> - after successful completion:</p>
     <ul>
       <li>Order is created</li>
       <li>Payment is recorded</li>
@@ -1897,7 +1897,7 @@ Tax authority      Wants correct tax calculation</code></pre>
 
     <div class="divider"></div>
 
-    <h2>Complete Example — Online Shopping</h2>
+    <h2>Complete Example - Online Shopping</h2>
     <p>Let's put everything together.</p>
     <p><strong>System:</strong> Online Shopping System</p>
     <p><strong>System Boundary</strong></p>
@@ -1931,13 +1931,13 @@ Admin
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
       <ol>
-        <li><strong>Find the system</strong> — what system are we studying? e.g. University Library System</li>
-        <li><strong>Find actors</strong> — who uses it? e.g. Student, Librarian</li>
-        <li><strong>Find goals</strong> — what does each actor want to achieve? e.g. Student: Search Book, Borrow Book, Return Book</li>
-        <li><strong>Convert goals into use cases</strong> using Verb + Object — e.g. Search Book, Borrow Book, Return Book, Manage Books</li>
-        <li><strong>Find scenarios</strong> — what normally happens?</li>
-        <li><strong>Find exceptions</strong> — what can go wrong?</li>
-        <li><strong>Choose the required format</strong> — Brief (short paragraph), Casual (informal with scenarios), or Fully Dressed (structured template)</li>
+        <li><strong>Find the system</strong> - what system are we studying? e.g. University Library System</li>
+        <li><strong>Find actors</strong> - who uses it? e.g. Student, Librarian</li>
+        <li><strong>Find goals</strong> - what does each actor want to achieve? e.g. Student: Search Book, Borrow Book, Return Book</li>
+        <li><strong>Convert goals into use cases</strong> using Verb + Object - e.g. Search Book, Borrow Book, Return Book, Manage Books</li>
+        <li><strong>Find scenarios</strong> - what normally happens?</li>
+        <li><strong>Find exceptions</strong> - what can go wrong?</li>
+        <li><strong>Choose the required format</strong> - Brief (short paragraph), Casual (informal with scenarios), or Fully Dressed (structured template)</li>
       </ol>
     </div>
 
@@ -1968,18 +1968,18 @@ Fully Dressed     Detailed, structured description    Template</code></pre>
     <h2>Practice Activities</h2>
     <p>For each scenario below, write a <strong>fully dressed use case</strong> for the named target use case, using the 7-step method above.</p>
     <ol>
-      <li><strong>Library Book Search</strong> — An Online Library System lets students search for books by title, author, or ISBN. The student must log in first. If login succeeds, the student can enter search details. If the details are valid and the book exists, the system shows the book details. If the details are invalid, the system shows an error message. If no matching book is found, the system shows a "No results found" message.<br>Target use case: <em>Search Book</em></li>
-      <li><strong>ATM Cash Withdrawal</strong> — An ATM System lets customers withdraw cash. The customer inserts an ATM card and enters a PIN. If the PIN is correct, the customer enters the amount to withdraw. The system checks the account balance and daily withdrawal limit. If everything is valid, the ATM dispenses cash and updates the account balance. If the PIN is incorrect, the system shows an error; after three incorrect attempts, the card is blocked. If the account has insufficient funds or the daily limit is exceeded, the withdrawal is rejected.<br>Target use case: <em>Withdraw Cash</em></li>
-      <li><strong>Online Shopping</strong> — An Online Shopping System lets customers purchase products. The customer searches for a product, selects it, adds it to the cart, and proceeds to checkout. The customer enters delivery details and selects a payment method. If payment succeeds, the system creates the order and shows a confirmation. If the product is out of stock, the system tells the customer. If payment fails, the customer is asked to pick another payment method.<br>Target use case: <em>Place Order</em></li>
-      <li><strong>University Course Registration</strong> — A University Course Registration System lets students register for courses. The student logs in, views available courses, selects a course, and submits the registration request. The system checks whether the student meets the prerequisites and whether seats are available. If all conditions are met, the student is registered. If the prerequisite isn't met, registration is rejected. If the course is full, the system tells the student registration is unavailable.<br>Target use case: <em>Register for Course</em></li>
-      <li><strong>Hospital Appointment Booking</strong> — A Hospital Appointment System lets patients book appointments with doctors. The patient logs in, selects a doctor and preferred date, and views available time slots. The patient picks a time slot and confirms the appointment. The system records the appointment and sends a confirmation. If no time slots are available, the system tells the patient. If the selected slot becomes unavailable before confirmation, the system asks the patient to choose another slot.<br>Target use case: <em>Book Appointment</em></li>
-      <li><strong>Online Banking Login</strong> — An Online Banking System lets registered users securely access their accounts. The user enters a username and password, and the system verifies the credentials. If correct, the user is redirected to the account dashboard. If the password is wrong, the system shows an error and allows another attempt; after three consecutive failed attempts, the account is locked. If the user forgets the password, they can select "Forgot Password" and reset it by email or SMS verification.<br>Target use case: <em>Login to Online Banking</em></li>
-      <li><strong>Food Delivery Order</strong> — A Food Delivery System lets customers order food from restaurants. The customer picks a restaurant, chooses food items, adds them to the cart, enters the delivery address, and confirms the order. The system processes the payment and sends the order to the restaurant. If a chosen food item becomes unavailable, the system asks the customer to remove or replace it. If payment fails, the order is not confirmed.<br>Target use case: <em>Place Food Order</em></li>
-      <li><strong>Hotel Room Booking</strong> — An Online Hotel Booking System lets customers search for available rooms. The customer enters check-in and check-out dates and selects a room. The system shows available rooms and prices. The customer provides guest details and confirms the booking. After successful payment, the system confirms the reservation. If no rooms are available, the system shows an appropriate message. If payment fails, the booking is not completed.<br>Target use case: <em>Book Hotel Room</em></li>
-      <li><strong>Prescription Refill</strong> — A Hospital System lets patients request prescription refills online. The patient logs in, views active prescriptions, selects one, and submits a refill request. The system checks whether the prescription is still valid and whether the refill limit has been exceeded. If eligible, the request goes to the doctor for approval. If the prescription is expired or the refill limit is exceeded, the system rejects the request. If the doctor approves it, the system updates the prescription status and notifies the patient.<br>Target use case: <em>Request Prescription Refill</em></li>
-      <li><strong>Cinema Ticket Booking</strong> — An Online Cinema Booking System lets customers pick a movie, date, show time, and seats. The customer confirms the selected seats and makes payment. If payment succeeds, the system generates the ticket and sends a confirmation. If the selected seats are already booked, the system asks the customer to pick different seats. If payment fails, the booking is not completed.<br>Target use case: <em>Book Cinema Ticket</em></li>
-      <li><strong>University Examination Registration</strong> — A University Examination System lets students register for upcoming exams. The student logs in, views eligible exams, selects exams, and submits the registration. The system checks whether the student has completed the required courses and whether registration is still open. If all conditions are met, the registration is recorded and confirmed. If the student isn't eligible for an exam, the registration is rejected. If the registration deadline has passed, the system doesn't allow registration. If the student has already registered, the system informs them.<br>Target use case: <em>Register for Examination</em></li>
-      <li><strong>Bank Fund Transfer</strong> — An Online Banking System lets customers transfer money between accounts. The customer logs in, selects the source account, enters the recipient account and transfer amount, and confirms the transaction. The system verifies the customer's identity, checks the account balance, and processes the transfer. If successful, the system updates both accounts and shows a transaction confirmation. If the balance is insufficient, the transfer is rejected. If the recipient account is invalid, the system shows an error. If extra authentication is required and fails, the transaction is cancelled.<br>Target use case: <em>Transfer Money</em></li>
+      <li><strong>Library Book Search</strong> - An Online Library System lets students search for books by title, author, or ISBN. The student must log in first. If login succeeds, the student can enter search details. If the details are valid and the book exists, the system shows the book details. If the details are invalid, the system shows an error message. If no matching book is found, the system shows a "No results found" message.<br>Target use case: <em>Search Book</em></li>
+      <li><strong>ATM Cash Withdrawal</strong> - An ATM System lets customers withdraw cash. The customer inserts an ATM card and enters a PIN. If the PIN is correct, the customer enters the amount to withdraw. The system checks the account balance and daily withdrawal limit. If everything is valid, the ATM dispenses cash and updates the account balance. If the PIN is incorrect, the system shows an error; after three incorrect attempts, the card is blocked. If the account has insufficient funds or the daily limit is exceeded, the withdrawal is rejected.<br>Target use case: <em>Withdraw Cash</em></li>
+      <li><strong>Online Shopping</strong> - An Online Shopping System lets customers purchase products. The customer searches for a product, selects it, adds it to the cart, and proceeds to checkout. The customer enters delivery details and selects a payment method. If payment succeeds, the system creates the order and shows a confirmation. If the product is out of stock, the system tells the customer. If payment fails, the customer is asked to pick another payment method.<br>Target use case: <em>Place Order</em></li>
+      <li><strong>University Course Registration</strong> - A University Course Registration System lets students register for courses. The student logs in, views available courses, selects a course, and submits the registration request. The system checks whether the student meets the prerequisites and whether seats are available. If all conditions are met, the student is registered. If the prerequisite isn't met, registration is rejected. If the course is full, the system tells the student registration is unavailable.<br>Target use case: <em>Register for Course</em></li>
+      <li><strong>Hospital Appointment Booking</strong> - A Hospital Appointment System lets patients book appointments with doctors. The patient logs in, selects a doctor and preferred date, and views available time slots. The patient picks a time slot and confirms the appointment. The system records the appointment and sends a confirmation. If no time slots are available, the system tells the patient. If the selected slot becomes unavailable before confirmation, the system asks the patient to choose another slot.<br>Target use case: <em>Book Appointment</em></li>
+      <li><strong>Online Banking Login</strong> - An Online Banking System lets registered users securely access their accounts. The user enters a username and password, and the system verifies the credentials. If correct, the user is redirected to the account dashboard. If the password is wrong, the system shows an error and allows another attempt; after three consecutive failed attempts, the account is locked. If the user forgets the password, they can select "Forgot Password" and reset it by email or SMS verification.<br>Target use case: <em>Login to Online Banking</em></li>
+      <li><strong>Food Delivery Order</strong> - A Food Delivery System lets customers order food from restaurants. The customer picks a restaurant, chooses food items, adds them to the cart, enters the delivery address, and confirms the order. The system processes the payment and sends the order to the restaurant. If a chosen food item becomes unavailable, the system asks the customer to remove or replace it. If payment fails, the order is not confirmed.<br>Target use case: <em>Place Food Order</em></li>
+      <li><strong>Hotel Room Booking</strong> - An Online Hotel Booking System lets customers search for available rooms. The customer enters check-in and check-out dates and selects a room. The system shows available rooms and prices. The customer provides guest details and confirms the booking. After successful payment, the system confirms the reservation. If no rooms are available, the system shows an appropriate message. If payment fails, the booking is not completed.<br>Target use case: <em>Book Hotel Room</em></li>
+      <li><strong>Prescription Refill</strong> - A Hospital System lets patients request prescription refills online. The patient logs in, views active prescriptions, selects one, and submits a refill request. The system checks whether the prescription is still valid and whether the refill limit has been exceeded. If eligible, the request goes to the doctor for approval. If the prescription is expired or the refill limit is exceeded, the system rejects the request. If the doctor approves it, the system updates the prescription status and notifies the patient.<br>Target use case: <em>Request Prescription Refill</em></li>
+      <li><strong>Cinema Ticket Booking</strong> - An Online Cinema Booking System lets customers pick a movie, date, show time, and seats. The customer confirms the selected seats and makes payment. If payment succeeds, the system generates the ticket and sends a confirmation. If the selected seats are already booked, the system asks the customer to pick different seats. If payment fails, the booking is not completed.<br>Target use case: <em>Book Cinema Ticket</em></li>
+      <li><strong>University Examination Registration</strong> - A University Examination System lets students register for upcoming exams. The student logs in, views eligible exams, selects exams, and submits the registration. The system checks whether the student has completed the required courses and whether registration is still open. If all conditions are met, the registration is recorded and confirmed. If the student isn't eligible for an exam, the registration is rejected. If the registration deadline has passed, the system doesn't allow registration. If the student has already registered, the system informs them.<br>Target use case: <em>Register for Examination</em></li>
+      <li><strong>Bank Fund Transfer</strong> - An Online Banking System lets customers transfer money between accounts. The customer logs in, selects the source account, enters the recipient account and transfer amount, and confirms the transaction. The system verifies the customer's identity, checks the account balance, and processes the transfer. If successful, the system updates both accounts and shows a transaction confirmation. If the balance is insufficient, the transfer is rejected. If the recipient account is invalid, the system shows an error. If extra authentication is required and fails, the transaction is cancelled.<br>Target use case: <em>Transfer Money</em></li>
     </ol>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
@@ -2014,7 +2014,7 @@ Fully Dressed     Detailed, structured description    Template</code></pre>
       'Preconditions',
       'Postconditions',
       'Stakeholders and Interests',
-      'Complete Example — Online Shopping',
+      'Complete Example - Online Shopping',
       'How to Solve a Use Case (7-Step Method)',
       'Quick Comparison Table',
     ],
@@ -2030,7 +2030,7 @@ Fully Dressed     Detailed, structured description    Template</code></pre>
       { term: 'Offstage Actor', meaning: 'An actor with an interest in the system\u2019s behavior who does not directly interact with it.' },
       { term: 'System Boundary', meaning: 'The line that separates what is inside the system (use cases) from what is outside it (actors).' },
       { term: 'Actor-Goal List', meaning: 'A record of each primary actor paired with the goals they want to achieve using the system.' },
-      { term: 'CRUD', meaning: 'Create, Read, Update, Delete — related goals that can sometimes be combined into a single use case, like "Manage Users".' },
+      { term: 'CRUD', meaning: 'Create, Read, Update, Delete - related goals that can sometimes be combined into a single use case, like "Manage Users".' },
       { term: 'Main Success Scenario', meaning: 'The normal, successful path through a use case when everything goes correctly.' },
       { term: 'Extension', meaning: 'An alternate or failure branch off the main success scenario, describing what can go wrong.' },
       { term: 'Brief', meaning: 'A use case format that is a very short summary paragraph, used for simple, well-understood functionality.' },
@@ -2041,16 +2041,16 @@ Fully Dressed     Detailed, structured description    Template</code></pre>
       { term: 'Stakeholder', meaning: 'Anyone who has an interest in the outcome of a use case, even if they are not the actor performing it.' },
     ],
     keyPoints: [
-      'A use case is a collection of related scenarios, not just one path — some succeed, some fail.',
+      'A use case is a collection of related scenarios, not just one path - some succeed, some fail.',
       'Actors are identified by role, not by name (e.g., "Student", not "Kamal").',
       'Primary actor: goal fulfilled by the system. Supporting actor: provides a service to the system. Offstage actor: has an interest but never directly interacts with the system.',
       'The actor sits outside the system boundary; the use cases sit inside it.',
-      'Rule of thumb: one user goal → one use case — except CRUD operations, which can be merged into one use case (e.g., "Manage Users").',
+      'Rule of thumb: one user goal → one use case - except CRUD operations, which can be merged into one use case (e.g., "Manage Users").',
       'Name use cases with Verb + Object (e.g., "Borrow Book"), never Object + Verb or a bare verb like "Pay".',
       'A fully dressed use case has seven parts: Use Case Name, Primary Actor, Stakeholders and Interests, Preconditions, Main Success Scenario, Extensions, Postconditions.',
       'Precondition = must be true before the use case starts. Postcondition = must be true after it finishes.',
       'Extensions are labeled by step number and letter (e.g., "3a. Invalid search details") to show exactly where they branch off the main scenario.',
-      'The three use case formats — Brief, Casual, Fully Dressed — trade off detail for speed; Fully Dressed is the exam-critical one.',
+      'The three use case formats - Brief, Casual, Fully Dressed - trade off detail for speed; Fully Dressed is the exam-critical one.',
       'The 7-step method for solving any use case problem: find the system → find actors → find goals → convert goals to use cases → find scenarios → find exceptions → choose the format.',
     ],
   },
@@ -2560,10 +2560,10 @@ content: `
 <h3>1. Activity</h3>
 <p>An <strong>activity</strong> is a behavior made up of one or more actions. It is a network of <strong>nodes</strong> connected by <strong>edges</strong>.</p>
 <ul>
-  <li><strong>Action nodes</strong> — executable steps.</li>
-  <li><strong>Control nodes</strong> — manage the flow of execution (e.g., decisions, forks).</li>
-  <li><strong>Object nodes</strong> — objects or data used within the activity.</li>
-  <li><strong>Edges</strong> — paths or flows of execution between nodes.</li>
+  <li><strong>Action nodes</strong> - executable steps.</li>
+  <li><strong>Control nodes</strong> - manage the flow of execution (e.g., decisions, forks).</li>
+  <li><strong>Object nodes</strong> - objects or data used within the activity.</li>
+  <li><strong>Edges</strong> - paths or flows of execution between nodes.</li>
 </ul>
 
 <div class="callout callout-yellow">
@@ -2581,9 +2581,9 @@ content: `
 
 <h3>Properties of Actions</h3>
 <ul>
-  <li><strong>Atomic</strong> — not broken down inside the activity; treated as a single step.</li>
-  <li><strong>Uninterruptible</strong> — once it starts, it runs to completion.</li>
-  <li><strong>Instantaneous</strong> — assumed to take negligible time compared to the whole activity.</li>
+  <li><strong>Atomic</strong> - not broken down inside the activity; treated as a single step.</li>
+  <li><strong>Uninterruptible</strong> - once it starts, it runs to completion.</li>
+  <li><strong>Instantaneous</strong> - assumed to take negligible time compared to the whole activity.</li>
 </ul>
 
 <div class="callout callout-yellow">
@@ -2597,9 +2597,9 @@ content: `
 
 <h3>4. Starting and Stopping</h3>
 <ul>
-  <li><strong>Initial node</strong> — the starting point. Drawn as a <strong>solid filled circle</strong>.</li>
-  <li><strong>Activity final node</strong> — ends the <strong>entire activity</strong>. Drawn as a <strong>bull's-eye</strong> (filled circle inside an outer circle).</li>
-  <li><strong>Flow final node</strong> — drawn as a <strong>circle with an X</strong>. It ends <strong>only the flow that reaches it</strong>, not the whole activity.</li>
+  <li><strong>Initial node</strong> - the starting point. Drawn as a <strong>solid filled circle</strong>.</li>
+  <li><strong>Activity final node</strong> - ends the <strong>entire activity</strong>. Drawn as a <strong>bull's-eye</strong> (filled circle inside an outer circle).</li>
+  <li><strong>Flow final node</strong> - drawn as a <strong>circle with an X</strong>. It ends <strong>only the flow that reaches it</strong>, not the whole activity.</li>
 </ul>
 <pre><code>  (●)   Initial node
 
@@ -2642,11 +2642,11 @@ Decision <> > Merge <> --->
 
 <h2>Exercises on Basic Notations</h2>
 
-<h3>Exercise 1 — Posting a Letter</h3>
+<h3>Exercise 1 - Posting a Letter</h3>
 <p>Draw an activity diagram for posting a letter using these actions: <strong>Write letter</strong>, <strong>Address letter</strong>, <strong>Post letter</strong>.</p>
 <pre><code>(●) --&gt; ( Write letter ) --&gt; ( Address letter ) --&gt; ( Post letter ) --&gt; (◉)</code></pre>
 
-<h3>Exercise 2 — Getting Mail</h3>
+<h3>Exercise 2 - Getting Mail</h3>
 <ul>
   <li>The activity starts with the <strong>Get mail</strong> action.</li>
   <li>If the mail is junk, <code>[is junk]</code> is true. Go to <strong>Bin mail</strong>, then to the stop state.</li>
@@ -2678,7 +2678,7 @@ Decision <> > Merge <> --->
   <li><strong>In application modeling:</strong> objects, components, logical entities within the application.</li>
 </ul>
 
-<h3>Example — Airline Check-in</h3>
+<h3>Example - Airline Check-in</h3>
 <p>The swimlanes are decided by <strong>who performs each action</strong>.</p>
 
 <p><strong>Swimlane: Passenger</strong> (user / actor behaviors)</p>
@@ -2766,7 +2766,7 @@ creates the object uses the object</code></pre>
 
 <h2>More Exercises</h2>
 
-<h3>Exercise 3 — Creating a Document</h3>
+<h3>Exercise 3 - Creating a Document</h3>
 <p>Draw an activity diagram for creating a document using a word processing package. The steps are:</p>
 <ol>
   <li>Open the word processing package.</li>
@@ -2790,7 +2790,7 @@ creates the object uses the object</code></pre>
    -&gt; &lt;merge&gt; -&gt; Save file -&gt; Print hard copy
    -&gt; Exit word processor -&gt; (◉)</code></pre>
 
-<h3>Exercise 4 — Order Processing</h3>
+<h3>Exercise 4 - Order Processing</h3>
 <ul>
   <li><strong>Requested order</strong> is the input parameter of <strong>Receive order</strong>.</li>
   <li>If the order is accepted: fill in all required information, send the invoice, then accept the payment.</li>
@@ -2808,7 +2808,7 @@ creates the object uses the object</code></pre>
           -&gt; JOIN -&gt; Close order -&gt; (◉)
     [rejected] -&gt; Close order -&gt; (◉)</code></pre>
 
-<h3>Exercise 5 — Client Engagement Process</h3>
+<h3>Exercise 5 - Client Engagement Process</h3>
 <p>A company follows a structured process with prospective clients:</p>
 <ul>
   <li>A <strong>sales person</strong> contacts a client to schedule an appointment.</li>
@@ -3008,7 +3008,7 @@ content: `
 <p>Some classes are part of the problem domain but are <strong>not clearly mentioned</strong> in the description. These are called <strong>hidden classes</strong>.</p>
 
 <div class="callout callout-blue">
-  <span class="callout-label">Example — University Course Registration</span>
+  <span class="callout-label">Example - University Course Registration</span>
   <p>Description: <em>"Students enroll in courses offered by the university."</em></p>
   <p><strong>Identified nouns:</strong> Student, Course, University.</p>
   <p><strong>Hidden class:</strong> <code>Enrollment</code>. The system must track which student registered for which course, in which semester, with what grade.</p>
@@ -3016,7 +3016,7 @@ content: `
 <pre><code>Enrollment
 enrollmentID
 semester
-grade</code></pre> <div class="callout callout-red"> <span class="callout-label">Warning</span> <p>Be careful with <strong>synonyms</strong> (different words, same meaning) and <strong>homonyms</strong> (one word, many meanings). They can cause wrong classes or operations.<br>Example: <strong>Order</strong> can mean a purchase request (e-commerce) or a command/instruction (military or management).</p> </div> <h3>Noun–Verb Analysis: Step by Step</h3> <h3>Step 01 — Noun Phrase Identification</h3> <p>Find the nouns and noun phrases in the system definition. Example system definition:</p> <ul> <li>The <strong>Portfolio Manager</strong> shall be able to roll up <strong>portfolios</strong> on several <strong>levels</strong>.</li> <li>A <strong>Trader</strong> shall be able to place <strong>orders</strong>, on behalf of a <strong>portfolio</strong>, that generate one or more <strong>trades</strong>.</li> <li>A <strong>Portfolio Manager</strong> shall be able to select a <strong>purchase method</strong> in conjunction with placing a <strong>sell order</strong>.</li> <li>A <strong>trade entry</strong> shall generate <strong>forecasted cash flows</strong> associated with the given <strong>trade lot</strong>.</li> <li>The <strong>system</strong> shall match up <strong>actual cash flows</strong> with <strong>forecasted cash flows</strong>.</li> <li>The <strong>system</strong> shall automatically generate appropriate <strong>postings</strong> to the <strong>General Ledger</strong>.</li> <li>The <strong>system</strong> shall allow an <strong>Assistant Trader</strong> to modify <strong>trade data</strong> and propagate the <strong>results</strong> accordingly.</li> </ul> <h3>Step 02 — Noun Phrase Consolidation</h3> <p>After finding the nouns and noun phrases:</p> <ol> <li>Make plural terms <strong>singular</strong>.</li> <li>Remove <strong>duplicate</strong> terms.</li> <li>Combine <strong>synonyms</strong> into a single term.</li> <li>Put the list in <strong>alphabetical order</strong>.</li> </ol> <p>Result after consolidation:</p> <pre><code>Assistant Trader | Portfolio | System
+grade</code></pre> <div class="callout callout-red"> <span class="callout-label">Warning</span> <p>Be careful with <strong>synonyms</strong> (different words, same meaning) and <strong>homonyms</strong> (one word, many meanings). They can cause wrong classes or operations.<br>Example: <strong>Order</strong> can mean a purchase request (e-commerce) or a command/instruction (military or management).</p> </div> <h3>Noun–Verb Analysis: Step by Step</h3> <h3>Step 01 - Noun Phrase Identification</h3> <p>Find the nouns and noun phrases in the system definition. Example system definition:</p> <ul> <li>The <strong>Portfolio Manager</strong> shall be able to roll up <strong>portfolios</strong> on several <strong>levels</strong>.</li> <li>A <strong>Trader</strong> shall be able to place <strong>orders</strong>, on behalf of a <strong>portfolio</strong>, that generate one or more <strong>trades</strong>.</li> <li>A <strong>Portfolio Manager</strong> shall be able to select a <strong>purchase method</strong> in conjunction with placing a <strong>sell order</strong>.</li> <li>A <strong>trade entry</strong> shall generate <strong>forecasted cash flows</strong> associated with the given <strong>trade lot</strong>.</li> <li>The <strong>system</strong> shall match up <strong>actual cash flows</strong> with <strong>forecasted cash flows</strong>.</li> <li>The <strong>system</strong> shall automatically generate appropriate <strong>postings</strong> to the <strong>General Ledger</strong>.</li> <li>The <strong>system</strong> shall allow an <strong>Assistant Trader</strong> to modify <strong>trade data</strong> and propagate the <strong>results</strong> accordingly.</li> </ul> <h3>Step 02 - Noun Phrase Consolidation</h3> <p>After finding the nouns and noun phrases:</p> <ol> <li>Make plural terms <strong>singular</strong>.</li> <li>Remove <strong>duplicate</strong> terms.</li> <li>Combine <strong>synonyms</strong> into a single term.</li> <li>Put the list in <strong>alphabetical order</strong>.</li> </ol> <p>Result after consolidation:</p> <pre><code>Assistant Trader | Portfolio | System
 
 Cash Flow | Portfolio Manager| Trade
 General Ledger | Posting | Trade Data
@@ -3024,7 +3024,7 @@ Level | Purchase Method | Trade Entry
 Order | Result | Trade Lot
 Sell Order | Trader |</code></pre>
 
-<h3>Step 03 — Noun Phrase Analysis</h3>
+<h3>Step 03 - Noun Phrase Analysis</h3>
 <p>Now <strong>remove</strong> the following from the list:</p>
 <ul>
   <li>References to the <strong>system itself</strong> or its context.</li>
@@ -3037,7 +3037,7 @@ Sell Order | Trader |</code></pre>
   <p><strong>Actors</strong> (like Trader or Portfolio Manager) may be removed from the candidate classes and placed in <strong>use case diagrams</strong> instead.</p>
 </div>
 
-<h3>Step 04 — Draw the Initial Analysis Class Model</h3>
+<h3>Step 04 - Draw the Initial Analysis Class Model</h3>
 <ul>
   <li>Draw a model showing <strong>only class names, generalizations (inheritance) and associations</strong>.</li>
   <li>Just as noun phrase analysis finds candidate classes, <strong>verb phrase analysis finds relationships</strong> between classes.</li>
@@ -3080,8 +3080,8 @@ Professor teaches Course</code></pre>
 
 <p>CRC analysis is a <strong>two-phase activity</strong>:</p>
 <ol>
-  <li><strong>Brainstorming</strong> — gather information.</li>
-  <li><strong>Analysis</strong> — examine and refine the information.</li>
+  <li><strong>Brainstorming</strong> - gather information.</li>
+  <li><strong>Analysis</strong> - examine and refine the information.</li>
 </ol>
 
 <div class="divider"></div>
@@ -3117,7 +3117,7 @@ Professor teaches Course</code></pre>
   <p><strong>+</strong> Public &nbsp; <strong>−</strong> Private &nbsp; <strong>#</strong> Protected &nbsp; <strong>~</strong> Package</p>
 </div>
 
-<h3>Example — Student Class</h3>
+<h3>Example - Student Class</h3>
 <pre><code>+----------------------------------+
 
 | Student |
@@ -3225,7 +3225,7 @@ Student - - - - - - - -> Library Card</code></pre>
   <li>It is an <strong>"is entirely made of"</strong> relationship.</li>
 </ul>
 
-<h3>Composition Example — House and Room</h3>
+<h3>Composition Example - House and Room</h3>
 <pre><code>House ◆---------- Room
   1        1..*</code></pre>
 <ul>
@@ -3250,7 +3250,7 @@ Student - - - - - - - -> Library Card</code></pre>
 
 <div class="divider"></div>
 
-<h2>Exercise — Hockey League</h2>
+<h2>Exercise - Hockey League</h2>
 <p>Draw a UML class diagram for the problem domain of a hockey league. <strong>Label all associations with multiplicities.</strong></p>
 <ul>
   <li>A hockey league is made up of <strong>at least four</strong> hockey teams.</li>
@@ -3318,7 +3318,7 @@ subTopics: [
 'Dependency',
 'Aggregation',
 'Composition',
-'Exercise — Hockey League',
+'Exercise - Hockey League',
 ],
 definitions: [
 { term: 'Domain Class Diagram', meaning: 'Models concepts in the problem domain. Usually shows only class names and relationships.' },

@@ -13,7 +13,7 @@ export const lessons = [
 
     <div class="divider"></div>
 
-    <h2>Course Overview — ICT2122</h2>
+    <h2>Course Overview - ICT2122</h2>
 
     <h3>Course Outline</h3>
     <p>Over the semester, this course will cover:</p>
@@ -21,7 +21,7 @@ export const lessons = [
       <li>Primitive vs non-primitive data types</li>
       <li>Operators, statements, control structures</li>
       <li>APIs</li>
-      <li>The influence of basic OO principles — <strong>abstraction</strong>, <strong>encapsulation</strong>, <strong>inheritance</strong>, and <strong>re-use</strong> — on the design and implementation of OO programs</li>
+      <li>The influence of basic OO principles - <strong>abstraction</strong>, <strong>encapsulation</strong>, <strong>inheritance</strong>, and <strong>re-use</strong> - on the design and implementation of OO programs</li>
       <li><strong>Essentials of Class Diagrams and classes</strong>
         <ul>
           <li>classes, members, methods, constructors</li>
@@ -70,7 +70,7 @@ export const lessons = [
 
     <h3>Course Plan</h3>
     <ul>
-      <li>Lectures — 02 hours per week</li>
+      <li>Lectures - 02 hours per week</li>
       <li><strong>Evaluation</strong>
         <ul>
           <li>03 Quizzes</li>
@@ -85,11 +85,11 @@ export const lessons = [
       <p><strong>80% attendance</strong> is MANDATORY. Getting at least <strong>40% from CA (Continuous Assessment) marks</strong> is also MANDATORY.</p>
     </div>
     <p>The final mark is split like this:</p>
-    <pre><code>CA (Continuous Assessment) — 30%
+    <pre><code>CA (Continuous Assessment) - 30%
    10%  From Quizzes
    20%  Mid Term Theory Evaluation
 
-ESA (End Semester Assessment) — 70%
+ESA (End Semester Assessment) - 70%
    70%  Final Exam (Theory Paper)</code></pre>
 
     <div class="divider"></div>
@@ -98,7 +98,7 @@ ESA (End Semester Assessment) — 70%
     <ul>
       <li>What is Object-Oriented Programming</li>
       <li>Fundamentals of Object Orientation</li>
-      <li>Why Object Orientation? — Modularity, Information-hiding, Code re-use, Pluggability and debugging ease</li>
+      <li>Why Object Orientation? - Modularity, Information-hiding, Code re-use, Pluggability and debugging ease</li>
       <li>Understanding Classes and Objects</li>
       <li>A Real-World Scenario</li>
       <li>Class, Object, Instance, Instantiation</li>
@@ -112,7 +112,7 @@ ESA (End Semester Assessment) — 70%
     <h2>Programming vs. Development vs. Engineering</h2>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>These three words are often used loosely, but they describe different scopes of work. <strong>Programming</strong> is writing code to make a computer do something. <strong>Development</strong> is the broader process of building software — including planning, designing, coding, and testing. <strong>Engineering</strong> applies systematic, disciplined, and measurable methods to the development, operation, and maintenance of software. As you go through this course, keep asking yourself which of these three activities you are doing at each stage.</p>
+      <p>These three words are often used loosely, but they describe different scopes of work. <strong>Programming</strong> is writing code to make a computer do something. <strong>Development</strong> is the broader process of building software - including planning, designing, coding, and testing. <strong>Engineering</strong> applies systematic, disciplined, and measurable methods to the development, operation, and maintenance of software. As you go through this course, keep asking yourself which of these three activities you are doing at each stage.</p>
     </div>
 
     <div class="divider"></div>
@@ -134,7 +134,7 @@ ESA (End Semester Assessment) — 70%
       </li>
     </ul>
     <p>Because of this, it is more meaningful to talk about an <strong>object-oriented system</strong> than a "program". An object-oriented system is a set of interacting objects organized into classes.</p>
-    <p>In OOP, the <strong>focus is on data, not on function</strong>. Defining the data, its attributes, and how it will be manipulated is the main focus. The exact mechanism of manipulation — the procedure or algorithm — is not the primary focus.</p>
+    <p>In OOP, the <strong>focus is on data, not on function</strong>. Defining the data, its attributes, and how it will be manipulated is the main focus. The exact mechanism of manipulation - the procedure or algorithm - is not the primary focus.</p>
 
     <div class="divider"></div>
 
@@ -148,17 +148,17 @@ ESA (End Semester Assessment) — 70%
     <p>By interacting only with an object's <strong>methods</strong>, the details of its internal implementation remain hidden from the outside world.</p>
 
     <h3>Code Re-use</h3>
-    <p>If an object already exists — perhaps written by another software developer — you can use that object in your own program. This lets specialists implement, test, and debug complex, task-specific objects, which you can then trust to run inside your own code.</p>
+    <p>If an object already exists - perhaps written by another software developer - you can use that object in your own program. This lets specialists implement, test, and debug complex, task-specific objects, which you can then trust to run inside your own code.</p>
 
     <h3>Pluggability and Debugging Ease</h3>
-    <p>If a particular object turns out to be problematic, you can simply remove it from your application and plug in a different object as its replacement. This is similar to fixing mechanical problems in the real world — if a bolt breaks, you replace the bolt, not the entire machine.</p>
+    <p>If a particular object turns out to be problematic, you can simply remove it from your application and plug in a different object as its replacement. This is similar to fixing mechanical problems in the real world - if a bolt breaks, you replace the bolt, not the entire machine.</p>
 
     <div class="divider"></div>
 
     <h2>Understanding Classes and Objects</h2>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>A <strong>class</strong> is like a cookie cutter — it defines the shape of objects. <strong>Objects</strong> are like the cookies themselves; they are <strong>instances</strong> of the class.</p>
+      <p>A <strong>class</strong> is like a cookie cutter - it defines the shape of objects. <strong>Objects</strong> are like the cookies themselves; they are <strong>instances</strong> of the class.</p>
     </div>
 
     <h2>A Real-World Scenario: The Bank Account System</h2>
@@ -167,7 +167,7 @@ ESA (End Semester Assessment) — 70%
 deposit money, withdraw money and transfer money between accounts."</code></pre>
 
     <h3>The Procedural Approach</h3>
-    <p>Start by solving this the "procedural" way — write separate functions and a plain data structure:</p>
+    <p>Start by solving this the "procedural" way - write separate functions and a plain data structure:</p>
     <pre><code>bool MakeDeposit(int accountNum, float amount);
 float Withdraw(int accountNum, float amount);
 
@@ -180,7 +180,7 @@ struct Account {
     <p>The procedural approach has some drawbacks:</p>
     <ul>
       <li>Focus is on procedures, not on data</li>
-      <li>All data is shared — there is no protection</li>
+      <li>All data is shared - there is no protection</li>
       <li>It is more difficult to modify</li>
       <li>It is hard to manage complexity as the program grows</li>
     </ul>
@@ -188,32 +188,32 @@ struct Account {
     <h3>The Object-Oriented Approach</h3>
     <p>Now solve the same requirement the object-oriented way. A simple trick helps identify the classes and methods you need directly from the requirement sentence:</p>
     <ul>
-      <li><strong>Nouns</strong> in the sentence — customers, bank accounts, money, accounts — represent the <strong>objects (classes)</strong> in the domain</li>
-      <li><strong>Verbs</strong> in the sentence — deposit, withdraw, transfer — represent the <strong>actions (methods)</strong> on those objects</li>
+      <li><strong>Nouns</strong> in the sentence - customers, bank accounts, money, accounts - represent the <strong>objects (classes)</strong> in the domain</li>
+      <li><strong>Verbs</strong> in the sentence - deposit, withdraw, transfer - represent the <strong>actions (methods)</strong> on those objects</li>
     </ul>
     <pre><code>Procedural            Object Oriented
 ------------          -------------------
 Withdraw               Customer
 Deposit                Money
 Transfer                Account</code></pre>
-    <p>Objects in the <strong>problem domain</strong> (the real world) are mapped to objects in <strong>software</strong>. In the object-oriented approach, data and the operations on that data are grouped together — for example, an <code>Account</code> class groups the account's data together with its <code>Withdraw</code>, <code>Deposit</code>, and <code>Transfer</code> operations.</p>
+    <p>Objects in the <strong>problem domain</strong> (the real world) are mapped to objects in <strong>software</strong>. In the object-oriented approach, data and the operations on that data are grouped together - for example, an <code>Account</code> class groups the account's data together with its <code>Withdraw</code>, <code>Deposit</code>, and <code>Transfer</code> operations.</p>
 
     <div class="divider"></div>
 
     <h2>Classes, Objects, Instances and Instantiation</h2>
 
     <h3>Objects and Classes</h3>
-    <p><strong>Classes reflect concepts</strong>; <strong>objects reflect instances</strong> that embody those concepts. For example, "Girl" is a class (a concept). Jodie, Daria, Jane, and Brittany are objects — actual girls who embody that concept.</p>
+    <p><strong>Classes reflect concepts</strong>; <strong>objects reflect instances</strong> that embody those concepts. For example, "Girl" is a class (a concept). Jodie, Daria, Jane, and Brittany are objects - actual girls who embody that concept.</p>
 
     <h3>Objects as Instances of Classes</h3>
-    <p>The world conceptually consists of objects. Many objects can be said to be of the same type, or class — for example, my bank account, your bank account, and Bill Gates's bank account are all different objects, but they share the same type. We call that object type a <strong>class</strong>. The type of my bank account is <code>BankAccount</code>, and the type of Bill Gates's bank account is also <code>BankAccount</code>.</p>
+    <p>The world conceptually consists of objects. Many objects can be said to be of the same type, or class - for example, my bank account, your bank account, and Bill Gates's bank account are all different objects, but they share the same type. We call that object type a <strong>class</strong>. The type of my bank account is <code>BankAccount</code>, and the type of Bill Gates's bank account is also <code>BankAccount</code>.</p>
 
     <h3>What Is a Class?</h3>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
       <p>A <strong>class</strong> is a blueprint of an object.</p>
     </div>
-    <p>In the real world, you will often find many individual objects of the same kind. Take bicycles as an example — there may be thousands of other bicycles in existence, all of the same make and model. Each bicycle was built from the same set of blueprints, and therefore contains the same components. In object-oriented terms, your bicycle is an <strong>instance</strong> of the class of objects known as bicycles. A class is the blueprint from which individual objects are created.</p>
+    <p>In the real world, you will often find many individual objects of the same kind. Take bicycles as an example - there may be thousands of other bicycles in existence, all of the same make and model. Each bicycle was built from the same set of blueprints, and therefore contains the same components. In object-oriented terms, your bicycle is an <strong>instance</strong> of the class of objects known as bicycles. A class is the blueprint from which individual objects are created.</p>
 
     <h3>What Is an Object?</h3>
     <div class="callout callout-blue">
@@ -230,19 +230,19 @@ Transfer                Account</code></pre>
 
     <h3>Characteristics of Objects</h3>
     <ul>
-      <li><strong>State</strong> — the properties of an object and their values.
+      <li><strong>State</strong> - the properties of an object and their values.
         <ul>
           <li>Dog: name, color, breed, etc.</li>
           <li>Bank Account: balance, interest rate, etc.</li>
         </ul>
       </li>
-      <li><strong>Behavior</strong> — defines how an object interacts with the outside world, through its methods.
+      <li><strong>Behavior</strong> - defines how an object interacts with the outside world, through its methods.
         <ul>
           <li>Dog: making sound (barking), wagging tail, etc.</li>
           <li>Bank Account: withdraw, deposit, etc.</li>
         </ul>
       </li>
-      <li><strong>Identity</strong> — how to tell apart two objects of the same class.
+      <li><strong>Identity</strong> - how to tell apart two objects of the same class.
         <ul>
           <li>e.g. ID, Account Number, Serial No, etc.</li>
         </ul>
@@ -261,7 +261,7 @@ BankAccount gatesAccount;
 gatesAccount = new BankAccount();</code></pre>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p><strong>Instantiation</strong> is the creation of a real instance, or a particular realization, of an abstraction or template — such as a class of objects, or a computer process. In short: the creation of a realized instance is called instantiation.</p>
+      <p><strong>Instantiation</strong> is the creation of a real instance, or a particular realization, of an abstraction or template - such as a class of objects, or a computer process. In short: the creation of a realized instance is called instantiation.</p>
     </div>
 
     <div class="divider"></div>
@@ -312,9 +312,9 @@ gatesAccount = new BankAccount();</code></pre>
 
     <h2>References</h2>
     <ul>
-      <li>Oracle Java Tutorials — Object-Oriented Programming Concepts (<code>docs.oracle.com/javase/tutorial/java/concepts</code>)</li>
-      <li><strong>How To Program (Early Objects)</strong> — by H. Deitel and P. Deitel</li>
-      <li><strong>Head First Java</strong> — by Kathy Sierra and Bert Bates</li>
+      <li>Oracle Java Tutorials - Object-Oriented Programming Concepts (<code>docs.oracle.com/javase/tutorial/java/concepts</code>)</li>
+      <li><strong>How To Program (Early Objects)</strong> - by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> - by Kathy Sierra and Bert Bates</li>
     </ul>
   `,
   summary: {
@@ -384,7 +384,7 @@ gatesAccount = new BankAccount();</code></pre>
     <p>Before we start, let's remember what we learned in Lesson 01:</p>
     <ul>
       <li>What <strong>Object-Oriented Programming</strong> is</li>
-      <li>Why we use OOP — <strong>Modularity</strong>, <strong>Information-hiding</strong>, <strong>Code re-use</strong>, and <strong>Pluggability and debugging ease</strong></li>
+      <li>Why we use OOP - <strong>Modularity</strong>, <strong>Information-hiding</strong>, <strong>Code re-use</strong>, and <strong>Pluggability and debugging ease</strong></li>
       <li>A first look at <strong>Class</strong>, <strong>Object</strong>, <strong>Instance</strong>, and <strong>Instantiation</strong></li>
     </ul>
 
@@ -397,12 +397,12 @@ gatesAccount = new BankAccount();</code></pre>
       <li><strong>Fields</strong> and <strong>Methods</strong></li>
       <li>Java <strong>Access Modifiers</strong></li>
       <li>How to <strong>create</strong> and <strong>initialize</strong> objects</li>
-      <li><strong>Constructors</strong> — default and parameterized</li>
+      <li><strong>Constructors</strong> - default and parameterized</li>
     </ul>
 
     <div class="divider"></div>
 
-    <h2>Object-Oriented Programming — Core Concepts</h2>
+    <h2>Object-Oriented Programming - Core Concepts</h2>
     <p>OOP simplifies software development and maintenance by giving us these core concepts:</p>
     <ul>
       <li><strong>Object</strong></li>
@@ -415,10 +415,10 @@ gatesAccount = new BankAccount();</code></pre>
 
     <div class="divider"></div>
 
-    <h2>Classes and Objects — The Cookie Cutter Analogy</h2>
+    <h2>Classes and Objects - The Cookie Cutter Analogy</h2>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>A <strong>class</strong> is like a cookie cutter — it defines the shape of objects. <strong>Objects</strong> are like cookies — they are <strong>instances</strong> of the class.</p>
+      <p>A <strong>class</strong> is like a cookie cutter - it defines the shape of objects. <strong>Objects</strong> are like cookies - they are <strong>instances</strong> of the class.</p>
     </div>
     <p>Just like one cookie cutter can make many cookies with the same shape, one class can be used to create many objects with the same structure.</p>
 
@@ -429,9 +429,9 @@ gatesAccount = new BankAccount();</code></pre>
 
     <h3>Characteristics of an Object</h3>
     <ul>
-      <li><strong>State</strong> — represents the data of an object</li>
-      <li><strong>Behavior</strong> — represents the actions of an object, such as deposit, withdraw, etc.</li>
-      <li><strong>Identity</strong> — used internally by the JVM to identify each object uniquely</li>
+      <li><strong>State</strong> - represents the data of an object</li>
+      <li><strong>Behavior</strong> - represents the actions of an object, such as deposit, withdraw, etc.</li>
+      <li><strong>Identity</strong> - used internally by the JVM to identify each object uniquely</li>
     </ul>
 
     <h3>Objects Have Four Properties</h3>
@@ -455,13 +455,13 @@ gatesAccount = new BankAccount();</code></pre>
     <h2>What Is a Class?</h2>
     <p>A class is a <strong>blueprint</strong> of an object.</p>
 
-    <h3>Declaring a Class — Basic Form</h3>
+    <h3>Declaring a Class - Basic Form</h3>
     <pre><code>class ClassName
 {
     class body
 }</code></pre>
 
-    <h3>Declaring a Class — Extended Form</h3>
+    <h3>Declaring a Class - Extended Form</h3>
     <pre><code>Package declaration;
 Import statements;
 
@@ -476,11 +476,11 @@ Import statements;
 
     <h3>Body of a Class</h3>
     <ul>
-      <li><strong>Fields</strong> — variable declarations that define the fields of a class</li>
-      <li><strong>Initializers</strong> — stand-alone blocks of code that run only once, when the class is initialized. There are <strong>static initializers</strong> and <strong>instance initializers</strong></li>
-      <li><strong>Constructors</strong> — a block of code similar to a method, but run to initialize an object when an instance is created</li>
-      <li><strong>Methods</strong> — method declarations that define the methods of a class</li>
-      <li><strong>Other classes and interfaces</strong> — a class can include another class, called an <strong>inner class</strong> or <strong>nested class</strong>. Classes can also contain interfaces</li>
+      <li><strong>Fields</strong> - variable declarations that define the fields of a class</li>
+      <li><strong>Initializers</strong> - stand-alone blocks of code that run only once, when the class is initialized. There are <strong>static initializers</strong> and <strong>instance initializers</strong></li>
+      <li><strong>Constructors</strong> - a block of code similar to a method, but run to initialize an object when an instance is created</li>
+      <li><strong>Methods</strong> - method declarations that define the methods of a class</li>
+      <li><strong>Other classes and interfaces</strong> - a class can include another class, called an <strong>inner class</strong> or <strong>nested class</strong>. Classes can also contain interfaces</li>
     </ul>
 
     <div class="callout callout-yellow">
@@ -499,12 +499,12 @@ Method declarations   void method()            No          Anywhere inside a cla
 
     <h3>Class Naming Convention</h3>
     <ul>
-      <li>Begin the class name with a <strong>capital letter</strong> — Example: <code>Student</code>, <code>TennisBall</code></li>
+      <li>Begin the class name with a <strong>capital letter</strong> - Example: <code>Student</code>, <code>TennisBall</code></li>
       <li>Use <strong>nouns</strong> for your class names as much as possible</li>
       <li>Avoid using the names of Java <strong>keywords</strong>, API class names, or reserved words</li>
     </ul>
 
-    <h3>Class — How to Save</h3>
+    <h3>Class - How to Save</h3>
     <ul>
       <li>A <strong>public</strong> class must be written in a source file that has the <strong>same name</strong> as the class, with the extension <code>.java</code>. Example: a public class named <code>Student</code> → <code>Student.java</code></li>
       <li>You <strong>cannot</strong> place two or more public classes in the same file</li>
@@ -526,12 +526,12 @@ Method declarations   void method()            No          Anywhere inside a cla
     // take a nap
 }</code></pre>
     <ul>
-      <li><code>public</code> — access modifier</li>
-      <li><code>final</code> — optional specifier</li>
-      <li><code>void</code> — return type</li>
-      <li><code>nap</code> — method name</li>
-      <li><code>(int minutes)</code> — parameter list, inside required parentheses</li>
-      <li><code>throws InterruptedException</code> — optional exception</li>
+      <li><code>public</code> - access modifier</li>
+      <li><code>final</code> - optional specifier</li>
+      <li><code>void</code> - return type</li>
+      <li><code>nap</code> - method name</li>
+      <li><code>(int minutes)</code> - parameter list, inside required parentheses</li>
+      <li><code>throws InterruptedException</code> - optional exception</li>
       <li>Everything inside <code>{ }</code> is the <strong>method body</strong></li>
     </ul>
 
@@ -548,17 +548,17 @@ Method body              { // take a nap }              Yes, but can be empty br
 
     <div class="divider"></div>
 
-    <h2>JAVA — Access Modifiers</h2>
+    <h2>JAVA - Access Modifiers</h2>
     <p>Java offers four choices of access modifiers:</p>
     <ul>
-      <li><strong>public</strong> — the method can be called from any class</li>
-      <li><strong>private</strong> — the method can only be called from within the same class</li>
-      <li><strong>protected</strong> — the method can only be called from classes in the same package or subclasses</li>
-      <li><strong>default</strong> (package-private) — the method can only be called from classes in the same package</li>
+      <li><strong>public</strong> - the method can be called from any class</li>
+      <li><strong>private</strong> - the method can only be called from within the same class</li>
+      <li><strong>protected</strong> - the method can only be called from classes in the same package or subclasses</li>
+      <li><strong>default</strong> (package-private) - the method can only be called from classes in the same package</li>
     </ul>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>There is <strong>no keyword</strong> for default access — you simply <strong>omit</strong> the access modifier.</p>
+      <p>There is <strong>no keyword</strong> for default access - you simply <strong>omit</strong> the access modifier.</p>
     </div>
 
     <div class="divider"></div>
@@ -566,9 +566,9 @@ Method body              { // take a nap }              Yes, but can be empty br
     <h2>Creating Objects</h2>
     <p>Creating an object happens in three steps:</p>
     <ul>
-      <li><strong>Declaration</strong> — a variable declaration that associates a variable name with an object type</li>
-      <li><strong>Instantiation</strong> — the <code>new</code> keyword is a Java operator that creates the object</li>
-      <li><strong>Initialization</strong> — the <code>new</code> operator is followed by a call to a <strong>constructor</strong>, which initializes the new object</li>
+      <li><strong>Declaration</strong> - a variable declaration that associates a variable name with an object type</li>
+      <li><strong>Instantiation</strong> - the <code>new</code> keyword is a Java operator that creates the object</li>
+      <li><strong>Initialization</strong> - the <code>new</code> operator is followed by a call to a <strong>constructor</strong>, which initializes the new object</li>
     </ul>
 
     <h3>Declaring and Instantiating an Object</h3>
@@ -580,7 +580,7 @@ e = new Employee(); // Instantiation</code></pre>
     <pre><code>Employee e = new Employee();
 // Declaration + Instantiation</code></pre>
 
-    <h3>Creating Objects — Within the Same Class</h3>
+    <h3>Creating Objects - Within the Same Class</h3>
     <pre><code>public class Employee
 {
     // field or data member or instance variables
@@ -600,7 +600,7 @@ e = new Employee(); // Instantiation</code></pre>
     }
 }</code></pre>
 
-    <h3>Creating Objects — Outside the Class (Driver Class)</h3>
+    <h3>Creating Objects - Outside the Class (Driver Class)</h3>
     <pre><code>public class NewEmployee
 {
     int id;
@@ -620,7 +620,7 @@ public class TestEmployee
 
     <div class="divider"></div>
 
-    <h2>Initializing Objects — Three Ways</h2>
+    <h2>Initializing Objects - Three Ways</h2>
     <p>There are three ways to initialize an object in Java:</p>
     <ol>
       <li>By <strong>reference variable</strong></li>
@@ -683,19 +683,19 @@ public class TestEmployee
     <div class="divider"></div>
 
     <h2>Understanding Constructors</h2>
-    <p>In Java, a <strong>constructor</strong> is a block of code similar to a method. A constructor is called when a new instance of an object is created — it's actually the <code>new</code> keyword that calls the constructor.</p>
+    <p>In Java, a <strong>constructor</strong> is a block of code similar to a method. A constructor is called when a new instance of an object is created - it's actually the <code>new</code> keyword that calls the constructor.</p>
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
       <p>After creating the object, you <strong>cannot call the constructor again</strong>.</p>
     </div>
     <p>A constructor is a special type of method used to <strong>initialize the object</strong>.</p>
 
-    <p>Every time an object is created using the <code>new()</code> keyword, at least one constructor is called — this is called a <strong>default constructor</strong>.</p>
+    <p>Every time an object is created using the <code>new()</code> keyword, at least one constructor is called - this is called a <strong>default constructor</strong>.</p>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
       <p>It is called a <strong>constructor</strong> because it constructs the values at the time of object creation.</p>
     </div>
-    <p>It is not necessary to write a constructor for a class — the Java compiler creates a default constructor if your class doesn't have one.</p>
+    <p>It is not necessary to write a constructor for a class - the Java compiler creates a default constructor if your class doesn't have one.</p>
 
     <h3>Rules for Creating a Constructor</h3>
     <ul>
@@ -722,7 +722,7 @@ public class TestEmployee
       <p>A <strong>default constructor</strong> takes no parameters, and it initializes all instance variables to <strong>zero</strong> or <strong>null</strong>.</p>
     </div>
 
-    <h3>Example — Default Constructor</h3>
+    <h3>Example - Default Constructor</h3>
     <pre><code>public class Employee
 {
     private String Name;
@@ -736,7 +736,7 @@ public class TestEmployee
     }
 }</code></pre>
 
-    <h3>Example — Parameterized Constructor</h3>
+    <h3>Example - Parameterized Constructor</h3>
     <pre><code>public class Employee
 {
     private String Name;
@@ -785,12 +785,12 @@ public class TestEmployee
 
     <h2>Summary</h2>
     <ul>
-      <li>Object-Oriented Programming — Concepts</li>
+      <li>Object-Oriented Programming - Concepts</li>
       <li>Understanding Objects and Classes</li>
       <li>Understanding Fields and Methods</li>
-      <li>JAVA — Access Modifiers</li>
+      <li>JAVA - Access Modifiers</li>
       <li>Creating and Initializing Objects (by reference, by method, by constructor)</li>
-      <li>Understanding Constructors — Default and Parameterized</li>
+      <li>Understanding Constructors - Default and Parameterized</li>
     </ul>
   `,
   summary: {
@@ -824,13 +824,13 @@ public class TestEmployee
       { term: 'Instantiation', meaning: 'The process of creating an object from a class using the new keyword.' },
     ],
     keyPoints: [
-      'A class is like a cookie cutter; objects are like cookies made from it — objects are instances of a class.',
+      'A class is like a cookie cutter; objects are like cookies made from it - objects are instances of a class.',
       'Objects have four properties: State, Behavior, Identity, and Type.',
       'The new keyword creates an object in memory and calls its constructor.',
       'A public class must be saved in a file with the same name as the class, ending in .java.',
       'Two or more public classes cannot exist in the same file.',
       'There are three ways to initialize an object: by reference variable, by method, or by constructor.',
-      'Java has four access modifiers: public, private, protected, and default (default has no keyword — just omit the modifier).',
+      'Java has four access modifiers: public, private, protected, and default (default has no keyword - just omit the modifier).',
       'Every class gets a default (no-arg) constructor automatically if the programmer does not write one.',
       'A constructor name must match the class name exactly and must have no return type.',
       'Once an object is created, its constructor cannot be called again.',
@@ -846,33 +846,33 @@ public class TestEmployee
     <h1>Classes and Objects - Part 02</h1>
     <div class="meta-info">ICT2122 <span>•</span> 16 min read</div>
 
-    <h2>Recap — Part 01</h2>
+    <h2>Recap - Part 01</h2>
     <p>Part 01 of this lesson covered:</p>
     <ul>
-      <li>Object Oriented Programming — Concepts</li>
+      <li>Object Oriented Programming - Concepts</li>
       <li>Understanding Objects</li>
       <li>Understanding Classes</li>
       <li>Understanding Fields</li>
       <li>Understanding Methods</li>
-      <li>JAVA — Access Modifiers</li>
+      <li>JAVA - Access Modifiers</li>
       <li>Creating Objects</li>
       <li>Initializing Objects (by reference variable, by method, by constructor)</li>
       <li>Understanding Constructors (Default, Parameterized)</li>
     </ul>
 
-    <h2>Outline — Part 02</h2>
+    <h2>Outline - Part 02</h2>
     <ul>
-      <li>JAVA — <code>this</code> keyword (methods, constructors)</li>
-      <li>JAVA — Constructor Chaining</li>
-      <li>JAVA — Anonymous objects</li>
-      <li>JAVA — Garbage Collection</li>
+      <li>JAVA - <code>this</code> keyword (methods, constructors)</li>
+      <li>JAVA - Constructor Chaining</li>
+      <li>JAVA - Anonymous objects</li>
+      <li>JAVA - Garbage Collection</li>
       <li>Static in Java (Static Fields, Static Methods, Static Initializers)</li>
       <li>Preventing instantiating a class</li>
     </ul>
 
     <div class="divider"></div>
 
-    <h2>JAVA — <code>this</code> Keyword</h2>
+    <h2>JAVA - <code>this</code> Keyword</h2>
 
     <h3>Have You Tried???</h3>
     <p>Consider this code:</p>
@@ -897,7 +897,7 @@ public class TestEmployee
 }</code></pre>
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
-      <p><strong>Why does this go wrong?</strong> Both the local parameters (<code>a</code>, <code>b</code>) and the instance fields (<code>a</code>, <code>b</code>) have the <strong>same names</strong>. Writing <code>a=a;</code> just assigns the local parameter to itself — the instance fields are never actually set.</p>
+      <p><strong>Why does this go wrong?</strong> Both the local parameters (<code>a</code>, <code>b</code>) and the instance fields (<code>a</code>, <code>b</code>) have the <strong>same names</strong>. Writing <code>a=a;</code> just assigns the local parameter to itself - the instance fields are never actually set.</p>
     </div>
 
     <h3>The Solution: The <code>this</code> Reference</h3>
@@ -915,9 +915,9 @@ public class TestEmployee
     </div>
 
     <h3>Uses of the <code>this</code> Keyword</h3>
-    <p>You can use <strong><code>this</code></strong> in the body of a class constructor or method to refer to the <strong>current object</strong> — that is, the class instance for which the constructor or method has been called.</p>
+    <p>You can use <strong><code>this</code></strong> in the body of a class constructor or method to refer to the <strong>current object</strong> - that is, the class instance for which the constructor or method has been called.</p>
 
-    <h3>Uses for <code>this</code> — Methods</h3>
+    <h3>Uses for <code>this</code> - Methods</h3>
     <pre><code>// Instance variables
 String firstName, lastName;
 
@@ -940,7 +940,7 @@ public String getFullName()
 
 System.out.println(this);  // What happens???</code></pre>
 
-    <h3>Uses for <code>this</code> — Constructors</h3>
+    <h3>Uses for <code>this</code> - Constructors</h3>
     <ul>
       <li>Can call another constructor <strong>only in the very first statement</strong> of a constructor, by using the <code>this</code> keyword.</li>
       <li>Each constructor can call only <strong>one</strong> other constructor, but you can chain constructors.</li>
@@ -951,7 +951,7 @@ System.out.println(this);  // What happens???</code></pre>
       <p><strong>Hands-on:</strong> try chaining constructors using <code>this()</code> in the very first line of a constructor.</p>
     </div>
 
-    <h3>Uses for <code>this</code> — Try It</h3>
+    <h3>Uses for <code>this</code> - Try It</h3>
     <ul>
       <li>To call current class methods.</li>
       <li>To pass the current object as an argument.</li>
@@ -961,16 +961,16 @@ System.out.println(this);  // What happens???</code></pre>
 
     <div class="divider"></div>
 
-    <h2>JAVA — Constructor Chaining</h2>
+    <h2>JAVA - Constructor Chaining</h2>
     <p><strong>Constructor chaining</strong> refers to the ability to call a constructor inside another constructor. You can use a constructor chain either within the same class, or even with another one.</p>
     <ul>
-      <li><strong>Constructor Chaining in the Same Class</strong> — using the <code>this</code> keyword (as discussed above).</li>
-      <li><strong>Constructor Chaining to Another Class</strong> — using the <code>super</code> keyword (will be discussed under Inheritance).</li>
+      <li><strong>Constructor Chaining in the Same Class</strong> - using the <code>this</code> keyword (as discussed above).</li>
+      <li><strong>Constructor Chaining to Another Class</strong> - using the <code>super</code> keyword (will be discussed under Inheritance).</li>
     </ul>
 
     <div class="divider"></div>
 
-    <h2>JAVA — Initializer (Initializer Block)</h2>
+    <h2>JAVA - Initializer (Initializer Block)</h2>
     <ul>
       <li>An initializer block is a lonely block of code that's placed <strong>outside</strong> any method, constructor, or other block of code.</li>
       <li>Initializers are executed whenever an instance of a class is created, <strong>regardless of which constructor</strong> is used to create the instance.</li>
@@ -994,7 +994,7 @@ System.out.println(this);  // What happens???</code></pre>
 
     <div class="divider"></div>
 
-    <h2>JAVA — Anonymous Objects</h2>
+    <h2>JAVA - Anonymous Objects</h2>
     <ul>
       <li><strong>Anonymous</strong> simply means nameless.</li>
       <li>An object which has <strong>no reference</strong> is known as an anonymous object.</li>
@@ -1027,10 +1027,10 @@ e1=e2; //now the first object referred by
 
     <div class="divider"></div>
 
-    <h2>JAVA — Garbage Collection</h2>
+    <h2>JAVA - Garbage Collection</h2>
     <ul>
       <li>In Java, <strong>garbage</strong> means unreferenced objects.</li>
-      <li><strong>Garbage Collection</strong> is the process of reclaiming runtime unused memory automatically — in other words, it is a way to destroy unused objects.</li>
+      <li><strong>Garbage Collection</strong> is the process of reclaiming runtime unused memory automatically - in other words, it is a way to destroy unused objects.</li>
       <li>The Java runtime environment deletes objects when it determines that they are no longer being used.</li>
       <li>In Java, this is performed automatically. So, Java provides better memory management.</li>
     </ul>
@@ -1047,12 +1047,12 @@ e1=e2; //now the first object referred by
 
     <div class="divider"></div>
 
-    <h2>JAVA — Working with Statics</h2>
+    <h2>JAVA - Working with Statics</h2>
 
     <h3>What Does the Term <code>static</code> Mean in Java?</h3>
     <ul>
-      <li>It's used to describe a special type of field or method that <strong>isn't associated with a particular instance</strong> of a class — static fields and methods are associated with the class itself.</li>
-      <li>You don't have to create an instance of the class to access a static field or method — you can access it by specifying the <strong>class name</strong>, not a variable that references an object.</li>
+      <li>It's used to describe a special type of field or method that <strong>isn't associated with a particular instance</strong> of a class - static fields and methods are associated with the class itself.</li>
+      <li>You don't have to create an instance of the class to access a static field or method - you can access it by specifying the <strong>class name</strong>, not a variable that references an object.</li>
     </ul>
 
     <h3>Common Uses of Static Fields and Methods in Java</h3>
@@ -1066,17 +1066,17 @@ e1=e2; //now the first object referred by
 
     <h3>Static Fields</h3>
     <ul>
-      <li>A static field is a field that's declared with the <code>static</code> keyword — e.g. <code>private static int age;</code> — following the pattern <code>&lt;access modifier&gt; static &lt;datatype&gt; &lt;field&gt;</code>.</li>
-      <li>You can't use the <code>static</code> keyword within a class method — the code won't compile.</li>
+      <li>A static field is a field that's declared with the <code>static</code> keyword - e.g. <code>private static int age;</code> - following the pattern <code>&lt;access modifier&gt; static &lt;datatype&gt; &lt;field&gt;</code>.</li>
+      <li>You can't use the <code>static</code> keyword within a class method - the code won't compile.</li>
       <li><strong>Fields can be static, but local variables can't.</strong></li>
-      <li>You can provide an initial value for a static field — e.g. <code>private static int age = 20;</code></li>
-      <li>Static fields are created and initialized when the class is first loaded — when a static member of the class is referred to, or when an instance of the class is created (whichever comes first), or using a static initializer.</li>
+      <li>You can provide an initial value for a static field - e.g. <code>private static int age = 20;</code></li>
+      <li>Static fields are created and initialized when the class is first loaded - when a static member of the class is referred to, or when an instance of the class is created (whichever comes first), or using a static initializer.</li>
     </ul>
 
     <h3>Static Methods</h3>
     <ul>
       <li>A static method is a method declared with the <code>static</code> keyword. Like static fields, static methods are associated with the class itself, not with any particular object created from the class.</li>
-      <li>The best-known static method is <strong><code>main</code></strong> — called by the Java runtime to start an application. Java applications are run in a static context by default.</li>
+      <li>The best-known static method is <strong><code>main</code></strong> - called by the Java runtime to start an application. Java applications are run in a static context by default.</li>
       <li>You <strong>can't</strong> access a non-static method or field from a static method, because the static method doesn't have an instance of the class to use to reference instance methods or fields.</li>
       <li>But you <strong>can</strong> access static methods and fields from an instance method.</li>
     </ul>
@@ -1086,9 +1086,9 @@ e1=e2; //now the first object referred by
     </div>
 
     <h3>Counting Instances with Static</h3>
-    <p>One common use for static variables is to keep track of how many instances of a class have been created. Note that an instance count reset to zero each time the application runs only keeps track of how many instances have been created during that particular execution of the program — not how many have ever been created.</p>
+    <p>One common use for static variables is to keep track of how many instances of a class have been created. Note that an instance count reset to zero each time the application runs only keeps track of how many instances have been created during that particular execution of the program - not how many have ever been created.</p>
 
-    <h3>What Can Call What? — Static vs. Instance Calls</h3>
+    <h3>What Can Call What? - Static vs. Instance Calls</h3>
     <pre><code>Type              Calling                       Legal?   How?
 ----------------- ----------------------------- -------- --------------------------------
 Static method     Another static method/variable  Yes    Using the classname
@@ -1108,7 +1108,7 @@ Instance method   Another instance method/variable Yes   Using a reference varia
       <li>An initializer block begins with the word <code>static</code>.</li>
       <li>You can have static initializers in the class body, outside any other block, such as the body of a method or constructor.</li>
       <li>The first time you access a static member (a static field or a static method), any static initializers in the class are executed.</li>
-      <li>Static initializers are also executed the first time you create an instance — the static initializers are executed <strong>before</strong> the constructor is executed.</li>
+      <li>Static initializers are also executed the first time you create an instance - the static initializers are executed <strong>before</strong> the constructor is executed.</li>
       <li>If a class has more than one static initializer, they are executed in the order in which they appear in the program.</li>
     </ul>
     <div class="callout callout-green">
@@ -1147,7 +1147,7 @@ different package                              No                 No            
 
     <div class="divider"></div>
 
-    <h2>Homework — Order of Initialization</h2>
+    <h2>Homework - Order of Initialization</h2>
     <p>Try out your own coding to confirm this order:</p>
     <ol>
       <li>If there is a superclass, initialize it first.</li>
@@ -1158,67 +1158,67 @@ different package                              No                 No            
 
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p><strong>Quiz 01</strong> is scheduled for 19th February 2026, 09.00 a.m. – 09.30 a.m., covering Lesson 01 (Introduction to OOP) and Lesson 02 (Classes and Objects — Part 01 and Part 02).</p>
+      <p><strong>Quiz 01</strong> is scheduled for 19th February 2026, 09.00 a.m. – 09.30 a.m., covering Lesson 01 (Introduction to OOP) and Lesson 02 (Classes and Objects - Part 01 and Part 02).</p>
     </div>
 
     <div class="divider"></div>
 
     <h2>Summary</h2>
     <ul>
-      <li>JAVA — <code>this</code> keyword (methods, constructors)</li>
-      <li>JAVA — Constructor Chaining</li>
-      <li>JAVA — Anonymous objects</li>
-      <li>JAVA — Garbage Collection</li>
+      <li>JAVA - <code>this</code> keyword (methods, constructors)</li>
+      <li>JAVA - Constructor Chaining</li>
+      <li>JAVA - Anonymous objects</li>
+      <li>JAVA - Garbage Collection</li>
       <li>Static in Java (Static Fields, Static Methods, Static Initializers)</li>
       <li>Preventing instantiating a class</li>
     </ul>
 
     <h3>References</h3>
     <ul>
-      <li>Oracle Java Tutorials — "this" keyword and understanding class members</li>
-      <li><em>How To Program (Early Objects)</em> — H. Deitel and P. Deitel</li>
-      <li><em>Head First Java</em> — Kathy Sierra and Bert Bates</li>
+      <li>Oracle Java Tutorials - "this" keyword and understanding class members</li>
+      <li><em>How To Program (Early Objects)</em> - H. Deitel and P. Deitel</li>
+      <li><em>Head First Java</em> - Kathy Sierra and Bert Bates</li>
     </ul>
   `,
   summary: {
-    topic: 'Classes and Objects — Part 02: this Keyword, Constructor Chaining, Anonymous Objects, Garbage Collection & Statics',
+    topic: 'Classes and Objects - Part 02: this Keyword, Constructor Chaining, Anonymous Objects, Garbage Collection & Statics',
     subTopics: [
-      'JAVA — this Keyword',
-      'JAVA — Constructor Chaining',
-      'JAVA — Initializer (Initializer Block)',
-      'JAVA — Anonymous Objects',
+      'JAVA - this Keyword',
+      'JAVA - Constructor Chaining',
+      'JAVA - Initializer (Initializer Block)',
+      'JAVA - Anonymous Objects',
       'How Can an Object Be Unreferenced?',
-      'JAVA — Garbage Collection',
-      'JAVA — Working with Statics',
+      'JAVA - Garbage Collection',
+      'JAVA - Working with Statics',
       'Static Fields',
       'Static Methods',
-      'What Can Call What? — Static vs. Instance Calls',
+      'What Can Call What? - Static vs. Instance Calls',
       'Static Initializers',
       'Preventing Instantiating a Class',
       'Summary of Access Modifiers',
     ],
     definitions: [
       { term: 'this', meaning: 'A reference every object has to itself, used inside a constructor or method to refer to the current object instance.' },
-      { term: 'Constructor Chaining', meaning: 'The ability to call one constructor from inside another — within the same class using this(), or to another class using super().' },
+      { term: 'Constructor Chaining', meaning: 'The ability to call one constructor from inside another - within the same class using this(), or to another class using super().' },
       { term: 'Initializer Block', meaning: 'A block of code placed outside any method or constructor that runs whenever an instance of the class is created, before any constructor runs.' },
-      { term: 'Anonymous Object', meaning: 'An object created with no reference variable, usable only at the point of creation — e.g. new Calculation().fact(5);' },
+      { term: 'Anonymous Object', meaning: 'An object created with no reference variable, usable only at the point of creation - e.g. new Calculation().fact(5);' },
       { term: 'Garbage Collection', meaning: 'The automatic process by which the Java runtime reclaims memory from unreferenced (unused) objects.' },
       { term: 'Static', meaning: 'A modifier describing a field or method that belongs to the class itself rather than to any particular instance.' },
       { term: 'Static Initializer', meaning: 'A block beginning with the word static that runs once, before any constructor, the first time a class is loaded or an instance is created, to initialize static fields.' },
       { term: 'Singleton Design', meaning: 'A design approach connected to preventing instantiation, in which a class allows only a single instance of itself to exist.' },
     ],
     keyPoints: [
-      'The this keyword solves the "same-named local and instance variable" problem — this.a=a; assigns the parameter to the instance field.',
+      'The this keyword solves the "same-named local and instance variable" problem - this.a=a; assigns the parameter to the instance field.',
       'this can only be used to call another constructor in the very first statement of a constructor; constructors can be chained but not looped.',
       'Constructor chaining within the same class uses this(); chaining to another class uses super() (covered under Inheritance).',
       'Initializer blocks run before any constructor, in the order they appear, every time an instance is created.',
-      'An anonymous object has no reference variable and can only be used once, at creation time — e.g. new Calculation().fact(5);.',
+      'An anonymous object has no reference variable and can only be used once, at creation time - e.g. new Calculation().fact(5);.',
       'Objects become unreferenced (eligible for garbage collection) by nulling a reference, reassigning a reference elsewhere, or being created anonymously.',
       'Garbage collection is Java\'s automatic reclaiming of memory from unreferenced objects, making Java more memory-efficient without manual effort.',
       'Static fields and methods belong to the class itself, are accessed via the class name, and can be used without creating an instance.',
       'A static method cannot access non-static (instance) methods or fields directly, since it has no object instance to reference.',
       'Static initializers run before constructors, the first time a static member is accessed or an instance is created.',
-      'A class can be prevented from being instantiated by giving it a single private constructor — relevant to utility classes like Math and to the Singleton design pattern.',
+      'A class can be prevented from being instantiated by giving it a single private constructor - relevant to utility classes like Math and to the Singleton design pattern.',
       'Order of initialization: superclass first, then static declarations/initializers in file order, then instance declarations/initializers in file order, then the constructor.',
       'Access modifier visibility: private members are visible only in the same class; default (package-private) adds same-package access; protected adds subclasses in other packages; public is visible everywhere.',
     ],
@@ -1240,7 +1240,7 @@ different package                              No                 No            
     <h2>Recap: What We Learned Before</h2>
     <p>Before starting this lesson, let's quickly remember what we studied earlier:</p>
     <ul>
-      <li><strong>Java <code>this</code> keyword</strong> — used in methods and constructors</li>
+      <li><strong>Java <code>this</code> keyword</strong> - used in methods and constructors</li>
       <li><strong>Constructor Chaining</strong> in Java</li>
       <li><strong>Anonymous objects</strong> in Java</li>
       <li><strong>Garbage Collection</strong> in Java</li>
@@ -1291,7 +1291,7 @@ different package                              No                 No            
     <h2>Classes and Objects</h2>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>A <strong>class</strong> is like a cookie cutter — it defines the shape of objects. <strong>Objects</strong> are like cookies — they are <strong>instances</strong> of the class.</p>
+      <p>A <strong>class</strong> is like a cookie cutter - it defines the shape of objects. <strong>Objects</strong> are like cookies - they are <strong>instances</strong> of the class.</p>
     </div>
 
     <div class="divider"></div>
@@ -1309,7 +1309,7 @@ Sub Class:     B</code></pre>
 
     <p>A derived class automatically takes on all the behavior and attributes of its base class:</p>
     <ul>
-      <li>A subclass inherits all the members of its superclass — <strong>fields</strong>, <strong>methods</strong>, and <strong>nested classes</strong>.</li>
+      <li>A subclass inherits all the members of its superclass - <strong>fields</strong>, <strong>methods</strong>, and <strong>nested classes</strong>.</li>
       <li>A derived class can add new features by defining its own methods and fields.</li>
       <li>A derived class can also change the behavior it got from the base class.</li>
     </ul>
@@ -1329,11 +1329,11 @@ Sub Class:     B</code></pre>
 
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>Java supports only <strong>single inheritance</strong> for classes — each class is derived from exactly one direct superclass.</p>
+      <p>Java supports only <strong>single inheritance</strong> for classes - each class is derived from exactly one direct superclass.</p>
     </div>
 
     <h3>Example: Animal Classification</h3>
-    <p>Think of <strong>Animals</strong> as the super class. <strong>Amphibians</strong>, <strong>Reptiles</strong>, <strong>Mammals</strong>, and <strong>Birds</strong> are all sub classes of Animals — each one inherits the general features of an animal, while also adding its own special features.</p>
+    <p>Think of <strong>Animals</strong> as the super class. <strong>Amphibians</strong>, <strong>Reptiles</strong>, <strong>Mammals</strong>, and <strong>Birds</strong> are all sub classes of Animals - each one inherits the general features of an animal, while also adding its own special features.</p>
 
     <div class="divider"></div>
 
@@ -1431,7 +1431,7 @@ class B extends A {
 (Single Inheritance)</code></pre>
 
     <h3>Multilevel Inheritance</h3>
-    <p>A class extends a class, which itself extends another class — forming a chain.</p>
+    <p>A class extends a class, which itself extends another class - forming a chain.</p>
     <pre><code>class A {
 }
 class B extends A {
@@ -1492,7 +1492,7 @@ class C extends A, B {
    A       B
     \\     /
       C
-(Multiple Inheritance — this is NOT allowed in Java)</code></pre>
+(Multiple Inheritance - this is NOT allowed in Java)</code></pre>
 
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
@@ -1502,7 +1502,7 @@ class C extends A, B {
     <h3>Why Isn't Multiple Inheritance Allowed? (Diamond Problem)</h3>
     <p>The reason is called the <strong>Diamond Problem</strong>.</p>
     <p>Imagine <code>CDBurner</code> and <code>DVDBurner</code> both inherit from <code>DigitalRecorder</code>, and both override the <code>burn()</code> method. Both also inherit the same instance variable, <code>i</code>.</p>
-    <p>Now imagine that <code>i</code> is used by both <code>CDBurner</code> and <code>DVDBurner</code>, but with different values. If a class called <code>ComboDrive</code> inherits from both of them, which value of <code>i</code> should it use? And when you call <code>burn()</code> on <code>ComboDrive</code>, which version of <code>burn()</code> should run — the one from <code>CDBurner</code> or the one from <code>DVDBurner</code>?</p>
+    <p>Now imagine that <code>i</code> is used by both <code>CDBurner</code> and <code>DVDBurner</code>, but with different values. If a class called <code>ComboDrive</code> inherits from both of them, which value of <code>i</code> should it use? And when you call <code>burn()</code> on <code>ComboDrive</code>, which version of <code>burn()</code> should run - the one from <code>CDBurner</code> or the one from <code>DVDBurner</code>?</p>
 
     <pre><code>          DigitalRecorder
            (int i, burn())
@@ -1522,7 +1522,7 @@ class C extends A, B {
     <h2>Overriding Methods (Instance Methods)</h2>
     <p>An instance method in a subclass <strong>overrides</strong> the superclass's method when it has:</p>
     <ul>
-      <li>The same <strong>signature</strong> — the same name, plus the same number and type of parameters, and</li>
+      <li>The same <strong>signature</strong> - the same name, plus the same number and type of parameters, and</li>
       <li>The same <strong>return type</strong></li>
       <li>as an instance method in the superclass.</li>
     </ul>
@@ -1548,7 +1548,7 @@ class C extends A, B {
     <div class="divider"></div>
 
     <h2>Hiding Methods (Static / Class Methods)</h2>
-    <p>If a subclass defines a <strong>static method</strong> with the same signature as a static method in the superclass, the method in the subclass <strong>hides</strong> the one in the superclass — this is different from overriding.</p>
+    <p>If a subclass defines a <strong>static method</strong> with the same signature as a static method in the superclass, the method in the subclass <strong>hides</strong> the one in the superclass - this is different from overriding.</p>
 
     <pre><code>// In Vehicle
 public static void printTopSpeed(){
@@ -1575,7 +1575,7 @@ Subclass Static Method    | Compile-time error          | Hides</code></pre>
     <div class="divider"></div>
 
     <h2>Hiding Fields</h2>
-    <p>Within a class, a field with the <strong>same name</strong> as a field in the superclass <strong>hides</strong> the superclass's field — even if their types are different.</p>
+    <p>Within a class, a field with the <strong>same name</strong> as a field in the superclass <strong>hides</strong> the superclass's field - even if their types are different.</p>
     <p>To access the superclass's hidden field, you must use the <code>super</code> keyword.</p>
 
     <div class="callout callout-red">
@@ -1596,9 +1596,9 @@ Subclass Static Method    | Compile-time error          | Hides</code></pre>
     <h3>The <code>super</code> keyword</h3>
     <p>The <code>super</code> keyword is used when a subclass needs to access members of its superclass.</p>
     <ul>
-      <li><code>super.fieldName</code> — refers to the immediate parent class's instance variable.</li>
-      <li><code>super.methodName()</code> — invokes the immediate parent class's method.</li>
-      <li><code>super()</code> — invokes the immediate parent class's constructor.</li>
+      <li><code>super.fieldName</code> - refers to the immediate parent class's instance variable.</li>
+      <li><code>super.methodName()</code> - invokes the immediate parent class's method.</li>
+      <li><code>super()</code> - invokes the immediate parent class's constructor.</li>
     </ul>
 
     <p><strong>Referring to a parent class method:</strong></p>
@@ -1686,7 +1686,7 @@ Inside B's Constructor</code></pre>
       <p>Things to remember about <code>super()</code>:</p>
       <ul>
         <li>The <code>super()</code> call must be the <strong>very first statement</strong> in the constructor.</li>
-        <li>If you don't explicitly call <code>super</code>, the compiler automatically inserts a call to the base class's default constructor. In that case, the base class <strong>must have</strong> a default constructor — otherwise the compiler refuses to compile the program.</li>
+        <li>If you don't explicitly call <code>super</code>, the compiler automatically inserts a call to the base class's default constructor. In that case, the base class <strong>must have</strong> a default constructor - otherwise the compiler refuses to compile the program.</li>
         <li>If the superclass is itself a subclass, its constructor is called the same way. This continues all the way up the hierarchy until reaching the <code>Object</code> class, which has no superclass.</li>
       </ul>
     </div>
@@ -1728,18 +1728,18 @@ Inside B's Constructor</code></pre>
 
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
-      <p>Using <code>super(w, h, d)</code> is cleaner — it lets the parent class handle its own fields instead of repeating that logic in the subclass.</p>
+      <p>Using <code>super(w, h, d)</code> is cleaner - it lets the parent class handle its own fields instead of repeating that logic in the subclass.</p>
     </div>
 
     <div class="divider"></div>
 
     <h2>Usage of the <code>final</code> Keyword</h2>
     <ul>
-      <li><strong><code>final</code> with a variable</strong> — creates a constant whose value cannot be changed after it has been set.</li>
-      <li><strong><code>final</code> with a method</strong> — a final method cannot be overridden by a subclass.
+      <li><strong><code>final</code> with a variable</strong> - creates a constant whose value cannot be changed after it has been set.</li>
+      <li><strong><code>final</code> with a method</strong> - a final method cannot be overridden by a subclass.
         <pre><code>public final void eat() { }</code></pre>
       </li>
-      <li><strong><code>final</code> with a class</strong> — a final class cannot be used as a base class (it cannot be extended).
+      <li><strong><code>final</code> with a class</strong> - a final class cannot be used as a base class (it cannot be extended).
         <pre><code>public final class MyConstants { }</code></pre>
         In a final class, all of its methods are automatically considered final as well.
       </li>
@@ -1750,8 +1750,8 @@ Inside B's Constructor</code></pre>
     <h2>Casting Objects</h2>
     <p><strong>Casting</strong> means taking an object of one particular type and treating it as another object type. There are two ways to do this:</p>
     <ul>
-      <li><strong>Implicit casting</strong> — known as <strong>up-casting</strong> (subclass to super class).</li>
-      <li><strong>Explicit casting</strong> — known as <strong>down-casting</strong> (super class to subclass).</li>
+      <li><strong>Implicit casting</strong> - known as <strong>up-casting</strong> (subclass to super class).</li>
+      <li><strong>Explicit casting</strong> - known as <strong>down-casting</strong> (super class to subclass).</li>
     </ul>
 
     <h3>Implicit Casting (Up-Casting)</h3>
@@ -1786,7 +1786,7 @@ v instanceof Car        // false</code></pre>
 
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>Even though the variable <code>v2</code> is declared as type <code>Vehicle</code>, the actual object assigned to it is a <code>Car</code>. So <code>v2 instanceof Car</code> would be <strong>true</strong> — the declared type and the actual object type can be different because of inheritance.</p>
+      <p>Even though the variable <code>v2</code> is declared as type <code>Vehicle</code>, the actual object assigned to it is a <code>Car</code>. So <code>v2 instanceof Car</code> would be <strong>true</strong> - the declared type and the actual object type can be different because of inheritance.</p>
     </div>
 
     <div class="divider"></div>
@@ -1794,7 +1794,7 @@ v instanceof Car        // false</code></pre>
     <h2>Lesson Summary</h2>
     <p>In this lesson, we covered:</p>
     <ul>
-      <li>Inheritance — with examples and hands-on practice</li>
+      <li>Inheritance - with examples and hands-on practice</li>
       <li>Creating Sub Classes</li>
       <li>Behavior of Java Access Modifiers</li>
       <li>Types of inheritance in Java (Single, Multilevel, Hierarchical, Hybrid, Multiple)</li>
@@ -1814,8 +1814,8 @@ v instanceof Car        // false</code></pre>
     <ul>
       <li><code>https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html</code></li>
       <li><code>https://docs.oracle.com/javase/tutorial/java/concepts/inheritance.html</code></li>
-      <li><strong>How To Program (Early Objects)</strong> — by H. Deitel and P. Deitel</li>
-      <li><strong>Head First Java</strong> — by Kathy Sierra and Bert Bates</li>
+      <li><strong>How To Program (Early Objects)</strong> - by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> - by Kathy Sierra and Bert Bates</li>
     </ul>
   `,
   summary: {
@@ -1871,7 +1871,7 @@ v instanceof Car        // false</code></pre>
     keyPoints: [
       'Inheritance lets a subclass acquire fields, methods, and nested classes from its superclass.',
       'Use the extends keyword to create a subclass: class Sub extends Super.',
-      'Java supports only single inheritance for classes — a class can extend just one direct superclass.',
+      'Java supports only single inheritance for classes - a class can extend just one direct superclass.',
       'Every class in Java directly or indirectly inherits from the Object class.',
       'Java does NOT support multiple inheritance of classes because of the Diamond Problem; interfaces can be used instead.',
       'The types of inheritance are Single, Multilevel, Hierarchical, Hybrid, and Multiple (unsupported in Java).',
@@ -1902,7 +1902,7 @@ v instanceof Car        // false</code></pre>
     <h2>Quick Recap</h2>
     <p>Before starting this lesson, let's quickly recall what we learned in <strong>Part 01</strong> of OOP Concepts.</p>
     <ul>
-      <li><strong>Inheritance</strong> — examples and hands-on practice</li>
+      <li><strong>Inheritance</strong> - examples and hands-on practice</li>
       <li>Creating <strong>Sub Classes</strong></li>
       <li>Behavior of Java <strong>Access Modifiers</strong></li>
       <li>Types of inheritance in Java: <strong>Single</strong>, <strong>Multilevel</strong>, <strong>Hierarchical</strong>, <strong>Hybrid</strong>, and <strong>Multiple</strong> Inheritance</li>
@@ -1933,19 +1933,19 @@ v instanceof Car        // false</code></pre>
       <li><strong>Object</strong></li>
       <li><strong>Class</strong></li>
       <li><strong>Inheritance</strong></li>
-      <li><strong>Polymorphism</strong> — our focus for this lesson</li>
+      <li><strong>Polymorphism</strong> - our focus for this lesson</li>
       <li><strong>Abstraction</strong></li>
       <li><strong>Encapsulation</strong></li>
     </ul>
 
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>A <strong>class</strong> is like a cookie cutter — it defines the shape of objects. <strong>Objects</strong> are like cookies — they are instances created from that class.</p>
+      <p>A <strong>class</strong> is like a cookie cutter - it defines the shape of objects. <strong>Objects</strong> are like cookies - they are instances created from that class.</p>
     </div>
 
     <div class="divider"></div>
 
-    <h2>Inheritance — A Quick Reminder</h2>
+    <h2>Inheritance - A Quick Reminder</h2>
     <p>Inheritance is a mechanism that allows a <strong>subclass</strong> to inherit the properties and behaviors of a <strong>superclass</strong>.</p>
     <ul>
       <li>The subclass can access and use all the methods and variables of the superclass, as well as add its own methods and variables.</li>
@@ -1990,8 +1990,8 @@ Sub Class:     B      (B extends A)
   Method Overloading              Method Overriding
 </code></pre>
     <ul>
-      <li><strong>Method Overriding</strong> — a subclass provides a different implementation of a method already defined in its superclass. Objects of different subclasses respond differently to the same method call. Resolved during <strong>Run Time</strong>.</li>
-      <li><strong>Method Overloading</strong> — multiple methods with the same name exist in the same class, as long as they have different parameter lists. This gives more concise and readable code. Resolved during <strong>Compile Time</strong>.</li>
+      <li><strong>Method Overriding</strong> - a subclass provides a different implementation of a method already defined in its superclass. Objects of different subclasses respond differently to the same method call. Resolved during <strong>Run Time</strong>.</li>
+      <li><strong>Method Overloading</strong> - multiple methods with the same name exist in the same class, as long as they have different parameter lists. This gives more concise and readable code. Resolved during <strong>Compile Time</strong>.</li>
     </ul>
 
     <div class="divider"></div>
@@ -2017,7 +2017,7 @@ Sub Class:     B      (B extends A)
       <p>In Java, method overloading is <strong>not possible by changing only the return type</strong> of the method.</p>
     </div>
 
-    <h3>Example 1 — Changing the Number of Arguments</h3>
+    <h3>Example 1 - Changing the Number of Arguments</h3>
     <pre><code>class Calculation {
     void sum(int a, int b) {
         System.out.println(a+b);
@@ -2035,7 +2035,7 @@ Sub Class:     B      (B extends A)
 }
 </code></pre>
 
-    <h3>Example 2 — Changing the Data Type of Arguments</h3>
+    <h3>Example 2 - Changing the Data Type of Arguments</h3>
     <pre><code>class Calculation {
     void sum(int a, int b) {
         System.out.println(a+b);
@@ -2053,7 +2053,7 @@ Sub Class:     B      (B extends A)
 }
 </code></pre>
 
-    <h3>Example 3 — Changing the Sequence of Data Types</h3>
+    <h3>Example 3 - Changing the Sequence of Data Types</h3>
     <pre><code>class Calculation {
     void sum(double a, int b) {
         System.out.println(a+b);
@@ -2096,7 +2096,7 @@ Sub Class:     B      (B extends A)
       <p>For more detail and examples on method overriding, refer to slides 26–30 in "Lesson 03 – OOP Concepts – Part 01".</p>
     </div>
 
-    <h3>Example — Method Overriding</h3>
+    <h3>Example - Method Overriding</h3>
     <pre><code>class Human {
     public void eat() {
         System.out.println("Human is eating");
@@ -2117,8 +2117,8 @@ class Boy extends Human {
 
     <p>An easy way to remember the difference between the two:</p>
     <ul>
-      <li><strong>Overloading</strong> is like an archer who can shoot arrows in several different directions using the same bow — many versions of the same method name, each doing something slightly different.</li>
-      <li><strong>Overriding</strong> is like fitting a new arrowhead onto the same bow before firing — the subclass replaces the superclass's implementation with its own.</li>
+      <li><strong>Overloading</strong> is like an archer who can shoot arrows in several different directions using the same bow - many versions of the same method name, each doing something slightly different.</li>
+      <li><strong>Overriding</strong> is like fitting a new arrowhead onto the same bow before firing - the subclass replaces the superclass's implementation with its own.</li>
     </ul>
 
     <div class="divider"></div>
@@ -2167,7 +2167,7 @@ v.start();
     <div class="divider"></div>
 
     <h2>Static Binding</h2>
-    <p><strong>"Static binding"</strong> or <strong>"early binding"</strong> occurs when the compiler can readily determine the correct version of something during <strong>compile time</strong> — that is, before the program is executed.</p>
+    <p><strong>"Static binding"</strong> or <strong>"early binding"</strong> occurs when the compiler can readily determine the correct version of something during <strong>compile time</strong> - that is, before the program is executed.</p>
     <ul>
       <li>All instance method calls are always resolved at <strong>runtime</strong>.</li>
       <li>All <strong>static method calls</strong> are resolved at <strong>compile time</strong> itself, so static method calls use static binding.</li>
@@ -2234,9 +2234,9 @@ v.color        // ??
 
     <h2>References</h2>
     <ul>
-      <li>Oracle Java Tutorials — Polymorphism (docs.oracle.com)</li>
-      <li><strong>How To Program (Early Objects)</strong> — by H. Deitel and P. Deitel</li>
-      <li><strong>Head First Java</strong> — by Kathy Sierra and Bert Bates</li>
+      <li>Oracle Java Tutorials - Polymorphism (docs.oracle.com)</li>
+      <li><strong>How To Program (Early Objects)</strong> - by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> - by Kathy Sierra and Bert Bates</li>
     </ul>
   `,
   summary: {
@@ -2317,18 +2317,18 @@ v.color        // ??
       <li><strong>Class</strong></li>
       <li><strong>Inheritance</strong></li>
       <li><strong>Polymorphism</strong></li>
-      <li><strong>Abstraction</strong> — our focus for this lesson</li>
+      <li><strong>Abstraction</strong> - our focus for this lesson</li>
       <li><strong>Encapsulation</strong></li>
     </ul>
 
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>A <strong>class</strong> is like a cookie cutter — it defines the shape of objects. <strong>Objects</strong> are like cookies — they are instances created from that class.</p>
+      <p>A <strong>class</strong> is like a cookie cutter - it defines the shape of objects. <strong>Objects</strong> are like cookies - they are instances created from that class.</p>
     </div>
 
     <div class="divider"></div>
 
-    <h2>Quick Reminders — Inheritance and Polymorphism</h2>
+    <h2>Quick Reminders - Inheritance and Polymorphism</h2>
     <p>Inheritance is a mechanism that allows a <strong>subclass</strong> to inherit the properties and behaviors of a <strong>superclass</strong>. It enables code reuse and makes it easier to manage complex systems by reducing duplication and providing a hierarchical structure for classes. It is a key feature of object-oriented programming and is widely used in Java.</p>
     <p><strong>Poly-Morphism</strong> means the ability to have multiple forms (shapes) of the same thing. Polymorphism is the capability of an action or method to do different things based on the object that it is acting upon.</p>
 
@@ -2348,7 +2348,7 @@ v.color        // ??
     <p>Both people are looking at the <strong>same object</strong> (the cat), but each one models it differently, keeping only the details that matter for their own purpose.</p>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>A <strong>class</strong> represents a real-world entity. The class contains only the <strong>essential details matching the problem domain</strong> — it leaves out everything that is not relevant to the task at hand.</p>
+      <p>A <strong>class</strong> represents a real-world entity. The class contains only the <strong>essential details matching the problem domain</strong> - it leaves out everything that is not relevant to the task at hand.</p>
     </div>
 
     <div class="divider"></div>
@@ -2362,8 +2362,8 @@ v.color        // ??
     </div>
     <p>Abstraction can be achieved in Java using two mechanisms:</p>
     <ul>
-      <li><strong>Abstract class</strong> — provides 0% to 100% abstraction</li>
-      <li><strong>Interface</strong> — provides 100% abstraction</li>
+      <li><strong>Abstract class</strong> - provides 0% to 100% abstraction</li>
+      <li><strong>Interface</strong> - provides 100% abstraction</li>
     </ul>
 
     <div class="divider"></div>
@@ -2388,10 +2388,10 @@ v.color        // ??
       <li>An abstract class is a class that <strong>cannot be instantiated</strong>, but <strong>can be extended</strong> by other classes.</li>
       <li>An abstract class can have <strong>both abstract and concrete methods</strong>.</li>
       <li><strong>Abstract methods</strong> are methods that have no implementation, and must be <strong>overridden</strong> by any concrete (non-abstract) subclass.</li>
-      <li>All other functionality of the class still exists — its fields, methods, and constructors are all accessed in the same manner as in any other class.</li>
+      <li>All other functionality of the class still exists - its fields, methods, and constructors are all accessed in the same manner as in any other class.</li>
     </ul>
 
-    <h3>Hands-On — Abstract Class and Subclass</h3>
+    <h3>Hands-On - Abstract Class and Subclass</h3>
     <pre><code>public abstract class Bike {
     abstract void run();
 }
@@ -2408,7 +2408,7 @@ public class Honda extends Bike {
 }
 </code></pre>
 
-    <h3>Hands-On — Adding a Constructor and a Concrete Method</h3>
+    <h3>Hands-On - Adding a Constructor and a Concrete Method</h3>
     <pre><code>public abstract class Bike {
     Bike() { //Constructor
         System.out.println("bike is created");
@@ -2428,7 +2428,7 @@ public class Honda extends Bike {
 }
 </code></pre>
 
-    <h3>Hands-On — Testing the Abstract Class</h3>
+    <h3>Hands-On - Testing the Abstract Class</h3>
     <pre><code>class TestAbstraction {
     public static void main(String args[]) {
         Bike obj = new Honda();
@@ -2439,12 +2439,12 @@ public class Honda extends Bike {
 </code></pre>
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
-      <p>Notice that <code>obj</code> is declared as type <code>Bike</code> (the abstract superclass), but it is holding a <code>Honda</code> object. This is the same polymorphic behavior you learned about in the previous lesson — the object's actual type decides which <code>run()</code> is executed.</p>
+      <p>Notice that <code>obj</code> is declared as type <code>Bike</code> (the abstract superclass), but it is holding a <code>Honda</code> object. This is the same polymorphic behavior you learned about in the previous lesson - the object's actual type decides which <code>run()</code> is executed.</p>
     </div>
 
     <div class="divider"></div>
 
-    <h2>Abstract Class — Rules</h2>
+    <h2>Abstract Class - Rules</h2>
     <ol>
       <li>An abstract class must be declared with an <code>abstract</code> keyword.</li>
       <li>It can have abstract and non-abstract (concrete) methods.</li>
@@ -2461,7 +2461,7 @@ public class Honda extends Bike {
 
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
-      <p>Forgetting to implement all inherited abstract methods in a concrete subclass — and forgetting to mark the subclass itself as <code>abstract</code> in that case — is a common exam mistake.</p>
+      <p>Forgetting to implement all inherited abstract methods in a concrete subclass - and forgetting to mark the subclass itself as <code>abstract</code> in that case - is a common exam mistake.</p>
     </div>
 
     <div class="callout callout-green">
@@ -2490,9 +2490,9 @@ public class Honda extends Bike {
 
     <h2>References</h2>
     <ul>
-      <li>Oracle Java Tutorials — Abstraction (docs.oracle.com)</li>
-      <li><strong>How To Program (Early Objects)</strong> — by H. Deitel and P. Deitel</li>
-      <li><strong>Head First Java</strong> — by Kathy Sierra and Bert Bates</li>
+      <li>Oracle Java Tutorials - Abstraction (docs.oracle.com)</li>
+      <li><strong>How To Program (Early Objects)</strong> - by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> - by Kathy Sierra and Bert Bates</li>
     </ul>
   `,
   summary: {
@@ -2550,8 +2550,8 @@ public class Honda extends Bike {
     <h2>What We Will Learn Today</h2>
     <ul>
       <li>Encapsulation</li>
-      <li>Encapsulation — Hands-On</li>
-      <li>Encapsulation — Advantages</li>
+      <li>Encapsulation - Hands-On</li>
+      <li>Encapsulation - Advantages</li>
       <li>Abstraction vs Encapsulation</li>
     </ul>
 
@@ -2565,20 +2565,20 @@ public class Honda extends Bike {
       <li><strong>Inheritance</strong></li>
       <li><strong>Polymorphism</strong></li>
       <li><strong>Abstraction</strong></li>
-      <li><strong>Encapsulation</strong> — our focus for this lesson</li>
+      <li><strong>Encapsulation</strong> - our focus for this lesson</li>
     </ul>
 
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>A <strong>class</strong> is like a cookie cutter — it defines the shape of objects. <strong>Objects</strong> are like cookies — they are instances created from that class.</p>
+      <p>A <strong>class</strong> is like a cookie cutter - it defines the shape of objects. <strong>Objects</strong> are like cookies - they are instances created from that class.</p>
     </div>
 
     <div class="divider"></div>
 
-    <h2>Quick Reminders — Inheritance, Polymorphism, and Abstraction</h2>
+    <h2>Quick Reminders - Inheritance, Polymorphism, and Abstraction</h2>
     <p>Inheritance is a mechanism that allows a <strong>subclass</strong> to inherit the properties and behaviors of a <strong>superclass</strong>, enabling code reuse and a hierarchical structure for classes.</p>
     <p><strong>Polymorphism</strong> is the capability of an action or method to do different things based on the object it is acting upon.</p>
-    <p><strong>Abstraction</strong> in Java is a mechanism that helps reduce the complexity of a system by hiding its implementation details from the user. For example, when sending an SMS, you just type the text and send it — you don't know the internal processing behind the message delivery.</p>
+    <p><strong>Abstraction</strong> in Java is a mechanism that helps reduce the complexity of a system by hiding its implementation details from the user. For example, when sending an SMS, you just type the text and send it - you don't know the internal processing behind the message delivery.</p>
 
     <div class="divider"></div>
 
@@ -2586,7 +2586,7 @@ public class Honda extends Bike {
     <p><strong>Encapsulation</strong> in Java is a process of <strong>wrapping code and data together into a single unit</strong>.</p>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p><strong>Example:</strong> Think of a medicine <strong>capsule</strong> — it is a mix of several medicines wrapped together into a single unit. In the same way, a class wraps its data (fields) and code (methods) together.</p>
+      <p><strong>Example:</strong> Think of a medicine <strong>capsule</strong> - it is a mix of several medicines wrapped together into a single unit. In the same way, a class wraps its data (fields) and code (methods) together.</p>
     </div>
     <p>In a class, this wrapping looks like this:</p>
     <pre><code>Class
@@ -2597,10 +2597,10 @@ public class Honda extends Bike {
 
     <div class="divider"></div>
 
-    <h2>Encapsulation — The Details</h2>
+    <h2>Encapsulation - The Details</h2>
     <p><strong>Encapsulation</strong> is the technique of making the fields in a class <strong>private</strong>, and providing access to those fields via <strong>public methods</strong>.</p>
     <ul>
-      <li>If a field is declared <strong>private</strong>, it cannot be accessed by anyone outside the class — this hides the field within the class.</li>
+      <li>If a field is declared <strong>private</strong>, it cannot be accessed by anyone outside the class - this hides the field within the class.</li>
       <li>For this reason, encapsulation is also referred to as <strong>data (information) hiding</strong>.</li>
     </ul>
     <div class="callout callout-yellow">
@@ -2609,7 +2609,7 @@ public class Honda extends Bike {
       <p>The <strong>set</strong> methods that allow a field to be changed are known as <strong>mutator</strong> methods.</p>
     </div>
 
-    <h3>Hands-On — A Simple Encapsulated Class</h3>
+    <h3>Hands-On - A Simple Encapsulated Class</h3>
     <pre><code>public class MyEncapsulator {
 
     //Private member, accessible only within the class
@@ -2629,7 +2629,7 @@ public class Honda extends Bike {
 
     <div class="divider"></div>
 
-    <h2>Encapsulation — Try It Yourself</h2>
+    <h2>Encapsulation - Try It Yourself</h2>
     <p>The following <code>SalesPerson</code> class demonstrates encapsulation. Each of its fields is marked <strong>private</strong>, and there are <strong>public</strong> methods to access the fields.</p>
 
     <pre><code>public class SalesPerson {
@@ -2686,12 +2686,12 @@ public class Honda extends Bike {
 
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
-      <p>Notice how <code>setCommissionRate()</code> checks that the new rate is between <code>0.0</code> and <code>0.20</code> before accepting it. This validation logic is only possible because the field is <strong>private</strong> — no one can bypass it and set <code>commissionRate</code> directly.</p>
+      <p>Notice how <code>setCommissionRate()</code> checks that the new rate is between <code>0.0</code> and <code>0.20</code> before accepting it. This validation logic is only possible because the field is <strong>private</strong> - no one can bypass it and set <code>commissionRate</code> directly.</p>
     </div>
 
     <div class="divider"></div>
 
-    <h2>Encapsulation — Advantages</h2>
+    <h2>Encapsulation - Advantages</h2>
     <ul>
       <li>By providing only a setter or only a getter method, you can make a class <strong>read-only</strong> or <strong>write-only</strong>.</li>
       <li>It gives you <strong>control over the data</strong>. For example, if you want to allow the value of <code>id</code> to be set only when it is greater than 100, you can write that logic inside the setter method.</li>
@@ -2712,7 +2712,7 @@ public class Honda extends Bike {
       <p>A simple example to understand this difference is a <strong>mobile phone</strong>: the complex logic in the circuit board is <strong>encapsulated</strong> inside the phone, while the touch screen (the user interface) is provided to <strong>abstract</strong> that complexity out, so the user only sees simple icons and taps.</p>
     </div>
 
-    <h3>Abstraction vs. Encapsulation — Comparison</h3>
+    <h3>Abstraction vs. Encapsulation - Comparison</h3>
     <table>
       <tr><th>Abstraction</th><th>Encapsulation</th></tr>
       <tr><td>Solves the issues at the <strong>design level</strong>.</td><td>Solves the issues at the <strong>implementation level</strong>.</td></tr>
@@ -2724,7 +2724,7 @@ public class Honda extends Bike {
 
     <h2>Summary</h2>
     <ul>
-      <li><strong>Encapsulation</strong> wraps code (methods) and data (fields) together into a single unit — like a capsule mixing several medicines together.</li>
+      <li><strong>Encapsulation</strong> wraps code (methods) and data (fields) together into a single unit - like a capsule mixing several medicines together.</li>
       <li>It is achieved by making fields <strong>private</strong> and exposing them only through <strong>public</strong> accessor (getter) and mutator (setter) methods, which is why it is also called <strong>data hiding</strong>.</li>
       <li>Encapsulation gives a class <strong>control over its own data</strong>, allows fields to be made read-only or write-only, and lets internal implementation change without affecting the code that uses the class.</li>
       <li><strong>Abstraction</strong> is about "What" a class can do (the design level); <strong>Encapsulation</strong> is about "How" it does it (the implementation level).</li>
@@ -2734,8 +2734,8 @@ public class Honda extends Bike {
 
     <h2>References</h2>
     <ul>
-      <li><strong>How To Program (Early Objects)</strong> — by H. Deitel and P. Deitel</li>
-      <li><strong>Head First Java</strong> — by Kathy Sierra and Bert Bates</li>
+      <li><strong>How To Program (Early Objects)</strong> - by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> - by Kathy Sierra and Bert Bates</li>
     </ul>
   `,
   summary: {
@@ -2744,7 +2744,7 @@ public class Honda extends Bike {
       'Recap of Abstraction Concepts',
       'Object Oriented Concepts Overview',
       'What is Encapsulation?',
-      'Encapsulation — Private Fields and Public Methods',
+      'Encapsulation - Private Fields and Public Methods',
       'Accessor (Getter) and Mutator (Setter) Methods',
       'Encapsulation Hands-On (SalesPerson Example)',
       'Advantages of Encapsulation',

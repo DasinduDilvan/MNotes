@@ -547,14 +547,14 @@ int main()
 
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>An <strong>Abstract Data Type (ADT)</strong> is a collection of data together with a set of operations that work on that data. It is a mathematical model of the data objects and the functions that operate on them — without worrying about how it is actually built.</p>
+      <p>An <strong>Abstract Data Type (ADT)</strong> is a collection of data together with a set of operations that work on that data. It is a mathematical model of the data objects and the functions that operate on them - without worrying about how it is actually built.</p>
     </div>
 
     <p>In simple words, an ADT only cares about <strong>what</strong> the data represents and <strong>what</strong> you can do with it. It does not care about <strong>how</strong> it will eventually be constructed (implemented).</p>
 
     <h3>How an ADT Works</h3>
     <ul>
-      <li>The <strong>user</strong> interacts only with the <strong>interface</strong> — the operations the ADT has specified.</li>
+      <li>The <strong>user</strong> interacts only with the <strong>interface</strong> - the operations the ADT has specified.</li>
       <li>The ADT is like a <strong>shell</strong> that the user sees and interacts with.</li>
       <li>The actual <strong>implementation</strong> is hidden one level deeper, inside that shell.</li>
       <li>The user is not concerned with the details of the implementation.</li>
@@ -569,14 +569,14 @@ int main()
 
     <h3>Primitive vs Abstract Data Structures</h3>
 
-    <p><strong>Integer, Float, Boolean,</strong> and <strong>Char</strong> are all data structures too — but they are called <strong>Primitive Data Structures</strong>.</p>
+    <p><strong>Integer, Float, Boolean,</strong> and <strong>Char</strong> are all data structures too - but they are called <strong>Primitive Data Structures</strong>.</p>
 
     <div class="callout callout-blue">
       <span class="callout-label">Example</span>
-      <p><strong>Integer</strong> — Describes a data type that stores numerical values. Its operations include addition, subtraction, division, and so on. How Integer is implemented internally is not something we usually worry about.</p>
+      <p><strong>Integer</strong> - Describes a data type that stores numerical values. Its operations include addition, subtraction, division, and so on. How Integer is implemented internally is not something we usually worry about.</p>
     </div>
 
-    <p>On the other hand, structures like <strong>Linked List, Tree, Graph, Stack,</strong> and <strong>Queue</strong> are called <strong>Abstract Data Structures</strong>. They give an implementation-independent view of data — you can use them without knowing exactly how they work inside.</p>
+    <p>On the other hand, structures like <strong>Linked List, Tree, Graph, Stack,</strong> and <strong>Queue</strong> are called <strong>Abstract Data Structures</strong>. They give an implementation-independent view of data - you can use them without knowing exactly how they work inside.</p>
 
     <div class="divider"></div>
 
@@ -584,24 +584,24 @@ int main()
 
     <p>Think about a stack of donuts, a stack of pancakes, a pile of coins, or a stack of plates. What do they all have in common? You can only add or remove items from the <strong>top</strong>.</p>
 
-    <p>A <strong>stack</strong> data structure behaves exactly the same way. It only allows you to access <strong>one data item</strong> at a time — the last item that was inserted. Once you remove that item, you can then access the next-to-last item, and so on.</p>
+    <p>A <strong>stack</strong> data structure behaves exactly the same way. It only allows you to access <strong>one data item</strong> at a time - the last item that was inserted. Once you remove that item, you can then access the next-to-last item, and so on.</p>
 
     <div class="callout callout-blue">
       <span class="callout-label">Definition</span>
       <p>A <strong>stack</strong> is a linear data structure that can be accessed only at one of its ends (called the <strong>top</strong> of the stack) for storing and retrieving data. It behaves very much like a stack of plates or a stack of newspapers. A stack is a constantly changing object.</p>
     </div>
 
-    <p>Stacks are not just a programming concept — most <strong>microprocessors</strong> use a stack-based architecture too. When a method is called, its return address and arguments are pushed onto a stack. When it returns, they're popped off. These stack operations are actually built into the microprocessor itself.</p>
+    <p>Stacks are not just a programming concept - most <strong>microprocessors</strong> use a stack-based architecture too. When a method is called, its return address and arguments are pushed onto a stack. When it returns, they're popped off. These stack operations are actually built into the microprocessor itself.</p>
 
     <div class="divider"></div>
 
     <h2>How Stacks Work: The LIFO Principle</h2>
 
-    <p>A <strong>stack</strong> is a data structure — a list of data elements — where all <strong>insertions</strong> and <strong>deletions</strong> happen at just <strong>one end</strong>. This end is called the <strong>TOP</strong> (also referred to as the beginning) of the stack.</p>
+    <p>A <strong>stack</strong> is a data structure - a list of data elements - where all <strong>insertions</strong> and <strong>deletions</strong> happen at just <strong>one end</strong>. This end is called the <strong>TOP</strong> (also referred to as the beginning) of the stack.</p>
 
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
-      <p>Insertions and deletions are <strong>restricted</strong> from the middle and the end (bottom) of a stack — they can only happen at the top.</p>
+      <p>Insertions and deletions are <strong>restricted</strong> from the middle and the end (bottom) of a stack - they can only happen at the top.</p>
     </div>
 
     <div class="callout callout-yellow">
@@ -626,7 +626,7 @@ int main()
 
     <h2>Implementing a Stack (Array Basics)</h2>
 
-    <p>One common way to implement a stack is with an <strong>array</strong>. But even though it's built on an array, a stack <strong>restricts access</strong> — you cannot access it the way you would access a normal array.</p>
+    <p>One common way to implement a stack is with an <strong>array</strong>. But even though it's built on an array, a stack <strong>restricts access</strong> - you cannot access it the way you would access a normal array.</p>
 
     <p>A stack built this way needs three fields:</p>
     <ul>
@@ -654,8 +654,8 @@ int main()
 
     <h3>Definitions (provided by the user)</h3>
     <ul>
-      <li><strong>MAX_ITEMS</strong> — the maximum number of items that might be on the stack.</li>
-      <li><strong>ItemType</strong> — the data type of the items on the stack.</li>
+      <li><strong>MAX_ITEMS</strong> - the maximum number of items that might be on the stack.</li>
+      <li><strong>ItemType</strong> - the data type of the items on the stack.</li>
     </ul>
 
     <h3>Operations</h3>
@@ -688,7 +688,7 @@ int main()
     <p>Let's trace a sequence of operations on an empty stack to see exactly how <strong>top</strong> changes at each step.</p>
 
     <pre><code>Operation        top   Stack contents (index : value)
-Initial (empty)  -1    —
+Initial (empty)  -1    -
 stack.Push(2)     0    [0]=2
 stack.Push(3)     1    [0]=2  [1]=3
 stack.Push(5)     2    [0]=2  [1]=3  [2]=5
@@ -698,7 +698,7 @@ stack.Push(10)    1    [0]=2  [1]=10  [2]=5 (old 5 still sits in memory)</code><
 
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>Popping does not "erase" the old value in the array — it simply moves the <strong>top</strong> pointer down. The old value just gets overwritten the next time something is pushed into that slot.</p>
+      <p>Popping does not "erase" the old value in the array - it simply moves the <strong>top</strong> pointer down. The old value just gets overwritten the next time something is pushed into that slot.</p>
     </div>
 
     <div class="divider"></div>
@@ -725,7 +725,7 @@ stack.Push(10)    1    [0]=2  [1]=10  [2]=5 (old 5 still sits in memory)</code><
       <li><strong>Linked List</strong></li>
     </ol>
 
-    <p>Which method to use depends on the application — you need to weigh the advantages and disadvantages of each.</p>
+    <p>Which method to use depends on the application - you need to weigh the advantages and disadvantages of each.</p>
 
     <h3>Array Implementation</h3>
     <ul>
@@ -758,13 +758,13 @@ stack.Push(10)    1    [0]=2  [1]=10  [2]=5 (old 5 still sits in memory)</code><
 
     <h2>Stack ADT Operations (Revisited)</h2>
 
-    <p>A stack is an object — more specifically, an <strong>Abstract Data Structure (ADT)</strong> — that supports these operations:</p>
+    <p>A stack is an object - more specifically, an <strong>Abstract Data Structure (ADT)</strong> - that supports these operations:</p>
     <ul>
-      <li><strong>Push</strong> — add an element to the top of the stack.</li>
-      <li><strong>Pop</strong> — remove an element from the top of the stack.</li>
-      <li><strong>IsEmpty</strong> — check if the stack is empty.</li>
-      <li><strong>IsFull</strong> — check if the stack is full.</li>
-      <li><strong>Peek</strong> — get the value of the top element <strong>without</strong> removing it.</li>
+      <li><strong>Push</strong> - add an element to the top of the stack.</li>
+      <li><strong>Pop</strong> - remove an element from the top of the stack.</li>
+      <li><strong>IsEmpty</strong> - check if the stack is empty.</li>
+      <li><strong>IsFull</strong> - check if the stack is full.</li>
+      <li><strong>Peek</strong> - get the value of the top element <strong>without</strong> removing it.</li>
     </ul>
 
     <div class="divider"></div>
@@ -809,7 +809,7 @@ stack.Push(10)    1    [0]=2  [1]=10  [2]=5 (old 5 still sits in memory)</code><
   4) Exit</code></pre>
 
     <h3>Pop Operation</h3>
-    <p>Used to remove an item from the stack — first read the element, then decrease the TOP pointer.</p>
+    <p>Used to remove an item from the stack - first read the element, then decrease the TOP pointer.</p>
     <pre><code>POP_STACK (STACK, TOP, ITEM)
   1) IF TOP = -1 THEN
         Print "Stack is empty"
@@ -889,20 +889,20 @@ top = top - 1       After a pop, top is decremented by 1</code></pre>
 
     <h3>A Few Real Examples</h3>
     <ul>
-      <li><strong>Reversing a word</strong> — Put all the letters in a stack and pop them out one by one. Because of the stack's LIFO order, the letters come out in reverse order.</li>
-      <li><strong>Compilers</strong> — Compilers use a stack to calculate the value of expressions like <code>2 + 4 / 5 * (7 - 9)</code>, by converting the expression into prefix or postfix form first.</li>
-      <li><strong>Browsers</strong> — The back button in a browser saves all the URLs you've visited in a stack. Every new page is added on top. Pressing back removes the current URL from the stack and takes you to the previous one.</li>
+      <li><strong>Reversing a word</strong> - Put all the letters in a stack and pop them out one by one. Because of the stack's LIFO order, the letters come out in reverse order.</li>
+      <li><strong>Compilers</strong> - Compilers use a stack to calculate the value of expressions like <code>2 + 4 / 5 * (7 - 9)</code>, by converting the expression into prefix or postfix form first.</li>
+      <li><strong>Browsers</strong> - The back button in a browser saves all the URLs you've visited in a stack. Every new page is added on top. Pressing back removes the current URL from the stack and takes you to the previous one.</li>
     </ul>
 
     <div class="divider"></div>
 
     <h2>Infix, Prefix, and Postfix Expressions</h2>
 
-    <p>Take the arithmetic expression <code>B * C</code>. The way it's written already tells you how to interpret it — here, <strong>B</strong> is being multiplied by <strong>C</strong>, because the multiplication operator <code>*</code> sits between them.</p>
+    <p>Take the arithmetic expression <code>B * C</code>. The way it's written already tells you how to interpret it - here, <strong>B</strong> is being multiplied by <strong>C</strong>, because the multiplication operator <code>*</code> sits between them.</p>
 
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>This style, where the operator sits <strong>between</strong> the two operands it works on, is called <strong>infix</strong> notation — the notation we normally use in everyday math.</p>
+      <p>This style, where the operator sits <strong>between</strong> the two operands it works on, is called <strong>infix</strong> notation - the notation we normally use in everyday math.</p>
     </div>
 
     <pre><code>Infix Expression      Prefix Expression      Postfix Expression
@@ -913,7 +913,7 @@ A + B * C             + A * B C              A B C * +</code></pre>
 
     <h2>Operator Precedence</h2>
 
-    <p>Look at the expression <code>A + B * C</code>. Both <code>+</code> and <code>*</code> sit between operands, but which goes first — does <code>+</code> work on A and B, or does <code>*</code> take B and C? On its own, this looks ambiguous.</p>
+    <p>Look at the expression <code>A + B * C</code>. Both <code>+</code> and <code>*</code> sit between operands, but which goes first - does <code>+</code> work on A and B, or does <code>*</code> take B and C? On its own, this looks ambiguous.</p>
 
     <p>To solve this, each operator is given a <strong>precedence level</strong>.</p>
 
@@ -931,7 +931,7 @@ Exponentiation             ^
 Multiplication / Division  *, /
 Addition / Subtraction     +, -</code></pre>
 
-    <p>When converting an infix expression to a fully parenthesized form, the operands with the <strong>higher precedence</strong> operator are grouped in parentheses first. If the same precedence appears more than once, the leftmost one is grouped first — except for exponentiation, which groups from <strong>right to left</strong>.</p>
+    <p>When converting an infix expression to a fully parenthesized form, the operands with the <strong>higher precedence</strong> operator are grouped in parentheses first. If the same precedence appears more than once, the leftmost one is grouped first - except for exponentiation, which groups from <strong>right to left</strong>.</p>
 
     <div class="callout callout-blue">
       <span class="callout-label">Example</span>
@@ -1053,14 +1053,14 @@ A + B + C + D             + + + A B C D              A B + C + D +</code></pre>
 
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>A <strong>Stack</strong> follows <strong>LIFO (Last-In-First-Out)</strong> — the last item inserted is the first one removed. A <strong>Queue</strong> follows <strong>FIFO</strong> — the first item inserted is the first one removed.</p>
+      <p>A <strong>Stack</strong> follows <strong>LIFO (Last-In-First-Out)</strong> - the last item inserted is the first one removed. A <strong>Queue</strong> follows <strong>FIFO</strong> - the first item inserted is the first one removed.</p>
     </div>
 
     <p>Queues are working quietly behind the scenes inside a computer's operating system. Some common examples are:</p>
     <ul>
-      <li><strong>Printer queue</strong> — holds print jobs in the order they were sent</li>
-      <li><strong>Keystroke queue</strong> — stores the keys you press on the keyboard, in order</li>
-      <li><strong>Pipeline</strong> — passes data between processes in sequence</li>
+      <li><strong>Printer queue</strong> - holds print jobs in the order they were sent</li>
+      <li><strong>Keystroke queue</strong> - stores the keys you press on the keyboard, in order</li>
+      <li><strong>Pipeline</strong> - passes data between processes in sequence</li>
     </ul>
 
     <div class="divider"></div>
@@ -1068,7 +1068,7 @@ A + B + C + D             + + + A B C D              A B + C + D +</code></pre>
     <h2>What Does a Queue Do?</h2>
     <ul>
       <li>Stores a set of elements in a particular order</li>
-      <li>Follows the <strong>FIFO</strong> principle — First In, First Out</li>
+      <li>Follows the <strong>FIFO</strong> principle - First In, First Out</li>
       <li>Insertions happen at the <strong>rear</strong> end</li>
       <li>Deletions happen at the <strong>front</strong> end</li>
       <li>Elements can only be <strong>accessed from the front</strong></li>
@@ -1114,8 +1114,8 @@ toString     | Returns a string representation of the queue</code></pre>
 
     <p>Inside computer systems:</p>
     <ul>
-      <li><strong>Job Queue</strong> — in multi-user systems, processes wait in a queue for their turn on the CPU</li>
-      <li><strong>Print Queue</strong> — one printer is often shared by several machines, so print jobs wait in a queue</li>
+      <li><strong>Job Queue</strong> - in multi-user systems, processes wait in a queue for their turn on the CPU</li>
+      <li><strong>Print Queue</strong> - one printer is often shared by several machines, so print jobs wait in a queue</li>
     </ul>
 
     <div class="callout callout-blue">
@@ -1137,10 +1137,10 @@ toString     | Returns a string representation of the queue</code></pre>
 
     <h2>Types of Queues</h2>
     <ul>
-      <li><strong>Normal Queue (FIFO)</strong> — the basic linear queue</li>
-      <li><strong>Circular Queue</strong> — a normal queue that wraps around itself</li>
-      <li><strong>Double-Ended Queue (Deque)</strong> — insertion and deletion allowed at both ends</li>
-      <li><strong>Priority Queue</strong> — elements are removed based on priority, not just order</li>
+      <li><strong>Normal Queue (FIFO)</strong> - the basic linear queue</li>
+      <li><strong>Circular Queue</strong> - a normal queue that wraps around itself</li>
+      <li><strong>Double-Ended Queue (Deque)</strong> - insertion and deletion allowed at both ends</li>
+      <li><strong>Priority Queue</strong> - elements are removed based on priority, not just order</li>
     </ul>
 
     <div class="divider"></div>
@@ -1155,8 +1155,8 @@ toString     | Returns a string representation of the queue</code></pre>
 Remove                                 Insert</code></pre>
 
     <ul>
-      <li><strong>enqueue</strong> — insert an element at the rear of the queue</li>
-      <li><strong>dequeue</strong> — remove an element from the front of the queue</li>
+      <li><strong>enqueue</strong> - insert an element at the rear of the queue</li>
+      <li><strong>dequeue</strong> - remove an element from the front of the queue</li>
     </ul>
 
     <div class="divider"></div>
@@ -1203,7 +1203,7 @@ dequeue()      9         7 3 5</code></pre>
 
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
-      <p>Calling <code>dequeue()</code> on an empty queue produces an <strong>underflow error</strong> — it does not silently return nothing.</p>
+      <p>Calling <code>dequeue()</code> on an empty queue produces an <strong>underflow error</strong> - it does not silently return nothing.</p>
     </div>
 
     <div class="divider"></div>
@@ -1213,7 +1213,7 @@ dequeue()      9         7 3 5</code></pre>
 
     <h2>Queue Algorithms</h2>
 
-    <h3>peek() — look at the front element</h3>
+    <h3>peek() - look at the front element</h3>
     <p>Gets the element at the front of the queue <strong>without removing it</strong>.</p>
     <pre><code>procedure peek
    return queue[front]
@@ -1238,7 +1238,7 @@ end procedure</code></pre>
    endif
 end procedure</code></pre>
 
-    <h3>enqueue(data) — insert an element</h3>
+    <h3>enqueue(data) - insert an element</h3>
     <ol>
       <li>Check if the queue is full</li>
       <li>If full, produce an <strong>overflow error</strong> and exit</li>
@@ -1257,7 +1257,7 @@ end procedure</code></pre>
    return true
 end procedure</code></pre>
 
-    <h3>dequeue() — remove an element</h3>
+    <h3>dequeue() - remove an element</h3>
     <ol>
       <li>Check if the queue is empty</li>
       <li>If empty, produce an <strong>underflow error</strong> and exit</li>
@@ -1308,7 +1308,7 @@ end procedure</code></pre>
 
     <div class="callout callout-red">
       <span class="callout-label">Warning</span>
-      <p>Even though the queue is <strong>not full</strong> (indices 0–2 are empty), we <strong>cannot insert</strong> any more elements — because <code>rear</code> is already at the last index and a linear queue never reuses freed space at the front.</p>
+      <p>Even though the queue is <strong>not full</strong> (indices 0–2 are empty), we <strong>cannot insert</strong> any more elements - because <code>rear</code> is already at the last index and a linear queue never reuses freed space at the front.</p>
     </div>
 
     <div class="divider"></div>
@@ -1365,7 +1365,7 @@ Enqueue:                front =  2, rear =  1   [ 6 , 7 , 3 , 4 , 5 ]  ← Queue
       <li>Implement the main method: display a menu of operations and call the right function for whatever the user selects</li>
     </ol>
 
-    <h3>enQueue(value) — Inserting into a Circular Queue</h3>
+    <h3>enQueue(value) - Inserting into a Circular Queue</h3>
     <ol>
       <li>Check whether the queue is <strong>FULL</strong>: <code>(rear == SIZE-1 && front == 0) || (front == rear + 1)</code></li>
       <li>If FULL, display "Queue is FULL!!! Insertion is not possible!!!" and stop</li>
@@ -1387,11 +1387,11 @@ Enqueue:                front =  2, rear =  1   [ 6 , 7 , 3 , 4 , 5 ]  ← Queue
 
     <div class="callout callout-green">
       <span class="callout-label">Tip</span>
-      <p>Draw the array boxes on paper and physically move <code>front</code> and <code>rear</code> as you go through Exercise 1 and Exercise 2 — it makes wrap-around behavior in circular queues much easier to understand.</p>
+      <p>Draw the array boxes on paper and physically move <code>front</code> and <code>rear</code> as you go through Exercise 1 and Exercise 2 - it makes wrap-around behavior in circular queues much easier to understand.</p>
     </div>
   `,
   summary: {
-    topic: 'Queues — Linear and Circular Queue Data Structures',
+    topic: 'Queues - Linear and Circular Queue Data Structures',
     subTopics: [
       'What Does a Queue Do?',
       'Real-Life FIFO Examples',
@@ -1409,12 +1409,12 @@ Enqueue:                front =  2, rear =  1   [ 6 , 7 , 3 , 4 , 5 ]  ← Queue
       'Implementing a Circular Queue with an Array',
       'Circular Queue Walkthrough (Front/Rear Style)',
       'Steps to Implement a Circular Queue',
-      'enQueue(value) — Inserting into a Circular Queue',
+      'enQueue(value) - Inserting into a Circular Queue',
     ],
     definitions: [
       { term: 'Queue', meaning: 'A linear data structure similar to a Stack, where the first element inserted is the first one removed (FIFO).' },
       { term: 'FIFO (First-In-First-Out)', meaning: 'The rule that the first element inserted into a queue is the first one removed.' },
-      { term: 'LIFO (Last-In-First-Out)', meaning: 'The opposite rule used by a Stack — the last element inserted is removed first.' },
+      { term: 'LIFO (Last-In-First-Out)', meaning: 'The opposite rule used by a Stack - the last element inserted is removed first.' },
       { term: 'Front', meaning: 'The end of the queue where elements are removed (dequeued).' },
       { term: 'Rear', meaning: 'The end of the queue where new elements are inserted (enqueued).' },
       { term: 'Enqueue', meaning: 'The operation that inserts an element at the rear of a queue.' },
@@ -1430,12 +1430,12 @@ Enqueue:                front =  2, rear =  1   [ 6 , 7 , 3 , 4 , 5 ]  ← Queue
     ],
     keyPoints: [
       'A Queue follows FIFO (First-In-First-Out); a Stack follows LIFO.',
-      'Insertions happen only at the rear; deletions happen only at the front — no middle access allowed.',
+      'Insertions happen only at the rear; deletions happen only at the front - no middle access allowed.',
       'Number of elements in a queue = rear - front + 1.',
       'An empty queue starts with front = -1, rear = -1, and size = 0.',
       'Common real-world/OS queue examples: printer queue, job queue (CPU scheduling), keystroke buffer, network data packets.',
       'The four queue types covered are Normal (Linear), Circular, Deque, and Priority.',
-      'Linear queues waste array space — once rear reaches the last index, no more elements can be enqueued even if front slots are free.',
+      'Linear queues waste array space - once rear reaches the last index, no more elements can be enqueued even if front slots are free.',
       'Circular queues solve this by wrapping rear back to index 0 when space is available.',
       'A circular queue is empty when the read pointer equals the write pointer.',
       'Circular queue overflow check: (rear == SIZE-1 && front == 0) || (front == rear + 1).',
@@ -1452,7 +1452,7 @@ Enqueue:                front =  2, rear =  1   [ 6 , 7 , 3 , 4 , 5 ]  ← Queue
     <h1>Linked Lists</h1>
     <div class="meta-info">ICT2113 <span>•</span> 35 min read</div>
 
-    <p>In this lesson, you will learn about <strong>Linked Lists</strong> — one of the most important data structures in computer science. We will compare linked lists with arrays, learn how to build them, and explore the two main types: <strong>Singly Linked Lists</strong> and <strong>Doubly Linked Lists</strong>.</p>
+    <p>In this lesson, you will learn about <strong>Linked Lists</strong> - one of the most important data structures in computer science. We will compare linked lists with arrays, learn how to build them, and explore the two main types: <strong>Singly Linked Lists</strong> and <strong>Doubly Linked Lists</strong>.</p>
 
     <div class="divider"></div>
 
@@ -1467,15 +1467,15 @@ Enqueue:                front =  2, rear =  1   [ 6 , 7 , 3 , 4 , 5 ]  ← Queue
     <h2>Implementation of a List</h2>
     <p>There are <strong>2 main ways</strong> to store a list in memory:</p>
     <ol>
-      <li><strong>Contiguous storage (Array)</strong> — elements are placed physically next to each other in <strong>adjacent memory locations</strong>.</li>
-      <li><strong>Non-contiguous storage (Linked List)</strong> — elements are <strong>not</strong> physically next to each other in memory.</li>
+      <li><strong>Contiguous storage (Array)</strong> - elements are placed physically next to each other in <strong>adjacent memory locations</strong>.</li>
+      <li><strong>Non-contiguous storage (Linked List)</strong> - elements are <strong>not</strong> physically next to each other in memory.</li>
     </ol>
 
     <h3>Disadvantages of Arrays (Contiguous Storage)</h3>
     <ul>
-      <li>The <strong>size of the array is fixed</strong> — you must decide the size in advance.</li>
+      <li>The <strong>size of the array is fixed</strong> - you must decide the size in advance.</li>
       <li>It <strong>wastes space</strong> if the array is not fully used.</li>
-      <li><strong>Inserting new elements at the front is expensive</strong> — existing elements must be shifted to make room.</li>
+      <li><strong>Inserting new elements at the front is expensive</strong> - existing elements must be shifted to make room.</li>
     </ul>
 
     <div class="callout callout-red">
@@ -1483,7 +1483,7 @@ Enqueue:                front =  2, rear =  1   [ 6 , 7 , 3 , 4 , 5 ]  ← Queue
       <p>In an array, <strong>inserting</strong> an element means moving elements <strong>'DOWN'</strong> by one position, and <strong>deleting</strong> an element means moving elements <strong>'UP'</strong> by one position. This shifting takes extra time and is a common source of exam questions.</p>
     </div>
 
-    <p>Example — inserting 100 into an array:</p>
+    <p>Example - inserting 100 into an array:</p>
     <pre><code>Before insert:   2   5   1   8   3   10
 Insert 100 at position 4:
 After insert:    2   5   1  100  8   3   10   (elements shifted down)
@@ -1524,13 +1524,13 @@ After delete:    2   5   9        (elements shifted up)</code></pre>
 
     <h3>Advantages of Linked Lists over Arrays</h3>
     <ul>
-      <li><strong>Dynamic size</strong> — a linked list can grow and shrink during its lifetime.</li>
-      <li><strong>Easy insertion/deletion</strong> — no shifting of elements is required.</li>
+      <li><strong>Dynamic size</strong> - a linked list can grow and shrink during its lifetime.</li>
+      <li><strong>Easy insertion/deletion</strong> - no shifting of elements is required.</li>
     </ul>
 
     <h3>Drawbacks of Linked Lists</h3>
     <ul>
-      <li><strong>No random access</strong> — elements must be accessed sequentially starting from the first node. This means <strong>binary search is not possible</strong> on a linked list.</li>
+      <li><strong>No random access</strong> - elements must be accessed sequentially starting from the first node. This means <strong>binary search is not possible</strong> on a linked list.</li>
       <li><strong>Extra memory</strong> is needed for the pointer in each node.</li>
       <li>Arrays have <strong>better cache locality</strong>, which can make a noticeable difference in performance.</li>
     </ul>
@@ -1550,7 +1550,7 @@ After delete:    2   5   9        (elements shifted up)</code></pre>
     </ul>
     <p>Some key terms:</p>
     <ul>
-      <li><strong>Head</strong> — a pointer to the <strong>first</strong> node in the list.</li>
+      <li><strong>Head</strong> - a pointer to the <strong>first</strong> node in the list.</li>
       <li>The <strong>last node</strong> points to <strong>NULL</strong> to mark the end of the list.</li>
     </ul>
 
@@ -1577,7 +1577,7 @@ After delete:    2   5   9        (elements shifted up)</code></pre>
     </div>
 
     <h3>Why Do We Need Pointers in a Linked List?</h3>
-    <p>In a linked list, data elements are given memory <strong>at runtime</strong>, so the memory location of each node can be anywhere. To be able to access every node, the <strong>address</strong> of each node is stored inside the previous node — this forms the <strong>link</strong> between nodes. This is different from an array, where memory is allocated in a <strong>contiguous</strong> (side-by-side) manner.</p>
+    <p>In a linked list, data elements are given memory <strong>at runtime</strong>, so the memory location of each node can be anywhere. To be able to access every node, the <strong>address</strong> of each node is stored inside the previous node - this forms the <strong>link</strong> between nodes. This is different from an array, where memory is allocated in a <strong>contiguous</strong> (side-by-side) manner.</p>
 
     <h3>Header Nodes</h3>
     <p>A <strong>header node</strong> is an extra node in the linked list that holds <strong>no data</strong>. It exists to satisfy the rule that every node containing an item must have a <strong>previous node</strong> in the list.</p>
@@ -1586,9 +1586,9 @@ After delete:    2   5   9        (elements shifted up)</code></pre>
 
     <h2>Types of Linked List</h2>
     <ul>
-      <li><strong>Simple (Singly) Linked List</strong> — item navigation is <strong>forward only</strong>.</li>
-      <li><strong>Doubly Linked List</strong> — items can be navigated <strong>forward and backward</strong>.</li>
-      <li><strong>Circular Linked List</strong> — the last item links to the first element, and the first element can link back to the last element.</li>
+      <li><strong>Simple (Singly) Linked List</strong> - item navigation is <strong>forward only</strong>.</li>
+      <li><strong>Doubly Linked List</strong> - items can be navigated <strong>forward and backward</strong>.</li>
+      <li><strong>Circular Linked List</strong> - the last item links to the first element, and the first element can link back to the last element.</li>
     </ul>
 
     <p>Example of a circular linked list (nodes stored at addresses 1001, 1004, 1008, 1012):</p>
@@ -1602,10 +1602,10 @@ After delete:    2   5   9        (elements shifted up)</code></pre>
     <p>The main operations you can perform on a linked list are:</p>
     <ul>
       <li><strong>Create</strong> a node and linked list</li>
-      <li><strong>Traversal</strong> — visiting every node</li>
+      <li><strong>Traversal</strong> - visiting every node</li>
       <li><strong>Search</strong> for a node</li>
-      <li><strong>Insert</strong> a node — at the beginning, at the end, or after/before a given node</li>
-      <li><strong>Delete</strong> a node — at the beginning, at the end, or after/before a given node</li>
+      <li><strong>Insert</strong> a node - at the beginning, at the end, or after/before a given node</li>
+      <li><strong>Delete</strong> a node - at the beginning, at the end, or after/before a given node</li>
       <li><strong>Sort</strong> the list</li>
     </ul>
 
@@ -1812,13 +1812,13 @@ void append(struct Node** head_ref, int new_data)
     <div class="divider"></div>
 
     <h2>Doubly Linked List (DLL)</h2>
-    <p>A <strong>doubly linked list</strong> is one in which all nodes are linked together by <strong>multiple links</strong>. It allows going in <strong>both directions</strong> — forward and reverse.</p>
+    <p>A <strong>doubly linked list</strong> is one in which all nodes are linked together by <strong>multiple links</strong>. It allows going in <strong>both directions</strong> - forward and reverse.</p>
 
     <p>Every node in a doubly linked list has <strong>three fields</strong>:</p>
     <ol>
-      <li><strong>LeftPointer (prev)</strong> — points to the previous node</li>
-      <li><strong>RightPointer (next)</strong> — points to the next node</li>
-      <li><strong>DATA</strong> — the value stored</li>
+      <li><strong>LeftPointer (prev)</strong> - points to the previous node</li>
+      <li><strong>RightPointer (next)</strong> - points to the next node</li>
+      <li><strong>DATA</strong> - the value stored</li>
     </ol>
 
     <pre><code>NULL <- [prev|data|next] <-> [prev|data|next] <-> [prev|data|next] -> NULL</code></pre>
@@ -1840,19 +1840,19 @@ void append(struct Node** head_ref, int new_data)
     <h3>Advantages of DLL over Singly Linked Lists</h3>
     <ul>
       <li>Can be traversed in <strong>both forward and backward</strong> directions.</li>
-      <li><strong>Quick updates</strong> — insertions and deletions at both ends (head and tail), and also in the middle.</li>
+      <li><strong>Quick updates</strong> - insertions and deletions at both ends (head and tail), and also in the middle.</li>
       <li><strong>Deletion is more efficient</strong> if a pointer to the node to delete is already given. In a singly linked list, you would need the previous node's pointer, which sometimes means traversing the whole list to find it. A DLL avoids this using the <code>prev</code> pointer.</li>
     </ul>
 
     <h3>Disadvantages of DLL over Singly Linked Lists</h3>
     <ul>
       <li>Every node needs <strong>extra space</strong> for the previous pointer.</li>
-      <li>All operations require an <strong>extra pointer</strong> to be maintained — for example, insertion needs to update <code>previous</code> pointers as well as <code>next</code> pointers.</li>
+      <li>All operations require an <strong>extra pointer</strong> to be maintained - for example, insertion needs to update <code>previous</code> pointers as well as <code>next</code> pointers.</li>
     </ul>
 
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p><strong>Sentinel Nodes:</strong> To simplify programming, two special dummy nodes — <strong>head</strong> and <strong>tail</strong> — are added at both ends of a doubly linked list. They do <strong>not</strong> store any data. The head sentinel has a <code>null</code> previous link, and the tail sentinel has a <code>null</code> next link.</p>
+      <p><strong>Sentinel Nodes:</strong> To simplify programming, two special dummy nodes - <strong>head</strong> and <strong>tail</strong> - are added at both ends of a doubly linked list. They do <strong>not</strong> store any data. The head sentinel has a <code>null</code> previous link, and the tail sentinel has a <code>null</code> next link.</p>
     </div>
 
     <p>A doubly-linked list object needs to store:</p>
@@ -1867,7 +1867,7 @@ void append(struct Node** head_ref, int new_data)
       <li><strong>Add</strong> a node</li>
       <li><strong>Delete</strong> a node</li>
       <li><strong>Search</strong> for a node</li>
-      <li><strong>Traverse</strong> (walk through) the list — useful for counting or other operations that touch every node</li>
+      <li><strong>Traverse</strong> (walk through) the list - useful for counting or other operations that touch every node</li>
     </ol>
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
@@ -1882,7 +1882,7 @@ void append(struct Node** head_ref, int new_data)
     <p>There are <strong>4 steps</strong> to add a node to a doubly-linked list:</p>
     <ol>
       <li>Allocate memory for the new node.</li>
-      <li>Determine the insertion point — right after <code>pCur</code>.</li>
+      <li>Determine the insertion point - right after <code>pCur</code>.</li>
       <li>Point the new node to its <strong>successor</strong> and <strong>predecessor</strong>.</li>
       <li>Point the predecessor and successor to the <strong>new node</strong>.</li>
     </ol>
@@ -1939,7 +1939,7 @@ pCur -> right = pNew;</code></pre>
 pCur -> right -> left = NULL;
 free(pCur);</code></pre>
 
-    <h3>Deleting a Node — General Case</h3>
+    <h3>Deleting a Node - General Case</h3>
     <pre><code>// delete a node from a linked list
 if (pCur -> left == NULL)
 {
@@ -1958,7 +1958,7 @@ free(pCur);</code></pre>
     <div class="divider"></div>
 
     <h2>Searching a Doubly-Linked List</h2>
-    <p>Both insertion and deletion in a linked list often require <strong>searching</strong> the list — either to find the correct insertion point, or to locate the node that should be deleted.</p>
+    <p>Both insertion and deletion in a linked list often require <strong>searching</strong> the list - either to find the correct insertion point, or to locate the node that should be deleted.</p>
     <pre><code>// search the nodes in a linked list
 pCur = pHead;
 
@@ -2023,7 +2023,7 @@ else
       'Adding a Node to the End of a Doubly-Linked List',
       'Deleting from a Doubly Linked List',
       'Deleting the First Node from a DLL',
-      'Deleting a Node — General Case',
+      'Deleting a Node - General Case',
       'Searching a Doubly-Linked List',
     ],
     definitions: [
@@ -2035,7 +2035,7 @@ else
       { term: 'malloc()', meaning: 'A C function that dynamically allocates a block of memory from the heap during program execution.' },
       { term: 'Header Node', meaning: 'An extra node with no data, added so every node in the list has a previous node.' },
       { term: 'Simple (Singly) Linked List', meaning: 'A linked list where each node only points to the next node, so navigation is forward only.' },
-      { term: 'Doubly Linked List (DLL)', meaning: 'A linked list where each node has two pointers — one to the next node and one to the previous node — allowing forward and backward navigation.' },
+      { term: 'Doubly Linked List (DLL)', meaning: 'A linked list where each node has two pointers - one to the next node and one to the previous node - allowing forward and backward navigation.' },
       { term: 'Circular Linked List', meaning: 'A linked list where the last node links back to the first node instead of pointing to NULL.' },
       { term: 'Sentinel Nodes', meaning: 'Dummy head and tail nodes in a doubly linked list that hold no data and simplify insertion and deletion.' },
       { term: 'Traversal', meaning: 'The process of visiting every node in a linked list one by one, usually starting from the head.' },
@@ -2097,16 +2097,16 @@ else
 
     <h2>Advantages of Circular Linked Lists</h2>
     <ul>
-      <li><strong>Any node can be a starting point</strong> — we can traverse the whole list starting from any node. We just need to stop when the first visited node is visited again.</li>
-      <li><strong>Useful for queue implementation</strong> — unlike the normal implementation, we don't need to maintain two separate pointers for front and rear. We can maintain a pointer to the last inserted node, and the front can always be obtained as "next of last".</li>
-      <li><strong>Useful for applications that repeatedly go around the list</strong> — for example, when multiple applications are running on a PC, the operating system commonly keeps the running applications in a list and cycles through them, giving each a slice of time to execute, then moving on to the next. A circular list makes it convenient to jump back to the front of the list once the end is reached.</li>
+      <li><strong>Any node can be a starting point</strong> - we can traverse the whole list starting from any node. We just need to stop when the first visited node is visited again.</li>
+      <li><strong>Useful for queue implementation</strong> - unlike the normal implementation, we don't need to maintain two separate pointers for front and rear. We can maintain a pointer to the last inserted node, and the front can always be obtained as "next of last".</li>
+      <li><strong>Useful for applications that repeatedly go around the list</strong> - for example, when multiple applications are running on a PC, the operating system commonly keeps the running applications in a list and cycles through them, giving each a slice of time to execute, then moving on to the next. A circular list makes it convenient to jump back to the front of the list once the end is reached.</li>
     </ul>
 
     <h2>Applications of Circular Linked List</h2>
     <ul>
-      <li><strong>Personal computers</strong> — all the running applications are kept in a circular linked list, and the operating system gives each one a fixed time slot, iterating over the list until all applications are completed.</li>
-      <li><strong>Multiplayer games</strong> — all the players are kept in a circular linked list, and the pointer keeps moving forward as a player's turn ends.</li>
-      <li><strong>Circular queues</strong> — a circular linked list can also be used to create a circular queue. In a normal queue, we have to keep two pointers, <code>FRONT</code> and <code>REAR</code>, in memory at all times. In a circular linked list, only one pointer is required.</li>
+      <li><strong>Personal computers</strong> - all the running applications are kept in a circular linked list, and the operating system gives each one a fixed time slot, iterating over the list until all applications are completed.</li>
+      <li><strong>Multiplayer games</strong> - all the players are kept in a circular linked list, and the pointer keeps moving forward as a player's turn ends.</li>
+      <li><strong>Circular queues</strong> - a circular linked list can also be used to create a circular queue. In a normal queue, we have to keep two pointers, <code>FRONT</code> and <code>REAR</code>, in memory at all times. In a circular linked list, only one pointer is required.</li>
     </ul>
 
     <div class="divider"></div>
@@ -2136,7 +2136,7 @@ typedef struct node *NODEptr;
     <h2>Stack and Queue Implementation Using Linked List</h2>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>Stacks and queues do not have to be built using arrays — they can also be implemented using linked lists.</p>
+      <p>Stacks and queues do not have to be built using arrays - they can also be implemented using linked lists.</p>
     </div>
     <ul>
       <li>The major problem with a stack/queue implemented using an <strong>array</strong> is that it only works for a <strong>fixed number of data values</strong>.</li>
@@ -2152,7 +2152,7 @@ typedef struct node *NODEptr;
     <p>In a linked list implementation of a stack, every new element is inserted as the <strong>'top'</strong> element. Every newly inserted element is pointed to by <code>top</code>.</p>
     <div class="callout callout-blue">
       <span class="callout-label">Note</span>
-      <p>Example: if elements are inserted in the order 25, 32, 50, 99 — the <strong>last inserted node is 99</strong> and the <strong>first inserted node is 25</strong>. The <code>top</code> pointer points to 99.</p>
+      <p>Example: if elements are inserted in the order 25, 32, 50, 99 - the <strong>last inserted node is 99</strong> and the <strong>first inserted node is 25</strong>. The <code>top</code> pointer points to 99.</p>
     </div>
 
     <h3>Setting Up the Stack</h3>
@@ -2246,7 +2246,7 @@ int isempty()
 };
 typedef struct node node;
 </code></pre>
-    <p>Next, create a <code>queue</code> structure which stores the front node, the rear node, and the total number of nodes in the linked list. The <code>queue</code> structure has three parts — <strong>count</strong>, <strong>front</strong>, and <strong>rear</strong>.</p>
+    <p>Next, create a <code>queue</code> structure which stores the front node, the rear node, and the total number of nodes in the linked list. The <code>queue</code> structure has three parts - <strong>count</strong>, <strong>front</strong>, and <strong>rear</strong>.</p>
     <pre><code>struct queue
 { 
   int count;
@@ -2275,10 +2275,10 @@ typedef struct queue queue;
     <h3>Enqueue Operation</h3>
     <p>Steps for the enqueue operation:</p>
     <ol>
-      <li>Make a new node — <code>node *tmp; tmp = malloc(sizeof(node));</code></li>
-      <li>Give the <code>data</code> of the new node its value — <code>tmp -> data = value;</code></li>
-      <li>If the queue is empty, point both <code>front</code> and <code>rear</code> of the queue to this node — <code>q->front = q->rear = tmp;</code></li>
-      <li>If it is not empty, point the <code>rear</code> of the queue to this new node, then make this new node the <code>rear</code> — <code>q->rear->next = tmp; q->rear = tmp;</code></li>
+      <li>Make a new node - <code>node *tmp; tmp = malloc(sizeof(node));</code></li>
+      <li>Give the <code>data</code> of the new node its value - <code>tmp -> data = value;</code></li>
+      <li>If the queue is empty, point both <code>front</code> and <code>rear</code> of the queue to this node - <code>q->front = q->rear = tmp;</code></li>
+      <li>If it is not empty, point the <code>rear</code> of the queue to this new node, then make this new node the <code>rear</code> - <code>q->rear->next = tmp; q->rear = tmp;</code></li>
     </ol>
     <pre><code>void enqueue(queue *q, int value)
 {
@@ -2323,7 +2323,7 @@ typedef struct queue queue;
 
     <div class="callout callout-yellow">
       <span class="callout-label">Remember</span>
-      <p>A <strong>stack</strong> follows <strong>LIFO</strong> (Last In, First Out) — <code>push</code> and <code>pop</code> both happen at <code>top</code>. A <strong>queue</strong> follows <strong>FIFO</strong> (First In, First Out) — <code>enqueue</code> happens at <code>rear</code>, <code>dequeue</code> happens at <code>front</code>.</p>
+      <p>A <strong>stack</strong> follows <strong>LIFO</strong> (Last In, First Out) - <code>push</code> and <code>pop</code> both happen at <code>top</code>. A <strong>queue</strong> follows <strong>FIFO</strong> (First In, First Out) - <code>enqueue</code> happens at <code>rear</code>, <code>dequeue</code> happens at <code>front</code>.</p>
     </div>
   `,
   summary: {
@@ -2350,7 +2350,7 @@ typedef struct queue queue;
       { term: 'dequeue', meaning: 'The queue operation that removes and returns the value of the front node.' },
     ],
     keyPoints: [
-      'A circular linked list has no beginning or end — the last node\'s next pointer stores the address of the first node instead of NULL.',
+      'A circular linked list has no beginning or end - the last node\'s next pointer stores the address of the first node instead of NULL.',
       'A circular doubly linked list has both next and prev pointers wrapping around in a circular manner.',
       'Circular linked lists allow traversal starting from any node; you stop when the starting node is reached again.',
       'Circular linked lists are useful for queue implementation because only one pointer (to the last node) is needed instead of separate front and rear pointers.',
@@ -2358,8 +2358,8 @@ typedef struct queue queue;
       'Multiplayer games use circular linked lists to cycle through players\' turns.',
       'The struct definition for a circular linked list node is identical to that of a linear linked list node.',
       'Array-based stacks/queues have a fixed size; linked-list-based stacks/queues can grow to hold an unlimited number of values.',
-      'Stack: push inserts at top, pop removes from top — LIFO order.',
-      'Queue: enqueue inserts at rear, dequeue removes from front — FIFO order.',
+      'Stack: push inserts at top, pop removes from top - LIFO order.',
+      'Queue: enqueue inserts at rear, dequeue removes from front - FIFO order.',
       'A linked-list queue needs a queue structure holding count, front, and rear pointers.',
       'Always check isempty() before calling pop() (stack) or dequeue() (queue) to avoid NULL pointer errors.',
     ],
@@ -2452,11 +2452,11 @@ typedef struct queue queue;
     <h2>Basic Tree Concepts</h2>
     <p>A <strong>node</strong> is a user-defined data structure. It contains pointers to data and pointers to other nodes.</p>
     <ul>
-      <li><strong>Root</strong> — the node from which all other nodes descend.</li>
-      <li><strong>Parent</strong> — a node that has child nodes arranged in subtrees.</li>
-      <li><strong>Child</strong> — nodes in a tree have 0 or more children.</li>
-      <li><strong>Leaf</strong> — a node without descendants.</li>
-      <li><strong>Degree</strong> — the number of direct children a tree or subtree has.</li>
+      <li><strong>Root</strong> - the node from which all other nodes descend.</li>
+      <li><strong>Parent</strong> - a node that has child nodes arranged in subtrees.</li>
+      <li><strong>Child</strong> - nodes in a tree have 0 or more children.</li>
+      <li><strong>Leaf</strong> - a node without descendants.</li>
+      <li><strong>Degree</strong> - the number of direct children a tree or subtree has.</li>
     </ul>
 
     <pre><code>          Root
@@ -2482,17 +2482,17 @@ typedef struct queue queue;
 
     <h3>Main Terms</h3>
     <ul>
-      <li><strong>Root</strong> — the node without a parent (<code>A</code>).</li>
-      <li><strong>Siblings</strong> — nodes that share the same parent.</li>
-      <li><strong>Internal node</strong> — a node with at least one child (<code>A, B, C, F</code>).</li>
-      <li><strong>External node (leaf)</strong> — a node without children (<code>E, I, J, K, G, H, D</code>).</li>
-      <li><strong>Ancestors</strong> of a node — its parent, grandparent, grand-grandparent, and so on. In other words, all the nodes along the path from the root to that node.</li>
-      <li><strong>Descendants</strong> of a node — its child, grandchild, grand-grandchild, and so on.</li>
-      <li><strong>Depth</strong> of a node — the number of ancestors it has.</li>
-      <li><strong>Height</strong> of a tree — the maximum depth of any node (here it is <code>3</code>).</li>
-      <li><strong>Degree of a node</strong> — the number of its children.</li>
-      <li><strong>Degree of a tree</strong> — the maximum degree of any of its nodes.</li>
-      <li><strong>Subtree</strong> — a tree made of a node and its descendants. For example, C with G and H is a subtree.</li>
+      <li><strong>Root</strong> - the node without a parent (<code>A</code>).</li>
+      <li><strong>Siblings</strong> - nodes that share the same parent.</li>
+      <li><strong>Internal node</strong> - a node with at least one child (<code>A, B, C, F</code>).</li>
+      <li><strong>External node (leaf)</strong> - a node without children (<code>E, I, J, K, G, H, D</code>).</li>
+      <li><strong>Ancestors</strong> of a node - its parent, grandparent, grand-grandparent, and so on. In other words, all the nodes along the path from the root to that node.</li>
+      <li><strong>Descendants</strong> of a node - its child, grandchild, grand-grandchild, and so on.</li>
+      <li><strong>Depth</strong> of a node - the number of ancestors it has.</li>
+      <li><strong>Height</strong> of a tree - the maximum depth of any node (here it is <code>3</code>).</li>
+      <li><strong>Degree of a node</strong> - the number of its children.</li>
+      <li><strong>Degree of a tree</strong> - the maximum degree of any of its nodes.</li>
+      <li><strong>Subtree</strong> - a tree made of a node and its descendants. For example, C with G and H is a subtree.</li>
     </ul>
 
     <div class="callout callout-yellow">
@@ -2571,7 +2571,7 @@ Degree of this tree      3</code></pre>
 
     <h2>Application Areas of Trees</h2>
     <ul>
-      <li><strong>Hierarchical data</strong> — operating systems store files in trees or tree-like structures. The <strong>directory structure</strong> of Windows, Unix and DOS is an example.</li>
+      <li><strong>Hierarchical data</strong> - operating systems store files in trees or tree-like structures. The <strong>directory structure</strong> of Windows, Unix and DOS is an example.</li>
       <li>As a <strong>workflow</strong> for compositing digital images for visual effects.</li>
       <li><strong>Router algorithms</strong></li>
       <li><strong>Compiler design</strong> and <strong>text processing</strong></li>
@@ -2803,11 +2803,11 @@ root → a
 
     <h3>BST Terminology (Using the Tree Above)</h3>
     <ul>
-      <li><strong>Root node</strong> — <code>50</code></li>
-      <li><strong>Parent</strong> of the node that contains 12 — <code>25</code></li>
-      <li><strong>Left child</strong> of the node that contains 25 — <code>12</code></li>
-      <li><strong>Right subtree</strong> of the tree whose root is 76 — the subtree with root <code>89</code> (nodes 89, 83, 95)</li>
-      <li><strong>Leaf nodes</strong> — <code>6, 17, 32, 41, 59, 72, 83, 95</code></li>
+      <li><strong>Root node</strong> - <code>50</code></li>
+      <li><strong>Parent</strong> of the node that contains 12 - <code>25</code></li>
+      <li><strong>Left child</strong> of the node that contains 25 - <code>12</code></li>
+      <li><strong>Right subtree</strong> of the tree whose root is 76 - the subtree with root <code>89</code> (nodes 89, 83, 95)</li>
+      <li><strong>Leaf nodes</strong> - <code>6, 17, 32, 41, 59, 72, 83, 95</code></li>
     </ul>
 
     <div class="callout callout-blue">
@@ -2950,12 +2950,12 @@ root → a
 
     <h3>Basic Operators of a Binary Tree</h3>
     <ul>
-      <li><strong>Pre-order Traversal</strong> — visits the tree in pre-order.</li>
-      <li><strong>In-order Traversal</strong> — visits the tree in in-order.</li>
-      <li><strong>Post-order Traversal</strong> — visits the tree in post-order.</li>
-      <li><strong>Search</strong> — finds an element in the tree.</li>
-      <li><strong>Insert</strong> — adds an element to the tree.</li>
-      <li><strong>Delete</strong> — removes an element from the tree.</li>
+      <li><strong>Pre-order Traversal</strong> - visits the tree in pre-order.</li>
+      <li><strong>In-order Traversal</strong> - visits the tree in in-order.</li>
+      <li><strong>Post-order Traversal</strong> - visits the tree in post-order.</li>
+      <li><strong>Search</strong> - finds an element in the tree.</li>
+      <li><strong>Insert</strong> - adds an element to the tree.</li>
+      <li><strong>Delete</strong> - removes an element from the tree.</li>
     </ul>
 
     <div class="divider"></div>
@@ -2964,9 +2964,9 @@ root → a
     <p>Many algorithms need to <strong>visit every node</strong> of a binary tree and process (or examine) the content of each node. This is called a <strong>traversal</strong>.</p>
     <p>There are <strong>three types</strong> of traversals:</p>
     <ul>
-      <li><strong>Preorder traversal</strong> — process the <strong>root</strong>, then process all subtrees (left to right).</li>
-      <li><strong>Inorder traversal</strong> — process the <strong>left subtree</strong>, then the <strong>root</strong>, then the <strong>right subtree</strong>.</li>
-      <li><strong>Postorder traversal</strong> — process the <strong>left subtree</strong>, then the <strong>right subtree</strong>, then the <strong>root</strong>.</li>
+      <li><strong>Preorder traversal</strong> - process the <strong>root</strong>, then process all subtrees (left to right).</li>
+      <li><strong>Inorder traversal</strong> - process the <strong>left subtree</strong>, then the <strong>root</strong>, then the <strong>right subtree</strong>.</li>
+      <li><strong>Postorder traversal</strong> - process the <strong>left subtree</strong>, then the <strong>right subtree</strong>, then the <strong>root</strong>.</li>
     </ul>
 
     <div class="callout callout-yellow">
@@ -3166,9 +3166,9 @@ int main() {
 Prefix:   * 4 + 3 8
 Postfix:  4 3 8 + *</code></pre>
     <ul>
-      <li><strong>Infix</strong> — operator between operands.</li>
-      <li><strong>Prefix</strong> — operator <strong>before</strong> operands.</li>
-      <li><strong>Postfix</strong> — operator <strong>after</strong> operands.</li>
+      <li><strong>Infix</strong> - operator between operands.</li>
+      <li><strong>Prefix</strong> - operator <strong>before</strong> operands.</li>
+      <li><strong>Postfix</strong> - operator <strong>after</strong> operands.</li>
     </ul>
 
     <h3>Practice: Convert to Prefix and Postfix</h3>
@@ -3273,9 +3273,9 @@ Postfix:  4 3 8 + *</code></pre>
         ├─ G
         └─ I</code></pre>
     <ul>
-      <li><strong>Height of a node</strong> — the path length to its <strong>most distant descendant</strong>.</li>
-      <li><strong>Height of a tree</strong> — the height of the <strong>root node</strong>.</li>
-      <li><strong>Depth of a node</strong> — the path length <strong>from the node up to the root</strong>.</li>
+      <li><strong>Height of a node</strong> - the path length to its <strong>most distant descendant</strong>.</li>
+      <li><strong>Height of a tree</strong> - the height of the <strong>root node</strong>.</li>
+      <li><strong>Depth of a node</strong> - the path length <strong>from the node up to the root</strong>.</li>
     </ul>
     <p>Examples from this tree:</p>
     <ul>
@@ -3531,7 +3531,7 @@ Non-leaf nodes = 2^2 - 1 = 3</code></pre>
         return v
     else { k &gt; key(v) }
         return TreeSearch(k, T.right(v))</code></pre>
-    <p><strong>Example: find(4)</strong> — call <code>TreeSearch(4, root)</code></p>
+    <p><strong>Example: find(4)</strong> - call <code>TreeSearch(4, root)</code></p>
     <pre><code>6
 ├─ left: 2
 │   ├─ left: 1
@@ -3668,8 +3668,8 @@ Before:               After:
     <h3>Case 3: Node with Two Children</h3>
     <p>We can delete a node with two child nodes in <strong>two ways</strong>:</p>
     <ul>
-      <li><strong>In-order Predecessor</strong> — the <strong>largest element of the left subtree</strong> (the <strong>rightmost</strong> node of the left subtree).</li>
-      <li><strong>In-order Successor</strong> — the <strong>smallest element of the right subtree</strong> (the <strong>leftmost</strong> node of the right subtree).</li>
+      <li><strong>In-order Predecessor</strong> - the <strong>largest element of the left subtree</strong> (the <strong>rightmost</strong> node of the left subtree).</li>
+      <li><strong>In-order Successor</strong> - the <strong>smallest element of the right subtree</strong> (the <strong>leftmost</strong> node of the right subtree).</li>
     </ul>
     <p>The idea: <strong>replace the deleted node's value</strong> with its predecessor or successor. Then <strong>delete that predecessor/successor node</strong> (which is easy, because it has at most one child).</p>
 
