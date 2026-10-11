@@ -2009,6 +2009,886 @@ keyPoints: [
 },
 },
 
+{
+  id: 7,
+  title: 'Managing Knowledge and Artificial Intelligence',
+  content: `
+    <span class="lesson-badge">LESSON 07</span>
+    <h1>Managing Knowledge and Artificial Intelligence</h1>
+    <div class="meta-info">ICT2162 <span>•</span> 48 min read</div>
+
+    <h2>What You Will Learn</h2>
+    <ul>
+      <li>The role of <strong>knowledge management (KM)</strong></li>
+      <li>Knowledge management programs in business</li>
+      <li>Types of systems used for <strong>enterprise-wide knowledge management</strong></li>
+      <li>How KM systems provide value for businesses</li>
+      <li>Major types of <strong>knowledge work systems</strong></li>
+      <li>Business benefits of using <strong>intelligent techniques</strong> for knowledge management</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Opening Case: Designing Drugs Virtually</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Case</span>
+      <p><strong>Problem:</strong> The drug discovery process is <strong>ineffective and complicated</strong>.</p>
+    </div>
+    <p><strong>Solutions:</strong></p>
+    <ul>
+      <li>Use <strong>AI-driven structure-based design</strong> to find possible molecules for new drugs.</li>
+      <li>Use <strong>digital twins</strong> (virtual copies) in healthcare to simulate effects.</li>
+    </ul>
+    <p>This case shows the role of IT in <strong>speeding up drug discovery</strong>, <strong>improving efficiency</strong>, and <strong>reducing costs</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h2>The Role of Knowledge Management Systems in Business</h2>
+    <p><strong>Knowledge management and collaboration platforms</strong> are among the fastest-growing investment areas in both corporate and government sectors.</p>
+
+    <h3>The Knowledge Economy (2025)</h3>
+    <ul>
+      <li>Over <strong>30% of global GDP</strong> now comes from the information and digital knowledge sectors.</li>
+      <li><strong>Intangible assets</strong> (knowledge, brand, reputation, proprietary processes) are still the core drivers of enterprise value.</li>
+      <li>Well-executed <strong>AI-driven KM projects</strong> can give extraordinary <strong>ROI</strong> (return on investment).</li>
+    </ul>
+
+    <h3>Why Knowledge Gives a Firm Its Value</h3>
+    <p>A modern firm's value depends on its <strong>ability to create and manage knowledge</strong>.</p>
+    <p>Knowing how to do things <strong>effectively and efficiently</strong>, in ways that others cannot copy, is the prime source of <strong>profit and competitive advantage</strong>.</p>
+    <div class="callout callout-green">
+      <span class="callout-label">Example</span>
+      <p>Having a <strong>unique build-to-order production system</strong> is knowledge that competitors cannot easily duplicate.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>What Is Knowledge? How Is It Generated?</h2>
+    <p>Knowledge is created step by step. Each step adds more meaning.</p>
+    <pre><code>Data
+  ↓
+Information
+  ↓
+Knowledge
+  ↓
+Wisdom</code></pre>
+    <ul>
+      <li><strong>Data → Information</strong></li>
+      <li><strong>Information → Knowledge</strong></li>
+      <li><strong>Knowledge → Wisdom</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Important Dimensions of Knowledge</h2>
+
+    <h3>1. Knowledge Is a Firm Asset</h3>
+    <ul>
+      <li>Knowledge is <strong>intangible</strong> (you cannot touch it).</li>
+      <li>Creating knowledge from data and information needs <strong>organizational resources</strong>.</li>
+      <li>When knowledge is shared, it experiences <strong>network effects</strong>: its value increases as more people share it.</li>
+      <li>Knowledge today includes <strong>AI-generated knowledge</strong> and <strong>knowledge graphs</strong> (maps of facts and how they connect).</li>
+    </ul>
+
+    <h3>2. Knowledge Has Different Forms</h3>
+    <ul>
+      <li><strong>Tacit</strong> — human expertise and experience</li>
+      <li><strong>Explicit</strong> — codified (written down or recorded)</li>
+      <li><strong>AI-generated</strong> — machine-assisted insights</li>
+    </ul>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Three forms of knowledge: <strong>Tacit</strong> (human expertise), <strong>Explicit</strong> (codified), <strong>AI-generated</strong> (machine-assisted insights).</p>
+    </div>
+
+    <h3>3. Knowledge Has a Location</h3>
+    <ul>
+      <li>It is a <strong>cognitive event</strong> (it happens in the mind).</li>
+      <li>It is both <strong>social and individual</strong>.</li>
+      <li><strong>Sticky</strong> — hard to move.</li>
+      <li><strong>Situated</strong> — enmeshed in the firm's culture.</li>
+      <li><strong>Contextual</strong> — works only in certain situations.</li>
+    </ul>
+
+    <h3>4. Knowledge Is Situational</h3>
+    <ul>
+      <li><strong>Conditional</strong> — knowing <em>when</em> to apply a procedure.</li>
+      <li><strong>Contextual</strong> — knowing the <em>circumstances</em> in which to use a certain tool.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do not mix up <strong>tacit</strong> and <strong>explicit</strong> knowledge. Tacit knowledge lives in people's heads (expertise, experience). Explicit knowledge is already codified (documents, reports).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Organizational Learning</h2>
+    <p><strong>Organizational learning</strong> is the process in which organizations learn.</p>
+    <p><strong>Organizations gain experience through:</strong></p>
+    <ul>
+      <li>Collection of data</li>
+      <li>Careful measurement of planned activities</li>
+      <li>Trial and error (<strong>experimentation</strong>)</li>
+      <li>Feedback from customers and the environment</li>
+    </ul>
+    <p><strong>Then they adjust their behavior to reflect that experience by:</strong></p>
+    <ul>
+      <li>Creating new business processes with <strong>AI-driven insights</strong></li>
+      <li>Changing patterns of <strong>management decision making</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Knowledge Management Value Chain</h2>
+
+    <h3>What Is Knowledge Management?</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Knowledge management</strong> is a set of business processes developed in an organization to <strong>create, store, transfer, and apply</strong> knowledge in its business processes.</p>
+    </div>
+    <p>The <strong>knowledge management value chain</strong> shows that each stage <strong>adds value</strong> to raw data and information as they are changed into usable knowledge.</p>
+    <pre><code>Acquisition → Storage
+   ↑              ↓
+Application ← Dissemination</code></pre>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The four stages of the KM value chain: <strong>Knowledge Acquisition → Knowledge Storage → Knowledge Dissemination → Knowledge Application</strong>.</p>
+    </div>
+
+    <h3>Stage 1: Knowledge Acquisition</h3>
+    <ul>
+      <li><strong>Documenting tacit and explicit knowledge</strong>
+        <ul>
+          <li>Storing documents, reports, presentations, best practices</li>
+          <li>Unstructured documents (e.g., e-mails)</li>
+          <li>Developing <strong>online expert networks</strong></li>
+        </ul>
+      </li>
+      <li><strong>Creating knowledge</strong></li>
+      <li>Tracking data from <strong>TPS</strong> (transaction processing systems) and external sources</li>
+    </ul>
+
+    <h3>Stage 2: Knowledge Storage</h3>
+    <ul>
+      <li><strong>Databases</strong></li>
+      <li><strong>Document management systems</strong></li>
+    </ul>
+    <p><strong>Role of management:</strong></p>
+    <ul>
+      <li>Support the development of <strong>planned knowledge storage systems</strong></li>
+      <li>Encourage <strong>corporate-wide schemas</strong> for indexing documents</li>
+      <li><strong>Reward employees</strong> for taking time to update and store documents properly</li>
+    </ul>
+
+    <h3>Stage 3: Knowledge Dissemination</h3>
+    <ul>
+      <li><strong>Portals</strong> and <strong>wikis</strong></li>
+      <li><strong>E-mail</strong> and <strong>instant messaging</strong></li>
+      <li><strong>Search engines</strong></li>
+      <li><strong>Collaboration tools</strong></li>
+    </ul>
+    <p>Training programs, informal networks, and shared management experience help managers <strong>focus attention on important information</strong>.</p>
+
+    <h3>Stage 4: Knowledge Application</h3>
+    <p>To give a <strong>return on investment</strong>, organizational knowledge must become a <strong>systematic part of management decision making</strong>. It must also be placed inside <strong>decision-support systems</strong>.</p>
+    <p>Applying knowledge leads to:</p>
+    <ul>
+      <li>New business practices</li>
+      <li>New products and services</li>
+      <li>New markets</li>
+    </ul>
+
+    <h3>The Full Value Chain Diagram</h3>
+    <p>For each stage, the diagram shows two kinds of activities:</p>
+    <ul>
+      <li><strong>Acquire</strong>
+        <ul>
+          <li>Information system activities: business analytics, data mining, neural networks, machine learning, knowledge workstations, expert knowledge networks</li>
+          <li>Management and organizational activities: knowledge culture, communities of practice, social networks</li>
+        </ul>
+      </li>
+      <li><strong>Store</strong>
+        <ul>
+          <li>Information system activities: content management systems, knowledge databases, expert systems</li>
+          <li>Management and organizational activities: organizational routines, organizational culture</li>
+        </ul>
+      </li>
+      <li><strong>Disseminate</strong>
+        <ul>
+          <li>Information system activities: portals, search engines, collaboration and social business tools</li>
+          <li>Management and organizational activities: training, collaboration</li>
+        </ul>
+      </li>
+      <li><strong>Apply</strong>
+        <ul>
+          <li>Information system activities: decision support systems, enterprise applications, robotics</li>
+          <li>Management and organizational activities: new IT-based business processes, new products and services, new markets</li>
+        </ul>
+      </li>
+    </ul>
+    <p>There is also a <strong>feedback loop</strong>. The results of applying knowledge go back to <strong>Data and Information Acquisition</strong> (collecting, storing, disseminating), so the cycle keeps repeating.</p>
+
+    <div class="divider"></div>
+
+    <h2>Organizational Roles and Responsibilities</h2>
+    <ul>
+      <li><strong>Chief knowledge officer (CKO)</strong> executives</li>
+      <li><strong>Dedicated staff / knowledge managers</strong></li>
+      <li><strong>Communities of Practice (COPs)</strong></li>
+    </ul>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Communities of Practice (COPs)</strong> are informal social networks of professionals and employees, inside and outside the firm, who have similar work-related activities and interests.</p>
+    </div>
+    <p><strong>COP activities include:</strong></p>
+    <ul>
+      <li>Education</li>
+      <li>Online newsletters</li>
+      <li>Sharing experiences and techniques</li>
+    </ul>
+    <p><strong>COPs help to:</strong></p>
+    <ul>
+      <li>Make it easier to <strong>reuse knowledge</strong> and hold discussions</li>
+      <li><strong>Reduce the learning curve</strong> of new employees</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Three Major Types of Knowledge Management Systems</h2>
+    <ol>
+      <li><strong>Enterprise-wide knowledge management systems</strong> — General-purpose, integrated, firm-wide efforts to <strong>collect, store, distribute, and apply</strong> digital content and knowledge.
+        <ul>
+          <li>Examples: enterprise content management systems, collaboration and social tools, learning management systems</li>
+        </ul>
+      </li>
+      <li><strong>Knowledge work systems (KWS)</strong> — Specialized systems built for engineers, scientists, and other knowledge workers who <strong>discover and create new knowledge</strong>.
+        <ul>
+          <li>Examples: computer-aided design (CAD), virtual reality</li>
+        </ul>
+      </li>
+      <li><strong>Intelligent techniques</strong> — A diverse group of tools (such as <strong>data mining</strong>) used for different goals: <strong>discovering knowledge, distilling knowledge, and discovering optimal solutions</strong>. They find patterns and apply knowledge to discrete decisions and knowledge domains.
+        <ul>
+          <li>Examples: data mining, neural networks, expert systems, machine learning, natural language processing, computer vision systems, robotics, genetic algorithms, intelligent agents</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Three major types of KM systems: <strong>1) Enterprise-wide KM systems, 2) Knowledge work systems (KWS), 3) Intelligent techniques</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Enterprise-Wide Knowledge Management Systems</h2>
+
+    <h3>Three Major Types of Knowledge in an Enterprise</h3>
+    <ol>
+      <li><strong>Structured documents</strong> — reports, presentations, formal rules</li>
+      <li><strong>Semi-structured documents</strong> — e-mails, videos</li>
+      <li><strong>Unstructured, tacit knowledge</strong></li>
+    </ol>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>80%</strong> of an organization's business content is <strong>semi-structured or unstructured</strong>.</p>
+    </div>
+
+    <h3>Enterprise Content Management (ECM) Systems</h3>
+    <p>ECM systems help to <strong>capture, store, retrieve, distribute, and preserve</strong>:</p>
+    <ul>
+      <li>Documents, reports, best practices</li>
+      <li><strong>Semi-structured knowledge</strong> (e.g., e-mails)</li>
+    </ul>
+    <p>They also:</p>
+    <ul>
+      <li>Bring in <strong>external sources</strong> such as news feeds and research</li>
+      <li>Provide tools for <strong>communication and collaboration</strong>, such as blogs and wikis</li>
+    </ul>
+    <p><strong>How an ECM system is organized:</strong></p>
+    <pre><code>USERS
+  ⇅
+ECM FUNCTIONS
+  1. Create / Capture
+  2. Tag
+  3. Store / Retrieve
+  4. Manage / Review
+  5. Distribute / Publish
+  ⇅
+UNIFIED REPOSITORY
+  • Reports / presentations
+  • Best practices
+  • Memos
+  • Digital slides
+  • E-mail
+  • Graphics
+  • Video
+  • News feeds
+  • Wikis, blogs
+  • Employee profiles</code></pre>
+
+    <h3>Taxonomy and Digital Asset Management</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The <strong>key problem</strong> in ECM is developing a <strong>taxonomy</strong>. Knowledge objects must be <strong>tagged with categories</strong> so they can be found later.</p>
+    </div>
+    <p><strong>Digital asset management systems</strong> are specialized content management systems for <strong>classifying, storing, and managing unstructured digital data</strong>, such as photographs, graphics, video, and audio.</p>
+
+    <h3>Locating and Sharing Expertise</h3>
+    <ul>
+      <li>Provide an <strong>online directory of corporate experts</strong> in well-defined knowledge areas.</li>
+      <li><strong>Search tools</strong> help employees find the right expert in the company.</li>
+      <li><strong>Social networking and social business tools</strong> help find knowledge outside the firm.</li>
+      <li>Saving, tagging, and sharing <strong>web pages</strong>.</li>
+    </ul>
+
+    <h3>Learning Management Systems (LMS)</h3>
+    <p>An LMS provides tools for the <strong>management, delivery, tracking, and assessment</strong> of different types of employee learning and training.</p>
+    <ul>
+      <li>Supports <strong>multiple modes of learning</strong>: CD-ROM, web-based classes, online forums, live instruction, and so on</li>
+      <li><strong>Automates</strong> the selection and administration of courses</li>
+      <li><strong>Assembles and delivers</strong> learning content</li>
+      <li><strong>Measures</strong> learning effectiveness</li>
+      <li>Includes <strong>AI tutors</strong>, <strong>adaptive learning systems</strong>, and <strong>personalized pathways</strong></li>
+    </ul>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Massive Open Online Courses (MOOCs)</strong> are web courses that are open to a large number of participants.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Knowledge Work Systems (KWS)</h2>
+    <p><strong>Knowledge work systems</strong> are systems that help knowledge workers <strong>create new knowledge</strong> and <strong>integrate that knowledge into the business</strong>.</p>
+
+    <h3>Knowledge Workers</h3>
+    <p><strong>Knowledge workers</strong> are researchers, designers, architects, scientists, and engineers who create knowledge for the organization.</p>
+    <p><strong>They have three key roles:</strong></p>
+    <ol>
+      <li>Keeping the organization <strong>current in knowledge</strong></li>
+      <li>Serving as <strong>internal consultants</strong> about their areas of expertise</li>
+      <li>Acting as <strong>change agents</strong>: evaluating, starting, and promoting change projects</li>
+    </ol>
+
+    <h3>Requirements of Knowledge Work Systems</h3>
+    <ul>
+      <li>Enough <strong>computing power</strong> for graphics and complex calculations</li>
+      <li>Powerful <strong>graphics and analytical tools</strong></li>
+      <li><strong>Communications and document management</strong></li>
+      <li>Access to <strong>external databases</strong></li>
+      <li><strong>User-friendly interfaces</strong></li>
+      <li>Optimized for the <strong>tasks to be performed</strong> (design engineering, financial analysis)</li>
+    </ul>
+    <p><strong>How the parts fit together:</strong></p>
+    <pre><code>EXTERNAL KNOWLEDGE BASE
+  ↓
+SOFTWARE
+  Graphics → Visualization
+  Modeling → Simulation
+  Document management
+  Communications
+  ⇅
+USER INTERFACE
+  ↑
+HARDWARE PLATFORM:
+KNOWLEDGE WORKSTATION</code></pre>
+
+    <h3>Examples of Knowledge Work Systems</h3>
+    <ul>
+      <li><strong>CAD (Computer-Aided Design)</strong>
+        <ul>
+          <li>Creation of engineering or architectural designs</li>
+          <li><strong>3-D printing</strong> (additive manufacturing)</li>
+        </ul>
+      </li>
+      <li><strong>Virtual reality systems</strong>
+        <ul>
+          <li>Simulate real-life environments</li>
+          <li>3-D medical modeling for surgeons</li>
+          <li><strong>Augmented reality (AR)</strong> systems</li>
+          <li><strong>VRML</strong> (Virtual Reality Modeling Language)</li>
+        </ul>
+      </li>
+      <li><strong>Investment workstations</strong>
+        <ul>
+          <li>Streamline the investment process</li>
+          <li>Bring together internal and external data for brokers, traders, and portfolio managers</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do not confuse <strong>enterprise-wide KM systems</strong> with <strong>KWS</strong>. Enterprise-wide systems are <em>general-purpose</em> for the whole firm. KWS are <em>specialized</em> for knowledge workers who <em>create</em> new knowledge.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Intelligent Techniques</h2>
+    <p>Intelligent techniques are used to <strong>capture individual and collective knowledge</strong> and to <strong>extend the knowledge base</strong>.</p>
+
+    <h3>Traditional Approach</h3>
+    <ul>
+      <li><strong>Capture tacit knowledge:</strong> expert systems, case-based reasoning, fuzzy logic</li>
+      <li><strong>Knowledge discovery:</strong> neural networks and data mining</li>
+      <li><strong>Generating solutions to complex problems:</strong> genetic algorithms</li>
+      <li><strong>Automating tasks:</strong> intelligent agents</li>
+    </ul>
+
+    <h3>Modern Approach</h3>
+    <ul>
+      <li><strong>Machine learning and deep learning</strong> (transformers, reinforcement learning)</li>
+      <li><strong>Generative AI</strong> (GPT-5, Llama, Gemini, Claude)</li>
+      <li><strong>Multimodal AI</strong> (text, image, video, speech)</li>
+      <li><strong>Retrieval-Augmented Generation (RAG)</strong></li>
+      <li><strong>Autonomous AI agents</strong> (AutoGPT, BabyAGI, CrewAI)</li>
+    </ul>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Generative AI</strong> creates new content. <strong>Multimodal AI</strong> works with many data types at once. <strong>RAG</strong> lets an AI model look up information from outside sources before it answers. <strong>Autonomous AI agents</strong> can carry out tasks on their own.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Expert Systems</h2>
+    <p><strong>Expert systems</strong> capture <strong>tacit knowledge</strong> in a very specific and limited area of human expertise.</p>
+    <ul>
+      <li>They capture the knowledge of skilled employees as a <strong>set of rules</strong> in a software system that others in the organization can use.</li>
+      <li>They usually perform <strong>limited tasks</strong> that may take a few minutes or hours. For example:
+        <ul>
+          <li>Diagnosing a malfunctioning machine</li>
+          <li>Deciding whether to grant credit for a loan</li>
+        </ul>
+      </li>
+      <li>They are used for <strong>discrete, highly structured decision making</strong>.</li>
+    </ul>
+
+    <h3>Rules in an Expert System</h3>
+    <p>An expert system contains a number of rules to be followed. The rules are <strong>interconnected</strong>. The number of outcomes is <strong>known in advance and limited</strong>. There are <strong>multiple paths to the same outcome</strong>, and the system can consider <strong>multiple rules at the same time</strong>.</p>
+    <p>The rules below are for a <strong>simple credit-granting expert system</strong>:</p>
+    <pre><code>Rule 1: IF income &gt; 50,000
+        → ask about car payments
+        ELSE → EXIT
+
+Rule 2: IF car payment &lt; 10% of income
+        → ask about mortgage payment
+        ELSE → EXIT
+
+Rule 3: IF mortgage payment &lt; 20% of income
+        → GRANT CREDIT (outcome D)
+        ELSE → EXIT
+
+Rule 4: IF D reached
+        → ask about years employed
+
+Rule 5: IF years employed &gt;= 4
+        → grant 10,000 line (F)
+        ELSE → go to Rule 6
+
+Rule 6: IF years employed &lt; 4
+        → ask about other debt
+
+Rule 7: IF other debt &lt; 5% of income
+        → do F (limit 10,000)
+        ELSE → do I (limit 3,000)</code></pre>
+
+    <h3>How Expert Systems Work</h3>
+    <ul>
+      <li><strong>Knowledge base</strong> — a set of hundreds or thousands of rules</li>
+      <li><strong>Inference engine</strong> — the strategy used to search the knowledge base</li>
+    </ul>
+    <p>There are two main strategies for the inference engine:</p>
+    <ul>
+      <li><strong>Forward chaining</strong> — The inference engine <strong>begins with the information entered by the user</strong> and searches the knowledge base to reach a conclusion.</li>
+      <li><strong>Backward chaining</strong> — The inference engine <strong>begins with a hypothesis</strong> and asks the user questions until the hypothesis is confirmed or disproved.</li>
+    </ul>
+    <div class="callout callout-red">
+      <span class="callout-label">Exam Trap</span>
+      <p>Do not mix up the two. <strong>Forward chaining</strong> starts from the <em>facts</em> and goes to a conclusion. <strong>Backward chaining</strong> starts from a <em>hypothesis</em> and checks it.</p>
+    </div>
+
+    <h3>Inference Engine Example</h3>
+    <p>An inference engine searches through the rules and <strong>"fires"</strong> the rules that are triggered by the facts gathered and entered by the user. A collection of rules is like a series of <strong>nested IF statements</strong> in a traditional software program. But in an expert system, the number of statements and the amount of nesting are much greater.</p>
+    <pre><code>INCOME RULES
+ IF income &gt; $100,000
+   → life insurance
+ IF income $50,000–$100,000
+   → term insurance
+
+REAL ESTATE RULES
+ IF real estate
+   → further contact
+
+THEN
+ IF life insurance
+   → send sales rep
+ IF term insurance
+   → send brochure
+ IF real estate &gt; $1,000,000
+   → send FinAdv
+ IF sales rep OR term ins
+    OR FinAdv
+   → search database
+
+OTHER ACCOUNTS
+ IF not on database
+   → add prospect file
+ IF FinAdv
+   → prepare sales kit</code></pre>
+    <p><em>FinAdv = financial advisor.</em></p>
+
+    <h3>Limits of Expert Systems</h3>
+    <ul>
+      <li>Most expert systems deal with problems of <strong>classification</strong>.
+        <ul>
+          <li>They have relatively <strong>few alternative outcomes</strong>.</li>
+          <li>Possible outcomes are <strong>known in advance</strong>.</li>
+        </ul>
+      </li>
+      <li>Many expert systems need <strong>large, lengthy, and expensive</strong> development and maintenance.</li>
+      <li><strong>Hiring or training more experts</strong> may be less expensive.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Case-Based Reasoning (CBR)</h2>
+    <ul>
+      <li>Descriptions of <strong>past experiences of human specialists</strong> (called <strong>cases</strong>) are stored in a knowledge base.</li>
+      <li>The system searches for cases with <strong>characteristics similar to the new one</strong> and applies the solution of the old case to the new case.</li>
+      <li><strong>Successful and unsuccessful</strong> applications are grouped with the case.</li>
+      <li>It stores <strong>organizational intelligence</strong>: the knowledge base is continuously expanded and refined by users.</li>
+      <li>CBR is found in <strong>medical diagnostic systems</strong> and <strong>customer support</strong>.</li>
+    </ul>
+    <p>CBR represents knowledge as a <strong>database of past cases and their solutions</strong>. The system uses a <strong>six-step process</strong> to generate solutions to new problems:</p>
+    <ol>
+      <li>User <strong>describes the problem</strong>.</li>
+      <li>System <strong>searches the database</strong> for similar cases.</li>
+      <li>System asks the user <strong>additional questions</strong> to narrow the search.</li>
+      <li>System finds the <strong>closest fit</strong> and retrieves the solution.</li>
+      <li>System <strong>modifies the solution</strong> to better fit the problem.</li>
+      <li>System <strong>stores the problem and the successful solution</strong> in the database.</li>
+    </ol>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>After step 5, the system checks: <strong>Successful?</strong> If <strong>NO</strong>, it goes back and modifies the solution again. If <strong>YES</strong>, it stores the problem and solution in the case database (step 6).</p>
+    </div>
+    <div class="callout callout-red">
+      <span class="callout-label">Exam Trap</span>
+      <p><strong>Expert systems</strong> use <em>rules</em>. <strong>Case-based reasoning</strong> uses <em>past cases</em>. Do not mix them up.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Fuzzy Logic Systems</h2>
+    <p><strong>Fuzzy logic</strong> is a <strong>rule-based technology</strong> that represents imprecision. It uses words like <strong>"cold"</strong> and <strong>"cool"</strong> that stand for a <strong>range of values</strong>.</p>
+    <ul>
+      <li>It describes a process in everyday language, then represents that description in a <strong>small number of flexible rules</strong>.</li>
+      <li>It solves problems that need expertise that is <strong>difficult to represent with IF-THEN rules</strong>.</li>
+      <li>Examples: <strong>autofocus in cameras</strong> and <strong>detecting possible medical fraud</strong>.</li>
+    </ul>
+
+    <h3>Fuzzy Logic for Temperature Control</h3>
+    <p>A thermostat uses <strong>membership functions</strong> for the input called <strong>temperature</strong>. The words <strong>Cold, Cool, Warm, and Hot</strong> each have a value between <strong>0 and 1</strong>. The ranges overlap, so one temperature can be partly "cool" and partly "warm" at the same time.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Membership functions</strong> translate words such as "warm" into numbers that the computer can use.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Machine Learning</h2>
+    <p><strong>Machine learning</strong> is how computer programs <strong>improve performance without explicit programming</strong>.</p>
+    <p>They learn by:</p>
+    <ul>
+      <li>Recognizing <strong>patterns</strong></li>
+      <li>Using <strong>experience</strong></li>
+      <li>Using <strong>prior learnings</strong> (a database)</li>
+    </ul>
+    <p><strong>Contemporary examples:</strong></p>
+    <ul>
+      <li>Google searches</li>
+      <li>Recommender systems on Amazon and Netflix</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Neural Networks</h2>
+    <ul>
+      <li>Find <strong>patterns and relationships</strong> in massive amounts of data that are too complicated for humans to analyze.</li>
+      <li>They <strong>"learn"</strong> patterns by searching for relationships, building models, and correcting over and over again.</li>
+      <li>Humans <strong>"train"</strong> the network by giving it data inputs for which the outputs are known. This helps the network learn the solution <strong>by example</strong>.</li>
+      <li>Used in medicine, science, and business for <strong>pattern classification, prediction, financial analysis, and control and optimization</strong>.</li>
+    </ul>
+
+    <h3>How a Neural Network Works</h3>
+    <p>A neural network uses rules it "learns" from patterns in data to build a <strong>hidden layer of logic</strong>. The hidden layer then processes inputs and classifies them based on the <strong>experience of the model</strong>.</p>
+    <p>In this example, the network is trained to tell <strong>valid</strong> and <strong>fraudulent</strong> credit card purchases apart.</p>
+    <pre><code>INPUT DATA
+ • Age
+ • Income
+ • Purchase history
+ • Frequency of purchases
+ • Average purchase size
+      ↓
+INPUT LAYER
+      ↓
+HIDDEN LAYER
+(learned logic)
+      ↓
+OUTPUT LAYER
+      ↓
+RESULT:
+ Valid purchase
+ OR Fraudulent purchase</code></pre>
+
+    <h3>"Deep Learning" Neural Networks</h3>
+    <ul>
+      <li>Deep learning networks are <strong>more complex</strong>. They have <strong>many layers</strong> of transformation of the input data to produce a target output.</li>
+      <li>Collections of neurons are called <strong>nodes or layers</strong>.</li>
+      <li>Deep learning networks are <strong>in their infancy</strong>. They are used almost only for <strong>pattern detection on unlabeled data</strong>. The system is not told what to look for. It simply <strong>discovers patterns</strong> in the data.</li>
+    </ul>
+    <p>Deep learning networks work in a <strong>hierarchical fashion</strong> (step by step, from simple to complex). The diagram shows an expanded look at <strong>Layer 1</strong>. The other layers have the same structure.</p>
+    <pre><code>Inputs
+  ↓
+LAYER 1
+ Level 1 → Feature 1: Lines
+ Level 2 → Feature 2: Circles
+ Outputs → Medium-level
+           pattern: Facial shape
+  ↓
+LAYER 2
+  ↓
+LAYER 3</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Genetic Algorithms</h2>
+    <ul>
+      <li>Useful for finding the <strong>optimal solution</strong> for a specific problem by examining a <strong>very large number of possible solutions</strong>.</li>
+      <li>Conceptually based on the <strong>process of evolution</strong>.
+        <ul>
+          <li>They search among solution variables by changing and reorganizing component parts using <strong>inheritance, mutation, and selection</strong>.</li>
+        </ul>
+      </li>
+      <li>Used in <strong>optimization problems</strong> where hundreds or thousands of variables exist, such as minimizing costs, efficient scheduling, and optimal jet engine design.</li>
+      <li>Able to <strong>evaluate many solution alternatives quickly</strong>.</li>
+    </ul>
+
+    <h3>Components of a Genetic Algorithm</h3>
+    <p>The example below shows an initial <strong>population of "chromosomes"</strong>. Each chromosome represents a <strong>different solution</strong>. The algorithm uses an <strong>iterative process</strong> (repeating again and again) to refine the solutions. This way, the better ones, those with <strong>higher fitness</strong>, are more likely to become the best solution.</p>
+    <pre><code>#  Code    Length Width  Weight     Fit
+1  110110  Long   Wide   Light      55
+2  101000  Short  Narrow Heavy      49
+3  000101  Long   Narrow Heavy      36
+4  101101  Short  Medium Light      61
+5  010101  Long   Medium Very light  74</code></pre>
+    <ul>
+      <li><strong>Population of chromosomes</strong> — the codes (e.g., 110110)</li>
+      <li><strong>Decoding of chromosomes</strong> — turning codes into features (length, width, weight)</li>
+      <li><strong>Evaluation of chromosomes</strong> — giving each a fitness score</li>
+    </ul>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Genetic algorithm processes: <strong>inheritance, mutation, and selection</strong>. In the example, chromosome 5 has the highest fitness (74).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Natural Language Processing, Computer Vision Systems, and Robotics</h2>
+    <ul>
+      <li><strong>Natural language processing (NLP)</strong> makes it possible for a computer to <strong>understand and analyze natural language</strong>.</li>
+      <li><strong>Computer vision systems</strong> deal with how computers can <strong>copy the human visual system</strong> to view and extract information from real-world images.</li>
+      <li><strong>Robotics</strong> deals with the <strong>design, construction, operation, and use of movable machines</strong> that can substitute for humans. It also covers the computer systems that control them, give sensory feedback, and process information.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Intelligent Agents</h2>
+    <p><strong>Intelligent agents</strong> work <strong>without direct human intervention</strong> to carry out specific, repetitive, and predictable tasks for a user, process, or application.</p>
+    <ul>
+      <li>Examples: <strong>deleting junk e-mail</strong> and <strong>finding the cheapest airfare</strong></li>
+      <li>They use a <strong>limited built-in or learned knowledge base</strong>.</li>
+      <li>Some can <strong>adjust themselves</strong>. For example: <strong>Siri</strong>.</li>
+    </ul>
+    <p><strong>Agent-based modeling applications:</strong></p>
+    <ul>
+      <li>Systems of <strong>autonomous agents</strong></li>
+      <li>Model the behavior of consumers, stock markets, and supply chains</li>
+      <li>Used to <strong>predict the spread of epidemics</strong></li>
+    </ul>
+
+    <h3>Example: Intelligent Agents in P&amp;G's Supply Chain Network</h3>
+    <ol>
+      <li><strong>Suppliers:</strong> Software agents schedule deliveries from suppliers. If a supplier cannot deliver on time, agents negotiate with other suppliers to create an alternative delivery schedule.</li>
+      <li><strong>Retail stores:</strong> Software agents collect real-time sales data on each P&amp;G product from many retail stores. They pass the data to P&amp;G production for replenishing orders, and to sales and marketing for trend analysis.</li>
+      <li><strong>Distributors:</strong> Software agents schedule shipments from distributors to retailers. They give priority to retailers whose inventories are low. If a shipment to a retailer is delayed, agents find an alternative trucker.</li>
+    </ol>
+    <p>Intelligent agents help P&amp;G <strong>shorten the replenishment cycles</strong> for products such as a box of Tide.</p>
+
+    <div class="divider"></div>
+
+    <h2>Hybrid AI Systems</h2>
+    <p><strong>Hybrid AI systems</strong> combine <strong>genetic algorithms, fuzzy logic, neural networks, and expert systems</strong> in a single application. This takes advantage of the best features of each.</p>
+    <div class="callout callout-green">
+      <span class="callout-label">Example</span>
+      <p>The <strong>Matsushita "neurofuzzy" washing machine</strong> combines <strong>fuzzy logic</strong> with <strong>neural networks</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Quick Comparison: Which Technique for Which Job?</h2>
+    <ul>
+      <li><strong>Expert systems</strong> — capture tacit knowledge as rules; discrete, highly structured decisions</li>
+      <li><strong>Case-based reasoning</strong> — reuse the solutions of similar past cases</li>
+      <li><strong>Fuzzy logic</strong> — handle imprecise words such as "cold" and "cool"</li>
+      <li><strong>Neural networks</strong> — find patterns in massive amounts of data</li>
+      <li><strong>Genetic algorithms</strong> — find the optimal solution among many possibilities</li>
+      <li><strong>Intelligent agents</strong> — automate repetitive, predictable tasks</li>
+      <li><strong>Hybrid AI</strong> — combine several techniques in one application</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Managing Knowledge and Artificial Intelligence',
+    subTopics: [
+      'What You Will Learn',
+      'Opening Case: Designing Drugs Virtually',
+      'The Role of Knowledge Management Systems in Business',
+      'The Knowledge Economy (2025)',
+      'Why Knowledge Gives a Firm Its Value',
+      'What Is Knowledge? How Is It Generated?',
+      'Important Dimensions of Knowledge',
+      'Knowledge Is a Firm Asset',
+      'Knowledge Has Different Forms',
+      'Knowledge Has a Location',
+      'Knowledge Is Situational',
+      'Organizational Learning',
+      'Knowledge Management Value Chain',
+      'Knowledge Acquisition',
+      'Knowledge Storage',
+      'Knowledge Dissemination',
+      'Knowledge Application',
+      'Organizational Roles and Responsibilities',
+      'Three Major Types of Knowledge Management Systems',
+      'Enterprise-Wide Knowledge Management Systems',
+      'Three Major Types of Knowledge in an Enterprise',
+      'Enterprise Content Management (ECM) Systems',
+      'Taxonomy and Digital Asset Management',
+      'Locating and Sharing Expertise',
+      'Learning Management Systems (LMS)',
+      'Knowledge Work Systems (KWS)',
+      'Knowledge Workers',
+      'Requirements of Knowledge Work Systems',
+      'Examples of Knowledge Work Systems',
+      'Intelligent Techniques (Traditional and Modern Approach)',
+      'Expert Systems',
+      'Rules in an Expert System',
+      'How Expert Systems Work',
+      'Inference Engine Example',
+      'Limits of Expert Systems',
+      'Case-Based Reasoning (CBR)',
+      'Fuzzy Logic Systems',
+      'Machine Learning',
+      'Neural Networks',
+      'Deep Learning Neural Networks',
+      'Genetic Algorithms',
+      'Natural Language Processing, Computer Vision Systems, and Robotics',
+      'Intelligent Agents',
+      'Hybrid AI Systems',
+    ],
+    definitions: [
+      { term: 'Knowledge Management (KM)', meaning: 'A set of business processes developed in an organization to create, store, transfer, and apply knowledge.' },
+      { term: 'Intangible Assets', meaning: 'Non-physical assets such as knowledge, brand, reputation, and proprietary processes that drive enterprise value.' },
+      { term: 'Tacit Knowledge', meaning: 'Human expertise and experience that is not written down.' },
+      { term: 'Explicit Knowledge', meaning: 'Knowledge that has been codified, such as documents and reports.' },
+      { term: 'AI-Generated Knowledge', meaning: 'Machine-assisted insights produced by AI systems.' },
+      { term: 'Network Effects (of Knowledge)', meaning: 'The value of knowledge increases as more people share it.' },
+      { term: 'Sticky Knowledge', meaning: 'Knowledge that is hard to move from one place to another.' },
+      { term: 'Situated Knowledge', meaning: 'Knowledge that is enmeshed in the culture of the firm.' },
+      { term: 'Contextual Knowledge', meaning: 'Knowledge that works only in certain situations; knowing the circumstances in which to use a tool.' },
+      { term: 'Conditional Knowledge', meaning: 'Knowing when to apply a procedure.' },
+      { term: 'Organizational Learning', meaning: 'The process in which organizations gain experience and adjust their behavior to reflect it.' },
+      { term: 'Knowledge Management Value Chain', meaning: 'Four stages (acquisition, storage, dissemination, application) that each add value as raw data and information become usable knowledge.' },
+      { term: 'Knowledge Acquisition', meaning: 'Documenting tacit and explicit knowledge, creating knowledge, and tracking data from TPS and external sources.' },
+      { term: 'Knowledge Storage', meaning: 'Keeping knowledge in databases and document management systems with planned indexing schemas.' },
+      { term: 'Knowledge Dissemination', meaning: 'Sharing knowledge through portals, wikis, e-mail, instant messaging, search engines, and collaboration tools.' },
+      { term: 'Knowledge Application', meaning: 'Making knowledge a systematic part of decision making to create new practices, products, services, and markets.' },
+      { term: 'Chief Knowledge Officer (CKO)', meaning: 'Senior executive responsible for the firm knowledge management program.' },
+      { term: 'Communities of Practice (COPs)', meaning: 'Informal social networks of professionals with similar work-related activities and interests, inside and outside the firm.' },
+      { term: 'Enterprise-Wide KM Systems', meaning: 'General-purpose, firm-wide systems to collect, store, distribute, and apply digital content and knowledge.' },
+      { term: 'Knowledge Work Systems (KWS)', meaning: 'Specialized systems that help knowledge workers create new knowledge and integrate it into the business.' },
+      { term: 'Knowledge Workers', meaning: 'Researchers, designers, architects, scientists, and engineers who create knowledge for the organization.' },
+      { term: 'Intelligent Techniques', meaning: 'A diverse group of tools used to discover, distill, and apply knowledge and find optimal solutions.' },
+      { term: 'Structured Documents', meaning: 'Documents such as reports, presentations, and formal rules.' },
+      { term: 'Semi-Structured Documents', meaning: 'Documents such as e-mails and videos.' },
+      { term: 'Enterprise Content Management (ECM) System', meaning: 'A system to capture, store, retrieve, distribute, and preserve documents, reports, best practices, and semi-structured knowledge.' },
+      { term: 'Taxonomy', meaning: 'A set of categories used to tag knowledge objects so they can be retrieved.' },
+      { term: 'Digital Asset Management System', meaning: 'A content management system for classifying, storing, and managing unstructured digital data such as photos, graphics, video, and audio.' },
+      { term: 'Learning Management System (LMS)', meaning: 'A system for management, delivery, tracking, and assessment of employee learning and training.' },
+      { term: 'MOOC', meaning: 'Massive Open Online Course: a web course open to large numbers of participants.' },
+      { term: 'CAD (Computer-Aided Design)', meaning: 'A knowledge work system used to create engineering or architectural designs.' },
+      { term: '3-D Printing', meaning: 'Additive manufacturing that builds objects from digital designs.' },
+      { term: 'Virtual Reality System', meaning: 'A system that simulates real-life environments, such as 3-D medical modeling for surgeons.' },
+      { term: 'Augmented Reality (AR)', meaning: 'A system that adds computer-generated information to the real-world view.' },
+      { term: 'Investment Workstation', meaning: 'A system that combines internal and external data for brokers, traders, and portfolio managers.' },
+      { term: 'Expert System', meaning: 'A system that captures the tacit knowledge of experts in a narrow domain as a set of rules.' },
+      { term: 'Knowledge Base', meaning: 'The set of hundreds or thousands of rules in an expert system.' },
+      { term: 'Inference Engine', meaning: 'The strategy used to search the knowledge base of an expert system.' },
+      { term: 'Forward Chaining', meaning: 'Inference method that starts with user-entered facts and searches the rules to reach a conclusion.' },
+      { term: 'Backward Chaining', meaning: 'Inference method that starts with a hypothesis and asks questions until it is confirmed or disproved.' },
+      { term: 'Case-Based Reasoning (CBR)', meaning: 'A system that stores past cases and solutions and reuses the solution of the most similar case for a new problem.' },
+      { term: 'Fuzzy Logic', meaning: 'Rule-based technology that represents imprecise ideas such as cold or cool as ranges of values.' },
+      { term: 'Membership Function', meaning: 'A function that turns words such as warm into numbers a computer can use.' },
+      { term: 'Machine Learning', meaning: 'Computer programs that improve performance from patterns and experience without explicit programming.' },
+      { term: 'Neural Network', meaning: 'A system that learns patterns in large data by being trained on examples with known outputs.' },
+      { term: 'Deep Learning', meaning: 'Neural networks with many layers that detect patterns, often in unlabeled data.' },
+      { term: 'Genetic Algorithm', meaning: 'An optimization method based on evolution that uses inheritance, mutation, and selection to find the best solution.' },
+      { term: 'Natural Language Processing (NLP)', meaning: 'Technology that lets computers understand and analyze natural language.' },
+      { term: 'Computer Vision System', meaning: 'A system that copies the human visual system to extract information from real-world images.' },
+      { term: 'Robotics', meaning: 'Design, construction, operation, and use of movable machines that can substitute for humans.' },
+      { term: 'Intelligent Agent', meaning: 'Software that works without direct human intervention to do specific, repetitive, predictable tasks.' },
+      { term: 'Agent-Based Modeling', meaning: 'Systems of autonomous agents used to model behavior of consumers, stock markets, supply chains, and epidemics.' },
+      { term: 'Hybrid AI System', meaning: 'A single application that combines genetic algorithms, fuzzy logic, neural networks, and expert systems.' },
+      { term: 'Generative AI', meaning: 'AI that creates new content, such as GPT-5, Llama, Gemini, and Claude.' },
+      { term: 'Multimodal AI', meaning: 'AI that works with several data types such as text, image, video, and speech.' },
+      { term: 'Retrieval-Augmented Generation (RAG)', meaning: 'A method where an AI model retrieves information from outside sources before generating an answer.' },
+      { term: 'Autonomous AI Agents', meaning: 'AI systems such as AutoGPT, BabyAGI, and CrewAI that carry out tasks on their own.' },
+    ],
+    keyPoints: [
+      'Knowledge management and collaboration platforms are among the fastest-growing investment areas.',
+      'Over 30% of global GDP comes from information and digital knowledge sectors (2025).',
+      'Knowledge is created in steps: Data → Information → Knowledge → Wisdom.',
+      'Knowledge is an intangible firm asset, and sharing it increases its value (network effects).',
+      'Three forms of knowledge: tacit, explicit, and AI-generated.',
+      'Knowledge is sticky, situated, and contextual; it is also conditional and contextual (situational).',
+      'Unique knowledge that others cannot duplicate is a prime source of profit and competitive advantage.',
+      'Organizational learning comes from data collection, measurement, experimentation, and feedback.',
+      'The KM value chain has four stages: acquisition, storage, dissemination, application.',
+      'Management must support storage systems, corporate-wide indexing schemas, and reward employees for updating documents.',
+      'Knowledge must be part of decision-support systems to give ROI.',
+      'Communities of Practice reuse knowledge and reduce the learning curve of new employees.',
+      'Three major KM system types: enterprise-wide KM systems, knowledge work systems, intelligent techniques.',
+      '80% of business content is semi-structured or unstructured.',
+      'ECM systems need a taxonomy so knowledge objects can be tagged and retrieved.',
+      'LMS manages, delivers, tracks, and assesses training; MOOCs are open to large numbers of participants.',
+      'Knowledge workers keep the firm current, act as internal consultants, and act as change agents.',
+      'KWS need computing power, graphics and analytical tools, external database access, and user-friendly interfaces.',
+      'Examples of KWS: CAD, 3-D printing, virtual reality, augmented reality, investment workstations.',
+      'Traditional intelligent techniques: expert systems, CBR, fuzzy logic (tacit knowledge); neural networks and data mining (discovery); genetic algorithms (solutions); intelligent agents (automation).',
+      'Modern intelligent techniques: machine learning, deep learning, generative AI, multimodal AI, RAG, autonomous AI agents.',
+      'Expert systems use rules for discrete, highly structured decisions with few known outcomes; they can be costly to build and maintain.',
+      'Inference engine: forward chaining starts from facts; backward chaining starts from a hypothesis.',
+      'The credit-granting and insurance examples show how expert system rules work like nested IF statements.',
+      'CBR follows six steps: describe problem, search, narrow, retrieve closest fit, modify solution, store successful solution.',
+      'Fuzzy logic handles imprecise terms (cold, cool, warm, hot) using membership functions; used in camera autofocus and medical fraud detection.',
+      'Machine learning improves with patterns and experience; examples are Google search and Amazon and Netflix recommenders.',
+      'Neural networks have input, hidden, and output layers and are trained with known outputs (e.g., valid vs fraudulent purchases).',
+      'Deep learning uses many layers to detect patterns in unlabeled data.',
+      'Genetic algorithms use inheritance, mutation, and selection, and chromosomes with higher fitness are more likely to become the best solution.',
+      'NLP understands language, computer vision interprets images, and robotics builds machines that substitute for humans.',
+      'Intelligent agents do repetitive tasks without human intervention (e.g., P&G supply chain scheduling).',
+      'Hybrid AI combines several techniques, e.g., the Matsushita neurofuzzy washing machine (fuzzy logic + neural networks).',
+    ],
+  },
+},
 
 
 
