@@ -4242,6 +4242,1315 @@ keyPoints: [
 },
 
 
+{
+  id: 9,
+  title: 'Algorithms and Sorting Techniques',
+  content: `
+    <span class="lesson-badge">LESSON 10</span>
+    <h1>Algorithms and Sorting Techniques</h1>
+    <div class="meta-info">ICT2113 <span>•</span> 25 min read</div>
+
+    <h2>Learning Objectives</h2>
+    <p>After this lesson, you should be able to:</p>
+    <ul>
+      <li><strong>Define</strong> a computer algorithm, the <strong>properties</strong> of an algorithm, and <strong>performance analysis</strong> of an algorithm.</li>
+      <li><strong>Explain</strong> time complexity and space complexity.</li>
+      <li><strong>Discuss</strong> the types of asymptotic notations such as <strong>Big Oh</strong> notation, <strong>Big Omega</strong> notation, etc.</li>
+      <li><strong>Explain</strong> sorting techniques.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>What is an Algorithm?</h2>
+    <p>An <strong>algorithm</strong> is a step-by-step procedure (a sequence of statements) to solve a problem.</p>
+    <ul>
+      <li>Algorithms are used to convert our problem solution into <strong>step-by-step statements</strong>.</li>
+      <li>These statements can be converted into computer programming instructions, which form a <strong>program</strong>.</li>
+      <li>This program is <strong>executed by the computer</strong> to produce the solution.</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A program takes the required data as <strong>input</strong>, processes the data according to the program instructions, and finally produces the <strong>result (output)</strong>.</p>
+    </div>
+
+    <h3>From Problem to Output</h3>
+    <pre><code>Problem
+   ↓
+Algorithm
+   ↓
+Input → [ Program ] → Output</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Properties of an Algorithm</h2>
+    <p>An algorithm must satisfy the following <strong>5 properties</strong>:</p>
+    <ol>
+      <li><strong>Input</strong> — There should be <strong>0 or more</strong> inputs supplied externally to the algorithm.</li>
+      <li><strong>Output</strong> — There should be <strong>at least 1</strong> output obtained.</li>
+      <li><strong>Definiteness</strong> — Every step of the algorithm should be clear and well defined.</li>
+      <li><strong>Finiteness</strong> — The algorithm should have a finite (limited) number of steps.</li>
+      <li><strong>Correctness</strong> — Every step of the algorithm must generate a correct output.</li>
+    </ol>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Properties of an algorithm: <strong>Input, Output, Definiteness, Finiteness, Correctness</strong>.</p>
+    </div>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Exam trap: an algorithm can have <strong>0 or more</strong> inputs, but it must have <strong>at least 1</strong> output.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Performance Analysis of an Algorithm</h2>
+    <p>Sometimes we have more than one algorithm to solve a problem. We then need to select the <strong>best</strong> one. <strong>Performance analysis</strong> helps us select the best algorithm from multiple algorithms.</p>
+
+    <h3>Performance depends on:</h3>
+    <ol>
+      <li>Whether the algorithm gives the <strong>exact solution</strong> for the problem.</li>
+      <li>Whether it is <strong>easy to understand</strong>.</li>
+      <li>Whether it is <strong>easy to implement</strong>.</li>
+      <li>How much <strong>space (memory)</strong> it needs to solve the problem.</li>
+      <li>How much <strong>time</strong> it takes to solve the problem. (and so on)</li>
+    </ol>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Performance analysis</strong> is the process of calculating the <strong>space</strong> required by an algorithm and the <strong>time</strong> required by that algorithm.</p>
+    </div>
+
+    <h3>Two measures used for performance analysis</h3>
+    <ul>
+      <li><strong>Space Complexity</strong> — the space required to complete the task of the algorithm. It includes <strong>program space</strong> and <strong>data space</strong>.</li>
+      <li><strong>Time Complexity</strong> — the time required to complete the task of the algorithm.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Space Complexity</h2>
+    <p>When we design an algorithm to solve a problem, it needs some computer memory to complete its execution.</p>
+
+    <h3>Memory is needed for:</h3>
+    <ol>
+      <li>Storing <strong>program instructions</strong></li>
+      <li>Storing <strong>constant values</strong></li>
+      <li>Storing <strong>variable values</strong></li>
+      <li>A few other things</li>
+    </ol>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Space complexity</strong> = the total amount of computer memory required by an algorithm to complete its execution.</p>
+    </div>
+
+    <h3>Memory size of data types</h3>
+    <p>To calculate space complexity, you must know how much memory is needed to store different data types (this depends on the compiler). For example, a <strong>C language compiler</strong> needs:</p>
+    <ul>
+      <li><strong>2 bytes</strong> to store an Integer value</li>
+      <li><strong>4 bytes</strong> to store a Floating Point value</li>
+      <li><strong>1 byte</strong> to store a Character value</li>
+      <li><strong>6 (or) 8 bytes</strong> to store a double value</li>
+    </ul>
+
+    <h3>Example</h3>
+    <pre><code>int cal (int b)
+{
+    return b*b;
+}</code></pre>
+    <ul>
+      <li>2 bytes are needed to store the variable <code>b</code>.</li>
+      <li>Another 2 bytes are used for the return value.</li>
+      <li>In total, <strong>4 bytes</strong> of memory are needed to complete the execution.</li>
+      <li>These 4 bytes are <strong>fixed</strong> for any input value of <code>b</code>.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>When the memory needed stays fixed for any input, it is called <strong>Constant Space Complexity</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Time Complexity</h2>
+    <p>Every algorithm needs some amount of computer time to execute its instructions and perform its task. This computer time is called <strong>time complexity</strong>.</p>
+
+    <h3>Running time depends on:</h3>
+    <ol>
+      <li>Whether it runs on a <strong>single processor</strong> machine or a <strong>multi processor</strong> machine.</li>
+      <li>Whether it is a <strong>32 bit</strong> machine or a <strong>64 bit</strong> machine.</li>
+      <li>The <strong>read and write speed</strong> of the machine.</li>
+      <li>The time taken to perform arithmetic operations, logical operations, return value and assignment operations, etc.</li>
+      <li>The <strong>input data</strong>.</li>
+    </ol>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>If a program needs a <strong>fixed amount of time</strong> for all input values, its time complexity is called <strong>Constant Time Complexity</strong>.</p>
+    </div>
+
+    <h3>Why time complexity matters</h3>
+    <ul>
+      <li>A good software engineer considers time complexity when planning a program.</li>
+      <li>From the start, the engineer should think about the scenario that would need the <strong>most time</strong> to complete (if any).</li>
+      <li>Time complexity is most commonly estimated by <strong>counting the number of elementary steps</strong> the algorithm performs to finish execution.</li>
+      <li>For example, if a loop runs <code>n</code> times, the time complexity is at least <code>n</code>. When <code>n</code> increases, the time taken also increases.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The performance of an algorithm may change with different input data. So we usually use the <strong>worst-case time complexity</strong>, because it is the <strong>maximum time</strong> taken for any input size.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Asymptotic Notations</h2>
+    <p>When we analyze the complexity of an algorithm (time and space), we can never give an <strong>exact number</strong> for the time or space required. Instead, we express it using standard notations called <strong>Asymptotic Notations</strong>.</p>
+    <p>In asymptotic notation, we use only the <strong>most significant terms</strong> of the complexity and <strong>ignore the least significant terms</strong>. (The complexity can be Space Complexity or Time Complexity.)</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Asymptotic</strong> — An asymptotic line is a line that gets closer and closer to a curve as the distance gets closer to <strong>infinity</strong>.</p>
+    </div>
+
+    <h3>Example</h3>
+    <p>Consider the time complexities of two algorithms:</p>
+    <pre><code>Algorithm 1 : 5n² + 2n + 1
+Algorithm 2 : 10n² + 8n + 3</code></pre>
+    <ul>
+      <li>For a <strong>large value of n</strong>, the most significant terms (<code>5n²</code> and <code>10n²</code>) are much larger than the least significant terms (<code>2n + 1</code> and <code>8n + 3</code>).</li>
+      <li>So for large <code>n</code>, we <strong>ignore the least significant terms</strong> to represent the overall time needed by the algorithm.</li>
+      <li>In asymptotic notation, we use <strong>only the most significant terms</strong> to represent time complexity.</li>
+    </ul>
+
+    <h3>Types of Asymptotic Notations</h3>
+    <ol>
+      <li><strong>Big - Oh</strong> (O)</li>
+      <li><strong>Big - Omega</strong> (Ω)</li>
+      <li><strong>Big - Theta</strong> (Θ)</li>
+    </ol>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>This lecture mainly explains <strong>Big-Oh</strong>. For quick reference (standard meaning): Big-Omega (Ω) gives a <strong>lower bound</strong>, and Big-Theta (Θ) gives a <strong>tight bound</strong> (both upper and lower).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Big - Oh Notation (O)</h2>
+    <p>Big-Oh notation is used to define the <strong>upper bound</strong> of an algorithm in terms of Time Complexity.</p>
+    <p>It always shows the <strong>maximum time</strong> required by an algorithm for all input values. That means Big-Oh describes the <strong>worst case</strong> of an algorithm's time complexity.</p>
+
+    <h3>Formal definition</h3>
+    <p>Let <code>f(n)</code> be the time complexity of an algorithm and <code>g(n)</code> be its most significant term. If</p>
+    <pre><code>f(n) &lt;= C × g(n)   for all n &gt;= n0,  where C &gt; 0 and n0 &gt;= 1</code></pre>
+    <p>then we can write:</p>
+    <pre><code>f(n) = O(g(n))</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Big Oh</strong> is used to describe the effect of the <strong>input size</strong> on an algorithm's performance (running time or memory usage). It gives the <strong>upper bound / worst case</strong>.</p>
+    </div>
+
+    <p>It is generally written as <code>O(f(x1, x2, ..., xn))</code>.</p>
+
+    <h3>Common Big O Values</h3>
+    <pre><code>Big O        Name
+O(1)         Constant
+O(log n)     Logarithmic
+O(n)         Linear
+O(n²)        Quadratic
+O(n³)        Cubic
+O(2ⁿ)        Exponential</code></pre>
+
+    <h3>Polynomial time algorithms</h3>
+    <ul>
+      <li><strong>O(1)</strong> — <strong>Constant time</strong>: the time does not change when the size of the problem changes.</li>
+      <li><strong>O(n)</strong> — <strong>Linear time</strong>: the time grows linearly with the size (n) of the problem.</li>
+      <li><strong>O(n²)</strong> — <strong>Quadratic time</strong>: the time grows quadratically with the size (n) of the problem.</li>
+    </ul>
+    <p>In Big O notation, all polynomials with the <strong>same degree</strong> are equivalent. For example:</p>
+    <pre><code>O(3n² + 3n + 7) = O(n²)</code></pre>
+
+    <h3>Sub-linear time algorithms</h3>
+    <ul>
+      <li><strong>O(log n)</strong> — <strong>Logarithmic time</strong></li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Common mistake: keeping all the terms. Always keep only the <strong>most significant term</strong> and drop constants. Write <code>O(n²)</code>, not <code>O(3n² + 3n + 7)</code>.</p>
+    </div>
+
+    <h3>Big O of Common Array Operations</h3>
+    <pre><code>Algorithm                       Running Time (Big O)
+Linear Search                   O(N)
+Binary Search                   O(log N)
+Insertion in unordered array    O(1)
+Insertion in ordered array      O(N)
+Deletion in unordered array     O(N)
+Deletion in ordered array       O(N)</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Big O Examples</h2>
+
+    <h3>O(n) — Linear Time</h3>
+    <p>O(n) means the algorithm has <strong>linear complexity</strong>. In other words, it takes <strong>10 times longer</strong> to work on 100 items than on 10 items.</p>
+    <pre><code>void printAllElementOfArray(int arr[], int size)
+{
+    for (int i = 0; i &lt; size; i++)
+    {
+        printf("%d\\n", arr[i]);
+    }
+}</code></pre>
+    <p>This function runs in <strong>O(n) time</strong> (linear time), where <code>n</code> is the number of items in the array. If the array has 10 items, we print 10 times. If it has 1000 items, we print 1000 times.</p>
+
+    <h3>O(1) — Constant Time</h3>
+    <pre><code>void printFirstElementOfArray(int arr[])
+{
+    printf("First element of array = %d", arr[0]);
+}</code></pre>
+    <p>This function runs in <strong>O(1) time</strong> (constant time) relative to its input. The array could have 1 item or 1,000 items, but the function still needs <strong>just one step</strong>.</p>
+
+    <h3>O(n²) — Quadratic Time</h3>
+    <p>If the complexity is O(n²) (quadratic complexity), it takes <strong>100 times longer</strong> to work on 100 items than on 10 items.</p>
+    <pre><code>void printAllPossibleOrderedPairs(int arr[], int size)
+{
+    for (int i = 0; i &lt; size; i++)
+    {
+        for (int j = 0; j &lt; size; j++)
+        {
+            printf("%d = %d\\n", arr[i], arr[j]);
+        }
+    }
+}</code></pre>
+    <p>Here we <strong>nest two loops</strong>. If the array has <code>n</code> items, the outer loop runs <code>n</code> times, and the inner loop runs <code>n</code> times for each round of the outer loop. This gives <strong>n² total prints</strong>, so the function runs in <strong>O(n²) time</strong> (quadratic time).</p>
+    <ul>
+      <li>If the array has 10 items, we print <strong>100</strong> times.</li>
+      <li>If it has 1000 items, we print <strong>1,000,000</strong> times.</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>In the lecture slide, the loops used fixed numbers (5 and 4). For the code to be truly O(n²), both loops must depend on <code>n</code> (here, <code>size</code>), as shown above.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Algorithm Analysis</h2>
+    <p>Algorithm analysis tries to answer these questions:</p>
+    <ul>
+      <li>How do we <strong>predict</strong> an algorithm's performance?</li>
+      <li>How well does an algorithm <strong>scale up</strong> (when the input gets bigger)?</li>
+      <li>How do we <strong>compare</strong> different algorithms for a problem?</li>
+    </ul>
+
+    <h3>Example: The Selection Problem</h3>
+    <p>Given a list of <code>N</code> numbers, find the <strong>k<sup>th</sup> largest</strong> number, where <code>k ≤ N</code>.</p>
+
+    <p><strong>Algorithm 1:</strong></p>
+    <ol>
+      <li>Read <code>N</code> numbers into an array.</li>
+      <li>Sort the array in <strong>decreasing order</strong> using some simple algorithm.</li>
+      <li>Return the element in position <code>k</code>.</li>
+    </ol>
+
+    <p><strong>Algorithm 2:</strong></p>
+    <ol>
+      <li>Read the <strong>first k elements</strong> into an array and sort them in decreasing order.</li>
+      <li>Read each remaining element one by one:
+        <ul>
+          <li>If it is <strong>smaller</strong> than the k<sup>th</sup> element, ignore it.</li>
+          <li>Otherwise, place it in its <strong>correct spot</strong> in the array, bumping one element out of the array.</li>
+        </ul>
+      </li>
+      <li>The element in the k<sup>th</sup> position is returned as the answer.</li>
+    </ol>
+
+    <h3>Which algorithm is better?</h3>
+    <ul>
+      <li>When <code>N = 100</code> and <code>k = 100</code>?</li>
+      <li>When <code>N = 100</code> and <code>k = 1</code>?</li>
+      <li>What happens when <code>N = 1,000,000</code> and <code>k = 500,000</code>?</li>
+    </ul>
+    <p>There also exist <strong>better algorithms</strong> for this problem.</p>
+
+    <h3>Relations between Problems, Algorithms, and Programs</h3>
+    <p>One <strong>problem</strong> can have many <strong>algorithms</strong>. Each algorithm can be written as many different <strong>programs</strong>.</p>
+    <pre><code>              Problem
+             /       \\
+     Algorithm       Algorithm   ....
+      /  |  \\         /  |  \\
+ Program Program  Program Program ....</code></pre>
+
+    <h3>Only analyze correct algorithms</h3>
+    <p>An algorithm is <strong>correct</strong> if, for every input instance, it <strong>halts</strong> (stops) with the <strong>correct output</strong>.</p>
+    <p><strong>Incorrect algorithms</strong>:</p>
+    <ul>
+      <li>might <strong>not halt at all</strong> on some input instances, or</li>
+      <li>might halt with an answer <strong>other than the desired answer</strong>.</li>
+    </ul>
+
+    <h3>What does analyzing mean?</h3>
+    <p><strong>Analyzing an algorithm</strong> means predicting the <strong>resources</strong> that the algorithm requires. Resources include:</p>
+    <ul>
+      <li><strong>Memory</strong></li>
+      <li><strong>Communication bandwidth</strong></li>
+      <li><strong>Computational time</strong> (usually the most important)</li>
+    </ul>
+
+    <h3>Factors affecting the running time</h3>
+    <ul>
+      <li>The <strong>computer</strong></li>
+      <li>The <strong>compiler</strong></li>
+      <li>The <strong>algorithm</strong> used</li>
+      <li>The <strong>input</strong> to the algorithm</li>
+    </ul>
+    <p>The content of the input affects the running time. Typically, the <strong>input size</strong> (number of items in the input) is the main thing we consider.</p>
+    <ul>
+      <li>Sorting problem → the <strong>number of items</strong> to be sorted.</li>
+      <li>Multiplying two matrices → the <strong>total number of elements</strong> in the two matrices.</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Machine model assumed:</strong> instructions are executed one after another, with <strong>no concurrent operations</strong>. That means we do <strong>not</strong> assume parallel computers.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Counting Steps: A Worked Example</h2>
+    <p>Calculate the sum of cubes: 1³ + 2³ + ... + N³</p>
+    <pre><code>int sum(int n)
+{
+    int partialSum;
+
+1:  partialSum = 0;                      // cost: 1
+2:  for (int i = 1; i &lt;= n; i++)         // cost: 2N + 2
+3:      partialSum += i*i*i;             // cost: 4N
+4:  return partialSum;                   // cost: 1
+}</code></pre>
+
+    <ul>
+      <li><strong>Lines 1 and 4</strong> count for one unit each.</li>
+      <li><strong>Line 3</strong> is executed N times, each time costing four units → <strong>4N</strong>.</li>
+      <li><strong>Line 2</strong>: 1 for initialization + (N + 1) for all the tests + N for all the increments → total <strong>2N + 2</strong>.</li>
+    </ul>
+    <pre><code>Total cost = 1 + (2N + 2) + 4N + 1
+           = 6N + 4
+           ⇒ O(N)</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Total cost <code>6N + 4</code> is written as <strong>O(N)</strong>, because we keep only the most significant term and drop the constants.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Worst-, Average- and Best-Case</h2>
+
+    <h3>Worst-case running time</h3>
+    <ul>
+      <li>The <strong>longest</strong> running time for any input of size <code>n</code>.</li>
+      <li>An <strong>upper bound</strong> on the running time for any input.</li>
+      <li>It <strong>guarantees</strong> that the algorithm will never take longer.</li>
+      <li>Example: sort a set of numbers in <strong>increasing</strong> order, but the data is in <strong>decreasing</strong> order.</li>
+      <li>The worst case can occur fairly often. For example, when searching a database for a particular piece of information.</li>
+    </ul>
+
+    <h3>Best-case running time</h3>
+    <ul>
+      <li>Example: sort a set of numbers in increasing order, and the data is <strong>already in increasing order</strong>.</li>
+    </ul>
+
+    <h3>Average-case running time</h3>
+    <ul>
+      <li>It may be <strong>difficult to define</strong> what "average" means.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Worst case</strong> = longest time (upper bound, guarantee). <strong>Best case</strong> = shortest time (data already in the right order). <strong>Average case</strong> = hard to define.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>How to Measure Algorithm Performance?</h2>
+    <p>What metric should we use to judge algorithms?</p>
+    <ul>
+      <li><strong>Length</strong> of the program (lines of code)</li>
+      <li><strong>Ease of programming</strong> (bugs, maintenance)</li>
+      <li><strong>Memory</strong> required</li>
+      <li><strong>Running time</strong></li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Running time</strong> is the dominant (main) standard, because it is <strong>quantifiable</strong> and <strong>easy to compare</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Analyzing an Algorithm</h2>
+
+    <h3>1. Simple statement sequence</h3>
+    <pre><code>s1; s2; ...; sk</code></pre>
+    <ul>
+      <li>Time complexity is <strong>O(1)</strong>.</li>
+      <li>Example: accessing any single element in an array takes <strong>constant time</strong>, because only one operation has to be performed.</li>
+    </ul>
+
+    <h3>2. Simple loops</h3>
+    <pre><code>for (i = 0; i &lt; n; i++)
+{
+    s;      // s is O(1)
+}</code></pre>
+    <p>Time complexity is <strong>O(n)</strong>.</p>
+
+    <h3>3. Nested loops</h3>
+    <pre><code>for (i = 0; i &lt; n; i++)
+    for (j = 0; j &lt; n; j++)
+    {
+        s;
+    }</code></pre>
+    <p>Complexity is n × O(n), which is <strong>O(n²)</strong>.</p>
+
+    <h3>4. Inner loop index depends on the outer loop index</h3>
+    <pre><code>for (j = 0; j &lt; n; j++)
+    for (k = 0; k &lt; j; k++)
+    {
+        s;
+    }</code></pre>
+    <p>Complexity is also <strong>O(n²)</strong>.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Single statements → <strong>O(1)</strong>. One loop → <strong>O(n)</strong>. Two nested loops → <strong>O(n²)</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Sorting Techniques</h2>
+    <ul>
+      <li><strong>Sorting</strong> means arranging data in a particular format.</li>
+      <li>A <strong>sorting algorithm</strong> specifies the way to arrange data in a particular order.</li>
+      <li>The most common orders are <strong>numerical</strong> order and <strong>lexicographical</strong> (dictionary) order.</li>
+      <li>Sorting is important because <strong>searching</strong> can be optimized to a very high level if the data is stored in a <strong>sorted</strong> manner.</li>
+      <li>Sorting is also used to show data in <strong>more readable formats</strong>.</li>
+    </ul>
+
+    <h3>Techniques listed in this lecture</h3>
+    <ul>
+      <li><strong>Bubble sort</strong></li>
+      <li><strong>Insertion sort</strong></li>
+      <li><strong>Selection sort</strong></li>
+      <li>Recursive algorithms</li>
+      <li>Towers of Hanoi</li>
+      <li><strong>Merge sort</strong></li>
+      <li><strong>Quick sort</strong></li>
+      <li>...and many more</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Bubble Sort</h2>
+    <ul>
+      <li><strong>Bubble sort</strong> is a simple sorting algorithm that works by <strong>repeatedly stepping through the list</strong> to be sorted.</li>
+      <li>It starts by <strong>comparing the first two elements</strong> of an array and <strong>swapping if necessary</strong>.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>To sort in <strong>ascending order</strong>: if the first element is <strong>greater</strong> than the second, <strong>swap</strong> them. If the first element is <strong>smaller</strong>, do <strong>not</strong> swap.</p>
+    </div>
+
+    <h3>Example 1</h3>
+    <p>Sort <code>5 1 4 2 8</code> in ascending order.</p>
+
+    <p><strong>First Pass:</strong></p>
+    <pre><code>( 5 1 4 2 8 ) → ( 1 5 4 2 8 )   compare first two, swap since 5 &gt; 1
+( 1 5 4 2 8 ) → ( 1 4 5 2 8 )   swap since 5 &gt; 4
+( 1 4 5 2 8 ) → ( 1 4 2 5 8 )   swap since 5 &gt; 2
+( 1 4 2 5 8 ) → ( 1 4 2 5 8 )   already in order (8 &gt; 5), no swap</code></pre>
+
+    <p><strong>Second Pass:</strong></p>
+    <pre><code>( 1 4 2 5 8 ) → ( 1 4 2 5 8 )
+( 1 4 2 5 8 ) → ( 1 2 4 5 8 )   swap since 4 &gt; 2
+( 1 2 4 5 8 ) → ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) → ( 1 2 4 5 8 )</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>After the second pass the array is already sorted, but the algorithm does not know that. It needs <strong>one whole pass without any swap</strong> to know the list is sorted.</p>
+    </div>
+
+    <h3>Example 2 (with negative numbers)</h3>
+    <p>Bubble sort repeats passes through the list <strong>until no swaps are needed</strong>. Sort <code>-2 45 0 11 -9</code>:</p>
+    <pre><code>Step 1 (first pass)
+-2 45  0 11 -9   compare -2, 45: no swap
+-2 45  0 11 -9   compare 45, 0: swap
+-2  0 45 11 -9   compare 45, 11: swap
+-2  0 11 45 -9   compare 45, -9: swap
+-2  0 11 -9 45   (largest value 45 is now at the end)
+
+Step 2
+-2  0 11 -9 45   compare -2, 0: no swap
+-2  0 11 -9 45   compare 0, 11: no swap
+-2  0 11 -9 45   compare 11, -9: swap
+-2  0 -9 11 45
+
+Step 3
+-2  0 -9 11 45   compare -2, 0: no swap
+-2  0 -9 11 45   compare 0, -9: swap
+-2 -9  0 11 45
+
+Step 4
+-2 -9  0 11 45   compare -2, -9: swap
+-9 -2  0 11 45   Sorted!</code></pre>
+    <p>Source of figure: https://www.programiz.com/dsa/bubble-sort</p>
+
+    <h3>Bubble Sort Algorithm</h3>
+    <pre><code>Step 1: Repeat Steps 2 and 3 for i = 1 to 10
+Step 2: Set j = 1
+Step 3: Repeat while j &lt;= n
+        (A) if a[i] &lt; a[j]
+            Then interchange a[i] and a[j]
+            [End of if]
+        (B) Set j = j + 1
+        [End of Inner Loop]
+[End of Step 1 Outer Loop]
+Step 4: Exit</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The steps above are the lecture's algorithm outline. The C program below uses the common method of comparing <strong>neighbouring elements</strong>, which matches the passes you saw in the examples.</p>
+    </div>
+
+    <h3>Bubble Sort in C</h3>
+    <pre><code>#include&lt;stdio.h&gt;
+void main()
+{
+    int i, n, temp, j, arr[25];
+    printf("Enter the number of elements in the Array: ");
+    scanf("%d", &amp;n);
+    printf("\\nEnter the elements:\\n\\n");
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(" Array[%d] = ", i);
+        scanf("%d", &amp;arr[i]);
+    }
+
+    for (i = 0; i &lt; n - 1; i++)
+    {
+        for (j = 0; j &lt; n - i - 1; j++)
+        {
+            if (arr[j] &gt; arr[j+1])   // Swapping condition is checked
+            {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+
+    printf("\\nThe Sorted Array is:\\n\\n");
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(" %d", arr[i]);
+    }
+}</code></pre>
+
+    <h3>Time Complexity of Bubble Sort</h3>
+    <pre><code>For 6 elements, comparisons/swaps in worst case:
+5 + 4 + 3 + 2 + 1
+
+For N elements:
+N × (N + 1) / 2 ≈ N²
+
+Complexity: O(N²)</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Bubble sort</strong> time complexity = <strong>O(N²)</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Insertion Sort</h2>
+    <ul>
+      <li>In <strong>insertion sort</strong>, we sort an unsorted array by <strong>inserting its elements into the proper positions</strong> in a sorted part of the array.</li>
+      <li>The <strong>lower part</strong> of the array is always kept sorted.</li>
+      <li>A new element that is to be inserted into this <strong>sorted sub-list</strong> has to find its appropriate place, and then it is inserted there. Hence the name <strong>insertion sort</strong>.</li>
+    </ul>
+
+    <h3>Example 1</h3>
+    <p>Sort <code>9 7 6 15 16 5 10 11</code>:</p>
+    <pre><code>Start:       9  7  6 15 16  5 10 11
+Insert 7:    7  9  6 15 16  5 10 11
+Insert 6:    6  7  9 15 16  5 10 11
+Insert 15:   6  7  9 15 16  5 10 11   (already in place)
+Insert 16:   6  7  9 15 16  5 10 11   (already in place)
+Insert 5:    5  6  7  9 15 16 10 11
+Insert 10:   5  6  7  9 10 15 16 11
+Insert 11:   5  6  7  9 10 11 15 16   Sorted!</code></pre>
+
+    <h3>Example 2</h3>
+    <p>Sort <code>12 3 1 5 8</code> in ascending order:</p>
+    <ul>
+      <li><strong>Step 1:</strong> Check the 2nd element with the element before it, and insert it in the proper position. Here, 3 is inserted in the position of 12.</li>
+      <li><strong>Step 2:</strong> Check the 3rd element with the elements before it. Here, 1 is inserted in the position of 3.</li>
+      <li><strong>Step 3:</strong> Check the 4th element with the elements before it. Here, 5 is inserted in the position of 12.</li>
+      <li><strong>Step 4:</strong> Check the 5th element with the elements before it. Here, 8 is inserted in the position of 12.</li>
+    </ul>
+    <pre><code>Start:    12  3  1  5  8
+Step 1:    3 12  1  5  8
+Step 2:    1  3 12  5  8
+Step 3:    1  3  5 12  8
+Step 4:    1  3  5  8 12   Sorted array in ascending order</code></pre>
+
+    <h3>Algorithm / Pseudo-Code</h3>
+    <pre><code>for i ← 1 to length(A) - 1
+{
+    // The values in A[i] are checked in order, starting at the second one
+    // Save A[i] to make a hole that will move as elements are shifted
+    // The value being checked will be inserted into the hole's final position
+    valueToInsert ← A[i]
+    holePos ← i
+
+    // Keep moving the hole down until the value being checked is larger
+    // than what is just below the hole
+    // (until A[holePos - 1] is &lt;= item)
+    while holePos &gt; 0 and valueToInsert &lt; A[holePos - 1]
+    {
+        // value to insert does not belong where the hole currently is, so shift
+        A[holePos] ← A[holePos - 1]   // shift the larger value up
+        holePos ← holePos - 1         // move the hole position down
+    }
+
+    // Hole is in the right position, so put the value being checked into the hole
+    A[holePos] ← valueToInsert
+}</code></pre>
+
+    <h3>Insertion Sort in C</h3>
+    <pre><code>#include&lt;stdio.h&gt;
+void main()
+{
+    int arr[20], i, n, j, k;
+    printf("\\nEnter the number of elements in the array: ");
+    scanf("%d", &amp;n);
+    printf("\\nEnter the elements of the array");
+    for (i = 0; i &lt; n; i++)
+    {
+        printf("\\n arr[%d] = ", i);
+        scanf("%d", &amp;arr[i]);
+    }
+
+    int temp;
+    for (k = 1; k &lt; n; k++)
+    {
+        temp = arr[k];
+        j = k - 1;
+        while ((j &gt;= 0) &amp;&amp; (temp &lt; arr[j]))
+        {
+            arr[j+1] = arr[j];
+            j--;
+        }
+        arr[j+1] = temp;
+    }
+
+    printf("\\nThe sorted array is: \\n");
+    for (i = 0; i &lt; n; i++)
+        printf("%d\\t", arr[i]);
+}</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>In the <code>while</code> condition, check <code>j &gt;= 0</code> <strong>first</strong>. This way the program never reads <code>arr[-1]</code> (outside the array).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Selection Sort</h2>
+    <p><strong>Selection sort</strong> is one of many sorting techniques available. The idea: find the <strong>smallest number</strong> in the unsorted part and <strong>exchange (swap)</strong> it with the element in the next position (<code>Data[0]</code>, then <code>Data[1]</code>, and so on).</p>
+
+    <h3>Example</h3>
+    <p>Data (index 0 to 5): <code>56 42 5 87 34 23</code></p>
+    <pre><code>Index:     0   1   2   3   4   5
+Start:    56  42   5  87  34  23
+
+Step 1: smallest is 5, exchange with Data[0]
+          [5] 42  56  87  34  23
+
+Step 2: smallest in the rest is 23, exchange with Data[1]
+           5 [23] 56  87  34  42
+
+Step 3: smallest in the rest is 34, exchange with Data[2]
+           5  23 [34] 87  56  42
+
+Step 4: smallest in the rest is 42, exchange with Data[3]
+           5  23  34 [42] 56  87
+
+Step 5: smallest in the rest is 56, already at Data[4]
+           5  23  34  42 [56] 87
+
+Sorted:    5  23  34  42  56  87</code></pre>
+
+    <h3>Time Complexity of Selection Sort</h3>
+    <pre><code>For 6 elements:
+No. of swaps       = 5
+No. of comparisons = 5 + 4 + 3 + 2 + 1
+
+For N elements:
+N × (N + 1) / 2 ≈ N²
+
+Complexity: O(N²)</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Selection sort</strong> is <strong>O(N²)</strong>. However, it is <strong>faster than bubble sort</strong> because the number of swaps is smaller.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Can We Do Better Than n²?</h2>
+    <p><strong>Sure we can!</strong></p>
+    <ul>
+      <li><strong>Selection, insertion and bubble sorts</strong> are all proportional to <strong>n²</strong>.</li>
+      <li>Other sorts, such as <strong>Merge sort</strong> and <strong>Quick sort</strong>, are proportional to <strong>n log n</strong>.</li>
+    </ul>
+    <p><code>log n</code> is considerably smaller than <code>n</code>, especially as <code>n</code> gets larger.</p>
+    <p>As the size of our problem grows, the time to run an <strong>n²</strong> sort will grow <strong>much faster</strong> than an <strong>n log n</strong> one.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Bubble, Insertion, Selection → <strong>O(n²)</strong>. Merge sort, Quick sort → <strong>O(n log n)</strong> (faster for large n).</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Algorithms, Complexity Analysis, Asymptotic Notations and Sorting Techniques',
+    subTopics: [
+      'Learning Objectives',
+      'What is an Algorithm?',
+      'Properties of an Algorithm',
+      'Performance Analysis of an Algorithm',
+      'Space Complexity',
+      'Time Complexity',
+      'Asymptotic Notations',
+      'Types of Asymptotic Notations',
+      'Big - Oh Notation (O)',
+      'Common Big O Values',
+      'Big O of Common Array Operations',
+      'Big O Examples (O(n), O(1), O(n²))',
+      'Algorithm Analysis',
+      'Example: The Selection Problem',
+      'Problems, Algorithms and Programs',
+      'Factors Affecting Running Time',
+      'Counting Steps: A Worked Example',
+      'Worst-, Average- and Best-Case',
+      'How to Measure Algorithm Performance',
+      'Analyzing an Algorithm (Loops and Statements)',
+      'Sorting Techniques',
+      'Bubble Sort',
+      'Insertion Sort',
+      'Selection Sort',
+      'Can We Do Better Than n²?',
+    ],
+    definitions: [
+      { term: 'Algorithm', meaning: 'A step-by-step procedure (sequence of statements) to solve a problem.' },
+      { term: 'Program', meaning: 'Algorithm statements converted into computer programming instructions, executed by a computer to produce a solution.' },
+      { term: 'Input (property)', meaning: 'An algorithm should have 0 or more inputs supplied externally.' },
+      { term: 'Output (property)', meaning: 'An algorithm should produce at least 1 output.' },
+      { term: 'Definiteness', meaning: 'Every step of the algorithm should be clear and well defined.' },
+      { term: 'Finiteness', meaning: 'The algorithm should have a finite number of steps.' },
+      { term: 'Correctness', meaning: 'Every step of the algorithm must generate a correct output.' },
+      { term: 'Performance Analysis', meaning: 'The process of calculating the space and time required by an algorithm, used to select the best algorithm.' },
+      { term: 'Space Complexity', meaning: 'The total amount of computer memory required by an algorithm to complete its execution (program space and data space).' },
+      { term: 'Constant Space Complexity', meaning: 'When the memory needed is fixed for any input value.' },
+      { term: 'Time Complexity', meaning: 'The amount of computer time an algorithm needs to execute its instructions; usually estimated by counting elementary steps.' },
+      { term: 'Constant Time Complexity', meaning: 'When a program needs a fixed amount of time for all input values.' },
+      { term: 'Asymptotic Notation', meaning: 'A standard notation to express time or space complexity using only the most significant terms and ignoring the least significant terms.' },
+      { term: 'Asymptotic line', meaning: 'A line that gets closer and closer to a curve as the distance gets closer to infinity.' },
+      { term: 'Big-Oh (O)', meaning: 'The upper bound of an algorithm; the maximum time required for all input values (worst case). f(n) = O(g(n)) if f(n) <= C g(n) for all n >= n0, C > 0, n0 >= 1.' },
+      { term: 'Big-Omega (Ω)', meaning: 'An asymptotic notation that gives a lower bound (standard meaning).' },
+      { term: 'Big-Theta (Θ)', meaning: 'An asymptotic notation that gives a tight bound, both upper and lower (standard meaning).' },
+      { term: 'O(1)', meaning: 'Constant time: the time does not change with the size of the problem.' },
+      { term: 'O(log n)', meaning: 'Logarithmic time: a sub-linear time algorithm.' },
+      { term: 'O(n)', meaning: 'Linear time: the time grows linearly with the size n of the problem.' },
+      { term: 'O(n²)', meaning: 'Quadratic time: the time grows quadratically with the size n of the problem.' },
+      { term: 'Correct Algorithm', meaning: 'An algorithm that, for every input instance, halts with the correct output.' },
+      { term: 'Input Size', meaning: 'The number of items in the input; the main factor considered when analyzing running time.' },
+      { term: 'Worst-case running time', meaning: 'The longest running time for any input of size n; an upper bound that guarantees the algorithm never takes longer.' },
+      { term: 'Best-case running time', meaning: 'The shortest running time, such as sorting data that is already in the desired order.' },
+      { term: 'Average-case running time', meaning: 'The running time for an average input; it can be difficult to define what average means.' },
+      { term: 'Sorting', meaning: 'Arranging data in a particular format or order, usually numerical or lexicographical order.' },
+      { term: 'Bubble Sort', meaning: 'A simple sorting algorithm that repeatedly steps through the list, comparing neighbouring elements and swapping them if needed, until no swaps are needed.' },
+      { term: 'Insertion Sort', meaning: 'A sorting algorithm that inserts each element into its proper position in a sorted part of the array.' },
+      { term: 'Selection Sort', meaning: 'A sorting algorithm that repeatedly finds the smallest number in the unsorted part and exchanges it with the next position.' },
+    ],
+    keyPoints: [
+      'An algorithm is a step-by-step procedure to solve a problem; a program is its implementation that a computer executes.',
+      'Properties of an algorithm: Input (0 or more), Output (at least 1), Definiteness, Finiteness, Correctness.',
+      'Performance analysis measures space complexity (memory) and time complexity (time).',
+      'Space complexity includes memory for program instructions, constant values and variable values.',
+      'In C: int = 2 bytes, float = 4 bytes, char = 1 byte, double = 6 or 8 bytes. The cal(int b) example needs 4 bytes (constant space complexity).',
+      'Running time depends on processor type, 32/64 bit machine, read/write speed, operation times and input data.',
+      'Time complexity is estimated by counting elementary steps; the worst-case time complexity is usually used.',
+      'Asymptotic notations keep only the most significant term and ignore the less significant terms (5n² + 2n + 1 becomes n²).',
+      'Types of asymptotic notations: Big-Oh (O), Big-Omega (Ω), Big-Theta (Θ).',
+      'Big-Oh gives the upper bound (worst case): f(n) <= C g(n) for all n >= n0, C > 0, n0 >= 1.',
+      'Common Big O values: O(1) constant, O(log n) logarithmic, O(n) linear, O(n²) quadratic, O(n³) cubic, O(2ⁿ) exponential.',
+      'O(3n² + 3n + 7) = O(n²): polynomials with the same degree are equivalent in Big O.',
+      'Linear search is O(N); binary search is O(log N); insertion in an unordered array is O(1); insertion in an ordered array and deletion are O(N).',
+      'A single loop over n items is O(n); printing the first element is O(1); two nested loops over n items are O(n²).',
+      'Only correct algorithms are analyzed; computational time is usually the most important resource.',
+      'Input size is the main factor affecting running time; the machine model assumes no parallel operations.',
+      'Step counting example (sum of cubes): total cost 6N + 4, which is O(N).',
+      'Worst case is the longest time (guarantee); best case is the shortest time; average case is hard to define.',
+      'Running time is the dominant metric because it is quantifiable and easy to compare.',
+      'Simple statement sequence is O(1); simple loop is O(n); nested loops are O(n²); a loop whose index depends on the outer loop is also O(n²).',
+      'Sorting arranges data in numerical or lexicographical order and makes searching much faster.',
+      'Bubble sort swaps neighbouring elements; it needs one full pass with no swaps to know the list is sorted; complexity O(N²).',
+      'Insertion sort keeps the lower part of the array sorted and inserts each new element into its proper place (shifting larger values up).',
+      'Selection sort finds the smallest value and swaps it into position; it is O(N²) but faster than bubble sort because it makes fewer swaps.',
+      'Selection, insertion and bubble sorts are O(n²); Merge sort and Quick sort are O(n log n), which is much faster for large n.',
+    ],
+  },
+},
+
+
+{
+  id: 10,
+  title: 'Sorting Techniques (Part II): Merge Sort and Quick Sort',
+  content: `
+    <span class="lesson-badge">LESSON 10</span>
+    <h1>Sorting Techniques (Part II): Merge Sort and Quick Sort</h1>
+    <div class="meta-info">ICT2113 <span>•</span> 20 min read</div>
+
+    <p>This lesson continues <strong>Sorting Techniques</strong>. It covers two faster sorting methods: <strong>Merge Sort</strong> and <strong>Quick Sort</strong>. At the end, you will compare all the sorting algorithms.</p>
+
+    <div class="divider"></div>
+
+    <h2>Merge Sort</h2>
+    <h3>Key facts</h3>
+    <ul>
+      <li>Much <strong>more efficient</strong> than Bubble Sort and Selection Sort.</li>
+      <li>Involves <strong>recursion</strong> (a method that calls itself).</li>
+      <li>Requires an <strong>additional array</strong> in memory.</li>
+      <li>The algorithm <strong>divides the array into two halves</strong> and applies merge sort on each half <strong>recursively</strong>.</li>
+      <li>After the two halves are sorted, they are <strong>merged</strong> together.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Merge sort = <strong>divide</strong> the array in two halves → <strong>sort</strong> each half recursively → <strong>merge</strong> the sorted halves. It needs an <strong>extra array</strong>.</p>
+    </div>
+
+    <h3>Divide and Conquer</h3>
+    <p>Merge sort uses the <strong>divide-and-conquer</strong> approach. It has <strong>three steps</strong>:</p>
+    <ol>
+      <li><strong>Divide</strong> — If the input size is smaller than a certain threshold (say, one or two elements), solve the problem directly using a straightforward method and return the solution. Otherwise, divide the input data into two or more <strong>disjoint subsets</strong>.</li>
+      <li><strong>Recur</strong> — Recursively solve the subproblems linked with the subsets.</li>
+      <li><strong>Conquer</strong> — Take the solutions to the subproblems and <strong>merge</strong> them into a solution to the original problem.</li>
+    </ol>
+
+    <h3>Merge Sort Example (Demo)</h3>
+    <p>Sort the array <code>10 5 8 2 12 6 3 4</code>.</p>
+
+    <p><strong>Phase 1: Divide</strong> — keep splitting into halves until each part has only one element.</p>
+    <pre><code>[10 5 8 2 12 6 3 4]
+
+[10 5 8 2]   [12 6 3 4]
+
+[10 5] [8 2]   [12 6] [3 4]
+
+[10] [5] [8] [2]   [12] [6] [3] [4]</code></pre>
+
+    <p><strong>Phase 2: Merge</strong> — join the parts back together, keeping them in sorted order.</p>
+    <pre><code>[10] [5]  → [5 10]
+[8] [2]   → [2 8]
+[5 10] [2 8] → [2 5 8 10]
+
+[12] [6]  → [6 12]
+[3] [4]   → [3 4]
+[6 12] [3 4] → [3 4 6 12]
+
+[2 5 8 10] [3 4 6 12] → [2 3 4 5 6 8 10 12]</code></pre>
+
+    <h3>How the array is split (using indexes)</h3>
+    <p>The array has <code>nElems</code> items. The first index is <code>lowerBound</code> (0) and the last index is <code>upperBound</code> (<code>nElems-1</code>). The <strong>middle</strong> is found with this formula:</p>
+    <pre><code>mid = (lowerBound + upperBound) / 2</code></pre>
+    <p>For the 8 items (index 0 to 7): <code>mid = (0 + 7) / 2 = 3</code>. The left half is index 0–3 (<code>10 5 8 2</code>) and the right half is index 4–7 (<code>12 6 3 4</code>). After each half is sorted, we get <code>2 5 8 10</code> and <code>3 4 6 12</code>.</p>
+
+    <h3>How two sorted halves are merged</h3>
+    <p>Merging uses a temporary array called <code>workSpace</code>. These pointers are used:</p>
+    <ul>
+      <li><code>lowPtr</code> — points to the current item in the <strong>first</strong> sorted half.</li>
+      <li><code>mid</code> — the <strong>last</strong> item of the first half.</li>
+      <li><code>highPtr</code> — points to the current item in the <strong>second</strong> sorted half.</li>
+      <li><code>upperBound</code> — the <strong>last</strong> item of the second half.</li>
+      <li><code>j</code> — the next free position in <code>workSpace</code>.</li>
+    </ul>
+    <p>Each time, compare the items at <code>lowPtr</code> and <code>highPtr</code>. Copy the <strong>smaller</strong> one into <code>workSpace</code>, then move that pointer (and <code>j</code>) one step forward.</p>
+
+    <p>Example: merge <code>2 5 8 10</code> and <code>3 9 12 13</code>:</p>
+    <pre><code>Compare 2  vs 3   → copy 2    workSpace: 2
+Compare 5  vs 3   → copy 3    workSpace: 2 3
+Compare 5  vs 9   → copy 5    workSpace: 2 3 5
+Compare 8  vs 9   → copy 8    workSpace: 2 3 5 8
+Compare 10 vs 9   → copy 9    workSpace: 2 3 5 8 9
+Compare 10 vs 12  → copy 10   workSpace: 2 3 5 8 9 10
+First half is finished → copy the rest: 12, 13
+Result:                       2 3 5 8 9 10 12 13</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>When one half runs out of items, just <strong>copy all the remaining items</strong> of the other half. Finally, the sorted items are copied from the temporary array back into the original array (see the C code below).</p>
+    </div>
+
+    <h3>Merge Sort Recursion Example</h3>
+    <p>Sort <code>9 7 8 3 2 1</code> using <code>merge_sort(0,5)</code>. The numbers show the <strong>order of the calls</strong>:</p>
+    <pre><code>merge_sort(0,5)  [9 7 8 3 2 1]       mid = (0+5)/2 = 2
+│
+├─ 1  merge_sort(0,2)  [9 7 8]       mid = (0+2)/2 = 1
+│    ├─ 2  merge_sort(0,1)  [9 7]    mid = (0+1)/2 = 0
+│    │    ├─ 3  merge_sort(0,0)  [9]  no further call (start = end)
+│    │    ├─ 4  merge_sort(1,1)  [7]  no further call (start = end)
+│    │    └─ 5  merge(0,0,1)  → [7 9]
+│    ├─ 6  merge_sort(2,2)  [8]       no further call (start = end)
+│    └─ 7  merge(0,2)  → [7 8 9]
+│
+├─ 8  merge_sort(3,5)  [3 2 1]       mid = (3+5)/2 = 4
+│    ├─ 9  merge_sort(3,4)  [3 2]    mid = (3+4)/2 = 3
+│    │    ├─ 10 merge_sort(3,3)  [3]  no further call (start = end)
+│    │    ├─ 11 merge_sort(4,4)  [2]  no further call (start = end)
+│    │    └─ 12 merge(3,3,4)  → [2 3]
+│    ├─ 13 merge_sort(5,5)  [1]       no further call (start = end)
+│    └─ 14 merge(3,5)  → [1 2 3]
+│
+└─ 15 merge_sort(0,5)  → [1 2 3 7 8 9]</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>The recursion stops when <code>start = end</code> (only one element). A single element is already sorted, so <strong>no further call</strong> is made.</p>
+    </div>
+
+    <h3>Efficiency of Merge Sort</h3>
+    <pre><code>Time complexity: O(N * log N)</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Merge sort</strong> time complexity = <strong>O(N log N)</strong>. This is much faster than the <strong>O(N²)</strong> of bubble, selection and insertion sort.</p>
+    </div>
+
+    <h3>Merge Sort in C</h3>
+    <pre><code>#include&lt;stdio.h&gt;
+void mergesort(int a[], int i, int j);
+void merge(int a[], int i1, int j1, int i2, int j2);
+
+int main()
+{
+    int a[30], n, i;
+    printf("Enter no of elements:");
+    scanf("%d", &amp;n);
+    printf("Enter array elements:");
+    for (i = 0; i &lt; n; i++)
+        scanf("%d", &amp;a[i]);
+
+    mergesort(a, 0, n-1);
+    printf("\\nSorted array is :");
+    for (i = 0; i &lt; n; i++)
+        printf("%d ", a[i]);
+    return 0;
+}
+
+void mergesort(int a[], int i, int j)
+{
+    int mid;
+    if (i &lt; j)
+    {
+        mid = (i + j) / 2;
+        mergesort(a, i, mid);        // left recursion
+        mergesort(a, mid+1, j);      // right recursion
+        merge(a, i, mid, mid+1, j);  // merging of two sorted sub-arrays
+    }
+}
+
+void merge(int a[], int i1, int j1, int i2, int j2)
+{
+    int temp[50];   // array used for merging
+    int i, j, k;
+    i = i1;         // beginning of the first list
+    j = i2;         // beginning of the second list
+    k = 0;
+
+    while (i &lt;= j1 &amp;&amp; j &lt;= j2)   // while elements in both lists
+    {
+        if (a[i] &lt; a[j])
+            temp[k++] = a[i++];
+        else
+            temp[k++] = a[j++];
+    }
+
+    while (i &lt;= j1)   // copy remaining elements of the first list
+        temp[k++] = a[i++];
+
+    while (j &lt;= j2)   // copy remaining elements of the second list
+        temp[k++] = a[j++];
+
+    // Transfer elements from temp[] back to a[]
+    for (i = i1, j = 0; i &lt;= j2; i++, j++)
+        a[i] = temp[j];
+}</code></pre>
+
+    <ul>
+      <li><code>mergesort()</code> finds <code>mid</code>, calls itself for the left half and the right half, then calls <code>merge()</code>.</li>
+      <li><code>merge()</code> joins two sorted parts using the extra array <code>temp[]</code>.</li>
+      <li>The check <code>if (i &lt; j)</code> stops the recursion when only one element is left.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Quick Sort</h2>
+    <h3>Key facts</h3>
+    <ul>
+      <li><strong>Quicksort</strong> (sometimes called <strong>partition-exchange sort</strong>) is an efficient sorting algorithm. It is a systematic method for placing the elements of an array in order.</li>
+      <li>Quicksort is a <strong>comparison sort</strong>. It can sort items of any type for which a "less-than" relation (formally, a <strong>total order</strong>) is defined.</li>
+      <li>In efficient implementations it is <strong>not a stable sort</strong>. This means the relative order of equal items is <strong>not preserved</strong>.</li>
+      <li>Quicksort can work <strong>in-place</strong> on an array. It needs only a small amount of extra memory.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Quick sort</strong> = comparison sort, <strong>in-place</strong>, usually <strong>not stable</strong>. Merge sort, on the other hand, needs an extra array.</p>
+    </div>
+
+    <h3>Quicksort: The Basic Idea</h3>
+    <ol>
+      <li>Pick some number <code>p</code> from the array. This number is called the <strong>pivot</strong>.</li>
+      <li>Move all numbers <strong>less than p</strong> to the beginning of the array.</li>
+      <li>Move all numbers <strong>greater than (or equal to) p</strong> to the end of the array.</li>
+      <li>Quicksort the numbers less than <code>p</code>.</li>
+      <li>Quicksort the numbers greater than or equal to <code>p</code>.</li>
+    </ol>
+
+    <pre><code>[ numbers less than p ]  p  [ numbers greater than or equal to p ]</code></pre>
+
+    <h3>Partitioning</h3>
+    <p>A key step in quicksort is <strong>partitioning</strong> the array.</p>
+    <ul>
+      <li>We choose some (any) number <code>p</code> in the array to use as a <strong>pivot</strong>.</li>
+      <li>We partition the array into <strong>three parts</strong>: the numbers less than <code>p</code>, the pivot <code>p</code> itself, and the numbers greater than or equal to <code>p</code>.</li>
+    </ul>
+
+    <h3>How to Select the Pivot</h3>
+    <p>Take this unsorted array:</p>
+    <pre><code>35  33  42  10  14  19  27  44  26  31</code></pre>
+    <p>Any element can be picked as the pivot. In this lecture, the pivot is chosen in different ways:</p>
+    <ul>
+      <li>The <strong>first</strong> element (partitioning method below).</li>
+      <li>The <strong>right-most</strong> element (the quick sort algorithm steps below).</li>
+      <li>A <strong>randomly chosen</strong> element (the recursion example below).</li>
+    </ul>
+
+    <h3>Partitioning II: The Steps</h3>
+    <ol>
+      <li>Choose an array value (say, the <strong>first</strong>) to use as the pivot.</li>
+      <li>Starting from the <strong>left</strong> end, find the first element that is <strong>greater than or equal to</strong> the pivot.</li>
+      <li>Searching <strong>backward from the right</strong> end, find the first element that is <strong>less than</strong> the pivot.</li>
+      <li><strong>Interchange (swap)</strong> these two elements.</li>
+      <li>Repeat, searching from where you left off, until done.</li>
+    </ol>
+
+    <h3>Partition Algorithm</h3>
+    <pre><code>To partition a[left...right]:
+
+1. Set pivot = a[left], l = left + 1, r = right
+2. while l &lt; r, do
+   2.1. while l &lt; right and a[l] &lt; pivot, set l = l + 1
+   2.2. while r &gt; left and a[r] &gt;= pivot, set r = r - 1
+   2.3. if l &lt; r, swap a[l] and a[r]
+3. Set a[left] = a[r], a[r] = pivot
+4. Terminate</code></pre>
+
+    <h3>Quick Sort Algorithm</h3>
+    <p>When we use the pivot method again and again (recursively), we end up with smaller and smaller partitions. Each partition is then processed by quick sort. The recursive algorithm is:</p>
+    <ol>
+      <li><strong>Step 1</strong> — Make the <strong>right-most</strong> index value the pivot.</li>
+      <li><strong>Step 2</strong> — <strong>Partition</strong> the array using the pivot value.</li>
+      <li><strong>Step 3</strong> — Quicksort the <strong>left</strong> partition recursively.</li>
+      <li><strong>Step 4</strong> — Quicksort the <strong>right</strong> partition recursively.</li>
+    </ol>
+
+    <h3>Pictorial Representation (Example 1)</h3>
+    <p>Array (index 0 to 9): <code>9 7 5 11 12 2 14 3 10 6</code>. Here the last element (<code>6</code>) is the pivot.</p>
+    <pre><code>Start:            9  7  5 11 12  2 14  3 10  6
+
+After partition:  5  2  3 [6] 12  7 14  9 10 11
+                  (6 is now in its final place, index 3)
+
+Left part  (5 2 3)           → pivot 3 → 2 [3] 5
+Right part (12 7 14 9 10 11) → pivot 11 → 7 9 10 [11] 14 12
+
+...keep partitioning each part until every element is in place.
+
+Sorted:           2  3  5  6  7  9 10 11 12 14</code></pre>
+
+    <h3>Quick Sort Recursion Example (Example 2)</h3>
+    <p>Sort <code>9 7 8 3 2 1</code> using <code>quick_sort(0,5)</code>. The numbers show the <strong>order of the calls</strong>. Here the pivot is chosen <strong>randomly</strong> (<code>rand_partition</code>):</p>
+    <pre><code>1  quick_sort(0,5)  [9 7 8 3 2 1]
+2  rand_partition(0,5)  → pivot 7 (randomly chosen)
+3  partition(0,5)  → [7 9 8 3 2 1]   (pivot 7 goes to its final place)
+
+   Left part                    Right part
+4  quick_sort(0,2) [1 3 2]      9  quick_sort(4,5) [8 9]
+5  rand_partition(0,2)          10 rand_partition(4,5)
+   pivot = 2 (random)              pivot = 9 (random)
+6  partition(0,2) → [2 3 1]     11 partition(4,5) → [9 8]
+7  quick_sort(0,0) [1]          12 quick_sort(4,4) [8]
+   2 is in place                   9 is in place
+8  quick_sort(2,2) [3]          13 quick_sort(6,5) [ ] (empty)
+
+No further call when start = end.
+Final result: 1 2 3 7 8 9</code></pre>
+
+    <h3>Complexity Analysis of Quick Sort</h3>
+    <ul>
+      <li><strong>Worst case time complexity</strong> [Big-O]: <strong>O(n²)</strong></li>
+      <li><strong>Space complexity</strong>: <strong>O(n log n)</strong> (as given in the lecture slide)</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Quick sort: worst case <strong>O(n²)</strong>, but expected (average) time is <strong>O(n log n)</strong>. When the pivot splits the array into 2 equal halves, it is at its best.</p>
+    </div>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>The comparison table below says the quick sort worst case happens when the array is <strong>already sorted</strong> (very uneven partitions), and a <strong>randomly chosen pivot</strong> (randomized quick sort) helps to avoid this.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Summary of Sorting Algorithms</h2>
+    <pre><code>Algorithm       Time                    Notes
+Selection Sort  O(n²)                   in-place
+                                        slow (good for small inputs)
+Insertion Sort  O(n²)                   in-place
+                                        slow (good for small inputs)
+Quicksort       O(n log n) (expected)   in-place, randomized
+                                        fastest (good for large inputs)
+Heapsort        O(n log n)              in-place
+                                        fast (good for large inputs)
+Mergesort       O(n log n)              sequential data access
+                                        fast (good for huge inputs)</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Small inputs</strong> → selection / insertion sort (O(n²), but simple). <strong>Large inputs</strong> → quicksort or heapsort. <strong>Huge inputs</strong> → mergesort.</p>
+    </div>
+
+    <h3>Detailed Comparison Table</h3>
+    <p>The slide shows this table (source shown on the slide: www.ritambhara.in). <code>lg</code> means log. For non-comparison sorts, <code>k</code> is the range of numbers in the list.</p>
+    <pre><code>COMPARISON SORTS
+Sort                  Best       Worst       Average    Space     Stable
+Bubble Sort           O(n²)      O(n²)       O(n²)      O(1)      Yes
+Modified Bubble Sort  O(n)       O(n²)       O(n²)      O(1)      Yes
+Selection Sort        O(n²)      O(n²)       O(n²)      O(1)      Yes
+Insertion Sort        O(n)       O(n²)       O(n²)      O(1)      Yes
+Quick Sort            O(n lg n)  O(n²)       O(n lg n)  O(1)      Yes
+Randomized Quick Sort O(n lg n)  O(n lg n)   O(n lg n)  O(1)      Yes
+Merge Sort            O(n lg n)  O(n lg n)   O(n lg n)  O(n)      Yes
+Heap Sort             O(n lg n)  O(n lg n)   O(n lg n)  O(1)      No
+
+NON-COMPARISON SORTS
+Counting Sort         O(n+k)     O(n+k)      O(n+k)     O(n+2^k)  Yes
+Radix Sort            O(n.k/s)   O(2^s.n.k/s) O(n.k/s)  O(n)      No
+Bucket Sort           O(n.k)     O(n².k)     O(n.k)     O(n.k)    Yes</code></pre>
+
+    <h3>Comments from the table</h3>
+    <ul>
+      <li><strong>Bubble sort</strong> — for each pair of indices, swap the elements if they are out of order.</li>
+      <li><strong>Modified bubble sort</strong> — best case is when the array is already sorted.</li>
+      <li><strong>Selection sort</strong> — a swap happens only once in a single pass.</li>
+      <li><strong>Insertion sort</strong> — very small constant factor, even though the complexity is O(n²). <strong>Best case:</strong> array already sorted. <strong>Worst case:</strong> array sorted in reverse order.</li>
+      <li><strong>Quick sort</strong> — <strong>Best case:</strong> the pivot divides the array into 2 equal halves. <strong>Worst case:</strong> array already sorted (1 / n-1 partition).</li>
+      <li><strong>Randomized quick sort</strong> — the pivot is chosen randomly.</li>
+      <li><strong>Merge sort</strong> — best for sorting a <strong>linked list</strong> (constant extra space). Best for a very large number of elements that cannot fit in memory (<strong>external sorting</strong>).</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>This table comes from an outside website. The <strong>Stable</strong> column (and the quick sort space value) differs from the Quick Sort slide earlier, which says efficient quicksort is <strong>not stable</strong>. For exams, follow your lecturer's answers and notes.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Sorting Techniques Part II: Merge Sort, Quick Sort and Comparison of Sorting Algorithms',
+    subTopics: [
+      'Merge Sort',
+      'Divide and Conquer',
+      'Merge Sort Example (Demo)',
+      'How the Array is Split (Using Indexes)',
+      'How Two Sorted Halves are Merged',
+      'Merge Sort Recursion Example',
+      'Efficiency of Merge Sort',
+      'Merge Sort in C',
+      'Quick Sort',
+      'Quicksort: The Basic Idea',
+      'Partitioning',
+      'How to Select the Pivot',
+      'Partition Algorithm',
+      'Quick Sort Algorithm',
+      'Pictorial Representation of Quick Sort',
+      'Quick Sort Recursion Example',
+      'Complexity Analysis of Quick Sort',
+      'Summary of Sorting Algorithms',
+      'Detailed Comparison Table',
+    ],
+    definitions: [
+      { term: 'Merge Sort', meaning: 'A recursive sorting algorithm that divides the array into two halves, sorts each half, and then merges them. It needs an additional array.' },
+      { term: 'Divide and Conquer', meaning: 'An approach with three steps: Divide the input, Recur on the subproblems, and Conquer by merging the solutions.' },
+      { term: 'Divide', meaning: 'If the input is small, solve it directly; otherwise split the input data into two or more disjoint subsets.' },
+      { term: 'Recur', meaning: 'Recursively solve the subproblems linked with the subsets.' },
+      { term: 'Conquer', meaning: 'Take the solutions to the subproblems and merge them into a solution to the original problem.' },
+      { term: 'Recursion', meaning: 'A method that calls itself to solve smaller parts of the same problem.' },
+      { term: 'mid', meaning: 'The middle index used to split the array: mid = (lowerBound + upperBound) / 2.' },
+      { term: 'workSpace', meaning: 'The temporary array used while merging two sorted halves.' },
+      { term: 'lowPtr / highPtr', meaning: 'Pointers to the current items of the first and second sorted halves during a merge.' },
+      { term: 'Quick Sort', meaning: 'An efficient comparison sort (partition-exchange sort) that picks a pivot, partitions the array around it, and sorts the parts recursively.' },
+      { term: 'Pivot', meaning: 'The number picked from the array around which the other numbers are partitioned.' },
+      { term: 'Partitioning', meaning: 'Splitting the array into numbers less than the pivot, the pivot, and numbers greater than or equal to the pivot.' },
+      { term: 'Comparison Sort', meaning: 'A sort that can sort items of any type for which a less-than relation (total order) is defined.' },
+      { term: 'Stable Sort', meaning: 'A sort that preserves the relative order of equal items.' },
+      { term: 'In-place Sort', meaning: 'A sort that works inside the array and needs only a small amount of extra memory.' },
+      { term: 'Randomized Quick Sort', meaning: 'Quick sort where the pivot is chosen randomly.' },
+      { term: 'Non-Comparison Sort', meaning: 'A sorting method that does not rely on comparing items, such as Counting Sort, Radix Sort and Bucket Sort.' },
+    ],
+    keyPoints: [
+      'Merge sort is much more efficient than bubble and selection sort, uses recursion, and requires an additional array.',
+      'Merge sort steps: divide into two halves, sort each half recursively, then merge the sorted halves.',
+      'Divide and conquer has three steps: Divide, Recur, Conquer.',
+      'The middle index is found using mid = (lowerBound + upperBound) / 2.',
+      'Merging compares items of the two halves, copies the smaller into workSpace, and copies leftover items at the end.',
+      'The recursion stops when start = end (one element), which is already sorted.',
+      'Merge sort time complexity is O(N log N).',
+      'The merge sort C code demonstrates recursion (mergesort) and merging with a temp array (merge).',
+      'Quick sort is a comparison sort and an in-place algorithm; in efficient implementations it is not stable.',
+      'Quick sort idea: pick a pivot, move smaller numbers before it and greater or equal numbers after it, then quicksort both parts.',
+      'Pivot can be the first element, the right-most element, or a random element.',
+      'The partition algorithm uses two indexes l and r that move towards each other and swap out-of-place elements.',
+      'Quick sort worst case time complexity is O(n²); the lecture gives space complexity as O(n log n); expected time is O(n log n).',
+      'Quick sort best case happens when the pivot divides the array into 2 equal halves; worst case when the array is already sorted.',
+      'Selection and insertion sort are O(n²), in-place, and good for small inputs.',
+      'Quicksort, heapsort and mergesort are O(n log n); quicksort is fastest for large inputs and mergesort is good for huge inputs.',
+      'Merge sort is best for linked lists and external sorting of data that cannot fit in memory.',
+    ],
+  },
+},
+
+
 
 
 ]
