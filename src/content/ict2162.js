@@ -2891,5 +2891,1196 @@ LAYER 3</code></pre>
 },
 
 
+{
+  id: 8,
+  title: 'Enhancing Decision Making',
+  content: `
+    <span class="lesson-badge">LESSON 08</span>
+    <h1>Enhancing Decision Making</h1>
+    <div class="meta-info">ICT2162 <span>•</span> 14 min read</div>
+
+    <p>This lesson explains how <strong>Management Information Systems (MIS)</strong> help managers make better decisions. We will look at types of decisions, the decision-making process, managerial roles, and how <strong>Business Intelligence (BI)</strong> and <strong>Business Analytics</strong> support decision-making in organizations.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>By the end of this lesson, you should be able to identify organizations, management, and the networked enterprise; explore IT infrastructure and security; explain key system applications for the digital age; and identify how to build and manage information systems.</p>
+    </div>
+
+    <h3>What We Discuss Today</h3>
+    <ul>
+      <li>Different types of decisions and how the decision-making process works</li>
+      <li>How information systems support managers and management decision making</li>
+      <li>How business intelligence and business analytics support decision-making</li>
+      <li>How different decision-making groups in an organization use business intelligence</li>
+      <li>The role of information systems in helping groups make decisions more efficiently</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Understanding Decision Making with an Example</h2>
+    <p>Imagine a supplier trying to decide which product is more profitable to sell.</p>
+    <pre><code>Option 01: Casio wristwatch — Sales price: 10,000/=
+Option 02: Citizen wristwatch — Sales price: 18,000/=</code></pre>
+    <p>At first glance, it looks like the Citizen wristwatch is more profitable because it sells for more. But we need <strong>more information</strong> to decide correctly.</p>
+
+    <pre><code>Option 01: Casio wristwatch
+  Sales price: 10,000/=
+  Cost: 6,000/=
+
+Option 02: Citizen wristwatch
+  Sales price: 18,000/=
+  Cost: 10,000/=</code></pre>
+    <p>Now we can see the <strong>profit per unit</strong>: Casio = 4,000/=, Citizen = 8,000/=. Citizen still looks better. But what about how many units will actually be sold?</p>
+
+    <pre><code>Option 01: Casio wristwatch
+  Sales price: 10,000/=, Cost: 6,000/=
+  Sales forecast: 2,000 units
+
+Option 02: Citizen wristwatch
+  Sales price: 18,000/=, Cost: 10,000/=
+  Sales forecast: 800 units</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Total profit = Profit per unit × Sales forecast. Casio: 4,000 × 2,000 = 8,000,000/=. Citizen: 8,000 × 800 = 6,400,000/=. The Casio wristwatch is actually more profitable overall! This shows why <strong>more and better information</strong> leads to better decisions.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Business Value of Improved Decision Making</h2>
+    <p>Improving hundreds of thousands of "small" decisions adds up to large annual value for a business. Decisions can be grouped into three types:</p>
+    <ul>
+      <li><strong>Unstructured</strong> — The decision maker must use judgment, evaluation, and insight to solve the problem. There is no fixed procedure.</li>
+      <li><strong>Structured</strong> — Repetitive and routine decisions. They follow a definite procedure, so they don't need to be treated as new each time.</li>
+      <li><strong>Semi-structured</strong> — Only part of the problem has a clear-cut answer provided by an accepted procedure.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Key Decision-Making Groups in a Firm</h2>
+    <ul>
+      <li><strong>Senior managers</strong> — Make many unstructured decisions. <em>Example: Should we enter a new market?</em></li>
+      <li><strong>Middle managers</strong> — Make more structured decisions, but these may include unstructured components. <em>Example: Why is the order fulfillment report showing a decline in Colombo?</em></li>
+      <li><strong>Operational managers</strong> — Make more structured decisions. <em>Example: Does a customer meet the criteria for credit?</em></li>
+    </ul>
+
+    <h3>Information Requirements by Level</h3>
+    <pre><code>Decision Characteristics        Examples of Decisions
+─────────────────────────────────────────────────────
+Unstructured                    Decide entrance/exit from markets
+(Senior Management)             Approve capital budget
+                                 Decide long-term goals
+
+Semistructured                  Design a marketing plan
+(Middle Management)             Develop a departmental budget
+                                 Design a new corporate website
+
+Structured                      Determine overtime eligibility
+(Operational Management/        Restock inventory
+Individual Employees & Teams)   Offer credit to customers
+                                 Determine special offers</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>As we move up the management pyramid, decisions become less structured and more judgment-based. As we move down, decisions become more routine and rule-based.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>The 4 Stages of the Decision-Making Process</h2>
+    <ol>
+      <li><strong>Intelligence</strong> — Discovering, identifying, and understanding the problems occurring in the organization. <em>(Problem discovery: What is the problem?)</em></li>
+      <li><strong>Design</strong> — Identifying and exploring solutions to the problem. <em>(Solution discovery: What are the possible solutions?)</em></li>
+      <li><strong>Choice</strong> — Choosing among solution alternatives. <em>(Choosing solutions: What is the best solution?)</em></li>
+      <li><strong>Implementation</strong> — Making the chosen alternative work and continuing to monitor how well the solution is working. <em>(Solution testing: Is the solution working? Can we make it work better?)</em></li>
+    </ol>
+
+    <pre><code>Intelligence → Design → Choice → Implementation
+     ↑              ↑         ↑           │
+     └──────────────┴─────────┴───────────┘
+        (Process can loop back to earlier stages)</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Managers and Decision Making in the Real World</h2>
+    <p>Information systems can only assist in <strong>some</strong> of the roles played by managers. IS cannot improve all the different kinds of decisions taking place in an organization.</p>
+
+    <h3>Classical Model of Management</h3>
+    <p>This model describes <strong>5 functions</strong> of a manager:</p>
+    <ul>
+      <li>Planning</li>
+      <li>Organizing</li>
+      <li>Coordinating</li>
+      <li>Deciding</li>
+      <li>Controlling</li>
+    </ul>
+
+    <h3>Contemporary Behavioral Models</h3>
+    <p>In real life, the actual behavior of managers appears to be <strong>less systematic</strong>, more informal, less reflective, more reactive, and less well organized than the classical model suggests.</p>
+
+    <div class="divider"></div>
+
+    <h2>Mintzberg's 10 Managerial Roles</h2>
+    <p>Management researcher Henry Mintzberg identified 10 roles that managers play, grouped into three categories.</p>
+
+    <h3>Interpersonal Roles</h3>
+    <ul>
+      <li><strong>Figurehead</strong> — Represents the organization symbolically.</li>
+      <li><strong>Leader</strong> — Motivates and directs staff.</li>
+      <li><strong>Liaison</strong> — Connects people inside and outside the organization.</li>
+    </ul>
+
+    <h3>Informational Roles</h3>
+    <ul>
+      <li><strong>Monitor</strong> — Gathers information about the organization and environment.</li>
+      <li><strong>Disseminator</strong> — Shares information with others in the organization.</li>
+      <li><strong>Spokesperson</strong> — Shares information with people outside the organization.</li>
+    </ul>
+
+    <h3>Decisional Roles</h3>
+    <ul>
+      <li><strong>Entrepreneur</strong> — Looks for new opportunities and initiates change.</li>
+      <li><strong>Disturbance handler</strong> — Deals with unexpected problems and conflicts.</li>
+      <li><strong>Resource allocator</strong> — Decides where resources should be used.</li>
+      <li><strong>Negotiator</strong> — Represents the organization in negotiations.</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>Group Activity:</strong> Form three groups and research the roles above with real-world examples (Interpersonal, Informational, and Decisional). Present your findings to the class.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Real World Decision Making</h2>
+    <p>There are three main reasons why investments in information technology do not always produce positive results:</p>
+    <ol>
+      <li><strong>Information quality</strong> — High-quality decisions require high-quality information. Bad data leads to bad decisions.</li>
+      <li><strong>Management filters</strong> — Managers have selective attention and various biases that cause them to reject information that doesn't match their prior beliefs.</li>
+      <li><strong>Organizational inertia and politics</strong> — Strong forces within organizations resist making decisions that call for major change.</li>
+    </ol>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Even with great information systems, decisions can still fail if the underlying data quality is poor, managers ignore unwelcome information, or the organization resists change.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>High Velocity Automated Decision Making</h2>
+    <ul>
+      <li>Made possible through <strong>computer algorithms</strong> that precisely define the steps for a highly structured decision.</li>
+      <li>Humans are taken out of the decision entirely.</li>
+      <li><strong>Example:</strong> High-speed computer trading programs that execute trades in just 30 milliseconds. These programs were responsible for the "Flash Crash" of 2010.</li>
+      <li>Because of risks like this, automated systems require <strong>safeguards</strong> to ensure proper operation and regulation.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Business Intelligence, Business Analytics & BI Vendors</h2>
+    <ul>
+      <li><strong>Business Intelligence (BI)</strong> — The infrastructure for collecting, storing, and analyzing data produced by a business. This includes databases, data warehouses, and data marts.</li>
+      <li><strong>Business Analytics</strong> — The tools and techniques used for analyzing data, such as <code>OLAP</code>, statistics, models, and data mining.</li>
+      <li><strong>Business Intelligence vendors</strong> — Companies that create the BI and analytics software purchased by firms.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Six Elements in the Business Intelligence Environment</h2>
+    <ol>
+      <li>Data from the business environment (e.g. call centers, website, mobile devices, blogs, stores, suppliers, government employees)</li>
+      <li>Business intelligence infrastructure (databases, data warehouses, data marts)</li>
+      <li>Business analytics toolset (statistical models, data mining, OLAP, production reports)</li>
+      <li>Managerial users and methods (business strategy, performance management, balanced scorecard, forecasts)</li>
+      <li>Delivery platform — <code>MIS</code>, <code>DSS</code>, <code>ESS</code></li>
+      <li>User interface (reports, dashboards, scorecards, desktop, mobile, web portal, social media)</li>
+    </ol>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Data flows from the business environment, through the BI infrastructure and analytics tools, to managerial users, and finally reaches them through a delivery platform and user interface.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Business Intelligence and Analytics Capabilities</h2>
+    <p>The goal of BI systems is to deliver <strong>accurate, real-time information</strong> to decision-makers. The main functionalities of BI systems are:</p>
+    <ol>
+      <li>Production reports</li>
+      <li>Parameterized reports</li>
+      <li>Dashboards / scorecards</li>
+      <li>Ad hoc query / search / report creation</li>
+      <li>Drill down</li>
+      <li>Forecasts, scenarios, models</li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <h2>Who Uses Business Intelligence?</h2>
+    <ul>
+      <li><strong>80%</strong> of users are casual users who rely on production reports.</li>
+      <li><strong>Senior executives</strong> — Use monitoring functionalities to track overall performance.</li>
+      <li><strong>Middle managers and analysts</strong> — Use ad-hoc analysis to investigate specific questions.</li>
+      <li><strong>Operational employees</strong> — Use prepackaged reports. <em>Examples: sales forecasts, customer satisfaction, loyalty and attrition, supply chain backlog, employee productivity.</em></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Examples of BI Applications</h2>
+    <ul>
+      <li><strong>Predictive Analytics</strong> — Uses patterns in data to predict future behavior. <em>Example: Credit card companies use predictive analytics to identify customers at risk of leaving.</em></li>
+      <li><strong>Big Data Analytics</strong> — Analyzing very large and complex datasets for insights.</li>
+      <li><strong>Data Visualization</strong> — Helps users see patterns and relationships that would be hard to notice in plain text lists.</li>
+      <li><strong>Operational Intelligence and Analytics</strong> — Real-time analysis of day-to-day business operations.</li>
+      <li><strong>Location Analytics</strong> — Gains business insight from the location component of data.</li>
+      <li><strong>Geographic Information Systems (GIS)</strong> — Ties location-related data to maps for visual analysis.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Summary & Key Takeaways</h2>
+    <ul>
+      <li>Decisions can be unstructured, structured, or semi-structured, and different management levels handle different types.</li>
+      <li>The decision-making process has 4 stages: Intelligence, Design, Choice, and Implementation.</li>
+      <li>Managers play 10 different roles grouped into Interpersonal, Informational, and Decisional categories (Mintzberg's model).</li>
+      <li>Good decisions depend on information quality, management openness, and organizational willingness to change.</li>
+      <li>Business Intelligence and Business Analytics provide the infrastructure and tools to turn raw data into decision-ready information.</li>
+      <li>Different user groups (executives, managers, employees) use BI tools differently, from monitoring dashboards to ad-hoc analysis and prepackaged reports.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>More information does not automatically mean a better decision — the example of the Casio vs Citizen wristwatch shows that <strong>sales forecast</strong> data was the missing piece needed to find the truly more profitable option.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Enhancing Decision Making with Management Information Systems',
+    subTopics: [
+      'Understanding Decision Making with an Example',
+      'Business Value of Improved Decision Making',
+      'Key Decision-Making Groups in a Firm',
+      'Information Requirements by Level',
+      'The 4 Stages of the Decision-Making Process',
+      'Managers and Decision Making in the Real World',
+      "Mintzberg's 10 Managerial Roles",
+      'Real World Decision Making',
+      'High Velocity Automated Decision Making',
+      'Business Intelligence, Business Analytics & BI Vendors',
+      'Six Elements in the Business Intelligence Environment',
+      'Business Intelligence and Analytics Capabilities',
+      'Who Uses Business Intelligence?',
+      'Examples of BI Applications',
+    ],
+    definitions: [
+      { term: 'Unstructured Decision', meaning: 'A decision where the decision maker must use judgment, evaluation, and insight to solve the problem; no fixed procedure exists.' },
+      { term: 'Structured Decision', meaning: 'A repetitive, routine decision that follows a definite procedure, so it does not need to be treated as new each time.' },
+      { term: 'Semi-structured Decision', meaning: 'A decision where only part of the problem has a clear-cut answer provided by an accepted procedure.' },
+      { term: 'Intelligence (decision stage)', meaning: 'Discovering, identifying, and understanding problems occurring in the organization.' },
+      { term: 'Design (decision stage)', meaning: 'Identifying and exploring possible solutions to a problem.' },
+      { term: 'Choice (decision stage)', meaning: 'Choosing among the available solution alternatives.' },
+      { term: 'Implementation (decision stage)', meaning: 'Making the chosen alternative work and continuing to monitor how well it performs.' },
+      { term: 'Classical Model of Management', meaning: 'A model describing 5 manager functions: planning, organizing, coordinating, deciding, and controlling.' },
+      { term: "Mintzberg's Managerial Roles", meaning: '10 roles managers play, grouped into Interpersonal, Informational, and Decisional categories.' },
+      { term: 'High Velocity Automated Decision Making', meaning: 'Decision making done entirely by computer algorithms for highly structured decisions, without human involvement.' },
+      { term: 'Business Intelligence (BI)', meaning: 'The infrastructure for collecting, storing, and analyzing data produced by a business, including databases, data warehouses, and data marts.' },
+      { term: 'Business Analytics', meaning: 'Tools and techniques for analyzing data, such as OLAP, statistics, models, and data mining.' },
+      { term: 'Business Intelligence Vendors', meaning: 'Companies that create business intelligence and analytics software purchased by firms.' },
+      { term: 'Predictive Analytics', meaning: 'A BI application that uses patterns in data to predict future behavior.' },
+      { term: 'Data Visualization', meaning: 'A technique that helps users see patterns and relationships in data that would be hard to notice in text lists.' },
+      { term: 'Geographic Information Systems (GIS)', meaning: 'A system that ties location-related data to maps for analysis.' },
+    ],
+    keyPoints: [
+      'Improving many small decisions adds up to large annual value for a business.',
+      'Decisions are classified as unstructured, structured, or semi-structured.',
+      'Senior managers handle unstructured decisions, middle managers handle semi-structured decisions, and operational managers handle structured decisions.',
+      'The decision-making process has 4 stages: Intelligence, Design, Choice, Implementation — and it can loop back to earlier stages.',
+      'In the wristwatch example, the Casio watch was actually more profitable overall because sales forecast data changed the decision, showing why complete information matters.',
+      'The classical management model has 5 functions: planning, organizing, coordinating, deciding, controlling — but real managers behave less systematically than this model suggests.',
+      "Mintzberg identified 10 managerial roles in 3 groups: Interpersonal (Figurehead, Leader, Liaison), Informational (Monitor, Disseminator, Spokesperson), and Decisional (Entrepreneur, Disturbance handler, Resource allocator, Negotiator).",
+      'IT investments may fail to improve decisions due to poor information quality, management filters (bias), and organizational inertia/politics.',
+      'High velocity automated decision making uses algorithms without humans — it caused the 2010 "Flash Crash" and needs safeguards.',
+      'Business Intelligence (BI) is the infrastructure for data; Business Analytics is the toolset for analyzing that data.',
+      'The BI environment has 6 elements: data from business environment, BI infrastructure, analytics toolset, managerial users/methods, delivery platform (MIS, DSS, ESS), and user interface.',
+      'Main BI functionalities include production reports, parameterized reports, dashboards/scorecards, ad hoc queries, drill down, and forecasts/scenarios/models.',
+      '80% of BI users are casual users relying on production reports; senior executives use monitoring tools, middle managers do ad-hoc analysis, and operational employees use prepackaged reports.',
+      'Examples of BI applications include Predictive Analytics, Big Data Analytics, Data Visualization, Operational Intelligence, Location Analytics, and GIS.',
+    ],
+  },
+},
+
+
+{
+  id: 9,
+  title: 'Securing Information Systems',
+  content: `<span class="lesson-badge">LESSON 9</span>
+<h1>Securing Information Systems</h1>
+<div class="meta-info">ICT2162 <span>•</span> 19 min read</div>
+
+<p>Information systems hold some of an organization's most valuable assets — customer data, financial records, trade secrets, and intellectual property. This lesson explains <strong>why</strong> these systems are vulnerable, what kinds of threats and crimes exist, and the <strong>tools, technologies, and controls</strong> used to keep information safe.</p>
+
+<div class="callout-blue">
+<strong>What We Discuss Today:</strong>
+<ul>
+<li>Why information systems are vulnerable to destruction, error, and abuse</li>
+<li>Business value of security and control</li>
+<li>Components of an organizational framework for security and control</li>
+<li>Tools and technologies used for safeguarding information resources</li>
+</ul>
+</div>
+
+<div class="divider"></div>
+
+<h2>Security and Controls: Key Definitions</h2>
+<p>These two terms are closely related but mean different things.</p>
+
+<div class="callout-blue">
+<strong>Security:</strong> Policies, procedures, and technical measures used to prevent unauthorized access, alteration, theft, or physical damage to information systems.<br><br>
+<strong>Controls:</strong> Methods, policies, and organizational procedures that ensure the safety of an organization's assets, the accuracy and reliability of its accounting records, and operational adherence to management standards.
+</div>
+
+<div class="divider"></div>
+
+<h2>Why Information Systems Are Vulnerable</h2>
+<p>Modern information systems are exposed on many fronts. Key reasons include:</p>
+<ol>
+<li><strong>Accessibility of networks</strong> — anyone can potentially reach them</li>
+<li><strong>Hardware problems</strong> — breakdowns, configuration errors, damage from improper use or crime</li>
+<li><strong>Software problems</strong> — programming errors, installation errors, unauthorized changes</li>
+<li><strong>Disasters</strong> — fires, floods, power failures</li>
+<li><strong>Use of networks/computers outside of the firm's control</strong></li>
+<li><strong>Loss and theft of portable devices</strong></li>
+</ol>
+
+<div class="callout-yellow">
+<strong>Remember (exam point):</strong> Systems are vulnerable because of a combination of <strong>technical</strong> factors (hardware/software flaws), <strong>environmental</strong> factors (disasters), and <strong>human/organizational</strong> factors (loss, theft, outside use of networks).
+</div>
+
+<h3>Contemporary Security Challenges and Vulnerabilities</h3>
+<p>A typical Web-based application links a <strong>Web client</strong>, <strong>communication lines</strong>, <strong>corporate servers</strong>, and <strong>corporate systems/databases</strong>. Each layer has its own vulnerabilities, and floods, fires, and power failures can disrupt the network at any point.</p>
+
+<pre><code>Client (User)       Communications Lines     Corporate Servers        Corporate Systems
+--------------       --------------------     -----------------        -----------------
+Unauthorized access   Tapping                  Hacking                  Theft of data
+Errors                Sniffing                 Viruses and worms        Copying data
+                      Message alteration      Theft and fraud          Alteration of data
+                      Theft and fraud          Vandalism                Hardware failure
+                      Radiation                Denial-of-service attacks  Software failure
+                                                                        (Hardware/OS/Software +
+                                                                         Databases)</code></pre>
+
+<div class="divider"></div>
+
+<h2>Internet and Wireless Security Challenges</h2>
+
+<h3>Internet Vulnerabilities</h3>
+<ul>
+<li>The network is open to anyone</li>
+<li>The sheer size of the Internet means abuses can have a wide impact</li>
+<li>Fixed Internet addresses (cable/DSL modems) create fixed targets for hackers</li>
+<li>Unencrypted VOIP calls can be intercepted</li>
+<li>E-mail and P2P file sharing are vulnerable to: interception, attachments carrying malicious software, and transmission of trade secrets</li>
+</ul>
+
+<h3>Wireless Security Challenges</h3>
+<ul>
+<li>Radio frequency bands are easy to scan</li>
+<li><strong>SSIDs</strong> (service set identifiers) identify access points and are broadcast multiple times — they can be picked up by sniffer programs</li>
+<li><strong>War driving:</strong> eavesdroppers drive around buildings trying to detect an SSID and gain unauthorized access to the network</li>
+<li>Once an access point is breached, an intruder can use the operating system to access networked drives and files</li>
+</ul>
+
+<pre><code>Legitimate User                Wireless Access Point              Intruder
+----------------               ----------------------             -----------
+Authentication request  --->
+                        <---   Challenge
+Response                --->
+                        <---   Success (access granted)
+
+                                      ^
+                                      | (sniffer intercepts signal)
+                                      |
+                                  Intruder gains
+                                unauthorized access</code></pre>
+
+<div class="callout-red">
+<strong>Warning:</strong> Many Wi-Fi networks can be penetrated easily by intruders using sniffer programs to obtain an address and access network resources without authorization.
+</div>
+
+<div class="divider"></div>
+
+<h2>Malware: Viruses, Worms, Trojan Horses & More</h2>
+<p><strong>Malware</strong> (malicious software) is one of the most common threats to information systems.</p>
+
+<h3>Viruses and Worms</h3>
+<ul>
+<li><strong>Virus:</strong> A rogue software program that attaches itself to other software programs or data files in order to be executed, usually without the user's knowledge or permission.</li>
+<li><strong>Worm:</strong> An independent program that copies itself from one computer to other computers over a network, without needing to attach to another file.</li>
+</ul>
+<p>Worms and viruses spread through drive-by downloads, e-mail/instant-messaging attachments, and downloads from websites and social networks.</p>
+
+<div class="callout-red">
+<strong>Common mistake:</strong> Don't confuse a <strong>virus</strong> (needs a host file to execute) with a <strong>worm</strong> (an independent program that spreads on its own over a network).
+</div>
+
+<h3>Trojan Horses, SQL Injection & Ransomware</h3>
+<ul>
+<li><strong>Trojan horse:</strong> Software that appears to be benign but then does something other than expected.</li>
+<li><strong>SQL injection attacks:</strong> Hackers submit data to Web forms that exploits a site's unprotected software and sends a rogue SQL query to the database.</li>
+<li><strong>Ransomware:</strong> Malware that locks or encrypts a victim's data/systems until a ransom is paid.</li>
+<li>Smartphones are just as vulnerable as computers — studies have found over 13,000 types of smartphone malware.</li>
+</ul>
+
+<h3>Spyware and Key Loggers</h3>
+<ul>
+<li><strong>Spyware:</strong> Small programs that install themselves surreptitiously on computers to monitor a user's Web surfing activity and serve up advertising.</li>
+<li><strong>Key loggers:</strong> Record every keystroke on a computer to steal serial numbers, passwords, or launch Internet attacks.</li>
+<li>Other spyware types can reset the browser home page, redirect search requests, and slow computer performance by consuming memory.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Hackers and Computer Crime</h2>
+<p>A <strong>hacker</strong> is an individual who gains unauthorized access to a computer system; the term <strong>cracker</strong> is typically used for hackers with criminal intent. Common hacker activities include system intrusion, system damage, and <strong>cyber vandalism</strong> — the intentional disruption, defacement, or destruction of a website or corporate information system.</p>
+
+<h3>Spoofing and Sniffing</h3>
+<ul>
+<li><strong>Spoofing:</strong> Misrepresenting oneself using fake e-mail addresses, masquerading as someone else, or redirecting a Web link to an address that masquerades as the intended destination.</li>
+<li><strong>Sniffer:</strong> An eavesdropping program that monitors information traveling over a network, enabling hackers to steal proprietary information such as e-mail and company files.</li>
+</ul>
+
+<h3>Denial-of-Service Attacks and Botnets</h3>
+<ul>
+<li><strong>Denial-of-Service attack (DoS):</strong> Flooding a server with thousands of false requests to crash the network.</li>
+<li><strong>Distributed Denial-of-Service attack (DDoS):</strong> Uses numerous computers to launch a DoS attack.</li>
+<li><strong>Botnets:</strong> Networks of "zombie" PCs infiltrated by bot malware. They deliver about 90% of the world's spam and 80% of the world's malware. (Example: the Mirai botnet.)</li>
+</ul>
+
+<div class="callout-yellow">
+<strong>Remember (exam point):</strong> A <strong>DoS</strong> attack comes from one source; a <strong>DDoS</strong> attack uses many compromised computers (a <strong>botnet</strong>) at once, making it much harder to block.
+</div>
+
+<h3>Computer Crime</h3>
+<div class="callout-blue">
+<strong>Computer crime:</strong> Any violations of criminal law that involve a knowledge of computer technology for their perpetration, investigation, or prosecution.
+</div>
+<p>A computer can be the <strong>target</strong> of a crime (e.g., breaching confidentiality of protected data, accessing a system without authority, knowingly causing damage to a protected computer) or the <strong>instrument</strong> of a crime (e.g., theft of trade secrets, unauthorized copying of software/intellectual property, schemes to defraud, using e-mail for threats or harassment, illegally intercepting communications, transmitting child pornography).</p>
+
+<h3>Identity Theft, Phishing, Evil Twins, Pharming & Click Fraud</h3>
+<ul>
+<li><strong>Identity theft:</strong> Theft of personal information (social security ID, driver's license, or credit card numbers) to impersonate someone else.</li>
+<li><strong>Phishing:</strong> Setting up fake websites or sending e-mail messages that look like legitimate businesses to ask users for confidential personal data.</li>
+<li><strong>Evil twins:</strong> Wireless networks that pretend to offer trustworthy Wi-Fi connections to the Internet.</li>
+<li><strong>Pharming:</strong> Redirects users to a bogus Web page, even when the individual types the correct Web address into the browser.</li>
+<li><strong>Click fraud:</strong> Occurs when an individual or computer program fraudulently clicks on an online ad with no intention of learning more or making a purchase.</li>
+<li><strong>Cyberterrorism and Cyberwarfare:</strong> Use of the Internet and digital attacks for politically or militarily motivated disruption.</li>
+</ul>
+
+<div class="callout-red">
+<strong>Common mistake:</strong> Don't mix these up — <strong>Phishing</strong> tricks users via fake e-mails/websites; <strong>Pharming</strong> redirects users even when they type the correct address; an <strong>Evil Twin</strong> is a fake Wi-Fi network pretending to be legitimate.
+</div>
+
+<div class="divider"></div>
+
+<h2>Internal Threats: Employees</h2>
+<p>Security threats often originate <strong>inside</strong> an organization, not just from external hackers.</p>
+<ul>
+<li>Employees have inside knowledge of systems and procedures</li>
+<li>Sloppy security procedures and lack of user knowledge create openings</li>
+<li><strong>Social engineering:</strong> Tricking employees into revealing their passwords by pretending to be legitimate members of the company who need the information</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Software Vulnerability & Microprocessor Design Flaws</h2>
+<p>Commercial software almost always contains hidden bugs (program code defects). <strong>Zero defects cannot be achieved</strong> because complete testing of large programs is not possible. These flaws can open networks to intruders.</p>
+<ul>
+<li><strong>Patches:</strong> Small pieces of software released to repair flaws — but exploits are often created faster than patches can be released and implemented.</li>
+</ul>
+<p>Beyond software, poor (faulty) designs in computer <strong>microprocessor chips</strong> can also enable hackers using malicious software to access data thought to be completely protected. These hardware-level vulnerabilities affect nearly every computer chip manufactured in the last 20 years.</p>
+
+<div class="divider"></div>
+
+<h2>Business Value of Security and Control</h2>
+<p>Failed computer systems can lead to significant or total loss of business function. Firms today are more vulnerable than ever because they hold confidential personal/financial data and valuable trade secrets. A security breach can cut into a firm's market value almost immediately, and inadequate security raises issues of legal <strong>liability</strong>.</p>
+
+<div class="callout-blue">
+<strong>Key regulations requiring electronic records management and privacy protection:</strong>
+<ul>
+<li><strong>HIPAA:</strong> Medical security and privacy rules and procedures</li>
+<li><strong>Gramm-Leach-Bliley Act:</strong> Requires financial institutions to ensure the security and confidentiality of customer data</li>
+<li><strong>Sarbanes-Oxley Act:</strong> Imposes responsibility on companies and management to safeguard the accuracy and integrity of financial information used internally and released externally</li>
+</ul>
+</div>
+
+<div class="divider"></div>
+
+<h2>Electronic Evidence and Computer Forensics</h2>
+<ul>
+<li><strong>Electronic evidence:</strong> Evidence for white-collar crimes is often in digital form — data on computers, e-mail, instant messages, e-commerce transactions. Proper control of data saves time and money when responding to a legal discovery request.</li>
+<li><strong>Computer forensics:</strong> The scientific collection, examination, authentication, preservation, and analysis of data from computer storage media for use as evidence in a court of law, including the recovery of ambient and hidden data.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Information Systems Controls</h2>
+<p>Information systems controls can be <strong>manual or automated</strong>, and are classified as <strong>general controls</strong> or <strong>application controls</strong>.</p>
+
+<h3>General Controls</h3>
+<p>General controls govern the design, security, and use of computer programs and the security of data files throughout the organization's entire IT infrastructure. They apply to all computerized applications and combine hardware, software, and manual procedures to create an overall control environment.</p>
+
+<div class="callout-yellow">
+<strong>Remember (exam point) — Types of General Controls:</strong>
+<ol>
+<li>Software controls</li>
+<li>Hardware controls</li>
+<li>Computer operations controls</li>
+<li>Data security controls</li>
+<li>Implementation controls</li>
+<li>Administrative controls</li>
+</ol>
+</div>
+
+<h3>Application Controls</h3>
+<p>Application controls are specific to each computerized application (e.g., payroll or order processing). They include both automated and manual procedures that ensure only authorized data is completely and accurately processed. They include:</p>
+<ul>
+<li><strong>Input controls</strong></li>
+<li><strong>Processing controls</strong></li>
+<li><strong>Output controls</strong></li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Risk Assessment</h2>
+<p><strong>Risk assessment</strong> determines the level of risk to a firm if a specific activity or process is not properly controlled. It considers the type of threat, probability of occurrence during the year, potential losses/value of the threat, and the expected annual loss.</p>
+
+<pre><code>EXPOSURE        PROBABILITY   LOSS RANGE (AVG)         EXPECTED ANNUAL LOSS
+Power failure   30%           $5K–$200K ($102,500)     $30,750
+Embezzlement    5%            $1K–$50K ($25,500)       $1,275
+User error      98%           $200–$40K ($20,100)      $19,698</code></pre>
+
+<div class="divider"></div>
+
+<h2>Security Policy and Identity Management</h2>
+<p>A <strong>security policy</strong> ranks information risks, identifies acceptable security goals, and identifies mechanisms for achieving these goals. It drives other policies:</p>
+<ul>
+<li><strong>Acceptable Use Policy (AUP):</strong> Defines acceptable uses of the firm's information resources and computing equipment.</li>
+<li><strong>Authorization policies:</strong> Determine differing levels of user access to information assets.</li>
+</ul>
+
+<h3>Identity Management</h3>
+<p><strong>Identity management</strong> covers the business processes and tools used to identify valid system users and control their access. It identifies/authorizes different categories of users, specifies which portions of the system each user can access, and authenticates users while protecting their identities. <strong>Identity management systems</strong> capture access rules for different levels of users.</p>
+
+<pre><code>SECURITY PROFILE 1                          SECURITY PROFILE 2
+User: Personnel Dept. Clerk                  User: Divisional Personnel Manager
+Location: Division 1                         Location: Division 1
+Access: All employee data (Division 1)       Access: All employee data (Division 1)
+  - Medical history data: None                 - Type of Access: Read Only
+  - Salary: None
+  - Pensionable earnings: None
+Type of Access: Read and Update</code></pre>
+
+<div class="divider"></div>
+
+<h2>Disaster Recovery and Business Continuity Planning</h2>
+<ul>
+<li><strong>Disaster recovery planning:</strong> Devises plans for the restoration of disrupted computing and communications services.</li>
+<li><strong>Business continuity planning:</strong> Focuses on restoring actual business operations after a disaster.</li>
+</ul>
+<p>Both types of plans are needed to identify a firm's most critical systems. A <strong>business impact analysis</strong> determines the impact of an outage, and management must decide which systems should be restored first.</p>
+
+<div class="divider"></div>
+
+<h2>Information Systems Audit</h2>
+<p>An information systems audit examines the firm's overall security environment as well as the controls governing individual information systems. It reviews technologies, procedures, documentation, training, and personnel, and may even simulate a disaster to test the response of technology, IS staff, and other employees. The audit lists and ranks all control weaknesses, estimates the probability of their occurrence, and assesses the financial and organizational impact of each threat. Auditors typically document findings (e.g., weaknesses in a bank's loan system) along with management's response and any corrective actions taken.</p>
+
+<div class="divider"></div>
+
+<h2>Tools and Technologies for Safeguarding Information Resources</h2>
+
+<h3>1–2. Identity Management Software and Authentication</h3>
+<p><strong>Identity management software</strong> automates keeping track of all users and privileges, authenticating users, protecting identities, and controlling access. Common authentication methods include:</p>
+<ul>
+<li>Password systems</li>
+<li>Tokens</li>
+<li>Smart cards</li>
+<li>Biometric authentication</li>
+<li>Two-factor authentication</li>
+</ul>
+
+<h3>3. Firewalls</h3>
+<p>A <strong>firewall</strong> is a combination of hardware and software that prevents unauthorized users from accessing private networks. Key technologies include static packet filtering, stateful inspection, network address translation (NAT), and application proxy filtering.</p>
+
+<pre><code>Internet ---> Outer Firewall ---> Web Server ---> Inner Firewall ---> Corporate Systems ---> Databases
+                    |                                    |                    |
+                    +----------- Policy Rules ------------                   LANs (internal computers)</code></pre>
+
+<h3>4–5. Intrusion Detection and Antivirus/Antispyware Software</h3>
+<ul>
+<li><strong>Intrusion detection systems:</strong> Monitor "hot spots" on corporate networks to detect and deter intruders, examining events as they happen to catch attacks in progress.</li>
+<li><strong>Antivirus and antispyware software:</strong> Checks computers for the presence of malware and can often eliminate it — but requires continual updating.</li>
+<li><strong>Unified Threat Management (UTM) systems:</strong> Combine multiple security tools (firewall, antivirus, intrusion detection, etc.) into a single appliance.</li>
+</ul>
+
+<h3>6. Securing Wireless Networks</h3>
+<ul>
+<li><strong>WEP security</strong> provides some protection by assigning a unique name to the network's SSID (and not broadcasting it) and using it alongside VPN technology.</li>
+<li>The Wi-Fi Alliance finalized the <strong>WPA2</strong> specification, replacing WEP with stronger standards — continually changing keys and an encrypted authentication system with a central server.</li>
+</ul>
+
+<h3>7. Encryption</h3>
+<p><strong>Encryption</strong> transforms text or data into cipher text that cannot be read by unintended recipients. Two major network encryption methods:</p>
+<ol>
+<li><strong>Secure Sockets Layer (SSL)</strong> and its successor <strong>Transport Layer Security (TLS)</strong></li>
+<li><strong>Secure Hypertext Transfer Protocol (S-HTTP)</strong></li>
+</ol>
+
+<div class="callout-yellow">
+<strong>Remember (exam point) — Two Methods of Encryption:</strong>
+<ul>
+<li><strong>Symmetric key encryption:</strong> Sender and receiver use a single, shared key.</li>
+<li><strong>Public key encryption:</strong> Uses two mathematically related keys — a public key and a private key. The sender encrypts the message with the recipient's public key; the recipient decrypts it with their own private key.</li>
+</ul>
+</div>
+
+<pre><code>Sender --> [Encrypt with recipient's Public Key] --> Scrambled Message
+                                                              |
+                                                              v
+Recipient <-- [Decrypt with own Private Key] <---------------</code></pre>
+
+<h3>8. Digital Certificates and Public Key Infrastructure (PKI)</h3>
+<ul>
+<li><strong>Digital certificate:</strong> A data file used to establish the identity of users and electronic assets, protecting online transactions. It relies on a trusted third party called a <strong>Certification Authority (CA)</strong> to validate a user's identity.</li>
+<li>The CA verifies the user's identity, stores the information on a CA server, and generates an encrypted digital certificate containing owner ID information and a copy of the owner's public key.</li>
+<li><strong>Public Key Infrastructure (PKI):</strong> The use of public key cryptography working with a certificate authority — widely used in e-commerce.</li>
+</ul>
+
+<pre><code>Institution/Individual ---> Request Certificate ---> Certification Authority (CA)
+         ^                                                      |
+         |                                                      v
+         +---------------- Certificate Received -----------------
+                  (Contains: Serial Number, Version, Issuer Name,
+                   Issuance/Expiration Date, Subject Name,
+                   Subject Public Key, CA Signature)</code></pre>
+
+<h3>9–10. Ensuring System Availability & Fault-Tolerant Systems</h3>
+<ul>
+<li>Online transaction processing requires <strong>100% availability</strong> with no downtime.</li>
+<li><strong>Fault-tolerant computer systems</strong> provide continuous availability (e.g., for stock markets) by using redundant hardware, software, and power supply components to ensure uninterrupted service.</li>
+</ul>
+
+<h3>11–12. Controlling Network Traffic & Security Outsourcing</h3>
+<ul>
+<li><strong>Deep Packet Inspection (DPI):</strong> Examines data files, sorts low-priority material, and can block video and music downloads to manage network traffic.</li>
+<li><strong>Security outsourcing:</strong> Many firms use <strong>Managed Security Service Providers (MSSPs)</strong> to handle security monitoring and management.</li>
+</ul>
+
+<h3>13. Security in the Cloud</h3>
+<p>Responsibility for security ultimately resides with the company that owns the data. Firms must ensure cloud providers offer adequate protection regarding:</p>
+<ul>
+<li>Where data are stored</li>
+<li>Meeting corporate requirements and legal privacy laws</li>
+<li>Segregation of data from other clients</li>
+<li>Audits and security certifications</li>
+</ul>
+<p>These expectations are typically formalized in <strong>Service Level Agreements (SLAs)</strong>.</p>
+
+<h3>14. Securing Mobile Platforms</h3>
+<p>Security policies should cover special requirements for mobile devices, including guidelines for platforms and applications. <strong>Mobile device management tools</strong> provide authorization, inventory records, control over updates, the ability to lock down or erase lost devices, and encryption. Software can also segregate corporate data from personal data on devices.</p>
+
+<h3>15. Ensuring Software Quality</h3>
+<ul>
+<li><strong>Software metrics:</strong> Objective assessments of a system expressed as quantified measurements — e.g., number of transactions, online response time, payroll checks printed per hour, known bugs per hundred lines of code.</li>
+<li>Early and regular testing is essential.</li>
+<li><strong>Walkthrough:</strong> A review of a specification or design document by a small group of qualified people.</li>
+<li><strong>Debugging:</strong> The process by which errors are eliminated.</li>
+</ul>
+
+<div class="callout-green">
+<strong>Best practice:</strong> Combine multiple layers of defense — firewalls, encryption, strong authentication, employee training, and regular audits — rather than relying on a single safeguard. This is the principle of "defense in depth."
+</div>
+
+<div class="divider"></div>
+
+<h2>Summary & Key Takeaways</h2>
+<p>Information systems face threats from technical weaknesses, natural disasters, external hackers, and internal employees. Protecting these systems requires a combination of <strong>organizational controls</strong> (general and application controls, risk assessment, security policy, disaster recovery/business continuity planning, audits) and <strong>technical tools</strong> (firewalls, encryption, digital certificates, identity management, antivirus software, and mobile/cloud security measures).</p>
+
+<div class="callout-yellow">
+<strong>Remember (exam point):</strong>
+<ul>
+<li>Security = prevention of unauthorized access/damage; Controls = ensuring accuracy, reliability, and compliance.</li>
+<li>Malware includes viruses, worms, Trojan horses, ransomware, and spyware — each behaves differently.</li>
+<li>DoS = single-source attack; DDoS = multi-source (botnet) attack.</li>
+<li>Phishing, Pharming, and Evil Twins are related but distinct identity/data theft techniques.</li>
+<li>General controls apply organization-wide; Application controls apply to a specific system.</li>
+<li>Symmetric key encryption uses one shared key; Public key encryption uses a public/private key pair.</li>
+<li>Disaster recovery planning restores IT services; business continuity planning restores business operations.</li>
+</ul>
+</div>`,
+  summary: {
+    topic: 'Securing Information Systems: vulnerabilities, threats, controls, and safeguarding tools/technologies in organizational IT environments',
+    subTopics: [
+      'Security and Controls: Key Definitions',
+      'Why Information Systems Are Vulnerable',
+      'Contemporary Security Challenges and Vulnerabilities',
+      'Internet and Wireless Security Challenges',
+      'Malware: Viruses, Worms, Trojan Horses & More',
+      'Hackers and Computer Crime',
+      'Internal Threats: Employees',
+      'Software Vulnerability & Microprocessor Design Flaws',
+      'Business Value of Security and Control',
+      'Electronic Evidence and Computer Forensics',
+      'Information Systems Controls (General & Application)',
+      'Risk Assessment',
+      'Security Policy and Identity Management',
+      'Disaster Recovery and Business Continuity Planning',
+      'Information Systems Audit',
+      'Tools and Technologies for Safeguarding Information Resources',
+    ],
+    definitions: [
+      { term: 'Security', meaning: 'Policies, procedures, and technical measures used to prevent unauthorized access, alteration, theft, or physical damage to information systems.' },
+      { term: 'Controls', meaning: 'Methods, policies, and organizational procedures that ensure safety of assets, accuracy of accounting records, and adherence to management standards.' },
+      { term: 'Malware', meaning: 'Malicious software, including viruses, worms, trojan horses, spyware, and ransomware.' },
+      { term: 'Virus', meaning: 'A rogue software program that attaches itself to other programs or files to execute, usually without user knowledge.' },
+      { term: 'Worm', meaning: 'An independent program that copies itself from one computer to another over a network without needing a host file.' },
+      { term: 'Trojan Horse', meaning: 'Software that appears benign but performs unexpected, often malicious, actions.' },
+      { term: 'SQL Injection Attack', meaning: 'Hackers submit data to Web forms to exploit unprotected software and send rogue SQL queries to a database.' },
+      { term: 'Ransomware', meaning: 'Malware that locks or encrypts a victim\'s data/system until a ransom is paid.' },
+      { term: 'Spyware', meaning: 'Small programs that install themselves surreptitiously to monitor web activity and serve advertising.' },
+      { term: 'Key Logger', meaning: 'Software that records every keystroke on a computer to steal passwords and other sensitive data.' },
+      { term: 'Hacker/Cracker', meaning: 'An individual who gains unauthorized access to a computer system; "cracker" implies criminal intent.' },
+      { term: 'Cyber Vandalism', meaning: 'Intentional disruption, defacement, or destruction of a website or corporate information system.' },
+      { term: 'Spoofing', meaning: 'Misrepresenting oneself using fake e-mail addresses or redirecting a Web link to a masquerading destination.' },
+      { term: 'Sniffer', meaning: 'An eavesdropping program that monitors information traveling over a network to steal data.' },
+      { term: 'Denial-of-Service Attack (DoS)', meaning: 'Flooding a server with false requests from a single source to crash a network.' },
+      { term: 'Distributed Denial-of-Service Attack (DDoS)', meaning: 'Using numerous computers (a botnet) to launch a coordinated DoS attack.' },
+      { term: 'Botnet', meaning: 'A network of "zombie" PCs infiltrated by bot malware, used to deliver spam and malware or launch attacks.' },
+      { term: 'Computer Crime', meaning: 'Any violation of criminal law involving knowledge of computer technology for its perpetration, investigation, or prosecution.' },
+      { term: 'Identity Theft', meaning: 'Theft of personal information (SSN, license, credit card numbers) to impersonate someone else.' },
+      { term: 'Phishing', meaning: 'Setting up fake websites or e-mails resembling legitimate businesses to collect confidential personal data.' },
+      { term: 'Evil Twins', meaning: 'Wireless networks that pretend to offer trustworthy Wi-Fi connections to the Internet.' },
+      { term: 'Pharming', meaning: 'Redirecting users to a bogus Web page even when they type the correct address into their browser.' },
+      { term: 'Click Fraud', meaning: 'Fraudulently clicking an online ad without intent to learn more or purchase, inflating advertising costs.' },
+      { term: 'Cyberterrorism/Cyberwarfare', meaning: 'Politically or militarily motivated attacks carried out via the Internet or digital systems.' },
+      { term: 'Social Engineering', meaning: 'Tricking employees into revealing passwords or confidential information by posing as a legitimate company member.' },
+      { term: 'Patch', meaning: 'A small piece of software released to repair a flaw in commercial software.' },
+      { term: 'General Controls', meaning: 'Controls governing the design, security, and use of computer programs/data files across the entire IT infrastructure.' },
+      { term: 'Application Controls', meaning: 'Controls unique to a specific computerized application, covering input, processing, and output.' },
+      { term: 'Risk Assessment', meaning: 'Determines the level of risk to a firm if a specific activity/process is not properly controlled, based on threat type, probability, and potential loss.' },
+      { term: 'Security Policy', meaning: 'Ranks information risks, identifies acceptable security goals, and defines mechanisms to achieve them.' },
+      { term: 'Acceptable Use Policy (AUP)', meaning: 'Defines acceptable uses of a firm\'s information resources and computing equipment.' },
+      { term: 'Identity Management', meaning: 'Business processes and tools to identify valid system users, authenticate them, and control their access.' },
+      { term: 'Disaster Recovery Planning', meaning: 'Plans for restoring disrupted computing and communications services after a disaster.' },
+      { term: 'Business Continuity Planning', meaning: 'Plans focused on restoring actual business operations after a disaster.' },
+      { term: 'Information Systems Audit', meaning: 'Examination of a firm\'s overall security environment and controls governing individual information systems.' },
+      { term: 'Firewall', meaning: 'Combination of hardware and software that prevents unauthorized users from accessing private networks.' },
+      { term: 'Intrusion Detection System', meaning: 'Monitors hot spots on networks to detect and deter intruders in real time.' },
+      { term: 'Unified Threat Management (UTM)', meaning: 'A system combining multiple security tools (firewall, antivirus, intrusion detection) into one appliance.' },
+      { term: 'Encryption', meaning: 'Transforming text or data into cipher text that cannot be read by unintended recipients.' },
+      { term: 'Symmetric Key Encryption', meaning: 'Encryption method where sender and receiver use a single, shared key.' },
+      { term: 'Public Key Encryption', meaning: 'Encryption using two mathematically related keys — a public key (to encrypt) and a private key (to decrypt).' },
+      { term: 'Digital Certificate', meaning: 'A data file used to establish identity of users/electronic assets for protecting online transactions, validated by a Certification Authority.' },
+      { term: 'Public Key Infrastructure (PKI)', meaning: 'Use of public key cryptography working with a certificate authority, widely used in e-commerce.' },
+      { term: 'Fault-Tolerant Computer Systems', meaning: 'Systems with redundant hardware, software, and power supplies providing continuous, uninterrupted service.' },
+      { term: 'Deep Packet Inspection (DPI)', meaning: 'Examines data files and sorts low-priority network traffic, able to block video/music downloads.' },
+      { term: 'Managed Security Service Provider (MSSP)', meaning: 'A third-party company that monitors and manages security services for client organizations.' },
+      { term: 'Service Level Agreement (SLA)', meaning: 'A formal agreement defining the level of service (including security) a cloud provider must deliver to a client.' },
+      { term: 'Software Metrics', meaning: 'Objective, quantified measurements used to assess system quality (e.g., bugs per hundred lines of code).' },
+      { term: 'Walkthrough', meaning: 'A review of a specification or design document by a small group of qualified people.' },
+      { term: 'Debugging', meaning: 'The process by which software errors are identified and eliminated.' },
+    ],
+    keyPoints: [
+      'Security prevents unauthorized access/damage; Controls ensure accuracy, reliability, and compliance with standards.',
+      'Systems are vulnerable due to network accessibility, hardware/software problems, disasters, uncontrolled network use, and loss/theft of devices.',
+      'Web-based applications face security risks at every layer: client, communication lines, servers, and corporate systems/databases.',
+      'Wi-Fi networks are easily penetrated via sniffer programs and war driving, since SSIDs broadcast repeatedly and radio bands are easy to scan.',
+      'Viruses need a host file to execute; worms are independent programs that self-replicate across networks.',
+      'Trojan horses look harmless but perform unexpected malicious actions; SQL injection exploits unprotected Web forms; ransomware locks data for payment.',
+      'Spyware and key loggers secretly monitor user activity and steal sensitive data such as passwords.',
+      'DoS attacks come from a single source; DDoS attacks use botnets (networks of zombie PCs) from multiple sources, making them harder to stop.',
+      'Computer crime treats the computer as either the target (e.g., unauthorized access) or the instrument (e.g., theft of trade secrets) of a crime.',
+      'Phishing, Pharming, and Evil Twins are related but distinct identity-theft techniques; don\'t confuse them.',
+      'Security threats often originate internally through employee error or social engineering (tricking employees into revealing passwords).',
+      'Zero software defects are impossible in large programs; patches fix known flaws but exploits can appear faster than patches are released.',
+      'Microprocessor design flaws can affect nearly every chip made in the last 20 years, exposing data thought to be fully protected.',
+      'Key regulations: HIPAA (medical data), Gramm-Leach-Bliley Act (financial data), and Sarbanes-Oxley Act (financial reporting integrity).',
+      'Computer forensics scientifically collects, preserves, and analyzes digital evidence for use in court, including hidden/ambient data.',
+      'General controls apply organization-wide across six types: software, hardware, computer operations, data security, implementation, and administrative controls.',
+      'Application controls (input, processing, output) ensure a specific application processes only authorized, accurate data.',
+      'Risk assessment calculates expected annual loss using threat probability and potential loss value.',
+      'A security policy drives an Acceptable Use Policy (AUP) and authorization policies that define user access levels.',
+      'Disaster recovery planning restores IT services; business continuity planning restores overall business operations — both require identifying critical systems via business impact analysis.',
+      'Information systems audits rank control weaknesses and assess their financial/organizational impact.',
+      'Firewalls combine hardware and software to block unauthorized access using static packet filtering, stateful inspection, NAT, and application proxy filtering.',
+      'Intrusion detection systems and antivirus/antispyware software must be continually updated; UTM systems combine multiple tools in one appliance.',
+      'WPA2 replaced WEP with stronger, continually changing encryption keys for wireless security.',
+      'Symmetric key encryption uses one shared key; public key encryption uses a public key (encrypt) and private key (decrypt) pair — the basis of PKI and digital certificates.',
+      'Digital certificates, validated by a Certification Authority (CA), establish identity and protect online transactions; PKI is widely used in e-commerce.',
+      'Fault-tolerant systems use redundant hardware/software/power to guarantee 100% uptime for critical applications like stock markets.',
+      'Cloud security responsibility lies with the data-owning company; SLAs define data location, legal compliance, segregation, and audit requirements.',
+      'Mobile device management tools provide authorization, inventory tracking, update control, remote lock/erase, and encryption for mobile security.',
+      'Software quality is ensured through metrics, early/regular testing, walkthroughs, and debugging.',
+    ],
+  },
+},
+
+{
+  id: 10,
+  title: 'Managing Global Systems',
+  content: `<span class="lesson-badge">LESSON 10</span>
+<h1>Managing Global Systems</h1>
+<div class="meta-info">ICT2162 <span>•</span> 16 min read</div>
+
+<div class="callout-blue">
+<strong>What We'll Cover Today</strong>
+<ul>
+<li>What major factors are driving the internationalization of business?</li>
+<li>What are the alternative strategies for developing global businesses?</li>
+<li>What are the challenges posed by global information systems, and what management solutions address them?</li>
+<li>What are the issues and technical alternatives to consider when developing international information systems?</li>
+</ul>
+</div>
+
+<div class="divider"></div>
+
+<h2>Why Businesses Are Going Global</h2>
+<p>Modern businesses increasingly operate across national borders. Products are designed in one country, manufactured in another, and sold worldwide — all coordinated through information systems and networks.</p>
+
+<h3>Key Drivers of Internationalization</h3>
+<ul>
+<li><strong>Globalization</strong> - Businesses increasingly operate across national boundaries, creating a connected global economy.</li>
+<li><strong>International trade</strong> - Products are designed, sourced, and manufactured in different countries.</li>
+<li><strong>Global collaboration</strong> - Companies depend on international suppliers and partners.</li>
+</ul>
+
+<h3>Real-World Example: Apple iPhone's Global Supply Chain</h3>
+<p>The iPhone is <strong>designed</strong> by Apple engineers in the United States, with components <strong>sourced</strong> from countries such as Japan, South Korea, Taiwan, France, Germany, and Italy. <strong>Manufacturing and assembly</strong> are handled by Foxconn in China. Networks and information systems help coordinate global suppliers, production processes, and business operations across these countries.</p>
+
+<div class="callout-blue">
+<strong>Case Reference:</strong> The Bel Group (maker of <em>The Laughing Cow</em> cheese) is cited as a well-known example of a company achieving international success by effectively managing its global operations and brand across many countries.
+</div>
+
+<div class="divider"></div>
+
+<h2>Developing an International Information Systems Architecture</h2>
+<p>An <strong>international information systems architecture</strong> consists of the basic information systems required by organizations to coordinate worldwide trade and other activities.</p>
+
+<h3>Basic Strategy</h3>
+<ul>
+<li>Understand the global environment in which your firm is operating</li>
+<li>Identify the business drivers</li>
+</ul>
+<p>The architecture is then built around:</p>
+<ul>
+<li>Corporate strategy</li>
+<li>Structure of the organization</li>
+<li>Management issues</li>
+<li>Technology platform</li>
+</ul>
+
+<pre><code>International Information Systems Architecture (funnel, top to bottom)
+
+Global Environment: Business Drivers and Challenges
+         ↓
+Corporate Global Strategies
+         ↓
+Organization Structure
+         ↓
+Management and Business Processes
+         ↓
+Technology Platform
+</code></pre>
+
+<div class="divider"></div>
+
+<h2>Business Drivers and Challenges</h2>
+<p>Global business drivers fall into two categories: <strong>General Cultural Factors</strong> and <strong>Specific Business Factors</strong>.</p>
+
+<h3>General Cultural Factors</h3>
+<ul>
+<li>Global communication and transportation technologies
+  <ul>
+    <li>Global Village</li>
+    <li>Global Culture</li>
+  </ul>
+</li>
+<li>Development of global culture</li>
+<li>Emergence of global social norms</li>
+<li>Political stability</li>
+<li>Global knowledge base</li>
+</ul>
+
+<h3>Specific Business Factors</h3>
+<ul>
+<li>Global markets</li>
+<li>Global production and operations</li>
+<li>Global coordination</li>
+<li>Global workforce</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Challenges and Obstacles to Global Business Systems</h2>
+
+<h3>Global Challenges</h3>
+<ul>
+<li><strong>Cultural particularism:</strong> Regionalism, nationalism, language differences</li>
+<li><strong>Social expectations:</strong> Brand-name expectations, work hours</li>
+<li><strong>Political laws:</strong> Transborder data and privacy laws, commercial regulations</li>
+</ul>
+
+<h3>Specific (Technical) Challenges</h3>
+<ul>
+<li><strong>Standards:</strong> Different Electronic Data Interchange (EDI), e-mail, and telecommunications standards</li>
+<li><strong>Reliability:</strong> Phone networks not uniformly reliable</li>
+<li><strong>Speed:</strong> Different data transfer speeds, many slower than the United States</li>
+<li><strong>Personnel:</strong> Shortages of skilled consultants</li>
+</ul>
+
+<div class="callout-red">
+<strong>Common Mistake:</strong> Assuming that systems and processes that work smoothly in the home country will work identically abroad. Cultural, legal, and technical differences must always be planned for in global systems design.
+</div>
+
+<div class="divider"></div>
+
+<h2>Global Strategies and Business Organization</h2>
+<p>Companies choose one of <strong>four main global business strategies</strong>, depending on how centralized they want their decisions and operations to be.</p>
+
+<pre><code>1. Domestic Exporter  — Centralized business activities in the home country.
+   Example: Caterpillar Corporation
+
+2. Multinational       — Central financial control, decentralized foreign operations.
+   Example: General Motors, Chrysler, Intel
+
+3. Franchiser          — Home-country product/business model replicated via foreign franchisees.
+   Example: McDonald's, Mrs. Fields Cookies, KFC
+
+4. Transnational       — Globally integrated operations managed beyond national boundaries.
+</code></pre>
+
+<h3>Organizational Structures</h3>
+<ul>
+<li><strong>Centralized:</strong> Decisions and activities managed mainly from the home country</li>
+<li><strong>Decentralized:</strong> Decisions and activities distributed to local foreign units</li>
+<li><strong>Coordinated:</strong> Units across countries work together as an integrated organization</li>
+</ul>
+
+<pre><code>Global Business Strategy and Structure
+
+BUSINESS FUNCTION      DOMESTIC EXPORTER   MULTINATIONAL   FRANCHISER    TRANSNATIONAL
+Production              Centralized         Dispersed       Coordinated   Coordinated
+Finance/Accounting      Centralized         Centralized     Centralized   Coordinated
+Sales/Marketing         Mixed               Dispersed       Coordinated   Coordinated
+Human Resources         Centralized         Centralized     Coordinated   Coordinated
+Strategic Management    Centralized         Centralized     Centralized   Coordinated
+</code></pre>
+
+<div class="divider"></div>
+
+<h2>Global Systems to Fit the Strategy</h2>
+<p>Once a company picks its global strategy, it must adopt a matching <strong>systems configuration</strong> — defining how systems are developed and who operates them.</p>
+
+<pre><code>Four Types of Systems Configuration
+
+1. Centralized Systems    — Developed and operated at the domestic home base.
+2. Duplicated Systems     — Developed at home base, replicated/operated by autonomous foreign units.
+3. Decentralized Systems  — Each foreign unit develops its own systems based on local needs.
+4. Networked Systems      — Development and operations integrated and coordinated across all units.
+</code></pre>
+
+<pre><code>SYSTEM CONFIGURATION    Domestic Exporter   Multinational   Franchiser   Transnational
+Centralized                   X
+Duplicated                                                       X
+Decentralized                 x                X                x
+Networked                                       x                            X
+
+(X = dominant pattern, x = emerging pattern)
+</code></pre>
+
+<div class="callout-yellow">
+<strong>Remember for exams:</strong> Domestic Exporters rely mainly on <strong>Centralized</strong> systems, Multinationals favor <strong>Decentralized</strong> systems, Franchisers rely on <strong>Duplicated</strong> systems, and Transnationals use fully <strong>Networked</strong> systems. Each strategy also shows an "emerging" pattern pushing toward more decentralization or networking over time.
+</div>
+
+<div class="divider"></div>
+
+<h2>Management Challenges in Developing Global Systems</h2>
+<ul>
+<li>Agreeing on common user requirements</li>
+<li>Introducing changes in business processes</li>
+<li>Coordinating applications development</li>
+<li>Coordinating software releases</li>
+<li>Encouraging local users to support global systems</li>
+</ul>
+
+<h3>The Management Solution: Implementation</h3>
+<p><strong>Agreeing on Common User Requirements</strong></p>
+<ul>
+<li>Identify core business processes and common support systems across all divisions</li>
+<li>Develop a common language for discussing the business</li>
+</ul>
+
+<p><strong>Introducing Changes in Business Processes</strong></p>
+<ul>
+<li>Involve users in change design and explain the benefits of change</li>
+</ul>
+
+<p><strong>Coordinating Applications Development</strong></p>
+<ul>
+<li>Use an incremental approach — implement changes in small steps toward a long-term vision</li>
+</ul>
+
+<p><strong>Coordinating Software Releases</strong></p>
+<ul>
+<li>Establish procedures to ensure all units update their software at the same time</li>
+</ul>
+
+<p><strong>Encouraging Local Users to Support Global Systems</strong></p>
+<ul>
+<li>User Involvement — <strong>Cooptation:</strong> include opposing groups in designing and implementing solutions without giving up control over the direction of change</li>
+<li>Shared Ownership</li>
+<li>Centers of Excellence</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Technical Issues in Developing International Information Systems</h2>
+<ol>
+<li>Finding some way to standardize a global computing platform</li>
+<li>Finding specific, user-friendly software applications</li>
+<li>Networking problems</li>
+<li>Systems integration and connectivity</li>
+</ol>
+
+<h3>Computing Platforms and Systems Integration</h3>
+<ul>
+<li>Diverse computing platforms</li>
+<li>Integration of existing systems</li>
+<li>Global technical standards</li>
+<li>Cultural challenges to building global businesses</li>
+<li>Acceptable interfaces between systems</li>
+<li>Communication speeds</li>
+</ul>
+
+<h3>Connectivity</h3>
+<p><strong>Network Security and Reliability</strong></p>
+<ul>
+<li>Public Internet services do not guarantee consistent performance or security</li>
+<li>Firms often use private networks or <strong>Virtual Private Networks (VPNs)</strong></li>
+</ul>
+
+<p><strong>Global Intranets and Extranets</strong></p>
+<ul>
+<li><strong>Intranets</strong> support internal communication</li>
+<li><strong>Extranets</strong> enable information sharing with external business partners</li>
+</ul>
+
+<ul>
+<li>Infrastructure differences across countries</li>
+<li>Impact on e-commerce</li>
+</ul>
+
+<h3>Challenges of International Networks</h3>
+<ul>
+<li>Quality of service</li>
+<li>Security costs and tariffs</li>
+<li>Network management</li>
+<li>Installation delays</li>
+<li>Poor quality of international service</li>
+<li>Regulatory constraints</li>
+<li>Network capacity</li>
+</ul>
+
+<div class="callout-green">
+<strong>Tip:</strong> Internet penetration still varies widely by country, so always check local infrastructure and connectivity realities before rolling out a global information system.
+</div>
+
+<div class="divider"></div>
+
+<h2>Summary & Key Takeaways</h2>
+<p>Globalization, international trade, and global collaboration are pushing businesses to operate across borders. Building an <strong>international information systems architecture</strong> requires understanding the global environment, choosing a matching corporate strategy, organization structure, and systems configuration, and solving management and technical challenges along the way.</p>
+
+<div class="callout-yellow">
+<strong>Remember for exams:</strong>
+<ul>
+<li>Internationalization is driven by globalization, international trade, and global collaboration</li>
+<li>The international information systems architecture funnel: Global Environment → Corporate Global Strategies → Organization Structure → Management and Business Processes → Technology Platform</li>
+<li>Global business drivers = General Cultural Factors + Specific Business Factors</li>
+<li>Four global business strategies: Domestic Exporter, Multinational, Franchiser, Transnational</li>
+<li>Four systems configurations: Centralized, Duplicated, Decentralized, Networked systems — each strategy has a dominant and an emerging configuration pattern</li>
+<li>Management solutions include Cooptation, Shared Ownership, and Centers of Excellence to gain local user support</li>
+<li>Technical issues include standardizing platforms, user-friendly software, networking problems, and systems integration/connectivity</li>
+</ul>
+</div>`,
+  summary: {
+    topic: 'Managing Global Systems: drivers, strategies, and the management and technical challenges of building international information systems',
+    subTopics: [
+      'Why Businesses Are Going Global',
+      'Key Drivers of Internationalization',
+      "Real-World Example: Apple iPhone's Global Supply Chain",
+      'Developing an International Information Systems Architecture',
+      'Business Drivers and Challenges',
+      'General Cultural Factors',
+      'Specific Business Factors',
+      'Challenges and Obstacles to Global Business Systems',
+      'Global Strategies and Business Organization',
+      'Organizational Structures',
+      'Global Systems to Fit the Strategy',
+      'Management Challenges in Developing Global Systems',
+      'The Management Solution: Implementation',
+      'Technical Issues in Developing International Information Systems',
+      'Computing Platforms and Systems Integration',
+      'Connectivity',
+      'Challenges of International Networks',
+    ],
+    definitions: [
+      { term: 'Globalization', meaning: 'Businesses increasingly operate across national boundaries, creating a connected global economy.' },
+      { term: 'International trade', meaning: 'Products are designed, sourced, and manufactured in different countries.' },
+      { term: 'Global collaboration', meaning: 'Companies depend on international suppliers and partners to operate.' },
+      { term: 'International information systems architecture', meaning: 'The basic information systems required by organizations to coordinate worldwide trade and other activities.' },
+      { term: 'Domestic Exporter', meaning: 'A global strategy with centralized business activities in the home country (e.g., Caterpillar Corporation).' },
+      { term: 'Multinational', meaning: 'A global strategy with central financial control but decentralized foreign operations (e.g., General Motors, Chrysler, Intel).' },
+      { term: 'Franchiser', meaning: 'A global strategy where a home-country product and business model is replicated through foreign franchisees (e.g., McDonald\'s, Mrs. Fields Cookies, KFC).' },
+      { term: 'Transnational', meaning: 'A global strategy with globally integrated operations managed beyond national boundaries.' },
+      { term: 'Centralized (organizational structure)', meaning: 'Decisions and activities are managed mainly from the home country.' },
+      { term: 'Decentralized (organizational structure)', meaning: 'Decisions and activities are distributed to local foreign units.' },
+      { term: 'Coordinated (organizational structure)', meaning: 'Units across countries work together as an integrated organization.' },
+      { term: 'Centralized Systems', meaning: 'Systems configuration where systems are developed and operated at the domestic home base.' },
+      { term: 'Duplicated Systems', meaning: 'Systems configuration where systems are developed at the home base and replicated or operated by autonomous foreign units.' },
+      { term: 'Decentralized Systems', meaning: 'Systems configuration where each foreign unit develops its own systems based on local needs.' },
+      { term: 'Networked Systems', meaning: 'Systems configuration where systems development and operations are integrated and coordinated across all units.' },
+      { term: 'Cultural particularism', meaning: 'Resistance to global standardization caused by regionalism, nationalism, and language differences.' },
+      { term: 'Electronic Data Interchange (EDI)', meaning: 'A standard for exchanging business documents electronically; differs across countries, creating integration challenges.' },
+      { term: 'Cooptation', meaning: 'Including opposing groups in designing and implementing solutions without giving up control over the direction of change.' },
+      { term: 'Shared Ownership', meaning: 'A management solution approach where ownership of global systems is distributed among stakeholders to gain local buy-in.' },
+      { term: 'Centers of Excellence', meaning: 'Dedicated units recognized for excellence in specific systems or processes, used to encourage global systems adoption.' },
+      { term: 'Virtual Private Network (VPN)', meaning: 'A private network built over the public internet to provide secure, reliable connectivity between global locations.' },
+      { term: 'Intranet', meaning: 'A private network that supports internal communication within an organization.' },
+      { term: 'Extranet', meaning: 'A network that enables information sharing with external business partners.' },
+      { term: 'Quality of service', meaning: 'A measure of network performance reliability, which is a key challenge for international networks.' },
+    ],
+    keyPoints: [
+      'Internationalization of business is driven by globalization, international trade, and global collaboration',
+      'The Apple iPhone supply chain illustrates design in the US, components sourced from multiple countries, and assembly by Foxconn in China, all coordinated via IS',
+      'International information systems architecture funnel: Global Environment (Business Drivers and Challenges) → Corporate Global Strategies → Organization Structure → Management and Business Processes → Technology Platform',
+      'Global business drivers split into General Cultural Factors (communication/transport tech, global village, global culture, social norms, political stability, global knowledge base) and Specific Business Factors (global markets, production/operations, coordination, workforce)',
+      'Global challenges to business systems include cultural particularism, social expectations, and political laws',
+      'Specific/technical challenges include differing standards (EDI, e-mail, telecom), unreliable phone networks, slower data transfer speeds, and shortages of skilled personnel',
+      'Common mistake: assuming home-country systems/processes will work identically abroad without accounting for cultural, legal, and technical differences',
+      'Four main global business strategies: Domestic Exporter, Multinational, Franchiser, Transnational — each with real company examples',
+      'Organizational structures can be Centralized, Decentralized, or Coordinated across business functions (production, finance, sales, HR, strategic management)',
+      'Four systems configurations: Centralized, Duplicated, Decentralized, Networked Systems',
+      'Exam point: Domestic Exporters dominantly use Centralized systems, Multinationals use Decentralized systems, Franchisers use Duplicated systems, Transnationals use Networked systems, with emerging patterns pushing further decentralization/networking',
+      'Management challenges in global systems: agreeing on common user requirements, introducing process changes, coordinating applications development and software releases, and encouraging local user support',
+      'Management solutions: identify core processes and common language, involve users in change design, use incremental development, synchronize software releases, and apply Cooptation, Shared Ownership, and Centers of Excellence',
+      'Technical issues: standardizing a global computing platform, finding user-friendly software, solving networking problems, and achieving systems integration and connectivity',
+      'Computing platform/integration issues include diverse platforms, integrating existing systems, global technical standards, cultural challenges, system interfaces, and communication speeds',
+      'Connectivity concerns: public internet lacks guaranteed performance/security so firms use private networks or VPNs; intranets handle internal communication while extranets support external partner collaboration',
+      'International network challenges include quality of service, security costs/tariffs, network management, installation delays, poor international service quality, regulatory constraints, and network capacity',
+      'Tip: Internet penetration varies significantly by country, so infrastructure realities must be checked before deploying global systems',
+    ],
+  },
+}
+
+
+
 
 ]

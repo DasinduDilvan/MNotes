@@ -2606,5 +2606,391 @@ LRATC = the lowest parts of
   },
 },
 
+{
+  id: 6,
+  title: 'Consumer Behavior and Utility Maximization',
+  content: `<span class="lesson-badge">LESSON 6</span>
+<h1>Consumer Behavior and Utility Maximization</h1>
+<div class="meta-info">TCS2112 <span>•</span> 15 min read</div>
+
+<div class="callout-blue">
+<strong>What We'll Cover Today</strong>
+<ul>
+<li>Explain utility and its connection to consumer behavior</li>
+<li>Understand total utility and marginal utility</li>
+<li>Calculate the total utility of a collection of goods and services — utility maximization</li>
+<li>Explain individual demand and market demand curves</li>
+<li>Explain income and substitution effects</li>
+</ul>
+</div>
+
+<div class="divider"></div>
+
+<h2>Introduction to the Theory of Consumer Behavior</h2>
+<p>The theory of consumer behavior explains <strong>how rational consumers decide on the optimal combination of goods to consume with their limited budget</strong> in order to maximize their <strong>total utility</strong> at any given time.</p>
+
+<h2>What Is Utility?</h2>
+<p><strong>Utility</strong> = the satisfaction, happiness, or pleasure one gets from consuming a good.</p>
+<ul>
+<li>Utility ≠ Usefulness</li>
+<li>Utility is subjective (it differs between people and situations)</li>
+<li>Utility is difficult to quantify, and is measured in <strong>"utils"</strong> (a personal measure)</li>
+</ul>
+
+<h3>Two Types of Approaches to Measuring Utility</h3>
+<div class="callout-blue">
+<strong>Cardinal Approach</strong>
+<ul>
+<li>Says utility is <strong>measurable</strong>, and by assigning numbers to alternatives, utility can be added</li>
+<li>The index used to measure utility is called <strong>utils</strong></li>
+</ul>
+<strong>Ordinal Approach</strong>
+<ul>
+<li>Says utility is <strong>not measurable</strong>, but it can be compared</li>
+<li>Uses the ranking of alternatives — first, second, third, and so on</li>
+</ul>
+</div>
+
+<div class="divider"></div>
+
+<h2>Utility: A Tool to Analyze Purchase Decisions</h2>
+<h3>The Purpose of Utility Analysis</h3>
+<ul>
+<li>The purpose of utility analysis is to analyze <strong>how people behave</strong> rather than how they think</li>
+<li><strong>Theory of consumer choice:</strong> each consumer spends his or her income in a way that yields the greatest satisfaction</li>
+<li><strong>Utility</strong> = amount of satisfaction</li>
+</ul>
+
+<h3>Total versus Marginal Utility</h3>
+<ul>
+<li><strong>Total utility (TU):</strong> the total benefit to a consumer from <strong>all</strong> the units of a good purchased</li>
+<li><strong>Marginal utility (MU):</strong> the <strong>extra</strong> benefit from the <strong>last</strong> unit of a good purchased — also the change in total utility from purchasing 1 more unit of the good</li>
+</ul>
+<div class="callout-yellow">
+<strong>Remember:</strong> As the number of goods purchased increases, total utility increases but marginal utility decreases.
+</div>
+
+<div class="divider"></div>
+
+<h2>Explanation of the Law: The Glass of Water Example</h2>
+<p>Suppose a person is thirsty and the price of water is zero.</p>
+<ul>
+<li>He takes <strong>one glass</strong> of water, which gives him great satisfaction — the first glass has great utility for him.</li>
+<li>He takes a <strong>second glass</strong>. Its utility is less than the first, because the edge of his thirst has been blunted.</li>
+<li>A <strong>third glass</strong> gives even less utility than the second, and so on. Utility diminishes with every successive glass until it drops to zero — this is the point of <strong>consumer's equilibrium or maximum satisfaction</strong>.</li>
+</ul>
+<p>If the consumer is forced to drink even more water, it leads to <strong>disutility</strong>, causing total utility to decline and marginal utility to become <strong>negative</strong>. A rational consumer will stop consuming at the point where marginal utility becomes negative — even if the good is free.</p>
+<div class="callout-yellow">
+<strong>Remember:</strong> When a good is free, a consumer increases consumption only as long as additional units provide positive marginal utility.
+</div>
+
+<div class="divider"></div>
+
+<h2>Total and Marginal Utility: The Yogurt Example</h2>
+<p>The table below shows how total utility (TU) and marginal utility (MU) change as a person consumes more units of yogurt per meal.</p>
+
+<pre><code>Yogurts Consumed | Total Utility (Utils) | Marginal Utility (Utils)
+0                 | 0                      | -
+1                 | 10                     | 10
+2                 | 18                     | 8
+3                 | 24                     | 6
+4                 | 28                     | 4
+5                 | 30                     | 2
+6                 | 30                     | 0
+7                 | 28                     | -2
+</code></pre>
+
+<div class="callout-red">
+<strong>Observe:</strong> Marginal utility keeps falling with each additional yogurt (diminishing marginal utility). Total utility rises as long as MU is positive, stays flat when MU = 0 (unit 6), and actually falls when MU turns negative (unit 7, where TU drops from 30 to 28).
+</div>
+
+<div class="divider"></div>
+
+<h2>Law of Diminishing Marginal Utility</h2>
+<p><strong>Law of diminishing marginal utility:</strong> Added satisfaction declines as a consumer acquires additional units of a product.</p>
+<p>Example: Your desire for a car may be very strong. What about a second car? A third? Additional units of a good or service are worth less and less to a consumer in money terms.</p>
+
+<div class="callout-green">
+<strong>Consider this:</strong> Newspaper vending machines normally allow someone to take multiple papers. Publishers allow this because they believe people rarely take more than one, since the marginal utility of a second paper is often zero, and newspapers have little "shelf life."
+</div>
+
+<div class="divider"></div>
+
+<h2>Consumer Choice and the Budget Constraint</h2>
+<p>The theory of consumer behavior uses the law of diminishing marginal utility to explain how consumers allocate their income.</p>
+<ul>
+<li><strong>Budget Constraint:</strong> Consumers' incomes are limited because their individual resources are limited.</li>
+<li>Goods and services have prices and are scarce relative to demand. Consumers must choose among alternative goods with their limited money incomes.</li>
+</ul>
+
+<h3>The Building Blocks of Consumer Choice</h3>
+<ul>
+<li><strong>Rational Behavior:</strong> we want the most satisfaction from our money spent</li>
+<li><strong>Preferences:</strong> how much marginal utility we get from more of a product</li>
+<li><strong>Budget Constraint:</strong> everyone has one</li>
+<li><strong>Prices:</strong> choose the combination of goods that most pleases you</li>
+</ul>
+<p>For simplicity, economists assume a typical consumer has: rational behavior (wants to maximize total utility), clear-cut preferences, a budget constraint (limited income), and faces a price tag on every good — so <strong>consumers must compromise</strong>.</p>
+
+<div class="divider"></div>
+
+<h2>Marginal Utility Per Dollar and Consumer Equilibrium</h2>
+<p>It is the <strong>marginal utility per dollar spent</strong> that gets equalized — consumers compare the extra utility of each product with its cost.</p>
+<p>As long as one good provides more utility per dollar than another, the consumer buys more of that good. As more of the first product is bought, its marginal utility diminishes until the utility per dollar equals that of the other product.</p>
+
+<h3>Marginal Utility and Demand</h3>
+<ul>
+<li>The law of diminishing marginal utility leads to the <strong>negative slope of demand curves</strong></li>
+<li>↑ price → ↓ quantity demanded → ↑ marginal utility</li>
+<li>This restores equality between price and marginal utility</li>
+<li>If successive units of a good yield smaller amounts of extra utility, the consumer will buy additional units only if the price falls</li>
+</ul>
+
+<h3>Consumer Optimum for One Product</h3>
+<p>The consumer maximizes total satisfaction from a particular product when the <strong>marginal utility from consuming that product equals zero</strong>.</p>
+
+<pre><code>Consumer's Equilibrium (symbolically):
+
+MU = ΔTU / ΔQ
+
+At consumer's equilibrium: MU = P
+Re-written as: MU / P = 1
+</code></pre>
+
+<p>If money is not sufficient, the consumer will consume as long as marginal utility is greater than price. The general conditions for consumer equilibrium (optimum purchasing rules) are:</p>
+
+<pre><code>Equilibrium condition 1:   MU = P
+Equilibrium condition 2:   M = P × Q
+
+Where M = the amount of money the consumer has
+</code></pre>
+
+<div class="divider"></div>
+
+<h2>Derivation of the Demand Curve</h2>
+<p>Using marginal utility (MU) and price data for glasses of a good, we can derive an individual's demand curve:</p>
+
+<pre><code>Glasses | MU | Price
+1       | 8  | 8
+2       | 6  | 6
+3       | 4  | 4
+4       | 2  | 2
+5       | 0  | 0
+</code></pre>
+
+<p>Plotting Price against Quantity gives a downward-sloping <strong>MU = P</strong> curve. For example, at P = 4, the quantity demanded is 3 units — this is exactly where the MU curve intersects that price level.</p>
+
+<div class="callout-blue">
+<strong>Consumer Surplus:</strong> The difference between what a consumer is willing to pay for an additional unit of a good and the market price they actually pay is called <strong>consumer surplus</strong>. The area between the demand curve and the price line measures the total consumer surplus.
+</div>
+
+<div class="divider"></div>
+
+<h2>Optimum Purchasing Rule (Two or More Goods)</h2>
+<p>When buying two goods — say buns and socks — the consumer should purchase until:</p>
+
+<pre><code>MU from a Bun          MU from a pair of socks
+─────────────── =    ─────────────────────────
+Price of a Bun             Price of a pair of socks
+
+Generalized:   MUx / Px  =  MUy / Py
+</code></pre>
+
+<p>This is called the <strong>Equi-Proportional Utility Rule</strong>.</p>
+
+<p>The basic principle of rational choice when a consumer purchases two goods, X and Y:</p>
+
+<pre><code>If  MUx/Px > MUy/Py  →  Choose to consume an additional unit of good X
+If  MUx/Px < MUy/Py  →  Choose to consume an additional unit of good Y
+If  MUx/Px = MUy/Py  →  Consumer maximizes utility; cannot improve by adjusting choice
+</code></pre>
+
+<p>When a consumer purchases more than two goods, the general rule extends to:</p>
+
+<pre><code>MU1/P1 = MU2/P2 = MU3/P3 = ... = MUn/Pn
+
+Budget constraint:  M = P1Q1 + P2Q2 + P3Q3 + ... + PnQn
+</code></pre>
+
+<div class="callout-yellow">
+<strong>Utility Maximizing Rule (Remember for exams):</strong> The consumer's money income should be allocated so that the last dollar spent on each product yields the same amount of extra (marginal) utility.
+</div>
+
+<div class="divider"></div>
+
+<h2>Worked Example: Utility Maximizing Combination</h2>
+<p>A consumer has <strong>$10 income</strong> to spend on Product A (price = $1) and Product B (price = $2). The marginal utility (MU) and marginal utility per dollar (MU/price) for each unit are:</p>
+
+<pre><code>Unit of   | Product A (Price=$1)      | Product B (Price=$2)
+Product   | MU    | MU per dollar     | MU    | MU per dollar
+First     | 10    | 10                | 24    | 12
+Second    | 8     | 8                 | 20    | 10
+Third     | 7     | 7                 | 18    | 9
+Fourth    | 6     | 6                 | 16    | 8
+Fifth     | 5     | 5                 | 12    | 6
+Sixth     | 4     | 4                 | 6     | 3
+Seventh   | 3     | 3                 | 4     | 2
+</code></pre>
+
+<p><strong>Step-by-step allocation of the $10:</strong></p>
+<ol>
+<li>Compare the first units: Product A gives 10 utils/$ and Product B gives 12 utils/$ → <strong>Buy 1 unit of Product B for $2</strong> (higher utility per dollar). $8 left.</li>
+<li>Compare again: Product A's first unit = 10/$ vs Product B's second unit = 10/$ → tied → <strong>buy one of each</strong> (1 more unit of A for $1, 1 more unit of B for $2). $5 left.</li>
+<li>Compare again: Product A's second unit = 8/$ vs Product B's third unit = 9/$ → <strong>buy the third unit of Product B</strong> for $2. $3 left.</li>
+<li>Compare again: Product A's second unit = 8/$ vs Product B's fourth unit = 8/$ → tied → <strong>buy both</strong> (1 more unit of A for $1, 4th unit of B for $2). $0 left.</li>
+</ol>
+
+<div class="callout-yellow">
+<strong>Result:</strong> Income is completely spent, and the last dollar spent on each good gave the same marginal utility per dollar (8 utils/$). This combination is: <strong>2 units of Product A + 4 units of Product B</strong>, maximizing total utility.
+</div>
+
+<div class="divider"></div>
+
+<h2>Practice Problems</h2>
+
+<h3>Two-Good Practice Problem</h3>
+<p>Given the following total utility (TU) data, and an income/budget constraint of <strong>Rs 26</strong>, find the Utility-Maximizing Combination of Products A and B.</p>
+
+<pre><code>Product A: Price = Rs 5          Product B: Price = Rs 3
+Unit | TU                        Unit | TU
+1    | 22                        1    | 10
+2    | 32                        2    | 16
+3    | 40                        3    | 20
+4    | 46                        4    | 22
+5    | 48                        5    | 20
+</code></pre>
+
+<h3>Sunil's Problem</h3>
+<p>Sunil has <strong>Rs. 40</strong> to spend on either Product A or Product B, and wants to maximize his utility. The price of both products is <strong>Rs. 5</strong>. The total utility for each product at various quantities is:</p>
+
+<pre><code>Quantity | Total Utility (Product A) | Total Utility (Product B)
+1        | 140                       | 180
+2        | 260                       | 340
+3        | 360                       | 460
+4        | 440                       | 520
+5        | 500                       | 540
+</code></pre>
+
+<h3>Kamal's Problem</h3>
+<p>Kamal has <strong>Rs. 12</strong> to spend on either Product X (price = Rs. 2) or Product Y (price = Rs. 1), and wants to maximize his utility. The total utilities are:</p>
+
+<pre><code>Quantity | Total Utility (Product X) | Total Utility (Product Y)
+1        | 10                        | 8
+2        | 18                        | 15
+3        | 24                        | 21
+4        | 28                        | 26
+5        | 31                        | 30
+</code></pre>
+
+<p>Tasks: (1) Calculate the marginal utilities for both Product X and Product Y, (2) Calculate the marginal utility per rupee spent for each quantity, (3) Determine the number of units of Product X and Product Y that would maximize Kamal's utility.</p>
+
+<div class="divider"></div>
+
+<h2>Utility Maximization and the Demand Curve</h2>
+<ul>
+<li>When the price of Product X falls, the <strong>quantity demanded of Product X increases</strong>.</li>
+<li>Before the price falls, a specific combination of Product X with other products maximizes consumer utility. This combination gives the quantity demanded of X at that given price.</li>
+<li>When the price of Product X falls, a <strong>new</strong> utility-maximizing combination emerges — giving a greater quantity demanded of X at the lower price.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Income and Substitution Effects</h2>
+<div class="callout-blue">
+<strong>Income effect:</strong> The impact that a price change has on a consumer's real income or purchasing power.
+<br><br>
+<strong>Substitution effect:</strong> The impact that a change in a product's price has on its relative expensiveness compared to other goods.
+</div>
+
+<div class="divider"></div>
+
+<h2>Summary & Key Takeaways</h2>
+<p>Consumers aim to maximize total utility given a limited budget. As consumption of a good increases, total utility rises but marginal utility falls — this is the <strong>law of diminishing marginal utility</strong>. Rational consumers achieve equilibrium by equalizing the marginal utility per dollar spent across all goods purchased.</p>
+
+<div class="callout-yellow">
+<strong>Remember for exams:</strong>
+<ul>
+<li>Utility = satisfaction from consumption; measured in utils; subjective and hard to quantify precisely</li>
+<li>Cardinal approach = utility is measurable and additive; Ordinal approach = utility is only rankable, not measurable</li>
+<li>Total Utility (TU) = benefit from all units consumed; Marginal Utility (MU) = extra benefit from the last unit</li>
+<li>Law of Diminishing Marginal Utility: added satisfaction declines as more units are consumed</li>
+<li>Consumer's equilibrium/maximum satisfaction occurs when MU = 0 (for one good) or when MU/Price is equalized across all goods (Equi-Proportional Utility Rule: MU1/P1 = MU2/P2 = ... = MUn/Pn)</li>
+<li>Budget constraint: M = P1Q1 + P2Q2 + ... + PnQn</li>
+<li>Utility Maximizing Rule: allocate income so the last dollar spent on each product yields the same marginal utility</li>
+<li>Diminishing marginal utility explains the negative (downward) slope of demand curves</li>
+<li>Consumer surplus = difference between willingness to pay and actual market price paid; shown as the area between the demand curve and the price line</li>
+<li>Income effect = impact of a price change on real purchasing power; Substitution effect = impact of a price change on a good's relative expensiveness</li>
+</ul>
+</div>`,
+  summary: {
+    topic: 'Consumer Behavior and Utility Maximization: how rational consumers allocate limited income across goods to maximize total satisfaction',
+    subTopics: [
+      'Introduction to the Theory of Consumer Behavior',
+      'What Is Utility?',
+      'Two Types of Approaches to Measuring Utility (Cardinal vs Ordinal)',
+      'Utility: A Tool to Analyze Purchase Decisions',
+      'Total versus Marginal Utility',
+      'Explanation of the Law: The Glass of Water Example',
+      'Total and Marginal Utility: The Yogurt Example',
+      'Law of Diminishing Marginal Utility',
+      'Consumer Choice and the Budget Constraint',
+      'The Building Blocks of Consumer Choice',
+      'Marginal Utility Per Dollar and Consumer Equilibrium',
+      'Marginal Utility and Demand',
+      'Consumer Optimum for One Product',
+      'Derivation of the Demand Curve',
+      'Consumer Surplus',
+      'Optimum Purchasing Rule (Two or More Goods)',
+      'Worked Example: Utility Maximizing Combination',
+      'Practice Problems',
+      'Utility Maximization and the Demand Curve',
+      'Income and Substitution Effects',
+    ],
+    definitions: [
+      { term: 'Utility', meaning: 'The satisfaction, happiness, or pleasure one gets from consuming a good; subjective and measured in "utils."' },
+      { term: 'Util', meaning: 'A personal, subjective unit used to measure utility.' },
+      { term: 'Cardinal Approach', meaning: 'A theory stating utility is measurable and additive across alternatives, using utils as the index.' },
+      { term: 'Ordinal Approach', meaning: 'A theory stating utility is not measurable but can be compared/ranked (first, second, third, etc.).' },
+      { term: 'Theory of Consumer Choice', meaning: 'Each consumer spends income in a way that yields the greatest satisfaction.' },
+      { term: 'Total Utility (TU)', meaning: 'The total benefit to a consumer from all units of a good purchased.' },
+      { term: 'Marginal Utility (MU)', meaning: 'The extra benefit from the last unit of a good purchased; the change in total utility from consuming one more unit.' },
+      { term: 'Disutility', meaning: 'Negative satisfaction that occurs when consumption continues past the point where marginal utility turns negative.' },
+      { term: 'Law of Diminishing Marginal Utility', meaning: 'Added satisfaction from a good declines as a consumer acquires additional units of it.' },
+      { term: 'Consumer Equilibrium (Maximum Satisfaction)', meaning: 'The point at which marginal utility from a good drops to zero (single good) or is equalized per dollar across goods (multiple goods).' },
+      { term: 'Budget Constraint', meaning: 'The limitation on consumer spending caused by limited income relative to the prices of goods.' },
+      { term: 'Rational Behavior', meaning: 'Consumer behavior aimed at getting the most utility/satisfaction from money spent.' },
+      { term: 'Marginal Utility per Dollar (MU/Price)', meaning: 'The extra utility gained per dollar spent on a good; consumers equalize this across goods to maximize total utility.' },
+      { term: 'Equi-Proportional Utility Rule', meaning: 'The rule that a consumer purchasing two or more goods should buy until MU/Price is equal across all goods: MU1/P1 = MU2/P2 = ... = MUn/Pn.' },
+      { term: 'Utility Maximizing Rule', meaning: 'Consumer income should be allocated so the last dollar spent on each product yields the same marginal utility.' },
+      { term: 'Demand Curve', meaning: 'A curve showing the relationship between price and quantity demanded, derived from marginal utility; slopes downward due to diminishing marginal utility.' },
+      { term: 'Consumer Surplus', meaning: 'The difference between what a consumer is willing to pay for a unit of a good and the market price actually paid; represented by the area between the demand curve and price line.' },
+      { term: 'Income Effect', meaning: 'The impact that a price change has on a consumer\'s real income or purchasing power.' },
+      { term: 'Substitution Effect', meaning: 'The impact that a change in a product\'s price has on its relative expensiveness compared to other goods.' },
+    ],
+    keyPoints: [
+      'Utility is the satisfaction a consumer gets from a good; it is subjective, differs between people, and is measured in "utils"',
+      'Cardinal approach treats utility as measurable and additive; Ordinal approach treats utility as only rankable/comparable',
+      'Total utility (TU) is the benefit from all units consumed; marginal utility (MU) is the extra benefit from the last unit',
+      'As consumption increases, total utility rises but marginal utility decreases (diminishing marginal utility)',
+      'The glass-of-water example shows marginal utility declines with each additional unit until it becomes negative, at which point a rational consumer stops consuming even if the good is free',
+      'The yogurt table example demonstrates: TU rises while MU is positive, TU plateaus when MU = 0, and TU falls when MU turns negative',
+      'Law of Diminishing Marginal Utility: added satisfaction declines as more units of a product are acquired (e.g., desire for a 2nd or 3rd car)',
+      'Newspaper vending machine example illustrates MU of a second unit often being zero, explaining why people rarely take more than one',
+      'Consumer choice depends on rational behavior, clear-cut preferences, a budget constraint, and prices — consumers must compromise',
+      'Consumers maximize utility by equalizing marginal utility per dollar spent (MU/Price) across all goods purchased',
+      'Diminishing marginal utility explains the negative slope of demand curves: as price rises, quantity demanded falls, restoring equality between price and marginal utility',
+      'Consumer optimum for one product occurs when MU of that product equals zero; general equilibrium conditions are MU = P and M = P × Q',
+      'Consumer surplus is the gap between willingness to pay and actual price paid, shown as the area between the demand curve and price line',
+      'Equi-Proportional Utility Rule for two or more goods: MUx/Px = MUy/Py (or MU1/P1 = MU2/P2 = ... = MUn/Pn), subject to the budget constraint M = P1Q1 + P2Q2 + ... + PnQn',
+      'Utility Maximizing Rule (exam key point): allocate income so the last dollar spent on each product yields the same marginal utility',
+      'Worked example demonstrates step-by-step utility maximization with $10 income, Product A ($1) and Product B ($2): optimal combination is 2 units of A and 4 units of B, both reaching 8 utils/$ on the last dollar spent',
+      'Practice problems (Two-Good Rs26 problem, Sunil\'s Rs40 problem, Kamal\'s Rs12 problem) all apply the same marginal-utility-per-currency-unit comparison method to find the utility-maximizing combination',
+      'When the price of a good falls, quantity demanded increases because a new utility-maximizing combination emerges, forming the basis of the demand curve',
+      'Income effect = impact of a price change on a consumer\'s real purchasing power',
+      'Substitution effect = impact of a price change on a good\'s relative expensiveness compared to substitutes',
+    ],
+  },
+}
+
 
 ]

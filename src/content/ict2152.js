@@ -3366,9 +3366,964 @@ keyPoints: [
 },
 
 
+{
+  id: 8,
+  title: 'Communication Diagrams',
+  content: `
+    <span class="lesson-badge">LESSON 08</span>
+    <h1>Communication Diagrams</h1>
+    <div class="meta-info">ICT2152 <span>•</span> 12 min read</div>
+
+    <p><strong>Interaction diagrams</strong> are UML behavioral diagrams. They show how <strong>objects</strong> or <strong>actors</strong> interact with each other by exchanging <strong>messages</strong> to complete a specific task or reach a goal in a system.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Interaction diagrams focus on the <strong>dynamic behavior</strong> of a system — how objects "talk" to each other while the system runs.</p>
+    </div>
+
+    <h2>Purpose of Interaction Diagrams</h2>
+    <ul>
+      <li>Represent the <strong>communication</strong> between objects in a system</li>
+      <li>Show the <strong>sequence and flow</strong> of messages exchanged between objects</li>
+      <li>Describe how objects <strong>collaborate</strong> to perform an operation or use case</li>
+      <li>Help developers understand and design the dynamic behavior of a system</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Communication Diagram vs Sequence Diagram</h2>
+    <p>Both are types of interaction diagrams, but they focus on different things.</p>
+
+    <pre><code>Communication Diagram              | Sequence Diagram
+------------------------------------|------------------------------------
+Focuses on how objects are          | Focuses on when messages occur
+connected                           |
+Objects arranged freely across      | Objects arranged horizontally
+the diagram                         |
+Links show relationships between    | Lifelines extend vertically
+communicating objects               |
+Message numbers show order of       | Messages ordered from top to bottom
+interactions                        |
+Emphasizes organization of objects  | Emphasizes timing and order of
+and their relationships             | interactions</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Communication Diagram</strong> = focus on object relationships (structure). <strong>Sequence Diagram</strong> = focus on message timing (order).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>What is a Communication Diagram?</h2>
+    <p>A UML <strong>Communication Diagram</strong> is an interaction diagram that shows how objects communicate with each other through messages to perform a particular task or achieve a specific goal.</p>
+
+    <h3>Purpose of a Communication Diagram</h3>
+    <ul>
+      <li>Shows interactions between objects in a system</li>
+      <li>Illustrates the relationships between communicating objects</li>
+      <li>Represents the messages exchanged between objects</li>
+      <li>Helps understand the collaboration between objects to complete a use case</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Main Elements</h2>
+
+    <h3>1. Objects</h3>
+    <p>Objects represent the <strong>participants</strong> involved in the interaction. They are usually shown as rectangles labelled <code>objectName:ClassName</code>.</p>
+
+    <h3>2. Links</h3>
+    <p><strong>Links</strong> are lines connecting objects. They show that two objects can communicate with each other.</p>
+
+    <h3>3. Messages</h3>
+    <p><strong>Messages</strong> are labels written on links. They represent the communication between objects — this could be a method call, a request, or a response.</p>
+
+    <h3>4. Sequence Numbers</h3>
+    <p><strong>Sequence numbers</strong> show the order in which messages are sent and processed, such as <code>1</code>, <code>2</code>, <code>2.1</code>, and <code>2.2</code>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Message Numbering</h2>
+    <p>Every message in a communication diagram is numbered to show its execution order.</p>
+
+    <pre><code>1: login()            → First message
+2: validateUser()      → Second message
+2.1: checkCredentials() → A nested message inside message 2
+3: displayResult()     → Third message</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Numbers like <code>2.1</code> and <code>2.2</code> mean these messages happen <strong>inside</strong> (nested within) message <code>2</code>. This shows a sub-step of a bigger step.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Example: User Login System</h2>
+    <p>Consider a user logging into a system. The messages exchanged are:</p>
+    <ul>
+      <li>User → Login Page: <code>enterCredentials()</code></li>
+      <li>Login Page → Database: <code>validateCredentials()</code></li>
+      <li>Database → Login Page: <code>validationResult()</code></li>
+      <li>Login Page → User: <code>displayMessage()</code></li>
+    </ul>
+
+    <pre><code>:User --1: enterCredentials()--> :LoginPage
+:User <--4: displayMessage()-- :LoginPage
+
+:LoginPage --2: validateCredentials()--> :Database
+:LoginPage <--3: validationResult()-- :Database</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Notice how the message numbers (1, 2, 3, 4) tell you the exact order of the conversation, even though the objects are placed freely around the diagram, not in a straight line.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Practice Activities</h2>
+    <p>Try drawing a UML Communication Diagram for each scenario below. Use objects, links, messages, and sequence numbers.</p>
+
+    <h3>Activity 1: ATM Cash Withdrawal</h3>
+    <p>A customer uses an ATM to withdraw money. The customer inserts the ATM card and enters the PIN. The ATM sends the card details and PIN to the bank system for verification. If the details are valid, the customer enters the withdrawal amount. The bank system checks the account balance and approves the transaction if sufficient funds are available. The ATM dispenses the cash and updates the account balance.</p>
+
+    <pre><code>customer:Customer --1: insertCard()--> atm:ATM
+customer:Customer --2: enterPIN(pin)--> atm:ATM
+atm:ATM --3: verifyCardPIN(cardDetails, pin)--> bankSystem:BankSystem
+atm:ATM <--4: authenticationResult()-- bankSystem:BankSystem
+customer:Customer --5: enterAmount(amount)--> atm:ATM
+atm:ATM --6: checkBalance(amount)--> bankSystem:BankSystem
+atm:ATM <--7: approvalResult()-- bankSystem:BankSystem
+atm:ATM --8: dispenseCash(amount)--> cashDispenser:CashDispenser
+atm:ATM --9: updateBalance(amount)--> account:Account
+atm:ATM --10: returnCard()--> customer:Customer
+atm:ATM --11: displayReceipt()--> customer:Customer</code></pre>
+
+    <h3>Activity 2: Online Shopping System</h3>
+    <p>A customer visits an online shopping website and searches for a product. The customer selects a product and adds it to the shopping cart. The system checks the product's availability and shows the price. The customer proceeds to checkout and enters delivery details. The payment system processes the payment and sends the result back. If payment succeeds, the system creates the order and sends an order confirmation to the customer.</p>
+
+    <pre><code>customer:Customer --1: searchProduct(keyword)--> website:ShoppingSystem
+website:ShoppingSystem --2.1: getProductDetails(keyword)--> catalog:Catalogue
+website:ShoppingSystem <--2.2: returnProductDetails()-- catalog:Catalogue
+website:ShoppingSystem --2.3: getAvailability(productId)--> inventory:Inventory
+website:ShoppingSystem <--2.4: returnAvailability()-- inventory:Inventory
+website:ShoppingSystem --3: displayProductDetails(price, availability, colors)--> customer:Customer
+customer:Customer --4: addToCart(productId)--> website:ShoppingSystem
+website:ShoppingSystem --5: addToCart(productId)--> cart:ShoppingCart
+customer:Customer --5: enterDeliveryDetails(details)--> website:ShoppingSystem
+customer:Customer --6: enterPaymentDetails(paymentDetails)--> website:ShoppingSystem
+website:ShoppingSystem --7: processPayment(paymentDetails)--> payment:PaymentSystem
+website:ShoppingSystem <--8: paymentStatus(success/fail)-- payment:PaymentSystem
+website:ShoppingSystem --9: createOrder(orderDetails)--> order:OrderSystem
+website:ShoppingSystem <--10: orderConfirmation(orderId)-- order:OrderSystem
+website:ShoppingSystem --11: sendOrderConfirmation(orderId)--> customer:Customer</code></pre>
+
+    <h3>Activity 3: Library Book Borrowing System</h3>
+    <p>A student requests to borrow a book from a library. The Student object sends a borrowing request to the LibrarySystem object. The LibrarySystem checks whether the requested book is available. If the book is available, the system updates the borrowing record and confirms the borrowing request. Before confirming, the LibrarySystem calculates the due date by performing an <strong>internal operation</strong> (a self-message).</p>
+
+    <pre><code>student:Student --1: requestBook(bookId)--> librarySystem:LibrarySystem
+librarySystem:LibrarySystem --2: checkAvailability(bookId)--> inventory:Inventory
+librarySystem:LibrarySystem <--3: availabilityResult(isAvailable)-- inventory:Inventory
+librarySystem:LibrarySystem --4.1 [isAvailable = true]: calculateDueDate()--> librarySystem:LibrarySystem (self-message)
+librarySystem:LibrarySystem --4.2 [isAvailable = false]: bookUnavailability()--> student:Student
+librarySystem:LibrarySystem --5 [isAvailable = true]: updateBorrowingRecord(bookId, dueDate)--> borrowings:BorrowingRecord
+librarySystem:LibrarySystem --6 [isAvailable = true]: confirmBorrowingRequest(dueDate)--> student:Student</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A message sent from an object back to itself (like <code>calculateDueDate()</code> above) is called a <strong>self-message</strong>. It shows an internal operation the object performs on its own.</p>
+    </div>
+
+    <h3>Activity 4: ATM PIN Verification with Repetition</h3>
+    <p>A customer inserts an ATM card and enters a PIN. The ATM system sends the PIN to the bank system for verification. If the PIN is incorrect, the ATM asks the customer to re-enter it. This repeats until the customer enters the correct PIN or reaches a maximum of three attempts. If correct, the ATM shows the transaction menu. If wrong after three attempts, the ATM retains the card and shows a message.</p>
+
+    <pre><code>customer:Customer --1: insertCard()--> atm:ATMSystem
+customer:Customer --2 *[i: 1..3]: enterPIN(pin)--> atm:ATMSystem
+atm:ATMSystem --3 *[i: 1..3]: verifyPIN(pin)--> bank:BankSystem
+atm:ATMSystem <--4 *[i: 1..3]: verificationResult(isValid)-- bank:BankSystem
+atm:ATMSystem --5 *[i: 1..3, isValid = false]: incrementAttempt()--> atm:ATMSystem (self-message)
+atm:ATMSystem --6 *[i: 1..3, isValid = false]: displayInvalidPIN()--> customer:Customer
+atm:ATMSystem --7 [isValid = true]: displayTransactionMenu()--> customer:Customer
+atm:ATMSystem --8 [i = 3 AND isValid = false]: retainCard()--> customer:Customer
+atm:ATMSystem --9 [i = 3 AND isValid = false]: displayCardRetainedMessage()--> customer:Customer</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The <code>*</code> symbol before a message number means the message repeats (a loop). The condition in square brackets <code>[ ]</code> is called a <strong>guard condition</strong> — the message only runs if that condition is true.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do not confuse Communication Diagrams with Sequence Diagrams in exams. Communication Diagrams emphasize <strong>object links and numbering</strong>, while Sequence Diagrams emphasize <strong>lifelines and timing</strong> from top to bottom.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'UML Communication Diagrams',
+    subTopics: [
+      'Purpose of Interaction Diagrams',
+      'Communication Diagram vs Sequence Diagram',
+      'What is a Communication Diagram?',
+      'Purpose of a Communication Diagram',
+      'Main Elements (Objects, Links, Messages, Sequence Numbers)',
+      'Message Numbering',
+      'Example: User Login System',
+      'Practice Activities (ATM, Online Shopping, Library, PIN Verification)',
+    ],
+    definitions: [
+      { term: 'Interaction Diagram', meaning: 'A UML behavioral diagram that shows how objects or actors exchange messages to complete a task or goal.' },
+      { term: 'Communication Diagram', meaning: 'An interaction diagram that shows how objects communicate through messages, focusing on object relationships and connections.' },
+      { term: 'Sequence Diagram', meaning: 'An interaction diagram that shows messages between objects ordered by time, using vertical lifelines.' },
+      { term: 'Object', meaning: 'A participant in an interaction, shown as a rectangle labelled objectName:ClassName.' },
+      { term: 'Link', meaning: 'A line connecting two objects, showing that they can communicate with each other.' },
+      { term: 'Message', meaning: 'A label on a link representing communication between objects, such as a method call, request, or response.' },
+      { term: 'Sequence Number', meaning: 'A number (like 1, 2, 2.1) that shows the order in which messages are sent and processed.' },
+      { term: 'Self-message', meaning: 'A message an object sends to itself to represent an internal operation.' },
+      { term: 'Guard Condition', meaning: 'A condition written in square brackets [ ] that must be true for a message to execute.' },
+    ],
+    keyPoints: [
+      'Interaction diagrams show how objects exchange messages to achieve a goal.',
+      'Communication Diagrams focus on object relationships; Sequence Diagrams focus on message timing.',
+      'In Communication Diagrams, objects are placed freely, and links show possible communication paths.',
+      'Messages are numbered (1, 2, 2.1, 2.2, 3...) to show execution order; nested numbers show sub-steps.',
+      'The four main elements of a Communication Diagram are Objects, Links, Messages, and Sequence Numbers.',
+      'A self-message (object calling itself) represents an internal operation, like calculateDueDate().',
+      'An asterisk (*) before a message number indicates a repeating loop.',
+      'A guard condition in square brackets [ ] controls whether a message executes.',
+      'Objects are labelled as objectName:ClassName, e.g., atm:ATM.',
+    ],
+  },
+},
 
 
+{
+  id: 9,
+  title: 'Sequence Diagrams',
+  content: `
+    <span class="lesson-badge">LESSON 09</span>
+    <h1>Sequence Diagrams</h1>
+    <div class="meta-info">ICT2152 <span>•</span> 18 min read</div>
 
+    <p>A <strong>sequence diagram</strong> is a UML <strong>interaction diagram</strong> that shows how actors, objects, or system components exchange <strong>messages</strong> over time to complete a scenario.</p>
+
+    <p>It arranges participants <strong>horizontally</strong> and messages <strong>vertically</strong>. This makes it easy to see the order of requests, responses, conditions, and loops.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Sequence diagrams are widely used in software development to visualize system behavior and help developers design, analyze, and understand complex interactions.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>When to Use Sequence Diagrams?</h2>
+    <ul>
+      <li><strong>Model a specific use case or scenario</strong> — illustrate how a system behaves during a single use case, showing the step-by-step flow of messages between objects</li>
+      <li><strong>Design or refine system architecture</strong> — visualize how components such as the UI, business logic, and database interact, helping architects plan or improve system structure</li>
+      <li><strong>Clarify complex processes</strong> — break down complicated workflows into clear, time-ordered interactions</li>
+      <li><strong>Validate logic before implementation</strong> — confirm that all necessary interactions are defined correctly before coding begins, reducing design errors</li>
+      <li><strong>Explain system behavior to stakeholders</strong> — present technical interactions in a way both developers and non-technical people can understand</li>
+      <li><strong>Design or analyze integrations and APIs</strong> — map out how services exchange requests and responses in distributed or microservice environments</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>UML Sequence Diagram Symbols and Notation</h2>
+
+    <h3>Objects and Lifelines</h3>
+    <p>A sequence diagram contains several <strong>lifeline notations</strong> arranged horizontally across the top.</p>
+    <ul>
+      <li>Lifeline notations should <strong>not overlap</strong> each other</li>
+      <li>Each lifeline represents an object or part of the system that participates in interactions</li>
+      <li>Each object has a lifeline, shown as a <strong>dashed vertical line</strong> starting from the bottom center of its object box</li>
+      <li>The lifeline shows the object's <strong>existence or lifespan</strong> during the sequence of events</li>
+    </ul>
+
+    <pre><code>+--------+
+| Object |
++--------+
+    :
+    :  (dashed vertical line = lifeline)
+    :</code></pre>
+
+    <h3>Actor Lifeline</h3>
+    <p>A lifeline notation with an <strong>actor element</strong> symbol (stick figure) is used when the sequence diagram is owned by a use case.</p>
+
+    <h3>Entity Lifeline</h3>
+    <p>A lifeline with an <strong>entity element</strong> represents <strong>system data</strong>. For example, in a customer service application, the Customer entity manages all data related to a customer.</p>
+
+    <h3>Boundary Lifeline</h3>
+    <p>A lifeline with a <strong>boundary element</strong> indicates a system boundary or software element in a system — for example, user interface screens, database gateways, or menus that users interact with.</p>
+
+    <h3>Control Lifeline</h3>
+    <p>A lifeline with a <strong>control element</strong> indicates a controlling entity or manager. It <strong>organizes and schedules</strong> the interactions between boundaries and entities, acting as a mediator between them.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>There are four main lifeline types: <strong>Actor</strong> (user), <strong>Boundary</strong> (UI/interface), <strong>Control</strong> (manager/coordinator), and <strong>Entity</strong> (data). These come from the Boundary-Control-Entity (BCE) pattern.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Activation Bars</h2>
+    <p>An <strong>activation bar</strong> is a thin rectangle (box) placed on a lifeline. It shows that an object is <strong>active</strong> (or instantiated) during an interaction. The length of the rectangle shows how long the object stays active.</p>
+
+    <ul>
+      <li>An <strong>interaction</strong> happens when one object sends a message to another object</li>
+      <li><strong>Message Caller</strong> — the object that sends the message</li>
+      <li><strong>Message Receiver</strong> — the object that receives the message</li>
+    </ul>
+
+    <ul>
+      <li>The <strong>Message Caller</strong> is active when it sends the message</li>
+      <li>The <strong>Message Receiver</strong> becomes active when it receives the message and starts processing it</li>
+    </ul>
+
+    <pre><code>Object A                     Object B
+   |                             |
+   [activation bar]              |
+   |---- <<message>> ---------->[activation bar]
+   |                             |
+   |                             |</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Message Arrows</h2>
+    <ul>
+      <li>A <strong>message arrow</strong> represents a message sent from one object to another</li>
+      <li>Messages can flow: left to right, right to left, or back to the same object (<strong>self-message</strong>)</li>
+      <li>Different <strong>arrowheads</strong> represent different types of messages</li>
+      <li>A message arrow includes a <strong>message signature</strong> describing the message being sent</li>
+    </ul>
+
+    <h3>Message Signature Format</h3>
+    <pre><code>attribute = message_name(arguments): return_type</code></pre>
+
+    <h3>Synchronous Message</h3>
+    <p>A <strong>synchronous message</strong> is used when the sender <strong>waits</strong> for the receiver to process the message and return, before continuing with another message.</p>
+    <pre><code>Object1 ------------> Object2   (solid line, solid arrowhead)</code></pre>
+
+    <h3>Asynchronous Message</h3>
+    <p>An <strong>asynchronous message</strong> is used when the sender does <strong>not wait</strong> for the receiver to finish — it can keep sending other messages to other objects right away.</p>
+
+    <pre><code>Object1 --<<message>>--------> Object2
+Object1 --<<asynchronousMessage>>--> Object3
+Object1 --<<asynchronousMessage>>--> Object3</code></pre>
+
+    <h3>Return Message</h3>
+    <p>A <strong>return message</strong> shows that the message receiver has finished processing and is returning control back to the message caller. It is usually drawn as a <strong>dashed line</strong> with an open arrowhead.</p>
+
+    <pre><code>Object1 ----<<message>>----> Object2
+Object1 <---<<message>>----- Object2  (return, dashed)</code></pre>
+
+    <h3>Participant Creation Message</h3>
+    <p>Objects do not always exist for the whole duration of the sequence. Objects can be <strong>created</strong> by a message, shown with a <code>&lt;&lt;create&gt;&gt;</code> message pointing to the new object's box.</p>
+
+    <h3>Participant Destruction Message</h3>
+    <p>Objects that are no longer needed can be <strong>deleted/destroyed</strong>. This is shown by adding an <strong>'X'</strong> at the end of the lifeline of that participant.</p>
+
+    <pre><code>Object1 --<<destroy>>--> X   (end of lifeline for Object2)</code></pre>
+
+    <h3>Reflexive Message (Self-Message)</h3>
+    <p>When an object sends a message to <strong>itself</strong>, it is called a <strong>reflexive message</strong>. It is drawn as a small loop coming out of and back into the same activation bar.</p>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Think of a reflexive message as an object "talking to itself" — like performing an internal calculation or validation step.</p>
+    </div>
+
+    <h3>Comment</h3>
+    <p>UML diagrams allow <strong>comments</strong> to be added for extra explanation. A comment is shown as a rectangle with a <strong>folded-over corner</strong>, connected to the related object with a dashed line.</p>
+
+    <div class="divider"></div>
+
+    <h2>How to Draw a Sequence Diagram</h2>
+    <p>The message flow of a sequence diagram is based on the <strong>narrative</strong> (description) of a particular use case.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Before drawing a sequence diagram, you should first draw the <strong>use case diagram</strong> and prepare a clear, detailed description of what that use case does.</p>
+    </div>
+
+    <h3>Step 1: Identify the Use Case</h3>
+    <p>Start by defining the specific use case scenario you want to model.</p>
+
+    <h3>Step 2: Identify the Objects and Actors</h3>
+    <p>Example — for "create a new user account", the objects/actors involved could be:</p>
+    <ul>
+      <li>Librarian</li>
+      <li>Online Library Management system</li>
+      <li>User credentials database</li>
+      <li>Email system</li>
+    </ul>
+
+    <h3>Step 3: Describe the Use Case in Detail</h3>
+    <p>Write a detailed description of what the use case does. This description helps you figure out exactly which interactions should go into the sequence diagram.</p>
+
+    <h3>Step 4: Identify Sequence of Interactions</h3>
+    <ol>
+      <li>The librarian requests the system to create a new online library account</li>
+      <li>The librarian selects the library user account type</li>
+      <li>The librarian enters the user's details</li>
+      <li>The user's details are checked using the User Credentials Database</li>
+      <li>The new library user account is created</li>
+      <li>A summary of the new account's details is emailed to the user</li>
+    </ol>
+
+    <h3>Step 5: Arrange Actors and Lifelines</h3>
+    <p>Place all actors and objects horizontally across the top of the diagram.</p>
+
+    <h3>Step 6: Add Messages and Interaction Details</h3>
+    <p>Draw the message arrows between lifelines, in the correct order, with proper message signatures.</p>
+
+    <h3>Step 7: Review and Refine Diagram</h3>
+    <p>Check the diagram for correctness, clarity, and completeness before finalizing it.</p>
+
+    <div class="divider"></div>
+
+    <h2>UML Sequence Diagram Best Practices</h2>
+    <ul>
+      <li>Draw <strong>smaller</strong> sequence diagrams</li>
+      <li>Avoid unnecessary or repetitive diagrams</li>
+      <li>Use <strong>clear and consistent naming conventions</strong></li>
+      <li>Maintain logical ordering and alignment</li>
+      <li>Limit the number of objects per diagram</li>
+      <li>Highlight alternative or conditional flows with <strong>fragments</strong> (like <code>alt</code>, <code>loop</code>)</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Avoid cramming too many objects and messages into a single sequence diagram — it becomes hard to read and defeats the purpose of visualizing behavior clearly.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Practice Activities</h2>
+    <p>Try drawing a UML Sequence Diagram for each scenario below.</p>
+
+    <h3>Activity 1: Login Validation</h3>
+    <p>A user enters their username and password into a login screen. The Login Screen sends a <code>validateCredentials()</code> message to the Authentication System. The Authentication System checks the credentials and returns the login result.</p>
+    <p>Participants: <code>LoginScreen</code>, <code>AuthenticationSystem</code></p>
+
+    <pre><code>LoginScreen                    AuthenticationSystem
+    |--1: validateCredentials(username, password)-->|
+    |<--2: loginResult()----------------------------|</code></pre>
+
+    <h3>Activity 2: Food Order Notification (Asynchronous Message)</h3>
+    <p>When a customer places an order, the FoodOrderingSystem sends order confirmation details to the NotificationService. While the notification service is processing, the food ordering system updates the order status shown to the customer (without waiting). The notification service completes sending the confirmation afterward.</p>
+    <p>Participants: <code>FoodOrderingSystem</code>, <code>NotificationService</code></p>
+
+    <pre><code>FoodOrderingSystem              NotificationService
+    |--1: sendOrderConfirmation(orderDetails)-->|  (async, hollow arrowhead)
+    |--2: displayOrderStatus()--|  (self-message / reflexive)
+    |                                            [Processing notification]
+    |<--3: notificationSent()-------------------|</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Message 1 is <strong>asynchronous</strong> because FoodOrderingSystem does not wait — it moves on to message 2 (updating order status) immediately, while NotificationService works in the background.</p>
+    </div>
+
+    <h3>Activity 3: View Examination Results (Actor + Object)</h3>
+    <p>A student logs into the University Examination System and requests to view their examination results. The system retrieves the results and displays them.</p>
+    <p>Participants: <code>Student</code> (Actor), <code>ExaminationSystem</code> (Object)</p>
+
+    <pre><code>Student (Actor)                 ExaminationSystem
+    |--1: login(userId, password)-->|
+    |<--2: loginSuccess()-----------|
+    |--3: viewExamResults()-------->|
+    |                                |--4: retrieveResults()--| (self-message)
+    |<--5: displayResults(resultList)|</code></pre>
+
+    <h3>Activity 4: Update Phone Number (Boundary + Entity)</h3>
+    <p>A student requests to update their phone number through the University Portal. The portal sends the updated phone number to the Student entity to save the new information. The entity confirms the update was completed successfully.</p>
+    <p>Participants: <code>UniversityPortal</code> (Boundary), <code>Student</code> (Entity)</p>
+
+    <pre><code><<boundary>>                    <<entity>>
+UniversityPortal                Student
+    |--1: updatePhoneNumber(studentId, newPhoneNo)-->|
+    |                                 |--2: savePhoneNumber()--| (self-message)
+    |<--3: updateSuccess()----------------------------|</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The <code>&lt;&lt;boundary&gt;&gt;</code> and <code>&lt;&lt;entity&gt;&gt;</code> labels above the object names, along with their special lifeline symbols, show the BCE role of each participant.</p>
+    </div>
+
+    <h3>Activity 5: Search Book (Boundary + System Object)</h3>
+    <p>A librarian enters a book title through the Library Management System interface. The interface sends a request to search for the book to the Library Catalog, and displays the search results returned.</p>
+    <p>Participants: <code>LibraryInterface</code> (Boundary), <code>LibraryCatalog</code> (System object)</p>
+
+    <pre><code><<boundary>>
+LibraryInterface                 LibraryCatalog
+    |--1: searchBook(title)---------->|
+    |                                  |--2: findBooks(title)--| (self-message)
+    |<--3: searchResults(bookList)-----|</code></pre>
+
+    <h3>Activity 6: ATM Withdrawal (Boundary + Control + Entity)</h3>
+    <p>A customer requests to withdraw money using an ATM. The ATMInterface sends the withdrawal request to the WithdrawalController. The controller checks the customer's account balance with the BankAccount entity. If sufficient funds are available, the controller instructs the ATM interface to dispense the cash.</p>
+    <p>Participants: <code>ATMInterface</code> (Boundary), <code>WithdrawalController</code> (Control), <code>BankAccount</code> (Entity)</p>
+
+    <pre><code><<boundary>>        <<control>>              <<entity>>
+ATMInterface      WithdrawalController       BankAccount
+    |--1: withdraw(amount)-->|                    |
+    |                        |--2: checkBalance(accountId)-->|
+    |                        |<--3: balance--------|
+
+   alt [balance >= amount]
+    |                        |--4: deductAmount(amount)-->|
+    |                        |<--5: success----------------|
+    |<--6: dispenseCash()----|                    |
+   else [balance < amount]
+    |<--7: showInsufficientFunds()--|             |
+   end</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>In this example, <strong>WithdrawalController</strong> is the <strong>control object</strong> — it coordinates the steps between the boundary (ATMInterface) and the entity (BankAccount), and decides what happens next based on the account balance. The <code>alt</code> fragment box shows the two possible conditional paths (sufficient vs insufficient funds).</p>
+    </div>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Remember the roles: <strong>ATMInterface</strong> (Boundary) — talks to the customer. <strong>WithdrawalController</strong> (Control) — makes decisions and coordinates. <strong>BankAccount</strong> (Entity) — stores and manages account data.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'UML Sequence Diagrams',
+    subTopics: [
+      'What is a Sequence Diagram?',
+      'When to Use Sequence Diagrams?',
+      'Symbols and Notation (Objects, Lifelines, Actor, Entity, Boundary, Control)',
+      'Activation Bars',
+      'Message Arrows (Synchronous, Asynchronous, Return, Create, Destroy, Reflexive)',
+      'Comments',
+      'How to Draw a Sequence Diagram',
+      'UML Sequence Diagram Best Practices',
+      'Practice Activities',
+    ],
+    definitions: [
+      { term: 'Sequence Diagram', meaning: 'A UML interaction diagram that shows how actors, objects, or system components exchange messages over time, with participants arranged horizontally and messages vertically.' },
+      { term: 'Lifeline', meaning: 'A dashed vertical line below an object or actor box, showing the object\'s existence during the sequence of events.' },
+      { term: 'Actor Lifeline', meaning: 'A lifeline with a stick-figure symbol, used when the diagram is owned by a use case.' },
+      { term: 'Entity Lifeline', meaning: 'A lifeline representing system data, such as a Customer entity that stores customer information.' },
+      { term: 'Boundary Lifeline', meaning: 'A lifeline representing a system boundary or interface element, such as a UI screen or database gateway.' },
+      { term: 'Control Lifeline', meaning: 'A lifeline representing a controlling entity/manager that organizes and schedules interactions between boundaries and entities.' },
+      { term: 'Activation Bar', meaning: 'A thin rectangle on a lifeline showing that an object is active or executing an operation; its length shows duration.' },
+      { term: 'Message Caller', meaning: 'The object that sends a message.' },
+      { term: 'Message Receiver', meaning: 'The object that receives a message and begins processing it.' },
+      { term: 'Synchronous Message', meaning: 'A message where the sender waits for the receiver to finish processing before continuing.' },
+      { term: 'Asynchronous Message', meaning: 'A message where the sender does not wait for the receiver to finish before sending other messages.' },
+      { term: 'Return Message', meaning: 'A dashed message showing that the receiver has finished processing and is returning control to the caller.' },
+      { term: 'Participant Creation Message', meaning: 'A <<create>> message showing that a new object is created during the sequence of events.' },
+      { term: 'Participant Destruction Message', meaning: 'A message marked with an X at the end of a lifeline, showing that the object is destroyed/removed.' },
+      { term: 'Reflexive Message (Self-message)', meaning: 'A message an object sends to itself, usually shown as a small loop.' },
+      { term: 'Comment', meaning: 'A folded-corner rectangle used to add notes/explanations to a UML diagram, linked with a dashed line.' },
+    ],
+    keyPoints: [
+      'Sequence diagrams arrange objects/actors horizontally and messages vertically, showing message order over time.',
+      'Sequence diagrams are used to model use cases, design architecture, clarify processes, validate logic, and explain behavior to stakeholders.',
+      'The four lifeline types from the BCE pattern are Actor, Boundary, Control, and Entity.',
+      'Activation bars show when an object is active; their length shows duration.',
+      'Synchronous messages make the sender wait; asynchronous messages let the sender continue without waiting.',
+      'Return messages (dashed lines) show the receiver passing control back to the caller.',
+      'Objects can be created (<<create>>) and destroyed (X on lifeline) during a sequence.',
+      'A reflexive (self) message is when an object sends a message to itself.',
+      'Message signature format: attribute = message_name(arguments): return_type.',
+      'Best practice: keep sequence diagrams small, use clear naming, and use fragments like alt for conditional flows.',
+      'In Boundary-Control-Entity design, the Control object coordinates between the Boundary (UI) and the Entity (data).',
+    ],
+  },
+},
+
+{
+  id: 7,
+  title: 'Basic Concept of Macroeconomics',
+  content: `<span class="lesson-badge">LESSON 7</span>
+<h1>Basic Concept of Macroeconomics</h1>
+<div class="meta-info">TCS2112 <span>•</span> 18 min read</div>
+
+<h2>Learning Outcomes</h2>
+<ul>
+<li>To understand the <strong>meaning</strong> of Macroeconomics</li>
+<li>To understand the <strong>scope</strong> of Macroeconomics</li>
+<li>To understand the <strong>importance</strong> of Macroeconomics</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>What Is Macroeconomics?</h2>
+<p><strong>Macroeconomics</strong> deals with the total, or <strong>aggregate</strong>, level of output, consumption, investment, employment, and the general price level in an economy. It is the study of the behavior of the economy <strong>as a whole</strong>, rather than individual markets.</p>
+<p>It examines the overall level of a nation's output, employment, prices, and foreign trade — at a national, regional, or even global scale.</p>
+
+<div class="callout-blue">
+<strong>Three Ways to Define Macroeconomics</strong>
+<ul>
+<li>It deals with the aggregate level of output, consumption, investment, employment, and the general price level in the economy.</li>
+<li>It is the study of the behavior of the economy as a whole, examining a nation's output, employment, prices, and foreign trade.</li>
+<li>The word comes from the Greek prefix <em>makro-</em> meaning "large." It is a branch of economics dealing with the performance, structure, behavior, and decision-making of an economy as a whole (national, regional, or global), rather than individual markets.</li>
+</ul>
+</div>
+
+<h3>Macroeconomic Concerns</h3>
+<p>Three of the major concerns of macroeconomics are:</p>
+<ul>
+<li><strong>Unemployment</strong></li>
+<li><strong>Inflation</strong></li>
+<li><strong>Output growth</strong></li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>1. Unemployment</h2>
+<p><strong>Unemployment</strong> refers to the situation where a country's population does not find work to earn their livelihood. It represents the ratio of the labor force that fails to get employment.</p>
+<div class="callout-yellow">
+The <strong>unemployment rate</strong> is a key indicator of the economy's health. The existence of unemployment implies that the aggregate labor market is not in equilibrium.
+</div>
+
+<h3>Why Unemployment Is a Problem</h3>
+<p>Unemployment results in:</p>
+<ul>
+<li><strong>Lost incomes and production</strong></li>
+<li><strong>Lost human capital</strong></li>
+</ul>
+<p>Unemployment benefits create a safety net, but they don't fully replace lost wages, and not everyone receives them. Prolonged unemployment permanently damages a person's job prospects by destroying their human capital.</p>
+
+<h3>Employment and Unemployment (The Labor Force)</h3>
+<p>The working-age population is divided into two groups:</p>
+<ul>
+<li>People <strong>in</strong> the labor force</li>
+<li>People <strong>not in</strong> the labor force</li>
+</ul>
+<p>The <strong>labor force</strong> is the sum of employed and unemployed workers.</p>
+<pre><code>Unemployment Rate = Number of Unemployed ÷ Labor Force</code></pre>
+<p>To be counted as <em>unemployed</em>, a person must actively want to work and be actively looking for a job, but have not yet found one.</p>
+
+<h3>Effects of Unemployment on the Individual</h3>
+<ul>
+<li>Reduces the level of income that an individual earns.</li>
+<li>As income falls, consumption also falls — people pay for necessities rather than luxuries.</li>
+<li>Goods that are income elastic (luxuries) are consumed less.</li>
+<li>Quality of life is reduced for the unemployed worker.</li>
+</ul>
+
+<h3>Economic Effects of Unemployment</h3>
+<ul>
+<li>Rising unemployment has a <strong>negative impact</strong> on economic growth potential.</li>
+<li><strong>Consumption</strong> is likely to fall as consumers face lower income.</li>
+<li><strong>Government spending</strong> increases as the government becomes responsible for benefit payments.</li>
+<li><strong>Taxation levels</strong> decrease since fewer people are working and paying tax.</li>
+</ul>
+
+<h3>Influence of Unemployment on the Economy</h3>
+<ul>
+<li><strong>Reduces national output</strong> — with large numbers of unemployed labor, production in some sectors declines, reducing the country's national output.</li>
+<li><strong>Lowers the standard of living</strong> — standard of living is measured using per capita income. High unemployment reduces gross national product, which reduces per capita income and therefore the standard of living.</li>
+<li><strong>Increases the incidence of poverty.</strong></li>
+<li><strong>Reduces national income</strong> — high unemployment lowers firm income/profits, reducing the income tax and company profit tax collected by government, which reduces national income.</li>
+<li><strong>Slows down the process of national development.</strong></li>
+</ul>
+
+<h3>Impact of Unemployment on Society</h3>
+<ul>
+<li>Creates unsafe conditions within the family.</li>
+<li>Increases the incidence of crime in the community.</li>
+<li>Causes stress and a lack of confidence.</li>
+</ul>
+
+<h3>Unemployment and the Economy's Performance</h3>
+<p>Unemployment can have significant effects on the economy as a whole, and these effects are most marked with long-term unemployment. If there is unemployment, economic resources are not being used effectively, and the economy operates <strong>below</strong> any point on its <strong>PPF (Production Possibility Frontier) curve</strong>.</p>
+
+<h3>Full Employment</h3>
+<div class="callout-blue">
+<strong>Full employment</strong> is defined as the situation where the unemployment rate equals the <strong>natural unemployment rate</strong>. At full employment, there is no <strong>cyclical unemployment</strong> — all remaining unemployment is <strong>frictional</strong> and <strong>structural</strong>.
+</div>
+<div class="callout-red">
+<strong>Common mistake:</strong> Full employment does <em>not</em> mean 0% unemployment. Some frictional and structural unemployment always exists even in a healthy, fully-employed economy.
+</div>
+
+<div class="divider"></div>
+
+<h2>2. Inflation</h2>
+<p><strong>Inflation</strong> is the rise in the general level of prices. In the long term, inflation erodes consumer purchasing power — accumulated wealth buys less and less over time. High inflation makes it difficult for businesses to plan for the future, since the cost of raw materials becomes uncertain.</p>
+<div class="callout-blue">
+<strong>Inflation (dictionary definition):</strong> A rise in prices, which can be translated as the decline of purchasing power over time.
+</div>
+
+<h3>Types of Price-Level Change</h3>
+<ul>
+<li><strong>Inflation</strong> — an increase in the overall price level.</li>
+<li><strong>Hyperinflation</strong> — a period of very rapid increases in the overall price level. This is a rare phenomenon.</li>
+<li><strong>Deflation</strong> — a decrease in the overall price level. Prolonged deflation can be just as damaging to the economy as sustained inflation.</li>
+</ul>
+
+<h3>Causes of Inflation</h3>
+<p>Inflation results when the macro economy has too much demand for available production. These causes fall under two general categories:</p>
+<ul>
+<li><strong>Demand-Pull Inflation:</strong> Occurs when households, businesses, governments, and foreign industries collectively try to purchase more output than the economy is capable of producing. The demand side is "pulling" the price level higher.</li>
+<li><strong>Cost-Push Inflation:</strong> Inflation attributable to decreases in supply, primarily due to increases in production cost.</li>
+</ul>
+
+<h3>Causes of Deflation</h3>
+<p>Deflation is a fall in the price level — a negative rate of inflation. There are two main potential causes:</p>
+<ul>
+<li>A fall in <strong>aggregate demand (AD)</strong></li>
+<li>A rightward shift in <strong>aggregate supply (AS)</strong> — i.e., lower production costs through improved technology</li>
+</ul>
+<pre><code>Falling Demand (AD) ← Global recession, Fiscal austerity,
+                       Decline in confidence, Fall in money supply
+
+Lower Costs of Production ← Lower oil prices, Improved technology,
+                             Appreciation / falling import prices
+
+Falling Demand + Lower Production Costs + Negative Inflation Expectations
+                        ↓
+                 CAUSES OF DEFLATION</code></pre>
+
+<h3>Why Inflation and Deflation Are Problems</h3>
+<ul>
+<li>They affect the <strong>distribution of income and wealth</strong>.</li>
+<li>Wage contracts between workers and employers can cause losses to employees — if inflation is higher than expected, wages do not rise immediately to compensate.</li>
+<li>They can lower <strong>real GDP</strong> and <strong>employment</strong>.</li>
+</ul>
+
+<h3>Hyperinflation: Causes and Effects</h3>
+<p><strong>Causes:</strong></p>
+<ul>
+<li>A high money supply leads to higher demand while supply stays constant — prices of goods and services rise.</li>
+<li><strong>Demand-pull inflation</strong> — a sudden increase in demand with constant supply.</li>
+<li>The market loses confidence, and citizens start losing confidence in the currency.</li>
+<li>A warlike situation between countries can also cause hyperinflation.</li>
+</ul>
+<p><strong>Effects:</strong></p>
+<ul>
+<li>Currency value depreciates.</li>
+<li>Investment in gold, real estate, and commodities increases.</li>
+<li>Foreign investors back out.</li>
+<li>Shortage of basic food supplies.</li>
+<li>Disrupts banking and financial institutions.</li>
+<li>Exports become cheaper, imports become costlier.</li>
+<li>Unemployment increases and government revenue falls.</li>
+</ul>
+
+<h3>Creeping Inflation</h3>
+<div class="callout-yellow">
+When the rise in prices is very low — like that of a snail or creeper — it is called <strong>Creeping Inflation</strong>. The inflation rate here is around <strong>5%</strong>, with the general price level rising at a moderate rate over a long period of time.
+</div>
+<div class="callout-red">
+<strong>Common mistake:</strong> Don't confuse "inflation" with "hyperinflation." Ordinary inflation is a normal, ongoing feature of most economies; hyperinflation (very rapid price rises) is a rare, extreme phenomenon.
+</div>
+
+<div class="divider"></div>
+
+<h2>3. Output and Growth</h2>
+<p><strong>Growth</strong> refers to a change in the level of economic activity from one year to another. Poor and developing countries, in particular, wish to attain a rise in their national income and per capita income.</p>
+<div class="callout-blue">
+<strong>Aggregate output</strong> is the total quantity of goods and services produced in an economy in a given period. It is the main measure used to see how well an economy is doing.
+</div>
+<p>Economists are concerned with finding the right level of rise in investment so the economy can achieve its desired level of income and employment <strong>without</strong> inflation or deflation — resulting in full utilization of resources.</p>
+<div class="callout-yellow">
+<strong>Full employment</strong> means the maximization of output and employment given existing resources, while <strong>growth</strong> refers to an increase in output and employment over time. These are related but distinct concepts.
+</div>
+
+<div class="divider"></div>
+
+<h2>Nature and Scope of Macroeconomics</h2>
+<p>Macroeconomics is the study of aggregates or averages covering the entire economy — total employment, national income, national output, total investment, total consumption, total savings, aggregate supply, aggregate demand, the general price level, wage level, and cost structure.</p>
+<p>It is also known as the <strong>theory of income and employment</strong>, or simply <strong>income analysis</strong>. It is concerned with unemployment, economic fluctuations, inflation or deflation, international trade, and economic growth — studying the causes of unemployment and the various determinants of national income.</p>
+
+<div class="divider"></div>
+
+<h2>Goals of Macroeconomic Policy</h2>
+<ul>
+<li>Full employment</li>
+<li>Price stability</li>
+<li>Rapid economic growth</li>
+<li>Reduction of economic inequality</li>
+<li>Stable exchange rate</li>
+<li>Protect the environment</li>
+<li>High living standards</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Key Macroeconomic Variables</h2>
+<pre><code>1.  National Income and GDP
+2.  Unemployment
+3.  Economic Growth
+4.  Inflation
+5.  International Trade
+6.  Balance of Payments
+7.  Monetary & Fiscal Policy
+8.  Interest Rate
+9.  Stock Market
+10. Business Cycle
+11. Exchange Rate</code></pre>
+
+<h3>1. Gross Domestic Product (GDP)</h3>
+<p><strong>GDP</strong> refers to the monetary value of all finished goods and services produced within a country's borders in a specific time period (usually calculated annually). It includes all private and public consumption, government outlays, investments, and exports minus imports occurring within a defined territory. GDP is one of the primary indicators used to gauge the health of a country's economy.</p>
+
+<h3>2. National Income</h3>
+<p><strong>National Income</strong> is the total value of all goods and services produced within a nation over a specified period, representing the sum of wages, profits, rents, interest, and pension payments to residents of the nation. It gives an accurate picture of the economy and the purchasing power of people in the country.</p>
+
+<h3>3. Unemployment Rate</h3>
+<p>The <strong>labor force</strong> consists of those who are employed and those who are unemployed. The <strong>unemployment rate</strong> equals the number of unemployed people divided by the labor force.</p>
+
+<h3>4. Economic Growth</h3>
+<p><strong>Economic growth</strong> is the increase in the market value of the goods and services produced by an economy over time. It is also described as the increase in the capacity of an economy to produce goods and services, compared across periods of time.</p>
+
+<h3>5. Inflation</h3>
+<p>Inflation means a rise in the general level of prices of goods and services over time. As the general price level rises, each unit of currency buys fewer goods and services — "too much money chasing too few goods." Inflation is caused when goods and services are in high demand, creating a drop in availability; consumers are willing to pay more, so manufacturers and service providers charge more. Supply can also drop due to events such as a natural disaster wiping out a food crop, or a housing boom exhausting building supplies.</p>
+
+<h3>6. International Trade</h3>
+<p><strong>International trade</strong> is the exchange of goods and services between countries, giving rise to a world economy in which prices, supply, and demand affect — and are affected by — global events. It expands available markets for goods and services (e.g., being able to choose between a Japanese, German, or American car) and increases competition, bringing cheaper products to consumers.</p>
+
+<h3>7. Balance of Payments (BOP)</h3>
+<p>The <strong>BOP</strong> of a country is the record of all economic transactions between the residents of a country and the rest of the world over a particular period (typically a quarter or a year). These transactions are made by individuals, firms, and government bodies, and include all external visible and non-visible transactions. BOP represents a summation of a country's current demand and supply of claims on foreign currencies, and of foreign claims on its own currency.</p>
+
+<h3>8. Monetary Policy</h3>
+<p><strong>Monetary policy</strong> is the process by which a currency's monetary authority controls the money supply, often targeting an inflation rate or interest rate to ensure price stability and trust in the currency. It also aims to contribute to economic growth, stability, low unemployment, and predictable exchange rates with other currencies.</p>
+
+<h3>9. Fiscal Policy</h3>
+<p><strong>Fiscal policy</strong> is the means by which a government adjusts its spending levels and tax rates to monitor and influence a nation's economy. It is the "sister strategy" to monetary policy, and the two are combined in various ways to direct a country's economic goals.</p>
+
+<h3>10. Interest Rate</h3>
+<p>An <strong>interest rate</strong> is the rate at which interest is paid by borrowers (debtors) for using money borrowed from lenders (creditors) — a percentage of the principal, paid a certain number of times per period over the loan's term. Many different interest rates exist in an economy, varying by duration and degree of risk.</p>
+
+<h3>11. Stock Market</h3>
+<p>A <strong>stock market</strong> (or equity market) is the aggregation of buyers and sellers of stocks (shares) — a loose network of transactions rather than a single physical facility. The price of stocks and other assets is an important part of economic dynamics and can indicate social mood. A rising stock market is generally seen as a sign of an up-and-coming economy, and is often considered the primary indicator of a country's economic strength and development.</p>
+
+<h3>12. Business Cycle</h3>
+<p>The <strong>business cycle</strong> (or economic cycle, or boom–bust cycle) refers to fluctuations in aggregate production, trade, and activity over months or years in a market economy. It is the downward and upward movement of GDP levels, referring to periods of expansion and contraction in economic activity around a long-term growth trend.</p>
+<pre><code>Expansion → Peak → Recession → Trough (Depression) → Recovery → Expansion → Peak → ...</code></pre>
+<p>These fluctuations typically involve shifts between periods of relatively rapid growth (<strong>expansion/boom</strong>) and periods of relative stagnation or decline (<strong>contraction/recession</strong>).</p>
+
+<h3>13. Exchange Rate</h3>
+<p>The <strong>exchange rate</strong> between two currencies is the rate at which one currency is exchanged for another — the value of one country's currency in terms of another. It governs the terms on which international trade and investment take place.</p>
+<ul>
+<li><strong>Nominal exchange rate</strong> — the rate at which monies of different countries can be exchanged for one another.</li>
+<li><strong>Real exchange rate</strong> — the rate at which goods and services produced in different countries can be exchanged for one another.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Importance of Macroeconomics</h2>
+<ul>
+<li>Helps us understand the functioning of a complicated modern economic system — how the economy as a whole functions and how national income and employment are determined based on aggregate demand and aggregate supply.</li>
+<li>Helps achieve the goal of economic growth, a higher GDP level, and higher employment — analyzing the forces that determine economic growth and how to reach and sustain its highest state.</li>
+<li>Helps bring stability to the price level and analyzes fluctuations in business activities, suggesting policy measures to control inflation and deflation.</li>
+<li>Explains the factors that determine the balance of payments, identifies causes of BOP deficits, and suggests remedial measures.</li>
+<li>Helps solve economic problems like poverty, unemployment, inflation, and deflation — problems whose solutions are only possible at the macro (whole-economy) level.</li>
+<li>With detailed knowledge of an economy's functioning at the macro level, it becomes possible to formulate correct economic policies and coordinate international economic policies.</li>
+<li>Macroeconomic theory has saved us from the dangers of applying microeconomic theory to problems that require looking at the economy as a whole.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Summary & Key Takeaways</h2>
+<div class="callout-yellow">
+<ul>
+<li>Macroeconomics studies the economy <strong>as a whole</strong> — aggregate output, consumption, investment, employment, and the general price level.</li>
+<li>Three major concerns: <strong>unemployment, inflation, and output growth</strong>.</li>
+<li>The <strong>unemployment rate</strong> = number of unemployed ÷ labor force, and is a key indicator of economic health.</li>
+<li><strong>Full employment</strong> occurs when the unemployment rate equals the natural unemployment rate (only frictional + structural unemployment remain) — it does NOT mean 0% unemployment.</li>
+<li>Unemployment reduces national output, lowers living standards, increases poverty, reduces national income, and causes social harms (crime, stress, family instability). It pushes the economy below its PPF curve.</li>
+<li><strong>Inflation</strong> = rising general price level; <strong>deflation</strong> = falling general price level; <strong>hyperinflation</strong> = extremely rapid, rare price rises; <strong>creeping inflation</strong> = slow, steady rise (~5%).</li>
+<li>Inflation is caused by <strong>Demand-Pull</strong> (too much demand chasing limited output) or <strong>Cost-Push</strong> (rising production costs) factors.</li>
+<li>Deflation is caused by a fall in aggregate demand or a rightward shift in aggregate supply (e.g., via improved technology).</li>
+<li><strong>Aggregate output</strong> is the total quantity of goods/services produced in an economy, and the main measure of economic performance.</li>
+<li>The goals of macroeconomic policy include full employment, price stability, rapid growth, reduced inequality, stable exchange rates, environmental protection, and high living standards.</li>
+<li>Key macroeconomic variables: GDP, National Income, Unemployment, Economic Growth, Inflation, International Trade, Balance of Payments, Monetary Policy, Fiscal Policy, Interest Rate, Stock Market, Business Cycle, and Exchange Rate.</li>
+<li>The <strong>Business Cycle</strong> moves through Expansion → Peak → Recession → Trough (Depression) → Recovery, repeating over time.</li>
+<li><strong>Nominal exchange rate</strong> exchanges currencies; <strong>real exchange rate</strong> exchanges goods/services across countries.</li>
+<li>Macroeconomics helps formulate policies to solve poverty, unemployment, inflation, and deflation at the whole-economy level.</li>
+</ul>
+</div>`,
+  summary: {
+    topic: 'Introduction to the fundamental concepts, concerns, scope, and key variables of Macroeconomics, including unemployment, inflation, and economic growth.',
+    subTopics: [
+      'Learning Outcomes',
+      'What Is Macroeconomics?',
+      'Macroeconomic Concerns',
+      'Unemployment: Meaning and the Labor Force',
+      'Why Unemployment Is a Problem',
+      'Effects of Unemployment on the Individual',
+      'Economic Effects of Unemployment',
+      'Influence of Unemployment on the Economy',
+      'Impact of Unemployment on Society',
+      'Unemployment and the PPF Curve',
+      'Full Employment',
+      'Inflation: Meaning and Types',
+      'Causes of Inflation (Demand-Pull and Cost-Push)',
+      'Causes of Deflation',
+      'Why Inflation and Deflation Are Problems',
+      'Hyperinflation: Causes and Effects',
+      'Creeping Inflation',
+      'Output and Growth',
+      'Nature and Scope of Macroeconomics',
+      'Goals of Macroeconomic Policy',
+      'Key Macroeconomic Variables (GDP, National Income, Unemployment, Growth, Inflation, Trade, BOP, Monetary/Fiscal Policy, Interest Rate, Stock Market, Business Cycle, Exchange Rate)',
+      'Importance of Macroeconomics',
+    ],
+    definitions: [
+      { term: 'Macroeconomics', meaning: 'The branch of economics studying the performance, structure, behavior, and decision-making of an economy as a whole (national, regional, or global), focusing on aggregate output, consumption, investment, employment, and the general price level.' },
+      { term: 'Unemployment', meaning: 'The situation where a country\'s population fails to find work to earn a livelihood; represents the ratio of the labor force without employment.' },
+      { term: 'Labor Force', meaning: 'The sum of employed and unemployed workers in the working-age population who want to work.' },
+      { term: 'Unemployment Rate', meaning: 'The number of unemployed people divided by the labor force; a key indicator of economic health.' },
+      { term: 'Full Employment', meaning: 'A situation where the unemployment rate equals the natural unemployment rate; at this point there is no cyclical unemployment, only frictional and structural unemployment.' },
+      { term: 'Frictional Unemployment', meaning: 'Short-term unemployment that occurs as people move between jobs; exists even at full employment.' },
+      { term: 'Structural Unemployment', meaning: 'Unemployment caused by a mismatch between workers\' skills and available jobs; exists even at full employment.' },
+      { term: 'Cyclical Unemployment', meaning: 'Unemployment caused by downturns in the business cycle; absent when the economy is at full employment.' },
+      { term: 'PPF (Production Possibility Frontier)', meaning: 'A curve showing the maximum combinations of goods/services an economy can produce; unemployment causes the economy to operate below this curve.' },
+      { term: 'Per Capita Income', meaning: 'A measure of a country\'s standard of living, calculated from national output/income divided by population.' },
+      { term: 'Inflation', meaning: 'A rise in the general level of prices of goods and services in an economy over time, eroding purchasing power.' },
+      { term: 'Hyperinflation', meaning: 'A rare period of very rapid increases in the overall price level.' },
+      { term: 'Deflation', meaning: 'A decrease in the overall price level; a negative rate of inflation.' },
+      { term: 'Demand-Pull Inflation', meaning: 'Inflation that occurs when collective demand (households, businesses, government, foreign buyers) exceeds the economy\'s productive capacity, pulling prices higher.' },
+      { term: 'Cost-Push Inflation', meaning: 'Inflation caused by decreases in supply, primarily due to rising production costs.' },
+      { term: 'Creeping Inflation', meaning: 'A slow, moderate rise in prices over a long period of time, typically around a 5% inflation rate.' },
+      { term: 'Aggregate Demand (AD)', meaning: 'The total demand for goods and services in an economy; a fall in AD is a cause of deflation.' },
+      { term: 'Aggregate Supply (AS)', meaning: 'The total supply of goods and services in an economy; a rightward shift in AS (e.g., via improved technology) can cause deflation.' },
+      { term: 'Aggregate Output', meaning: 'The total quantity of goods and services produced in an economy during a given period; the main measure of economic performance.' },
+      { term: 'Economic Growth', meaning: 'The increase in the market value of goods and services produced by an economy over time, or the increase in an economy\'s productive capacity.' },
+      { term: 'Gross Domestic Product (GDP)', meaning: 'The monetary value of all finished goods and services produced within a country\'s borders in a specific period; a primary indicator of economic health.' },
+      { term: 'National Income', meaning: 'The total value of all goods and services produced within a nation over a period, representing the sum of wages, profits, rents, interest, and pensions paid to residents.' },
+      { term: 'International Trade', meaning: 'The exchange of goods and services between countries, creating a world economy and increasing competition and consumer choice.' },
+      { term: 'Balance of Payments (BOP)', meaning: 'The record of all economic transactions between a country\'s residents and the rest of the world over a given period, reflecting claims on foreign currencies and foreign claims on domestic currency.' },
+      { term: 'Monetary Policy', meaning: 'The process by which a monetary authority controls the money supply, typically targeting inflation or interest rates to maintain price stability.' },
+      { term: 'Fiscal Policy', meaning: 'The means by which a government adjusts spending levels and tax rates to monitor and influence the national economy.' },
+      { term: 'Interest Rate', meaning: 'The percentage of principal paid by borrowers to lenders for the use of money, varying by duration and risk.' },
+      { term: 'Stock Market', meaning: 'The aggregation of buyers and sellers of stocks/shares; often considered a primary indicator of a country\'s economic strength.' },
+      { term: 'Business Cycle', meaning: 'Fluctuations in aggregate production, trade, and activity around a long-term growth trend, moving through expansion, peak, recession/contraction, and trough/recovery.' },
+      { term: 'Exchange Rate', meaning: 'The rate at which one currency is exchanged for another, governing the terms of international trade and investment.' },
+      { term: 'Nominal Exchange Rate', meaning: 'The rate at which the currencies of different countries can be exchanged for one another.' },
+      { term: 'Real Exchange Rate', meaning: 'The rate at which goods and services produced in different countries can be exchanged for one another.' },
+    ],
+    keyPoints: [
+      'Macroeconomics studies the economy as a whole — aggregate output, consumption, investment, employment, and general price level — unlike microeconomics, which studies individual markets.',
+      'The three major concerns of macroeconomics are unemployment, inflation, and output growth.',
+      'Unemployment rate = number of unemployed ÷ labor force; it is a key indicator of economic health.',
+      'Full employment means the unemployment rate equals the natural rate — NOT zero unemployment; frictional and structural unemployment still exist at full employment.',
+      'Unemployment causes lost income, lost production, and lost human capital, and can permanently damage job prospects if prolonged.',
+      'At the individual level, unemployment reduces income, cuts consumption of income-elastic (luxury) goods, and lowers quality of life.',
+      'At the economy level, rising unemployment lowers growth potential, lowers consumption, increases government spending on benefits, and decreases tax revenue.',
+      'Unemployment reduces national output, lowers standards of living (via per capita income), increases poverty, reduces national income, and slows national development.',
+      'Unemployment has social effects too: unsafe family conditions, increased crime, and stress/loss of confidence.',
+      'When unemployment exists, the economy operates below its PPF (Production Possibility Frontier) curve — resources are not used effectively.',
+      'Inflation is a rise in the general price level; hyperinflation is a rare, very rapid rise; deflation is a fall in the general price level; creeping inflation is a slow, moderate rise (~5%).',
+      'Demand-Pull inflation occurs when total demand exceeds the economy\'s productive capacity; Cost-Push inflation occurs when production costs rise, reducing supply.',
+      'Deflation is caused by a fall in aggregate demand (AD) or a rightward shift in aggregate supply (AS), e.g., due to improved technology.',
+      'Inflation and deflation are problems because they affect the distribution of income and wealth, hurt employees through delayed wage adjustments, and can lower real GDP and employment.',
+      'Hyperinflation is caused by excessive money supply growth, sudden demand-pull shocks, loss of currency confidence, or war; it leads to currency depreciation, investment flight to gold/real estate, food shortages, financial disruption, cheaper exports/costlier imports, and rising unemployment with falling government revenue.',
+      'Aggregate output is the total quantity of goods and services produced in an economy and is the main measure of how well an economy is performing.',
+      'Full employment maximizes output/employment with existing resources, while growth means an increase in output and employment over time — related but distinct ideas.',
+      'The goals of macroeconomic policy are: full employment, price stability, rapid economic growth, reduced economic inequality, stable exchange rates, environmental protection, and high living standards.',
+      'Thirteen key macroeconomic variables are commonly tracked: GDP, National Income, Unemployment, Economic Growth, Inflation, International Trade, Balance of Payments, Monetary Policy, Fiscal Policy, Interest Rate, Stock Market, Business Cycle, and Exchange Rate.',
+      'GDP measures the monetary value of all finished goods/services produced within a country\'s borders and is a primary indicator of economic health.',
+      'The Business Cycle moves through Expansion → Peak → Recession → Trough (Depression) → Recovery, repeating over time around a long-term growth trend.',
+      'Nominal exchange rate exchanges currencies directly; real exchange rate exchanges the actual goods and services produced across countries.',
+      'Macroeconomics is important because it explains how national income/employment are determined, helps achieve growth and price stability, explains balance of payments issues, and helps solve whole-economy problems like poverty, unemployment, inflation, and deflation that cannot be solved at the individual market (micro) level.',
+    ],
+  },
+},
 
 
 ]
