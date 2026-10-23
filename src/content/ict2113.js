@@ -5550,6 +5550,925 @@ Bucket Sort           O(n.k)     O(n².k)     O(n.k)     O(n.k)    Yes</code></p
   },
 },
 
+{
+  id: 11,
+  title: 'Hash Table and Hash Function',
+  content: `
+    <span class="lesson-badge">LESSON 14</span>
+    <h1>Hash Table and Hash Function</h1>
+    <div class="meta-info">ICT2113 <span>•</span> 20 min read</div>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Objective</span>
+      <p>To understand the concept of the <strong>hash-index</strong>: how a key is turned into a position (index) in a table, so data can be found very quickly.</p>
+    </div>
+
+    <h2>Concept of Hashing</h2>
+    <p>The problem we want to solve is how to <strong>speed up searching</strong>.</p>
+    <p>Think about searching an array for a given value. If the array is <strong>not sorted</strong>, we may have to check every element, one by one.</p>
+    <p>We could search much faster if we knew in advance the exact index where the value is stored. Imagine we have a "magic function" that tells us the index for any value. Then the search needs only <strong>one probe</strong> (one check), and the running time becomes constant: <strong>O(1)</strong>.</p>
+    <p>Such a function is called a <strong>hash function</strong>.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>hash function</strong> is a function which, when given a <strong>key</strong>, generates an <strong>address</strong> in the table.</p>
+    </div>
+
+    <h3>How a Hash Function Works</h3>
+    <ol>
+      <li>Take the data (object or key).</li>
+      <li>The hash function converts it into an integer called the <strong>hash code</strong> (Object → Integer).</li>
+      <li>Apply <strong>modulo (%) table size</strong> to the hash code. This gives the <strong>table index</strong>.</li>
+      <li>Store the object at that index in the <strong>hash table</strong>.</li>
+    </ol>
+
+    <h3>Example (table size = 5)</h3>
+    <pre><code>DATA     HASH CODE     % TABLE SIZE     TABLE INDEX
+obj1  →      4      →    4 % 5 = 4    →      4
+obj2  →     16      →   16 % 5 = 1    →      1
+obj3  →     68      →   68 % 5 = 3    →      3
+obj4  →    125      →  125 % 5 = 0    →      0</code></pre>
+
+    <p>The final hash table looks like this:</p>
+    <pre><code>Index :    0      1      2      3      4
+        +------+------+------+------+------+
+Item  : | OBJ4 | OBJ2 |      | OBJ3 | OBJ1 |
+        +------+------+------+------+------+</code></pre>
+    <p>Index <code>2</code> stays empty because no object hashed to it.</p>
+
+    <div class="divider"></div>
+
+    <h2>Introduction to Hash Tables</h2>
+    <p><strong>Hash tables</strong> are a common data structure. They have two parts:</p>
+    <ul>
+      <li>An <strong>array</strong> (this is the hash table)</li>
+      <li>A <strong>mapping</strong> (this is the hash function)</li>
+    </ul>
+    <p>The hash function maps <strong>keys</strong> into <strong>hash values</strong>. Every item stored in a hash table must have a key.</p>
+    <p>The hash function turns the key of an item into a hash value. That hash value is then used as the <strong>index</strong> in the hash table for that item. This allows items to be <strong>inserted and found quickly</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Definition of Hashing</h2>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Hashing</strong> is the process of mapping a key value to a position in a table.</p>
+      <p>A <strong>hash function</strong> maps key values to positions.</p>
+      <p>A <strong>hash table</strong> is an array that holds the records.</p>
+      <p>Searching in a hash table can be done in <strong>O(1)</strong>, no matter how big the hash table is.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Why Use Hashing?</h2>
+    <ul>
+      <li>A <strong>very, very fast</strong> way to build and access tables (and records in files too)</li>
+      <li>Gives <strong>nearly O(1)</strong> performance</li>
+      <li><strong>Simple</strong> to do</li>
+      <li>Extremely fast, and <strong>faster than trees</strong>, which are O(log<sub>2</sub>n)</li>
+    </ul>
+
+    <h3>Limitations of Hash Tables</h3>
+    <ul>
+      <li>They are <strong>similar to arrays</strong>, which is a disadvantage.</li>
+      <li>You need to have some idea <strong>how many items</strong> will go into the table, so the <strong>table size</strong> can be decided.</li>
+      <li>It is quite difficult (it makes no sense) to access a hash table <strong>sequentially</strong>.</li>
+      <li>On the good side, you know the <strong>size of the table</strong>, and so the size of your "database".</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Introduction to Hashing</h2>
+    <p>Hashing is often called <strong>randomizing</strong>.</p>
+    <p>We have a range of <strong>input values</strong> (for example state names, account numbers or String values). These are mapped into a range of <strong>array positions</strong>.</p>
+    <p>The function that maps the key values of records or objects to table locations (or relative file locations) is called a <strong>hash function</strong>.</p>
+    <p>So items (objects, records, attributes, etc.) "hash" to locations in the hash table based on a value inside the record or object. Then the record or object is moved into that location and occupies it.</p>
+
+    <h3>Example: Person Objects</h3>
+    <p>Take objects of type <code>Person</code> that have an <code>SSAN</code> attribute (field).</p>
+    <ul>
+      <li>Take the last four digits, like <code>1234</code>.</li>
+      <li>Divide (mod) it by a prime number, say <code>47</code>.</li>
+      <li>Now ALL objects hash to values between <strong>0 and 46</strong>.</li>
+    </ul>
+    <p>So for each input object, we read its key value, hash it to an index between 0 and 46, and move the <strong>whole object</strong> into that location of the table.</p>
+
+    <div class="divider"></div>
+
+    <h2>Hashing: Exception Cases</h2>
+    <h3>Existing Key</h3>
+    <p>Sometimes an attribute inside an object can be used <strong>directly as an index</strong> into the hash table. No hash function is needed.</p>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>An <strong>employee number</strong> in an object or record (from your book)</li>
+      <li>In a laboratory, an <strong>experiment number</strong> attribute, which might start with a lab number or experiment number 0 or 1</li>
+    </ul>
+    <p>In these cases the index in the hash table is <strong>the same as the key value</strong>, so we do not need to "hash" at all. We simply use this integer as the index into the table we are building.</p>
+
+    <div class="divider"></div>
+
+    <h2>Hashing: Converting Words to Numbers</h2>
+    <p>The input to a hashing algorithm may sometimes be <strong>characters or a String</strong>. We may want to convert them into numbers first, to make randomizing easier.</p>
+    <p>One way is to give each letter a number: <code>a = 1</code>, <code>b = 2</code>, ... <code>s = 19</code>, <code>t = 20</code>. Then add up the letters of the word.</p>
+    <pre><code>cats  →  c + a + t + s
+      →  3 + 1 + 20 + 19
+      →  43</code></pre>
+    <p>So "cats" would be stored in location <strong>43</strong>.</p>
+    <p>Unfortunately, many different words may "hash" to 43. These are called <strong>synonyms</strong>.</p>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Problem</span>
+      <p>Synonyms <strong>cannot all sit in the same single space</strong>. So what do we do? (This is explained in the next sections.)</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Hashing Algorithms</h2>
+    <p>Given a key (attribute) in an object or record, we need a hash function that maps <strong>all possible keys</strong> into a location <strong>within the bounds of the hash table</strong>.</p>
+    <p>What we would like is: hash to a table location, find that it is <strong>empty</strong>, and move the object into that location.</p>
+    <p>In practice, it just does not always work that way.</p>
+
+    <h3>Collisions and Synonyms (Terminology)</h3>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>When <strong>one or more keys hash to the same hash table location</strong>, it is called a <strong>collision</strong>.</p>
+      <p>The elements (objects, records, etc.) that hash to the same location are called <strong>synonyms</strong>.</p>
+    </div>
+    <p>So we need a method (an algorithm) to deal with synonyms.</p>
+
+    <h3>Practical Considerations</h3>
+    <ul>
+      <li>We must map key values (including synonyms) into table locations. This may <strong>NOT be one-to-one</strong>.</li>
+      <li>All input values must map into the <strong>range of the table entries</strong> (the table size), either directly or through a hashing algorithm.</li>
+    </ul>
+    <p>So we may have something like:</p>
+    <pre><code>Arrayindex = someNumber % arraySize
+or
+Arrayindex = someKeyConvertedToANumber % arraySize</code></pre>
+
+    <h3>Division-Remainder Method</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><code>Arrayindex = someNumber % arraySize</code> is a classic example of a hashing function. It is called the <strong>Division-Remainder Method</strong>.</p>
+    </div>
+    <p>This algorithm converts (hashes) a number from a <strong>large range</strong> (naturally occurring values, such as social security numbers) into a number in a <strong>much smaller range</strong> (the table size).</p>
+    <p>There are a very large number of hashing functions available (see Donald Knuth).</p>
+
+    <div class="divider"></div>
+
+    <h2>Hashing and Collision Example</h2>
+    <p>Any integer mod <code>arraySize</code> gives an index from <strong>0 to arraySize - 1</strong>.</p>
+    <p>For example, <code>5280</code> (number of feet in a mile) mod <code>51</code> gives a number between 0 (if 51 divides 5280 exactly) and 50. Any number mod 51 gives a number between 0 and 50. Always, with no exceptions.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>A number mod <code>n</code> always gives a result from <strong>0 to n - 1</strong>. This is the <strong>Division-Remainder method</strong>.</p>
+    </div>
+
+    <h3>Exercise: Table Size 125</h3>
+    <p>We do not have space for all naturally occurring numbers to have their own place. Look at these keys. Each is divided by <code>125</code>, and the <strong>remainder</strong> becomes the index:</p>
+    <pre><code>Key      Calculation              Remainder   Index
+42000    42000 / 125 = 336 R 0         0         0
+42200    42200 / 125 = 337 R 75       75        75
+42220    42220 / 125 = 337 R 95       95        95
+42249    42249 / 125 = 337 R 124     124       124</code></pre>
+    <p>This looks good. All the keys hash to addresses between <strong>0 and 124</strong>. Actually, we <strong>forced</strong> all input attributes to hash into this range.</p>
+
+    <h3>But There Is a Problem</h3>
+    <p>Now consider the keys <code>42125</code>, <code>42250</code>, <code>42375</code>, ... They <strong>ALL hash to the same address</strong> (index 0).</p>
+    <p>Also, <code>40001</code>, <code>42126</code> and <code>42251</code> ALL hash to <strong>1</strong> (relative key = 1, or index = 1).</p>
+    <p>So we may have <strong>MANY keys</strong> that hash to the <strong>same address</strong> (location) in the hash table. These input integers are examples of <strong>synonyms</strong>.</p>
+
+    <h3>Why Does This Happen?</h3>
+    <ul>
+      <li>It often happens because a <strong>large range</strong> of input numbers is mapped into a <strong>much smaller</strong> table.</li>
+      <li>This is the <strong>price we pay to save space</strong>.</li>
+      <li>We cannot reserve a spot for every possible value that "might" hash into a large range. The table would be far too large to be practical.</li>
+      <li>There is <strong>no guarantee</strong> that a key will not hash to a location already used by another object.</li>
+      <li>When two or more keys hash to the same location, we have a <strong>collision</strong>.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Only <strong>one object</strong> can occupy a single location in the hash table. So we need a way to handle collisions.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>What is a Hash Table?</h2>
+    <p>The simplest kind of hash table is an <strong>array of records</strong>. In this example the array has <strong>701 records</strong>, from <code>[0]</code> to <code>[700]</code>.</p>
+    <p>Each record has a special field called its <strong>key</strong>. In this example, the key is a long integer field called <code>Number</code>.</p>
+    <p>The number might be a <strong>person's identification number</strong>. The rest of the record holds information about that person.</p>
+    <p>When a hash table is in use, some spots hold <strong>valid records</strong> and other spots are <strong>empty</strong>.</p>
+    <pre><code>[0]    [1]          [2]          [3]    [4]          [5]    ...  [700]
+empty  281942902    233667136    empty  506643548    empty  ...  155778322</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Inserting a New Record</h2>
+    <p>To insert a new record, the <strong>key</strong> must somehow be <strong>converted to an array index</strong>.</p>
+    <p>The index is called the <strong>hash value</strong> of the key.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The typical way to create a hash value is: <code>Number mod 701</code></p>
+    </div>
+
+    <p>Example: a new record has <code>Number = 580625685</code>. What is <code>580625685 mod 701</code>?</p>
+    <pre><code>580625685 mod 701 = 3</code></pre>
+    <p>The hash value is <strong>3</strong>, so the new record is stored at location <code>[3]</code>.</p>
+    <pre><code>[0]    [1]          [2]          [3]          [4]          [5]
+empty  281942902    233667136    580625685    506643548    empty</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Collisions</h2>
+    <p>Here is another new record to insert: <code>Number = 701466868</code>. Its hash value is <strong>2</strong>.</p>
+    <p>But there is already a valid record at <code>[2]</code>. This is called a <strong>collision</strong>.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>When a collision occurs, <strong>move forward until you find an empty spot</strong>. The new record goes into the empty spot.</p>
+    </div>
+
+    <pre><code>Key 701466868  →  hash value = 2
+
+[2] already used (233667136)  →  collision, move forward
+[3] already used (580625685)  →  move forward
+[4] already used (506643548)  →  move forward
+[5] empty                     →  store the record here</code></pre>
+
+    <pre><code>[0]    [1]          [2]          [3]          [4]          [5]
+empty  281942902    233667136    580625685    506643548    701466868</code></pre>
+
+    <h3>A Quiz</h3>
+    <p>Where would you be placed in this table, if there is no collision? Use your social security number or some other favourite number.</p>
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Calculate <code>yourNumber mod 701</code>. The answer is your location in the table.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Searching for a Key</h2>
+    <p>The data attached to a key can be found <strong>fairly quickly</strong>.</p>
+    <ol>
+      <li><strong>Calculate</strong> the hash value.</li>
+      <li><strong>Check</strong> that location of the array for the key.</li>
+      <li>If the key is not there, <strong>keep moving forward</strong> until you find the key, or you reach an <strong>empty spot</strong>.</li>
+      <li>When the item is found, its information can be <strong>copied</strong> to the place where it is needed.</li>
+    </ol>
+
+    <p>Example: searching for <code>701466868</code> (hash value = 2):</p>
+    <pre><code>[2]  Is it me?  →  Not me.
+[3]  Is it me?  →  Not me.
+[4]  Is it me?  →  Not me.
+[5]  Is it me?  →  Yes! Found.</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Deleting a Record</h2>
+    <p>Records can also be <strong>deleted</strong> from a hash table.</p>
+    <p>But the location must <strong>not</strong> be left as an ordinary "empty spot", because that could <strong>interfere with searches</strong>.</p>
+    <p>The location must be <strong>marked in a special way</strong>, so that a search can tell that the spot <strong>used to have something in it</strong>.</p>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do <strong>not</strong> leave a deleted spot as a normal empty spot. A search stops when it reaches an empty spot. If <code>[4]</code> was emptied, a search for <code>701466868</code> would stop at <code>[4]</code> and wrongly say the key is not found, even though it is at <code>[5]</code>.</p>
+    </div>
+
+    <pre><code>[3]          [4]                 [5]
+580625685    (marked as deleted)  701466868</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Hash Function</h2>
+    <h3>What is a Hash Function?</h3>
+    <p>Hash functions are extremely useful. They appear in almost <strong>all information security applications</strong>.</p>
+    <p>A <strong>hash function</strong> is a mathematical function that converts a numerical input value into another <strong>compressed</strong> numerical value.</p>
+    <ul>
+      <li>The input can be of <strong>arbitrary length</strong> (any size).</li>
+      <li>The output is always of <strong>fixed length</strong>.</li>
+    </ul>
+    <p>The values returned by a hash function are called <strong>message digests</strong> or simply <strong>hash values</strong>.</p>
+
+    <h3>Main Features of a Hash Function</h3>
+    <h3>1. Fixed Length Output (Hash Value)</h3>
+    <ul>
+      <li>A hash function converts data of <strong>arbitrary length</strong> into a <strong>fixed length</strong>. This process is often called <strong>hashing the data</strong>.</li>
+      <li>In general, the hash is much smaller than the input data. So hash functions are sometimes called <strong>compression functions</strong>.</li>
+      <li>A hash is a smaller representation of larger data, so it is also called a <strong>digest</strong>.</li>
+    </ul>
+
+    <h3>2. Efficiency of Operation</h3>
+    <ul>
+      <li>For any hash function <code>h</code> with input <code>x</code>, computing <code>h(x)</code> is a <strong>fast operation</strong>.</li>
+      <li>Hash functions are computationally <strong>much faster than symmetric encryption</strong>.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Hash function = <strong>any length input → fixed length output</strong>, and it is <strong>fast</strong> to compute.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Hash Tables and Hash Functions',
+    subTopics: [
+      'Concept of Hashing',
+      'Introduction to Hash Tables',
+      'Definition of Hashing',
+      'Why Use Hashing?',
+      'Limitations of Hash Tables',
+      'Introduction to Hashing',
+      'Hashing: Exception Cases (Existing Key)',
+      'Hashing: Converting Words to Numbers',
+      'Hashing Algorithms',
+      'Collisions and Synonyms (Terminology)',
+      'Division-Remainder Method',
+      'Hashing and Collision Example',
+      'What is a Hash Table?',
+      'Inserting a New Record',
+      'Collisions',
+      'Searching for a Key',
+      'Deleting a Record',
+      'Hash Function',
+      'Main Features of a Hash Function',
+    ],
+    definitions: [
+      { term: 'Hashing', meaning: 'The process of mapping a key value to a position in a table.' },
+      { term: 'Hash Function', meaning: 'A function that, given a key, generates an address (index) in the table.' },
+      { term: 'Hash Table', meaning: 'An array that holds the records, where each record is placed using its hash value.' },
+      { term: 'Key', meaning: 'A special field in a record or object that is used to find its position in the hash table.' },
+      { term: 'Hash Code', meaning: 'The integer produced when a hash function converts an object or key.' },
+      { term: 'Hash Value (Hash Index)', meaning: 'The array index produced from a key. It is the location where the record is stored.' },
+      { term: 'Probe', meaning: 'One check of a table location while searching. A perfect hash function needs only one probe, which gives O(1).' },
+      { term: 'Randomizing', meaning: 'Another name for hashing, because keys are spread across table locations.' },
+      { term: 'Existing Key', meaning: 'An attribute, such as an employee number, that can be used directly as the table index without hashing.' },
+      { term: 'Division-Remainder Method', meaning: 'A classic hash function: Arrayindex = someNumber % arraySize. It turns a large range of numbers into a small range.' },
+      { term: 'Collision', meaning: 'When two or more keys hash to the same hash table location.' },
+      { term: 'Synonyms', meaning: 'The elements (objects, records, keys) that hash to the same location.' },
+      { term: 'Deleted Marker', meaning: 'A special mark placed on a location after deleting a record, so searches know the spot used to have something in it.' },
+      { term: 'Message Digest', meaning: 'The fixed-length value returned by a hash function. Also called a hash value or digest.' },
+      { term: 'Compression Function', meaning: 'Another name for a hash function, because the hash is usually much smaller than the input data.' },
+    ],
+    keyPoints: [
+      'Hashing speeds up searching. With a good hash function, a search needs one probe, which is O(1).',
+      'A hash table has two parts: an array (the table) and a mapping (the hash function).',
+      'Hashing is faster than trees, which are O(log2 n).',
+      'Hash tables are like arrays, so you must know roughly how many items will be stored to choose the table size.',
+      'Hash tables are not suited to sequential access.',
+      'Hash function steps: object, then hash code (integer), then modulo table size, then table index.',
+      'Division-Remainder Method: Arrayindex = someNumber % arraySize. The result is always from 0 to arraySize - 1.',
+      'If a key is already a usable integer (such as an employee number), it can be used directly as the index.',
+      'Words can be converted to numbers by adding letter values (for example cats = 3 + 1 + 20 + 19 = 43).',
+      'Mapping a large range of keys into a small table is not one-to-one, so collisions are unavoidable.',
+      'A collision happens when two or more keys hash to the same location. Those keys are called synonyms.',
+      'Insertion: compute the hash value, and if the spot is taken, move forward until an empty spot is found.',
+      'Searching: compute the hash value, check that location, and keep moving forward until the key is found or an empty spot is reached.',
+      'Deleting: never leave the spot as a normal empty spot. Mark it specially so searches do not stop too early.',
+      'Example: 580625685 mod 701 = 3, so that record goes to index [3].',
+      'A hash function takes input of any length and gives output of fixed length (a message digest or hash value).',
+      'Hash functions are fast to compute, much faster than symmetric encryption, and are widely used in information security.',
+    ],
+  },
+},
+
+
+{
+  id: 12,
+  title: 'Heap and Heap Sort',
+  content: `
+    <span class="lesson-badge">LESSON 12</span>
+    <h1>Heap and Heap Sort</h1>
+    <div class="meta-info">ICT2113 <span>•</span> 25 min read</div>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Objectives</span>
+      <p>1. Study the <strong>heap data structure</strong>.</p>
+      <p>2. Study the <strong>heap sorting technique</strong>.</p>
+    </div>
+
+    <h2>Heap Data Structure</h2>
+
+    <h3>Introduction</h3>
+    <ul>
+      <li>The <strong>heap</strong> is a <strong>binary tree</strong>. This means each parent has <strong>at most two children</strong>.</li>
+      <li>The heap is an <strong>abstract data type</strong>.</li>
+      <li>It is a very useful data structure that every programmer should know well.</li>
+      <li>It is used behind the scenes to perform the <strong>heap sort</strong>.</li>
+      <li>Understanding how a heap works helps programmers make wiser decisions when <strong>memory management</strong> is crucial.</li>
+    </ul>
+
+    <h3>Applications of Heap Data Structures</h3>
+    <ul>
+      <li>To quickly find the <strong>smallest</strong> and <strong>largest</strong> element in a collection of items or an array.</li>
+      <li>To build a <strong>priority queue</strong> in graph algorithms.</li>
+      <li>To overcome the worst case of <strong>Quick Sort</strong>, which is O(n<sup>2</sup>). Heap Sort makes it <strong>O(n log n)</strong>.</li>
+      <li>For finding the <strong>order statistics</strong>.</li>
+      <li>In security-related and embedded systems. For example, the <strong>Linux Kernel</strong> uses Heap Sort because of its O(n log n) time.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Properties of a Heap</h2>
+    <p>A heap is a binary tree with <strong>two special properties</strong>:</p>
+    <ol>
+      <li><strong>Order property:</strong> the nodes must be arranged in a specific order. The values follow either a <strong>Max heap</strong> or a <strong>Min heap</strong> arrangement.</li>
+      <li><strong>Shape property:</strong> the tree must be <strong>complete</strong>. All levels must be full except the last level, and nodes must be filled <strong>strictly from left to right</strong>.</li>
+    </ol>
+
+    <h3>What is a Complete Binary Tree?</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A binary tree is a <strong>complete binary tree</strong> if <strong>all levels are filled</strong> except possibly the last level, and the last level has all its keys <strong>as far left as possible</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Two Rules of Heaping</h2>
+
+    <h3>Rule 1: Shape</h3>
+    <p>A heap must be a <strong>complete binary tree</strong>. All levels of the tree must be completely filled, except maybe the last one.</p>
+
+    <h3>Rule 2: Order</h3>
+    <ul>
+      <li><strong>Min-heap:</strong> every parent is <strong>less than or equal to</strong> its children.</li>
+      <li><strong>Max-heap:</strong> every parent is <strong>greater than or equal to</strong> its children.</li>
+    </ul>
+    <p>In both cases, the <strong>last node can be alone</strong>. This means a parent may have only one child at the very end.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>A heap must follow <strong>both rules</strong>: the <strong>Shape rule</strong> (complete tree) and the <strong>Order rule</strong> (min or max order). If one rule is broken, it is <strong>not a heap</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Min Heap</h2>
+    <ul>
+      <li>Every parent node (including the root) is <strong>less than or equal to</strong> its children.</li>
+      <li>The <strong>minimum value</strong> is always at the <strong>root node</strong>.</li>
+    </ul>
+    <pre><code>        5
+      /   &#92;
+    12     20
+   /  &#92;
+ 25    13</code></pre>
+
+    <h2>Max Heap</h2>
+    <ul>
+      <li>Every parent node (including the root) is <strong>greater than or equal to</strong> its children.</li>
+      <li>The <strong>maximum value</strong> is always at the <strong>root node</strong>.</li>
+    </ul>
+    <pre><code>          58
+        /    &#92;
+      40      50
+     /  &#92;    /
+   31    3  40</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Which One Is a Heap?</h2>
+
+    <h3>Example 1 (Max-heap check)</h3>
+    <pre><code>  A            B            C
+     91           52           91
+    /  &#92;         /  &#92;         /  &#92;
+  77    46     77    46     77    46
+ /  &#92;     &#92;   /  &#92;   /     /  &#92;   /
+69   3     11 69   3 11   69   3 11</code></pre>
+    <ul>
+      <li><strong>A:</strong> not a heap. The tree is <strong>not complete</strong>, because 46 has only a right child (11) and its left spot is empty.</li>
+      <li><strong>B:</strong> not a heap. The <strong>order is wrong</strong>, because the root 52 is smaller than its child 77.</li>
+      <li><strong>C:</strong> <strong>this is a heap</strong>. It is complete and every parent is greater than its children.</li>
+    </ul>
+
+    <h3>Example 2</h3>
+    <pre><code>  (a)          (b)          (c)
+     9            9            9
+    / &#92;          / &#92;          / &#92;
+   8   4        8   4        6   4
+  / &#92;  /       /    / &#92;      / &#92;  /
+ 6   2 3      6    2   3    8   2 3</code></pre>
+    <ul>
+      <li><strong>(a)</strong> is a heap.</li>
+      <li><strong>(b)</strong> is not a heap, because it is <strong>not complete</strong>.</li>
+      <li><strong>(c)</strong> is complete, but it <strong>does not satisfy the second property</strong> (order). The child 8 is larger than its parent 6.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Exam Trap</span>
+      <p>Always check <strong>both</strong> properties. A tree can be complete but have the wrong order (like (c)), or have the right order but not be complete (like A).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Important Things to Note</h2>
+    <ol>
+      <li>A heap can have <strong>duplicate values</strong>. There is no restriction against that.</li>
+      <li>A heap does <strong>not follow the rules of a Binary Search Tree</strong>. In a heap, the left node does not have to be smaller than the right node.</li>
+      <li>The <strong>order of the child nodes is not important</strong>. The only order that matters is the <strong>heap-order property</strong>: the order of parent nodes compared to their children.</li>
+    </ol>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do not mix up a <strong>heap</strong> with a <strong>Binary Search Tree</strong>. In a heap, the left child is <strong>not</strong> always smaller than the right child.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Operations of Heaps</h2>
+    <ol>
+      <li><strong>Insertion</strong> (growing the heap)</li>
+      <li><strong>Deletion</strong> (shrinking the heap)</li>
+      <li><strong>Finding Max and Min</strong> (the max is at the root of a max heap, and the min is at the root of a min heap)</li>
+    </ol>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>When growing or shrinking a heap, always keep in mind <strong>how its structure is changing</strong>. We must <strong>always maintain the shape and structure</strong> of the heap. Otherwise we break one of its two properties.</p>
+    </div>
+
+    <h2>Insertion Operation (Growing the Heap)</h2>
+    <p>When growing a heap, we can only add a node to the <strong>left-most available spot</strong> in the tree. This means the left-most available node at the <strong>lowest possible level</strong>.</p>
+    <p>After adding the node, check the <strong>heap-order property</strong>. If the new node breaks it, <strong>swap the new node with its parent</strong>.</p>
+
+    <h3>Example 1: Insert 43 into a Max Heap</h3>
+    <p>Add 43 to the left-most available spot at the lowest level:</p>
+    <pre><code>        71
+       /  &#92;
+     19    35
+    /  &#92;   /
+  12    4 43   ← new node</code></pre>
+    <p>The new child (43) is <strong>larger than its parent</strong> (35). This violates the heap-order property. So we <strong>swap the two nodes</strong>:</p>
+    <pre><code>        71
+       /  &#92;
+     19    43
+    /  &#92;   /
+  12    4 35</code></pre>
+    <p>Now the max heap condition is satisfied.</p>
+
+    <h3>Example 2: Insert 85</h3>
+    <pre><code>                90
+            /        &#92;
+          89          70
+         /  &#92;        /  &#92;
+       36    75    63    65
+      /  &#92;   /  &#92;
+    21   18 15   85  ← new</code></pre>
+    <p><strong>Is this a heap tree now?</strong> No. 85 is larger than its parent 75, so we swap them:</p>
+    <pre><code>                90
+            /        &#92;
+          89          70
+         /  &#92;        /  &#92;
+       36    85    63    65
+      /  &#92;   /  &#92;
+    21   18 15   75</code></pre>
+    <p>This is a heap tree now. 85 is smaller than its new parent 89, so we can stop.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Insertion steps:</strong> (1) add the node at the left-most available spot of the lowest level, (2) swap it with its parent while it breaks the heap-order property.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Deletion Operation (Shrinking the Heap)</h2>
+    <ul>
+      <li>When deleting an element, most heaps remove the <strong>root node</strong>.</li>
+      <li>This is because the root is always the <strong>largest</strong> value (max heap) or the <strong>smallest</strong> value (min heap).</li>
+    </ul>
+
+    <h3>Steps to Remove the Root</h3>
+    <ol>
+      <li><strong>Remove the root.</strong></li>
+      <li>To keep the <strong>shape</strong> of the heap, replace the root with the <strong>last leaf node</strong> at the lowest level.</li>
+      <li>Now the shape is correct, but the <strong>heap-order property is wrong</strong>.</li>
+      <li>Compare the <strong>two children</strong> of the root and <strong>swap the larger child</strong> with the root.</li>
+      <li>Keep <strong>"bubbling down"</strong> the former last node until all parents are greater than or equal to their children.</li>
+    </ol>
+
+    <h3>Example: Remove 71 from a Max Heap</h3>
+    <p>Starting heap:</p>
+    <pre><code>            71
+         /      &#92;
+      19          43
+     /  &#92;        /  &#92;
+   12     4    35    20
+  /  &#92;
+ 6    2</code></pre>
+    <p>Remove 71 and move the last node (2) to the root. The shape is now correct, but the order is wrong:</p>
+    <pre><code>            2
+         /      &#92;
+      19          43
+     /  &#92;        /  &#92;
+   12     4    35    20
+  /
+ 6</code></pre>
+    <p>Swap 2 with its <strong>larger child</strong> (43):</p>
+    <pre><code>            43
+         /      &#92;
+      19          2
+     /  &#92;        /  &#92;
+   12     4    35    20
+  /
+ 6</code></pre>
+    <p>2 is still smaller than its children. Swap it with the larger child (35):</p>
+    <pre><code>            43
+         /      &#92;
+      19          35
+     /  &#92;        /  &#92;
+   12     4     2    20
+  /
+ 6</code></pre>
+    <p>Now the heap is <strong>structured correctly</strong> and <strong>ordered correctly</strong>.</p>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>When bubbling down, always swap with the <strong>larger child</strong> (in a max heap). If you swap with the smaller child, the order will still be wrong.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Implementing the Heap Using Arrays</h2>
+    <p>A heap can be stored in an <strong>array</strong>. Here is a <strong>max heap</strong> in array form:</p>
+    <pre><code>Index:  0   1   2   3   4   5   6   7   8
+Value: 80  18  40  13   5  25   1   2   9</code></pre>
+    <pre><code>              80
+          /        &#92;
+        18          40
+       /  &#92;        /  &#92;
+     13     5    25     1
+    /  &#92;
+   2    9</code></pre>
+
+    <h3>Index Formulas</h3>
+    <p>When building a heap with an array, we use these formulas to find items in the tree:</p>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>If <code>i</code> is the index of a <strong>parent</strong> node:</p>
+      <p><strong>Left child</strong> = <code>2i + 1</code></p>
+      <p><strong>Right child</strong> = <code>2i + 2</code></p>
+      <p>If <code>n</code> is the index of the <strong>current</strong> node, its <strong>parent</strong> is at <code>⌊(n − 1) / 2⌋</code> (floor function).</p>
+      <p>The <strong>root</strong> is always at index <strong>0</strong>.</p>
+    </div>
+
+    <h3>Example</h3>
+    <p>Look at the array above: <code>[80, 18, 40, ...]</code></p>
+    <ul>
+      <li>The index of 80 is 0, so <code>i = 0</code>.</li>
+      <li>Index of 18: <code>(2 * 0) + 1 = 0 + 1 = 1</code></li>
+      <li>Index of 40: <code>(2 * 0) + 2 = 0 + 2 = 2</code></li>
+    </ul>
+
+    <p>Another example. Array: <code>[43, 19, 35, 12, 4, 2, 20, 6]</code> (indexes 0 to 7)</p>
+    <pre><code>i = 0 → left = 1 (19),  right = 2 (35)
+i = 1 → left = 3 (12),  right = 4 (4)
+i = 2 → left = 5 (2),   right = 6 (20)
+i = 3 → left = 7 (6)</code></pre>
+    <p>To find the parent of the node <code>2</code> (index 5): <code>⌊(5 − 1) / 2⌋ = ⌊4 / 2⌋ = 2</code>. The parent is at index 2, which is <strong>35</strong>.</p>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Exam Trap</span>
+      <p>The <strong>left child</strong> is <code>2i + 1</code> and the <strong>right child</strong> is <code>2i + 2</code> (when counting from index 0). Do not swap them.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Heap Sort</h2>
+
+    <h3>Procedures on Heap</h3>
+    <ol>
+      <li><strong>Heapify</strong></li>
+      <li><strong>Build Heap</strong></li>
+      <li><strong>Heap Sort</strong></li>
+    </ol>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The pseudocode below counts array positions from <strong>1</strong> (<code>A[1 . . n]</code>). So here <code>left(i) = 2i</code> and <code>right(i) = 2i + 1</code>. The earlier formulas (<code>2i + 1</code> and <code>2i + 2</code>) count from 0.</p>
+    </div>
+
+    <h3>1. Heapify</h3>
+    <p><strong>Heapify</strong> picks the <strong>largest child key</strong> and compares it with the parent key.</p>
+    <ul>
+      <li>If the parent key is <strong>larger</strong>, Heapify <strong>quits</strong>.</li>
+      <li>Otherwise, it <strong>swaps</strong> the parent key with the largest child key. Now the parent is larger than its children.</li>
+    </ul>
+    <pre><code>Heapify(A, i)
+{
+    l ← left(i)
+    r ← right(i)
+    if l &lt;= heapsize[A] and A[l] &gt; A[i]
+        then largest ← l
+        else largest ← i
+    if r &lt;= heapsize[A] and A[r] &gt; A[largest]
+        then largest ← r
+    if largest != i
+        then swap A[i] ↔ A[largest]
+             Heapify(A, largest)
+}</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Heapify in simple words: (1) find the largest among the parent, left child and right child, (2) if a child is the largest, swap it with the parent, (3) repeat on the child's position.</p>
+    </div>
+
+    <h3>2. Build Heap</h3>
+    <p>We use <strong>Heapify</strong> in a <strong>bottom-up</strong> way to convert an array <code>A[1 . . n]</code> into a heap.</p>
+    <ul>
+      <li>The elements in the subarray <code>A[n/2 + 1 . . n]</code> are all <strong>leaves</strong>.</li>
+      <li><code>BUILD_HEAP</code> goes through the <strong>remaining nodes</strong> of the tree and runs Heapify on each one.</li>
+      <li>The bottom-up order guarantees that the subtrees rooted at the children are already heaps <strong>before</strong> Heapify runs at their parent.</li>
+    </ul>
+    <pre><code>Buildheap(A)
+{
+    heapsize[A] ← length[A]
+    for i ← ⌊length[A] / 2⌋ down to 1
+        do Heapify(A, i)
+}</code></pre>
+
+    <h3>3. Heap Sort Algorithm</h3>
+    <ol>
+      <li>Use <strong>BUILD-HEAP</strong> to build a heap on the input array <code>A[1 . . n]</code>.</li>
+      <li>The <strong>maximum element</strong> is stored at the root <code>A[1]</code>. Put it in its correct final position by <strong>exchanging it with A[n]</strong> (the last element).</li>
+      <li><strong>Discard node n</strong> from the heap. The remaining elements can be made into a heap.</li>
+      <li>The new element at the root may violate the heap property. All that is needed is to <strong>restore the heap property</strong> (run Heapify on the root).</li>
+      <li>Repeat until the whole array is sorted.</li>
+    </ol>
+    <pre><code>Heapsort(A)
+{
+    Buildheap(A)
+    for i ← length[A] down to 2
+        do swap A[1] ↔ A[i]
+           heapsize[A] ← heapsize[A] - 1
+           Heapify(A, 1)
+}</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Example: Convert an Array to a Heap</h2>
+    <p>Array: <code>16 4 7 1 12 19</code></p>
+    <p>Picture the array as a <strong>complete binary tree</strong>:</p>
+    <pre><code>        16
+       /  &#92;
+      4    7
+     / &#92;  /
+    1  12 19</code></pre>
+    <p>Here <code>n = 6</code>, so Build Heap starts at <code>⌊6/2⌋ = 3</code> and goes down to 1.</p>
+    <ol>
+      <li><strong>Node 7</strong> (i = 3): its child 19 is larger, so <strong>swap 7 and 19</strong>.</li>
+      <li><strong>Node 4</strong> (i = 2): its children are 1 and 12. 12 is larger, so <strong>swap 4 and 12</strong>.</li>
+      <li><strong>Node 16</strong> (i = 1): its children are 12 and 19. 19 is larger, so <strong>swap 16 and 19</strong>. 16 is now bigger than its new child 7, so Heapify stops.</li>
+    </ol>
+    <pre><code>Start:      16   4   7   1  12  19
+After i=3:  16   4  19   1  12   7
+After i=2:  16  12  19   1   4   7
+After i=1:  19  12  16   1   4   7</code></pre>
+    <p>The final max heap:</p>
+    <pre><code>        19
+       /  &#92;
+     12    16
+     / &#92;   /
+    1   4 7</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Heap Sort: Two Phases</h2>
+    <p>The heap sort algorithm has <strong>two phases</strong>:</p>
+    <ol>
+      <li><strong>Build a heap</strong> from an arbitrary array.</li>
+      <li><strong>Use the heap to sort</strong> the data.</li>
+    </ol>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>To sort in <strong>increasing order</strong>, use a <strong>max heap</strong>.</p>
+      <p>To sort in <strong>decreasing order</strong>, use a <strong>min heap</strong>.</p>
+    </div>
+
+    <h3>Example of Heap Sort</h3>
+    <p>Start with the max heap built above: <code>19 12 16 1 4 7</code>. In each round we <strong>take out the biggest</strong> (the root), <strong>move the last element to the root</strong>, then run <strong>Heapify</strong>.</p>
+    <pre><code>Round | Take out | Last to root | After Heapify | Sorted
+  1   |    19    | 7 12 16 1 4  | 16 12 7 1 4   | 19
+  2   |    16    | 4 12 7 1     | 12 4 7 1      | 16 19
+  3   |    12    | 1 4 7        | 7 4 1         | 12 16 19
+  4   |     7    | 1 4          | 4 1           | 7 12 16 19
+  5   |     4    | 1            | 1             | 4 7 12 16 19
+  6   |     1    | -            | -             | 1 4 7 12 16 19</code></pre>
+    <p>Final sorted array: <strong>1 4 7 12 16 19</strong></p>
+
+    <h3>Round 1 in Detail</h3>
+    <pre><code>Heap:  19 12 16 1 4 7
+Take out 19  →  Sorted: 19
+Move last element (7) to the root:   7 12 16 1 4
+
+        7                    16
+       / &#92;                  /  &#92;
+     12   16   swap 7,16   12    7
+     / &#92;          →        / &#92;
+    1   4                 1   4</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Complexity Analysis</h2>
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Worst case</strong> time complexity: <strong>O(n log n)</strong></p>
+      <p><strong>Best case</strong> time complexity: <strong>O(n log n)</strong></p>
+      <p><strong>Average</strong> time complexity: <strong>O(n log n)</strong></p>
+      <p><strong>Space</strong> complexity: <strong>O(1)</strong></p>
+    </div>
+
+    <h2>Possible Applications</h2>
+    <ul>
+      <li>Finding the task with the <strong>highest priority</strong> when there are many things to do.</li>
+      <li><strong>Interval scheduling</strong>: when we have a list of tasks with start and finish times, and we want to do as many tasks as possible.</li>
+      <li>Sorting a list of elements that needs an <strong>efficient sorting algorithm</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Conclusion</h2>
+    <p>The main advantage of heap sort is its <strong>efficiency</strong>. Its execution time is <strong>O(n log n)</strong>. Unlike the other n log n sorts, its memory use is <strong>constant, O(1)</strong>, because the heap sort algorithm is not recursive.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The Heapify pseudocode above is written in a recursive style. It can also be written as a simple loop. The lecture states that heap sort needs only <strong>O(1) extra memory</strong>.</p>
+    </div>
+
+    <p>The heap sort algorithm has <strong>two major steps</strong>:</p>
+    <ol>
+      <li>Transform the complete tree into a <strong>heap</strong>.</li>
+      <li>Do the actual sort by <strong>extracting the largest element from the root</strong> and transforming the remaining tree into a heap again.</li>
+    </ol>
+  `,
+  summary: {
+    topic: 'Heap Data Structure and Heap Sort',
+    subTopics: [
+      'Heap Data Structure (Introduction)',
+      'Applications of Heap Data Structures',
+      'Properties of a Heap',
+      'What is a Complete Binary Tree?',
+      'Two Rules of Heaping (Shape and Order)',
+      'Min Heap',
+      'Max Heap',
+      'Which One Is a Heap?',
+      'Important Things to Note',
+      'Operations of Heaps',
+      'Insertion Operation (Growing the Heap)',
+      'Deletion Operation (Shrinking the Heap)',
+      'Implementing the Heap Using Arrays',
+      'Heap Sort: Procedures on Heap',
+      'Heapify',
+      'Build Heap',
+      'Heap Sort Algorithm',
+      'Example: Convert an Array to a Heap',
+      'Heap Sort: Two Phases',
+      'Example of Heap Sort',
+      'Complexity Analysis',
+      'Possible Applications',
+      'Conclusion',
+    ],
+    definitions: [
+      { term: 'Heap', meaning: 'A complete binary tree in which every parent is ordered against its children (min or max order).' },
+      { term: 'Complete Binary Tree', meaning: 'A binary tree where all levels are filled except possibly the last, and the last level is filled from the left.' },
+      { term: 'Shape Property', meaning: 'A heap must be a complete binary tree, filled strictly from left to right.' },
+      { term: 'Heap-Order Property', meaning: 'The ordering of every parent node compared to its children (parent >= children in a max heap, parent <= children in a min heap).' },
+      { term: 'Min Heap', meaning: 'A heap where every parent is less than or equal to its children. The minimum value is at the root.' },
+      { term: 'Max Heap', meaning: 'A heap where every parent is greater than or equal to its children. The maximum value is at the root.' },
+      { term: 'Insertion (Growing)', meaning: 'Adding a node at the left-most available spot of the lowest level, then swapping it with its parent if it breaks the order.' },
+      { term: 'Deletion (Shrinking)', meaning: 'Removing the root, replacing it with the last leaf node, then bubbling it down by swapping with the larger child.' },
+      { term: 'Bubble Down', meaning: 'Repeatedly swapping a node with its larger child until all parents are greater than or equal to their children.' },
+      { term: 'Array Index Formulas', meaning: 'For parent index i (from 0): left child = 2i + 1, right child = 2i + 2. Parent of node n = floor((n - 1) / 2).' },
+      { term: 'Heapify', meaning: 'A procedure that compares a parent with its largest child and swaps them if needed, so the parent becomes larger than its children.' },
+      { term: 'Build Heap', meaning: 'A procedure that runs Heapify bottom-up on the non-leaf nodes to turn an array into a heap.' },
+      { term: 'Heap Sort', meaning: 'A sorting algorithm that builds a heap, then repeatedly moves the root (largest) to the end and restores the heap.' },
+      { term: 'Time Complexity of Heap Sort', meaning: 'O(n log n) in the best, average and worst cases.' },
+      { term: 'Space Complexity of Heap Sort', meaning: 'O(1), meaning constant extra memory.' },
+    ],
+    keyPoints: [
+      'A heap is a binary tree where each parent has at most two children.',
+      'A heap has two properties: the shape property (complete tree) and the order property (min or max order).',
+      'Both rules must hold. If either rule is broken, the tree is not a heap.',
+      'Min heap: every parent <= its children, and the minimum is at the root.',
+      'Max heap: every parent >= its children, and the maximum is at the root.',
+      'A heap can have duplicate values.',
+      'A heap does not follow Binary Search Tree rules. The order of the child nodes is not important.',
+      'Insertion: add the new node at the left-most available spot of the lowest level, then swap with its parent while the order is broken.',
+      'Deletion: remove the root, move the last leaf to the root, then bubble down by swapping with the larger child.',
+      'Heaps can be stored in arrays. With indexes from 0: left child = 2i + 1, right child = 2i + 2, parent = floor((n - 1) / 2).',
+      'Heapify compares a parent with its largest child and swaps if the child is larger.',
+      'Build Heap runs Heapify bottom-up, starting from the node at floor(n / 2) down to 1.',
+      'Heap sort has two phases: build a heap, then repeatedly extract the root and restore the heap.',
+      'Use a max heap to sort in increasing order. Use a min heap to sort in decreasing order.',
+      'Heap sort is O(n log n) in the best, average and worst cases, with O(1) space.',
+      'Heap sort improves on the O(n^2) worst case of Quick Sort.',
+      'Heap applications: priority queues, finding smallest or largest element, order statistics, interval scheduling.',
+    ],
+  },
+},
+
 
 
 

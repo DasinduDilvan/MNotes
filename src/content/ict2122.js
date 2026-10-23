@@ -2771,4 +2771,2986 @@ public class Honda extends Bike {
   },
 },
 
+{
+  id: 8,
+  title: 'Interfaces',
+  content: `
+    <span class="lesson-badge">LESSON 08</span>
+    <h1>Interfaces</h1>
+    <div class="meta-info">ICT2122 <span>•</span> 28 min read</div>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Recap</span>
+      <p>Object Oriented Programming makes software development and maintenance easier by giving us these concepts:</p>
+      <p><strong>Object</strong>, <strong>Class</strong>, <strong>Inheritance</strong>, <strong>Polymorphism</strong>, <strong>Abstraction</strong> and <strong>Encapsulation</strong>.</p>
+    </div>
+
+    <p>In this lesson you will learn about:</p>
+    <ul>
+      <li>What an interface is, its syntax, and how to declare and implement it</li>
+      <li>Interface vs abstract class, and the strict rules of interfaces</li>
+      <li>Fields in interfaces, and extending interfaces</li>
+      <li>Using an interface as a type, and using interfaces for callbacks</li>
+      <li>Default methods and static methods</li>
+      <li>Key things to remember, and how to show interfaces in UML</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Introduction to Interfaces</h2>
+
+    <h3>Why Do We Need Interfaces?</h3>
+    <p>In software engineering, different groups of programmers often need to agree on a <strong>"contract"</strong>. This contract spells out <strong>how their software interacts</strong>.</p>
+    <p>Each group should be able to write their code <strong>without knowing how the other group's code is written</strong>.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>Generally speaking, <strong>interfaces are such contracts</strong>. An <strong>interface is a contract</strong>.</p>
+    </div>
+
+    <h3>What Is an Interface?</h3>
+    <p>An interface is <strong>similar to an abstract class</strong>, but a (traditional) interface can include only:</p>
+    <ul>
+      <li><strong>abstract methods</strong></li>
+      <li><strong>final fields</strong> (constants)</li>
+    </ul>
+    <p>Other important facts:</p>
+    <ul>
+      <li>An interface <strong>cannot be used as a base class</strong>.</li>
+      <li>A class <strong>implements</strong> an interface by providing code for <strong>each method</strong> declared by the interface.</li>
+      <li>A class can <strong>extend only one</strong> other class, but it can <strong>implement as many interfaces as you need</strong>.</li>
+    </ul>
+
+    <h3>What Can an Interface Contain?</h3>
+    <p>An interface is a <strong>reference type</strong>, similar to a class. It can contain only:</p>
+    <ul>
+      <li><strong>Constants</strong></li>
+      <li><strong>Method signatures</strong></li>
+    </ul>
+    <p>In addition to abstract methods, interfaces can also define:</p>
+    <ul>
+      <li><strong>default</strong> and <strong>static</strong> methods (Java 8 and above)</li>
+      <li><strong>nested types</strong> and <strong>annotations</strong></li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Method bodies exist only for default methods and static methods.</strong> All other interface methods have no body.</p>
+      <p>Interfaces <strong>cannot be instantiated</strong>. They can only be <strong>implemented by classes</strong> or <strong>extended by other interfaces</strong>.</p>
+    </div>
+
+    <h3>Why Use Interfaces?</h3>
+    <ol>
+      <li>It is used to achieve <strong>abstraction</strong>.</li>
+      <li>With an interface, we can support the functionality of <strong>multiple inheritance</strong>.</li>
+      <li>It can be used to achieve <strong>loose coupling</strong>.</li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <h2>Interface Syntax</h2>
+    <pre><code>AccessModifier interface name
+{
+    // public static final variables (Constants)
+    type varname1 = value;
+    ...
+    type varnameP = value;
+
+    // public abstract methods
+    return-type methodname1(para-list);
+    ...
+    return-type methodnameN(para-list);
+}</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Interface: Hands-On</h2>
+    <p>Step 1: <strong>Define</strong> an interface.</p>
+    <pre><code>public interface Printable {
+    void print();
+}</code></pre>
+
+    <p>Step 2: <strong>Implement</strong> the interface in a class called <code>MyDocument</code>. Notice the <code>implements</code> keyword.</p>
+    <pre><code>public class MyDocument implements Printable {
+    public void print() {
+        System.out.println("Printing the document...");
+    }
+}</code></pre>
+
+    <p>Step 3: <strong>Use</strong> the implemented interface.</p>
+    <pre><code>public class Test {
+    public static void main(String[] args) {
+        MyDocument doc = new MyDocument();
+        doc.print();
+    }
+}</code></pre>
+    <p>Output: <code>Printing the document...</code></p>
+
+    <div class="divider"></div>
+
+    <h2>Interface Declaration</h2>
+    <p>The following is a legal declaration:</p>
+    <pre><code>public abstract interface Rollable { };</code></pre>
+    <p>Both of these declarations are legal and <strong>functionally identical</strong>:</p>
+    <pre><code>public abstract interface Rollable {};
+public interface Rollable {};   // encouraged</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Homework</span>
+      <p>1. What do you mean by a <strong>"tag" or "marker" interface</strong>?</p>
+      <p>2. Why do we need to use them?</p>
+    </div>
+
+    <h2>Interface Example</h2>
+    <p>These two versions of <code>Bounceable</code> are the same. In the first version, <code>public</code> and <code>abstract</code> are added automatically.</p>
+    <pre><code>public interface Bounceable
+{
+    void bounce();
+    void setBounceFactor(int bf);
+}</code></pre>
+    <pre><code>public abstract interface Bounceable
+{
+    public abstract void bounce();
+    public abstract void setBounceFactor(int bf);
+}</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Interface vs Abstract Class</h2>
+    <ul>
+      <li>A traditional interface is a <strong>100% abstract class</strong>.</li>
+      <li>Like an abstract class, an interface defines abstract methods in this form: <code>abstract void bounce();</code></li>
+      <li>An abstract method <strong>ends with a semicolon</strong> instead of curly braces.</li>
+      <li>An <strong>abstract class</strong> can define <strong>both abstract and non-abstract methods</strong>. A traditional <strong>interface</strong> can have <strong>only abstract methods</strong>.</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>From <strong>Java 8</strong>, interfaces can also have <strong>default</strong> and <strong>static</strong> methods with bodies. You will see these later in this lesson.</p>
+    </div>
+
+    <p>Another difference: interfaces have <strong>very little flexibility</strong> in how their methods and variables are declared.</p>
+    <ul>
+      <li>All interface methods are <strong>implicitly public and abstract</strong>.</li>
+      <li>You do <strong>not need to type</strong> the <code>public</code> or <code>abstract</code> modifiers. The method is still <strong>always public and abstract</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Interface: Strict Rules</h2>
+    <ul>
+      <li>Interface methods are abstract, so they <strong>cannot be marked final</strong>.</li>
+      <li>An interface can <strong>extend one or more</strong> other interfaces.</li>
+      <li>An interface <strong>cannot extend anything except another interface</strong>.</li>
+      <li>An interface <strong>cannot implement</strong> another interface or class.</li>
+      <li>An interface must be declared with the keyword <code>interface</code>.</li>
+    </ul>
+
+    <h3>Method Declarations That Are Legal</h3>
+    <p>These five declarations, written inside their own interfaces, are <strong>legal and identical</strong>:</p>
+    <pre><code>void bounce();
+public void bounce();
+abstract void bounce();
+abstract public void bounce();
+public abstract void bounce();</code></pre>
+
+    <h3>Method Declarations That Will Not Compile</h3>
+    <pre><code>final void bounce();      // ERROR
+// final and abstract can never be used together,
+// and abstract is implied
+
+private void bounce();    // ERROR
+// interface methods are always public
+
+protected void bounce();  // ERROR
+// interface methods are always public
+
+static void bounce();     // ERROR
+// interfaces define instance methods in this way;
+// default and static methods must contain the implementation</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Exam Trap</span>
+      <p>Interface methods can <strong>never</strong> be <code>final</code>, <code>private</code> or <code>protected</code>. They are always <strong>public</strong>. A <code>static</code> method in an interface must have a body.</p>
+    </div>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Homework</span>
+      <p>1. What is a <strong>"Nested Interface"</strong> in Java?</p>
+      <p>2. Find some examples of nested interfaces.</p>
+      <p>3. List the <strong>advantages and disadvantages</strong> of interfaces in Java.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Implementing Interfaces</h2>
+    <p>To implement an interface, a class must do <strong>two things</strong>:</p>
+    <ol>
+      <li>It must have an <code>implements</code> clause in its class declaration.</li>
+      <li>It must provide an <strong>implementation for every method</strong> declared by the interface.</li>
+    </ol>
+
+    <h3>Syntax</h3>
+    <pre><code>accessmodifier class ClassName implements InterfaceName
+{
+    // class body
+}
+
+accessmodifier class ClassName implements Inter1, Inter2, ... InterN
+{
+    // class body
+}</code></pre>
+
+    <h3>Example 1: Tire</h3>
+    <pre><code>interface Bounceable
+{
+    void bounce();
+    void setBounceFactor(int bf);
+}
+
+class Tire implements Bounceable
+{
+    public void bounce() { ... }
+    public void setBounceFactor(int bf) { ... }
+}</code></pre>
+
+    <h3>Example 2: Callback</h3>
+    <p>The class <code>Client</code> implements the interface method. It can also <strong>define its own methods</strong>.</p>
+    <pre><code>public interface Callback {
+    void callback(int param);
+}
+
+public class Client implements Callback {
+    public void callback(int p) {
+        System.out.println("callback called with " + p);
+    }
+    void nonIfaceMeth() {
+        System.out.println("define its own method");
+    }
+}</code></pre>
+
+    <h3>Example 3: Not Fully Implemented</h3>
+    <p>If an interface is <strong>not fully implemented</strong> by the implementing class, the class must be declared <strong>abstract</strong>.</p>
+    <pre><code>interface Callback
+{
+    void callback(int param);
+}
+
+abstract class CallbackAbs implements Callback
+{
+    int a, b;
+    void show() {
+        System.out.println(a + " " + b);
+    }
+    // .....
+}</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>A class that implements an interface must <strong>implement all its methods</strong>. Otherwise the class must be declared <strong>abstract</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Adding Fields to an Interface</h2>
+    <p>All fields defined in an interface <strong>must be public, static and final</strong>.</p>
+    <p>In other words, interfaces can declare <strong>only constants, not instance variables</strong>.</p>
+
+    <h3>Identify the Problem in This Code</h3>
+    <pre><code>interface Foo
+{
+    int BAR = 42;
+    void go();
+}
+
+class Zap implements Foo
+{
+    public void go() {
+        BAR = 27;    // ERROR
+    }
+}</code></pre>
+    <div class="callout callout-red">
+      <span class="callout-label">Answer</span>
+      <p><code>BAR</code> is an interface field, so it is <strong>implicitly public static final</strong>. A final value cannot be changed, so <code>BAR = 27;</code> gives a <strong>compile error</strong>.</p>
+    </div>
+
+    <h3>Hidden Modifiers in Constants</h3>
+    <p>Look for interface fields that are constants but <strong>do not show all the required modifiers</strong>. All of these are the same:</p>
+    <pre><code>public int x = 1;               // Looks non-static and non-final, but isn't
+int x = 1;                      // Looks default, non-static, non-final, but isn't
+static int x = 1;               // Doesn't show final or public
+final int x = 1;                // Doesn't show public or static
+public static int x = 1;        // Doesn't show final
+public final int x = 1;         // Doesn't show static
+static final int x = 1;         // Doesn't show public
+public static final int x = 1;  // what you get implicitly</code></pre>
+    <p>Any combination of the required (but implicit) modifiers is legal, even <strong>using no modifiers at all</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Extending Interfaces (Interface Inheritance)</h2>
+    <ul>
+      <li>An interface can extend other interfaces by using the <code>extends</code> keyword.</li>
+      <li>An interface that extends an existing interface is called a <strong>subinterface</strong>.</li>
+      <li>The interface being extended is called the <strong>superinterface</strong>.</li>
+      <li>When you use <code>extends</code> with interfaces, <strong>all the fields and methods</strong> of the superinterface are effectively <strong>copied into the subinterface</strong>.</li>
+      <li>The subinterface has the fields and methods of the superinterface <strong>plus</strong> its own fields and methods.</li>
+    </ul>
+
+    <h3>Example: PlayableBall</h3>
+    <pre><code>public interface ThrowableBall
+{
+    void throwBall();
+    void catchBall();
+}
+
+public interface KickableBall
+{
+    void kickBall();
+    void catchBall();
+}
+
+public interface PlayableBall extends ThrowableBall, KickableBall
+{
+    void dropBall();
+}</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>When a class implements an interface that extends another interface:</p>
+      <p>the class must provide implementations for <strong>all methods in the interface chain</strong>, <strong>OR</strong> the class must be declared <strong>abstract</strong>.</p>
+    </div>
+
+    <h3>Implementing an Inherited Interface</h3>
+    <pre><code>public interface A
+{
+    void methA1();
+    void methA2();
+}
+
+public interface B extends A
+{
+    void methB1();
+}
+
+public class MyClass implements B {
+    public void methA1() {
+        System.out.println("Implement meth1().");
+    }
+    public void methA2() {
+        System.out.println("Implement meth2().");
+    }
+    public void methB1() {
+        System.out.println("Implement meth3().");
+    }
+}</code></pre>
+    <p><code>MyClass</code> implements <code>B</code>, so it must implement <code>methB1()</code> and also <code>methA1()</code> and <code>methA2()</code> from <code>A</code>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Using an Interface as a Type</h2>
+    <p>In Java, an interface is a <strong>kind of type</strong>, just like a class or an abstract class.</p>
+    <p>So you can use an interface as:</p>
+    <ul>
+      <li>the <strong>type of a variable</strong></li>
+      <li>the type of a <strong>parameter</strong></li>
+      <li>the type of a <strong>method return value</strong></li>
+    </ul>
+    <pre><code>B myClass = new MyClass();</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Using Interfaces for Callbacks</h2>
+    <p>A <strong>callback</strong> is a mechanism that:</p>
+    <ul>
+      <li>allows you to <strong>pass a function or method as a parameter</strong> to another function or method, and</li>
+      <li>lets the called function <strong>invoke the passed-in function</strong> at a certain point in its execution.</li>
+    </ul>
+    <p>This lets you provide a piece of code that can be run by another piece of code, <strong>without knowing exactly when or how</strong> it will be run.</p>
+    <p>The most common use of callbacks is in graphical applications built with <strong>Swing</strong>. There you create <strong>event listeners</strong> that handle user-interface events, such as mouse clicks. (You will learn more in GUI development with Swing.)</p>
+    <pre><code>public interface ActionListener {
+    void actionPerformed(ActionEvent e);
+}</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Inherent Limitation of Interfaces</h2>
+    <p>After you define an interface and build classes that implement it, there is <strong>no easy way to modify the interface</strong> by adding more methods to it.</p>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Think About It</span>
+      <p>The slide asks for an example. If you add a new abstract method to an interface, <strong>every class that already implements it must be changed</strong>, or the code will not compile.</p>
+    </div>
+
+    <p><strong>Solution:</strong> use <strong>default methods</strong>.</p>
+
+    <h2>Using default Methods</h2>
+    <p>From Java 8, interfaces can have a new type of method called a <strong>default method</strong>.</p>
+    <ul>
+      <li>It supplies code that is used as the <strong>implementation of the method</strong> for any class that implements the interface,</li>
+      <li>but the class <strong>does not have to provide its own implementation</strong> for the default method.</li>
+    </ul>
+    <pre><code>public interface Playable
+{
+    void play();
+    default void quit()
+    {
+        System.out.println("Sorry, quitting is not allowed.");
+    }
+}
+
+class Game implements Playable
+{
+    public void play()
+    {
+        System.out.println("Good luck!");
+    }
+}</code></pre>
+    <p>The class <code>Game</code> only implements <code>play()</code>. It gets <code>quit()</code> from the interface.</p>
+
+    <h2>Using static Methods</h2>
+    <p>You can use the <code>static</code> keyword to define a <strong>static method</strong> in an interface. This is useful for <strong>utility methods</strong> that can be used by all classes that implement the interface.</p>
+    <pre><code>public interface MyInterface {
+    void myMethod();
+    static void myStaticMethod() {
+        System.out.println("This is a static method.");
+    }
+}</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Call a static interface method using the interface name: <code>MyInterface.myStaticMethod();</code></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Abstract Class vs Interface</h2>
+    <pre><code>1. EXTENDING
+   Abstract class : can extend only one class or
+                    one abstract class at a time
+   Interface      : can extend any number of
+                    interfaces at a time
+
+2. WHAT CAN BE EXTENDED
+   Abstract class : can extend another concrete
+                    (regular) class or abstract class
+   Interface      : can only extend another interface
+
+3. METHODS
+   Abstract class : can have both abstract and
+                    concrete methods
+   Interface      : can have only abstract methods
+
+4. THE KEYWORD "abstract"
+   Abstract class : mandatory to declare a method
+                    as abstract
+   Interface      : optional to declare a method
+                    as abstract
+
+5. ACCESS OF ABSTRACT METHODS
+   Abstract class : can have protected and public
+                    abstract methods
+   Interface      : can have only public abstract
+                    methods
+
+6. VARIABLES
+   Abstract class : can have static, final or
+                    static final variables with
+                    any access specifier
+   Interface      : can only have public static
+                    final (constant) variables</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>An <strong>interface</strong> provides <strong>full abstraction</strong>, because none of its (abstract) methods have a body. An <strong>abstract class</strong> provides <strong>partial abstraction</strong>, because it can have both abstract and concrete methods.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Key Things to Remember</h2>
+    <p>Try out your own examples for each of these points.</p>
+
+    <h3>About Interfaces</h3>
+    <ul>
+      <li>We <strong>cannot instantiate</strong> an interface in Java. We cannot create an object of an interface.</li>
+      <li>An interface provides <strong>full abstraction</strong>, as none of its methods have a body. An abstract class provides <strong>partial abstraction</strong>.</li>
+      <li>An interface <strong>cannot be declared</strong> as <code>private</code>, <code>protected</code> or <code>transient</code>.</li>
+    </ul>
+
+    <h3>About Methods and Variables</h3>
+    <ul>
+      <li>All interface methods are <strong>abstract and public by default</strong>.</li>
+      <li>Variables declared in an interface are <strong>public, static and final by default</strong>.</li>
+      <li>Interface variables <strong>must be initialized</strong> when they are declared. Otherwise the compiler gives an error.</li>
+      <li>Inside any implementing class, you <strong>cannot change</strong> the variables declared in the interface, because they are public, static and final.</li>
+    </ul>
+
+    <h3>About Implementing and Extending</h3>
+    <ul>
+      <li>The <code>implements</code> keyword is used by <strong>classes</strong> to implement an interface.</li>
+      <li>When a class provides the implementation of an interface method, it <strong>must be marked public</strong>.</li>
+      <li>A class that implements an interface <strong>must implement all its methods</strong>. Otherwise the class must be declared <strong>abstract</strong>.</li>
+      <li>An interface can <strong>extend</strong> any interface but <strong>cannot implement</strong> it. A <strong>class implements</strong> an interface, and an <strong>interface extends</strong> an interface.</li>
+      <li>A class can implement <strong>any number</strong> of interfaces.</li>
+    </ul>
+
+    <h3>About Conflicts</h3>
+    <ul>
+      <li>If two or more interfaces have the <strong>same method</strong> and a class implements both interfaces, implementing the method <strong>once is enough</strong>.</li>
+      <li>A class cannot implement two interfaces that have methods with the <strong>same name but different return types</strong>. (The slide says: "Is it? You must check this." Write an example and test it yourself.)</li>
+      <li><strong>Variable name conflicts</strong> are solved by using the interface name. If interfaces <code>A</code> and <code>B</code> both have a variable <code>x</code>, use <code>A.x</code> for A's x and <code>B.x</code> for B's x.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Exam Trap</span>
+      <p>Do not mix up the keywords: a <strong>class implements</strong> an interface, an <strong>interface extends</strong> an interface, and a <strong>class extends</strong> a class.</p>
+    </div>
+
+    <h3>Multiple Inheritance in Java</h3>
+    <p>Java does not allow a class to extend more than one class. But with interfaces we can get multiple inheritance:</p>
+    <pre><code>class     --extends-->     class
+class     --implements-->  interface
+interface --extends-->     interface
+
+class     --implements-->  interface 1
+class     --implements-->  interface 2
+(a class can implement many interfaces)
+
+interface --extends-->     interface 1
+interface --extends-->     interface 2
+(an interface can extend many interfaces)</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>UML: Interface Representation</h2>
+    <p>In UML, an interface is shown with the label <code>&lt;&lt;interface&gt;&gt;</code> above its name. A <strong>dashed arrow</strong> means "implements". A <strong>solid arrow</strong> with a hollow head means "extends".</p>
+    <pre><code>Studio ---uses---> &lt;&lt;interface&gt;&gt;
+                   Player
+                   +play()
+                   +stop()
+                   +pause()
+                   +reverse()
+
+DVDPlayer  - - - - implements - -> Player
+CDPlayer   - - - - implements - -> Player
+Recorder   ------- extends -----> Player
+
+&lt;&lt;interface&gt;&gt;
+Recorder
++record()
+
+TapePlayer - - - - implements - -> Recorder</code></pre>
+    <p>In this diagram: <code>DVDPlayer</code> and <code>CDPlayer</code> implement <code>Player</code>. The interface <code>Recorder</code> extends <code>Player</code>. <code>TapePlayer</code> implements <code>Recorder</code>. <code>Studio</code> uses <code>Player</code>.</p>
+    <p>Source: <code>http://www.cs.sjsu.edu/~pearce/modules/lectures/oop/basics/interfaces</code></p>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Homework</span>
+      <p><strong>Sealed classes:</strong> What are they? What is their purpose? When should you use them?</p>
+      <p>Find the difference between sealed classes and <strong>abstract classes</strong>, <strong>concrete classes</strong> and <strong>interfaces</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Summary</h2>
+    <ul>
+      <li>An interface is a collection of <strong>abstract methods and constants</strong>. It defines a set of methods that a class must implement to be considered an implementation of that interface.</li>
+      <li>You define an interface using the <code>interface</code> keyword. You can define any number of methods and constants in it.</li>
+      <li>Any class that implements an interface must provide an implementation for <strong>all the methods</strong> defined in that interface.</li>
+      <li>You can use an interface as a <strong>data type</strong>, and you can create objects of classes that implement the interface.</li>
+      <li>An interface can <strong>extend</strong> another interface. It then inherits all the methods and constants from the parent interface.</li>
+      <li>You can use the <code>default</code> keyword to give a <strong>default implementation</strong> to a method in an interface. All classes that implement the interface can use it.</li>
+      <li>You can use the <code>static</code> keyword to define a <strong>static method</strong> in an interface. It is useful for utility methods used by all implementing classes.</li>
+      <li>You can use an interface to define a <strong>"marker interface"</strong>. It is an interface that has no methods or constants. It shows that a class has a particular property, without requiring any methods or constants.</li>
+      <li>You can use an interface to define an <strong>event listener interface</strong>. It specifies methods for handling events. These are common in GUI programming, where the user's actions create events that the program must handle.</li>
+      <li>Interfaces are a powerful tool for defining a <strong>contract</strong> between different parts of a program. They allow flexible, modular and extensible code.</li>
+      <li>By defining an interface, you <strong>separate the definition</strong> of a set of methods from their <strong>implementation</strong>. This makes it easier to modify and extend your code over time.</li>
+    </ul>
+
+    <h2>References</h2>
+    <ul>
+      <li><code>https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html</code></li>
+      <li><strong>How To Program (Early Objects)</strong> by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> by Kathy Sierra and Bert Bates</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Interfaces in Java',
+    subTopics: [
+      'Introduction to Interfaces',
+      'Why Do We Need Interfaces?',
+      'What Can an Interface Contain?',
+      'Why Use Interfaces?',
+      'Interface Syntax',
+      'Interface: Hands-On',
+      'Interface Declaration',
+      'Interface Example',
+      'Interface vs Abstract Class',
+      'Interface: Strict Rules',
+      'Implementing Interfaces',
+      'Adding Fields to an Interface',
+      'Extending Interfaces (Interface Inheritance)',
+      'Using an Interface as a Type',
+      'Using Interfaces for Callbacks',
+      'Inherent Limitation of Interfaces',
+      'Using default Methods',
+      'Using static Methods',
+      'Abstract Class vs Interface',
+      'Key Things to Remember',
+      'Multiple Inheritance in Java',
+      'UML: Interface Representation',
+      'Summary',
+    ],
+    definitions: [
+      { term: 'Interface', meaning: 'A reference type that works as a contract. It contains constants and method signatures, and can also have default and static methods (Java 8 and above).' },
+      { term: 'Contract', meaning: 'An agreement that spells out how different parts of software interact, so each group can write code without knowing how the other group code is written.' },
+      { term: 'implements', meaning: 'The keyword a class uses to implement an interface by providing code for every method of that interface.' },
+      { term: 'extends (for interfaces)', meaning: 'The keyword an interface uses to inherit the fields and methods of one or more other interfaces.' },
+      { term: 'Abstract Method', meaning: 'A method with no body that ends with a semicolon. All traditional interface methods are public and abstract.' },
+      { term: 'Constant (Interface Field)', meaning: 'A field in an interface. It is always public, static and final, and must be initialized when declared.' },
+      { term: 'Subinterface', meaning: 'An interface that extends an existing interface.' },
+      { term: 'Superinterface', meaning: 'The interface that is being extended by another interface.' },
+      { term: 'Default Method', meaning: 'An interface method with a body, marked with the default keyword. Implementing classes get it automatically (Java 8 and above).' },
+      { term: 'Static Method (Interface)', meaning: 'A utility method with a body, defined in an interface using the static keyword.' },
+      { term: 'Marker (Tag) Interface', meaning: 'An interface with no methods or constants, used to show that a class has a particular property.' },
+      { term: 'Callback', meaning: 'A mechanism where a method is passed to another method, which calls it later at a certain point of its execution.' },
+      { term: 'Event Listener Interface', meaning: 'An interface that specifies methods for handling events, commonly used in GUI programming (for example ActionListener).' },
+      { term: 'Loose Coupling', meaning: 'Keeping parts of a program independent from each other. Interfaces help achieve this.' },
+      { term: 'Full Abstraction', meaning: 'What an interface provides, because none of its abstract methods have a body. An abstract class gives only partial abstraction.' },
+    ],
+    keyPoints: [
+      'An interface is a contract that tells a class which methods it must implement.',
+      'An interface cannot be instantiated. It can only be implemented by classes or extended by interfaces.',
+      'A class can extend only one class, but it can implement any number of interfaces.',
+      'All interface methods are implicitly public and abstract. They cannot be final, private or protected.',
+      'Method bodies exist only for default and static methods (Java 8 and above).',
+      'All interface fields are implicitly public, static and final. They must be initialized, and implementing classes cannot change them.',
+      'A class that implements an interface must implement all its methods, otherwise the class must be declared abstract.',
+      'Implemented interface methods must be marked public in the class.',
+      'A class implements an interface, an interface extends an interface, and an interface cannot implement anything.',
+      'An interface can extend one or more interfaces. A class implementing it must implement all methods in the interface chain, or be abstract.',
+      'An interface can be used as the type of a variable, a parameter or a return value. Example: B myClass = new MyClass();',
+      'Interfaces are used for callbacks, such as ActionListener event handlers in Swing.',
+      'Adding a new abstract method to an interface breaks existing implementing classes. Default methods solve this problem.',
+      'A default method gives a ready-made implementation that implementing classes can use.',
+      'A static method in an interface is a utility method that must have a body.',
+      'Interfaces give full abstraction. Abstract classes give partial abstraction.',
+      'Interfaces support multiple inheritance of type, loose coupling and abstraction.',
+      'If two interfaces have the same method, one implementation in the class is enough.',
+      'Variable name conflicts between interfaces are solved with the interface name, such as A.x and B.x.',
+      'In UML, an interface is marked with the stereotype interface. A dashed arrow means implements, and a solid arrow means extends.',
+      'Code examples in this lesson show: defining and implementing an interface (Printable), constants (Foo), extending interfaces (PlayableBall), and default and static methods.',
+    ],
+  },
+},
+
+{
+  id: 9,
+  title: 'Introduction to Java Exceptions',
+  content: `
+    <span class="lesson-badge">LESSON 09</span>
+    <h1>Introduction to Java Exceptions</h1>
+    <div class="meta-info">ICT2122 <span>•</span> 28 min read</div>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Recap: Interfaces</span>
+      <p>In the last lesson you studied <strong>interfaces</strong>: their syntax, how to implement and extend them, using an interface as a type, callbacks, <strong>default</strong> and <strong>static</strong> methods, and how to show interfaces in UML.</p>
+    </div>
+
+    <p>In this lesson you will learn about:</p>
+    <ul>
+      <li>What an exception is and the reasons for exceptions</li>
+      <li>Exception handling and the types of exceptions</li>
+      <li>The <code>Throwable</code> class</li>
+      <li>Catching exceptions and the <code>finally</code> block</li>
+      <li><code>throw</code> and <code>throws</code></li>
+      <li>Declaring your own exceptions</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Program Failures</h2>
+    <p>A program can fail for just about any reason.</p>
+    <ul>
+      <li>Some failures are <strong>coding mistakes</strong>. These can be handled by the programmer or by the language itself.</li>
+      <li>Others are <strong>completely beyond your control</strong>. You cannot stop them, so you need to deal with the situation.</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Examples</span>
+      <p><strong>Coding mistakes:</strong> dividing by zero, using a wrong array index.</p>
+      <p><strong>Beyond your control:</strong> the network goes down, a file is missing, the disk is full.</p>
+    </div>
+
+    <h2>Handling Exceptions: A Short History</h2>
+    <p>In the early days, programming languages dealt with errors <strong>rudely</strong>. They stopped the program suddenly and printed the entire contents of the computer's memory in hexadecimal. This was called a <strong>dump</strong>.</p>
+    <p>Later languages tried other ways to keep the program running when serious errors occurred:</p>
+    <ul>
+      <li>Adding special elements</li>
+      <li>Returning error codes</li>
+      <li>Using a special error-processing section</li>
+    </ul>
+    <p><strong>Java</strong> handles errors by using special <strong>exception objects</strong> that are created when an error occurs.</p>
+
+    <h2>The Role of Exceptions in Java</h2>
+    <p>An exception is Java's way of saying: <em>"I give up. I don't know what to do right now. You deal with it."</em></p>
+    <p>When you write a method, you can either:</p>
+    <ul>
+      <li><strong>deal with</strong> the exception yourself, or</li>
+      <li>make it <strong>the calling code's problem</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>What is an Exception?</h2>
+    <p>The term <strong>exception</strong> is short for <strong>"exceptional event"</strong>.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>An <strong>exception</strong> is an <strong>event</strong> that occurs <strong>during the execution of a program</strong> and <strong>disrupts the normal flow</strong> of the program's instructions.</p>
+    </div>
+
+    <p>When an exception occurs, program processing stops and does not continue. We then get a <strong>system-generated error message</strong>.</p>
+    <p>The good thing about exceptions is that they <strong>can be handled</strong>.</p>
+
+    <h2>Reasons for Exceptions</h2>
+    <p>There can be many reasons for an exception:</p>
+    <ul>
+      <li>Opening a <strong>non-existing file</strong></li>
+      <li><strong>Network connection</strong> problem</li>
+      <li>Operands being used are <strong>out of the allowed range</strong></li>
+      <li>A <strong>class file is missing</strong> that was supposed to be loaded</li>
+      <li>The <strong>user has entered invalid data</strong></li>
+    </ul>
+    <p>Some exceptions are caused by <strong>user error</strong>, others by <strong>programmer error</strong>, and others by <strong>physical resources that have failed</strong> in some way.</p>
+
+    <h2>When Can an Exception Occur?</h2>
+    <ul>
+      <li>At <strong>runtime</strong> (known as <strong>runtime exceptions</strong>)</li>
+      <li>At <strong>compile time</strong> (known as <strong>compile-time exceptions</strong>)</li>
+    </ul>
+
+    <h2>What is Exception Handling?</h2>
+    <p><strong>Exception handling</strong> is a mechanism to handle <strong>runtime errors</strong> (such as ClassNotFound, IO, SQL, Remote, etc.).</p>
+    <p>It makes sure that the <strong>flow of the program does not break</strong> when an exception occurs.</p>
+
+    <div class="divider"></div>
+
+    <h2>Types of Exceptions</h2>
+    <p>Exceptions are divided into <strong>three categories</strong>:</p>
+    <ol>
+      <li><strong>Checked Exception</strong></li>
+      <li><strong>Unchecked Exception</strong></li>
+      <li><strong>Error</strong></li>
+    </ol>
+
+    <h3>1. Checked Exception</h3>
+    <ul>
+      <li>An exception that can be <strong>predicted by the programmer</strong>.</li>
+      <li>All exceptions other than <strong>Runtime Exceptions</strong> are called <strong>checked exceptions</strong>. The compiler checks them during compilation to see whether the programmer has handled them.</li>
+      <li>Example: the file that needs to be opened is <strong>not found</strong>.</li>
+      <li>These exceptions <strong>must be checked at compile time</strong>.</li>
+    </ul>
+    <pre><code>import java.io.*;
+
+public class CheckedExample
+{
+    public static void main(String args[])
+    {
+        FileInputStream fis = new FileInputStream("F:/myfile.txt");
+        // COMPILE ERROR: unreported exception
+        // FileNotFoundException
+    }
+}</code></pre>
+    <p><strong>Solution:</strong> the <strong>catch-or-throw rule</strong> (also called the <strong>Handle or Declare Rule</strong>).</p>
+
+    <h3>2. Unchecked Exception</h3>
+    <ul>
+      <li>Also known as <strong>Runtime Exceptions</strong>.</li>
+      <li>The compiler <strong>does not check</strong> whether the programmer has handled them. But it is the programmer's duty to handle them and provide a <strong>safe exit</strong>.</li>
+      <li>They include <strong>programming bugs</strong>, such as logic errors or wrong use of an API.</li>
+      <li>They are <strong>ignored at compile time</strong>.</li>
+      <li>Examples: arithmetic error, division by zero.</li>
+    </ul>
+    <pre><code>public class UncheckedExample
+{
+    public static void main(String args[])
+    {
+        int myNumbers[] = {1, 2, 3, 4, 5};
+        System.out.println(myNumbers[7]);
+        // RUNTIME: ArrayIndexOutOfBoundsException
+    }
+}</code></pre>
+
+    <h3>3. Error</h3>
+    <ul>
+      <li>Errors are <strong>not exceptions at all</strong>.</li>
+      <li>They are problems that arise <strong>beyond the control of the programmer or user</strong>.</li>
+      <li>They are usually ignored in code, because you can rarely do anything about them.</li>
+      <li>Examples: memory error, hardware error, JVM error.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Exam Trap</span>
+      <p><strong>Checked</strong> exceptions must be handled or declared (the compiler forces you). <strong>Unchecked</strong> exceptions are not checked by the compiler. <strong>Errors</strong> are usually not handled at all.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Exception Hierarchy</h2>
+    <p>All exception types and errors are subclasses of the class <strong>Throwable</strong>, which is at the top of the exception class hierarchy.</p>
+    <p>The <code>Exception</code> class can be divided into <strong>runtime exceptions</strong> and <strong>other exceptions</strong>.</p>
+    <pre><code>          Throwable
+         /         &#92;
+     Errors       Exceptions
+                 /          &#92;
+   Runtime Exceptions   Other Exceptions</code></pre>
+
+    <h3>Types of Exceptions: Summary</h3>
+    <pre><code>RUNTIME EXCEPTION
+  How to recognize : subclass of RuntimeException
+  OK to catch?     : Yes
+  Must handle or declare? : No
+
+CHECKED EXCEPTION
+  How to recognize : subclass of Exception,
+                     but NOT of RuntimeException
+  OK to catch?     : Yes
+  Must handle or declare? : Yes
+
+ERROR
+  How to recognize : subclass of Error
+  OK to catch?     : No
+  Must handle or declare? : No</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Only <strong>checked exceptions</strong> must be handled or declared. Runtime exceptions can be caught but do not have to be. Errors should not be caught.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Most Common Built-in Exceptions</h2>
+
+    <h3>Group 1</h3>
+    <ul>
+      <li><code>ClassNotFoundException</code> — Class not found.</li>
+      <li><code>IllegalAccessException</code> — Access to a class is denied.</li>
+      <li><code>InstantiationException</code> — Attempt to create an object of an abstract class or interface.</li>
+      <li><code>InterruptedException</code> — One thread has been interrupted by another thread.</li>
+      <li><code>NoSuchFieldException</code> — A requested field does not exist.</li>
+      <li><code>NoSuchMethodException</code> — A requested method does not exist.</li>
+    </ul>
+
+    <h3>Group 2</h3>
+    <ul>
+      <li><code>ArithmeticException</code> — Arithmetic error, such as divide-by-zero.</li>
+      <li><code>ArrayIndexOutOfBoundsException</code> — Array index is out of bounds.</li>
+      <li><code>ArrayStoreException</code> — Assignment to an array element of an incompatible type.</li>
+      <li><code>ClassCastException</code> — Invalid cast.</li>
+      <li><code>IllegalArgumentException</code> — Illegal argument used to invoke a method.</li>
+      <li><code>IllegalMonitorStateException</code> — Illegal monitor operation, such as waiting on an unlocked thread.</li>
+      <li><code>IllegalStateException</code> — Environment or application is in an incorrect state.</li>
+      <li><code>IllegalThreadStateException</code> — Requested operation is not compatible with the current thread state.</li>
+    </ul>
+
+    <h3>Group 3</h3>
+    <ul>
+      <li><code>IndexOutOfBoundsException</code> — Some type of index is out of bounds.</li>
+      <li><code>NegativeArraySizeException</code> — Array created with a negative size.</li>
+      <li><code>NullPointerException</code> — Invalid use of a null reference.</li>
+      <li><code>NumberFormatException</code> — Invalid conversion of a string to a numeric format.</li>
+      <li><code>SecurityException</code> — Attempt to violate security.</li>
+      <li><code>StringIndexOutOfBoundsException</code> — Attempt to index outside the bounds of a string.</li>
+      <li><code>UnsupportedOperationException</code> — An unsupported operation was encountered.</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>The exceptions in <strong>Group 1</strong> are <strong>checked</strong> exceptions (you must handle or declare them). The exceptions in <strong>Groups 2 and 3</strong> are <strong>runtime (unchecked)</strong> exceptions.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Important Methods of the Throwable Class</h2>
+    <ul>
+      <li><code>public String getMessage()</code> — Returns a <strong>detailed message</strong> about the exception. This message is set in the Throwable constructor.</li>
+      <li><code>public Throwable getCause()</code> — Returns the <strong>cause</strong> of the exception as a Throwable object.</li>
+      <li><code>public String toString()</code> — Returns the <strong>class name</strong> joined with the result of <code>getMessage()</code>.</li>
+      <li><code>public void printStackTrace()</code> — Prints the result of <code>toString()</code> along with the <strong>stack trace</strong> to <code>System.err</code>, the error output stream.</li>
+      <li><code>public StackTraceElement[] getStackTrace()</code> — Returns an array with each element of the stack trace. Index <strong>0</strong> is the <strong>top</strong> of the call stack, and the last element is the method at the <strong>bottom</strong> of the call stack.</li>
+      <li><code>public Throwable fillInStackTrace()</code> — Fills the stack trace of this Throwable object with the current stack trace, adding to any previous information.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Flow Control of a Program Under Exceptions</h2>
+    <p>Exceptions <strong>break the normal flow</strong> of control. When an exception occurs, the statement that would normally run next is <strong>not executed</strong>.</p>
+    <p>What happens instead depends on:</p>
+    <ul>
+      <li>whether the exception is <strong>caught</strong></li>
+      <li><strong>where</strong> it is caught</li>
+      <li>what statements are executed in the <strong>catch block</strong></li>
+      <li>whether you have a <strong>finally block</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Handling Exceptions Using a try Statement</h2>
+    <p>A method catches an exception using the <code>try</code> and <code>catch</code> keywords.</p>
+    <ul>
+      <li>A try/catch block is placed around the code that might cause an exception.</li>
+      <li>The code inside a try/catch block is called <strong>protected code</strong>.</li>
+    </ul>
+    <pre><code>try
+{
+    // statement that could throw an exception
+}
+catch (ExceptionClassName e1)
+{
+    // statements that handle the exception
+}</code></pre>
+
+    <h3>The Syntax of a try Statement</h3>
+    <ul>
+      <li>The <code>try</code> keyword starts the block. <strong>Curly braces are required.</strong></li>
+      <li>The try block is also called <strong>protected code</strong>.</li>
+      <li>If an exception is thrown in the try block, the <strong>catch clauses try to catch it</strong>.</li>
+      <li><code>catch (exception_type identifier)</code>: the <strong>exception_type</strong> is the type of exception you are trying to catch. The <strong>identifier</strong> refers to the caught exception object.</li>
+      <li>The catch block holds the <strong>exception handler</strong>.</li>
+    </ul>
+
+    <h3>Example: try/catch</h3>
+    <pre><code>public class ExcepTest {
+    public static void main(String args[]) {
+        try {
+            int a[] = new int[2];
+            System.out.println("Access element in third index :" + a[3]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Exception thrown :" + e);
+        }
+        System.out.println("Out of the block");
+    }
+}</code></pre>
+    <p>Output:</p>
+    <pre><code>Exception thrown :java.lang.ArrayIndexOutOfBoundsException: 3
+Out of the block</code></pre>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Newer Java versions print the message as <code>Index 3 out of bounds for length 2</code>. The program still continues after the catch block, so "Out of the block" is printed.</p>
+    </div>
+
+    <h3>Using Multiple catch Blocks</h3>
+    <pre><code>try
+{
+    // Protected code
+} catch (ExceptionType1 e1) {
+    // Catch block for exception type 01
+} catch (ExceptionType2 e2) {
+    // Catch block for exception type 02
+} catch (ExceptionType3 e3) {
+    // Catch block for exception type 03
+}</code></pre>
+    <p>Example:</p>
+    <pre><code>try {
+    file = new FileInputStream(fileName);
+    x = (byte) file.read();
+} catch (FileNotFoundException f) {   // specific one first
+    f.printStackTrace();
+    return -1;
+} catch (IOException i) {             // general one last
+    i.printStackTrace();
+    return -1;
+}</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Exam Trap</span>
+      <p>When using multiple catch blocks, put the <strong>more specific (child) exception first</strong> and the <strong>more general (parent) exception last</strong>. <code>FileNotFoundException</code> is a child of <code>IOException</code>. If <code>IOException</code> comes first, the second catch can never be reached and the code <strong>will not compile</strong>.</p>
+    </div>
+
+    <h3>Nested try/catch Blocks</h3>
+    <p>try-catch blocks can be <strong>nested</strong>. One try-catch block can be inside the body of another try. This is called <strong>nesting of try-catch blocks</strong>.</p>
+    <p><strong>Why use nested try blocks?</strong> Sometimes one <strong>part</strong> of a block may cause one error, and the <strong>whole block</strong> may cause another error. In such cases, the exception handlers have to be nested.</p>
+    <p>Syntax:</p>
+    <pre><code>try
+{
+    statement 1;
+    statement 2;
+    try
+    {
+        statement 1;
+        statement 2;
+    }
+    catch (Exception e)
+    {
+    }
+}
+catch (Exception e)
+{
+}</code></pre>
+    <p>Example:</p>
+    <pre><code>public class Excepnested {
+    public static void main(String args[]) {
+        try {
+            try {
+                System.out.println("going to divide");
+                int b = 39 / 0;
+            } catch (ArithmeticException e) {
+                System.out.println(e);
+            }
+            try {
+                int a[] = new int[5];
+                a[5] = 4;
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println(e);
+            }
+            System.out.println("Other Statement");
+        } catch (Exception e) {
+            System.out.println("handeled");
+        }
+        System.out.println("normal flow..");
+    }
+}</code></pre>
+    <p>Output:</p>
+    <pre><code>going to divide
+java.lang.ArithmeticException: / by zero
+java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+Other Statement
+normal flow..</code></pre>
+    <p>Both inner exceptions are caught by their own inner catch blocks. So the outer catch block is <strong>not</strong> used.</p>
+
+    <div class="divider"></div>
+
+    <h2>Using the finally Block</h2>
+    <ul>
+      <li>The <strong>finally block</strong> is used to run <strong>important code</strong>, such as closing a connection or stream.</li>
+      <li>The finally block is <strong>always executed</strong>, whether the exception is handled or not.</li>
+      <li>A finally block must be <strong>followed by a try or catch block</strong>.</li>
+    </ul>
+
+    <h3>The Syntax of a try Statement with finally</h3>
+    <pre><code>try {
+    // protected code
+} catch (exceptiontype identifier) {
+    // exception handler
+} finally {
+    // finally block
+}</code></pre>
+    <ul>
+      <li>A finally block can <strong>only appear as part of a try statement</strong>.</li>
+      <li>The finally block <strong>always executes</strong>, whether or not an exception occurs in the try block.</li>
+    </ul>
+
+    <h3>Execution of the finally Block</h3>
+    <ol>
+      <li>Program code runs. <strong>Did an exception occur?</strong></li>
+      <li><strong>No</strong> → the finally block is executed.</li>
+      <li><strong>Yes</strong> → was the exception handled? Whether <strong>yes or no</strong>, the finally block is executed.</li>
+    </ol>
+
+    <h3>Why Use a finally Block?</h3>
+    <ul>
+      <li>It holds <strong>"cleanup" code</strong>, such as closing a file or closing a connection.</li>
+      <li>For each try block there can be <strong>zero or more catch blocks</strong>, but only <strong>one finally block</strong>.</li>
+    </ul>
+
+    <h3>Example: finally</h3>
+    <pre><code>public class TestFinallyBlock {
+    public static void main(String args[]) {
+        try {
+            int data = 25 / 0;
+            System.out.println(data);
+        }
+        catch (NullPointerException e) {
+            System.out.println(e);
+        }
+        finally {
+            System.out.println("finally block is always executed");
+        }
+        System.out.println("rest of the code...");
+    }
+}</code></pre>
+    <p>Output:</p>
+    <pre><code>finally block is always executed
+Exception in thread "main" java.lang.ArithmeticException: / by zero</code></pre>
+    <p>The catch block handles only <code>NullPointerException</code>, so the <code>ArithmeticException</code> is <strong>not handled</strong>. The finally block still runs, but "rest of the code..." is <strong>not printed</strong>.</p>
+
+    <h3>Important Facts</h3>
+    <ul>
+      <li>A <strong>catch clause cannot exist without a try</strong> statement.</li>
+      <li>It is <strong>not compulsory</strong> to have a finally clause whenever a try/catch block is present.</li>
+      <li>A <strong>try block cannot exist without either a catch clause or a finally clause</strong>.</li>
+      <li><strong>No code</strong> can be placed between the try, catch and finally blocks.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><code>try</code> needs <strong>at least one</strong> of <code>catch</code> or <code>finally</code>. A <code>catch</code> always needs a <code>try</code>. A try block can have <strong>many catch blocks</strong> but only <strong>one finally block</strong>.</p>
+    </div>
+
+    <h3>Swallowing Exceptions</h3>
+    <p>You can <strong>swallow</strong> an exception by catching it in a catch block and leaving the catch block <strong>empty</strong>.</p>
+    <pre><code>public static void openFile(String name) {
+    try {
+        FileInputStream f = new FileInputStream(name);
+    } catch (FileNotFoundException e) {
+        // empty: the exception is swallowed
+    }
+}</code></pre>
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Swallowing an exception is considered <strong>bad programming practice</strong>. The error is hidden and nobody knows something went wrong.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Java throw and throws Keywords</h2>
+    <ul>
+      <li>The <code>throw</code> keyword is used to <strong>explicitly throw</strong> an exception.</li>
+      <li>We can throw a <strong>checked or an unchecked</strong> exception with <code>throw</code>.</li>
+      <li><code>throw</code> is mainly used to throw <strong>custom exceptions</strong> (you will see these later in this lesson).</li>
+      <li>The <code>throws</code> keyword appears at the <strong>end of a method's signature</strong>.</li>
+    </ul>
+    <ul>
+      <li><code>throws</code> is used to <strong>declare</strong> an exception. It tells the caller that the method may cause it. <code>throw</code> is used to <strong>throw</strong> an exception explicitly.</li>
+      <li><strong>Syntax:</strong> <code>throw</code> is followed by an <strong>instance</strong> of an exception class. <code>throws</code> is followed by <strong>exception class names</strong>.</li>
+      <li><code>throw</code> is used <strong>in the method body</strong>. <code>throws</code> is used <strong>in the method signature</strong> to declare the exceptions that can occur in the statements of the method.</li>
+      <li>You can <strong>throw one exception at a time</strong>, but you can <strong>declare multiple exceptions</strong> using <code>throws</code>.</li>
+    </ul>
+
+    <h3>Example: throws IOException</h3>
+    <pre><code>import java.io.*;
+
+public class ClassName {
+    public void deposit(double amount) throws IOException {
+        // Method implementation
+        throw new IOException();
+    }
+    // Remainder of class definition
+}</code></pre>
+
+    <h3>Declaring More Than One Exception</h3>
+    <p>A method can declare more than one exception. The exceptions are written in a list <strong>separated by commas</strong>.</p>
+    <pre><code>public void withdraw(double amount)
+        throws IOException, InterruptedException
+{
+    // Method implementation
+}</code></pre>
+
+    <h3>Example: throw</h3>
+    <pre><code>public class Example {
+    void checkAge(int age) {
+        if (age &lt; 18)
+            throw new ArithmeticException("Not Eligible for voting");
+        else
+            System.out.println("Eligible for voting");
+    }
+    public static void main(String args[]) {
+        Example obj = new Example();
+        obj.checkAge(13);
+        System.out.println("End Of Program");
+    }
+}</code></pre>
+    <p>Since 13 is less than 18, the exception is thrown. It is not caught, so the program stops and "End Of Program" is <strong>not printed</strong>.</p>
+
+    <h3>Example: throws</h3>
+    <pre><code>public class Example {
+    int division(int a, int b) throws ArithmeticException {
+        int t = a / b;
+        return t;
+    }
+    public static void main(String args[]) {
+        Example obj = new Example();
+        try {
+            System.out.println(obj.division(15, 0));
+        }
+        catch (ArithmeticException e) {
+            System.out.println("You shouldn't divide number by zero");
+        }
+    }
+}</code></pre>
+    <p>Output: <code>You shouldn't divide number by zero</code></p>
+
+    <h3>Difference Between throw and throws</h3>
+    <pre><code>throw  : throw new ArithmeticException("Arithmetic Exception");
+
+void myMethod() {
+    throw new ArithmeticException("divided by 0");
+}
+
+throws : void myMethod() throws ArithmeticException,
+                                 NullPointerException { ..... }</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><code>throw</code> = <strong>do</strong> the throwing, inside the method body, followed by an <strong>object</strong> (<code>throw new ...</code>), one at a time.</p>
+      <p><code>throws</code> = <strong>declare</strong> the exceptions, in the method signature, followed by <strong>class names</strong>, can list many.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Declaring Your Own Exceptions</h2>
+    <p>You can create your own exceptions in Java. Keep these points in mind:</p>
+    <ul>
+      <li>All exceptions must be a <strong>child of Throwable</strong>.</li>
+      <li>To write a <strong>checked exception</strong> that is enforced by the <strong>Handle or Declare Rule</strong>, <strong>extend the <code>Exception</code> class</strong>.</li>
+      <li>To write a <strong>runtime exception</strong>, <strong>extend the <code>RuntimeException</code> class</strong>.</li>
+    </ul>
+
+    <h3>Syntax</h3>
+    <pre><code>public class MyException extends Exception {
+}</code></pre>
+    <ul>
+      <li>You just need to <strong>extend the predefined <code>Exception</code> class</strong> to create your own exception.</li>
+      <li>These are considered to be <strong>checked exceptions</strong>.</li>
+      <li>An exception class is like any other class. It can contain useful fields and methods.</li>
+    </ul>
+
+    <h3>Example: InsufficientFundsException</h3>
+    <p>This is a user-defined exception that extends <code>Exception</code>, so it is a <strong>checked exception</strong>.</p>
+    <pre><code>import java.io.*;
+
+public class InsufficientFundsException extends Exception
+{
+    private double amount;
+
+    public InsufficientFundsException(double amount)
+    {
+        this.amount = amount;
+    }
+
+    public double getAmount()
+    {
+        return amount;
+    }
+}</code></pre>
+
+    <h3>Hands-On: Using Your Own Exception</h3>
+    <p>Here is a small example using the exception above. It uses <code>throw</code>, <code>throws</code> and <code>try/catch</code> together.</p>
+    <pre><code>public class CheckingAccount {
+    private double balance;
+
+    public CheckingAccount(double balance) {
+        this.balance = balance;
+    }
+
+    public void withdraw(double amount)
+            throws InsufficientFundsException {
+        if (amount &lt;= balance) {
+            balance -= amount;
+        } else {
+            throw new InsufficientFundsException(amount - balance);
+        }
+    }
+}
+
+public class BankDemo {
+    public static void main(String[] args) {
+        CheckingAccount c = new CheckingAccount(500.00);
+        try {
+            c.withdraw(600.00);
+        } catch (InsufficientFundsException e) {
+            System.out.println("Sorry, you are short by " + e.getAmount());
+        }
+    }
+}</code></pre>
+    <p>Output: <code>Sorry, you are short by 100.0</code></p>
+
+    <div class="divider"></div>
+
+    <h2>Advantages of Exceptions</h2>
+    <ul>
+      <li><strong>Propagating errors up the call stack</strong> — an error can be passed up to the method that knows how to handle it.</li>
+      <li><strong>Grouping and differentiating error types</strong> — different kinds of errors are different exception classes.</li>
+      <li><strong>Separating error-handling code from "regular" code</strong> — the normal logic stays clean and easy to read.</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Homework 1</span>
+      <p>Explain these statements <strong>with examples</strong>:</p>
+      <p>1. The difference between <code>final</code>, <code>finally</code> and <code>finalize</code>.</p>
+      <p>2. By default, <strong>unchecked exceptions are forwarded</strong> in the calling chain (propagated).</p>
+      <p>3. By default, <strong>checked exceptions are not forwarded</strong> in the calling chain (propagation does not happen).</p>
+    </div>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Homework 2</span>
+      <p>1. What is the <strong>"Call Stack"</strong> in Java?</p>
+      <p>2. What is an <strong>"Exception Handler"</strong> in Java?</p>
+      <p>3. Explain how an exception handler uses the call stack to handle the exception.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Summary</h2>
+    <ul>
+      <li>An <strong>exception</strong> is an event during the running of a program that disrupts its normal flow.</li>
+      <li>There are many <strong>reasons</strong> for exceptions: missing files, network problems, invalid data, and more.</li>
+      <li><strong>Exception handling</strong> keeps the program flow from breaking.</li>
+      <li>The <strong>types</strong> are checked exceptions, unchecked (runtime) exceptions and errors. All are subclasses of <code>Throwable</code>.</li>
+      <li>Use <code>try</code> and <code>catch</code> to catch exceptions. You can use <strong>multiple</strong> and <strong>nested</strong> catch blocks.</li>
+      <li>Use <code>finally</code> for cleanup code that must always run.</li>
+      <li>Use <code>throw</code> to throw an exception and <code>throws</code> to declare one.</li>
+      <li>You can declare <strong>your own exceptions</strong> by extending <code>Exception</code> (checked) or <code>RuntimeException</code> (unchecked).</li>
+    </ul>
+
+    <h2>References</h2>
+    <ul>
+      <li><code>https://docs.oracle.com/javase/tutorial/essential/exceptions/definition.html</code></li>
+      <li><strong>How To Program (Early Objects)</strong> by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> by Kathy Sierra and Bert Bates</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Introduction to Java Exceptions',
+    subTopics: [
+      'Program Failures',
+      'Handling Exceptions: A Short History',
+      'The Role of Exceptions in Java',
+      'What is an Exception?',
+      'Reasons for Exceptions',
+      'When Can an Exception Occur?',
+      'What is Exception Handling?',
+      'Types of Exceptions',
+      'Checked Exception',
+      'Unchecked Exception',
+      'Error',
+      'Exception Hierarchy',
+      'Most Common Built-in Exceptions',
+      'Important Methods of the Throwable Class',
+      'Flow Control of a Program Under Exceptions',
+      'Handling Exceptions Using a try Statement',
+      'Using Multiple catch Blocks',
+      'Nested try/catch Blocks',
+      'Using the finally Block',
+      'Swallowing Exceptions',
+      'Java throw and throws Keywords',
+      'Difference Between throw and throws',
+      'Declaring Your Own Exceptions',
+      'Advantages of Exceptions',
+    ],
+    definitions: [
+      { term: 'Exception', meaning: 'An event that occurs during the execution of a program and disrupts the normal flow of its instructions.' },
+      { term: 'Exception Handling', meaning: 'A mechanism to handle runtime errors so that the flow of the program does not break.' },
+      { term: 'Checked Exception', meaning: 'An exception the compiler checks at compile time. It must be handled or declared. It is a subclass of Exception but not of RuntimeException.' },
+      { term: 'Unchecked Exception', meaning: 'A runtime exception (subclass of RuntimeException) that the compiler does not check. It usually comes from programming bugs.' },
+      { term: 'Error', meaning: 'A serious problem beyond the control of the programmer or user, such as a memory, hardware or JVM error. It is a subclass of Error.' },
+      { term: 'Throwable', meaning: 'The class at the top of the exception hierarchy. All exceptions and errors are its subclasses.' },
+      { term: 'Protected Code', meaning: 'The code inside a try block that might generate an exception.' },
+      { term: 'try Block', meaning: 'A block that holds the code that might throw an exception. It needs a catch or finally block.' },
+      { term: 'catch Block', meaning: 'A block that handles a specific type of exception thrown in the try block.' },
+      { term: 'finally Block', meaning: 'A block that always runs, whether or not an exception occurs, used for cleanup code such as closing files.' },
+      { term: 'throw', meaning: 'A keyword used in the method body to explicitly throw an exception object.' },
+      { term: 'throws', meaning: 'A keyword in the method signature that declares the exceptions the method may cause.' },
+      { term: 'Catch-or-Throw Rule (Handle or Declare Rule)', meaning: 'A checked exception must either be caught with try/catch or declared with throws.' },
+      { term: 'Swallowing an Exception', meaning: 'Catching an exception and leaving the catch block empty. This is bad programming practice.' },
+      { term: 'Nested try/catch', meaning: 'A try-catch block placed inside the body of another try block.' },
+      { term: 'Custom Exception', meaning: 'A user-defined exception class that extends Exception (checked) or RuntimeException (unchecked).' },
+      { term: 'Stack Trace', meaning: 'The list of method calls active when an exception occurred, shown by printStackTrace().' },
+      { term: 'Dump', meaning: 'The old way of handling errors: stopping the program and printing the entire memory contents in hexadecimal.' },
+    ],
+    keyPoints: [
+      'Java handles errors using exception objects that are created when an error occurs.',
+      'An exception disrupts the normal flow, and the next statement is not executed unless the exception is handled.',
+      'All exceptions and errors are subclasses of Throwable. Throwable splits into Error and Exception, and Exception splits into RuntimeException and other (checked) exceptions.',
+      'Checked exceptions must be handled or declared (catch-or-throw rule). Unchecked exceptions and errors do not have to be.',
+      'Errors (memory, hardware, JVM) are usually not handled in code.',
+      'Common exceptions: ArithmeticException (divide by zero), ArrayIndexOutOfBoundsException, NullPointerException, NumberFormatException, ClassCastException, FileNotFoundException.',
+      'Important Throwable methods: getMessage(), getCause(), toString(), printStackTrace(), getStackTrace(), fillInStackTrace().',
+      'A try block needs at least one catch or finally block. A catch block cannot exist without a try.',
+      'With multiple catch blocks, put the more specific exception first and the more general one last, or the code will not compile.',
+      'try-catch blocks can be nested when one part of a block and the whole block can cause different errors.',
+      'The finally block always executes, whether or not an exception occurs or is handled. It is used for cleanup code.',
+      'A try can have many catch blocks but only one finally block. No code can be placed between try, catch and finally.',
+      'Swallowing an exception (empty catch block) is bad practice.',
+      'throw is used in the method body with an exception object (one at a time). throws is used in the method signature with class names (can list many).',
+      'throw is mainly used for custom exceptions. A method can declare several exceptions separated by commas.',
+      'To create a custom checked exception, extend Exception. For a custom runtime exception, extend RuntimeException.',
+      'Advantages of exceptions: errors propagate up the call stack, error types can be grouped and differentiated, and error-handling code is separated from regular code.',
+      'Code examples show: try/catch with ArrayIndexOutOfBounds, nested try/catch, finally execution, throw with a voting-age check, throws with division, and a custom InsufficientFundsException.',
+    ],
+  },
+},
+
+
+{
+  id: 10,
+  title: 'Introduction to File Handling in Java',
+  content: `
+    <span class="lesson-badge">LESSON 10</span>
+    <h1>Introduction to File Handling in Java</h1>
+    <div class="meta-info">ICT2122 <span>•</span> 15 min read</div>
+
+    <h2>Recap — Exceptions</h2>
+    <p>File handling uses <strong>exceptions</strong> a lot, so let us quickly remember what we learned in the last lesson.</p>
+    <ul>
+      <li>What is an exception</li>
+      <li>Reasons for exceptions</li>
+      <li>Exception handling</li>
+      <li>Types of exceptions</li>
+      <li><code>Throwable</code> class</li>
+      <li>Catch exceptions</li>
+      <li><code>finally</code> block</li>
+      <li><code>throw</code> / <code>throws</code></li>
+      <li>Declaring your own exceptions</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Getting to Know About Streams</h2>
+    <p>A <strong>stream</strong> is simply a <strong>flow of characters to and from a program</strong>.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Think of a stream like a pipe. Data flows through the pipe between your program and something on the other end.</p>
+    </div>
+
+    <p>The other end of the stream can be anything that can accept or generate a stream of characters, including:</p>
+    <ul>
+      <li>A <strong>console window</strong></li>
+      <li>A <strong>printer</strong></li>
+      <li>A <strong>file on a disk drive</strong></li>
+      <li>Even <strong>another program</strong></li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Streams have <strong>no idea of the structure or meaning</strong> of your data. A stream is just a <strong>sequence of characters</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Java I/O Streams</h2>
+    <p>Java has two kinds of I/O streams: <strong>Character Streams</strong> and <strong>Binary Streams</strong>.</p>
+
+    <h3>Character Streams</h3>
+    <ul>
+      <li>Read and write <strong>text characters</strong> that represent strings</li>
+      <li>You can connect a character stream to a <strong>text file</strong> to store text data on a hard drive</li>
+    </ul>
+
+    <h3>Binary Streams</h3>
+    <ul>
+      <li>Read and write <strong>individual bytes</strong> that represent primitive data types</li>
+      <li>You can connect a binary stream to a <strong>binary file</strong> to store binary data on a hard drive</li>
+    </ul>
+
+    <pre><code>Stream type  | Handles                         | Connects to
+-------------|---------------------------------|-------------
+Character    | text characters (strings)       | text file
+Binary       | bytes (primitive data types)    | binary file</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Character Streams — Reading</h2>
+
+    <h3>File</h3>
+    <ul>
+      <li>The <code>File</code> class <strong>represents a file on a hard drive</strong></li>
+      <li>Its main purpose is to <strong>identify the file</strong> you want to read from or write to</li>
+    </ul>
+    <p>Constructors:</p>
+    <pre><code>File(String path)
+File(URI uri)
+File(File parent, String child)
+File(String parent, String child)</code></pre>
+
+    <h3>FileReader</h3>
+    <ul>
+      <li>Provides basic methods for <strong>reading data from a character stream that comes from a file</strong></li>
+      <li>Lets you read data <strong>one character at a time</strong></li>
+    </ul>
+    <p>Constructors:</p>
+    <pre><code>FileReader(File file)
+FileReader(String path)</code></pre>
+
+    <h3>BufferedReader</h3>
+    <ul>
+      <li>This class <strong>"wraps" around the FileReader</strong> class to give more efficient input</li>
+      <li>It adds a <strong>buffer</strong> to the input stream, so data is read from the hard drive in <strong>large chunks</strong> instead of a byte at a time</li>
+      <li>Lets you read data <strong>one character at a time</strong> or <strong>a line at a time</strong></li>
+    </ul>
+    <p>Constructor:</p>
+    <pre><code>BufferedReader(Reader in)</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A <strong>buffer</strong> is a small area in memory that holds data temporarily. Reading a big chunk at once is faster than going to the disk again and again for each character.</p>
+    </div>
+
+    <h3>Creating a BufferedReader</h3>
+    <ol>
+      <li>Create a <code>File</code> object for the file</li>
+      <li>Create a <code>FileReader</code> object</li>
+      <li>Pass the <code>FileReader</code> object to the <code>BufferedReader</code> constructor</li>
+    </ol>
+    <pre><code>File f = new File("student.txt");
+FileReader fr = new FileReader(f);
+BufferedReader in = new BufferedReader(fr);</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>File operations can fail (for example, the file may not exist). Java forces you to handle these problems, so put your file code inside <code>try-catch</code> blocks or use <code>throws</code>, just like in the exceptions lesson.</p>
+    </div>
+
+    <h3>Reading from a Character Stream</h3>
+    <ul>
+      <li>Use the <code>readLine()</code> method</li>
+      <li>This method returns <code>null</code> when the <strong>end of the file</strong> is reached</li>
+    </ul>
+    <pre><code>String line = in.readLine();
+while (line != null)
+{
+    System.out.println(line);
+    line = in.readLine();
+}</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>With character streams, <code>readLine()</code> returns <strong>null</strong> at the end of the file.</p>
+    </div>
+
+    <h3>Hands-on Session</h3>
+    <ul>
+      <li>Create a file named <code>Student.txt</code> on your computer</li>
+      <li>Refer to the sample programs <strong>"Student"</strong> and <strong>"MyCharacterReader"</strong></li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Don't forget to <strong>close the stream</strong> when you finish reading: <code>in.close()</code></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Character Streams — Writing</h2>
+
+    <h3>FileWriter</h3>
+    <ul>
+      <li>Connects to a <code>File</code> object</li>
+      <li>Provides only <strong>rudimentary (very basic) writing ability</strong></li>
+    </ul>
+    <p>Constructors:</p>
+    <pre><code>FileWriter(File file)
+FileWriter(File file, boolean append)
+FileWriter(String path)
+FileWriter(String path, boolean append)</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The <code>boolean append</code> value decides what happens to old data. <code>true</code> means the new data is added at the end of the file (<strong>appending</strong>).</p>
+    </div>
+
+    <h3>BufferedWriter</h3>
+    <ul>
+      <li>Connects to a <code>FileWriter</code> and provides <strong>output buffering</strong></li>
+      <li>Without a buffer, data is written to the hard drive <strong>one character at a time</strong></li>
+      <li>With a buffer, the program <strong>collects data in the buffer</strong> and writes it only when the <strong>buffer is full</strong> or when the <strong>program requests</strong> the data to be written</li>
+    </ul>
+    <p>Constructor:</p>
+    <pre><code>BufferedWriter(Writer out)</code></pre>
+
+    <h3>PrintWriter</h3>
+    <ul>
+      <li>Connects to a <code>Writer</code>. This can be a <code>BufferedWriter</code>, a <code>FileWriter</code>, or any other object that extends the <strong>abstract <code>Writer</code> class</strong></li>
+      <li>Most often, you connect it to a <code>BufferedWriter</code></li>
+    </ul>
+    <p>Constructors:</p>
+    <pre><code>PrintWriter(Writer out)
+PrintWriter(Writer out, boolean flush)</code></pre>
+
+    <h3>Connecting a PrintWriter to a Text File (Replacing)</h3>
+    <ol>
+      <li>Create a <code>File</code> object for the file</li>
+      <li>Create a <code>FileWriter</code> object</li>
+      <li>Create a <code>BufferedWriter</code> object</li>
+      <li>Pass the <code>BufferedWriter</code> object to the <code>PrintWriter</code> constructor</li>
+    </ol>
+    <pre><code>File f = new File("student.txt");
+FileWriter fw = new FileWriter(f);
+BufferedWriter bw = new BufferedWriter(fw);
+PrintWriter out = new PrintWriter(bw);</code></pre>
+
+    <h3>Connecting a PrintWriter to a Text File (Appending)</h3>
+    <p>The steps are the same. The difference is the extra <code>true</code> value.</p>
+    <pre><code>File f = new File("student.txt");
+FileWriter fw = new FileWriter(f, true);
+BufferedWriter bw = new BufferedWriter(fw);
+PrintWriter out = new PrintWriter(bw, true);</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p><strong>Replacing</strong> and <strong>appending</strong> are different. Without the <code>true</code> value in <code>FileWriter</code>, the old content of the file is replaced. Exams often test this difference.</p>
+    </div>
+
+    <h3>Writing to a Character Stream</h3>
+    <p>Use the <code>print()</code> and <code>println()</code> methods.</p>
+    <pre><code>System.out.print("ID");
+System.out.print("\\t");
+System.out.println("Name");
+
+OR
+
+String line = "ID" + "\\t" + "Name";
+System.out.println(line);</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>The same methods work on your <code>PrintWriter</code> object. Use <code>out.print()</code> and <code>out.println()</code> to write into the file instead of the console. <code>\\t</code> adds a tab space.</p>
+    </div>
+
+    <h3>Hands-on Session</h3>
+    <ul>
+      <li>Refer to the sample program <strong>"MyCharacterWriting"</strong></li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Don't forget to <strong>flush</strong> and then <strong>close</strong> the stream: <code>out.flush()</code> and <code>out.close()</code>. Data waiting in the buffer may not reach the file if you skip this.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Binary Streams — Reading</h2>
+
+    <h3>File</h3>
+    <p>Once again, you use the <code>File</code> class to represent the file itself.</p>
+    <pre><code>File(String path)
+File(URI uri)
+File(File parent, String child)
+File(String parent, String child)</code></pre>
+
+    <h3>FileInputStream</h3>
+    <ul>
+      <li><code>FileInputStream</code> is what <strong>connects the input stream to a file</strong></li>
+    </ul>
+    <pre><code>FileInputStream(File file)
+FileInputStream(String path)</code></pre>
+
+    <h3>BufferedInputStream</h3>
+    <ul>
+      <li>Adds <strong>buffering</strong> to the basic <code>FileInputStream</code></li>
+      <li>This <strong>improves the efficiency</strong> of the stream</li>
+    </ul>
+    <pre><code>BufferedInputStream(InputStream in)</code></pre>
+
+    <h3>DataInputStream</h3>
+    <ul>
+      <li>This is the class you <strong>actually work with</strong> to read data from the stream</li>
+      <li>The other stream classes read <strong>a byte at a time</strong></li>
+      <li>This class knows how to read <strong>basic data types</strong>, including <strong>primitive types and strings</strong></li>
+    </ul>
+    <pre><code>DataInputStream(InputStream in)</code></pre>
+
+    <h3>Creating a DataInputStream</h3>
+    <ol>
+      <li>Create a <code>File</code> object</li>
+      <li>Create a <code>FileInputStream</code></li>
+      <li>Create a <code>BufferedInputStream</code></li>
+      <li>Create a <code>DataInputStream</code></li>
+    </ol>
+    <pre><code>File file = new File("Students.dat");
+FileInputStream fs = new FileInputStream(file);
+BufferedInputStream bs = new BufferedInputStream(fs);
+DataInputStream in = new DataInputStream(bs);</code></pre>
+
+    <h3>Reading from a DataInputStream</h3>
+    <p>Use the various <strong>read methods</strong> of the <code>DataInputStream</code> class to read the fields <strong>one at a time</strong>.</p>
+    <pre><code>String val = in.readUTF();
+int num = in.readInt();
+// ... and so on</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>To read binary data, you must know the <strong>exact sequence</strong> in which the data values appear in the file.</p>
+    </div>
+
+    <p>To read until the end of the file, use a loop and catch <code>EOFException</code>:</p>
+    <pre><code>boolean eof = false;
+while (!eof) {
+    try {
+        String name = in.readUTF();
+        int id = in.readInt();
+        // do something with the data here
+    }
+    catch (EOFException e) {
+        eof = true;
+    }
+    catch (IOException e) {
+        // handle the error here
+    }
+}</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Exam trap: character streams show the end of file when <code>readLine()</code> returns <strong>null</strong>. Binary streams show it by throwing an <strong>EOFException</strong>.</p>
+    </div>
+
+    <h3>Hands-on Session</h3>
+    <ul>
+      <li>Refer to the sample program <strong>"MyBinaryReading"</strong></li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Don't forget to <strong>close the stream</strong>: <code>in.close();</code></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Binary Streams — Writing</h2>
+
+    <h3>FileOutputStream</h3>
+    <ul>
+      <li>Connects to a <code>File</code> object and creates an <strong>output stream that can write to the file</strong></li>
+      <li>This stream is limited. It can write only <strong>raw bytes</strong> to the file</li>
+      <li>In other words, it does <strong>not</strong> know how to write values such as <code>int</code>, <code>double</code>, or <code>String</code></li>
+    </ul>
+    <p>Constructors:</p>
+    <pre><code>FileOutputStream(File file)
+FileOutputStream(File file, boolean append)
+FileOutputStream(String path)
+FileOutputStream(String path, boolean append)</code></pre>
+
+    <h3>BufferedOutputStream</h3>
+    <ul>
+      <li>Connects to a <code>FileOutputStream</code> and adds <strong>output buffering</strong></li>
+    </ul>
+    <pre><code>BufferedOutputStream(OutputStream out)</code></pre>
+
+    <h3>DataOutputStream</h3>
+    <ul>
+      <li>Adds the ability to write <strong>primitive data types and strings</strong> to a stream</li>
+    </ul>
+    <pre><code>DataOutputStream(OutputStream out)</code></pre>
+
+    <h3>Creating a DataOutputStream (Replacing)</h3>
+    <ol>
+      <li>Create the <code>File</code> object</li>
+      <li>Create a <code>FileOutputStream</code></li>
+      <li>Create a <code>BufferedOutputStream</code></li>
+      <li>Create a <code>DataOutputStream</code></li>
+    </ol>
+    <pre><code>File file = new File(name);
+FileOutputStream fos = new FileOutputStream(file);
+BufferedOutputStream bos = new BufferedOutputStream(fos);
+DataOutputStream out = new DataOutputStream(bos);</code></pre>
+
+    <h3>Creating a DataOutputStream (Appending)</h3>
+    <p>Pass <code>true</code> to the <code>FileOutputStream</code> to add data at the end of the file.</p>
+    <pre><code>File file = new File(name);
+FileOutputStream fos = new FileOutputStream(file, true);
+BufferedOutputStream bos = new BufferedOutputStream(fos);
+DataOutputStream out = new DataOutputStream(bos);</code></pre>
+
+    <h3>Writing to a Binary Stream</h3>
+    <p>You can use various <strong>write methods</strong> to write different data types to the file.</p>
+    <pre><code>out.writeUTF(stringVal);
+out.writeInt(intVal);
+out.writeDouble(doubleVal);</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The <strong>order you write</strong> the data must match the <strong>order you read</strong> it. If you write a name with <code>writeUTF()</code> and then an id with <code>writeInt()</code>, read them back with <code>readUTF()</code> and then <code>readInt()</code>.</p>
+    </div>
+
+    <h3>Hands-on Session</h3>
+    <ul>
+      <li>Refer to the sample program <strong>"MyBinaryWriting"</strong></li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Don't forget to <strong>flush</strong> and <strong>close</strong>: <code>out.flush();</code> and <code>out.close();</code></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Stream Chains at a Glance</h2>
+    <p>Each stream is built by <strong>wrapping</strong> one class inside another. Here is the full chain for each task:</p>
+    <pre><code>Character Reading : File → FileReader → BufferedReader
+Character Writing : File → FileWriter → BufferedWriter → PrintWriter
+Binary Reading    : File → FileInputStream → BufferedInputStream → DataInputStream
+Binary Writing    : File → FileOutputStream → BufferedOutputStream → DataOutputStream</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Homework</h2>
+    <h3>1. Write a Java program</h3>
+    <p>Write a Java program that performs the following operations on a <code>.txt</code> file.</p>
+    <ul>
+      <li><strong>User input:</strong> file name (with path)</li>
+      <li><strong>The program must display:</strong></li>
+    </ul>
+    <pre><code>&lt;filename&gt;
+No of lines      : &lt;amount&gt;
+No of words      : &lt;amount&gt;
+No of characters : &lt;amount&gt;</code></pre>
+
+    <h3>2. Study about</h3>
+    <p>The <code>java.nio.file</code> package and its related package, <code>java.nio.file.attribute</code>. These provide <strong>comprehensive support for file I/O</strong> and for <strong>accessing the default file system</strong>.</p>
+    <p>Link: <code>https://docs.oracle.com/javase/tutorial/essential/io/fileio.html</code></p>
+
+    <div class="divider"></div>
+
+    <h2>References</h2>
+    <ul>
+      <li><code>https://docs.oracle.com/javase/tutorial/essential/io/index.html</code></li>
+      <li><strong>How To Program (Early Objects)</strong> — by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> — by Kathy Sierra and Bert Bates</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Introduction to File Handling in Java using Character Streams and Binary Streams',
+    subTopics: [
+      'Recap — Exceptions',
+      'Getting to Know About Streams',
+      'Java I/O Streams',
+      'Character Streams — Reading',
+      'Character Streams — Writing',
+      'Binary Streams — Reading',
+      'Binary Streams — Writing',
+      'Stream Chains at a Glance',
+    ],
+    definitions: [
+      { term: 'Stream', meaning: 'A flow of characters to and from a program. It has no idea of the structure or meaning of the data.' },
+      { term: 'Character Stream', meaning: 'A stream that reads and writes text characters that represent strings. It connects to a text file.' },
+      { term: 'Binary Stream', meaning: 'A stream that reads and writes individual bytes that represent primitive data types. It connects to a binary file.' },
+      { term: 'File', meaning: 'A class that represents a file on a hard drive and identifies the file to read from or write to.' },
+      { term: 'FileReader', meaning: 'Reads data from a character stream that comes from a file, one character at a time.' },
+      { term: 'BufferedReader', meaning: 'Wraps around FileReader and adds a buffer so data is read in large chunks. It can read a character or a line at a time.' },
+      { term: 'FileWriter', meaning: 'Connects to a File object and provides only basic writing ability.' },
+      { term: 'BufferedWriter', meaning: 'Connects to a FileWriter and adds output buffering. Data is written only when the buffer is full or the program requests it.' },
+      { term: 'PrintWriter', meaning: 'Connects to a Writer (usually a BufferedWriter) and provides the print() and println() methods.' },
+      { term: 'FileInputStream', meaning: 'Connects the input stream to a file for reading bytes.' },
+      { term: 'BufferedInputStream', meaning: 'Adds buffering to FileInputStream to improve efficiency.' },
+      { term: 'DataInputStream', meaning: 'The class you actually use to read primitive data types and strings from a binary stream.' },
+      { term: 'FileOutputStream', meaning: 'Connects to a File object and writes only raw bytes. It cannot write ints, doubles or strings directly.' },
+      { term: 'BufferedOutputStream', meaning: 'Connects to a FileOutputStream and adds output buffering.' },
+      { term: 'DataOutputStream', meaning: 'Adds the ability to write primitive data types and strings to a stream.' },
+      { term: 'Buffer', meaning: 'A temporary memory area that collects data so it can be read or written in large chunks.' },
+    ],
+    keyPoints: [
+      'A stream is a flow of characters to and from a program; the other end can be a console, printer, file or another program.',
+      'Character streams handle text (text files); binary streams handle bytes of primitive data types (binary files).',
+      'Character reading chain: File → FileReader → BufferedReader.',
+      'Character writing chain: File → FileWriter → BufferedWriter → PrintWriter.',
+      'Binary reading chain: File → FileInputStream → BufferedInputStream → DataInputStream.',
+      'Binary writing chain: File → FileOutputStream → BufferedOutputStream → DataOutputStream.',
+      'readLine() returns null when the end of a text file is reached.',
+      'Binary streams signal the end of the file by throwing EOFException, so catch it to stop the reading loop.',
+      'To read binary data you must know the exact order in which the values were written.',
+      'Passing true as the append argument adds data at the end of the file; without it the file content is replaced.',
+      'Buffering improves efficiency: input is read in large chunks, and output is written only when the buffer is full or requested.',
+      'Always flush and close output streams (out.flush(); out.close();) and close input streams (in.close()).',
+      'DataOutputStream uses writeUTF(), writeInt() and writeDouble(); DataInputStream uses readUTF() and readInt() to match.',
+    ],
+  },
+},
+
+{
+  id: 11,
+  title: 'Introduction to Java Database Connectivity',
+  content: `
+    <span class="lesson-badge">LESSON 11</span>
+    <h1>Introduction to Java Database Connectivity</h1>
+    <div class="meta-info">ICT2122 <span>•</span> 22 min read</div>
+
+    <h2>Recap — File Handling</h2>
+    <p>In the last lesson we learned how Java reads and writes files using streams. Let us quickly remember the topics.</p>
+    <ul>
+      <li>Getting to know about streams</li>
+      <li>Character streams — <strong>reading</strong> and <strong>writing</strong></li>
+      <li>Binary streams — <strong>reading</strong> and <strong>writing</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>What is an API?</h2>
+    <p><strong>API</strong> stands for <strong>Application Programming Interface</strong>.</p>
+
+    <h3>Java SE API</h3>
+    <ul>
+      <li>The <strong>Java Platform, Standard Edition (Java SE) APIs</strong> define the core Java platform for general-purpose computing</li>
+      <li>These APIs are in modules whose names start with <code>java</code></li>
+      <li>Documentation link: <code>https://docs.oracle.com/en/java/javase/19/docs/api/index.html</code></li>
+    </ul>
+
+    <h3>API in General</h3>
+    <ul>
+      <li>An API is a <strong>document</strong> that describes all the features of a product or software</li>
+      <li>It represents <strong>classes and interfaces</strong> that software programs can follow to communicate with each other</li>
+      <li>An API can be created for applications, libraries, operating systems, etc.</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The Java language itself is very simple. But Java comes with a <strong>library of classes</strong> that give commonly used utility functions that most Java programs cannot do without. This class library is called the <strong>Java API</strong>, and it is as much a part of Java as the language itself.</p>
+    </div>
+
+    <p>The real challenge of learning Java is not mastering the language. It is <strong>mastering the API</strong>.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The Java language has only about <strong>50 keywords</strong>, but the Java API has <strong>several thousand classes</strong> with <strong>tens of thousands of methods</strong> that you can use in your programs.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>JDBC Introduction</h2>
+    <p><strong>JDBC</strong> stands for <strong>Java Database Connectivity</strong>. It is a <strong>standard Java API</strong> for <strong>database-independent connectivity</strong> between the Java programming language and a wide range of databases.</p>
+    <ul>
+      <li>JDBC is used to <strong>connect</strong> to a database and <strong>execute queries</strong></li>
+      <li>The JDBC API uses <strong>JDBC drivers</strong> to connect with the database</li>
+    </ul>
+
+    <pre><code>Java Application ──uses──► JDBC API
+       │
+       ▼
+  JDBC Driver ──► Database</code></pre>
+
+    <h3>What JDBC Allows You to Do</h3>
+    <ol>
+      <li>Establish a <strong>connection</strong> with a database or other tabular data source</li>
+      <li>Send <strong>SQL commands</strong> to the database</li>
+      <li><strong>Process the results</strong></li>
+    </ol>
+
+    <h3>Why JDBC?</h3>
+    <ul>
+      <li>Before JDBC, the <strong>ODBC (Open Database Connectivity)</strong> API was the database API used to connect and execute queries</li>
+      <li>But the ODBC API uses an <strong>ODBC driver written in C language</strong>. It is <strong>platform dependent</strong> and <strong>unsecured</strong></li>
+      <li>That is why Java defined its own API (<strong>JDBC API</strong>) that uses <strong>JDBC drivers written in Java</strong></li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>ODBC</strong> → driver written in <strong>C</strong>, platform dependent, unsecured. <strong>JDBC</strong> → drivers written in <strong>Java</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>JDBC Architecture Components</h2>
+    <ul>
+      <li><strong>JDBC API</strong> — a set of Java classes and interfaces used to connect and execute queries with databases</li>
+      <li><strong>JDBC DriverManager</strong> — manages database drivers and establishes connections between Java applications and databases</li>
+      <li><strong>JDBC Driver</strong> — a software component that lets Java applications communicate with a specific database</li>
+      <li><strong>JDBC Test Suite</strong> — a tool used to test whether JDBC drivers correctly implement the API</li>
+      <li><strong>JDBC-ODBC Bridge</strong> — an old method used to connect to databases through ODBC. It is <strong>not used in modern Java</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>JDBC Architecture</h2>
+    <p>The JDBC architecture has <strong>two layers</strong>:</p>
+    <ul>
+      <li><strong>JDBC API</strong> — provides the connection between the <strong>Java application</strong> and the <strong>DriverManager</strong></li>
+      <li><strong>JDBC Driver API</strong> — provides the connection between the <strong>DriverManager</strong> and the <strong>database drivers</strong></li>
+    </ul>
+
+    <pre><code>        Java Application
+               │
+               │  JDBC API layer
+               ▼
+           JDBC API
+               │
+               ▼
+      JDBC Driver Manager
+      ┌────────┼─────────┐
+      │        │         │   JDBC Driver API layer
+      ▼        ▼         ▼
+ JDBC Driver JDBC Driver JDBC Driver
+      │        │         │
+      ▼        ▼         ▼
+   Oracle  SQL Server  ODBC Data Source</code></pre>
+
+    <p>The JDBC API uses the <strong>DriverManager</strong> and <strong>database-specific drivers</strong>. This allows Java applications to connect to different types of databases easily.</p>
+
+    <h3>Role of the DriverManager</h3>
+    <ul>
+      <li>Selects the <strong>correct driver</strong> for the database</li>
+      <li><strong>Establishes the connection</strong></li>
+      <li>Supports <strong>multiple drivers</strong> at the same time</li>
+      <li>Enables connection to <strong>different databases</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Common JDBC Components</h2>
+    <p>The JDBC API provides the following interfaces and classes.</p>
+
+    <h3>DriverManager</h3>
+    <ul>
+      <li>This <strong>class</strong> manages a list of database drivers</li>
+      <li>Matches connection requests from the Java application with the proper database driver using the communication <strong>sub protocol</strong></li>
+      <li>The <strong>first driver</strong> that recognizes a certain sub protocol under JDBC is used to establish a database <code>Connection</code></li>
+    </ul>
+
+    <h3>Driver</h3>
+    <ul>
+      <li>This <strong>interface</strong> handles the communication with the database server</li>
+    </ul>
+
+    <h3>Connection</h3>
+    <ul>
+      <li>This <strong>interface</strong> has all the methods for contacting a database</li>
+      <li>The connection object represents the <strong>communication context</strong>. All communication with the database is done <strong>through the connection object only</strong></li>
+    </ul>
+
+    <h3>Statement</h3>
+    <ul>
+      <li>You use objects created from this <strong>interface</strong> to <strong>submit SQL statements</strong> to the database</li>
+      <li>Some derived interfaces accept parameters in addition to executing stored procedures</li>
+    </ul>
+
+    <h3>ResultSet</h3>
+    <ul>
+      <li>These objects <strong>hold the data retrieved from a database</strong> after you execute an SQL query using <code>Statement</code> objects</li>
+    </ul>
+
+    <h3>SQLException</h3>
+    <ul>
+      <li>This <strong>class</strong> handles any errors that occur in a database application</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><code>DriverManager</code> → <strong>class</strong> | <code>Driver</code> → <strong>interface</strong> | <code>Connection</code> → <strong>interface</strong> | <code>Statement</code> → <strong>interface</strong> | <code>ResultSet</code> → <strong>objects holding query results</strong> | <code>SQLException</code> → <strong>class for database errors</strong></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>JDBC Drivers</h2>
+    <p>A <strong>JDBC Driver</strong> is a software component that enables a Java application to interact with a database. There are <strong>4 types</strong> of JDBC drivers:</p>
+    <ol>
+      <li><strong>JDBC-ODBC Bridge Driver</strong></li>
+      <li><strong>Native-API Driver</strong> (partially Java driver)</li>
+      <li><strong>Network Protocol Driver</strong> (fully Java driver)</li>
+      <li><strong>Thin Driver</strong> (fully Java driver)</li>
+    </ol>
+
+    <h3>1. JDBC-ODBC Bridge Driver</h3>
+    <ul>
+      <li>Uses the <strong>ODBC driver</strong> to connect to the database</li>
+      <li>Converts <strong>JDBC method calls into ODBC function calls</strong></li>
+      <li>This is now <strong>discouraged</strong> because of the thin driver</li>
+    </ul>
+    <pre><code>Java Application → JDBC-ODBC bridge driver → ODBC Driver → Vendor Database Library → Database
+(all of this runs on the client machine)</code></pre>
+    <p><strong>Advantages</strong></p>
+    <ul>
+      <li>Easy to use</li>
+      <li>Can be easily connected to any database</li>
+    </ul>
+    <p><strong>Disadvantages</strong></p>
+    <ul>
+      <li><strong>Performance is degraded</strong>, because every JDBC method call is converted into an ODBC function call</li>
+      <li>The <strong>ODBC driver must be installed</strong> on the client machine</li>
+    </ul>
+
+    <h3>2. Native API Driver</h3>
+    <ul>
+      <li>Uses the <strong>client-side libraries</strong> of the database</li>
+      <li>Converts JDBC method calls into <strong>native calls of the database API</strong></li>
+      <li>It is <strong>not written entirely in Java</strong></li>
+    </ul>
+    <pre><code>Java Application → Native API driver → Vendor Database Library → Database
+(all of this runs on the client machine)</code></pre>
+    <p><strong>Advantages</strong></p>
+    <ul>
+      <li>Performance is <strong>better than</strong> the JDBC-ODBC bridge driver</li>
+    </ul>
+    <p><strong>Disadvantages</strong></p>
+    <ul>
+      <li>The native driver must be installed on <strong>each client machine</strong></li>
+      <li>The <strong>vendor client library</strong> must be installed on the client machine</li>
+    </ul>
+
+    <h3>3. Network Protocol Driver</h3>
+    <ul>
+      <li>Uses <strong>middleware</strong> (an application server) that converts JDBC calls, directly or indirectly, into the <strong>vendor-specific database protocol</strong></li>
+      <li>It is <strong>fully written in Java</strong></li>
+    </ul>
+    <pre><code>Client machine:  Java Application → Network Protocol driver
+Server side   :  Middleware → Database</code></pre>
+    <p><strong>Advantages</strong></p>
+    <ul>
+      <li><strong>No client-side library</strong> is required, because of the application server. This server can perform many tasks like auditing, load balancing, logging, etc.</li>
+    </ul>
+    <p><strong>Disadvantages</strong></p>
+    <ul>
+      <li><strong>Network support</strong> is required on the client machine</li>
+      <li>Requires <strong>database-specific coding</strong> in the middle tier</li>
+      <li><strong>Maintenance becomes costly</strong>, because of the database-specific coding in the middle tier</li>
+    </ul>
+
+    <h3>4. Thin Driver</h3>
+    <ul>
+      <li>Converts JDBC calls <strong>directly</strong> into the vendor-specific database protocol. That is why it is called a <strong>thin driver</strong></li>
+      <li>It is <strong>fully written in Java</strong></li>
+    </ul>
+    <pre><code>Java Application → Thin driver → Database
+(the driver runs on the client machine)</code></pre>
+    <p><strong>Advantages</strong></p>
+    <ul>
+      <li><strong>Better performance</strong> than all other drivers</li>
+      <li><strong>No software</strong> is required at the client side or server side</li>
+    </ul>
+    <p><strong>Disadvantages</strong></p>
+    <ul>
+      <li>Drivers <strong>depend on the database</strong></li>
+    </ul>
+
+    <h3>Driver Types Comparison</h3>
+    <pre><code>Type | Driver            | What must be installed
+-----|-------------------|--------------------------------------------
+1    | JDBC-ODBC Bridge  | ODBC driver on the client machine
+2    | Native API        | Native driver + vendor client library (client)
+3    | Network Protocol  | No client library; needs middleware + network
+4    | Thin              | Nothing on client or server side</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The <strong>Thin driver</strong> gives the <strong>best performance</strong>. The <strong>JDBC-ODBC bridge</strong> is the <strong>slowest</strong> because every call is converted to ODBC. Only the <strong>Native API driver</strong> is <strong>partially Java</strong>. The Network Protocol and Thin drivers are fully Java.</p>
+    </div>
+
+    <h3>MySQL Connector/J</h3>
+    <ul>
+      <li><strong>MySQL Connector/J</strong> provides connectivity for Java applications to <strong>MySQL databases</strong></li>
+      <li>It implements the JDBC API along with some useful extensions</li>
+      <li>Connector/J is a <strong>JDBC Type 4 driver</strong>, which means:
+        <ul>
+          <li>It is a <strong>pure Java</strong> implementation of the MySQL protocol</li>
+          <li>It does <strong>not</strong> require any native MySQL client libraries</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Basic Steps to Use a Database in Java</h2>
+    <p>There are <strong>5 basic steps</strong> to connect a Java application to a database using JDBC:</p>
+    <ol>
+      <li><strong>Register</strong> the Driver Class</li>
+      <li>Create a <strong>Connection</strong></li>
+      <li>Create a <strong>Statement</strong></li>
+      <li><strong>Execute</strong> Queries</li>
+      <li><strong>Close</strong> the Connection</li>
+    </ol>
+
+    <h3>Step 1 — Register the Driver Class</h3>
+    <ul>
+      <li>In JDBC, you need to register the driver so that Java knows <strong>which database to connect to</strong></li>
+      <li>The <code>Class.forName()</code> method is used to <strong>dynamically load the driver class into memory</strong></li>
+      <li>Loading the driver <strong>automatically registers it with the DriverManager</strong></li>
+    </ul>
+    <p>Syntax:</p>
+    <pre><code>Class.forName("com.mysql.cj.jdbc.Driver");
+
+// OR
+
+Class.forName("com.mysql.cj.jdbc.Driver").newInstance();</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Newer JDBC versions can find the driver automatically when the Connector/J library is added to your project. But your lecture uses <code>Class.forName()</code>, so learn this form for exams and practicals.</p>
+    </div>
+
+    <h3>Step 2 — Creating a Connection</h3>
+    <p>The <code>getConnection()</code> method of the <code>DriverManager</code> class is used to establish a connection between a Java application and a database.</p>
+    <pre><code>Connection con = DriverManager.getConnection(URL, UserName, Password);</code></pre>
+    <ul>
+      <li><strong>URL</strong> — an address that points to your database. Example: <code>"jdbc:mysql://localhost:3306/testdb"</code></li>
+      <li><strong>UserName</strong> — the user of the database</li>
+      <li><strong>Password</strong> — the password for the database</li>
+    </ul>
+
+    <h3>Step 3 — Creating a Statement</h3>
+    <p>The <code>createStatement()</code> method of the <code>Connection</code> interface is used to create a <code>Statement</code> object. A <code>Statement</code> object is responsible for <strong>sending SQL queries to the database and retrieving results</strong>.</p>
+    <pre><code>Statement stmt = con.createStatement();</code></pre>
+    <p>Uses of <code>Statement</code> objects:</p>
+    <ul>
+      <li><strong>Query</strong> the database</li>
+      <li><strong>Update</strong> the database</li>
+    </ul>
+
+    <h3>Three Types of JDBC Statements</h3>
+    <ul>
+      <li><strong>Statement</strong> — used for <strong>simple SQL statements with no parameters</strong>. Example: <code>SELECT * FROM students;</code></li>
+      <li><strong>PreparedStatement</strong> — <strong>extends Statement</strong>. Used for <strong>precompiled SQL statements</strong> that may include <strong>input parameters</strong></li>
+      <li><strong>CallableStatement</strong> — <strong>extends PreparedStatement</strong>. Used to execute <strong>stored procedures</strong> that may contain both <strong>input and output parameters</strong></li>
+    </ul>
+
+    <pre><code>// PreparedStatement example
+PreparedStatement ps = con.prepareStatement("SELECT * FROM students WHERE id = ?");
+ps.setInt(1, 101);
+
+// CallableStatement example
+CallableStatement cs = con.prepareCall("{call getStudent(?, ?)}");
+cs.setInt(1, 101);                          // input parameter
+cs.registerOutParameter(2, Types.VARCHAR);  // output parameter</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><code>Statement</code> ← extended by <code>PreparedStatement</code> ← extended by <code>CallableStatement</code>.</p>
+    </div>
+
+    <h3>Step 4 — Executing Queries</h3>
+    <p>The <code>executeQuery()</code> method of the <code>Statement</code> interface is used to execute SQL <strong>SELECT</strong> queries. It returns a <code>ResultSet</code> object containing <strong>all the rows</strong> retrieved from the query.</p>
+    <pre><code>ResultSet rs = stmt.executeQuery(query);
+
+// Example
+String query = "SELECT * FROM students";
+ResultSet rs = stmt.executeQuery(query);</code></pre>
+
+    <p>The <code>Statement</code> interface provides <strong>three main methods</strong> to execute SQL commands:</p>
+
+    <h3>execute(String sql)</h3>
+    <ul>
+      <li>Can be used for <strong>any SQL statement</strong></li>
+      <li>Returns <code>true</code> if the result is a <code>ResultSet</code>, otherwise <code>false</code></li>
+    </ul>
+    <pre><code>boolean result = stmt.execute("SELECT * FROM students");</code></pre>
+
+    <h3>executeUpdate(String sql)</h3>
+    <ul>
+      <li>Used for <strong>data manipulation</strong>: INSERT, DELETE, UPDATE, CREATE TABLE, etc.</li>
+      <li>Returns the <strong>number of rows affected</strong></li>
+    </ul>
+    <pre><code>int rows = stmt.executeUpdate("UPDATE students SET grade = 'A' WHERE id = 101");</code></pre>
+
+    <h3>executeQuery(String sql)</h3>
+    <ul>
+      <li>Used for <strong>SELECT statements only</strong></li>
+      <li>Returns a <code>ResultSet</code> object containing the query results</li>
+    </ul>
+    <pre><code>ResultSet rs = stmt.executeQuery("SELECT * FROM students");</code></pre>
+
+    <pre><code>Method          | Used for                       | Returns
+----------------|--------------------------------|----------------------
+execute()       | any SQL statement              | boolean (true if ResultSet)
+executeUpdate() | INSERT, DELETE, UPDATE, CREATE | int (rows affected)
+executeQuery()  | SELECT only                    | ResultSet</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Exam trap: use <code>executeQuery()</code> for <strong>SELECT only</strong>. Use <code>executeUpdate()</code> for INSERT, UPDATE, DELETE and CREATE TABLE. They return different things: a <strong>ResultSet</strong> and an <strong>int</strong>.</p>
+    </div>
+
+    <h3>Step 5 — Close the Connection</h3>
+    <ul>
+      <li>After completing database operations, it is important to <strong>close the connection to free resources</strong></li>
+      <li>Closing the <code>Connection</code> object <strong>automatically closes</strong> the <code>Statement</code> and <code>ResultSet</code> objects created from it</li>
+      <li>Use the <code>close()</code> method of the <code>Connection</code> interface</li>
+    </ul>
+    <pre><code>con.close();</code></pre>
+    <p>Here, <code>con</code> is the connection object created at the beginning.</p>
+
+    <div class="divider"></div>
+
+    <h2>Prepared Statements</h2>
+    <p><strong>Prepared Statements</strong> are used for SQL queries that are <strong>executed multiple times with different values</strong>.</p>
+    <ul>
+      <li>The SQL statement is <strong>parsed and compiled by the database only once</strong></li>
+      <li>Column values can be set later using <strong>placeholders</strong></li>
+      <li>Use <code>?</code> as a placeholder for values in the query</li>
+      <li>Helps <strong>prevent SQL injection</strong> and <strong>improves performance</strong></li>
+    </ul>
+
+    <h3>Example of a Parameterized Query</h3>
+    <pre><code>String sql = "INSERT INTO emp VALUES (?, ?, ?)";
+PreparedStatement ps = con.prepareStatement(sql);
+
+// Set values for placeholders
+ps.setInt(1, 101);
+ps.setString(2, "John");
+ps.setDouble(3, 5000.0);
+
+ps.executeUpdate();</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>PreparedStatement: <strong>compiled once</strong>, uses <code>?</code> placeholders, <strong>prevents SQL injection</strong> and <strong>improves performance</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>ResultSet</h2>
+    <ul>
+      <li>A <code>ResultSet</code> object <strong>holds the data returned by executing a Statement or PreparedStatement query</strong></li>
+      <li>The rows are retrieved <strong>sequentially</strong></li>
+      <li>A <code>ResultSet</code> maintains a <strong>cursor</strong> pointing to the <strong>current row</strong></li>
+      <li>The <code>next()</code> method moves the cursor to the <strong>next row</strong></li>
+    </ul>
+    <pre><code>ResultSet rs = stmt.executeQuery("SELECT * FROM students");
+while (rs.next()) {
+    int id = rs.getInt("id");
+    String name = rs.getString("name");
+    System.out.println(id + " : " + name);
+}
+rs.close(); // Always close the ResultSet</code></pre>
+
+    <h3>ResultSet Methods</h3>
+    <p><code>ResultSet</code> provides methods to retrieve column values from the <strong>current row</strong>.</p>
+
+    <p><strong>Accessing data by column index</strong> — <code>getType(int columnIndex)</code></p>
+    <ul>
+      <li>Returns the value of the specified column index in the given type</li>
+    </ul>
+    <pre><code>rs.getString(1);  // Get first column as String
+rs.getInt(2);     // Get second column as int
+rs.getTime(3);    // Get third column as Time</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Column indices start at <strong>1, not 0</strong>.</p>
+    </div>
+
+    <p><strong>Accessing data by column name</strong> — <code>getType(String columnName)</code></p>
+    <ul>
+      <li>Returns the value of the specified column using its name</li>
+      <li>Slightly <strong>less efficient</strong> than using the column index</li>
+    </ul>
+    <pre><code>rs.getString("name");
+rs.getInt("id");
+rs.getBoolean("isActive");</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Handling Errors with Exceptions</h2>
+    <ul>
+      <li>In JDBC, <strong>exceptions may occur</strong> during database operations</li>
+      <li>To handle errors, use <code>try-catch-finally</code> blocks</li>
+      <li>This ensures the program can <strong>recover gracefully</strong> and the <strong>database remains consistent</strong></li>
+      <li>For example, you can <strong>rollback transactions</strong> or <strong>close database resources</strong> when an exception occurs</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Remember the exceptions lesson. Database code can throw <code>SQLException</code> (for example, a wrong password or a wrong SQL query), and <code>Class.forName()</code> can throw <code>ClassNotFoundException</code> if the driver is missing. This is why all JDBC code is placed inside <code>try-catch</code>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Connect to a MySQL Database — Example</h2>
+    <p>You need the following information for the MySQL database:</p>
+
+    <h3>Driver Class</h3>
+    <ul>
+      <li>The driver class for the MySQL database is <code>com.mysql.cj.jdbc.Driver</code></li>
+    </ul>
+
+    <h3>Connection URL</h3>
+    <p>The connection URL for the MySQL database in this example is:</p>
+    <pre><code>jdbc:mysql://localhost:3306/tecruh</code></pre>
+    <ul>
+      <li><code>jdbc</code> is the <strong>API</strong></li>
+      <li><code>mysql</code> is the <strong>database</strong></li>
+      <li><code>localhost</code> is the <strong>server name</strong> on which MySQL is running. You may also use an IP address</li>
+      <li><code>3306</code> is the <strong>port number</strong></li>
+      <li><code>tecruh</code> is the <strong>database name</strong></li>
+    </ul>
+
+    <h3>Username and Password</h3>
+    <ul>
+      <li>The <strong>default username</strong> for the MySQL database is <code>root</code></li>
+      <li>The <strong>password</strong> is given by the user at the time of installing MySQL</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>The slides mention the password <code>1234</code> in the text but the code uses <code>123</code>. In your own program, the password must be the <strong>same password you set when installing MySQL</strong>. A wrong password gives an access error.</p>
+    </div>
+
+    <h3>Create the Database and Table</h3>
+    <p>Create the <code>tecruh</code> database and the <code>student</code> table.</p>
+    <pre><code>CREATE DATABASE tecruh;
+
+CREATE TABLE student(
+    id int(10) PRIMARY KEY,
+    name varchar(40),
+    age int(3));</code></pre>
+
+    <h3>The Java Program</h3>
+    <pre><code>// 1. import the JDBC classes
+import java.sql.*;
+
+class MysqlCon {
+    public static void main(String args[]) {
+        try {
+            // 2. register the driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // 3. establish the connection
+            Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/tecruh", "root", "123");
+            // here tecruh is the database name, root is the username
+            // and 123 is the password
+
+            // 4. create statement
+            Statement stmt = con.createStatement();
+
+            // 5. execute the query to retrieve data from the table
+            ResultSet rs = stmt.executeQuery("select * from student");
+
+            // 6. traverse through the result set
+            while (rs.next())
+                System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getInt(3));
+
+            // 7. close the connection
+            con.close();
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The program follows the 5 basic steps: <strong>register the driver</strong> (step 2), <strong>create the connection</strong> (step 3), <strong>create the statement</strong> (step 4), <strong>execute the query</strong> (steps 5 and 6, where the <code>ResultSet</code> is read), and <strong>close the connection</strong> (step 7). Step 1 is only the <code>import</code>.</p>
+    </div>
+
+    <h3>JDBC Flow at a Glance</h3>
+    <pre><code>Class.forName(...)
+      ↓
+DriverManager.getConnection(URL, user, password)
+      ↓
+con.createStatement()
+      ↓
+stmt.executeQuery(sql)   or   stmt.executeUpdate(sql)
+      ↓
+while (rs.next()) { rs.getXxx(...) }
+      ↓
+con.close()</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Hands-on Session</h2>
+    <ul>
+      <li>Refer to <strong>"Practical 20"</strong></li>
+    </ul>
+
+    <h2>Homework</h2>
+    <ul>
+      <li>Why use <strong>Prepared Statements</strong>?</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>References</h2>
+    <ul>
+      <li><code>https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html</code></li>
+      <li><code>https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-api-changes.html</code></li>
+      <li><strong>How To Program (Early Objects)</strong> — by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> — by Kathy Sierra and Bert Bates</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Introduction to Java Database Connectivity (JDBC)',
+    subTopics: [
+      'Recap — File Handling',
+      'What is an API?',
+      'JDBC Introduction and Why JDBC',
+      'JDBC Architecture Components',
+      'JDBC Architecture',
+      'Common JDBC Components',
+      'JDBC Drivers',
+      'MySQL Connector/J',
+      'Basic Steps to Use a Database in Java',
+      'Prepared Statements',
+      'ResultSet and ResultSet Methods',
+      'Handling Errors with Exceptions',
+      'Connect to a MySQL Database — Example',
+    ],
+    definitions: [
+      { term: 'API', meaning: 'Application Programming Interface. A description of classes and interfaces that software programs can follow to communicate with each other.' },
+      { term: 'Java SE API', meaning: 'The class library that defines the core Java platform for general-purpose computing. Its modules have names starting with java.' },
+      { term: 'JDBC', meaning: 'Java Database Connectivity. A standard Java API for database-independent connectivity between Java and a wide range of databases.' },
+      { term: 'ODBC', meaning: 'Open Database Connectivity. An older database API whose driver is written in C, so it is platform dependent and unsecured.' },
+      { term: 'JDBC Driver', meaning: 'A software component that enables a Java application to communicate with a specific database.' },
+      { term: 'DriverManager', meaning: 'A class that manages a list of database drivers, matches connection requests to the proper driver and establishes the connection.' },
+      { term: 'Driver (interface)', meaning: 'The interface that handles the communication with the database server.' },
+      { term: 'Connection', meaning: 'An interface with all methods for contacting a database. All communication with the database goes through the connection object.' },
+      { term: 'Statement', meaning: 'An interface used to submit SQL statements to the database. It is used for simple SQL with no parameters.' },
+      { term: 'PreparedStatement', meaning: 'Extends Statement. Used for precompiled SQL statements with input parameters, written with ? placeholders.' },
+      { term: 'CallableStatement', meaning: 'Extends PreparedStatement. Used to execute stored procedures with input and output parameters.' },
+      { term: 'ResultSet', meaning: 'An object that holds the data retrieved from a database by a query. It keeps a cursor pointing to the current row.' },
+      { term: 'SQLException', meaning: 'A class that handles errors that occur in a database application.' },
+      { term: 'JDBC Test Suite', meaning: 'A tool used to test whether JDBC drivers correctly implement the API.' },
+      { term: 'JDBC-ODBC Bridge Driver', meaning: 'A driver that converts JDBC method calls into ODBC function calls. It is discouraged and not used in modern Java.' },
+      { term: 'Native API Driver', meaning: 'A partially Java driver that converts JDBC calls into native calls of the database client library.' },
+      { term: 'Network Protocol Driver', meaning: 'A fully Java driver that uses middleware (an application server) to convert JDBC calls into the vendor-specific database protocol.' },
+      { term: 'Thin Driver', meaning: 'A fully Java driver that converts JDBC calls directly into the vendor-specific database protocol. It is the Type 4 driver.' },
+      { term: 'MySQL Connector/J', meaning: 'A JDBC Type 4 (pure Java) driver for MySQL. It needs no native MySQL client libraries.' },
+      { term: 'Class.forName()', meaning: 'Dynamically loads the driver class into memory, which registers the driver with the DriverManager.' },
+      { term: 'DriverManager.getConnection()', meaning: 'Establishes a connection between a Java application and a database using a URL, user name and password.' },
+      { term: 'execute()', meaning: 'Runs any SQL statement and returns true if the result is a ResultSet, otherwise false.' },
+      { term: 'executeUpdate()', meaning: 'Runs INSERT, DELETE, UPDATE or CREATE TABLE and returns the number of rows affected.' },
+      { term: 'executeQuery()', meaning: 'Runs SELECT statements only and returns a ResultSet.' },
+    ],
+    keyPoints: [
+      'The Java language has about 50 keywords, but the Java API has several thousand classes. Mastering the API is the real challenge.',
+      'JDBC allows you to establish a connection, send SQL commands and process the results.',
+      'JDBC was created because the ODBC driver is written in C, platform dependent and unsecured. JDBC drivers are written in Java.',
+      'JDBC architecture has two layers: the JDBC API (application to DriverManager) and the JDBC Driver API (DriverManager to drivers).',
+      'DriverManager selects the correct driver, establishes the connection and supports multiple drivers at the same time.',
+      'The first driver that recognizes a sub protocol is used to establish the connection.',
+      'There are 4 driver types: JDBC-ODBC Bridge, Native API (partially Java), Network Protocol (fully Java), Thin (fully Java).',
+      'The Thin driver has the best performance and needs no software on the client or server side, but it depends on the database.',
+      'The JDBC-ODBC bridge is slow because every JDBC call is converted to ODBC, and the ODBC driver must be installed on the client.',
+      'The Network Protocol driver needs no client library but needs network support and costly middle-tier maintenance.',
+      'MySQL Connector/J is a Type 4 (pure Java) driver.',
+      'The 5 basic JDBC steps: register the driver, create a connection, create a statement, execute queries, close the connection.',
+      'The MySQL driver class is com.mysql.cj.jdbc.Driver and the URL format is jdbc:mysql://localhost:3306/databaseName.',
+      'The three statement types are Statement, PreparedStatement (extends Statement) and CallableStatement (extends PreparedStatement).',
+      'Use executeQuery() for SELECT (returns ResultSet) and executeUpdate() for INSERT, UPDATE, DELETE and CREATE TABLE (returns row count).',
+      'PreparedStatement is compiled once, uses ? placeholders, prevents SQL injection and improves performance.',
+      'ResultSet rows are read one by one with next(), and column indices start at 1, not 0.',
+      'Getting values by column name is slightly less efficient than by column index.',
+      'Closing the Connection also closes its Statement and ResultSet objects.',
+      'Use try-catch-finally to handle JDBC exceptions so the program recovers and the database stays consistent.',
+    ],
+  },
+},
+
+{
+  id: 12,
+  title: 'Introduction to JAVA - Threads',
+  content: `
+    <span class="lesson-badge">LESSON 12</span>
+    <h1>Introduction to JAVA — Threads</h1>
+    <div class="meta-info">ICT2122 <span>•</span> 15 min read</div>
+
+    <h2>Recap — Database Connectivity</h2>
+    <p>In the last lesson we learned how Java connects to databases. Let us quickly remember the topics.</p>
+    <ul>
+      <li>What is an API</li>
+      <li>JDBC introduction and why JDBC</li>
+      <li>JDBC components and architecture</li>
+      <li>JDBC drivers</li>
+      <li>Basic steps to use a database in Java</li>
+      <li>Handling exceptions</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>What is a Thread?</h2>
+    <p>A <strong>thread</strong> is a <strong>single path of execution</strong> within a program.</p>
+    <ul>
+      <li>A program can have <strong>multiple threads</strong></li>
+      <li>Threads allow <strong>multiple activities inside one program</strong></li>
+    </ul>
+
+    <h3>Why Do We Need Threads?</h3>
+    <p>Programs often need to <strong>do multiple things at the same time</strong>. For example:</p>
+    <ul>
+      <li>A program <strong>downloading a file</strong> while <strong>updating the progress</strong></li>
+      <li>A <strong>UI responding</strong> while <strong>processing data</strong></li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Without threads:</strong> one task blocks everything else.<br><strong>With threads:</strong> tasks can run <strong>concurrently</strong> (at the same time).</p>
+    </div>
+
+    <h3>Key Characteristics of Threads</h3>
+    <p>Each thread has:</p>
+    <ul>
+      <li>Its <strong>own execution path</strong></li>
+      <li>Its <strong>own stack and local variables</strong></li>
+    </ul>
+    <p>But threads <strong>share memory</strong> within the same process.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Own stack and local variables for each thread, but <strong>shared memory</strong> inside the same process. <strong>Sharing memory can cause problems.</strong></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Process vs Thread</h2>
+    <ul>
+      <li><strong>Process</strong>
+        <ul>
+          <li>A running program</li>
+          <li>Has its <strong>own memory</strong></li>
+        </ul>
+      </li>
+      <li><strong>Thread</strong>
+        <ul>
+          <li>A part of a process</li>
+          <li><strong>Shares memory</strong> with other threads</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>One process can have <strong>multiple threads</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Multithreading</h2>
+    <p><strong>Multithreading</strong> means <strong>multiple threads in one program</strong>.</p>
+
+    <h3>Benefits</h3>
+    <ul>
+      <li>Better <strong>responsiveness</strong></li>
+      <li>Better <strong>CPU utilization</strong></li>
+      <li><strong>Multiple tasks at once</strong></li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Single-core CPU:</strong> threads take turns (<strong>context switching</strong>).<br><strong>Multi-core CPU:</strong> threads can run in <strong>parallel</strong>.</p>
+    </div>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The lecture picture "Multithreaded programming: Theory vs Actual" shows this idea. In theory, everything runs neatly in order. In real life, threads can run in an unpredictable, messy order.</p>
+    </div>
+
+    <h3>Multitasking vs Multithreading</h3>
+    <ul>
+      <li><strong>Multitasking</strong>
+        <ul>
+          <li>Multiple <strong>programs</strong> running</li>
+          <li>Example: Browser + Music Player</li>
+        </ul>
+      </li>
+      <li><strong>Multithreading</strong>
+        <ul>
+          <li>Multiple <strong>tasks inside one program</strong></li>
+          <li>Example: Game rendering + input handling</li>
+        </ul>
+      </li>
+    </ul>
+
+    <pre><code>Type            | Level            | Example
+----------------|------------------|-------------------------------
+Multitasking    | many programs    | Browser + Music Player
+Multithreading  | one program      | Game rendering + input handling</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Thread Creation in Java</h2>
+    <p>Threads can be created in <strong>two ways</strong>:</p>
+    <ol>
+      <li>By <strong>extending the <code>Thread</code> class</strong> — create a new class that extends the <code>Thread</code> class</li>
+      <li>By <strong>implementing the <code>Runnable</code> interface</strong></li>
+    </ol>
+
+    <h3>1st Method: Extend the Thread Class</h3>
+    <ul>
+      <li>Create a new class that <strong>extends the <code>Thread</code> class</strong></li>
+      <li>Extending <code>Thread</code> → <strong>simpler but less flexible</strong></li>
+    </ul>
+
+    <p><strong>Step 1</strong></p>
+    <ul>
+      <li>The class extending <code>Thread</code> should <strong>override the <code>run()</code> method</strong> to define the code executed by the thread</li>
+      <li>This method is the <strong>entry point</strong> of the thread. You put your complete business logic inside this method</li>
+    </ul>
+
+    <p><strong>Step 2</strong></p>
+    <ul>
+      <li>Once the <code>Thread</code> object is created, start it by calling the <code>start()</code> method</li>
+      <li><code>start()</code> calls the <code>run()</code> method and makes the thread <strong>eligible for running</strong></li>
+    </ul>
+
+    <h3>Example — Extending Thread</h3>
+    <pre><code>package mythread;
+
+public class MyThread extends Thread {
+
+    @Override
+    public void run() {
+        System.out.println("My thread is running...!!!");
+    }
+}</code></pre>
+
+    <pre><code>package mythread;
+
+public class MyThreadTest {
+
+    public static void main(String[] args) {
+        MyThread myThread = new MyThread();
+        myThread.start();
+    }
+}</code></pre>
+    <p>Output:</p>
+    <pre><code>My thread is running...!!!</code></pre>
+
+    <h3>2nd Method: Implement the Runnable Interface</h3>
+    <ul>
+      <li>The <code>Runnable</code> interface should be implemented by any class whose instances are intended to be executed by a thread</li>
+      <li>Implementing <code>Runnable</code> → <strong>more flexible and preferred</strong></li>
+    </ul>
+
+    <p><strong>Step 1</strong></p>
+    <ul>
+      <li>Implement the <code>run()</code> method provided by the <code>Runnable</code> interface</li>
+      <li>This is the <strong>entry point</strong> of the thread. You can put the complete business logic inside this method</li>
+    </ul>
+
+    <p><strong>Step 2</strong></p>
+    <p>Create a <code>Thread</code> object using either one of these constructors:</p>
+    <pre><code>Thread(Runnable threadObj, String threadName)
+Thread(Runnable threadObj)</code></pre>
+    <ul>
+      <li><code>threadObj</code> = an instance of a class that implements the <code>Runnable</code> interface</li>
+      <li><code>threadName</code> = the name given to the new thread</li>
+    </ul>
+
+    <p><strong>Step 3</strong></p>
+    <ul>
+      <li>Once the <code>Thread</code> object is created, start it by calling the <code>start()</code> method, which calls the <code>run()</code> method</li>
+    </ul>
+
+    <h3>Example — Implementing Runnable</h3>
+    <pre><code>package mythread;
+
+public class MyThreadInter implements Runnable {
+
+    @Override
+    public void run() {
+        System.out.println("My thread is running...!!!");
+    }
+}</code></pre>
+
+    <pre><code>package mythread;
+
+public class MyThreadTest {
+
+    public static void main(String[] args) {
+        MyThreadInter myThreadInter = new MyThreadInter();
+        Thread newThread = new Thread(myThreadInter);
+        newThread.start();
+    }
+}</code></pre>
+    <p>Output:</p>
+    <pre><code>My thread is running...!!!</code></pre>
+
+    <h3>The Difference</h3>
+    <p>Here both ways are used in the same <code>main</code> method. Notice that with <code>Runnable</code> you must <strong>wrap the object inside a <code>Thread</code> object</strong> before calling <code>start()</code>.</p>
+    <pre><code>public static void main(String[] args) {
+    // By extending the Thread class
+    MyThread myThread = new MyThread();
+    myThread.start();
+
+    // By implementing the Runnable interface
+    MyThreadInter myThreadInter = new MyThreadInter();
+    Thread newThread = new Thread(myThreadInter);
+    newThread.start();
+}</code></pre>
+    <p>Output (when each <code>run()</code> prints its own message):</p>
+    <pre><code>My thread is running, by extending...!!!
+My thread is running, by Implementing...!!!</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Extending: <code>myThread.start()</code> — the class itself is a thread.<br>Implementing: <code>new Thread(myThreadInter).start()</code> — you pass the <code>Runnable</code> object to a <code>Thread</code>.</p>
+    </div>
+
+    <h3>Extends Thread Class vs Implements Runnable Interface?</h3>
+    <ul>
+      <li>Extending the <code>Thread</code> class makes your class <strong>unable to extend other classes</strong>, because of the <strong>single inheritance</strong> feature in Java
+        <ul>
+          <li>However, this gives you a <strong>simpler code structure</strong></li>
+          <li>If you implement <code>Runnable</code>, you gain <strong>better object-oriented design and consistency</strong> and also <strong>avoid the single inheritance problem</strong></li>
+        </ul>
+      </li>
+      <li>If you just want the <strong>basic functionality</strong> of a thread, simply implement the <code>Runnable</code> interface and override <code>run()</code>
+        <ul>
+          <li>But if you want to do something serious with the thread object, because it has <strong>other methods which are not available in <code>Runnable</code></strong>, you may prefer to extend the <code>Thread</code> class</li>
+        </ul>
+      </li>
+    </ul>
+
+    <pre><code>Point                    | extends Thread     | implements Runnable
+-------------------------|--------------------|---------------------
+Can extend another class | No (single inherit)| Yes
+Code structure           | Simpler            | Better OO design
+Other Thread methods     | Available          | Not available in Runnable
+Overall                  | Less flexible      | More flexible, preferred</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><code>Thread</code> → simpler but less flexible. <code>Runnable</code> → more flexible and <strong>preferred</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Life Cycle of a Thread (Thread States)</h2>
+    <p>A thread moves through these states during its life: <strong>New → Runnable ↔ Running → Dead</strong>. It can also go to <strong>Waiting/Blocked</strong> from the running state.</p>
+
+    <pre><code>                 Waiting/Blocked
+                 ▲            │
+                 │            │
+                 │            ▼
+ New ──► Runnable ◄────────► Running ──► Dead</code></pre>
+
+    <h3>New</h3>
+    <ul>
+      <li>The thread is in the new state when you <strong>create an instance of the <code>Thread</code> class</strong> but <strong>before</strong> calling the <code>start()</code> method</li>
+    </ul>
+
+    <h3>Runnable</h3>
+    <ul>
+      <li>The thread is in the runnable state <strong>after calling <code>start()</code></strong>, but the <strong>thread scheduler has not selected it</strong> to be the running thread</li>
+    </ul>
+
+    <h3>Running</h3>
+    <ul>
+      <li>The thread is in the running state when the <strong>thread scheduler has selected it</strong></li>
+    </ul>
+
+    <h3>Waiting / Blocked</h3>
+    <ul>
+      <li>The thread is <strong>still alive</strong> but is <strong>currently not eligible to run</strong></li>
+    </ul>
+
+    <h3>Dead</h3>
+    <ul>
+      <li>A thread is in the terminated (dead) state when its <strong><code>run()</code> method exits</strong></li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>New</strong> = created, <code>start()</code> not called yet. <strong>Runnable</strong> = <code>start()</code> called, waiting for the scheduler. <strong>Running</strong> = chosen by the scheduler. <strong>Waiting/Blocked</strong> = alive but not eligible to run. <strong>Dead</strong> = <code>run()</code> has exited.</p>
+    </div>
+
+    <h3>Detailed Thread State Changes</h3>
+    <p>The detailed state diagram in the lecture shows what moves a thread from one state to another:</p>
+    <pre><code>Change                          | What causes it
+--------------------------------|---------------------------------------------
+Start → ready-to-run            | start() is called
+ready-to-run → Running          | chosen by the scheduler
+Running → ready-to-run          | scheduler swap, or Thread.yield()
+Running → Sleeping              | Thread.sleep()
+Running → Waiting               | Object.wait()
+Waiting → ready-to-run          | Object.notify() or Object.notifyAll()
+Running → Blocked               | blocks for I/O, or enters synchronized code
+Blocked → continues             | data received, or lock obtained
+Blocked → Dead                  | another thread closes the I/O socket
+Running → Dead                  | done, stop(), or run() exits</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>A thread that called <code>Thread.sleep()</code> wakes up when its sleep time is over. <code>notify()</code> and <code>notifyAll()</code> are used to wake up a thread that called <code>wait()</code>. Also, <code>stop()</code> is old and not recommended. The normal way to end a thread is to let <code>run()</code> finish.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>run() vs start()</h2>
+    <ul>
+      <li><code>Thread.run()</code> <strong>does not create a new thread</strong>. It runs on the <strong>same thread as the caller</strong></li>
+      <li><code>Thread.start()</code> <strong>creates a new thread</strong> on which the task is run</li>
+    </ul>
+    <pre><code>t.run();    // No new thread
+t.start();  // New thread created</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Exam trap: calling <code>run()</code> directly is just a normal method call. <strong>Only <code>start()</code> creates a new thread.</strong></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Hands-on Session</h2>
+    <ul>
+      <li>Let's <strong>print numbers</strong></li>
+      <li>Let's <strong>add and multiply</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>The Problem with Threads</h2>
+    <p>Threads <strong>share memory</strong>, and this can cause issues.</p>
+    <pre><code>class Counter {
+    int count = 0;
+
+    void increment() {
+        count++;
+    }
+}</code></pre>
+    <p>If many threads use the same <code>Counter</code> object, the <strong>result may be different each time you run the program</strong>.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Why does this happen? The statement <code>count++</code> looks like one step, but it really has three: <strong>read</strong> the value, <strong>add 1</strong>, and <strong>write</strong> it back. Two threads can mix these steps, so one update can get lost.</p>
+    </div>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Shared data can cause problems</strong> when many threads use it at the same time.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>References</h2>
+    <ul>
+      <li><code>https://docs.oracle.com/javase/tutorial/essential/concurrency/procthread.html</code></li>
+      <li><strong>How To Program (Early Objects)</strong> — by H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong> — by Kathy Sierra and Bert Bates</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Introduction to Threads and Multithreading in Java',
+    subTopics: [
+      'Recap — Database Connectivity',
+      'What is a Thread?',
+      'Why Do We Need Threads?',
+      'Key Characteristics of Threads',
+      'Process vs Thread',
+      'Multithreading',
+      'Multitasking vs Multithreading',
+      'Thread Creation in Java',
+      '1st Method: Extend the Thread Class',
+      '2nd Method: Implement the Runnable Interface',
+      'Extends Thread Class vs Implements Runnable Interface',
+      'Life Cycle of a Thread (Thread States)',
+      'run() vs start()',
+      'The Problem with Threads',
+    ],
+    definitions: [
+      { term: 'Thread', meaning: 'A single path of execution within a program. A program can have multiple threads.' },
+      { term: 'Process', meaning: 'A running program that has its own memory. One process can have multiple threads.' },
+      { term: 'Multithreading', meaning: 'Having multiple threads in one program so that several tasks can be done at once.' },
+      { term: 'Multitasking', meaning: 'Running multiple programs at the same time, for example a browser and a music player.' },
+      { term: 'Context Switching', meaning: 'On a single-core CPU, threads take turns to run by switching between them.' },
+      { term: 'Thread Class', meaning: 'A Java class that can be extended to create a thread by overriding its run() method.' },
+      { term: 'Runnable Interface', meaning: 'An interface implemented by a class whose instances are to be executed by a thread. It provides the run() method.' },
+      { term: 'run()', meaning: 'The entry point of a thread. The code of the thread is written inside it. Calling it directly does not create a new thread.' },
+      { term: 'start()', meaning: 'Creates a new thread and calls run() on it, making the thread eligible for running.' },
+      { term: 'Thread Scheduler', meaning: 'The part that selects which runnable thread becomes the running thread.' },
+      { term: 'New State', meaning: 'The thread object is created but start() has not been called yet.' },
+      { term: 'Runnable State', meaning: 'start() has been called but the thread scheduler has not selected the thread yet.' },
+      { term: 'Running State', meaning: 'The thread scheduler has selected the thread and it is running.' },
+      { term: 'Waiting/Blocked State', meaning: 'The thread is still alive but is currently not eligible to run.' },
+      { term: 'Dead State', meaning: 'The thread has finished because its run() method has exited.' },
+    ],
+    keyPoints: [
+      'A thread is a single path of execution; threads allow multiple activities inside one program.',
+      'Without threads one task blocks everything else; with threads tasks can run concurrently.',
+      'Each thread has its own execution path, stack and local variables, but threads share memory within the same process.',
+      'A process has its own memory; a thread is part of a process and shares memory with other threads.',
+      'Multithreading gives better responsiveness, better CPU utilization and multiple tasks at once.',
+      'On a single-core CPU threads take turns (context switching); on multi-core CPUs they can run in parallel.',
+      'Multitasking means many programs at once; multithreading means many tasks inside one program.',
+      'Threads can be created by extending the Thread class or by implementing the Runnable interface.',
+      'Extending Thread is simpler but less flexible; the class cannot extend another class because of single inheritance.',
+      'Implementing Runnable is more flexible and preferred; it gives better object-oriented design and avoids the single inheritance problem.',
+      'With Runnable, create a Thread object using new Thread(runnableObj) or new Thread(runnableObj, name) and then call start().',
+      'Extend Thread when you need other Thread methods that Runnable does not have.',
+      'Thread states: New, Runnable, Running, Waiting/Blocked, Dead.',
+      'A thread goes from New to Runnable when start() is called, and becomes Dead when run() exits.',
+      'run() does not create a new thread (runs on the caller thread); start() creates a new thread.',
+      'Shared data can cause problems, and the result may be different each time the program runs.',
+    ],
+  },
+},
+
+
 ]
