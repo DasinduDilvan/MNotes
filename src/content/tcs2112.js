@@ -2990,7 +2990,7 @@ Unit | TU                        Unit | TU
       'Substitution effect = impact of a price change on a good\'s relative expensiveness compared to substitutes',
     ],
   },
-}
+},
 
 
 {
