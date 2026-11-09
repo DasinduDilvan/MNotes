@@ -3384,5 +3384,363 @@ When the rise in prices is very low — like that of a snail or creeper — it i
   },
 },
 
+{
+  id: 8,
+  title: 'International Trade',
+  content: `
+    <span class="lesson-badge">LESSON 08</span>
+    <h1>International Trade</h1>
+    <div class="meta-info">COURSE_CODE <span>•</span> 10 min read</div>
+
+    <h2>Learning Objectives</h2>
+    <p>After this lesson, you should be able to:</p>
+    <ul>
+      <li>Understand the <strong>concept</strong> of International Trade</li>
+      <li>Understand the <strong>scope</strong> of International Trade</li>
+      <li>Identify the <strong>forces</strong> of International Trade</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>What is International Trade?</h2>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>International trade</strong> is the exchange of <strong>goods, services, capital, and technology</strong> across national borders.</p>
+    </div>
+
+    <ul>
+      <li>It allows countries to get <strong>products that are not available</strong> in their own country (domestically).</li>
+      <li>It allows countries to <strong>specialize</strong> in producing goods where they have a <strong>comparative advantage</strong>.</li>
+      <li>It is a <strong>central part of the global economy</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Major Exporting Countries</h2>
+    <p>The table below shows the top 20 countries by <strong>exports of goods and services</strong> (US$ million), together with their <strong>top goods export</strong>. Sri Lanka is added at the bottom for comparison.</p>
+
+    <pre><code> #  Country                 Exports  Top Export
+ 1  China                 3,792,951  Broadcasting equipment
+ 2  United States         3,232,522  Petroleum
+ 3  Germany               1,939,702  Cars
+ 4  United Kingdom        1,142,412  Gold
+ 5  France                1,070,900  Packaged medications
+ 6  Netherlands           1,001,166  Petroleum
+ 7  Singapore               978,597  Integrated circuits
+ 8  Japan                   922,447  Cars
+ 9  Ireland                 882,292  Serums and vaccines
+10  India                   863,100  Petroleum
+11  South Korea             835,148  Integrated circuits
+12  Italy                   775,983  Packaged medications
+13  Hong Kong (CN)          739,915  Integrated circuits
+14  Canada                  727,830  Petroleum
+15  Mexico                  680,798  Cars
+16  Switzerland             675,059  Gold
+17  Spain                   642,357  Cars
+18  United Arab Emirates    558,400  Petroleum
+19  Belgium                 525,458  Vaccines
+20  Taiwan                  486,344  Integrated circuits
+...
+92  Sri Lanka                19,680  Clothing
+93  Armenia                  18,618  Copper</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>Most figures are for <strong>2024</strong>. Exceptions: <strong>India</strong> is 2025, while the <strong>United Arab Emirates</strong> and <strong>Taiwan</strong> are 2023.</p>
+    </div>
+
+    <ul>
+      <li><strong>China</strong> is the largest exporter, followed by the <strong>United States</strong> and <strong>Germany</strong>.</li>
+      <li><strong>Sri Lanka</strong> is ranked <strong>92nd</strong>, and its top goods export is <strong>clothing</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Major Importing Countries</h2>
+    <p>The table below shows the top 20 countries by <strong>imports</strong> (in US$ million). It shows total imports (from two sources: <strong>CIA</strong> and <strong>WB</strong> = World Bank), merchandise (goods) imports, and the <strong>trade balance</strong>. Sri Lanka is added at the bottom for comparison.</p>
+
+    <pre><code>Total imports: CIA and WB | Goods = merchandise imports | Balance = trade balance
+
+ #  Country                     CIA          WB       Goods     Balance
+ -  World                         -  31,323,932  24,090,346    -190,367
+ -  European Union                -   8,994,069           -           -
+ 1  United States         4,108,000   4,083,292   3,359,310  -1,294,794
+ 2  China                 3,254,000   3,219,343   2,587,295     988,162
+ 3  Germany               1,774,000   1,782,162   1,425,210     258,804
+ 4  France                1,159,000   1,157,661     815,812    -113,869
+ 5  United Kingdom        1,158,000   1,157,638     815,579    -302,669
+ 6  Japan                   965,047     981,638     743,267     -35,272
+ 7  India                   923,081     919,206     702,773    -261,073
+ 8  Netherlands             884,154     884,311     635,409      86,886
+ 9  Singapore               786,020     786,021     457,613      47,266
+10  South Korea             758,724     752,670     632,098      51,593
+11  Canada                  733,778     733,286     554,263      14,981
+12  Hong Kong (CN)          723,397     723,319     698,907     -58,337
+13  Italy                   717,278     722,349     615,599      59,275
+14  Mexico                  697,067     702,661     625,874      -6,892
+15  Switzerland             582,554     580,072     369,660      77,187
+16  Ireland                 580,399     608,488     144,552      97,667
+17  Spain                   568,502     568,717     451,303     -47,600
+18  Belgium                 531,029     526,554     519,086      30,485
+19  United Arab Emirates    481,852     481,852     326,119     -16,414
+20  Poland                  441,945     441,992     379,496         837
+...
+99  Sri Lanka                18,823      22,278      18,605      -6,581</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>A <strong>negative trade balance</strong> means the country imports more goods than it exports. A <strong>positive trade balance</strong> means it exports more than it imports.</p>
+    </div>
+
+    <ul>
+      <li>The <strong>United States</strong> is the largest importer and has the biggest negative trade balance (-1,294,794).</li>
+      <li><strong>China</strong> is the second largest importer, but it has a large positive trade balance (988,162).</li>
+      <li><strong>Sri Lanka</strong> is ranked <strong>99th</strong> and has a negative trade balance (-6,581).</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Why International Trade is Imperative?</h2>
+    <p>"Imperative" means <strong>very necessary</strong>. There are several reasons why countries cannot avoid international trade.</p>
+
+    <h3>Forces That Push Countries to Trade</h3>
+    <ul>
+      <li><strong>Saturation of domestic markets</strong> — when the home market is already full, companies look for new customers in other countries.</li>
+      <li><strong>Internet revolution</strong> — the Internet and <strong>electronic commerce (e-commerce)</strong> are bringing major structural changes to the way companies operate worldwide.</li>
+      <li><strong>Disparity in resource spread</strong> — natural resources are <strong>not evenly distributed</strong> across the world.</li>
+    </ul>
+
+    <h3>Benefits That Make Trade Important</h3>
+    <ul>
+      <li><strong>Comparative advantage</strong> — countries specialize in producing goods they can make more efficiently, and trade for other goods.</li>
+      <li><strong>Economic growth</strong> — exports bring income into a country, helping businesses grow and creating jobs.</li>
+      <li><strong>Technology and knowledge transfer</strong> — trade spreads new ideas, innovations, and technologies between countries.</li>
+      <li><strong>Better international relations</strong> — trade can strengthen connections between countries and encourage cooperation.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Be ready to list the reasons why trade is imperative: <strong>saturated domestic markets, the Internet revolution, uneven spread of resources, comparative advantage, economic growth, technology and knowledge transfer, and better international relations</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Classification of International Trade</h2>
+    <p>The most common way to classify international trade is by <strong>what is traded</strong>:</p>
+    <ul>
+      <li><strong>Trade in goods</strong> — physical products</li>
+      <li><strong>Trade in services</strong> — non-physical activities</li>
+    </ul>
+    <p>You will see both types in the growth figures in the next section.</p>
+
+    <div class="divider"></div>
+
+    <h2>Growth of International Trade</h2>
+
+    <h3>Key Figures</h3>
+    <ul>
+      <li>Global trade grew by <strong>$2.5 trillion in 2025</strong>, an increase of about <strong>7.5%</strong>, reaching a record <strong>$35 trillion</strong>.</li>
+      <li><strong>Trade in goods</strong> drove most of the expansion. It grew by about <strong>7%</strong> and added roughly <strong>$1.8 trillion</strong>.</li>
+      <li><strong>Trade in services</strong> grew by around <strong>8%</strong> and added about <strong>$700 billion</strong> to the total increase.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>2025: global trade = <strong>$35 trillion</strong> (up <strong>$2.5 trillion</strong>, about <strong>7.5%</strong>). Goods: about 7% (+$1.8 trillion). Services: about 8% (+$700 billion).</p>
+    </div>
+
+    <h3>Who Is Driving Growth?</h3>
+    <ul>
+      <li>Trade growth was widespread, but it was <strong>stronger for developing economies in East Asia and Africa</strong>.</li>
+      <li><strong>South-South trade</strong> (trade between developing countries) grew faster than the global average, by about <strong>9%</strong>. This shows the growing weight of developing economies in world trade.</li>
+      <li>The share of developed countries in world trade has <strong>declined over time</strong>, because many <strong>developing countries have entered international trade</strong>. An example is <strong>BRICS</strong>: <strong>B</strong>razil, <strong>R</strong>ussia, <strong>I</strong>ndia, <strong>C</strong>hina, and <strong>S</strong>outh Africa.</li>
+      <li><strong>Specialization</strong> has created the basis for international trade.</li>
+    </ul>
+
+    <h3>Chart: Global Trade Growth Holds, but Services Lose Momentum</h3>
+    <p>This chart shows the growth of trade value in goods and services (per cent). Values are approximate, read from the chart.</p>
+
+    <pre><code>Period             Goods    Services
+Trailing 4 qtrs    ~7.0%    ~8.5%
+Q2 2025 (QoQ)      ~2.4%    ~4.9%
+Q3 2025 (QoQ)      ~2.5%    ~3.1%
+Q4 2025 (QoQ)      ~1.7%    ~2.9%
+Q1 2026 (QoQ)      ~2.5%    ~2.0%</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p><strong>Source:</strong> UNCTADstat; UN Trade and Development (UNCTAD) estimates based on national statistics.</p>
+      <p><strong>Trailing four quarters (T4Q)</strong> growth measures the change over the last four quarters (Q2-2025 to Q1-2026) compared to the previous four quarters (Q2-2024 to Q1-2025).</p>
+      <p><strong>Quarterly growth (QoQ)</strong> is the quarter-over-quarter growth rate of seasonally adjusted values. Growth figures are based on <strong>nominal</strong> trade values. Figures for Q4-2025 are <strong>preliminary</strong>.</p>
+    </div>
+
+    <p>In the latest quarter (Q1 2026), services growth (about 2%) slowed and fell below goods growth (about 2.5%). This is why the chart says services <strong>lose momentum</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h2>How Specialization Creates the Basis for International Trade</h2>
+    <p><strong>Specialization</strong> means a country focuses on producing the goods it can produce best. Countries specialize because of these differences:</p>
+    <ul>
+      <li><strong>Differences in natural resources</strong> — some countries have oil, minerals, or fertile land, while others do not.</li>
+      <li><strong>Differences in climate</strong> — different crops grow well in different climates.</li>
+      <li><strong>Differences in technology</strong> — some countries can produce advanced goods more easily.</li>
+      <li><strong>Differences in production costs</strong> — some countries can make the same goods at a lower cost.</li>
+      <li><strong>Comparative advantage</strong> — countries gain by producing what they can make at a lower opportunity cost.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Absolute Advantage</h2>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>In economics, the principle of <strong>absolute advantage</strong> is the ability of a party (an individual, a firm, or a country) to produce a good or service <strong>more efficiently than its competitors</strong>.</p>
+      <p>In simple words: a nation produces a good more efficiently than any other nation, with <strong>greater output using the same or fewer resources</strong>.</p>
+    </div>
+
+    <h3>How Can a Country Achieve Absolute Advantage?</h3>
+    <ul>
+      <li>By exploiting <strong>lower labor costs</strong></li>
+      <li>By having access to a <strong>supply of resources</strong></li>
+      <li>By having a <strong>large pool of available capital</strong></li>
+    </ul>
+
+    <h3>Example: Riceland and Tealand</h3>
+    <pre><code>Country     1 resource unit can produce
+Riceland    1 ton of rice   OR   1/5 ton of tea
+Tealand     1/6 ton of rice OR   1/3 ton of tea</code></pre>
+
+    <ul>
+      <li><strong>Riceland</strong> makes more rice per resource unit (1 ton vs 1/6 ton), so it has the absolute advantage in <strong>rice</strong>.</li>
+      <li><strong>Tealand</strong> makes more tea per resource unit (1/3 ton vs 1/5 ton), so it has the absolute advantage in <strong>tea</strong>.</li>
+      <li><strong>Specialization and trade</strong> allow each country to produce and consume more.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Comparative Advantage</h2>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A country has a <strong>comparative advantage</strong> over another in the production of a good if it can produce it at a <strong>lower opportunity cost</strong>.</p>
+    </div>
+
+    <ul>
+      <li>Each country has to <strong>specialize</strong> in the sector in which it has an advantage.</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p><strong>Opportunity cost</strong> is the value of what you give up when you choose to produce something else. A lower opportunity cost means you give up less.</p>
+    </div>
+
+    <h3>Law of Comparative Advantage</h3>
+    <ul>
+      <li>Trade can <strong>benefit all countries</strong> if they specialize in the goods in which they have a comparative advantage.</li>
+      <li>If the <strong>opportunity costs of goods differ</strong> between two countries, both can gain from mutual trade.</li>
+      <li>To gain, each country should produce (and export) the goods that have <strong>relatively low opportunity costs</strong> compared with the other country.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Law of Comparative Advantage:</strong> If opportunity costs differ between two countries, both gain from trade when each specializes in and exports the goods with the lower opportunity cost.</p>
+    </div>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do not mix up the two ideas. <strong>Absolute advantage</strong> = producing more efficiently (more output from the same resources). <strong>Comparative advantage</strong> = producing at a <strong>lower opportunity cost</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Advantages and Disadvantages of International Trade</h2>
+
+    <h3>Advantages</h3>
+    <ul>
+      <li>More <strong>product options</strong> are available</li>
+      <li>Creates <strong>employment</strong></li>
+      <li><strong>Economic growth</strong></li>
+      <li>Better <strong>utilization of resources</strong></li>
+      <li>Improves <strong>competition</strong></li>
+    </ul>
+
+    <h3>Disadvantages</h3>
+    <ul>
+      <li><strong>Dependence on foreign goods</strong></li>
+      <li><strong>Local industries may suffer</strong></li>
+      <li><strong>Exchange rate changes</strong> affect prices</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Major Trends in Global Trade in 2026</h2>
+    <ul>
+      <li><strong>Rising tariffs</strong> fuel trade uncertainty</li>
+      <li><strong>Services</strong> drive trade growth, widening <strong>digital gaps</strong></li>
+      <li><strong>Environmental concerns</strong> remain a key part of global trade initiatives</li>
+      <li><strong>Agricultural trade</strong> remains vital for <strong>food security</strong></li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Four trends for 2026: <strong>rising tariffs, services-led growth (with digital gaps), environmental concerns, and agricultural trade for food security</strong>.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'International Trade: Concept, Scope, Forces, and Trade Advantages',
+    subTopics: [
+      'Learning Objectives',
+      'What is International Trade?',
+      'Major Exporting Countries',
+      'Major Importing Countries',
+      'Why International Trade is Imperative?',
+      'Classification of International Trade',
+      'Growth of International Trade',
+      'How Specialization Creates the Basis for International Trade',
+      'Absolute Advantage',
+      'Comparative Advantage',
+      'Law of Comparative Advantage',
+      'Advantages and Disadvantages of International Trade',
+      'Major Trends in Global Trade in 2026',
+    ],
+    definitions: [
+      { term: 'International Trade', meaning: 'The exchange of goods, services, capital, and technology across national borders.' },
+      { term: 'Export', meaning: 'A good or service sold to another country, bringing income into the home country.' },
+      { term: 'Import', meaning: 'A good or service bought from another country.' },
+      { term: 'Trade Balance', meaning: 'The difference between exports and imports. Negative means imports are higher than exports.' },
+      { term: 'Saturation of Domestic Markets', meaning: 'When the home market is full, so companies need new customers in other countries.' },
+      { term: 'E-commerce', meaning: 'Electronic commerce: buying and selling over the Internet, which is changing how companies operate worldwide.' },
+      { term: 'Specialization', meaning: 'Focusing on producing the goods a country can make best, then trading for other goods.' },
+      { term: 'Absolute Advantage', meaning: 'The ability of an individual, firm, or country to produce a good or service more efficiently than its competitors.' },
+      { term: 'Comparative Advantage', meaning: 'The ability to produce a good at a lower opportunity cost than another country.' },
+      { term: 'Opportunity Cost', meaning: 'The value of what is given up when resources are used to produce something else.' },
+      { term: 'Law of Comparative Advantage', meaning: 'If opportunity costs differ, both countries gain from trade by specializing in and exporting goods with lower opportunity costs.' },
+      { term: 'South-South Trade', meaning: 'Trade between developing countries. It grew by about 9%, faster than the global average.' },
+      { term: 'BRICS', meaning: 'Brazil, Russia, India, China, and South Africa: developing countries that entered international trade.' },
+      { term: 'Tariff', meaning: 'A tax on imported goods. Rising tariffs create trade uncertainty.' },
+      { term: 'Trailing Four Quarters (T4Q)', meaning: 'Growth over the last four quarters compared with the previous four quarters.' },
+      { term: 'Quarter-over-Quarter (QoQ)', meaning: 'The growth rate from one quarter to the next, using seasonally adjusted values.' },
+    ],
+    keyPoints: [
+      'International trade covers goods, services, capital, and technology across borders.',
+      'Trade gives access to products not available at home and lets countries specialize.',
+      'China, the United States, and Germany are the top three exporters; the United States, China, and Germany are the top three importers.',
+      'Sri Lanka is ranked 92nd in exports (top export: clothing) and 99th in imports, with a negative trade balance (-6,581).',
+      'Reasons trade is imperative: saturated domestic markets, the Internet revolution, uneven spread of resources, comparative advantage, economic growth, technology and knowledge transfer, and better international relations.',
+      'Global trade grew by $2.5 trillion (about 7.5%) in 2025 to a record $35 trillion.',
+      'Goods grew about 7% (+$1.8 trillion); services grew about 8% (+$700 billion).',
+      'Growth was stronger for developing economies in East Asia and Africa; South-South trade grew about 9%.',
+      'Specialization is the basis of trade: differences in natural resources, climate, technology, production costs, and comparative advantage.',
+      'Absolute advantage = more efficient production (more output from the same or fewer resources).',
+      'Absolute advantage can come from lower labor costs, access to resources, and a large pool of capital.',
+      'Comparative advantage = lower opportunity cost; each country should specialize in the sector where it has the advantage.',
+      'Riceland and Tealand example: specialization and trade allow each country to produce and consume more.',
+      'Advantages: more product choice, employment, economic growth, better use of resources, more competition.',
+      'Disadvantages: dependence on foreign goods, harm to local industries, exchange rate changes affecting prices.',
+      '2026 trends: rising tariffs, services-led growth with digital gaps, environmental concerns, and agricultural trade for food security.',
+    ],
+  },
+},
 
 ]
