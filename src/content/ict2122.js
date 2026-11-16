@@ -5752,5 +5752,1003 @@ t.start();  // New thread created</code></pre>
   },
 },
 
+{
+  id: 13,
+  title: 'Introduction to Design Patterns',
+  content: `
+    <span class="lesson-badge">LESSON 13</span>
+    <h1>Introduction to Design Patterns</h1>
+    <div class="meta-info">ICT2122 <span>•</span> 20 min read</div>
+
+    <h2>Recap – Java Threads</h2>
+    <p>In the previous lesson, we covered these topics:</p>
+    <ul>
+      <li><strong>Introduction</strong> to Java threads</li>
+      <li><strong>Multithreading</strong> in Java</li>
+      <li><strong>Threads vs Processes</strong></li>
+      <li><strong>Life cycle</strong> of a thread</li>
+      <li><strong>Creating threads</strong>
+        <ul>
+          <li>By <strong>extending</strong> the <code>Thread</code> class</li>
+          <li>By <strong>implementing</strong> the <code>Runnable</code> interface</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Threads matter again today. The <strong>Singleton</strong> pattern needs special care when many threads run at the same time.</p>
+    </div>
+
+    <h2>What We Discuss Today</h2>
+    <ul>
+      <li><strong>Introduction</strong> to design patterns</li>
+      <li><strong>Design Pattern Space</strong></li>
+      <li><strong>Object Oriented Design Patterns</strong>
+        <ul>
+          <li><strong>Singleton</strong></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Introduction to Design Patterns</h2>
+
+    <h3>Why Use Design Patterns?</h3>
+    <ul>
+      <li>Design patterns make it easier to <strong>reuse</strong> successful <strong>designs</strong> and <strong>architectures</strong>.</li>
+      <li><strong>Design Pattern → Right Design</strong> (and you get it <strong>faster</strong>).</li>
+      <li>They can make a <strong>novice an expert</strong>, because they carry <strong>best practices</strong>.</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>"Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice." — <strong>Christopher Alexander</strong></p>
+    </div>
+
+    <p>In simple words: a <strong>design pattern</strong> is a proven recipe for a problem that keeps coming back. You can reuse the idea many times, but you adjust it to fit each project.</p>
+
+    <h3>What Does a Design Pattern Capture?</h3>
+    <p>A design pattern captures the <strong>end product of the design process</strong>. It records:</p>
+    <ul>
+      <li>The <strong>relationship among classes and objects</strong></li>
+      <li>The <strong>decisions</strong> made for the design</li>
+      <li>The <strong>alternatives</strong> for the design</li>
+      <li>The <strong>trade-offs</strong> that lead to the design</li>
+      <li>A <strong>concrete example</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>History of Design Patterns</h2>
+
+    <h3>Who Invented Patterns?</h3>
+    <p>Two books are important in the history of patterns:</p>
+    <ul>
+      <li><strong>A Pattern Language: Towns, Buildings, Construction</strong> — by <strong>Christopher Alexander</strong>, Sara Ishikawa and Murray Silverstein, with Max Jacobson, Ingrid Fiksdahl-King and Shlomo Angel. The idea of patterns first came from here, in the world of building and town design.</li>
+      <li><strong>Design Patterns: Elements of Reusable Object-Oriented Software</strong> — by <strong>Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides</strong> (foreword by Grady Booch). This book brought patterns into software.</li>
+    </ul>
+
+    <h3>Gang of Four (GoF)</h3>
+    <p>The four authors of the second book are known as the <strong>Gang of Four (GoF)</strong>:</p>
+    <ul>
+      <li>Erich Gamma</li>
+      <li>Richard Helm</li>
+      <li>Ralph Johnson</li>
+      <li>John Vlissides</li>
+    </ul>
+    <p>Two famous ideas from the GoF book:</p>
+    <ul>
+      <li><strong>Program to an interface, not an implementation.</strong></li>
+      <li><strong>Favor object composition over inheritance.</strong></li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>GoF = Gang of Four.</strong> Their two principles: (1) program to an <strong>interface</strong>, not an implementation, and (2) favor <strong>object composition</strong> over <strong>inheritance</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Design Pattern Space</h2>
+    <p>Most patterns are in the <strong>object scope</strong>.</p>
+
+    <h3>Two Criteria for Classifying Patterns</h3>
+    <ol>
+      <li><strong>Purpose</strong> — what the pattern does
+        <ul>
+          <li><strong>Creational</strong> — the process of object creation</li>
+          <li><strong>Structural</strong> — the composition of classes or objects</li>
+          <li><strong>Behavioral</strong> — how classes or objects interact and share responsibility</li>
+        </ul>
+      </li>
+      <li><strong>Scope</strong> — whether the pattern applies mainly to a class or to an object
+        <ul>
+          <li><strong>Class</strong> — deals with relationships between classes and sub-classes (through <strong>inheritance</strong>, <strong>static</strong>)</li>
+          <li><strong>Object</strong> — deals with relationships between objects (can be changed at <strong>runtime</strong>, <strong>dynamic</strong>)</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>The Three Types of Patterns</h3>
+    <h3>Creational Patterns</h3>
+    <ul>
+      <li>These patterns give a way to <strong>create objects while hiding the creation logic</strong>, instead of creating objects directly with the <code>new</code> operator.</li>
+      <li>This gives the program <strong>more flexibility</strong> in deciding which objects to create for a given use case.</li>
+    </ul>
+
+    <h3>Structural Patterns</h3>
+    <ul>
+      <li>These patterns concern <strong>class and object composition</strong>.</li>
+      <li><strong>Inheritance</strong> is used to compose interfaces. They also define ways to <strong>compose objects</strong> to get <strong>new functionality</strong>.</li>
+    </ul>
+
+    <h3>Behavioral Patterns</h3>
+    <ul>
+      <li>These patterns are specially concerned with <strong>communication between objects</strong>.</li>
+    </ul>
+
+    <h3>The Design Pattern Table</h3>
+    <p>This is the lecture table, rearranged so it is easy to read on a small screen:</p>
+<pre><code>CREATIONAL
+  Class  : Factory Method
+  Object : Abstract Factory, Builder,
+           Prototype, Singleton
+
+STRUCTURAL
+  Class  : Adapter
+  Object : Adapter, Bridge, Composite,
+           Decorator, Facade, Proxy
+
+BEHAVIORAL
+  Class  : Interpreter, Template Method
+  Object : Chain of Responsibility, Command,
+           Iterator, Mediator, Memento,
+           Flyweight, Observer, State,
+           Strategy, Visitor</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>The lecture table lists <strong>Flyweight</strong> under Behavioral. In the original GoF book, Flyweight is usually classed as a <strong>Structural</strong> pattern. If this comes in an exam, follow your lecturer's table.</p>
+    </div>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Singleton</strong> is a <strong>Creational</strong> pattern with <strong>Object</strong> scope.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Think About It: Many Database Connections</h2>
+    <p>Imagine a system where <strong>every part of the program creates its own database connection object</strong>.</p>
+    <ul>
+      <li>What problems could happen?</li>
+      <li>What if we allowed only <strong>ONE shared object</strong> for the entire application?</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Some possible problems: memory and connections are wasted, the database may reach its connection limit, and different parts of the program may end up with different, mixed-up states. One shared object solves these problems. That is the idea behind <strong>Singleton</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Singleton Design Pattern</h2>
+
+    <h3>What is Singleton?</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Singleton</strong> is a <strong>creational design pattern</strong> that lets you make sure a class has <strong>only one instance</strong>, while giving a <strong>global access point</strong> to that instance.</p>
+    </div>
+    <p>Use it when <strong>only one instance</strong> of an object is needed throughout the <strong>lifetime of an application</strong>. In short: <em>ensure a class only has one instance and provide a global point of access to it.</em></p>
+
+    <h3>How Does It Work?</h3>
+    <ul>
+      <li>Make the class <strong>responsible for keeping track of its own sole instance</strong>. Users <strong>cannot</strong> create objects of this class themselves.</li>
+      <li>Provide a <strong>global way to access</strong> the instance.</li>
+      <li>The client reaches the singleton instance <strong>only through</strong> <code>SingletonOperation()</code>.</li>
+    </ul>
+
+    <h3>Singleton Structure</h3>
+<pre><code>+-----------------------------+
+| Singleton                   |
++-----------------------------+
+| static uniqueInstance       |
+| singletonData               |
++-----------------------------+
+| static Instance()           |
+| SingletonOperation()        |
+| GetSingletonData()          |
++-----------------------------+</code></pre>
+
+    <h3>Real-World Examples</h3>
+    <ul>
+      <li><strong>Clipboard</strong> — there is only one clipboard in the system.</li>
+      <li><strong>Windows Registry</strong> (system parameters) — there is only one registry.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>The Two Problems Singleton Solves</h3>
+    <p>The Singleton pattern solves <strong>two problems at the same time</strong>:</p>
+    <ol>
+      <li>Ensure that a class has <strong>just a single instance</strong>.</li>
+      <li>Provide a <strong>global access point</strong> to that instance.</li>
+    </ol>
+
+    <h3>Problem 1: Only a Single Instance</h3>
+    <p><strong>Why would anyone want to control how many instances a class has?</strong></p>
+    <p>The most common reason is to <strong>control access to a shared resource</strong>, for example a <strong>database</strong> or a <strong>file</strong>.</p>
+
+    <h3>Problem 2: A Global Access Point</h3>
+    <p>Remember the <strong>global variables</strong> you used to store some important objects?</p>
+    <ul>
+      <li>They are very handy, but also very <strong>unsafe</strong>.</li>
+      <li>Any code can <strong>overwrite</strong> the contents of those variables and <strong>crash</strong> your application.</li>
+    </ul>
+    <p>Just like a global variable, Singleton lets you <strong>access an object from anywhere</strong> in the program. But it also <strong>protects that instance from being overwritten</strong> by other code.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Singleton = <strong>one instance only</strong> + <strong>global access</strong> + <strong>protection from being overwritten</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>How to Implement Singleton</h3>
+    <ol>
+      <li>Make the <strong>constructor</strong> of the class <strong>private</strong>.</li>
+      <li>Add a <strong>private static field</strong> to the class to store the singleton instance.</li>
+      <li>Declare a <strong>public static creation method</strong> that returns the singleton instance.</li>
+    </ol>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Common mistake: leaving the constructor <strong>public</strong>. Then anyone can write <code>new</code> and create more objects, and the class is no longer a Singleton.</p>
+    </div>
+
+    <h3>Advantages and Disadvantages</h3>
+    <h3>Advantages</h3>
+    <ul>
+      <li>You can be <strong>sure</strong> that a class has <strong>only a single instance</strong>.</li>
+      <li>You gain a <strong>global access point</strong> to that instance.</li>
+      <li>The singleton object is <strong>initialized only when it is requested for the first time</strong>.</li>
+    </ul>
+
+    <h3>Disadvantages</h3>
+    <ul>
+      <li><strong>Violates the Single Responsibility Principle</strong> — the class controls its own instance and also does its real job, so it has two responsibilities.</li>
+      <li>The Singleton pattern can <strong>mask bad design</strong> — easy global access can hide the fact that parts of the program depend on each other too much.</li>
+      <li>It needs <strong>special treatment in a multithreaded environment</strong> — so that several threads do not create the singleton object more than once.</li>
+      <li>It may be <strong>difficult to unit test</strong> the client code of the Singleton — the constructor is private and access is static, so it is hard to replace it with a fake (mock) object in tests.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Exam points:</strong> 3 advantages (single instance, global access, created on first request) and 4 disadvantages (breaks Single Responsibility Principle, can mask bad design, needs special care with threads, hard to unit test).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Singleton Design Pattern – Example</h2>
+    <p>The lecture example has two classes: <code>SingletonPatternDemo</code> and <code>SingleObject</code>.</p>
+<pre><code>SingletonPatternDemo
+  +main() : void
+        |
+        | asks
+        v
+SingleObject
+  -instance : SingleObject
+  -SingleObject()
+  +getInstance() : SingleObject
+  +showMessage() : void
+        |
+        | returns the single instance</code></pre>
+    <ul>
+      <li><code>SingletonPatternDemo</code> <strong>asks</strong> for the object.</li>
+      <li><code>SingleObject</code> <strong>returns</strong> its one and only instance.</li>
+      <li><code>-instance</code> is the <strong>private static field</strong> that stores the instance.</li>
+      <li><code>-SingleObject()</code> is the <strong>private constructor</strong>. The <code>-</code> sign means private.</li>
+      <li><code>+getInstance()</code> is the <strong>public static creation method</strong>. The <code>+</code> sign means public.</li>
+    </ul>
+
+    <h3>Java Code for This Diagram</h3>
+    <p>The lecture shows only the diagram. This code is written to match it:</p>
+<pre><code>public class SingleObject {
+
+    // private static field: stores the one instance
+    private static SingleObject instance;
+
+    // private constructor: nobody outside can use "new"
+    private SingleObject() { }
+
+    // public static method: the global access point
+    public static SingleObject getInstance() {
+        if (instance == null) {
+            instance = new SingleObject();  // created on first request
+        }
+        return instance;
+    }
+
+    public void showMessage() {
+        System.out.println("Hello World!");
+    }
+}
+
+public class SingletonPatternDemo {
+    public static void main(String[] args) {
+
+        // SingleObject obj = new SingleObject();  // Compile error!
+
+        SingleObject object = SingleObject.getInstance();
+        object.showMessage();
+    }
+}</code></pre>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Multithreading: if two threads call <code>getInstance()</code> at the same time, both may create an object. A simple fix is to mark the method <code>synchronized</code>: <code>public static synchronized SingleObject getInstance()</code>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Hands On</h2>
+    <p>The lecture gives a database named <strong>student</strong> with two tables. This follows the database connection idea from earlier, so it is a good place to use a <strong>Singleton</strong> connection class.</p>
+
+    <h3>Table: basicdata</h3>
+<pre><code>stu_id   stu_name   stu_address
+TG/001   Amila      Matara
+TG/002   Basil      Hambantota
+TG/003   Charles    Jaffna
+TG/004   Debian     Colombo</code></pre>
+
+    <h3>Table: marks</h3>
+<pre><code>stu_id   chemistry   physics   maths
+TG/001      65          75       80
+TG/002      50          40       60
+TG/003      55          85       35
+TG/004      85          75       85</code></pre>
+
+    <h3>Required Output Columns</h3>
+<pre><code>Student ID | Name | Chemistry Grade |
+Physics Grade | Maths Grade | Overall Grade</code></pre>
+
+    <h3>Grade References</h3>
+<pre><code>Range     Grade
+0 - 34      F
+35 - 64     C
+65 - 84     B
+85 - 100    A</code></pre>
+
+    <h3>Subject Grades Worked Out</h3>
+<pre><code>Student ID  Name     Chem  Phys  Maths
+TG/001      Amila     B     B     B
+TG/002      Basil     C     C     C
+TG/003      Charles   C     A     C
+TG/004      Debian    A     B     A</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The slide does not say how the <strong>Overall Grade</strong> is calculated. A common way is to take the <strong>average</strong> of the three marks and use the grade table. With that method: TG/001 = 73.3 (B), TG/002 = 50 (C), TG/003 = 58.3 (C), TG/004 = 81.7 (B).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Why Should We Learn Design Patterns?</h2>
+    <p>The lecture asks this as an open question. From what we learned today:</p>
+    <ul>
+      <li>To <strong>reuse successful designs</strong> and architectures.</li>
+      <li>To reach the <strong>right design faster</strong>.</li>
+      <li>To learn <strong>best practices</strong> and grow from a <strong>novice to an expert</strong>.</li>
+      <li>To solve <strong>problems that occur again and again</strong> without starting from zero.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Summary</h2>
+    <ul>
+      <li><strong>Introduction</strong> to design patterns</li>
+      <li><strong>Design Pattern Space</strong> (purpose and scope)</li>
+      <li><strong>Object Oriented Design Patterns</strong> — Singleton
+        <ul>
+          <li>What it is</li>
+          <li>How to implement it</li>
+          <li>Advantages and disadvantages</li>
+          <li>Example</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>A design pattern is a reusable solution to a common design problem. Patterns are grouped by <strong>purpose</strong> (Creational, Structural, Behavioral) and <strong>scope</strong> (Class, Object). <strong>Singleton</strong> gives one instance and one global access point, using a private constructor, a private static field and a public static method.</p>
+    </div>
+
+    <h2>References</h2>
+    <ul>
+      <li><strong>How To Program (Early Objects)</strong>, 10th Edition — H. Deitel and P. Deitel</li>
+      <li><strong>Head First Java</strong>, 2nd Edition — Kathy Sierra and Bert Bates</li>
+      <li><strong>Head First Design Patterns</strong>, 2nd Edition — Eric Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Introduction to Design Patterns and the Singleton Pattern',
+    subTopics: [
+      'Recap – Java Threads',
+      'What We Discuss Today',
+      'Introduction to Design Patterns',
+      'Why Use Design Patterns?',
+      'What Does a Design Pattern Capture?',
+      'History of Design Patterns',
+      'Gang of Four (GoF)',
+      'Design Pattern Space',
+      'Two Criteria for Classifying Patterns',
+      'Creational, Structural and Behavioral Patterns',
+      'The Design Pattern Table',
+      'Think About It: Many Database Connections',
+      'Singleton Design Pattern',
+      'What is Singleton?',
+      'Singleton Structure and Real-World Examples',
+      'The Two Problems Singleton Solves',
+      'How to Implement Singleton',
+      'Advantages and Disadvantages of Singleton',
+      'Singleton Design Pattern – Example',
+      'Hands On',
+      'Why Should We Learn Design Patterns?',
+    ],
+    definitions: [
+      { term: 'Design Pattern', meaning: 'A proven, reusable solution to a problem that occurs again and again in software design.' },
+      { term: 'Gang of Four (GoF)', meaning: 'The four authors (Gamma, Helm, Johnson and Vlissides) of the book Design Patterns: Elements of Reusable Object-Oriented Software.' },
+      { term: 'Purpose', meaning: 'What a pattern does. It can be creational, structural or behavioral.' },
+      { term: 'Scope', meaning: 'Whether a pattern applies mainly to a class or to an object.' },
+      { term: 'Class Scope', meaning: 'Patterns that deal with relationships between classes and sub-classes, fixed through inheritance (static).' },
+      { term: 'Object Scope', meaning: 'Patterns that deal with relationships between objects, which can change at runtime (dynamic).' },
+      { term: 'Creational Patterns', meaning: 'Patterns that create objects while hiding the creation logic, instead of using the new operator directly.' },
+      { term: 'Structural Patterns', meaning: 'Patterns about composing classes and objects, using inheritance and object composition to get new functionality.' },
+      { term: 'Behavioral Patterns', meaning: 'Patterns about communication between objects and how they share responsibility.' },
+      { term: 'Singleton Pattern', meaning: 'A creational pattern that ensures a class has only one instance and provides a global access point to it.' },
+      { term: 'Unique (Sole) Instance', meaning: 'The one and only object of a Singleton class, stored in a private static field.' },
+      { term: 'Global Access Point', meaning: 'A public static method that lets any code get the single instance, while protecting it from being overwritten.' },
+      { term: 'Private Constructor', meaning: 'A constructor that outside code cannot call, so users cannot create new objects of the class.' },
+      { term: 'Shared Resource', meaning: 'Something used by many parts of a program, such as a database or a file.' },
+      { term: 'Single Responsibility Principle', meaning: 'A class should have only one job. Singleton breaks it because the class also manages its own instance.' },
+    ],
+    keyPoints: [
+      'Design patterns make it easier to reuse successful designs and architectures, and help reach the right design faster.',
+      'Patterns record class and object relationships, design decisions, alternatives, trade-offs and a concrete example.',
+      'The idea of patterns came from Christopher Alexander (buildings and towns). The Gang of Four brought it to software.',
+      'GoF principles: program to an interface, not an implementation; favor object composition over inheritance.',
+      'Patterns are classified by purpose (Creational, Structural, Behavioral) and by scope (Class, Object). Most patterns are in the object scope.',
+      'Class scope is static and uses inheritance. Object scope can change at runtime.',
+      'Singleton is a Creational pattern with Object scope.',
+      'In the lecture table, Flyweight is shown under Behavioral, but in the original GoF book it is Structural.',
+      'Singleton ensures only one instance of a class and gives a global access point to it.',
+      'Singleton solves two problems: a single instance (to control a shared resource like a database or file) and global access that is safe from being overwritten.',
+      'To implement Singleton: make the constructor private, add a private static field for the instance, and add a public static creation method.',
+      'The singleton object is created only when it is requested for the first time.',
+      'Real-world examples of Singleton: the clipboard and the Windows Registry.',
+      'Singleton disadvantages: violates the Single Responsibility Principle, can mask bad design, needs special treatment with multiple threads, and is hard to unit test.',
+      'In the UML example, the minus sign means private and the plus sign means public: -instance, -SingleObject(), +getInstance(), +showMessage().',
+      'A Singleton connection class is a good fit for the database hands-on activity, where the report shows subject grades and an overall grade.',
+      'Grade references: 0-34 = F, 35-64 = C, 65-84 = B, 85-100 = A.',
+    ],
+  },
+},
+
+
+{
+  id: 14,
+  title: 'Introduction to Java Generics and Java Collections',
+  content: `
+    <span class="lesson-badge">LESSON 14</span>
+    <h1>Introduction to Java Generics and Java Collections</h1>
+    <div class="meta-info">ICT2122 <span>•</span> 18 min read</div>
+
+    <h2>Recap – Introduction to Design Patterns</h2>
+    <p>In the previous lesson, we covered these topics:</p>
+    <ul>
+      <li><strong>Introduction</strong> to design patterns</li>
+      <li><strong>Design Pattern Space</strong></li>
+      <li><strong>Object Oriented Design Patterns</strong>
+        <ul>
+          <li><strong>Singleton</strong></li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>What We Discuss Today</h2>
+    <ul>
+      <li><strong>Generics</strong>
+        <ul>
+          <li>What are Generics in Java?</li>
+          <li>Example</li>
+          <li>Generic Classes</li>
+          <li>Generic Methods</li>
+          <li>Why Generics</li>
+        </ul>
+      </li>
+      <li><strong>Collections</strong>
+        <ul>
+          <li>Java Collections Framework (JCF)</li>
+          <li>Why use Java Collections</li>
+          <li>Main Interfaces in the Collections Framework: <strong>List</strong>, <strong>Set</strong>, <strong>Map</strong>, <strong>Queue</strong></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Part 1: Java Generics</h2>
+
+    <h3>What are Generics in Java?</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Generics</strong> allow you to write a <strong>single class, interface, or method</strong> that works with <strong>different data types</strong>, while keeping <strong>type safety</strong>.</p>
+    </div>
+
+    <p>Think of boxes. A plain brown box can hold anything, but you never know what is inside. A box marked <strong>"Fresh Apples"</strong> is made for one kind of item only. Generics let you put a "label" on your class or collection so it holds only one type.</p>
+
+    <h3>Before and After Generics</h3>
+    <ul>
+      <li><strong>Before Generics (Java 1.4 and earlier)</strong> — you used <code>Object</code> to store any type. When you took the item out, you had to <strong>cast</strong> it. This was <strong>risky</strong> and caused <strong>runtime errors</strong>.</li>
+      <li><strong>With Generics (Java 1.5+)</strong> — you give the type at <strong>compile time</strong>, and the <strong>compiler checks it for you</strong>.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Generics were added in <strong>Java 1.5</strong>. They move type errors from <strong>runtime</strong> to <strong>compile time</strong>.</p>
+    </div>
+
+    <h3>Example Without Generics</h3>
+<pre><code>import java.util.ArrayList;
+
+public class NoGenericsExample {
+    public static void main(String[] args) {
+        ArrayList list = new ArrayList(); // No type specified
+        list.add("Java");
+        list.add(123); // Allowed, but dangerous
+
+        String text = (String) list.get(0);   // OK
+        String number = (String) list.get(1); // ???
+    }
+}</code></pre>
+    <ul>
+      <li>The list has <strong>no type</strong>, so it accepts a String <strong>and</strong> an Integer.</li>
+      <li>The last line <strong>compiles</strong>, but when it runs, Java tries to turn the Integer <code>123</code> into a String. This fails with a <code>ClassCastException</code>.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Exam trap: without generics, the mistake is found only <strong>when the program runs</strong> (a <strong>runtime error</strong>). The compiler does not warn you.</p>
+    </div>
+
+    <h3>Example With Generics</h3>
+<pre><code>import java.util.ArrayList;
+
+public class GenericsExample {
+    public static void main(String[] args) {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;(); // Only Strings allowed
+        list.add("Java"); // ok
+        list.add(123);    // ???
+
+        String text = list.get(0); // No need to cast
+        System.out.println(text);
+    }
+}</code></pre>
+    <ul>
+      <li><code>ArrayList&lt;String&gt;</code> means this list can hold <strong>only Strings</strong>.</li>
+      <li><code>list.add(123)</code> gives a <strong>compile-time error</strong>. The compiler stops you before the program even runs.</li>
+      <li><code>list.get(0)</code> needs <strong>no cast</strong>, because Java already knows it is a String.</li>
+      <li>The empty <code>&lt;&gt;</code> on the right side is called the <strong>diamond operator</strong>. Java works out the type from the left side.</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>Generics work with <strong>objects</strong>, not primitive types. Write <code>ArrayList&lt;Integer&gt;</code>, not <code>ArrayList&lt;int&gt;</code>. (Extra tip, not on the slides.)</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Generic Classes</h3>
+    <p>You can write your own <strong>generic class</strong> that works with <strong>any type</strong>.</p>
+<pre><code>public class Box&lt;T&gt; {
+    private T value;
+
+    public void set(T value) {
+        this.value = value;
+    }
+
+    public T get() {
+        return value;
+    }
+}</code></pre>
+    <ul>
+      <li><code>T</code> is a <strong>type parameter</strong>. It is a placeholder for a real type (T stands for "Type").</li>
+      <li>When you create a <code>Box</code>, you choose what <code>T</code> will be.</li>
+      <li><code>set(T value)</code> accepts a value of type <code>T</code>. <code>get()</code> returns a value of type <code>T</code>.</li>
+    </ul>
+
+    <p>How to use it (extra example, not on the slides):</p>
+<pre><code>Box&lt;String&gt; nameBox = new Box&lt;&gt;();
+nameBox.set("Amila");
+String name = nameBox.get();   // no cast
+
+Box&lt;Integer&gt; numberBox = new Box&lt;&gt;();
+numberBox.set(50);
+int number = numberBox.get();  // no cast</code></pre>
+
+    <h3>Generic Methods</h3>
+    <p>You can also write <strong>methods</strong> that work with generics.</p>
+<pre><code>public class Utility {
+    public static &lt;T&gt; void printArray(T[] array) {
+        for (T item : array) {
+            System.out.println(item);
+        }
+    }
+}</code></pre>
+    <ul>
+      <li><code>&lt;T&gt;</code> is written <strong>before the return type</strong>. This tells Java the method is generic.</li>
+      <li>The method takes an array of <strong>any type</strong> <code>T</code> and prints each item.</li>
+      <li>One method works for String arrays, Integer arrays, and more.</li>
+    </ul>
+
+    <p>How to use it (extra example, not on the slides):</p>
+<pre><code>String[] names = {"Amila", "Basil"};
+Integer[] marks = {65, 75, 80};
+
+Utility.printArray(names);
+Utility.printArray(marks);</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Use <code>Integer[]</code>, not <code>int[]</code>, with <code>printArray</code>. Generic type <code>T</code> cannot be a primitive type. (Extra note, not on the slides.)</p>
+    </div>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">To Explore</span>
+      <p>The lecture asks you to search about <strong>bounded generics</strong> on your own.</p>
+    </div>
+
+    <h3>Why Use Generics?</h3>
+<pre><code>Feature        Without Generics     With Generics
+-----------------------------------------------------
+Type Safety    Runtime errors       Compile-time checks
+Type Casting   Required             Not needed
+Reusability    Less flexible        More flexible</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Three benefits of generics: <strong>type safety</strong> (errors caught at compile time), <strong>no type casting</strong>, and <strong>more reusable</strong> code.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Part 2: Java Collections</h2>
+
+    <h3>Java Collections Framework (JCF)</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>The <strong>Java Collections Framework (JCF)</strong> is a set of <strong>classes and interfaces</strong> that help you <strong>store and manipulate groups of objects</strong> (collections), such as <strong>lists, sets, maps, and queues</strong>.</p>
+    </div>
+    <p>Think of it as a <strong>toolbox</strong> that makes handling data <strong>easier, safer, and faster</strong>.</p>
+
+    <h3>Why Use Java Collections?</h3>
+    <p>Before collections, you had to write your own code to store many values, for example with arrays:</p>
+<pre><code>String[] names = new String[10]; // ???</code></pre>
+    <p>The problem: an array has a <strong>fixed size</strong>. It cannot grow or shrink once it is created.</p>
+    <p>With collections, you get:</p>
+    <ul>
+      <li><strong>Resizable</strong> storage</li>
+      <li><strong>More powerful operations</strong></li>
+      <li><strong>Efficient data handling</strong></li>
+      <li><strong>Type safety</strong> with Generics</li>
+    </ul>
+
+    <h3>Main Interfaces in JCF</h3>
+<pre><code>Interface  Purpose                          Example Implementations
+---------------------------------------------------------------------
+List       Ordered collection               ArrayList, LinkedList
+           (duplicates allowed)
+Set        Unordered collection             HashSet, TreeSet
+           (no duplicates)
+Map        Key-value pairs                  HashMap, TreeMap
+Queue      FIFO (First-In-First-Out)        LinkedList, PriorityQueue
+           structure</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>List</strong> = ordered, duplicates OK. <strong>Set</strong> = no duplicates. <strong>Map</strong> = key + value. <strong>Queue</strong> = first in, first out.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>LIST (Ordered Collection)</h3>
+    <ul>
+      <li>Can have <strong>duplicates</strong></li>
+      <li>Maintains <strong>insertion order</strong> (items stay in the order you added them)</li>
+      <li>Access elements by <strong>index</strong></li>
+    </ul>
+    <p><strong>Common implementations:</strong></p>
+    <ul>
+      <li><code>ArrayList</code> — <strong>fast for reading/accessing</strong></li>
+      <li><code>LinkedList</code> — <strong>fast for adding/removing</strong> elements</li>
+    </ul>
+
+    <h3>List – Example</h3>
+<pre><code>import java.util.ArrayList;
+
+public class ListExample {
+    public static void main(String[] args) {
+        ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;();
+
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Alice"); // Duplicates allowed
+
+        System.out.println("First name: " + names.get(0)); // Access by index
+
+        for (String name : names) {
+            System.out.println(name);
+        }
+    }
+}</code></pre>
+    <p>Output:</p>
+<pre><code>First name: Alice
+Alice
+Bob
+Alice</code></pre>
+    <p>Notice that <strong>Alice appears twice</strong> and the order is the same as when we added them.</p>
+
+    <div class="divider"></div>
+
+    <h3>SET (Unique Collection)</h3>
+    <ul>
+      <li><strong>Cannot have duplicates</strong></li>
+      <li><strong>No guaranteed order</strong> (in <code>HashSet</code>)</li>
+      <li>Used when <strong>uniqueness</strong> is important</li>
+    </ul>
+    <p><strong>Common implementations:</strong></p>
+    <ul>
+      <li><code>HashSet</code> — <strong>fast</strong>, no order</li>
+      <li><code>TreeSet</code> — <strong>sorted</strong> order</li>
+    </ul>
+
+    <h3>Set – Example</h3>
+<pre><code>import java.util.HashSet;
+
+public class SetExample {
+    public static void main(String[] args) {
+        HashSet&lt;String&gt; fruits = new HashSet&lt;&gt;();
+
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Apple"); // Duplicate, ignored
+
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
+}</code></pre>
+    <p>The set keeps only <strong>one Apple</strong>. It prints Apple and Banana, but the <strong>order is not guaranteed</strong> in a <code>HashSet</code>.</p>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Exam trap: adding a duplicate to a Set does <strong>not</strong> cause an error. The duplicate is simply <strong>ignored</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>MAP (Key-Value Pair)</h3>
+    <ul>
+      <li>Stores data as <strong>key</strong> and <strong>value</strong></li>
+      <li>Each <strong>key must be unique</strong></li>
+      <li><strong>Values can be duplicate</strong></li>
+    </ul>
+    <p><strong>Common implementations:</strong></p>
+    <ul>
+      <li><code>HashMap</code> — <strong>fast</strong>, unordered</li>
+      <li><code>TreeMap</code> — <strong>sorted keys</strong></li>
+      <li><code>LinkedHashMap</code> — <strong>insertion order maintained</strong></li>
+    </ul>
+
+    <h3>Map – Example</h3>
+<pre><code>import java.util.HashMap;
+
+public class MapExample {
+    public static void main(String[] args) {
+        HashMap&lt;String, Integer&gt; marks = new HashMap&lt;&gt;();
+
+        marks.put("Tom", 90);
+        marks.put("Jerry", 85);
+        marks.put("Tom", 95); // Overwrites previous value
+
+        for (String name : marks.keySet()) {
+            System.out.println(name + " scored " + marks.get(name));
+        }
+    }
+}</code></pre>
+    <p>Output (the order may be different in a <code>HashMap</code>):</p>
+<pre><code>Tom scored 95
+Jerry scored 85</code></pre>
+    <ul>
+      <li><code>HashMap&lt;String, Integer&gt;</code> has <strong>two type parameters</strong>: key type and value type.</li>
+      <li><code>put("Tom", 95)</code> uses a key that already exists, so it <strong>overwrites</strong> the old value 90.</li>
+      <li><code>keySet()</code> gives all the keys so we can loop through them.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Map: <strong>keys are unique</strong>, but <strong>values can repeat</strong>. Putting the same key again <strong>replaces the old value</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>QUEUE (First-In-First-Out)</h3>
+    <ul>
+      <li>Elements are <strong>added at the end</strong> and <strong>removed from the front</strong></li>
+      <li>Used in <strong>scheduling</strong>, <strong>messaging systems</strong>, etc.</li>
+    </ul>
+    <p><strong>Common implementations:</strong></p>
+    <ul>
+      <li><code>LinkedList</code> (used as a queue)</li>
+      <li><code>PriorityQueue</code> (elements ordered by <strong>priority</strong>)</li>
+    </ul>
+
+    <h3>Queue – Example</h3>
+<pre><code>import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueExample {
+    public static void main(String[] args) {
+        Queue&lt;String&gt; tasks = new LinkedList&lt;&gt;();
+
+        tasks.add("Task 1");
+        tasks.add("Task 2");
+        tasks.add("Task 3");
+
+        System.out.println("Processing: " + tasks.poll()); // Removes and returns head
+        System.out.println("Next Task: " + tasks.peek());  // Returns head without removing
+    }
+}</code></pre>
+    <p>Output:</p>
+<pre><code>Processing: Task 1
+Next Task: Task 2</code></pre>
+    <ul>
+      <li><code>add()</code> puts an item at the <strong>end</strong> of the queue.</li>
+      <li><code>poll()</code> <strong>removes and returns</strong> the head (the first item).</li>
+      <li><code>peek()</code> <strong>returns the head without removing</strong> it.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Exam trap: <code>poll()</code> <strong>removes</strong> the head, but <code>peek()</code> only <strong>looks</strong> at it. Task 1 is gone after <code>poll()</code>, so <code>peek()</code> shows Task 2.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Real-Life Use Cases</h2>
+    <ul>
+      <li><code>ArrayList</code> → store the <strong>names of students</strong></li>
+      <li><code>HashSet</code> → store <strong>unique student IDs</strong></li>
+      <li><code>HashMap</code> → store <strong>student name and grade</strong></li>
+      <li><code>Queue</code> → handle <strong>print jobs in order</strong></li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>How to choose: need <strong>order and duplicates</strong>? Use a <strong>List</strong>. Need <strong>unique items</strong>? Use a <strong>Set</strong>. Need to <strong>look up a value by a key</strong>? Use a <strong>Map</strong>. Need <strong>first come, first served</strong>? Use a <strong>Queue</strong>.</p>
+    </div>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">To Explore</span>
+      <p>The lecture asks you to study the <strong>utility classes</strong> <code>Collections</code> and <code>Arrays</code> in Java Collections.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Summary</h2>
+    <ul>
+      <li><strong>Generics</strong>
+        <ul>
+          <li>What are Generics in Java?</li>
+          <li>Example</li>
+          <li>Generic Classes</li>
+          <li>Generic Methods</li>
+          <li>Why Generics</li>
+        </ul>
+      </li>
+      <li><strong>Collections</strong>
+        <ul>
+          <li>Java Collections Framework (JCF)</li>
+          <li>Why use Java Collections</li>
+          <li>Main Interfaces: List, Set, Map, Queue</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Generics give <strong>type safety</strong> at compile time and remove casting. The Collections Framework gives ready-made, resizable data structures: <strong>List</strong> (ordered, duplicates), <strong>Set</strong> (unique), <strong>Map</strong> (key-value) and <strong>Queue</strong> (FIFO).</p>
+    </div>
+
+    <h2>References</h2>
+    <ul>
+      <li>Oracle Documentation — Generics: https://docs.oracle.com/javase/tutorial/java/generics/</li>
+      <li>Oracle Documentation — Collections: https://docs.oracle.com/javase/tutorial/collections/intro/index.html</li>
+    </ul>
+  `,
+  summary: {
+    topic: 'Introduction to Java Generics and the Java Collections Framework',
+    subTopics: [
+      'Recap – Introduction to Design Patterns',
+      'What We Discuss Today',
+      'What are Generics in Java?',
+      'Before and After Generics',
+      'Example Without Generics',
+      'Example With Generics',
+      'Generic Classes',
+      'Generic Methods',
+      'Why Use Generics?',
+      'Java Collections Framework (JCF)',
+      'Why Use Java Collections?',
+      'Main Interfaces in JCF',
+      'List (Ordered Collection)',
+      'Set (Unique Collection)',
+      'Map (Key-Value Pair)',
+      'Queue (First-In-First-Out)',
+      'Real-Life Use Cases',
+      'To Explore: Bounded Generics, Collections and Arrays Utility Classes',
+    ],
+    definitions: [
+      { term: 'Generics', meaning: 'A Java feature that lets one class, interface or method work with different data types while keeping type safety.' },
+      { term: 'Type Safety', meaning: 'The compiler checks that only the correct type of data is used, so type errors are caught at compile time instead of at runtime.' },
+      { term: 'Type Casting', meaning: 'Converting an object from one type to another, for example (String) list.get(1). It is required without generics and not needed with generics.' },
+      { term: 'Type Parameter (T)', meaning: 'A placeholder name such as T in Box<T> that stands for a real type chosen when the class or method is used.' },
+      { term: 'Generic Class', meaning: 'A class with a type parameter, such as Box<T>, that can work with any type.' },
+      { term: 'Generic Method', meaning: 'A method with its own type parameter written before the return type, such as public static <T> void printArray(T[] array).' },
+      { term: 'Diamond Operator', meaning: 'The empty <> in new ArrayList<>() that lets Java work out the type automatically.' },
+      { term: 'Java Collections Framework (JCF)', meaning: 'A set of classes and interfaces for storing and manipulating groups of objects such as lists, sets, maps and queues.' },
+      { term: 'Collection', meaning: 'A group of objects stored together, such as a list, set, map or queue.' },
+      { term: 'List', meaning: 'An ordered collection that allows duplicates, keeps insertion order and lets you access elements by index.' },
+      { term: 'ArrayList', meaning: 'A List implementation that is fast for reading and accessing elements.' },
+      { term: 'LinkedList', meaning: 'A List implementation that is fast for adding and removing elements. It can also be used as a queue.' },
+      { term: 'Set', meaning: 'A collection that cannot have duplicates and is used when uniqueness is important.' },
+      { term: 'HashSet', meaning: 'A Set implementation that is fast but has no guaranteed order.' },
+      { term: 'TreeSet', meaning: 'A Set implementation that keeps elements in sorted order.' },
+      { term: 'Map', meaning: 'A collection that stores key-value pairs. Keys must be unique but values can repeat.' },
+      { term: 'HashMap', meaning: 'A Map implementation that is fast and unordered.' },
+      { term: 'TreeMap', meaning: 'A Map implementation that keeps its keys sorted.' },
+      { term: 'LinkedHashMap', meaning: 'A Map implementation that keeps insertion order.' },
+      { term: 'Queue', meaning: 'A First-In-First-Out (FIFO) collection where elements are added at the end and removed from the front.' },
+      { term: 'PriorityQueue', meaning: 'A Queue implementation where elements are ordered by priority.' },
+      { term: 'FIFO', meaning: 'First-In-First-Out. The first element added is the first one removed.' },
+      { term: 'poll()', meaning: 'A Queue method that removes and returns the head of the queue.' },
+      { term: 'peek()', meaning: 'A Queue method that returns the head of the queue without removing it.' },
+    ],
+    keyPoints: [
+      'Generics let one class, interface or method work with different types while keeping type safety.',
+      'Before Generics (Java 1.4 and earlier), Object was used for any type and casting was needed, which caused runtime errors.',
+      'With Generics (Java 1.5+), the type is given at compile time and the compiler checks it.',
+      'ArrayList without a type accepts any object, and a wrong cast fails at runtime (ClassCastException).',
+      'ArrayList<String> accepts only Strings. Adding an Integer is a compile-time error, and get() needs no cast.',
+      'A generic class uses a type parameter, for example Box<T> with set(T value) and T get().',
+      'A generic method puts <T> before the return type, for example public static <T> void printArray(T[] array).',
+      'Generics cannot use primitive types. Use wrapper classes such as Integer instead of int.',
+      'Benefits of generics: compile-time type safety, no type casting, and more flexible reusable code.',
+      'The Java Collections Framework is a toolbox of classes and interfaces for storing and handling groups of objects.',
+      'Collections are better than plain arrays because they are resizable, more powerful, efficient and type safe with generics.',
+      'List: ordered, allows duplicates, access by index. ArrayList is fast for reading; LinkedList is fast for adding and removing.',
+      'Set: no duplicates, and HashSet has no guaranteed order. TreeSet gives sorted order. Adding a duplicate is ignored.',
+      'Map: key-value pairs with unique keys and duplicate values allowed. Putting an existing key overwrites its value.',
+      'HashMap is fast and unordered, TreeMap has sorted keys, and LinkedHashMap keeps insertion order.',
+      'Queue is FIFO: add at the end and remove from the front. LinkedList and PriorityQueue are common implementations.',
+      'poll() removes and returns the head of a queue, but peek() returns it without removing.',
+      'Real-life use: ArrayList for student names, HashSet for unique student IDs, HashMap for student name and grade, Queue for print jobs.',
+      'To explore: bounded generics, and the utility classes Collections and Arrays.',
+    ],
+  },
+},
+
 
 ]

@@ -6469,7 +6469,710 @@ Move last element (7) to the root:   7 12 16 1 4
   },
 },
 
+{
+  id: 13,
+  title: 'Graphs and Graph Algorithms',
+  content: `
+    <span class="lesson-badge">LESSON 13</span>
+    <h1>Graphs and Graph Algorithms</h1>
+    <div class="meta-info">ICT2113 <span>•</span> 35 min read</div>
 
+    <h2>Learning Objectives</h2>
+    <p>By the end of this lesson, you should be able to:</p>
+    <ul>
+      <li>Explain <strong>what a graph is</strong> and how it is used.</li>
+      <li>Implement the <strong>graph abstract data type</strong> using <strong>multiple internal representations</strong>.</li>
+      <li>See how graphs can be used to <strong>solve a wide variety of problems</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>What is a Graph?</h2>
+    <p>A <strong>graph</strong> is a collection of <strong>nodes</strong> that hold data and are <strong>connected</strong> to other nodes.</p>
+    <p>Graphs are a <strong>more general</strong> structure than trees. In fact, a <strong>tree is a special kind of graph</strong>.</p>
+    <p>Graphs can be used to represent many interesting things:</p>
+    <ul>
+      <li>Our world and its <strong>roads</strong></li>
+      <li><strong>Airline flights</strong> from city to city</li>
+      <li>How the <strong>Internet</strong> is connected</li>
+      <li>The <strong>sequence of classes</strong> you must take to complete an ICT degree</li>
+    </ul>
+
+    <h3>Example: Facebook</h3>
+    <ul>
+      <li>On Facebook, <strong>everything is a node</strong>. This includes User, Photo, Album, Event, Group, Page, Comment, Story, Video, Link and Note. Anything that has data is a node.</li>
+      <li><strong>Every relationship is an edge</strong> from one node to another. When you post a photo, join a group or like a page, a new edge is created for that relationship.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Graph Definition</h2>
+    <p>A graph is a data structure <code>(V, E)</code> that consists of:</p>
+    <ul>
+      <li>A collection of <strong>vertices V</strong> (a vertex is also called a <strong>node</strong>)</li>
+      <li>A collection of <strong>edges E</strong> (an edge is also called an <strong>arc</strong>)</li>
+    </ul>
+    <p>Edges are written as <strong>pairs of vertices</strong> <code>(u, v)</code>.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>A <strong>graph</strong> <code>G = {V, E}</code> is made of a set of vertices <code>V</code> and a set of edges <code>E</code>.</p>
+    </div>
+
+    <h3>Simple Example</h3>
+    <p>A graph with 4 vertices (0, 1, 2, 3). Vertex 0 connects to 1, 2 and 3. Vertex 1 also connects to 2.</p>
+<pre><code>V = {0, 1, 2, 3}
+E = {(0,1), (0,2), (0,3), (1,2)}
+G = {V, E}</code></pre>
+
+    <h3>More Examples: G1, G2 and G3</h3>
+<pre><code>V(G1) = {0,1,2,3}
+E(G1) = {(0,1),(0,2),(0,3),(1,2),(1,3),(2,3)}
+
+V(G2) = {0,1,2,3,4,5,6}
+E(G2) = {(0,1),(0,2),(1,3),(1,4),(2,5),(2,6)}
+
+V(G3) = {0,1,2}
+E(G3) = {&lt;0,1&gt;,&lt;1,0&gt;,&lt;1,2&gt;}</code></pre>
+    <ul>
+      <li><strong>G1</strong> — every vertex is connected to every other vertex (4 vertices, 6 edges).</li>
+      <li><strong>G2</strong> — this graph looks like a <strong>tree</strong> (root 0, with children below it).</li>
+      <li><strong>G3</strong> — a <strong>directed graph</strong>. Its edges have arrows, so they are written with angle brackets <code>&lt;u,v&gt;</code>.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do not mix up the two edge notations. <code>(u,v)</code> is used for an <strong>undirected</strong> edge. <code>&lt;u,v&gt;</code> is used for a <strong>directed</strong> edge, where order matters.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Trees vs Graphs</h2>
+    <h3>Tree</h3>
+    <ul>
+      <li>One node, the <strong>root</strong>, is "distinguished". It is almost always the starting point for algorithms.</li>
+      <li>Every node has exactly <strong>one parent</strong> (but the root has no parent).</li>
+      <li>There is a <strong>parent and child hierarchy</strong>, with <strong>leaf</strong> nodes and <strong>internal</strong> nodes.</li>
+      <li>There is <strong>one distinct path</strong> between two nodes.</li>
+    </ul>
+    <h3>Graph</h3>
+    <ul>
+      <li>There is <strong>no parent/child</strong> relationship.</li>
+      <li>Nodes have "neighbors", also called <strong>adjacent nodes</strong>.</li>
+      <li>There can be <strong>multiple paths</strong> between two nodes. <strong>Cycles</strong> are also possible.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>A tree has a root, parents, children and only one path between two nodes. A graph has none of these, but it can have many paths and cycles.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Example Applications</h2>
+    <ul>
+      <li><strong>Electronic circuits</strong> — printed circuit board, integrated circuit</li>
+      <li><strong>Transportation networks</strong> — highway network, flight network</li>
+      <li><strong>Computer networks</strong> — local area network, Internet, Web</li>
+      <li><strong>Databases</strong> — entity-relationship diagram</li>
+    </ul>
+    <p>Two common questions we ask about graphs:</p>
+    <ol>
+      <li>Are two points <strong>connected</strong>?</li>
+      <li>What is the <strong>shortest path</strong> between them?</li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <h2>Graph Basics</h2>
+    <p>The connection between two nodes is called an <strong>edge</strong>. Nodes can also be called <strong>vertices</strong>.</p>
+<pre><code>Vertex (node)     Edge
+-----------------------------
+city              road
+computer          cable
+web page          hyperlink
+airport           flight</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>The <strong>degree</strong> of a vertex is the number of edges connected to it. Example: in the lecture picture, the purple vertex has a degree of <strong>3</strong> and the blue vertex has a degree of <strong>1</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Graph Terminology</h2>
+    <ul>
+      <li><strong>End vertices (endpoints)</strong> — the two vertices joined by an edge.</li>
+      <li><strong>Origin</strong> and <strong>destination</strong> — if an edge is directed, its first endpoint is the origin and the other is the destination.</li>
+      <li><strong>Adjacent vertices</strong> — two vertices are adjacent if they are endpoints of the same edge.</li>
+      <li><strong>Incident edge</strong> — an edge is incident on a vertex if the vertex is one of the edge's endpoints.</li>
+      <li><strong>Outgoing edges</strong> of a vertex — the directed edges whose <strong>origin</strong> is that vertex.</li>
+      <li><strong>Incoming edges</strong> of a vertex — the directed edges whose <strong>destination</strong> is that vertex.</li>
+    </ul>
+
+    <h3>Example 1 (graph with vertices A to F, edges a to j)</h3>
+<pre><code>a: A-B   b: B-D   c: A-C   d: B-C   e: C-D
+f: C-E   g: D-E   h: D-F   i: D-F   j: F-F</code></pre>
+    <ul>
+      <li>Vertices <strong>A and B</strong> are the endpoints of edge <code>a</code>.</li>
+      <li>If <code>a</code> is directed from A to B, then <strong>A is the origin</strong> and <strong>B is the destination</strong> of edge <code>a</code>.</li>
+      <li>A and B are <strong>adjacent</strong> because they are endpoints of edge <code>a</code>.</li>
+    </ul>
+
+    <h3>Example 2 (undirected graph with vertices U, V, W, X, Y, Z)</h3>
+<pre><code>a: U-V   b: V-X   c: U-W   d: V-W   e: W-X
+f: W-Y   g: X-Y   h: X-Z   i: X-Z   j: Z-Z</code></pre>
+    <ul>
+      <li>Edge <code>a</code> is incident on vertex <strong>V</strong>.</li>
+      <li>Edge <code>h</code> is incident on vertex <strong>Z</strong>.</li>
+      <li>Edge <code>g</code> is incident on vertex <strong>Y</strong>.</li>
+    </ul>
+
+    <h3>Example 3 (directed version of the same graph)</h3>
+<pre><code>a: U→V   b: V→X   c: U→W   d: W→V   e: W→X
+f: W→Y   g: Y→X   h: X→Z   i: Z→X   j: Z→Z</code></pre>
+    <ul>
+      <li>The <strong>outgoing</strong> edges of vertex W (W is the origin) are <code>{d, e, f}</code>.</li>
+      <li>The <strong>incoming</strong> edges of vertex X (X is the destination) are <code>{b, e, g, i}</code>.</li>
+    </ul>
+
+    <h3>Adjacent and Neighbors</h3>
+    <p>Two vertices are <strong>adjacent</strong> (they are <strong>neighbors</strong>) if they are the endpoints of an edge.</p>
+<pre><code>Graph edges: A-B, A-C, B-C, B-D, C-D
+
+A and B are adjacent
+A and D are NOT adjacent</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Degree</h2>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Degree</strong> = the number of edges incident on a node.</p>
+    </div>
+    <p>Example: in a graph with edges A-B, A-E, B-E and C-F (and D alone), the <strong>degree of B is 2</strong>.</p>
+
+    <h3>Degree in Directed Graphs</h3>
+    <ul>
+      <li><strong>In-degree</strong> — number of edges <strong>entering</strong> a node.</li>
+      <li><strong>Out-degree</strong> — number of edges <strong>leaving</strong> a node.</li>
+      <li><strong>Degree = In-degree + Out-degree</strong></li>
+    </ul>
+    <p>Example (edges 1→2, 2→2, 2→4, 2→5, 4→1, 4→5, 5→4): the <strong>in-degree of node 2 is 2</strong> and the <strong>out-degree of node 2 is 3</strong>.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Degree (directed) = In-degree + Out-degree. A <strong>self-loop</strong> on a node (like 2→2 above) counts once as incoming and once as outgoing.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Path and Circuit</h2>
+    <ul>
+      <li>A <strong>path</strong> is a sequence of vertices such that there is an edge from each vertex to its successor (the next vertex).</li>
+      <li>A path is <strong>simple</strong> if each vertex is distinct (no vertex repeats).</li>
+      <li>A <strong>circuit</strong> is a path in which the <strong>terminal (last) vertex</strong> is the same as the <strong>initial (first) vertex</strong>.</li>
+    </ul>
+    <p>Example (edges 1→2, 2→4, 4→1, 4→5, 5→4, 6→3):</p>
+<pre><code>Simple path : [1, 2, 4, 5]
+Path        : [1, 2, 4, 5, 4]
+Circuit     : [1, 2, 4, 5, 4, 1]</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Exam trap: <code>[1, 2, 4, 5, 4]</code> is a normal path but <strong>not simple</strong>, because vertex 4 appears twice.</p>
+    </div>
+
+    <h2>Cycles</h2>
+    <p>A graph can have <strong>cycles</strong>. This means that if you travel through the nodes, you could get back to the same node more than once.</p>
+    <p>A graph <strong>without cycles</strong> is called an <strong>acyclic graph</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h2>Types of Edges</h2>
+    <ul>
+      <li><strong>Undirected edge</strong> <code>{u,v}</code> — does not show direction. We can "travel" in either direction.</li>
+      <li><strong>Directed edge</strong> <code>(u,v)</code> — has a direction. We can only "travel" in one direction along the edge.</li>
+      <li><strong>Self-loop</strong> — an edge that starts and ends at the <strong>same vertex</strong>.</li>
+      <li><strong>Parallel edges</strong> — two undirected edges with the same end vertices, or two directed edges with the same origin and destination.</li>
+    </ul>
+
+    <h3>Vertices and Edges Summary (undirected example)</h3>
+    <ul>
+      <li><strong>End vertices (endpoints)</strong> — U and V are the endpoints of edge <code>a</code>.</li>
+      <li><strong>Edges incident on a vertex</strong> — all edges that have the vertex as an endpoint. <code>a</code>, <code>d</code> and <code>b</code> are incident on V.</li>
+      <li><strong>Adjacent vertices</strong> — endpoints of the same edge. U and V are adjacent.</li>
+      <li><strong>Degree of a vertex</strong> — number of edges incident on it. X has degree 5.</li>
+      <li><strong>Parallel edges</strong> — <code>h</code> and <code>i</code> are parallel edges.</li>
+      <li><strong>Self-loop</strong> — <code>j</code> is a self-loop.</li>
+    </ul>
+
+    <h3>Vertices in Directed Graphs</h3>
+    <ul>
+      <li><strong>Origin</strong> — the first endpoint.</li>
+      <li><strong>Destination</strong> — the second endpoint.</li>
+      <li><strong>Outgoing edges</strong> of a vertex — directed edges that start at the vertex. Example: <code>a</code> and <code>d</code> start at V.</li>
+      <li><strong>Incoming edges</strong> of a vertex — directed edges that end at the vertex. Example: <code>a</code> and <code>c</code> end at U.</li>
+      <li><strong>Degree</strong> of a vertex — the number of incoming and outgoing edges.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Types of Graphs</h2>
+    <h3>Null Graph and Trivial Graph</h3>
+    <ul>
+      <li>A graph <code>G = (V, E)</code> where <strong>E = 0</strong> (no edges) is called a <strong>Null graph</strong> or <strong>Empty graph</strong>. Example: three vertices v1, v2, v3 with no edges.</li>
+      <li>A graph with <strong>one vertex and no edge</strong> is called a <strong>trivial graph</strong>.</li>
+    </ul>
+
+    <h3>Disconnected, Connected and Complete Graphs</h3>
+    <p>Vertices need to be connected in a graph. You might have <strong>isolated nodes</strong> or even <strong>separated subgraphs</strong>.</p>
+    <ul>
+      <li>If all nodes are linked together, it is a <strong>connected graph</strong> (the lecture says: all nodes have at least one edge).</li>
+      <li>If some nodes or groups of nodes are separated, it is a <strong>disconnected graph</strong>.</li>
+      <li>When <strong>all nodes are connected to all other nodes</strong>, we have a <strong>complete graph</strong>.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>In a <strong>complete graph</strong>, each node has to have <strong>(number of nodes − 1)</strong> edges.</p>
+    </div>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Be careful with "connected". Having at least one edge on every node is not always enough. Two separate pairs of connected nodes still form a <strong>disconnected</strong> graph. In a truly connected graph, you can reach <strong>any vertex from any other vertex</strong> by following edges.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Graph Representations</h2>
+    <p>A graph can be stored in a computer in three ways:</p>
+    <ol>
+      <li><strong>Adjacency Matrix</strong></li>
+      <li><strong>Incidence Matrix</strong></li>
+      <li><strong>Adjacency List</strong></li>
+    </ol>
+
+    <h3>1. Adjacency Matrix</h3>
+    <p>The graph is stored in a matrix of size <strong>(number of vertices) × (number of vertices)</strong>. Example: a graph with 4 vertices uses a 4×4 matrix.</p>
+    <p>Rows and columns both represent <strong>vertices</strong>. The matrix is filled with 1 or 0:</p>
+    <ul>
+      <li><strong>1</strong> — there is an edge from the row vertex to the column vertex.</li>
+      <li><strong>0</strong> — there is no edge from the row vertex to the column vertex.</li>
+    </ul>
+    <p>You may also see it written as <code>M[i,j] = true</code> (edge <code>(i,j)</code> exists) or <code>M[i,j] = false</code> (no edge).</p>
+
+    <h3>Undirected Graph Example</h3>
+    <p>Edges: A-B, A-C, A-D, B-D, B-E, C-D, D-E, and a self-loop on D.</p>
+<pre><code>      A  B  C  D  E
+  A   0  1  1  1  0
+  B   1  0  0  1  1
+  C   1  0  0  1  0
+  D   1  1  1  1  1
+  E   0  1  0  1  0</code></pre>
+    <p>Notice that <code>D-D = 1</code> because D has a self-loop.</p>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>For an <strong>undirected</strong> graph, the matrix is the same on both sides of the diagonal. If A-B is 1, then B-A is also 1.</p>
+    </div>
+
+    <h3>Directed Graph Example</h3>
+    <p>Edges: A→B, A→C, B→D, B→E, C→D, D→A, D→E, and a self-loop on D. Read each row as "from this vertex, to the column vertex".</p>
+<pre><code>      A  B  C  D  E
+  A   0  1  1  0  0
+  B   0  0  0  1  1
+  C   0  0  0  1  0
+  D   1  0  0  1  1
+  E   0  0  0  0  0</code></pre>
+
+    <h3>True / False Style Example</h3>
+    <p>Edges: a-b, a-c, a-d, b-e, c-d, c-e, d-e.</p>
+<pre><code>      a  b  c  d  e
+  a   F  T  T  T  F
+  b   T  F  F  F  T
+  c   T  F  F  T  T
+  d   T  F  T  F  T
+  e   F  T  T  T  F</code></pre>
+
+    <h3>Weighted Graph Example</h3>
+    <p>In a <strong>weighted graph</strong>, each edge has a value such as distance or cost. In the matrix we store the <strong>weight</strong> instead of 1. Where there is <strong>no edge</strong>, we write <strong>∞</strong> (infinity).</p>
+    <p>Vertex list: 0 = A, 1 = B, 2 = C, 3 = D, 4 = E, 5 = F, 6 = G, 7 = H.</p>
+    <p>Edges (with weights): A-B 5, A-C 7, A-D 3, B-E 2, B-F 10, C-G 1, D-H 11, E-H 9, F-H 4, G-H 6.</p>
+<pre><code>       0   1   2   3   4   5   6   7
+  0    ∞   5   7   3   ∞   ∞   ∞   ∞
+  1    5   ∞   ∞   ∞   2  10   ∞   ∞
+  2    7   ∞   ∞   ∞   ∞   ∞   1   ∞
+  3    3   ∞   ∞   ∞   ∞   ∞   ∞  11
+  4    ∞   2   ∞   ∞   ∞   ∞   ∞   9
+  5    ∞  10   ∞   ∞   ∞   ∞   ∞   4
+  6    ∞   ∞   1   ∞   ∞   ∞   ∞   6
+  7    ∞   ∞   ∞   6  11   9   4   ∞</code></pre>
+    <p>Here <code>|V| = v</code> means the matrix size depends on the number of vertices.</p>
+
+    <h3>Exercise 1: Directed Weighted Graph</h3>
+    <p><strong>Task:</strong> Write the adjacency matrix for a directed graph with these edges (origin → destination, weight):</p>
+<pre><code>0→3 (15)   0→4 (20)   1→5 (25)   3→0 (15)
+3→1 (25)   4→2 (30)   4→5 (10)   5→1 (25)</code></pre>
+    <p><strong>Answer</strong> (a dash means no edge):</p>
+<pre><code>      0   1   2   3   4   5
+  0   -   -   -  15  20   -
+  1   -   -   -   -   -  25
+  2   -   -   -   -   -   -
+  3  15  25   -   -   -   -
+  4   -   -  30   -   -  10
+  5   -  25   -   -   -   -</code></pre>
+
+    <h3>Exercise 2: Undirected Weighted Graph</h3>
+    <p><strong>Task:</strong> Write the adjacency matrix for the weighted graph with these edges:</p>
+<pre><code>0-1 (0.83)   0-5 (0.51)   0-3 (0.65)
+1-5 (0.90)   1-4 (0.46)   1-3 (0.72)
+1-2 (0.67)   2-3 (0.39)   3-4 (0.24)</code></pre>
+    <p><strong>Answer</strong> (a dash means no edge):</p>
+<pre><code>        0     1     2     3     4     5
+  0     -   0.83    -   0.65    -   0.51
+  1   0.83    -   0.67  0.72  0.46  0.90
+  2     -   0.67    -   0.39    -     -
+  3   0.65  0.72  0.39    -   0.24    -
+  4     -   0.46    -   0.24    -     -
+  5   0.51  0.90    -     -     -     -</code></pre>
+
+    <h3>2. Incidence Matrix</h3>
+    <p>The graph is stored in a matrix of size <strong>(number of vertices) × (number of edges)</strong>. Example: a graph with 4 vertices and 6 edges uses a 4×6 matrix.</p>
+    <p>In this matrix, <strong>rows represent vertices</strong> and <strong>columns represent edges</strong>. It is filled with 0, 1 or −1:</p>
+    <ul>
+      <li><strong>0</strong> — the vertex is not connected to that edge.</li>
+      <li><strong>1</strong> — the edge is connected to the vertex as an <strong>outgoing</strong> edge.</li>
+      <li><strong>−1</strong> — the edge is connected to the vertex as an <strong>incoming</strong> edge.</li>
+    </ul>
+
+    <h3>Incidence Matrix Example</h3>
+<pre><code>Edges: E1: A→B   E2: A→C   E3: D→A   E4: B→D
+       E5: C→D   E6: B→E   E7: D→E   E8: D→D (self-loop)
+
+      E1  E2  E3  E4  E5  E6  E7  E8
+  A    1   1  -1   0   0   0   0   0
+  B   -1   0   0   1   0   1   0   0
+  C    0  -1   0   0   1   0   0   0
+  D    0   0   1  -1  -1   0   1   1
+  E    0   0   0   0   0  -1  -1   0</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Exam trap: the <strong>adjacency matrix</strong> is <strong>vertices × vertices</strong>. The <strong>incidence matrix</strong> is <strong>vertices × edges</strong>. Do not mix them up.</p>
+    </div>
+
+    <h3>3. Adjacency List</h3>
+    <p>In this representation, <strong>every vertex</strong> of the graph keeps a <strong>list of its adjacent vertices</strong>. It can be built with a <strong>linked list</strong> (an array of head pointers, one for each vertex).</p>
+    <p>Example using linked lists:</p>
+<pre><code>0 → 1 → 2 → 3 → 4
+1 → 0 → 3
+2 → 0 → 3 → 4
+3 → 0 → 1 → 2 → 4
+4 → 0 → 2 → 3</code></pre>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The lecture calls this example a directed graph, but the picture has no arrows. Each edge appears in both vertices' lists, so it behaves like an <strong>undirected</strong> graph. In a directed graph, an edge appears only in the list of its origin.</p>
+    </div>
+
+    <h3>Adjacency List Using Arrays</h3>
+    <p>The same idea can be built with a <strong>reference array</strong> that points to an <strong>adjacency array</strong> for each vertex. Directed example (edges A→B, A→C, B→D, B→E, C→D, D→A, D→D, D→E):</p>
+<pre><code>A → [B, C]
+B → [D, E]
+C → [D]
+D → [A, D, E]
+E → [ ]      (no outgoing edges)</code></pre>
+
+    <h3>Adjacency List for a Weighted Graph</h3>
+    <p>Each entry stores the <strong>neighbor and the weight</strong> as <code>(vertex, weight)</code>.</p>
+<pre><code>0 → (1, 3) → (2, 5)
+1 → (3, 2)
+2 → (3, 1)
+3 → (4, 4) → (5, 8)
+4 → (5, 6)
+5 → (empty)</code></pre>
+
+    <h3>Exercise 3: Draw and Represent a Graph</h3>
+    <p>Consider the graph G:</p>
+<pre><code>V(G) = {1, 2, 3, 4, 5, 6}
+E(G) = {(1,2), (2,3), (3,4), (5,1), (5,6),
+        (2,6), (1,6), (4,6), (2,4)}</code></pre>
+    <p><strong>Task:</strong> Draw the graph, then write (i) the adjacency matrix and (ii) the adjacency list.</p>
+    <p><strong>Answer</strong> (treating the edges as undirected, since they are written with round brackets):</p>
+<pre><code>Adjacency matrix:
+      1  2  3  4  5  6
+  1   0  1  0  0  1  1
+  2   1  0  1  1  0  1
+  3   0  1  0  1  0  0
+  4   0  1  1  0  0  1
+  5   1  0  0  0  0  1
+  6   1  1  0  1  1  0
+
+Adjacency list:
+1 → 2, 5, 6
+2 → 1, 3, 4, 6
+3 → 2, 4
+4 → 2, 3, 6
+5 → 1, 6
+6 → 1, 2, 4, 5</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Graph Traversals</h2>
+    <p><strong>Graph traversal</strong> is a technique used for <strong>searching a vertex</strong> in a graph. It also decides the <strong>order in which vertices are visited</strong> during the search.</p>
+    <p>A traversal finds the edges to use in the search <strong>without creating loops</strong>. This means we visit all vertices of the graph without getting stuck in a looping path.</p>
+    <p>There are two graph traversal techniques:</p>
+    <ul>
+      <li><strong>DFS</strong> — Depth First Search</li>
+      <li><strong>BFS</strong> — Breadth First Search</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Spanning Trees</h2>
+    <p>Both DFS and BFS produce a <strong>spanning tree</strong> as the final result, so let us understand this first.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>spanning tree</strong> is a subset of graph G that covers <strong>all the vertices</strong> using the <strong>minimum possible number of edges</strong>. It has <strong>no cycles</strong> and it <strong>cannot be disconnected</strong>.</p>
+    </div>
+
+    <p>A <strong>disconnected graph</strong> does not have any spanning tree, because it cannot be spanned to all its vertices.</p>
+
+    <h3>Example</h3>
+    <p>Graph G is a triangle with vertices A, B, C (edges A-B, B-C, A-C). Removing any one edge gives a spanning tree, so there are <strong>3 spanning trees</strong>.</p>
+    <ul>
+      <li>A complete undirected graph can have a maximum of <strong>n<sup>n−2</sup></strong> spanning trees, where <strong>n</strong> is the number of nodes.</li>
+      <li>Here n = 3, so <code>3^(3−2) = 3</code> spanning trees are possible.</li>
+    </ul>
+
+    <h3>General Properties of a Spanning Tree</h3>
+    <ol>
+      <li>A connected graph G can have <strong>more than one</strong> spanning tree.</li>
+      <li>All possible spanning trees of graph G have the <strong>same number of edges and vertices</strong>.</li>
+      <li>A spanning tree does <strong>not have any cycle</strong> (loops).</li>
+      <li>Removing one edge from a spanning tree makes the graph <strong>disconnected</strong>. So a spanning tree is <strong>minimally connected</strong>.</li>
+      <li>Adding one edge to a spanning tree creates a circuit or loop. So a spanning tree is <strong>maximally acyclic</strong>.</li>
+    </ol>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Tip</span>
+      <p>A spanning tree of a graph with <strong>n vertices</strong> always has <strong>n − 1 edges</strong>. In the DFS and BFS examples below, 7 vertices give 6 edges.</p>
+    </div>
+
+    <h3>Spanning Tree Applications</h3>
+    <ul>
+      <li><strong>Civil network planning</strong></li>
+      <li><strong>Computer network routing protocol</strong></li>
+      <li><strong>Cluster analysis</strong></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Depth First Search (DFS)</h2>
+    <p>DFS traversal of a graph produces a <strong>spanning tree</strong> as the final result. A spanning tree is a graph without any loops.</p>
+    <p>DFS uses a <strong>Stack</strong> data structure. The maximum size of the stack is the <strong>total number of vertices</strong> in the graph.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>DFS uses a Stack.</strong> It goes as deep as possible, then uses <strong>back tracking</strong> (pop) when it cannot go further.</p>
+    </div>
+
+    <h3>Steps to Implement DFS</h3>
+    <ol>
+      <li><strong>Define a Stack</strong> of size equal to the total number of vertices in the graph.</li>
+      <li><strong>Select any vertex</strong> as the starting point. Visit it and <strong>push</strong> it onto the stack.</li>
+      <li>Visit any <strong>unvisited adjacent vertex</strong> of the vertex at the <strong>top of the stack</strong>, and push it onto the stack.</li>
+      <li><strong>Repeat step 3</strong> until there is no new vertex to visit from the vertex at the top of the stack.</li>
+      <li>When there is no new vertex to visit, use <strong>back tracking</strong> and <strong>pop</strong> one vertex from the stack.</li>
+      <li><strong>Repeat steps 3, 4 and 5</strong> until the stack becomes empty.</li>
+      <li>When the stack is empty, produce the final <strong>spanning tree</strong> by <strong>removing unused edges</strong> from the graph.</li>
+    </ol>
+
+    <h3>DFS Example</h3>
+    <p>Graph edges: A-B, A-D, A-E, B-C, B-E, C-E, C-F, C-G, D-E, E-F, F-G. Start at <strong>A</strong>.</p>
+<pre><code>Step 1 : visit A, push A           Stack: A
+Step 2 : visit B (from A), push    Stack: A B
+Step 3 : visit C (from B), push    Stack: A B C
+Step 4 : visit E (from C), push    Stack: A B C E
+Step 5 : visit D (from E), push    Stack: A B C E D
+Step 6 : D has no new vertex,
+         back track, pop D         Stack: A B C E
+Step 7 : visit F (from E), push    Stack: A B C E F
+Step 8 : visit G (from F), push    Stack: A B C E F G
+Step 9 : pop G (no new vertex)     Stack: A B C E F
+Step 10: pop F                     Stack: A B C E
+Step 11: pop E                     Stack: A B C
+Step 12: pop C                     Stack: A B
+Step 13: pop B                     Stack: A
+Step 14: pop A                     Stack: (empty) → STOP</code></pre>
+    <p><strong>Visit order:</strong> A, B, C, E, D, F, G</p>
+    <p><strong>Final spanning tree edges:</strong> A-B, B-C, C-E, E-D, E-F, F-G</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The lecture also shows a small snapshot of DFS on a different graph: output <code>A B S C D E</code>, with the stack holding <code>E, C, S, A</code> (top to bottom).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Breadth First Search (BFS)</h2>
+    <p>BFS traversal of a graph also produces a <strong>spanning tree</strong> as the final result.</p>
+    <p>BFS uses a <strong>Queue</strong> data structure. The maximum size of the queue is the <strong>total number of vertices</strong> in the graph.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>BFS uses a Queue.</strong> It visits <strong>all neighbors</strong> of a vertex first, then moves to the next level.</p>
+    </div>
+
+    <h3>Steps to Implement BFS</h3>
+    <ol>
+      <li><strong>Define a Queue</strong> of size equal to the total number of vertices in the graph.</li>
+      <li><strong>Select any vertex</strong> as the starting point. Visit it and <strong>insert</strong> it into the queue.</li>
+      <li>Visit <strong>all the unvisited adjacent vertices</strong> of the vertex at the <strong>front of the queue</strong> and insert them into the queue.</li>
+      <li>When there is no new vertex to visit from the vertex at the front, <strong>delete</strong> that vertex from the queue.</li>
+      <li><strong>Repeat steps 3 and 4</strong> until the queue becomes empty.</li>
+      <li>When the queue is empty, produce the final <strong>spanning tree</strong> by <strong>removing unused edges</strong> from the graph.</li>
+    </ol>
+
+    <h3>BFS Example</h3>
+    <p>Same graph as the DFS example. Start at <strong>A</strong>.</p>
+<pre><code>Step 1: visit A, insert A              Queue: A
+Step 2: visit D, E, B (from A),
+        insert them, delete A          Queue: D E B
+Step 3: D has no new vertex,
+        delete D                       Queue: E B
+Step 4: visit C, F (from E), insert,
+        delete E                       Queue: B C F
+Step 5: B has no new vertex,
+        delete B                       Queue: C F
+Step 6: visit G (from C), insert,
+        delete C                       Queue: F G
+Step 7: F has no new vertex,
+        delete F                       Queue: G
+Step 8: G has no new vertex,
+        delete G                       Queue: (empty) → STOP</code></pre>
+    <p><strong>Visit order:</strong> A, D, E, B, C, F, G</p>
+    <p><strong>Final spanning tree edges:</strong> A-B, A-D, A-E, E-C, E-F, C-G</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Note</span>
+      <p>The lecture also shows a small snapshot of BFS on a different graph: output <code>A B S C G</code>, with the queue holding <code>G</code>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Difference Between BFS and DFS</h2>
+<pre><code>Feature          BFS              DFS
+------------------------------------------
+Visits nodes     Level by level   Depth-wise
+Data structure   Queue            Stack
+Speed            Slower           Faster
+Memory           More             Less</code></pre>
+    <ul>
+      <li><strong>BFS</strong> visits nodes <strong>level by level</strong>. A node is <strong>fully explored</strong> before any other node begins.</li>
+      <li><strong>DFS</strong> visits nodes <strong>depth-wise</strong>. It continues until it reaches a leaf or a node with no unvisited neighbors. Exploration of a node is <strong>suspended</strong> as soon as another unexplored node is found.</li>
+      <li>BFS uses a <strong>Queue</strong> to store unexplored nodes. DFS uses a <strong>Stack</strong> to store unexplored nodes.</li>
+      <li>BFS is <strong>slower</strong> and needs <strong>more memory</strong>. DFS is <strong>faster</strong> and needs <strong>less memory</strong>.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Exam trap: <strong>DFS = Stack</strong>, <strong>BFS = Queue</strong>. Both give a spanning tree, but the visit order and the tree shape can be different, as the two examples above show.</p>
+    </div>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>A graph is <code>G = {V, E}</code>. Trees are special graphs. A graph can be stored as an adjacency matrix, an incidence matrix or an adjacency list. It can be searched with DFS (Stack) or BFS (Queue), and both give a spanning tree.</p>
+    </div>
+  `,
+  summary: {
+    topic: 'Graphs and Graph Algorithms: Terminology, Representations, Traversals (DFS and BFS) and Spanning Trees',
+    subTopics: [
+      'Learning Objectives',
+      'What is a Graph?',
+      'Graph Definition',
+      'Trees vs Graphs',
+      'Example Applications',
+      'Graph Basics',
+      'Graph Terminology',
+      'Degree',
+      'Path and Circuit',
+      'Cycles',
+      'Types of Edges',
+      'Types of Graphs',
+      'Graph Representations',
+      'Adjacency Matrix',
+      'Incidence Matrix',
+      'Adjacency List',
+      'Graph Traversals',
+      'Spanning Trees',
+      'Depth First Search (DFS)',
+      'Breadth First Search (BFS)',
+      'Difference Between BFS and DFS',
+    ],
+    definitions: [
+      { term: 'Graph', meaning: 'A data structure G = (V, E) made of a collection of vertices and a collection of edges that connect them.' },
+      { term: 'Vertex (Node)', meaning: 'A point in a graph that holds data, such as a city, computer, web page or airport.' },
+      { term: 'Edge (Arc)', meaning: 'A connection between two vertices, such as a road, cable, hyperlink or flight.' },
+      { term: 'Endpoints (End Vertices)', meaning: 'The two vertices joined by an edge.' },
+      { term: 'Origin', meaning: 'The first endpoint of a directed edge.' },
+      { term: 'Destination', meaning: 'The second endpoint of a directed edge.' },
+      { term: 'Adjacent Vertices (Neighbors)', meaning: 'Two vertices that are the endpoints of the same edge.' },
+      { term: 'Incident Edge', meaning: 'An edge is incident on a vertex if the vertex is one of its endpoints.' },
+      { term: 'Outgoing Edges', meaning: 'Directed edges whose origin is the given vertex.' },
+      { term: 'Incoming Edges', meaning: 'Directed edges whose destination is the given vertex.' },
+      { term: 'Degree', meaning: 'The number of edges incident on a vertex.' },
+      { term: 'In-degree', meaning: 'The number of edges entering a node in a directed graph.' },
+      { term: 'Out-degree', meaning: 'The number of edges leaving a node in a directed graph.' },
+      { term: 'Path', meaning: 'A sequence of vertices where there is an edge from each vertex to the next one.' },
+      { term: 'Simple Path', meaning: 'A path in which every vertex is distinct (no vertex repeats).' },
+      { term: 'Circuit', meaning: 'A path in which the last vertex is the same as the first vertex.' },
+      { term: 'Cycle', meaning: 'A route in a graph that lets you return to the same node.' },
+      { term: 'Acyclic Graph', meaning: 'A graph that has no cycles.' },
+      { term: 'Undirected Edge', meaning: 'An edge with no direction, written {u,v} or (u,v). You can travel both ways.' },
+      { term: 'Directed Edge', meaning: 'An edge with a direction, written <u,v>. You can travel only one way.' },
+      { term: 'Self-loop', meaning: 'An edge that starts and ends at the same vertex.' },
+      { term: 'Parallel Edges', meaning: 'Two edges that have the same end vertices (or the same origin and destination in a directed graph).' },
+      { term: 'Weighted Graph', meaning: 'A graph where each edge has a value such as distance or cost.' },
+      { term: 'Null (Empty) Graph', meaning: 'A graph with vertices but no edges (E = 0).' },
+      { term: 'Trivial Graph', meaning: 'A graph with only one vertex and no edge.' },
+      { term: 'Connected Graph', meaning: 'A graph where the vertices are linked so that any vertex can be reached from any other.' },
+      { term: 'Disconnected Graph', meaning: 'A graph with isolated nodes or separated subgraphs.' },
+      { term: 'Complete Graph', meaning: 'A graph where every node is connected to all other nodes, so each node has (nodes - 1) edges.' },
+      { term: 'Adjacency Matrix', meaning: 'A V x V matrix where 1 (or the weight) means an edge exists from the row vertex to the column vertex, and 0 means no edge.' },
+      { term: 'Incidence Matrix', meaning: 'A V x E matrix where rows are vertices and columns are edges. 1 means outgoing, -1 means incoming and 0 means not connected.' },
+      { term: 'Adjacency List', meaning: 'A representation where each vertex keeps a list of its adjacent vertices.' },
+      { term: 'Graph Traversal', meaning: 'A technique to search or visit all vertices of a graph without getting stuck in loops.' },
+      { term: 'Depth First Search (DFS)', meaning: 'A traversal that goes as deep as possible before back tracking, using a Stack.' },
+      { term: 'Breadth First Search (BFS)', meaning: 'A traversal that visits nodes level by level, using a Queue.' },
+      { term: 'Back Tracking', meaning: 'Popping a vertex from the stack to go back when there is no new vertex to visit (used in DFS).' },
+      { term: 'Spanning Tree', meaning: 'A subset of a connected graph that covers all vertices with the minimum number of edges and has no cycles.' },
+    ],
+    keyPoints: [
+      'A graph is G = {V, E}: a set of vertices and a set of edges.',
+      'A tree is a special kind of graph. Trees have a root, parents and one path between nodes; graphs have none of these and can have many paths and cycles.',
+      'Undirected edges are written (u,v) and directed edges are written <u,v>.',
+      'Degree = number of edges incident on a vertex. In a directed graph, Degree = In-degree + Out-degree.',
+      'A path is simple if no vertex repeats. A circuit is a path that ends at its starting vertex.',
+      'A graph without cycles is acyclic. A graph with isolated nodes or separated subgraphs is disconnected.',
+      'In a complete graph, every node has (number of nodes - 1) edges.',
+      'Self-loops start and end at the same vertex. Parallel edges share the same end vertices.',
+      'Three graph representations: adjacency matrix (V x V), incidence matrix (V x E) and adjacency list.',
+      'In an adjacency matrix, 1 means an edge from row to column. In a weighted graph, the weight is stored and infinity means no edge.',
+      'In an incidence matrix, 1 = outgoing edge, -1 = incoming edge and 0 = not connected.',
+      'An adjacency list stores, for each vertex, the list of its adjacent vertices (using linked lists or arrays).',
+      'Graph traversal visits all vertices without looping. The two techniques are DFS and BFS.',
+      'DFS uses a Stack, goes deep first and uses back tracking (pop). BFS uses a Queue and visits level by level.',
+      'Both DFS and BFS produce a spanning tree. DFS is faster and uses less memory; BFS is slower and uses more memory.',
+      'A spanning tree covers all vertices with the minimum number of edges and has no cycles. A graph with n vertices gives a spanning tree with n - 1 edges.',
+      'A disconnected graph has no spanning tree. A complete graph of n nodes has at most n^(n-2) spanning trees.',
+      'Spanning tree applications: civil network planning, computer network routing protocols and cluster analysis.',
+      'Graphs are used for electronic circuits, transportation networks, computer networks and databases. Common questions are whether two points are connected and what the shortest path is.',
+    ],
+  },
+},
 
 
 ]
