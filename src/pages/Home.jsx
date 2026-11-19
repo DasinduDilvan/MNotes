@@ -33,12 +33,12 @@ const courses = [
     name: 'Management Information Systems',
     desc: 'Information systems in organizations, decision support, and IT management.',
   },
-  {
-    id: 'tcs2112',
-    code: 'TCS2112',
-    name: 'Business Economics',
-    desc: 'Microeconomics, macroeconomics, market structures, and economic decision making.',
-  },
+  // {
+  //   id: 'tcs2112',
+  //   code: 'TCS2112',
+  //   name: 'Business Economics',
+  //   desc: 'Microeconomics, macroeconomics, market structures, and economic decision making.',
+  // },
 ]
 
 function Home() {
