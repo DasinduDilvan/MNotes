@@ -15,12 +15,12 @@ const courses = [
     desc: 'Classes, objects, inheritance, polymorphism, encapsulation, and abstraction.',
   },
 
-  {
-    id: 'ict2142',
-    code: 'ICT2142',
-    name: 'E-Business Systems',
-    desc: 'E-commerce models, digital payment systems, online business strategies.',
-  },
+  // {
+  //   id: 'ict2142',
+  //   code: 'ICT2142',
+  //   name: 'E-Business Systems',
+  //   desc: 'E-commerce models, digital payment systems, online business strategies.',
+  // },
   {
     id: 'ict2152',
     code: 'ICT2152',
