@@ -9,57 +9,6 @@ export const lessons = [
     <h1>Introduction to Management Information Systems</h1>
     <div class="meta-info">ICT2162 <span>•</span> 16 min read</div>
 
-    <p>This lesson introduces the course <strong>Management Information Systems (ICT2162)</strong> and covers the first topic: <strong>Information Systems in Global Business Today</strong>. You will learn what an information system is, how it works, and why businesses invest heavily in it.</p>
-
-    <h2>Course Overview</h2>
-    <ul>
-      <li><strong>Course Unit</strong> - Management Information Systems (ICT2162)</li>
-      <li><strong>Credits</strong> - 2</li>
-      <li><strong>Lecture Hours</strong> - 30 hours</li>
-    </ul>
-
-    <h2>Course Learning Outcomes</h2>
-    <p>After finishing this course, you should be able to:</p>
-    <ol>
-      <li>Identify organizations, management, and the networked enterprise.</li>
-      <li>Explore information technology infrastructure and the security of an organization.</li>
-      <li>Explain key concepts related to operational excellence and customer intimacy.</li>
-      <li>Identify how to build and manage information systems.</li>
-    </ol>
-
-    <h2>Course Content (Topics Covered)</h2>
-    <ul>
-      <li>Information Systems in Global Business Today</li>
-      <li>Information Systems, Organizations, and Strategy</li>
-      <li>Ethical and Social Issues in Information Systems</li>
-      <li>IT Infrastructure and Emerging Technologies</li>
-      <li>Foundations of Business Intelligence: Databases and Information Management</li>
-      <li>Securing Information Systems</li>
-      <li>Achieving Operational Excellence and Customer Intimacy: Enterprise Applications</li>
-      <li>Managing Knowledge and Artificial Intelligence</li>
-      <li>Enhancing Decision Making</li>
-      <li>Building Information Systems</li>
-      <li>Managing Global Systems</li>
-    </ul>
-
-    <h2>References</h2>
-    <ul>
-      <li><em>Management Information Systems: Managing the Digital Firm</em> - K. C. Laudon, J. P. Laudon</li>
-      <li><em>Essentials of MIS</em> - K. C. Laudon, J. P. Laudon</li>
-    </ul>
-
-    <h2>Evaluation Criteria</h2>
-    <div class="callout callout-yellow">
-      <span class="callout-label">Remember</span>
-      <p><strong>80% attendance</strong> is mandatory to be eligible for the final assessment.</p>
-    </div>
-    <ul>
-      <li><strong>Continuous Assessment (CA)</strong> - 30% of the total grade (Assignments 20%, Quizzes 10%)</li>
-      <li><strong>Final Assessment (FA)</strong> - 70% of the total grade, covering Learning Outcomes 1–4 (Theory 70%)</li>
-    </ul>
-
-    <div class="divider"></div>
-
     <h2>Information Systems in Global Business Today</h2>
     <p>This chapter looks at what an information system is, how it works, and why it matters for running and managing a business today.</p>
 
