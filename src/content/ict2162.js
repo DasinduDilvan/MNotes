@@ -4078,9 +4078,1655 @@ Networked                                       x                            X
       'Tip: Internet penetration varies significantly by country, so infrastructure realities must be checked before deploying global systems',
     ],
   },
-}
+},
 
+{
+  id: 11,
+  title: 'IT Infrastructure and Emerging Technologies',
+  content: `
+    <span class="lesson-badge">LESSON 11</span>
+    <h1>IT Infrastructure and Emerging Technologies</h1>
+    <div class="meta-info">ICT2162 <span>•</span> 40 min read</div>
 
+    <p>Every modern organization needs <strong>IT infrastructure</strong> to run its business. This lesson explains how IT infrastructure grew over time, what it is made of, and how managers decide what to invest in.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Learning Objectives</span>
+      <ol>
+        <li>What is IT infrastructure, and what are the stages and drivers of IT infrastructure evolution?</li>
+        <li>What are the components of IT infrastructure?</li>
+        <li>What are the current trends in computer hardware platforms?</li>
+        <li>What are the current computer software platforms and trends?</li>
+        <li>What are the challenges of managing IT infrastructure, and what are the management solutions?</li>
+      </ol>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>What Is IT Infrastructure?</h2>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>IT infrastructure</strong> is a set of <strong>physical devices</strong>, <strong>software applications</strong> and <strong>firmwide services</strong> that are required to operate the entire enterprise.</p>
+    </div>
+
+    <h3>Examples of IT Infrastructure</h3>
+    <ul>
+      <li><strong>Computers and servers</strong></li>
+      <li><strong>Operating systems</strong> and business applications</li>
+      <li><strong>Networks</strong> and Internet connections</li>
+      <li><strong>Databases</strong> and cloud computing services</li>
+      <li>IT support, consulting, and employee training</li>
+    </ul>
+
+    <h3>How IT Infrastructure Fits with the Business</h3>
+    <p>The lecture diagram shows that <strong>Business Strategy</strong>, <strong>IT Strategy</strong> and <strong>Information Technology</strong> work together to shape the firm's <strong>IT Services and Infrastructure</strong>. These services then support customers, suppliers and the enterprise.</p>
+
+    <pre><code>Business Strategy ----+
+IT Strategy ----------+--> IT Services and
+Information Technology+    Infrastructure
+                                |
+                                v
+                        Customer Services
+                        Supplier Services
+                        Enterprise Services</code></pre>
+
+    <h3>Firmwide Services</h3>
+    <p>IT infrastructure provides these <strong>nine firmwide services</strong>:</p>
+    <ol>
+      <li><strong>Computing platforms</strong></li>
+      <li><strong>Telecommunications services</strong></li>
+      <li><strong>Data management services</strong></li>
+      <li><strong>Application software services</strong></li>
+      <li><strong>Physical facilities management services</strong></li>
+      <li><strong>IT management services</strong></li>
+      <li><strong>IT standards services</strong></li>
+      <li><strong>IT education services</strong></li>
+      <li><strong>IT research and development services</strong></li>
+    </ol>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>There are <strong>9 firmwide services</strong>. Examiners may ask you to list or name them.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Evolution of IT Infrastructure</h2>
+    <p>IT infrastructure has changed through <strong>five eras</strong>. Each era has its own specialty.</p>
+
+    <h3>1. General Purpose Mainframe and Minicomputer Era (1959–Present)</h3>
+    <ul>
+      <li><strong>Specialty:</strong> Centralized computing.</li>
+      <li><strong>Minicomputers</strong> later enabled departmental computing.</li>
+      <li>In the diagram, one central mainframe is connected to many terminals.</li>
+    </ul>
+
+    <h3>2. Personal Computer Era (1981–Present)</h3>
+    <ul>
+      <li><strong>Specialty:</strong> Individual computing using personal computers and productivity software.</li>
+      <li>In the diagram, each PC works on its own.</li>
+    </ul>
+
+    <h3>3. Client/Server Era (1983–Present)</h3>
+    <ul>
+      <li><strong>Specialty:</strong> Computing tasks are distributed between <strong>client computers</strong> and <strong>servers</strong>.</li>
+    </ul>
+
+    <h3>4. Enterprise Computing Era (1992–Present)</h3>
+    <ul>
+      <li><strong>Specialty:</strong> Integration of networks, applications, and hardware across the <strong>entire organization</strong>.</li>
+      <li>In the diagram, several client/server groups are connected through an enterprise server and the Internet.</li>
+    </ul>
+
+    <h3>5. Cloud and Mobile Computing Era (2000–Present)</h3>
+    <ul>
+      <li><strong>Specialty:</strong> On-demand computing resources and applications that can be used over the <strong>Internet</strong> from connected devices.</li>
+      <li>In the diagram, laptops, desktops, tablets and phones connect through the Internet to hardware, software and services in the cloud.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Learn the five eras in order, with their start years:</p>
+      <pre><code>1959  Mainframe / Minicomputer
+1981  Personal Computer
+1983  Client/Server
+1992  Enterprise Computing
+2000  Cloud and Mobile Computing</code></pre>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Technology Drivers of Infrastructure Evolution</h2>
+    <p>Several technology changes pushed IT infrastructure to evolve:</p>
+    <ul>
+      <li>Developments in <strong>computer processing, memory chips, storage devices, telecommunications, networking, and software</strong>.</li>
+      <li><strong>Increased computing power</strong> and <strong>reduced computing costs</strong>.</li>
+      <li><strong>Continuous improvements</strong> in hardware and software technologies.</li>
+    </ul>
+
+    <p>The lecture groups these into <strong>five drivers</strong>:</p>
+    <ol>
+      <li><strong>Moore's Law</strong> and Microprocessing Power</li>
+      <li>The <strong>Law of Mass Digital Storage</strong></li>
+      <li><strong>Metcalfe's Law</strong> and Network Economics</li>
+      <li><strong>Declining Communications Costs</strong> and the Internet</li>
+      <li><strong>Standards</strong> and Network Effects</li>
+    </ol>
+
+    <h3>1. Moore's Law and Microprocessing Power</h3>
+    <ul>
+      <li>More <strong>transistors</strong> on a chip enable greater processing capabilities.</li>
+      <li>Computing power <strong>increases</strong> while computing costs <strong>decrease</strong>.</li>
+    </ul>
+    <p>Packing more transistors into less space has caused big drops in their cost. It has also lowered the cost of the products that use them.</p>
+    <p>The lecture charts show two things. Processing power (in <strong>MIPS</strong>, up to 250,000) and the number of transistors (up to 5 billion) both grow from 1970 to 2016. The price of a transistor falls steeply from 1965 (when Moore's Law begins) to 2016.</p>
+
+    <h3>Three Variations of Moore's Law</h3>
+    <ol>
+      <li>The power of microprocessors <strong>doubles every 18 months</strong>.</li>
+      <li>Computing power <strong>doubles every 18 months</strong>.</li>
+      <li>The price of computing <strong>falls by half every 18 months</strong>.</li>
+    </ol>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>All three variations of Moore's Law use the same time period: <strong>18 months</strong>.</p>
+    </div>
+
+    <h3>Future Limitations of Moore's Law</h3>
+    <ul>
+      <li>The main future limitation is the <strong>size of transistors</strong>. There is a limit to how small they can be made.</li>
+    </ul>
+
+    <h3>2. The Law of Mass Digital Storage</h3>
+    <ul>
+      <li>The amount of digital information is roughly <strong>doubling every year</strong>.</li>
+      <li>The cost of storing digital information is falling at an <strong>exponential rate of 100 percent a year</strong>.</li>
+    </ul>
+    <p>The lecture chart shows how many gigabytes you can buy per dollar. It stays low for decades and then rises very steeply after about 2005.</p>
+
+    <div class="callout callout-green">
+      <span class="callout-label">Example</span>
+      <p>Cloud storage services like <strong>Google Drive</strong> provide <strong>100 gigabytes</strong> of storage for <strong>$1.99 per month</strong>.</p>
+    </div>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do not mix up the two laws. <strong>Moore's Law</strong> is about processing power and computing cost (18 months). The <strong>Law of Mass Digital Storage</strong> is about the amount of digital information and storage cost (every year).</p>
+    </div>
+
+    <h3>3. Metcalfe's Law and Network Economics</h3>
+    <p>This driver is listed in your slides, but it is not explained there.</p>
+    <div class="callout callout-blue">
+      <span class="callout-label">Note (added for clarity)</span>
+      <p>Standard textbook idea (Laudon and Laudon): the <strong>value or power of a network grows exponentially</strong> as more members join it. More users make the network more useful, and this helps explain the fast growth of the Internet.</p>
+    </div>
+
+    <h3>4. Declining Communications Costs and the Internet</h3>
+    <ul>
+      <li>There has been a rapid <strong>decline in the cost of communication</strong> and <strong>exponential growth in the size of the Internet</strong>.</li>
+      <li>As communication costs reduced, the <strong>use of communication and computing facilities increased</strong>.</li>
+    </ul>
+    <div class="callout callout-green">
+      <span class="callout-label">Example</span>
+      <p><strong>Verizon FiOS</strong> (fiber to the home) delivers 1 kilobit of data for a retail price of less than 2 thousandths of a penny. The lecture chart shows the cost per kilobit dropping sharply from the mid-1990s and staying close to zero from 1999.</p>
+    </div>
+
+    <h3>5. Standards and Network Effects</h3>
+    <ul>
+      <li>These are <strong>agreements among manufacturers</strong> and <strong>widespread consumer acceptance</strong> of technology standards.</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Technology standards</strong> are specifications that establish the <strong>compatibility of products</strong> and the <strong>ability to communicate in a network</strong>.</p>
+    </div>
+
+    <p>Why standards matter:</p>
+    <ul>
+      <li>Technology standards create <strong>economies of scale</strong>.</li>
+      <li>Manufacturers can focus on producing products that follow a <strong>common standard</strong>.</li>
+      <li>Economies of scale help <strong>reduce product prices</strong>.</li>
+      <li>Without these benefits, computing technologies would be <strong>more expensive</strong>.</li>
+    </ul>
+
+    <h3>Important Standards in Computing</h3>
+    <ul>
+      <li><strong>ASCII</strong> (American Standard Code for Information Interchange) — 1958</li>
+      <li><strong>COBOL</strong> (Common Business Oriented Language) — 1959</li>
+      <li><strong>Unix</strong> — 1969–1975</li>
+      <li><strong>TCP/IP</strong> (Transmission Control Protocol/Internet Protocol) — 1974</li>
+      <li><strong>Ethernet</strong> — 1973</li>
+      <li><strong>IBM/Microsoft/Intel Personal Computer</strong> — 1981</li>
+      <li><strong>World Wide Web</strong> — 1989–1993</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Be ready to match each standard with its year. For example, <strong>ASCII = 1958</strong>, <strong>TCP/IP = 1974</strong>, <strong>Ethernet = 1973</strong>, <strong>World Wide Web = 1989–1993</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Components of IT Infrastructure</h2>
+    <p>In the lecture, this topic was given as a <strong>group work</strong> activity: "What are the components of IT infrastructure?" The diagram below shows the <strong>IT Infrastructure Ecosystem</strong> with example vendors.</p>
+
+    <pre><code>IT INFRASTRUCTURE ECOSYSTEM
+
+Computer Hardware Platforms
+  Dell, IBM, Oracle Sun, HP, Apple
+
+Operating Systems Platforms
+  Microsoft Windows, Unix, Linux,
+  Mac OS X, Chrome, Android, iOS
+
+Enterprise Software Applications
+(including middleware)
+  SAP, Oracle, Microsoft, IBM
+
+Networking/Telecommunications
+  Microsoft Windows Server, Linux,
+  Cisco, AT&amp;T, Verizon
+
+Consultants and System Integrators
+  IBM, HP, Accenture
+
+Data Management and Storage
+  IBM DB2, Oracle, SQL Server, Sybase,
+  MySQL, EMC, Apache, Hadoop
+
+Internet Platforms
+  Apache, Microsoft IIS, .NET,
+  Unix, Cisco, Java</code></pre>
+
+    <p>The slides explain six of these components in detail:</p>
+
+    <h3>1. Computer Hardware Platforms</h3>
+    <ul>
+      <li>Includes <strong>mainframes, servers, PCs, tablets, and smartphones</strong>.</li>
+      <li>Provides the <strong>hardware foundation</strong> for corporate and personal computing.</li>
+      <li><strong>Intel</strong> and <strong>AMD</strong> are major processor manufacturers for traditional computers.</li>
+      <li>Mobile computing devices have introduced a <strong>second hardware platform</strong>.</li>
+    </ul>
+
+    <h3>2. Operating System Platforms</h3>
+    <ul>
+      <li><strong>Operating systems</strong> manage computer resources and activities.</li>
+    </ul>
+    <p>The lecture covers these operating system topics:</p>
+    <ul>
+      <li>Server Operating Systems</li>
+      <li>Client Operating Systems</li>
+      <li>Chrome OS</li>
+      <li>Mobile Operating Systems</li>
+      <li>Touch and Multitouch Interfaces</li>
+    </ul>
+
+    <h3>3. Enterprise Software Applications</h3>
+    <ul>
+      <li><strong>Enterprise application software</strong> supports the business operations of organizations.</li>
+    </ul>
+    <p>Major providers:</p>
+    <ul>
+      <li>The largest providers of enterprise application software — <strong>SAP</strong> and <strong>Oracle</strong>.</li>
+      <li><strong>Middleware software</strong> (used to achieve firmwide integration) — <strong>IBM</strong> and <strong>Oracle</strong>.</li>
+      <li>Small and medium-sized businesses — <strong>Microsoft</strong>.</li>
+    </ul>
+
+    <h3>4. Data Management and Storage</h3>
+    <h3>Enterprise Database Management Software</h3>
+    <ul>
+      <li><strong>Organizes and manages</strong> an organization's data.</li>
+      <li>Allows data to be <strong>accessed and used efficiently</strong>.</li>
+    </ul>
+    <p><strong>Leading database software providers:</strong></p>
+    <ul>
+      <li><strong>IBM</strong> — DB2</li>
+      <li><strong>Oracle</strong></li>
+      <li><strong>Microsoft</strong> — SQL Server</li>
+      <li><strong>Sybase</strong> — Adaptive Server Enterprise</li>
+    </ul>
+    <p><strong>Other data management technologies:</strong></p>
+    <ul>
+      <li><strong>MySQL</strong> — an open-source relational database product, now owned by Oracle Corporation.</li>
+      <li><strong>Apache Hadoop</strong> — an open-source software framework for managing very large datasets.</li>
+    </ul>
+    <p><strong>Physical data storage:</strong> <strong>EMC Corporation</strong>.</p>
+
+    <h3>5. Networking/Telecommunications Platforms</h3>
+    <p><strong>Network Operating Systems</strong></p>
+    <ul>
+      <li><strong>Windows Server</strong> — predominantly used for LANs.</li>
+      <li><strong>Linux and Unix</strong> — also used for LANs.</li>
+      <li><strong>Unix variants</strong> — commonly used in large enterprise-wide networks.</li>
+    </ul>
+    <p><strong>Network Protocols</strong></p>
+    <ul>
+      <li><strong>TCP/IP</strong> is the standard protocol for LANs and enterprise WANs.</li>
+    </ul>
+    <p><strong>Networking Hardware Providers</strong></p>
+    <ul>
+      <li><strong>Cisco</strong></li>
+      <li><strong>Juniper Networks</strong></li>
+    </ul>
+    <p><strong>Telecommunications Service Providers</strong></p>
+    <ul>
+      <li><strong>AT&amp;T</strong> and <strong>Verizon</strong>.</li>
+      <li>The market is expanding with cellular wireless, high-speed Internet, and Internet telephone services.</li>
+    </ul>
+
+    <h3>6. Consulting and System Integration Services</h3>
+    <p>Setting up new IT infrastructure may require:</p>
+    <ul>
+      <li>Changes to <strong>business processes and procedures</strong>.</li>
+      <li>Staff <strong>training and education</strong>.</li>
+      <li><strong>Software integration</strong>.</li>
+    </ul>
+    <p><strong>Leading consulting firms:</strong> Accenture, IBM Global Business Services, HP, Infosys, Wipro Technologies.</p>
+    <p><strong>Software integration</strong> means:</p>
+    <ul>
+      <li>New IT infrastructure works with existing <strong>legacy systems</strong>.</li>
+      <li>New infrastructure components work together.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Provider quick list:</p>
+      <ul>
+        <li><strong>Enterprise applications:</strong> SAP, Oracle</li>
+        <li><strong>Middleware:</strong> IBM, Oracle</li>
+        <li><strong>Small and medium businesses:</strong> Microsoft</li>
+        <li><strong>Databases:</strong> IBM DB2, Oracle, Microsoft SQL Server, Sybase ASE</li>
+        <li><strong>Physical storage:</strong> EMC</li>
+        <li><strong>Networking hardware:</strong> Cisco, Juniper Networks</li>
+        <li><strong>Telecom services:</strong> AT&amp;T, Verizon</li>
+        <li><strong>Consulting:</strong> Accenture, IBM Global Business Services, HP, Infosys, Wipro</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Current Trends in Computer Hardware Platforms</h2>
+    <ul>
+      <li>The <strong>Mobile Digital Platform</strong></li>
+      <li><strong>Consumerization of IT</strong> and <strong>BYOD</strong></li>
+      <li><strong>Quantum Computing</strong></li>
+      <li><strong>Virtualization</strong></li>
+      <li><strong>Cloud Computing</strong></li>
+      <li><strong>Green Computing</strong></li>
+      <li><strong>High performance and power saving processors</strong></li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Quick explanations (added for clarity)</span>
+      <p>Your slides only list these trends. Here are short explanations:</p>
+      <ul>
+        <li><strong>Mobile digital platform</strong> — mobile devices such as smartphones and tablets used for computing.</li>
+        <li><strong>Consumerization of IT</strong> — new technology starts with consumers and then spreads into businesses.</li>
+        <li><strong>BYOD</strong> (Bring Your Own Device) — employees use their own personal devices for work.</li>
+        <li><strong>Quantum computing</strong> — uses the principles of quantum physics to process data in new ways.</li>
+        <li><strong>Virtualization</strong> — making computing resources usable without being limited by their physical setup.</li>
+        <li><strong>Green computing</strong> — making, using and disposing of computers in ways that reduce harm to the environment.</li>
+      </ul>
+    </div>
+
+    <h3>Cloud Computing</h3>
+    <p>The lecture diagram of the <strong>Cloud Computing Platform</strong> shows three layers of services in the cloud. Servers, laptops, desktops, iPhones and tablet computers connect to these services.</p>
+
+    <pre><code>CLOUD COMPUTING PLATFORM
+
+Platform Services
+  Block Storage
+  Communication Networks
+  Identity Management
+  Content Servers
+
+Application Services
+  Content Management
+  Enterprise Software
+  Collaboration Environments
+  Process Management
+
+Infrastructure Services
+  Computing Resource Management
+  Network Management
+  Storage Management
+
+Connected devices: Servers, Laptops,
+Desktops, iPhone, Tablet Computers</code></pre>
+
+    <h3>Characteristics of Cloud Computing</h3>
+    <ul>
+      <li><strong>On-demand self-service</strong> — users can get computing resources themselves, without help from the provider.</li>
+      <li><strong>Ubiquitous network access</strong> — services can be used over the network from many types of devices.</li>
+      <li><strong>Location-independent resource pooling</strong> — the provider shares its resources among many customers, and the exact location does not matter to the user.</li>
+      <li><strong>Rapid elasticity</strong> — resources can be quickly increased or decreased as needed.</li>
+      <li><strong>Measured service</strong> — usage is measured, so customers pay for what they use.</li>
+    </ul>
+
+    <h3>Types of Cloud Services</h3>
+    <ol>
+      <li><strong>Infrastructure as a Service (IaaS)</strong></li>
+      <li><strong>Software as a Service (SaaS)</strong></li>
+      <li><strong>Platform as a Service (PaaS)</strong></li>
+    </ol>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Simple explanation (added for clarity)</span>
+      <ul>
+        <li><strong>IaaS</strong> — you rent basic computing resources such as processing, storage and networking.</li>
+        <li><strong>SaaS</strong> — you use software that the provider hosts and delivers over the Internet.</li>
+        <li><strong>PaaS</strong> — you use the provider's infrastructure and tools to build your own applications.</li>
+      </ul>
+    </div>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Cloud computing has <strong>5 characteristics</strong> (on-demand self-service, ubiquitous network access, location-independent resource pooling, rapid elasticity, measured service) and <strong>3 service types</strong> (IaaS, SaaS, PaaS).</p>
+    </div>
+
+    <h3>Cloud Computing Models</h3>
+
+    <h3>Public Cloud</h3>
+    <ul>
+      <li><strong>Description:</strong> A third-party service offering computing, storage, and software services to multiple customers, available to the public.</li>
+      <li><strong>Managed by:</strong> Third-party service providers.</li>
+      <li><strong>Used by:</strong>
+        <ul>
+          <li>Companies without major privacy concerns</li>
+          <li>Companies seeking pay-as-you-go IT services</li>
+          <li>Companies lacking IT resources and expertise</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Private Cloud</h3>
+    <ul>
+      <li><strong>Description:</strong> Cloud infrastructure operated solely for a single organization and hosted either internally or externally.</li>
+      <li><strong>Managed by:</strong> In-house IT or a private third-party host.</li>
+      <li><strong>Used by:</strong>
+        <ul>
+          <li>Companies with stringent privacy and security requirements</li>
+          <li>Companies that must have control over data sovereignty</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Hybrid Cloud</h3>
+    <ul>
+      <li><strong>Description:</strong> A combination of private and public cloud services that remain separate entities.</li>
+      <li><strong>Managed by:</strong> In-house IT, a private host, and third-party providers.</li>
+      <li><strong>Used by:</strong>
+        <ul>
+          <li>Companies that need some in-house control of IT but are also willing to assign part of their IT infrastructure to a public cloud</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Exam trap: match each cloud model to the right need. <strong>Private cloud</strong> = strict privacy and security, and control over data. <strong>Public cloud</strong> = pay-as-you-go and no major privacy concerns. <strong>Hybrid cloud</strong> = some in-house control plus some public cloud.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Current Computer Software Platforms and Trends</h2>
+    <p>There are <strong>four major themes</strong> in how modern software platforms are developing:</p>
+    <ol>
+      <li><strong>Linux and open-source software</strong></li>
+      <li><strong>Java, HTML, and HTML5</strong></li>
+      <li><strong>Web services and service-oriented architecture (SOA)</strong></li>
+      <li><strong>Software outsourcing and cloud services</strong></li>
+    </ol>
+
+    <h3>1. Linux and Open-Source Software</h3>
+    <ul>
+      <li>Developed by a community of <strong>several hundred thousand programmers</strong> around the world.</li>
+      <li>Its <strong>source code</strong> can be accessed and modified according to its license.</li>
+      <li>Users can <strong>redistribute</strong> the software under the license terms.</li>
+      <li>Can support different hardware and operating-system platforms.</li>
+    </ul>
+    <p><strong>Examples:</strong> Linux operating system, Apache HTTP Server, Mozilla Firefox, Apache OpenOffice.</p>
+
+    <h3>Linux</h3>
+    <ul>
+      <li><strong>Linux</strong> is an open-source operating system related to <strong>Unix</strong>.</li>
+      <li>Available in <strong>free versions</strong> and <strong>commercial versions</strong> with vendor support.</li>
+    </ul>
+    <p><strong>Widely used in:</strong></p>
+    <ul>
+      <li>Servers</li>
+      <li>Mainframe computers</li>
+      <li>Supercomputers</li>
+      <li>Mobile and consumer devices</li>
+    </ul>
+    <p><strong>Business benefits:</strong></p>
+    <ul>
+      <li><strong>Cost reduction</strong></li>
+      <li><strong>Reliability and resilience</strong></li>
+      <li><strong>Compatibility</strong> with different hardware platforms</li>
+    </ul>
+
+    <h3>2. Software for the Web: Java, HTML, and HTML5</h3>
+    <p>Three important technologies are used in web development:</p>
+
+    <h3>Java</h3>
+    <ul>
+      <li>A programming language designed to run across <strong>different computing environments</strong>.</li>
+      <li>An <strong>object-oriented</strong> programming language.</li>
+      <li>Supports the development of web and enterprise applications.</li>
+      <li>Used across different types of computing devices.</li>
+    </ul>
+
+    <h3>HTML</h3>
+    <ul>
+      <li>A <strong>markup language</strong> used to structure webpage content and create links.</li>
+    </ul>
+
+    <h3>HTML5</h3>
+    <ul>
+      <li>An evolution of HTML that supports <strong>multimedia content</strong> directly in webpages.</li>
+      <li>Supports webpages across desktop and mobile devices.</li>
+      <li>Supports <strong>offline data storage</strong> for certain web applications.</li>
+    </ul>
+    <p>Other web application development languages include <strong>Python</strong> and <strong>Ruby</strong>.</p>
+
+    <h3>3. Web Services and Service-Oriented Architecture (SOA)</h3>
+    <ul>
+      <li><strong>Web services</strong> allow different software applications to <strong>exchange information</strong>.</li>
+      <li>They use <strong>common communication standards</strong>.</li>
+      <li><strong>XML</strong> provides a standard way to describe and exchange data.</li>
+      <li><strong>SOA</strong> is a collection of independent services that communicate to perform business tasks.</li>
+      <li>Web services reduce the need to build <strong>separate custom connections</strong> between systems.</li>
+    </ul>
+
+    <h3>XML Example</h3>
+    <p>XML describes data in a standard way that different systems can understand:</p>
+    <pre><code>PLAIN ENGLISH   XML
+Subcompact      &lt;AUTOMOBILETYPE="Subcompact"&gt;
+4 passenger     &lt;PASSENGERUNIT="PASS"&gt;4&lt;/PASSENGER&gt;
+$16,800         &lt;PRICE CURRENCY="USD"&gt;$16,800&lt;/PRICE&gt;</code></pre>
+
+    <h3>Example: How Dollar Rent A Car Uses Web Services</h3>
+    <p><strong>Southwest Airlines</strong> lets customers book a car from <strong>Dollar Rent A Car</strong> while booking a flight on its website. Web services act like a <strong>translator</strong> between the two systems. They convert information into a format each system can understand.</p>
+    <p>This means a company does not need to build a separate connection for every business partner. It saves <strong>time and development costs</strong>.</p>
+
+    <pre><code>Southwest Airlines Systems
+Tour Operator's Systems
+Travel Reservation System
+Wireless Web Site
+Future Business Partners' Systems
+        |
+        | (two-way)
+        v
+   WEB SERVICES
+        |
+        | (two-way)
+        v
+Dollar Rent A Car Systems:
+  Server &lt;--&gt; Legacy Reservation System</code></pre>
+
+    <h3>4. Software Outsourcing and Cloud Services</h3>
+    <p>Organizations get software from outside sources in three ways:</p>
+    <ul>
+      <li><strong>Commercial software packages</strong></li>
+      <li><strong>Outsourcing custom software development</strong></li>
+      <li><strong>Cloud-based software services and tools</strong></li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definitions</span>
+      <ul>
+        <li><strong>Software packages</strong> — ready-made programs for common business activities. Organizations buy and use them instead of building everything from scratch.</li>
+        <li><strong>Software outsourcing</strong> — an organization hires an external company or vendor to develop or maintain software.</li>
+        <li><strong>Cloud-based software services</strong> — organizations use software and tools over a network or the Internet instead of installing and managing all the software themselves.</li>
+      </ul>
+    </div>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The <strong>four software themes</strong>: (1) Linux and open-source, (2) Java, HTML and HTML5, (3) Web services and SOA, (4) Software outsourcing and cloud services.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Challenges of Managing IT Infrastructure and Management Solutions</h2>
+
+    <h3>1. Challenges of Managing IT Infrastructure</h3>
+    <ul>
+      <li>Business <strong>growth</strong> increases IT resource requirements.</li>
+      <li>Business <strong>decline</strong> may leave unused IT resources.</li>
+      <li><strong>Fixed-cost investments</strong> can limit flexibility.</li>
+      <li>New applications and business changes affect workloads.</li>
+      <li>Infrastructure must be <strong>scalable</strong>.
+        <ul>
+          <li><strong>Scalability</strong> is the ability of a system to expand to support more users.</li>
+          <li>The system should keep operating without breaking down.</li>
+          <li><strong>Capacity planning</strong> must consider future workloads.</li>
+          <li>New applications and changes in business volume affect capacity requirements.</li>
+        </ul>
+      </li>
+      <li><strong>Mobile and cloud computing</strong> require new management policies.</li>
+    </ul>
+
+    <h3>2. Management and Governance</h3>
+    <p>Organizations must decide:</p>
+    <ul>
+      <li>Who <strong>controls and manages</strong> IT infrastructure.</li>
+      <li>Whether IT decisions are <strong>centralized or decentralized</strong>.</li>
+      <li>The responsibilities of <strong>central IT management</strong> and <strong>individual departments</strong>.</li>
+      <li>How <strong>infrastructure costs are allocated</strong> among departments.</li>
+      <li>Which approach best meets the organization's needs.</li>
+    </ul>
+
+    <h3>3. Making Wise Infrastructure Investments</h3>
+    <ul>
+      <li>IT infrastructure requires a <strong>significant investment</strong>.</li>
+      <li><strong>Excessive</strong> investment can leave resources unused.</li>
+      <li><strong>Insufficient</strong> investment can reduce service quality.</li>
+      <li>Decide whether to <strong>purchase or rent</strong> IT resources.</li>
+      <li>Evaluate <strong>cloud computing</strong> as an alternative.</li>
+      <li>Consider <strong>costs, security, flexibility, and business requirements</strong>.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Investing too much and investing too little are <strong>both problems</strong>. Too much leaves resources unused. Too little lowers service quality.</p>
+    </div>
+
+    <h3>Total Cost of Ownership (TCO)</h3>
+    <p><strong>TCO</strong> looks at all the costs of owning IT infrastructure, not just the purchase price. The lecture lists these cost components:</p>
+    <ul>
+      <li><strong>Hardware acquisition</strong> — purchase price of computer hardware, including computers, terminals, storage, and printers.</li>
+      <li><strong>Software acquisition</strong> — purchase or license of software for each user.</li>
+      <li><strong>Installation</strong> — cost to install computers and software.</li>
+      <li><strong>Training</strong> — cost to train information systems specialists and end users.</li>
+      <li><strong>Support</strong> — cost of ongoing technical support, help desks, and so forth.</li>
+      <li><strong>Maintenance</strong> — cost to upgrade the hardware and software.</li>
+      <li><strong>Infrastructure</strong> — cost to acquire, maintain, and support related infrastructure such as networks and specialized equipment (including storage backup units).</li>
+      <li><strong>Downtime</strong> — cost of lost productivity if hardware or software failures make the system unavailable for processing and user tasks.</li>
+      <li><strong>Space and energy</strong> — real estate and utility costs for housing and powering the technology.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>TCO has <strong>9 cost components</strong>: hardware acquisition, software acquisition, installation, training, support, maintenance, infrastructure, downtime, space and energy.</p>
+    </div>
+
+    <h3>Reducing Total Cost of Ownership</h3>
+    <ul>
+      <li><strong>Centralization and standardization</strong> of hardware and software resources.</li>
+      <li>Reduce the size of the <strong>information systems staff</strong> needed to support the infrastructure.</li>
+      <li>Use a <strong>centralized infrastructure</strong>.</li>
+    </ul>
+
+    <h3>Competitive Forces Model for IT Infrastructure Investment</h3>
+    <p>This model helps managers decide how much to invest in IT infrastructure. It has <strong>six forces</strong>, shown around the firm's IT services and infrastructure in the lecture diagram:</p>
+    <ol>
+      <li><strong>Market demand</strong> for your firm's customer services, supplier services, and enterprise services</li>
+      <li>Your firm's <strong>business strategy</strong></li>
+      <li>Your firm's <strong>IT strategy, infrastructure, and cost</strong></li>
+      <li><strong>Information technology</strong></li>
+      <li><strong>Competitor firms' IT services</strong></li>
+      <li><strong>Competitor firms' IT infrastructure investments</strong></li>
+    </ol>
+    <p>In the diagram, forces 2, 3 and 4 are the <strong>internal factors</strong>. Forces 1, 5 and 6 are the <strong>external market factors</strong>.</p>
+
+    <h3>Market Demand and Business Strategy</h3>
+    <ul>
+      <li>Identify services provided to <strong>customers, suppliers, and employees</strong>.</li>
+      <li>Collect <strong>feedback</strong> about current services.</li>
+      <li>Identify <strong>performance problems</strong> and unmet needs.</li>
+      <li>Review <strong>long-term business plans</strong>.</li>
+      <li>Identify future services and capabilities.</li>
+      <li><strong>Align IT investments</strong> with strategic goals.</li>
+    </ul>
+
+    <h3>IT Strategy and Technology Assessment</h3>
+    <ul>
+      <li>Review IT plans and infrastructure requirements.</li>
+      <li><strong>Align IT plans</strong> with business strategy.</li>
+      <li>Calculate total infrastructure costs using <strong>TCO analysis</strong>.</li>
+      <li>Evaluate the <strong>reliability and maturity</strong> of technologies.</li>
+      <li>Avoid unnecessary investment in <strong>expensive, experimental technologies</strong>.</li>
+      <li>Consider established standards and available suppliers.</li>
+      <li>Avoid <strong>delaying</strong> necessary technology investments.</li>
+    </ul>
+
+    <h3>Competitor Services and IT Infrastructure Investments</h3>
+    <ul>
+      <li>Examine the IT services provided by <strong>competitors</strong>.</li>
+      <li>Compare <strong>service quality and performance</strong>.</li>
+      <li><strong>Benchmark</strong> IT infrastructure spending.</li>
+      <li>Identify opportunities to improve services.</li>
+      <li>Consider <strong>cost-effective ways</strong> to gain a competitive advantage.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p><strong>Spending more than competitors does not guarantee better results.</strong> This is a common exam point.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <p><em>Reference: Laudon, K. and Laudon, J. Management Information Systems: Managing the Digital Firm, Fifteenth Edition, Global Edition.</em></p>
+  `,
+  summary: {
+    topic: 'IT Infrastructure and Emerging Technologies',
+    subTopics: [
+      'What Is IT Infrastructure?',
+      'Firmwide Services',
+      'Evolution of IT Infrastructure',
+      'Technology Drivers of Infrastructure Evolution',
+      'Moore\'s Law and Microprocessing Power',
+      'The Law of Mass Digital Storage',
+      'Metcalfe\'s Law and Network Economics',
+      'Declining Communications Costs and the Internet',
+      'Standards and Network Effects',
+      'Components of IT Infrastructure',
+      'Computer Hardware Platforms',
+      'Operating System Platforms',
+      'Enterprise Software Applications',
+      'Data Management and Storage',
+      'Networking/Telecommunications Platforms',
+      'Consulting and System Integration Services',
+      'Current Trends in Computer Hardware Platforms',
+      'Cloud Computing',
+      'Cloud Computing Models',
+      'Current Computer Software Platforms and Trends',
+      'Linux and Open-Source Software',
+      'Software for the Web: Java, HTML, and HTML5',
+      'Web Services and Service-Oriented Architecture (SOA)',
+      'Software Outsourcing and Cloud Services',
+      'Challenges of Managing IT Infrastructure',
+      'Management and Governance',
+      'Making Wise Infrastructure Investments',
+      'Total Cost of Ownership (TCO)',
+      'Reducing Total Cost of Ownership',
+      'Competitive Forces Model for IT Infrastructure Investment',
+    ],
+    definitions: [
+      { term: 'IT Infrastructure', meaning: 'A set of physical devices, software applications and firmwide services required to operate the entire enterprise.' },
+      { term: 'Moore\'s Law', meaning: 'Microprocessor power and computing power double every 18 months, and the price of computing falls by half every 18 months.' },
+      { term: 'Law of Mass Digital Storage', meaning: 'The amount of digital information roughly doubles every year, while the cost of storing it falls at an exponential rate of 100 percent a year.' },
+      { term: 'Metcalfe\'s Law', meaning: 'The value or power of a network grows exponentially as more members join it (added from the textbook, not explained in the slides).' },
+      { term: 'Technology Standards', meaning: 'Specifications that establish the compatibility of products and the ability to communicate in a network.' },
+      { term: 'Economies of Scale', meaning: 'Cost savings that come when manufacturers produce many products to a common standard, which helps reduce prices.' },
+      { term: 'Operating System', meaning: 'Software that manages computer resources and activities.' },
+      { term: 'Enterprise Application Software', meaning: 'Software that supports the business operations of organizations (main providers: SAP and Oracle).' },
+      { term: 'Middleware', meaning: 'Software used to achieve firmwide integration of enterprise applications (providers: IBM and Oracle).' },
+      { term: 'Enterprise Database Management Software', meaning: 'Software that organizes and manages an organization\'s data so it can be accessed and used efficiently.' },
+      { term: 'MySQL', meaning: 'An open-source relational database product, now owned by Oracle Corporation.' },
+      { term: 'Apache Hadoop', meaning: 'An open-source software framework for managing very large datasets.' },
+      { term: 'TCP/IP', meaning: 'The standard network protocol for LANs and enterprise WANs.' },
+      { term: 'Software Integration', meaning: 'Making sure new IT infrastructure works with existing legacy systems and that new components work together.' },
+      { term: 'Consumerization of IT', meaning: 'New technology that starts in the consumer market and then spreads into businesses (added explanation).' },
+      { term: 'BYOD', meaning: 'Bring Your Own Device: employees use their own personal devices for work (added explanation).' },
+      { term: 'Quantum Computing', meaning: 'Computing that uses the principles of quantum physics to process data (added explanation).' },
+      { term: 'Virtualization', meaning: 'Making computing resources usable without being limited by their physical setup (added explanation).' },
+      { term: 'Green Computing', meaning: 'Making, using and disposing of computers in ways that reduce harm to the environment (added explanation).' },
+      { term: 'Cloud Computing', meaning: 'On-demand computing resources and applications accessed over the Internet from connected devices.' },
+      { term: 'IaaS', meaning: 'Infrastructure as a Service: basic computing resources such as processing, storage and networking provided over the cloud (added explanation).' },
+      { term: 'SaaS', meaning: 'Software as a Service: software hosted by a provider and used over the Internet (added explanation).' },
+      { term: 'PaaS', meaning: 'Platform as a Service: provider infrastructure and tools used to build your own applications (added explanation).' },
+      { term: 'Public Cloud', meaning: 'A third-party cloud service offering computing, storage and software to multiple customers and available to the public.' },
+      { term: 'Private Cloud', meaning: 'Cloud infrastructure operated solely for a single organization and hosted internally or externally.' },
+      { term: 'Hybrid Cloud', meaning: 'A combination of private and public cloud services that remain separate entities.' },
+      { term: 'Open-Source Software', meaning: 'Software whose source code can be accessed, modified and redistributed according to its license.' },
+      { term: 'Linux', meaning: 'An open-source operating system related to Unix, available in free and commercial versions.' },
+      { term: 'Java', meaning: 'An object-oriented programming language designed to run across different computing environments.' },
+      { term: 'HTML', meaning: 'A markup language used to structure webpage content and create links.' },
+      { term: 'HTML5', meaning: 'An evolution of HTML that supports multimedia directly in webpages, works on desktop and mobile, and supports offline data storage.' },
+      { term: 'XML', meaning: 'A standard way to describe and exchange data between systems.' },
+      { term: 'Web Services', meaning: 'Software services that let different applications exchange information using common communication standards.' },
+      { term: 'SOA', meaning: 'Service-Oriented Architecture: a collection of independent services that communicate to perform business tasks.' },
+      { term: 'Software Package', meaning: 'A ready-made program developed for common business activities.' },
+      { term: 'Software Outsourcing', meaning: 'Hiring an external company or vendor to develop or maintain software.' },
+      { term: 'Cloud-Based Software Services', meaning: 'Using software and tools over a network or the Internet instead of installing and managing them yourself.' },
+      { term: 'Scalability', meaning: 'The ability of a system to expand to support more users without breaking down.' },
+      { term: 'Capacity Planning', meaning: 'Planning IT capacity by considering future workloads and changes in business volume.' },
+      { term: 'Total Cost of Ownership (TCO)', meaning: 'The total of all costs of owning IT infrastructure, including hardware, software, installation, training, support, maintenance, infrastructure, downtime, and space and energy.' },
+      { term: 'Competitive Forces Model', meaning: 'A model with six forces (market demand, business strategy, IT strategy, information technology, competitor IT services, competitor IT investments) used to decide IT infrastructure investment.' },
+    ],
+    keyPoints: [
+      'IT infrastructure = physical devices + software applications + firmwide services needed to run the whole enterprise.',
+      'There are 9 firmwide services, from computing platforms to IT research and development services.',
+      'Five eras: Mainframe/Minicomputer (1959), Personal Computer (1981), Client/Server (1983), Enterprise Computing (1992), Cloud and Mobile Computing (2000).',
+      'Five technology drivers: Moore\'s Law, Law of Mass Digital Storage, Metcalfe\'s Law, declining communications costs, and standards and network effects.',
+      'Moore\'s Law (3 versions, all 18 months): microprocessor power doubles, computing power doubles, and computing price halves. The future limit is transistor size.',
+      'Law of Mass Digital Storage: digital information doubles roughly every year and storage cost falls at an exponential rate of 100 percent a year.',
+      'Do not confuse Moore\'s Law (processing, 18 months) with the Law of Mass Digital Storage (storage, every year).',
+      'Technology standards create economies of scale, which reduce prices. Know the key standards and years: ASCII 1958, COBOL 1959, Unix 1969–1975, TCP/IP 1974, Ethernet 1973, IBM/Microsoft/Intel PC 1981, World Wide Web 1989–1993.',
+      'Components of IT infrastructure: hardware, operating systems, enterprise software, data management and storage, networking/telecommunications, and consulting/system integration (plus Internet platforms in the ecosystem diagram).',
+      'Providers: SAP and Oracle (enterprise applications), IBM and Oracle (middleware), Microsoft (SMBs), Cisco and Juniper (networking hardware), AT&T and Verizon (telecom), EMC (storage).',
+      'Hardware trends: mobile digital platform, consumerization of IT and BYOD, quantum computing, virtualization, cloud computing, green computing, high performance and power saving processors.',
+      'Cloud computing has 5 characteristics: on-demand self-service, ubiquitous network access, location-independent resource pooling, rapid elasticity, measured service.',
+      'Cloud service types: IaaS, SaaS, PaaS. Cloud models: public (pay-as-you-go), private (strict privacy and control), hybrid (mix of both).',
+      'Four software themes: Linux and open-source, Java/HTML/HTML5, web services and SOA, software outsourcing and cloud services.',
+      'Linux benefits: cost reduction, reliability and resilience, and compatibility with different hardware platforms.',
+      'Web services use XML and act as a translator between systems. The Dollar Rent A Car example shows they save time and development costs by avoiding separate connections for each partner.',
+      'Software can be obtained through commercial software packages, outsourcing, or cloud-based software services.',
+      'Challenges: changing resource needs (growth and decline), scalability, capacity planning, new policies for mobile and cloud computing, management and governance, and wise investments.',
+      'Too much investment leaves resources unused; too little reduces service quality. Decide between buying and renting (cloud).',
+      'TCO has 9 cost components. TCO can be reduced by centralization and standardization of hardware and software, and by reducing the size of IS support staff.',
+      'Competitive Forces Model: 3 internal factors (business strategy, IT strategy/infrastructure/cost, information technology) and 3 external factors (market demand, competitor IT services, competitor IT investments).',
+      'Spending more on IT than competitors does not guarantee better results.',
+    ],
+  },
+},
+
+{
+  id: 12,
+  title: 'Foundations of Business Intelligence: Databases and Information Management',
+  content: `
+    <span class="lesson-badge">LESSON 12</span>
+    <h1>Foundations of Business Intelligence: Databases and Information Management</h1>
+    <div class="meta-info">ICT2162 <span>•</span> 35 min read</div>
+
+    <p>Businesses depend on <strong>data</strong> to make good decisions. This lesson explains how data is stored and managed, why <strong>databases</strong> are better than traditional files, and which tools turn raw data into useful <strong>business intelligence</strong>.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Learning Objectives</span>
+      <ol>
+        <li>What are the problems of managing data resources in a traditional file environment?</li>
+        <li>What are the major capabilities of database management systems (DBMS), and why is a relational DBMS so powerful?</li>
+        <li>What are the principal tools and technologies for accessing information from databases to improve business performance and decision making?</li>
+        <li>Why are information policy, data administration, and data quality assurance essential for managing the firm's data resources?</li>
+      </ol>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Problems of Managing Data Resources in a Traditional File Environment</h2>
+    <p>An effective information system gives users <strong>accurate</strong>, <strong>timely</strong>, and <strong>relevant</strong> information.</p>
+    <ul>
+      <li><strong>Accurate</strong> information is free of errors.</li>
+      <li>Information is <strong>timely</strong> when it is available to decision makers when it is needed.</li>
+      <li>Information is <strong>relevant</strong> when it is useful and suitable for the work and decisions that need it.</li>
+    </ul>
+
+    <h3>File Organization Terms and Concepts</h3>
+    <p>Data is organized in levels, from the smallest unit up to a whole database:</p>
+    <ul>
+      <li><strong>Bit</strong> — the smallest unit of data (0 or 1).</li>
+      <li><strong>Byte</strong> — a group of bits that represents one character.</li>
+      <li><strong>Field</strong> — a collection of characters that represents a data item. A field stores the value of an <strong>attribute</strong>.</li>
+      <li><strong>Record</strong> — a group of related fields that describes one <strong>entity</strong>.</li>
+      <li><strong>File</strong> — a collection of records of the same type.</li>
+      <li><strong>Database</strong> — a collection of related files.</li>
+    </ul>
+    <p>Two more terms you must know:</p>
+    <ul>
+      <li><strong>Entity</strong> — a person, place, thing, or event about which information is stored.</li>
+      <li><strong>Attribute</strong> — a characteristic or quality that describes an entity.</li>
+    </ul>
+
+    <h3>The Data Hierarchy</h3>
+    <p>The lecture uses a <strong>Student Database</strong> as an example. It holds three files: COURSE, FINANCIAL, and PERSONAL.</p>
+    <pre><code>DATABASE  Student Database
+          (COURSE file, FINANCIAL file, PERSONAL file)
+    |
+FILE      COURSE
+          Student_ID  Course  Date  Grade
+          39044       IS 101  F16   B+
+          59432       IS 101  F16   A
+          64029       IS 101  F16   C
+    |
+RECORD    39044  IS 101  F16  B+
+    |
+FIELD     IS 101  (Course field)
+    |
+BYTE      0100 1001  (letter I in ASCII)
+    |
+BIT       0</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Order of the data hierarchy, from small to big: <strong>Bit → Byte → Field → Record → File → Database</strong>.</p>
+    </div>
+
+    <h3>Problems with the Traditional File Environment</h3>
+    <p>In the traditional approach, each <strong>functional area</strong> (such as Accounting, Human Resources, Sales, and Manufacturing) builds its own specialized applications. Each application needs its own data file, which is usually a <strong>subset of the master file</strong>.</p>
+    <p>These subsets cause <strong>data redundancy and inconsistency</strong>, <strong>processing inflexibility</strong>, and <strong>wasted storage resources</strong>.</p>
+
+    <pre><code>Master file (data elements A to Z)
+
+ACCOUNTING AND FINANCE -> Application program 1 -> files A B C D
+HUMAN RESOURCES        -> Application program 2 -> files A B D E
+SALES AND MARKETING    -> Application program 3 -> files A B E G
+MANUFACTURING          -> Application program 4 -> files A E F G</code></pre>
+    <p>Notice how data elements like <strong>A</strong> are repeated in every department's file.</p>
+
+    <h3>The Five Problems</h3>
+    <ol>
+      <li><strong>Data redundancy and inconsistency</strong></li>
+      <li><strong>Program-data dependence</strong></li>
+      <li><strong>Lack of flexibility</strong></li>
+      <li><strong>Poor security</strong></li>
+      <li><strong>Lack of data sharing and availability</strong></li>
+    </ol>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Simple explanation (added for clarity)</span>
+      <p>The slides only list these problems. Here are short explanations:</p>
+      <ul>
+        <li><strong>Data redundancy</strong> — the same data is stored in many places.</li>
+        <li><strong>Data inconsistency</strong> — the same data has different values in different files.</li>
+        <li><strong>Program-data dependence</strong> — programs and data files are tightly linked, so changing one forces changes in the other.</li>
+        <li><strong>Lack of flexibility</strong> — it is hard to produce new reports or answer new questions quickly.</li>
+        <li><strong>Poor security</strong> — it is hard to control who can see or change data spread across many files.</li>
+        <li><strong>Lack of data sharing and availability</strong> — data is locked inside separate files and systems.</li>
+      </ul>
+    </div>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>There are <strong>5 problems</strong> of the traditional file environment. Be ready to list them in an exam.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Database Management Systems (DBMS)</h2>
+    <p>Database technology helps overcome the problems of traditional file organization.</p>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>database</strong> is a collection of data organized to serve <strong>multiple applications</strong> efficiently.</p>
+    </div>
+
+    <ul>
+      <li>Data is <strong>centralized</strong> in one location.</li>
+      <li><strong>Redundant data is controlled</strong>.</li>
+      <li>A single database can support <strong>multiple applications</strong>.</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p>A <strong>database management system (DBMS)</strong> is software that lets an organization <strong>centralize data</strong>, <strong>manage it efficiently</strong>, and <strong>provide access</strong> to the stored data for application programs.</p>
+    </div>
+
+    <ul>
+      <li>It acts as an <strong>interface</strong> between application programs and the physical data files.</li>
+      <li>It retrieves the required data from the database and gives it to the applications.</li>
+    </ul>
+
+    <h3>Two Views of Data</h3>
+    <p>A DBMS separates two views of data:</p>
+    <ol>
+      <li><strong>Logical View</strong>
+        <ul>
+          <li>How users or business specialists <strong>perceive</strong> the data.</li>
+          <li>Focuses on the information users need.</li>
+        </ul>
+      </li>
+      <li><strong>Physical View</strong>
+        <ul>
+          <li>How data is <strong>actually organized and stored</strong>.</li>
+          <li>Focuses on the actual structure of data on storage media.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>Example: Human Resources Database with Multiple Views</h3>
+    <p>A single human resources database can give many different views of data, depending on what the user needs. The lecture shows two views: one for a <strong>benefits specialist</strong> and one for a member of the <strong>payroll department</strong>.</p>
+    <pre><code>HUMAN RESOURCES DATABASE
+Employee_ID, Name, SSN, Position, Date_Hired,
+Gross_Pay, Net_Pay, Life_Insurance,
+Pension_Benefit, Health_Care
+        |
+        v  (through the DBMS)
+
+Benefits View:  Name, SSN, Health_Care
+Payroll View:   Name, SSN, Gross_Pay, Net_Pay</code></pre>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do not mix up the two views. <strong>Logical view</strong> = how <em>users</em> see the data. <strong>Physical view</strong> = how data is <em>actually stored</em>.</p>
+    </div>
+
+    <h3>How a DBMS Solves the Problems of the Traditional File Environment</h3>
+    <ul>
+      <li><strong>Reduces data redundancy and inconsistency</strong> by minimizing isolated files that contain repeated data.</li>
+      <li><strong>Reduces program-data dependence</strong> by separating programs from data.</li>
+      <li><strong>Increases information access and availability</strong>, and reduces program development and maintenance costs.</li>
+      <li>Supports <strong>ad hoc queries</strong> to get the required information without writing complicated programs.</li>
+      <li><strong>Improves data security</strong> through centralized management of data and access.</li>
+      <li><strong>Facilitates data sharing</strong> by making data available through a common database instead of separate files and systems.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Relational DBMS</h2>
+    <p>A <strong>Relational DBMS (RDBMS)</strong> is the <strong>most popular</strong> type of DBMS.</p>
+    <ul>
+      <li>It represents data using <strong>two-dimensional tables</strong> called <strong>relations</strong>.</li>
+      <li>Each table represents an <strong>entity</strong> and its <strong>attributes</strong>.</li>
+      <li>Each entity has its <strong>own separate table</strong>.</li>
+    </ul>
+
+    <p>Tables are made of:</p>
+    <ul>
+      <li><strong>Columns (Fields)</strong> — represent <strong>attributes</strong>.</li>
+      <li><strong>Rows (Records / Tuples)</strong> — represent <strong>individual records</strong>.</li>
+    </ul>
+
+    <p><strong>Examples of relational DBMS:</strong></p>
+    <ul>
+      <li><strong>Microsoft Access</strong> — for desktop systems.</li>
+      <li><strong>Oracle Database</strong></li>
+      <li><strong>Microsoft SQL Server</strong></li>
+      <li><strong>MySQL</strong> — a popular open-source DBMS.</li>
+    </ul>
+
+    <h3>Relational Database Tables</h3>
+    <p>The lecture example has two tables: <strong>SUPPLIER</strong> and <strong>PART</strong>.</p>
+    <pre><code>SUPPLIER
+Supplier_Number | Supplier_Name      | Supplier_Street      | Supplier_City | Supplier_State | Supplier_Zip
+8259            | CBM Inc.           | 74 5th Avenue        | Dayton        | OH             | 45220
+8261            | B. R. Molds        | 1277 Gandolly Street | Cleveland     | OH             | 49345
+8263            | Jackson Composites | 8233 Micklin Street  | Lexington     | KY             | 56723
+8444            | Bryant Corporation | 4315 Mill Drive      | Rochester     | NY             | 11344
+
+PART
+Part_Number | Part_Name    | Unit_Price | Supplier_Number
+137         | Door latch   | 22.00      | 8259
+145         | Side mirror  | 12.00      | 8444
+150         | Door molding | 6.00       | 8263
+152         | Door lock    | 31.00      | 8259
+155         | Compressor   | 54.00      | 8261
+178         | Door handle  | 10.00      | 8259</code></pre>
+
+    <h3>Primary Key</h3>
+    <ul>
+      <li>A <strong>key field</strong> uniquely identifies each record in a table.</li>
+      <li>Each table has one field designated as its <strong>primary key</strong>.</li>
+      <li>Primary key values <strong>cannot be duplicated</strong>.</li>
+      <li>Used to <strong>retrieve, update, and sort</strong> records.</li>
+    </ul>
+    <p>In the example, <code>Supplier_Number</code> is the primary key of SUPPLIER, and <code>Part_Number</code> is the primary key of PART.</p>
+
+    <h3>Foreign Key</h3>
+    <ul>
+      <li>A <strong>foreign key</strong> is a field in one table that refers to the <strong>primary key of another table</strong>.</li>
+      <li>Used to <strong>connect related tables</strong>.</li>
+      <li>Helps identify <strong>relationships between entities</strong>.</li>
+      <li>Allows users to retrieve related information from different tables.</li>
+    </ul>
+    <p>In the example, <code>Supplier_Number</code> in the PART table is a foreign key. It points to the SUPPLIER table.</p>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Common exam trap: the <strong>same field</strong> can be a primary key in one table and a foreign key in another. <code>Supplier_Number</code> is the <strong>primary key</strong> in SUPPLIER but a <strong>foreign key</strong> in PART.</p>
+    </div>
+
+    <h3>Operations of a Relational DBMS</h3>
+    <p>A relational DBMS has three basic operations:</p>
+    <ul>
+      <li><strong>Select</strong> — selects <strong>rows</strong> that meet specific conditions.</li>
+      <li><strong>Join</strong> — combines <strong>two or more related tables</strong> to give more information.</li>
+      <li><strong>Project</strong> — selects specific <strong>columns</strong> from a table.</li>
+    </ul>
+
+    <p>The lecture example works like this:</p>
+    <ol>
+      <li><strong>Select</strong> from PART where <code>Part_Number = 137 or 150</code>.</li>
+      <li><strong>Join</strong> the PART and SUPPLIER tables by <code>Supplier_Number</code>.</li>
+      <li><strong>Project</strong> the selected columns.</li>
+    </ol>
+    <pre><code>Part_Number | Part_Name    | Supplier_Number | Supplier_Name
+137         | Door latch   | 8259            | CBM Inc.
+150         | Door molding | 8263            | Jackson Components</code></pre>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Select = rows. Project = columns. Join = combine tables.</strong> This is a very common exam question.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Capabilities of Database Management Systems</h2>
+
+    <h3>Data Definition Language (DDL)</h3>
+    <ul>
+      <li><strong>Defines the structure</strong> of a database.</li>
+      <li>Creates tables and defines <strong>field characteristics</strong> (name, data type, size, format, etc.).</li>
+    </ul>
+
+    <h3>Data Dictionary</h3>
+    <ul>
+      <li>An <strong>automated or manual file</strong> that stores the definitions of data elements and their characteristics.</li>
+      <li>Contains information such as <strong>field names, descriptions, data types, sizes, usage, ownership, authorization, and security</strong>.</li>
+    </ul>
+
+    <h3>Data Manipulation Language (DML)</h3>
+    <ul>
+      <li>Used to <strong>access and manipulate</strong> data in a database.</li>
+      <li>Supports <strong>inserting, updating, deleting, and retrieving</strong> records.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>DDL</strong> = <em>defines</em> the structure (creates tables and fields). <strong>DML</strong> = <em>works with</em> the data (insert, update, delete, retrieve). The <strong>data dictionary</strong> stores the definitions of data elements.</p>
+    </div>
+
+    <h3>Example: Access Data Dictionary Features</h3>
+    <p>The lecture screenshot shows the <strong>Design view</strong> of the SUPPLIER table in Microsoft Access:</p>
+    <pre><code>Field Name        Data Type   Description
+Supplier_Number   Number      Supplier Identification Number
+Supplier_Name     Text        Supplier Name
+Supplier_Street   Text        Supplier Street
+Supplier_City     Text        Supplier City
+Supplier_State    Text        Supplier State
+Supplier_Zip      Text        Supplier Zip
+
+Field properties (Supplier_Number):
+Field Size: Long Integer
+Required:   Yes
+Indexed:    Yes (No Duplicates)</code></pre>
+    <p>The screenshot also notes that a field name can be up to <strong>64 characters</strong> long, including spaces.</p>
+
+    <h3>Querying and Reporting</h3>
+    <ul>
+      <li>A DBMS provides tools to <strong>access and manipulate</strong> information stored in databases.</li>
+      <li><strong>Data Manipulation Language (DML)</strong> is used to add, change, delete, and retrieve data.</li>
+      <li><strong>Structured Query Language (SQL)</strong> is the <strong>most widely used</strong> data manipulation language.</li>
+      <li>SQL lets users <strong>retrieve specific information</strong> based on their needs.</li>
+      <li><strong>Microsoft Access</strong> provides user-friendly query-building tools that automatically <strong>translate user selections into SQL commands</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Normalization and Entity-Relationship Diagrams</h2>
+
+    <h3>Conceptual Database Design</h3>
+    <ul>
+      <li>Decides how data elements should be <strong>grouped</strong> in a database.</li>
+      <li>Identifies <strong>relationships</strong> among data elements.</li>
+      <li>Identifies and <strong>reduces redundant data</strong>.</li>
+      <li>Organizes data to meet <strong>business information requirements</strong>.</li>
+    </ul>
+
+    <h3>Normalization</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Normalization</strong> is the process of organizing complex data into <strong>smaller, stable, and flexible tables (relations)</strong>.</p>
+    </div>
+    <ul>
+      <li>Minimizes <strong>data redundancy</strong> and <strong>repeating data groups</strong>.</li>
+      <li>Improves database organization and efficiency.</li>
+    </ul>
+
+    <h3>Example: Before and After Normalization</h3>
+    <p>An <strong>unnormalized</strong> relation contains <strong>repeating groups</strong>. For example, one order can have many parts and suppliers. There is only a <strong>one-to-one</strong> link between <code>Order_Number</code> and <code>Order_Date</code>.</p>
+    <pre><code>ORDER (Before Normalization)
+Order_Number, Order_Date, Part_Number, Part_Name,
+Unit_Price, Part_Quantity, Supplier_Number,
+Supplier_Name, Supplier_Street, Supplier_City,
+Supplier_State, Supplier_Zip</code></pre>
+    <p>After normalization, the data is split into four smaller tables:</p>
+    <pre><code>PART       (Key: Part_Number)
+           Part_Number, Part_Name, Unit_Price, Supplier_Number
+
+LINE ITEM  (Key: Order_Number + Part_Number)
+           Order_Number, Part_Number, Part_Quantity
+
+SUPPLIER   (Key: Supplier_Number)
+           Supplier_Number, Supplier_Name, Supplier_Street,
+           Supplier_City, Supplier_State, Supplier_Zip
+
+ORDER      (Key: Order_Number)
+           Order_Number, Order_Date</code></pre>
+
+    <h3>Referential Integrity</h3>
+    <ul>
+      <li>Ensures <strong>consistency between related tables</strong>.</li>
+      <li>A <strong>foreign key must refer to an existing record</strong> in the related table.</li>
+      <li>Prevents <strong>invalid or unmatched records</strong> in related tables.</li>
+    </ul>
+
+    <h3>Entity-Relationship Diagram (ERD)</h3>
+    <ul>
+      <li>A <strong>graphical representation</strong> of entities and the relationships between them.</li>
+      <li>Used by database designers to <strong>document the database structure</strong>.</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Normalization</strong> reduces redundancy and repeating groups. <strong>Referential integrity</strong> means every foreign key must match an existing record. An <strong>ERD</strong> is a diagram of entities and their relationships.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Non-relational Databases and Databases in the Cloud</h2>
+
+    <h3>Non-relational Databases (NoSQL)</h3>
+    <ul>
+      <li><strong>Alternatives</strong> to traditional relational databases (tables, rows, and columns).</li>
+      <li>Use <strong>flexible data models</strong> and do not need a fixed database structure.</li>
+      <li>Designed to handle large volumes of <strong>structured, semi-structured, and unstructured</strong> data.</li>
+      <li>Support <strong>distributed storage</strong> across multiple machines and easy <strong>scalability</strong>.</li>
+      <li>Suitable for <strong>web applications, social media, images, and large-scale data processing</strong>.</li>
+    </ul>
+    <p><strong>Examples:</strong> MongoDB, Oracle NoSQL Database, Amazon SimpleDB.</p>
+
+    <h3>Cloud Databases</h3>
+    <ul>
+      <li>Databases <strong>hosted and managed</strong> through cloud computing platforms.</li>
+      <li>Provide database services <strong>over the Internet</strong>, so organizations do not need to maintain all database infrastructure locally.</li>
+      <li>Offer <strong>scalability, flexibility, and usage-based pricing</strong>.</li>
+      <li>Available as both <strong>relational</strong> and <strong>non-relational</strong> database services.</li>
+      <li>Can be deployed in <strong>public clouds</strong> or <strong>private clouds</strong>.</li>
+    </ul>
+    <p><strong>Examples:</strong> Amazon RDS, Microsoft Azure SQL Database, Oracle Database Cloud Services.</p>
+
+    <div class="divider"></div>
+
+    <h2>The Challenge of Big Data</h2>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Big Data</strong> means extremely large and complex datasets that a traditional DBMS cannot easily <strong>capture, store, and analyze</strong>.</p>
+    </div>
+
+    <ul>
+      <li>Generated in <strong>large volumes</strong> and at <strong>high speed</strong> from different sources.</li>
+      <li>Includes <strong>structured, semi-structured, and unstructured</strong> data.</li>
+    </ul>
+
+    <h3>Sources of Big Data</h3>
+    <ul>
+      <li>Social media</li>
+      <li>Websites and web traffic</li>
+      <li>Emails and online transactions</li>
+      <li>Sensors and smart devices</li>
+      <li>Electronic trading systems</li>
+    </ul>
+
+    <h3>Business Benefits</h3>
+    <ul>
+      <li>Understand <strong>customer behavior</strong>.</li>
+      <li>Identify <strong>patterns and trends</strong>.</li>
+      <li>Improve <strong>products and services</strong>.</li>
+      <li>Support <strong>better business decisions</strong>.</li>
+    </ul>
+
+    <h3>Challenges</h3>
+    <ul>
+      <li><strong>High cost</strong> of capturing, storing, and analyzing data.</li>
+      <li>Difficulty <strong>managing different types</strong> of data.</li>
+      <li>Requires <strong>appropriate tools and technologies</strong>.</li>
+      <li>Data analysis must focus on <strong>solving actual business problems</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Business Intelligence Infrastructure</h2>
+
+    <h3>Data Warehouses</h3>
+    <ul>
+      <li><strong>Centralized databases</strong> that store <strong>current and historical data</strong> from multiple sources.</li>
+      <li>Used for <strong>reporting, analysis, and decision-making</strong>.</li>
+      <li>Data is <strong>cleaned, transformed, and organized</strong> before storage.</li>
+    </ul>
+
+    <h3>Data Marts</h3>
+    <ul>
+      <li>A <strong>smaller, focused subset</strong> of a data warehouse.</li>
+      <li>Designed for a <strong>specific department or group</strong> of users.</li>
+    </ul>
+
+    <h3>Hadoop</h3>
+    <ul>
+      <li>An <strong>open-source framework</strong> for storing and processing huge volumes of data.</li>
+      <li>Supports <strong>structured, semi-structured, and unstructured</strong> data.</li>
+      <li>Uses <strong>distributed and parallel processing</strong> across multiple computers.</li>
+    </ul>
+
+    <h3>In-Memory Computing</h3>
+    <ul>
+      <li>Stores and processes data mainly in <strong>RAM</strong> instead of traditional disk storage.</li>
+      <li>Gives <strong>faster data access</strong> and query processing.</li>
+      <li>Enables <strong>real-time analysis</strong> of large datasets.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do not mix up a <strong>data warehouse</strong> and a <strong>data mart</strong>. A data warehouse is the big central store for the whole organization. A data mart is a <strong>smaller subset</strong> for one department or group.</p>
+    </div>
+
+    <h3>Analytic Platforms</h3>
+    <p>The lecture diagram shows how data flows from different sources to the users:</p>
+    <pre><code>DATA SOURCES
+Historical Data
+Machine Data
+Audio/Video Data
+External Data
+      |
+      v
+Hadoop Cluster
+      |
+      v  (Extract, transform, load)
+Data Warehouse ---> Data Mart
+
+Casual users:  Queries, Reports, Dashboards
+Power users:   Queries, Reports, OLAP, Data mining
+               (Analytic Platform)</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>Analytical Tools: Relationships, Patterns, Trends</h2>
+
+    <h3>1. Online Analytical Processing (OLAP)</h3>
+    <ul>
+      <li>OLAP supports <strong>multidimensional analysis</strong> of data.</li>
+      <li>Lets users view the <strong>same data from different perspectives</strong>.</li>
+      <li>Each aspect of data is a <strong>dimension</strong>. Examples: <strong>Product, Region, Time, Price, Cost</strong>.</li>
+      <li>Helps compare <strong>actual results with projected results</strong>.</li>
+      <li>Lets users answer <strong>complex, ad hoc business questions</strong> quickly.</li>
+      <li>Uses multidimensional data models, often shown as <strong>data cubes</strong>.</li>
+    </ul>
+    <p>In the lecture's data cube, the dimensions are <strong>Product</strong> (Nuts, Bolts, Washers, Screws), <strong>Region</strong> (East, West, Central), and <strong>Actual vs. Projected</strong> results.</p>
+
+    <h3>2. Data Mining</h3>
+    <ul>
+      <li>Data mining is a <strong>discovery-driven</strong> analytical technique.</li>
+      <li>It finds <strong>hidden patterns and relationships</strong> in large databases.</li>
+    </ul>
+    <p>It helps organizations to:</p>
+    <ul>
+      <li><strong>Predict future customer behavior</strong>.</li>
+      <li>Support <strong>better decision-making</strong>.</li>
+      <li><strong>Forecast the possible outcomes</strong> of business decisions.</li>
+    </ul>
+
+    <p>Data mining can find <strong>five major types</strong> of information:</p>
+    <ol>
+      <li><strong>Associations</strong></li>
+      <li><strong>Sequences</strong></li>
+      <li><strong>Classification</strong></li>
+      <li><strong>Clustering</strong></li>
+      <li><strong>Forecasting</strong></li>
+    </ol>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Simple explanation (added for clarity)</span>
+      <p>The slides only list the five types. Here are short explanations from the textbook (Laudon and Laudon):</p>
+      <ul>
+        <li><strong>Associations</strong> — occurrences that are linked to a single event.</li>
+        <li><strong>Sequences</strong> — events that are linked over time.</li>
+        <li><strong>Classification</strong> — finds patterns that describe the group an item belongs to.</li>
+        <li><strong>Clustering</strong> — like classification, but used when no groups have been defined yet.</li>
+        <li><strong>Forecasting</strong> — uses patterns to predict future values.</li>
+      </ul>
+    </div>
+
+    <h3>Text Mining</h3>
+    <p>Organizations store a lot of information in <strong>unstructured formats</strong>, especially text. Examples:</p>
+    <ul>
+      <li>Emails and memos</li>
+      <li>Customer service transcripts</li>
+      <li>Survey responses</li>
+      <li>Social media comments</li>
+    </ul>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Text mining</strong> is the process of extracting <strong>useful information, patterns, and relationships</strong> from large collections of <strong>unstructured text data</strong>.</p>
+    </div>
+    <p>Main capabilities:</p>
+    <ul>
+      <li>Extracts important information.</li>
+      <li>Identifies hidden patterns and relationships.</li>
+      <li>Summarizes large amounts of text.</li>
+      <li>Identifies customer <strong>opinions and sentiments</strong>.</li>
+    </ul>
+
+    <h3>Sentiment Analysis</h3>
+    <ul>
+      <li>A <strong>text mining technique</strong> used to identify <strong>opinions and emotions</strong> expressed in text.</li>
+      <li>Identifies <strong>positive, negative, or neutral</strong> opinions about a particular subject.</li>
+    </ul>
+
+    <h3>Web Mining</h3>
+    <div class="callout callout-blue">
+      <span class="callout-label">Definition</span>
+      <p><strong>Web mining</strong> is the process of discovering useful <strong>patterns, trends, and information</strong> from data available on the <strong>World Wide Web</strong>.</p>
+    </div>
+    <p>There are <strong>three types</strong> of web mining:</p>
+    <ol>
+      <li><strong>Web Content Mining</strong></li>
+      <li><strong>Web Structure Mining</strong></li>
+      <li><strong>Web Usage Mining</strong></li>
+    </ol>
+
+    <div class="callout callout-blue">
+      <span class="callout-label">Simple explanation (added for clarity)</span>
+      <p>The slides only list the three types. Here are short explanations:</p>
+      <ul>
+        <li><strong>Web content mining</strong> — gets knowledge from the content of web pages.</li>
+        <li><strong>Web structure mining</strong> — studies the links to and from web pages and websites.</li>
+        <li><strong>Web usage mining</strong> — studies how users interact with a website, using data recorded by the web server.</li>
+      </ul>
+    </div>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>Data mining finds <strong>5 types</strong> of information (associations, sequences, classification, clustering, forecasting). Web mining has <strong>3 types</strong> (content, structure, usage). <strong>Sentiment analysis</strong> is a type of text mining.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Databases and the Web</h2>
+    <p>Organizations let customers and business partners access internal database information through <strong>websites and mobile applications</strong>. This is how it works:</p>
+    <ol>
+      <li><strong>Web Browser</strong> — the user sends a request through the website.</li>
+      <li><strong>Web Server</strong> — receives the request and forwards it for processing.</li>
+      <li><strong>Application Server (Middleware)</strong> — processes the request, handles business logic, and translates database requests into <strong>SQL</strong>.</li>
+      <li><strong>Database Server (DBMS)</strong> — runs the SQL queries and retrieves the required data.</li>
+      <li><strong>Results</strong> — the data is sent back through the application server and web server, and shown in the browser.</li>
+    </ol>
+    <pre><code>Client with Web browser
+      |  (Internet)
+Web server
+      |
+Application server
+      |
+Database server
+      |
+Database</code></pre>
+    <p>Each step in this chain works in <strong>both directions</strong>: the request goes in, and the results come back.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p>The <strong>application server (middleware)</strong> is the one that translates requests into <strong>SQL</strong>. The <strong>database server</strong> is the one that runs the SQL.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Information Policy, Data Administration, and Data Quality Assurance</h2>
+    <p>These are essential for managing the firm's data resources.</p>
+
+    <h3>Information Policy</h3>
+    <ul>
+      <li>Defines the <strong>rules</strong> for collecting, sharing, accessing, classifying, and maintaining data.</li>
+      <li>Specifies <strong>who can view, modify, and maintain</strong> information.</li>
+    </ul>
+    <div class="callout callout-green">
+      <span class="callout-label">Example</span>
+      <p>Only authorized HR and payroll staff can access or change employees' salary details.</p>
+    </div>
+
+    <h3>Data Administration</h3>
+    <ul>
+      <li>Develops and implements <strong>information policies and procedures</strong>.</li>
+      <li>Plans and manages organizational data as a <strong>valuable resource</strong>.</li>
+      <li>Oversees <strong>database design, data dictionaries, and proper data usage</strong>.</li>
+    </ul>
+
+    <h3>Data Governance</h3>
+    <ul>
+      <li>Sets up <strong>policies and processes</strong> to ensure data <strong>availability, usability, integrity, quality, privacy, security, and regulatory compliance</strong>.</li>
+    </ul>
+
+    <h3>Database Administration</h3>
+    <ul>
+      <li>Manages <strong>database structure, relationships, access rules, security, and maintenance</strong>.</li>
+    </ul>
+
+    <div class="callout callout-red">
+      <span class="callout-label">Warning</span>
+      <p>Do not confuse these four terms. <strong>Information policy</strong> = the rules. <strong>Data administration</strong> = develops policies and manages data as a resource. <strong>Data governance</strong> = overall policies and processes for data quality, privacy, security, and compliance. <strong>Database administration</strong> = the technical management of the database itself.</p>
+    </div>
+
+    <h3>Ensuring Data Quality</h3>
+    <p>Data quality means making sure organizational data is <strong>accurate, complete, consistent, and up to date</strong>.</p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-label">Remember</span>
+      <p><strong>Poor-quality data</strong> leads to incorrect decisions, financial losses, and operational problems.</p>
+    </div>
+
+    <h3>Common Data Quality Problems</h3>
+    <ul>
+      <li><strong>Inaccurate or missing</strong> information.</li>
+      <li><strong>Duplicate records</strong> — for example, the same customer entered many times.</li>
+      <li><strong>Inconsistent formats or codes</strong> — for example, "Medium" vs. "M" for clothing size.</li>
+      <li><strong>Data entry errors</strong> — for example, misspelled names or wrong numbers.</li>
+    </ul>
+
+    <h3>Data Quality Audit</h3>
+    <ul>
+      <li>A <strong>structured examination</strong> of data to find accuracy and completeness problems.</li>
+      <li>Can examine <strong>entire files, samples, or users' feedback</strong>.</li>
+    </ul>
+
+    <h3>Data Cleansing (Data Scrubbing)</h3>
+    <ul>
+      <li><strong>Detecting and correcting</strong> inaccurate, incomplete, wrongly formatted, and duplicate data.</li>
+      <li>Ensures <strong>consistency across different information systems</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <p><em>Reference: Laudon, K. and Laudon, J. Management Information Systems: Managing the Digital Firm, Fifteenth Edition, Global Edition.</em></p>
+  `,
+  summary: {
+    topic: 'Foundations of Business Intelligence: Databases and Information Management',
+    subTopics: [
+      'Problems of Managing Data Resources in a Traditional File Environment',
+      'File Organization Terms and Concepts',
+      'The Data Hierarchy',
+      'Problems with the Traditional File Environment',
+      'Database Management Systems (DBMS)',
+      'Logical View and Physical View',
+      'How a DBMS Solves the Problems of the Traditional File Environment',
+      'Relational DBMS',
+      'Primary Key and Foreign Key',
+      'Operations of a Relational DBMS (Select, Join, Project)',
+      'Capabilities of DBMS (DDL, Data Dictionary, DML)',
+      'Querying and Reporting (SQL)',
+      'Normalization and Entity-Relationship Diagrams',
+      'Referential Integrity',
+      'Non-relational Databases (NoSQL)',
+      'Cloud Databases',
+      'The Challenge of Big Data',
+      'Business Intelligence Infrastructure',
+      'Analytic Platforms',
+      'Online Analytical Processing (OLAP)',
+      'Data Mining',
+      'Text Mining and Sentiment Analysis',
+      'Web Mining',
+      'Databases and the Web',
+      'Information Policy, Data Administration and Data Governance',
+      'Ensuring Data Quality',
+    ],
+    definitions: [
+      { term: 'Accurate Information', meaning: 'Information that is free of errors.' },
+      { term: 'Timely Information', meaning: 'Information that is available to decision makers when it is needed.' },
+      { term: 'Relevant Information', meaning: 'Information that is useful and suitable for the work and decisions that need it.' },
+      { term: 'Bit', meaning: 'The smallest unit of data (0 or 1).' },
+      { term: 'Byte', meaning: 'A group of bits that represents one character.' },
+      { term: 'Field', meaning: 'A collection of characters that represents a data item; it stores the value of an attribute.' },
+      { term: 'Record', meaning: 'A group of related fields that describes one entity.' },
+      { term: 'File', meaning: 'A collection of records of the same type.' },
+      { term: 'Database', meaning: 'A collection of related files; data organized to serve multiple applications efficiently.' },
+      { term: 'Entity', meaning: 'A person, place, thing, or event about which information is stored.' },
+      { term: 'Attribute', meaning: 'A characteristic or quality that describes an entity.' },
+      { term: 'Data Redundancy', meaning: 'The same data is stored in many places (added explanation).' },
+      { term: 'Data Inconsistency', meaning: 'The same data has different values in different files (added explanation).' },
+      { term: 'Program-Data Dependence', meaning: 'Programs and data files are tightly linked, so changing one forces changes in the other (added explanation).' },
+      { term: 'DBMS', meaning: 'Software that lets an organization centralize data, manage it efficiently, and give application programs access to the stored data.' },
+      { term: 'Logical View', meaning: 'How users or business specialists perceive the data.' },
+      { term: 'Physical View', meaning: 'How data is actually organized and stored on storage media.' },
+      { term: 'Relational DBMS (RDBMS)', meaning: 'The most popular type of DBMS; it represents data as two-dimensional tables called relations.' },
+      { term: 'Relation', meaning: 'A two-dimensional table with columns (fields) and rows (records or tuples) that represents an entity.' },
+      { term: 'Primary Key', meaning: 'A field that uniquely identifies each record in a table; its values cannot be duplicated.' },
+      { term: 'Foreign Key', meaning: 'A field in one table that refers to the primary key of another table, used to connect related tables.' },
+      { term: 'Select', meaning: 'A relational operation that selects rows that meet specific conditions.' },
+      { term: 'Join', meaning: 'A relational operation that combines two or more related tables to give more information.' },
+      { term: 'Project', meaning: 'A relational operation that selects specific columns from a table.' },
+      { term: 'Data Definition Language (DDL)', meaning: 'Defines the structure of a database, creates tables, and defines field characteristics.' },
+      { term: 'Data Dictionary', meaning: 'A file that stores definitions of data elements and their characteristics, such as names, types, sizes, ownership, and security.' },
+      { term: 'Data Manipulation Language (DML)', meaning: 'Used to access and manipulate data: insert, update, delete, and retrieve records.' },
+      { term: 'SQL', meaning: 'Structured Query Language, the most widely used data manipulation language.' },
+      { term: 'Conceptual Database Design', meaning: 'Deciding how data elements are grouped, how they relate, and how to reduce redundant data to meet business needs.' },
+      { term: 'Normalization', meaning: 'Organizing complex data into smaller, stable, flexible tables to minimize redundancy and repeating data groups.' },
+      { term: 'Referential Integrity', meaning: 'A rule that a foreign key must refer to an existing record in the related table, which keeps related tables consistent.' },
+      { term: 'Entity-Relationship Diagram (ERD)', meaning: 'A graphical representation of entities and the relationships between them, used to document database structure.' },
+      { term: 'NoSQL (Non-relational Database)', meaning: 'A database with a flexible data model, not based on fixed tables, built to handle large volumes of varied data across many machines.' },
+      { term: 'Cloud Database', meaning: 'A database hosted and managed through a cloud platform and delivered over the Internet with usage-based pricing.' },
+      { term: 'Big Data', meaning: 'Extremely large and complex datasets, in structured, semi-structured and unstructured form, that traditional DBMS cannot easily capture, store and analyze.' },
+      { term: 'Data Warehouse', meaning: 'A centralized database that stores current and historical data from multiple sources for reporting, analysis and decision-making.' },
+      { term: 'Data Mart', meaning: 'A smaller, focused subset of a data warehouse designed for a specific department or group.' },
+      { term: 'Hadoop', meaning: 'An open-source framework for storing and processing huge volumes of data using distributed and parallel processing.' },
+      { term: 'In-Memory Computing', meaning: 'Storing and processing data mainly in RAM instead of disk storage for faster access and real-time analysis.' },
+      { term: 'OLAP', meaning: 'Online Analytical Processing: multidimensional analysis that lets users view the same data from different perspectives, often using data cubes.' },
+      { term: 'Data Mining', meaning: 'A discovery-driven technique that finds hidden patterns and relationships in large databases.' },
+      { term: 'Text Mining', meaning: 'Extracting useful information, patterns and relationships from large collections of unstructured text.' },
+      { term: 'Sentiment Analysis', meaning: 'A text mining technique that finds positive, negative or neutral opinions and emotions in text.' },
+      { term: 'Web Mining', meaning: 'Discovering useful patterns, trends and information from data on the World Wide Web (content, structure and usage mining).' },
+      { term: 'Application Server (Middleware)', meaning: 'Processes web requests, handles business logic, and translates database requests into SQL.' },
+      { term: 'Information Policy', meaning: 'Rules for collecting, sharing, accessing, classifying and maintaining data, including who can view or change it.' },
+      { term: 'Data Administration', meaning: 'Develops and implements information policies, and manages organizational data as a valuable resource.' },
+      { term: 'Data Governance', meaning: 'Policies and processes that ensure data availability, usability, integrity, quality, privacy, security and regulatory compliance.' },
+      { term: 'Database Administration', meaning: 'Manages database structure, relationships, access rules, security and maintenance.' },
+      { term: 'Data Quality', meaning: 'Making sure organizational data is accurate, complete, consistent and up to date.' },
+      { term: 'Data Quality Audit', meaning: 'A structured examination of data to find accuracy and completeness problems.' },
+      { term: 'Data Cleansing (Data Scrubbing)', meaning: 'Detecting and correcting inaccurate, incomplete, wrongly formatted and duplicate data.' },
+    ],
+    keyPoints: [
+      'Good information is accurate (free of errors), timely (available when needed) and relevant (useful for the decision).',
+      'Data hierarchy from small to big: Bit, Byte, Field, Record, File, Database.',
+      'A record describes an entity; a field stores the value of an attribute.',
+      'Five problems of the traditional file environment: data redundancy and inconsistency, program-data dependence, lack of flexibility, poor security, lack of data sharing and availability.',
+      'A DBMS centralizes data, controls redundancy, and sits between application programs and physical data files.',
+      'A DBMS separates the logical view (how users see data) from the physical view (how data is stored).',
+      'A DBMS solves file problems by reducing redundancy, separating programs from data, supporting ad hoc queries, improving security, and enabling data sharing.',
+      'A relational DBMS stores data in two-dimensional tables (relations): columns are fields and rows are records (tuples).',
+      'Examples of relational DBMS: Microsoft Access, Oracle Database, Microsoft SQL Server, MySQL.',
+      'A primary key uniquely identifies each record and cannot be duplicated; a foreign key refers to the primary key of another table and connects tables.',
+      'Relational operations: Select picks rows, Project picks columns, Join combines tables.',
+      'DDL defines database structure, the data dictionary stores data definitions, and DML inserts, updates, deletes and retrieves data.',
+      'SQL is the most widely used data manipulation language; Microsoft Access turns user selections into SQL.',
+      'Normalization splits complex data (with repeating groups) into smaller tables to reduce redundancy. The ORDER example became PART, LINE ITEM, SUPPLIER and ORDER tables.',
+      'Referential integrity means a foreign key must match an existing record in the related table.',
+      'An ERD is a diagram of entities and their relationships used to document the database design.',
+      'NoSQL databases use flexible data models, handle large and varied data, and scale across many machines (e.g., MongoDB).',
+      'Cloud databases are hosted over the Internet, offer scalability and usage-based pricing, and can be relational or non-relational (e.g., Amazon RDS).',
+      'Big data is too large and complex for traditional DBMS. It comes from social media, web traffic, emails, sensors and trading systems. It helps understand customers but is costly and hard to manage.',
+      'BI infrastructure: data warehouse (central store), data mart (department subset), Hadoop (distributed processing of huge data), in-memory computing (RAM for speed).',
+      'Casual users use queries, reports and dashboards; power users also use OLAP and data mining.',
+      'OLAP supports multidimensional analysis (dimensions such as product, region, time) and is often shown as a data cube.',
+      'Data mining finds five types of information: associations, sequences, classification, clustering and forecasting.',
+      'Text mining works on unstructured text; sentiment analysis finds positive, negative or neutral opinions.',
+      'Web mining has three types: web content mining, web structure mining and web usage mining.',
+      'Databases and the web: browser, web server, application server (middleware, translates to SQL), database server (runs SQL), then results go back to the browser.',
+      'Information policy sets the rules for data; data administration manages data as a resource; data governance covers quality, privacy, security and compliance; database administration manages the database technically.',
+      'Poor data quality causes wrong decisions and financial losses. Common problems: missing data, duplicates, inconsistent formats, data entry errors.',
+      'A data quality audit checks data for accuracy and completeness; data cleansing (scrubbing) detects and corrects bad data.',
+    ],
+  },
+},
 
 
 ]
